@@ -1,6 +1,16 @@
 project:
   type: manuscript
 
+manuscript:
+  article: index.qmd
+  notebooks:
+    - notebook: notebooks/data_simulation.qmd
+      title: Data Simulation
+      download-url: notebooks/data_simulation.qmd
+  #resources:
+  #  - data/replication_seeds.rds
+  meca-bundle: "manuscript-meca.zip"
+  
 execute:
   freeze: auto
 
@@ -11,7 +21,7 @@ format:
       hypothesis: true
   docx: default
   jats: default
-  agu-pdf: default
+  jasa-pdf: default
 
 
 

@@ -1,108 +1,379 @@
 ---
-title: La Palma Earthquakes
+title: Power analysis for Dichotomous Comparative Judgment experiments (DCJ)
+subtitle: A Bayesian simulation-based study exploring the factors that impact DCJ
 author:
-  - name: Steve Purves
-    orcid: 0000-0002-0760-5497
+  - name: 
+      given: Jose Manuel
+      family: Rivera Espejo
+    orcid: 0000-0002-3088-2783
+    url: https://www.uantwerpen.be/en/staff/jose-manuel-rivera-espejo_23166/
+    email: JoseManuel.RiveraEspejo@uantwerpen.be
     corresponding: true
-    email: steve@curvenote.com
-    roles:
-      - Investigation
-      - Project administration
-      - Software
-      - Visualization
-    affiliations:
-      - Curvenote
-  - name: Rowan Cockett
-    orcid: 0000-0002-7859-8394
+    roles: [conceptualization, data curation, analysis, investigation, methodology, software, validation, visualization, writing]
+    affiliation:
+      - name: University of Antwerp
+        department: Education sciences
+        group: Edubron
+  - name: 
+      given: Sven
+      family: Maeyer
+      non-dropping-particle: de
+    orcid: 0000-0003-2888-1631
+    url: https://www.uantwerpen.be/en/staff/sven-demaeyer/
+    email: sven.demaeyer@uantwerpen.be
     corresponding: false
-    roles: []
-    affiliations:
-      - Curvenote
+    roles: [conceptualization, funding, investigation, methodology, project administration, resources, supervision, validation, editing]
+    affiliation:
+      - name: University of Antwerp
+        department: Education sciences
+        group: Edubron
+  - name: 
+      given: Steven
+      family: Gillis
+    orcid: 
+    url: https://www.uantwerpen.be/nl/personeel/steven-gillis/
+    email: steven.gillis@uantwerpen.be
+    corresponding: false
+    roles: [conceptualization, funding, investigation, methodology, project administration, resources, supervision, editing]
+    affiliation:
+      - name: University of Antwerp
+        department: Linguistics
+        group: Centre for computational linguistics, psycholinguistics, and sociolinguistics (CLiPS)
+funding: 
+  statement: "The project was founded through the Research Fund of the University of Antwerp (BOF)."
 keywords:
-  - La Palma
-  - Earthquakes
+  - power analysis
+  - comparative judgment
+  - bayesian analysis
+  - simulation
 abstract: |
-  In September 2021, a significant jump in seismic activity on the island of La Palma (Canary Islands, Spain) signaled the start of a volcanic crisis that still continues at the time of writing. Earthquake data is continually collected and published by the Instituto Geográphico Nacional (IGN). ...
-plain-language-summary: |
-  Earthquake data for the island of La Palma from the September 2021 eruption is found ...
+  (to do) ...
+plain-languquarto installage-summary: |
+  (to do) ...
 key-points:
-  - A web scraping script was developed to pull data from the Instituto Geogràphico Nacional into a machine-readable form for analysis
-  - Earthquake events on La Palma are consistent with the presence of both mantle and crustal reservoirs.
+  - (to do)
 date: last-modified
 bibliography: references.bib
-citation:
-  container-title: Earth and Space Science
+cite-method: citeproc
+#csl: apa.csl
+citation: true
+  # type: article-journal
+  # container-title: ""
+  # publisher: ""
+  # issued: 2020/09/23
+  # issue:
+  # volume: 2
+  # doi: ""
+  # url: https://example.com/summarizing-output
+  # page-first: 46
+  # page-last: 53
+  # editor:
+  # - Don Draper
+  # - Nick Fury
+filters:
+  - diagram
+google-scholar: true
 number-sections: true
+licence: 'CC BY-SA'
 ---
 
-## Introduction
+## Introduction {#sec-introduction}
 
-```{r}
-eruptions <- c(1492, 1585, 1646, 1677, 1712, 1949, 1971, 2021)
-n_eruptions <- length(eruptions)
-```
+Comparative Judgment often refers to the method of \textit{Dichotomous} Comparative Judgement [DCJ, @Thurstone_1927] where judges rate an object's trait by means of pairwise comparisons in a dichotomous scale. Usually, in these types of experiments the objects are observational units from higher hierarchical levels, such as subjects. For example, when researchers are interested in assessing the trait of speech intelligibility of individuals (subjects), judges rate dichotomously two uttered sentences (objects, nested within individuals).
 
-```{r}
-#| label: fig-timeline
-#| fig-cap: Timeline of recent earthquakes on La Palma
-#| fig-alt: An event plot of the years of the last 8 eruptions on La Palma.
-#| fig-height: 1.5
-#| fig-width: 6
-par(mar = c(3, 1, 1, 1) + 0.1)
-plot(eruptions, rep(0, n_eruptions), 
-  pch = "|", axes = FALSE)
-axis(1)
-box()
-```
+DCJ have been successfully applied to education, e.g., for assessing writing quality [@Lesterhuis_2018, @Pollitt_2012b, @vanDaal_2020], STEM abilities [@Bartholomew_et_al_2018, @Bartholomew_et_al_2020], linguistics [@Boonen_et_al_2020]. In marketing, e.g., recipe tasting such as in examples found in @Lawson_2015.
 
-```{r}
-#| output: false
-avg_years_between_eruptions <- mean(diff(eruptions[-n_eruptions]))
-avg_years_between_eruptions
-```
+No CJ research have been submitted on the *intersection* of
 
-Based on data up to and including 1971, eruptions on La Palma happen every `r round(avg_years_between_eruptions, 1)` years on average.
+1. Simulation-based power analysis
 
-Studies of the magma systems feeding the volcano, such as @marrero2019, have proposed that there are two main magma reservoirs feeding the Cumbre Vieja volcano; one in the mantle (30-40km depth) which charges and in turn feeds a shallower crustal reservoir (10-20km depth).
+    importance for planning and reliability of results
+    
+2. For comparative judgments: 
 
-Eight eruptions have been recorded since the late 1400s (@fig-timeline).
+    sophisticated procedure to score traits:
+    
+    - between subjects
+    - against a reference subject
+    - to test research theories
+    - to test judges' reliability
+    
+3. Considering the predictability of the phenomena 
+      
+      its importance in @Shmueli_et_al_2011 and Lawson [-@Lawson_2015, pp. 7]
 
-Data and methods are discussed in @sec-data-methods.
+4. Under Bayesian framework
 
-Let $x$ denote the number of eruptions in a year. Then, $x$ can be modeled by a Poisson distribution
+5. Keeping a documentation of the implementation 
 
-$$
-p(x) = \frac{e^{-\lambda} \lambda^{x}}{x !}
-$$ {#eq-poisson}
 
-where $\lambda$ is the rate of eruptions per year. Using @eq-poisson, the probability of an eruption in the next $t$ years can be calculated.
+## Research questions {#sec-ResearchQuestions}
 
-| Name                 | Year   |
-| -------------------- | ------ |
-| Current              | 2021   |
-| Teneguía             | 1971   |
-| Nambroque            | 1949   |
-| El Charco            | 1712   |
-| Volcán San Antonio   | 1677   |
-| Volcán San Martin    | 1646   |
-| Tajuya near El Paso  | 1585   |
-| Montaña Quemada      | 1492   |
+<!-- **Research question 1** is interested in *which factors have an impact on the power to make comparisons between subjects' traits, with $95\%$ ($1-\alpha$) confidence?* (RQ1), when we want to compare: two random subjects, or one random subject versus a reference subject. Consequently the parameter of interest is $\theta_{i} - \theta_{j}$. -->
 
-: Recent historic eruptions on La Palma {#tbl-history}
+<!-- Considering the results of **RQ1**, **Research question 2a** is interested in *which factors have an impact on the power to make comparisons of the average trait between groups of subjects / objects, with $95\%$ ($1-\alpha$) confidence?* (RQ2a). Consequently, the parameters of interest will be the $\beta_{X}$ or $\beta_{Y}$, if $X$ or $Y$ define two or more groups (or interactions). -->
 
-@tbl-history summarises the eruptions recorded since the colonization of the islands by Europeans in the late 1400s.
 
-![Map of La Palma](images/la-palma-map.png){#fig-map}
+<!-- Considering the results of **RQ1**, **Research question 2b** is interested in *which factors have an impact on the power of covariates' regression parameters on the trait of subjects / objects, with $95\%$ ($1-\alpha$) confidence?* (RQ2b). Consequently, the parameters of interest will be the $\beta_{X}$ or $\beta_{Y}$, if $X$ or $Y$ define a continuous covariate. -->
 
-La Palma is one of the west most islands in the Volcanic Archipelago of the Canary Islands (@fig-map). 
 
-{{< embed notebooks/explore-earthquakes.qmd#fig-spatial-plot >}}
+<!-- Considering the results of **RQ1**, **Research question 3a** is interested in *which factors have an impact on the power to make comparisons of the average "discrimination" ability between groups of judges, with $95\%$ ($1-\alpha$) confidence?}* (RQ3a). Consequently, the parameters of interest will be the $\beta_{Z}$ or $\beta_{Y}$, if $Z$ define two or more groups (or interactions). -->
 
-@fig-spatial-plot shows the location of recent Earthquakes on La Palma.
+<!-- Considering the results of **RQ1**, **Research question 3b** is interested in *which factors have an impact on the power of covariates' regression parameters from covariates on the judgment ability of judges, with $95\%$ ($1-\alpha$) confidence?* (RQ3b). Consequently, the parameters of interest will be the $\beta_{Z}$, if $Z$ define a continuous covariate. -->
 
-## Data & Methods {#sec-data-methods}
 
-## Conclusion
+## Methods {#sec-methods}
+
+### Theoretical framework {#sec-TF}
+
+<!-- Use of Directed Acyclic Graph (DAG) [@Pearl_2009, @Pearl_et_al_2016, @Cinelli_et_al_2021] to state the estimation problem andthe research hypotheses. -->
+
+<!-- DAG conventions (for this proposal): -->
+
+<!-- 1. Open circles $=$ unobservable / latent variable -->
+<!-- 2. Close circles $=$ observable variable -->
+
+<!-- ![Causal Diagram](images/DCJ_DAG.tex) -->
+
+<!-- where $X_{i}$ describes subjects' background variables ($i = 1, \dots, j, \dots, N$), $Z_{k}$ the judges' background variables ($k = 1, \dots, K$), $Y_{r}$ the objects' background variables ($r_{i} = 1, \dots, R_{i}$). Furthermore, $\theta_{i}$ denotes the trait of subject $i$, $\gamma_{k}$ the judges' *discrimination* ability, $\theta_{ir_{i}}$ the trait of object $r_{i}$ from subject $i$, $\delta_{kijr_{ij}}$ the judge $k$ perception of trait differences between objects $r_{i}$ and $r_{j}$, from subjects $i$ and $j$. Additionally, $e_{k}$, $e_{i}$, and $e_{r_{i}}$ are the judges, subjects and objects idiosyncratic deviations. Lastly, $O_{kijr_{ij}}$ describes the dichotomous *observed* outcome -->
+
+<!-- commands for d-separation -->
+\newcommand{\dsep}[2]{#1 \perp\kern-5pt\perp #2}
+\newcommand{\ndsep}[2]{#1 \not\!\perp\!\!\!\perp #2}
+
+
+<!-- $$ -->
+<!-- \begin{aligned}[t] -->
+<!--   O_{kijr_{ij}} \leftarrow & \; f_{O}( \delta_{kijr_{ij}} ) \\ -->
+<!--   \delta_{kijr_{ij}} \leftarrow & \; f_{D}( \gamma_{k}, \theta_{ir_{i}} ) \\ -->
+<!--   \gamma_{k} \leftarrow & \; f_{G}( Z_{k}, e_{k} ) \\ -->
+<!--   \theta_{ir_{i}} \leftarrow & \; f_{R}( \theta_{i}, Y_{r}, e_{r_{i}} ) \\ -->
+<!--   \theta_{i} \leftarrow & \; f_{T}( X_{i}, e_{i} ) \\ -->
+<!--   & \; \dsep{e_{k}}{e_{i}} \\ -->
+<!--   & \; \dsep{e_{k}}{e_{r_{i}}} \\ -->
+<!--   & \; \dsep{e_{i}}{e_{r_{i}}} -->
+<!-- \end{aligned} -->
+<!-- $$ {#eq-StructuralModel} -->
+
+
+### Statistical model {#sec-SM}
+
+<!-- "An appropriate analysis of data cannot be completed without knowledge of what experimental design was used and how the data was collected, and conclusions are not reliable if they are not justified by the proper modeling and analysis of the data" [see @Lawson_2015, pp. 7] -->
+
+<!-- "In many cases where observational units are different than the experimental units, the observational units will not be independent" [see @Lawson_2015, pp. 177] -->
+
+<!-- Bayesian Bradley-Terry-Luce model (BTL) [@Bradley_et_al_1952, @Luce_1959, @Pollitt_2012b, @BradleyTerry2_2012]  -->
+
+<!-- $$ -->
+<!-- \begin{aligned}[t] -->
+<!--   O_{kijr_{ij}} \sim & \; \text{Bernoulli}\left[ \; \text{inv}\_\text{logit}\left( \delta_{kijr_{ij}} \right) \; \right] \\ -->
+<!--   \delta_{kijr_{ij}} = & \; \gamma_{k}( \theta_{ir_{i}} - \theta_{jr_{j}} ) \\ -->
+<!--   \gamma_{k} \sim & \; \text{Log-Normal}( \beta_{Z} Z_{k},\; \sigma_{k} ) \\ -->
+<!--   \theta_{ir_{i}} \sim & \; \text{Normal}( \theta_{i} + \beta_{Y} Y_{r},\; \sigma_{r_{i}} )  \\ -->
+<!--   \theta_{i} \sim & \; \text{Normal}( \beta_{X} X_{i},\; \sigma_{i}) \\ -->
+<!--   \sigma_{k} = & \; 1/10 \\ -->
+<!--   \sigma_{i} = & \; 1 \\ -->
+<!--   \sigma_{r_{i}} \sim & \; \text{Exponential}(2) -->
+<!-- \end{aligned} -->
+<!-- $$ {#eq-StatisticalModel1} -->
+
+
+<!-- $$ -->
+<!-- \begin{aligned}[t] -->
+<!--   O_{kijr_{ij}} \sim & \; \text{Bernoulli}\left[ \; \text{inv}\_\text{logit}\left( \delta_{kijr_{ij}} \right) \; \right] \\ -->
+<!--   \delta_{kijr_{ij}} = & \; \gamma_{k}( \theta_{ir_{i}} - \theta_{jr_{j}} ) \\ -->
+<!--   \gamma_{k} = & \; exp\left(\beta_{Z} Z_{k} + e_{k} \right) \\ -->
+<!--   \theta_{ir_{i}} = & \; \theta_{i} + \beta_{Y} Y_{r} + e_{r_{i}}  \\ -->
+<!--   \theta_{i} = & \; \beta_{X} X_{i} + e_{i}  \\ -->
+<!--   e_{k} \sim & \; \text{Normal}(0, 1/10) \\ -->
+<!--   e_{i} \sim & \; \text{Normal}(0, 1) \\ -->
+<!--   e_{r_{i}} \sim & \; \text{Normal}(0, \sigma_{r_{i}}) \\ -->
+<!--   \sigma_{r_{i}} \sim & \; \text{Exponential}(2) -->
+<!-- \end{aligned} -->
+<!-- $$ {#eq-StatisticalModel2} -->
+
+
+
+### Power analysis
+
+<!-- "Power analysis is only useful when the simulated data imitate actual data ... We assume that the model is a reasonably good description of the actual data" [see @Kruschke_2015, pp. 394] -->
+
+<!-- In terms of the highest density interval (HDI), power can be expressed in three goals [@Kruschke_2015]: -->
+
+<!-- 1. **Reject a null value of a parameter** -->
+
+<!--     *Formal expression:* Show that a region of practical equivalence (ROPE) around the null value excludes the posterior $95\%$ HDI. -->
+
+<!-- 2. **Affirm a predicted value of a parameter** -->
+
+<!--     *Formal expression:* Show that a ROPE around the predicted value includes the posterior $95\%$ HDI. -->
+
+<!-- 3. **Achieve precision in the estimate of a parameter** -->
+
+<!--     *Formal expression:* Show that the posterior $95\%$ HDI has width less than a specified maximum. -->
+
+
+<!-- According to the definition of @Lawson_2015 -->
+<!-- In the context of DCJ -->
+
+<!-- Experiment:  -->
+<!-- present two objects coming from two subjects to a judge, who will assess which object among the two have a greater amount of the trait under assessment. If object A have more of the trait than B, then you score it with a 1, otherwise 0 -->
+
+<!-- Ideal scenario: -->
+<!-- all judges assess all pairs of subjects, with all pairs of objects, more than one time [see @Lawson_2015, pp. 262] (recipe example) -->
+
+<!-- Experimental unit:  -->
+<!-- Trials of the experiment, where a pair of subjects is rated by a judge using two pairs of objects [see @Lawson_2015, pp. 124] (GCB) -->
+
+<!-- Observational unit:  -->
+<!-- objects within subjects (they work as items in IRT?) -->
+
+<!-- Treatment variable:  -->
+<!-- Two subjects under comparison -->
+
+<!-- Independent variable: -->
+<!-- characteristics of the subjects or objects -->
+
+<!-- Background variable:  -->
+<!-- Unknown, it is subject-matter specific -->
+
+<!-- Blocking variable:  -->
+<!-- a. Judges? (In BIB) -->
+<!-- b. Block of day in which the experiment is performed -->
+
+<!-- Dependent variable (response):  -->
+<!-- dichotomous rating -->
+
+<!-- Effect:  -->
+<!-- 1. differences among individuals -->
+<!-- 2. changes in response by changing treatment factors -->
+<!-- 3. Changes in response by changing blocking variable -->
+
+<!-- Replicate runs:  -->
+<!-- experiments where either one or two of the subjects in the pair is different. Best case scenario is when all pairs of subjects are compaired with all pairs of objects at least by one judge (one block) -->
+
+<!-- Duplicate runs:  -->
+<!-- experiments where the same judge compares the same two subjects more than one time. Best case scenario is when all judges assess the same pair of subjects more than one time (with different or the same objects) -->
+<!-- e.g., If the measured response changes with the objects, then the response is varying due to measurement error, and therefore, objects constitute duplicate runs.  -->
+<!-- If the same judge assess the same two objects from the same two subjects more than one time, then the variability of the assessment of the judge can be partitioned additionally into variance between pairs of objects and variance within pairs of objects. -->
+
+<!-- From @Lawson_2015, another way to see DCJ experiments I'd that you are grouping heterogeneous experimental units (objects and subjects) into homogeneous ones (judges), which are your "blocks". In that case if you expect that blocking will reduce the variance of EUs within blocks by a percentage equal to $100*\left(1-\frac{1}{RE}\right)$ where $RE$ is the relative efficiency in respect to a CRD  then the replicates would be $r=r_{crd}/RE$ and the number of blocks of size $k$ would be $b=tr/k$ [see @Lawson_2015, pp. 121-122, pp. 267] -->
+
+
+#### Factors of interest {#sec-FI}
+
+<!-- It is more likely that we can decide the characteristics of the objects we want to include in the study (independent variables), ensuring groups that are more balanced. However, in the case of subjects sometimes the independent variables cannot be assigned (e.g., hearing status). -->
+
+<!-- For **RQ1** the factors of interest will be: -->
+
+<!-- 1. Number of objects per subject ($R_{i}$) -->
+<!-- 2. Number of comparisons per object -->
+<!-- 3. Variability of objects within each subject ($\sigma_{r_{i}}$) -->
+<!-- 4. Number of judges ($K$) -->
+
+<!--     indirectly determined by the number of comparison per judge, see \cite{Lawson_2015}, p. 263-264) -->
+
+<!-- 5. Judges' "discrimination" ability ($\gamma_{k}$) -->
+<!-- 6. Trait difference size between subjects ($\theta_{i} - \theta_{j}$) -->
+
+
+<!-- **RQ1** will not investigate the following factors: -->
+
+<!-- 1. Pairing algorithm (see \cite{Bramley_2015}). -->
+
+<!--       We will use a random algorithm (Balanced Incomplete Block design, BIB \cite{Lawson_2015})  -->
+
+<!-- 2. Number of comparisons per judge,  -->
+
+<!--       we assign the maximum number of comparison physically possible per judge, i.e., a fixed value (although, this is task specific)  -->
+
+<!-- 3. Format of the assessed object (see \cite{Verhavert_2018})  -->
+
+<!--     It is indirectly investigated in \textit{RQ2a} and \textit{RQ2b} -->
+
+<!-- 4. The variability proportion among group of subjects  -->
+
+<!--     It is indirectly investigated in \textit{RQ2a} and \textit{RQ2b}  -->
+
+
+<!-- For **RQ2a** the factors of interest will be: -->
+
+<!-- 1. Trait difference size between group of subjects / objects ($\beta_{X}$ or $\beta_{Y}$) -->
+<!-- 2. Number of subjects per group -->
+
+<!--     ($N_{g}$ where $g = 1, \dots, G$ groups). Questions: are balanced designs the best?, what if the cost of data is different for each group? -->
+
+<!-- 3. Proportion of variability among group of subjects \\ -->
+
+<!--     ($\sigma_{i} = \sigma_{g}$ where $g = 1, \dots, G$ groups), e.g., assuming two balanced groups ($N_{A} = N_{B}$) with $\sigma_{A[i]}^2 = p^{2}$ and $\sigma_{B[i]}^2 = 1-p^{2}$, where $0 \leq p \leq 1$, then the variance for a t-test among groups would be: $s_{p} = 1/\sqrt{2}$ -->
+
+
+<!-- For **RQ2b** the factors of interest will be: -->
+
+<!-- 1. Size of the effect ($\beta_{X}$ or $\beta_{Y}$) -->
+<!-- 2. Total number of subjects ($N$) -->
+
+
+<!-- For **RQ3a** the factors of interest will be: -->
+
+<!-- 1. Size of the difference between group of judges ($\beta_{Z}$) -->
+<!-- 2. Number of judges per group  -->
+
+<!--     ($K_{g}$ where $g=1,\dots,G$ groups). Questions: are balanced designs the best?, what if the cost of data is different for each group? -->
+
+<!-- 3. Proportion of variability among group of judges -->
+
+<!--     ($\sigma_{k} = \sigma_{g}$ where $g = 1, \dots, G$ groups), e.g., assuming two balanced groups ($K_{A} = K_{B}$) with $\sigma_{A[i]}^2 = p^{2}$ and $\sigma_{B[i]}^2 = 1-p^{2}$, where $0 \leq p \leq 1$, then the variance for a t-test among groups would be: $s_{p} = 1/\sqrt{2}$ -->
+
+
+<!-- For **RQ3b** the factors of interest will be: -->
+
+<!-- 1. Size of the effect $\beta_{Z}$ -->
+<!-- 2. Total number of judges ($K$) -->
+
+
+#### Data {#sec-D}
+
+<!-- Generate random data up until judges and subjects abilities. Then for the population assume you made all comparisons. Then sample with BIB [@Lawson_2015] the pairs compared. -->
+<!-- For effect size test, simulate individuals from the distribution, identify which have a desired difference and calculate power on those individuals. -->
+<!-- Track the total number of comparison per subjects as another representation -->
+<!-- Steps: -->
+<!-- 1. Define parameters generating the population, by factorial design -->
+<!-- 2. Generate a population: 500 subjects, 100 objects and all comparisons made 100 times -->
+<!-- 3. Sample from population with BIB -->
+<!-- 4. Run model on the sample -->
+<!-- 5. Report the goals -->
+<!-- 6. Repeat steps 3-5 for a specific number of simulations. -->
+<!-- 7. Repeat steps 1-6 for all parameters combinations -->
+
+
+
+## Results {#sec-results}
+
+### Research question 1 {#sec-RQ1}
+
+### Research question 2 {#sec-RQ2}
+
+### Research question 3 {#sec-RQ3}
+
+
+
+## Discussion {#sec-discussion}
+
+<!-- When you want to investigate objects, the experiment has an experimental unit: the trial on the objects, but you only have one object per subject. Consequently, objects and subjects are confounded. -->
+
+### Limitations and further research {#sec-LFR}
+
+<!-- We are trying to do prospective power analysis, however, you should pose the possibility that other authors perform replication power [see @Kruschke_2015, pp. 393]. The next paper is going to perform retrospective power analysis -->
+
+<!-- Prospect of future research: -->
+
+<!-- - Does the pairing algorithm have an impact on any of the three research questions? -->
+<!-- - What is the maximum of comparisons per judge to avoid loosing discrimination ability?, is it task-specific? (most likely) -->
+
+
+## Conclusion {#sec-conclusion}
+
 
 ## References {.unnumbered}
 

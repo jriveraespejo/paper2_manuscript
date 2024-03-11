@@ -1,4 +1,4 @@
 ## A Quarto Manuscript Template
 
-This is a template repo for generating a manuscript from Quarto that accompanies the tutorial at: [Quarto Manuscripts: RStudio](https://quarto.org/docs/manuscripts/authoring/rstudio.html)
+This is the repository for generating the Quarto manuscript from the study: *Power analysis for Dichotomous Comparative Judgment experiments (DCJ). A Bayesian simulation-based study exploring the factors that impact DCJ*
 
