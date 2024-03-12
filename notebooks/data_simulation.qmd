@@ -1,5 +1,6 @@
 ---
 title: Data simulation
-author: Jose Rivera
+author: Jose Manuel Rivera Espejo
 ---
 
+Assuming the This notebook guides the reader through the data simulation process

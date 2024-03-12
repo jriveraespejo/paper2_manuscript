@@ -79,32 +79,40 @@ licence: 'CC BY-SA'
 
 ## Introduction {#sec-introduction}
 
-Comparative Judgment often refers to the method of \textit{Dichotomous} Comparative Judgement [DCJ, @Thurstone_1927] where judges rate an object's trait by means of pairwise comparisons in a dichotomous scale. Usually, in these types of experiments the objects are observational units from higher hierarchical levels, such as subjects. For example, when researchers are interested in assessing the trait of speech intelligibility of individuals (subjects), judges rate dichotomously two uttered sentences (objects, nested within individuals).
+<!-- 1. What is comparative judgment? and in what it has been applied on? -->
+In contemporary contexts, Comparative Judgment (CJ), as stated by Thurstone [-@Thurstone_1927], is primarily associated with the method of *Dichotomous* Comparative Judgment (DCJ). Within this approach, a panel of judges evaluates the relative manifestation of a particular trait or quality within a pair of stimuli. The result of this evaluation produces a dichotomous value, indicating which stimulus in the pair has a higher degree of the trait or quality [@Pollitt_2012a; @Pollitt_2012b]. It has been shown that DCJ produces reliable and valid measures of the assessed traits and qualities [@Lesterhuis_2018; @vanDaal_2020]. Consequently, DCJ have been successfully employed to assess competences and traits in various domains, including education [@Bartholomew_et_al_2018; @Lesterhuis_2018; @Pollitt_2012b; @vanDaal_2020; @Bartholomew_et_al_2020], linguistics [@Boonen_et_al_2020], and psychology [(citation needed)]{style="color:red;"}. In summary, DCJ presents itself as an alternative and efficient approach to measurement and evaluation that is reliable and valid across diverse domains.
 
-DCJ have been successfully applied to education, e.g., for assessing writing quality [@Lesterhuis_2018, @Pollitt_2012b, @vanDaal_2020], STEM abilities [@Bartholomew_et_al_2018, @Bartholomew_et_al_2020], linguistics [@Boonen_et_al_2020]. In marketing, e.g., recipe tasting such as in examples found in @Lawson_2015.
+<!-- However, with a relatively small number of judgments per response [@Verhavert_et_al_2019] -->
 
-No CJ research have been submitted on the *intersection* of
 
-1. Simulation-based power analysis
+<!-- 3. Gap -->
 
-    importance for planning and reliability of results
-    
-2. For comparative judgments: 
+<!-- 4. Solution to the gap -->
 
-    sophisticated procedure to score traits:
-    
-    - between subjects
-    - against a reference subject
-    - to test research theories
-    - to test judges' reliability
-    
-3. Considering the predictability of the phenomena 
-      
-      its importance in @Shmueli_et_al_2011 and Lawson [-@Lawson_2015, pp. 7]
 
-4. Under Bayesian framework
 
-5. Keeping a documentation of the implementation 
+<!-- No CJ research have been submitted on the *intersection* of -->
+
+<!-- 1. Simulation-based power analysis -->
+
+<!--     importance for planning and reliability of results -->
+
+<!-- 2. For comparative judgments: -->
+
+<!--     sophisticated procedure to score traits: -->
+
+<!--     - between subjects -->
+<!--     - against a reference subject -->
+<!--     - to test research theories -->
+<!--     - to test judges' reliability -->
+
+<!-- 3. Considering the predictability of the phenomena -->
+
+<!--       its importance in @Shmueli_et_al_2011 and Lawson [-@Lawson_2015, pp. 7] -->
+
+<!-- 4. Under Bayesian framework -->
+
+<!-- 5. Keeping a documentation of the implementation -->
 
 
 ## Research questions {#sec-ResearchQuestions}
@@ -258,6 +266,8 @@ No CJ research have been submitted on the *intersection* of
 <!-- If the same judge assess the same two objects from the same two subjects more than one time, then the variability of the assessment of the judge can be partitioned additionally into variance between pairs of objects and variance within pairs of objects. -->
 
 <!-- From @Lawson_2015, another way to see DCJ experiments I'd that you are grouping heterogeneous experimental units (objects and subjects) into homogeneous ones (judges), which are your "blocks". In that case if you expect that blocking will reduce the variance of EUs within blocks by a percentage equal to $100*\left(1-\frac{1}{RE}\right)$ where $RE$ is the relative efficiency in respect to a CRD  then the replicates would be $r=r_{crd}/RE$ and the number of blocks of size $k$ would be $b=tr/k$ [see @Lawson_2015, pp. 121-122, pp. 267] -->
+
+<!-- Usually, in these types of experiments the objects are observational units from higher hierarchical levels, such as subjects. For example, when researchers are interested in assessing the trait of speech intelligibility of individuals (subjects), judges rate dichotomously two uttered sentences (objects, nested within individuals). -->
 
 
 #### Factors of interest {#sec-FI}
