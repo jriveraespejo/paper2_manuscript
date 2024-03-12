@@ -4,7 +4,7 @@
 \PassOptionsToPackage{dvipsnames,svgnames,x11names}{xcolor}
 %
 \documentclass[
-]{agujournal2019}
+  12pt]{article}
 
 \usepackage{amsmath,amssymb}
 \usepackage{iftex}
@@ -109,11 +109,11 @@
 \newcommand{\CSLRightInline}[1]{\parbox[t]{\linewidth - \csllabelwidth}{\strut#1\strut}}
 \newcommand{\CSLIndent}[1]{\hspace{\cslhangindent}#1}
 
-\usepackage{url} %this package should fix any errors with URLs in refs.
-\usepackage{lineno}
-\usepackage[inline]{trackchanges} %for better track changes. finalnew option will compile document with changes incorporated.
-\usepackage{soul}
-\linenumbers
+\addtolength{\oddsidemargin}{-.5in}%
+\addtolength{\evensidemargin}{-1in}%
+\addtolength{\textwidth}{1in}%
+\addtolength{\textheight}{1.7in}%
+\addtolength{\topmargin}{-1in}%
 \makeatletter
 \@ifpackageloaded{caption}{}{\usepackage{caption}}
 \AtBeginDocument{%
@@ -163,9 +163,10 @@
 \IfFileExists{xurl.sty}{\usepackage{xurl}}{} % add URL line breaks if available
 \urlstyle{same} % disable monospaced font for URLs
 \hypersetup{
-  pdftitle={La Palma Earthquakes},
-  pdfauthor={Steve Purves; Rowan Cockett},
-  pdfkeywords={La Palma, Earthquakes},
+  pdftitle={Power analysis for Dichotomous Comparative Judgment experiments (DCJ)},
+  pdfauthor={Jose Manuel Rivera Espejo; Sven de Maeyer; Steven Gillis},
+  pdfkeywords={power analysis, comparative judgment, bayesian
+analysis, simulation},
   colorlinks=true,
   linkcolor={blue},
   filecolor={Maroon},
@@ -173,161 +174,177 @@
   urlcolor={Blue},
   pdfcreator={LaTeX via pandoc}}
 
-\journalname{Earth and Space Science}
-
-\draftfalse
 
 \begin{document}
-\title{La Palma Earthquakes}
-
-\authors{Steve Purves\affil{1}, Rowan Cockett\affil{1}}
-\affiliation{1}{Curvenote, }
-\correspondingauthor{Steve Purves}{steve@curvenote.com}
 
 
+\def\spacingset#1{\renewcommand{\baselinestretch}%
+{#1}\small\normalsize} \spacingset{1}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\date{March 12, 2024}
+\title{\bf Power analysis for Dichotomous Comparative Judgment
+experiments (DCJ)}
+\author{
+Jose Manuel Rivera Espejo\\
+Education sciences, University of Antwerp\\
+and\\Sven Maeyer\\
+Education sciences, University of Antwerp\\
+and\\Steven Gillis\\
+Linguistics, University of Antwerp\\
+}
+\maketitle
+
+\bigskip
+\bigskip
 \begin{abstract}
-In September 2021, a significant jump in seismic activity on the island
-of La Palma (Canary Islands, Spain) signaled the start of a volcanic
-crisis that still continues at the time of writing. Earthquake data is
-continually collected and published by the Instituto Geográphico
-Nacional (IGN). \ldots{}
+(to do) \ldots{}
 \end{abstract}
 
-\section*{Plain Language Summary}
-Earthquake data for the island of La Palma from the September 2021
-eruption is found \ldots{}
+\noindent%
+{\it Keywords:} power analysis, comparative judgment, bayesian
+analysis, simulation
+\vfill
 
+\newpage
+\spacingset{1.9} % DON'T change the spacing!
 
+\section{Introduction}\label{sec-introduction}
 
-\section{Introduction}\label{introduction}
+Comparative Judgment often refers to the method of \textit{Dichotomous}
+Comparative Judgement (DCJ, Thurstone 1927) where judges rate an
+object's trait by means of pairwise comparisons in a dichotomous scale.
+Usually, in these types of experiments the objects are observational
+units from higher hierarchical levels, such as subjects. For example,
+when researchers are interested in assessing the trait of speech
+intelligibility of individuals (subjects), judges rate dichotomously two
+uttered sentences (objects, nested within individuals).
 
-\textsubscript{Source:
-\href{https://quarto-ext.github.io/manuscript-template-rstudio/index.qmd.html}{Article
-Notebook}}
+DCJ have been successfully applied to education, e.g., for assessing
+writing quality van Daal (2020), STEM abilities Bartholomew and Williams
+(2020), linguistics (Boonen, Kloots, and Gillis 2020). In marketing,
+e.g., recipe tasting such as in examples found in Lawson (2015).
 
-\phantomsection\label{cell-fig-timeline}
-\begin{figure}[H]
+No CJ research have been submitted on the \emph{intersection} of
 
-\centering{
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\item
+  Simulation-based power analysis
 
-\includegraphics{index_files/figure-pdf/fig-timeline-1.pdf}
+  importance for planning and reliability of results
+\item
+  For comparative judgments:
 
-}
+  sophisticated procedure to score traits:
 
-\caption{\label{fig-timeline}Timeline of recent earthquakes on La Palma}
+  \begin{itemize}
+  \tightlist
+  \item
+    between subjects
+  \item
+    against a reference subject
+  \item
+    to test research theories
+  \item
+    to test judges' reliability
+  \end{itemize}
+\item
+  Considering the predictability of the phenomena
 
-\end{figure}%
+  its importance in Shmueli and Koppius (2011) and Lawson (2015, 7)
+\item
+  Under Bayesian framework
+\item
+  Keeping a documentation of the implementation
+\end{enumerate}
 
-\textsubscript{Source:
-\href{https://quarto-ext.github.io/manuscript-template-rstudio/index.qmd.html}{Article
-Notebook}}
+\section{Research questions}\label{sec-ResearchQuestions}
 
-\textsubscript{Source:
-\href{https://quarto-ext.github.io/manuscript-template-rstudio/index.qmd.html}{Article
-Notebook}}
+\section{Methods}\label{sec-methods}
 
-Based on data up to and including 1971, eruptions on La Palma happen
-every 79.8 years on average.
+\subsection{Theoretical framework}\label{sec-TF}
 
-Studies of the magma systems feeding the volcano, such as Marrero et al.
-(2019), have proposed that there are two main magma reservoirs feeding
-the Cumbre Vieja volcano; one in the mantle (30-40km depth) which
-charges and in turn feeds a shallower crustal reservoir (10-20km depth).
+\newcommand{\dsep}[2]{#1 \perp\kern-5pt\perp #2}
+\newcommand{\ndsep}[2]{#1 \not\!\perp\!\!\!\perp #2}
 
-Eight eruptions have been recorded since the late 1400s
-(Figure~\ref{fig-timeline}).
+\subsection{Statistical model}\label{sec-SM}
 
-Data and methods are discussed in Section~\ref{sec-data-methods}.
+\subsection{Power analysis}\label{power-analysis}
 
-Let \(x\) denote the number of eruptions in a year. Then, \(x\) can be
-modeled by a Poisson distribution
+\subsubsection{Factors of interest}\label{sec-FI}
 
-\begin{equation}\phantomsection\label{eq-poisson}{
-p(x) = \frac{e^{-\lambda} \lambda^{x}}{x !}
-}\end{equation}
+\subsubsection{Data}\label{sec-D}
 
-where \(\lambda\) is the rate of eruptions per year. Using
-Equation~\ref{eq-poisson}, the probability of an eruption in the next
-\(t\) years can be calculated.
+\section{Results}\label{sec-results}
 
-\begin{longtable}[]{@{}ll@{}}
-\caption{Recent historic eruptions on La
-Palma}\label{tbl-history}\tabularnewline
-\toprule\noalign{}
-Name & Year \\
-\midrule\noalign{}
-\endfirsthead
-\toprule\noalign{}
-Name & Year \\
-\midrule\noalign{}
-\endhead
-\bottomrule\noalign{}
-\endlastfoot
-Current & 2021 \\
-Teneguía & 1971 \\
-Nambroque & 1949 \\
-El Charco & 1712 \\
-Volcán San Antonio & 1677 \\
-Volcán San Martin & 1646 \\
-Tajuya near El Paso & 1585 \\
-Montaña Quemada & 1492 \\
-\end{longtable}
+\subsection{Research question 1}\label{sec-RQ1}
 
-Table~\ref{tbl-history} summarises the eruptions recorded since the
-colonization of the islands by Europeans in the late 1400s.
+\subsection{Research question 2}\label{sec-RQ2}
 
-\begin{figure}
+\subsection{Research question 3}\label{sec-RQ3}
 
-\centering{
+\section{Discussion}\label{sec-discussion}
 
-\includegraphics{images/la-palma-map.png}
+\subsection{Limitations and further research}\label{sec-LFR}
 
-}
-
-\caption{\label{fig-map}Map of La Palma}
-
-\end{figure}%
-
-La Palma is one of the west most islands in the Volcanic Archipelago of
-the Canary Islands (Figure~\ref{fig-map}).
-
-\begin{figure}[H]
-
-\centering{
-
-\includegraphics{index_files/figure-latex/notebooks-explore-earthquakes-fig-spatial-plot-output-1.png}
-
-}
-
-\caption{\label{fig-spatial-plot}Locations of earthquakes on La Palma
-since 2017}
-
-\end{figure}%
-
-\textsubscript{Source:
-\href{https://quarto-ext.github.io/manuscript-template-rstudio/notebooks/explore-earthquakes-preview.html\#cell-fig-spatial-plot}{Explore
-Earthquakes}}
-
-Figure~\ref{fig-spatial-plot} shows the location of recent Earthquakes
-on La Palma.
-
-\section{Data \& Methods}\label{sec-data-methods}
-
-\section{Conclusion}\label{conclusion}
+\section{Conclusion}\label{sec-conclusion}
 
 \section*{References}\label{references}
 \addcontentsline{toc}{section}{References}
 
 \phantomsection\label{refs}
 \begin{CSLReferences}{1}{0}
-\vspace{1em}
+\bibitem[\citeproctext]{ref-Bartholomew_et_al_2018}
+Bartholomew, S., L. Nadelson, W. Goodridge, and E. Reeve. 2018.
+{``Adaptive Comparative Judgment as a Tool for Assessing Open-Ended
+Design Problems and Model Eliciting Activities.''} \emph{Educational
+Assessment} 23 (2): 85--101.
+\url{https://doi.org/10.1080/10627197.2018.1444986}.
 
-\bibitem[\citeproctext]{ref-marrero2019}
-Marrero, J., García, A., Berrocoso, M., Llinares, Á., Rodríguez-Losada,
-A., \& Ortiz, R. (2019). Strategies for the development of volcanic
-hazard maps in monogenetic volcanic fields: The example of {La} {Palma}
-({Canary} {Islands}). \emph{Journal of Applied Volcanology}, \emph{8}.
-\url{https://doi.org/10.1186/s13617-019-0085-5}
+\bibitem[\citeproctext]{ref-Bartholomew_et_al_2020}
+Bartholomew, S., and P. Williams. 2020. {``STEM Skill Assessment: An
+Application of Adaptive Comparative Judgment.''} In \emph{Integrated
+Approaches to STEM Education. Advances in STEM Education}, edited by J.
+Anderson and Y. Li. Springer.
+\url{https://doi.org/10.1007/978-3-030-52229-2_18}.
+
+\bibitem[\citeproctext]{ref-Boonen_et_al_2020}
+Boonen, N., H. Kloots, and S. Gillis. 2020. {``Rating the Overall Speech
+Quality of Hearing-Impaired Children by Means of Comparative
+Judgements.''} \emph{Journal of Communication Disorders} 83: 1675--87.
+\url{https://doi.org/10.1016/j.jcomdis.2019.105969}.
+
+\bibitem[\citeproctext]{ref-Lawson_2015}
+Lawson, J. 2015. \emph{\href{}{Design and Analysis of Experiments with
+r}}. Chapman; Hall/CRC.
+
+\bibitem[\citeproctext]{ref-Lesterhuis_2018}
+Lesterhuis, M. 2018. {``The Validity of Comparative Judgement for
+Assessing Text Quality: An Assessor's Perspective.''} PhD thesis,
+University of Antwerp.
+
+\bibitem[\citeproctext]{ref-Pollitt_2012b}
+Pollitt, A. 2012. {``The Method of Adaptive Comparative Judgement.''}
+\emph{Assessment in Education: Principles, Policy and Practice} 19 (3):
+281-\/-300. \url{https://doi.org/10.1080/0969594X.2012.665354}.
+
+\bibitem[\citeproctext]{ref-Shmueli_et_al_2011}
+Shmueli, G., and O. Koppius. 2011. {``Predictive Analytics in
+Information Systems Research.''} \emph{MIS Quarterly} 35 (3): 553--72.
+\url{https://doi.org/10.2307/23042796}.
+
+\bibitem[\citeproctext]{ref-Thurstone_1927}
+Thurstone, L. 1927. {``A Law of Comparative Judgment.''}
+\emph{Psychological Review} 34 (4): 482--99.
+\url{https://doi.org/10.1037/h0070288}.
+
+\bibitem[\citeproctext]{ref-vanDaal_2020}
+van Daal, T. 2020. {``Making a Choice Is Not Easy?!: Unravelling the
+Task Difficulty of Comparative Judgement to Assess Student Work.''} PhD
+thesis, University of Antwerp.
 
 \end{CSLReferences}
 
