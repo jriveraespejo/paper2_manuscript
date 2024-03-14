@@ -79,13 +79,26 @@ licence: 'CC BY-SA'
 
 ## Introduction {#sec-introduction}
 
-<!-- 1. What is comparative judgment? and in what it has been applied on? -->
-In contemporary contexts, Comparative Judgment (CJ), as stated by Thurstone [-@Thurstone_1927], is primarily associated with the method of *Dichotomous* Comparative Judgment (DCJ). Within this approach, a panel of judges evaluates the relative manifestation of a particular trait or quality within a pair of stimuli. The result of this evaluation produces a dichotomous value, indicating which stimulus in the pair has a higher degree of the trait or quality [@Pollitt_2012a; @Pollitt_2012b]. It has been shown that DCJ produces reliable and valid measures of the assessed traits and qualities [@Lesterhuis_2018; @vanDaal_2020]. Consequently, DCJ have been successfully employed to assess competences and traits in various domains, including education [@Bartholomew_et_al_2018; @Lesterhuis_2018; @Pollitt_2012b; @vanDaal_2020; @Bartholomew_et_al_2020], linguistics [@Boonen_et_al_2020], and psychology [(citation needed)]{style="color:red;"}. In summary, DCJ presents itself as an alternative and efficient approach to measurement and evaluation that is reliable and valid across diverse domains.
+<!-- [(citation needed)]{style="color:red;"} -->
 
-<!-- However, with a relatively small number of judgments per response [@Verhavert_et_al_2019] -->
+<!-- 1. What is comparative judgment?-->
+In contemporary contexts, Thurstone's law of comparative judgment [@Thurstone_1927] primarily refers to the method of *Dichotomous* Comparative Judgment (DCJ). Within DCJ, a judge assesses the relative manifestation of a trait within a pair of stimuli, resulting in a dichotomous value indicating which stimulus appears to possess a higher degree of the trait [@Pollitt_2012a; @Pollitt_2012b]. Following multiple rounds of pairwise comparisons made by different judges, an outcome vector is produced. Typically, this vector is modeled using the Bradley-Terry-Luce model [BTL, @Bradley_et_al_1952; @Luce_1959; @Pollitt_2012a]. The set of latent variables produced by the model can then be utilized, for example, to rank the stimuli from lowest to highest, or to assess the impact of certain characteristics of the stimuli on their position in the ranking.
 
+<!-- in what DCJ has been applied on?  -->
+DCJ have been successfully employed to assess competences and traits primarily within education, as demonstrated by the works of @Pollitt_2012b, @Bartholomew_et_al_2018, @van_Daal_et_al_2016 @Lesterhuis_2018, and @Bartholomew_et_al_2020; however, applications to other fields can be also be found [@Boonen_et_al_2020]. Moreover, the methodology has been extended to contemplate multiple, as opposed to pairwise comparisons [@Luce_1959; @Placket_1975] and comparisons with ordinal outcomes [@Tutz_1986; @Agresti_1992]. In summary, the body of research suggests that DCJ offers an alternative and efficient approach to measurement and evaluation that is reliable and valid [@Lesterhuis_2018; @vanDaal_2020]; however, only few lines have been devoted to explore which assessment characteristics are behind its resounding success.
 
 <!-- 3. Gap -->
+
+<!-- Several assessment characteristics are at play when a DCJ assessments is made, including ... -->
+
+<!-- @Bramley_2015 conducted a simulation-based study to explore the impact of random versus adaptive pairing algorithms in the reliability of comparative judgments. Reliability was measured by the SSR index on simulated and estimated data. -->
+
+<!-- @van_Daal_et_al_2017 conducted a ... , and explore the role of decision accuracy in judges and its effects in the reliability of comparative judgments -->
+
+<!-- @Bramley_et_al_2019 used the GCSE English essays to assess the impact of random and adaptive pairing algorithms in the reliability of comparative judgments. Reliability was measured by the SSR index on simulated and estimated data. -->
+
+<!-- @Verhavert_et_al_2019 conducted a meta-analysis exploring the effect of the number of comparisons per stimuli on the level of reliability of comparative judgments. Reliability was measured by the SSR index. -->
+
 
 <!-- 4. Solution to the gap -->
 
@@ -375,6 +388,8 @@ In contemporary contexts, Comparative Judgment (CJ), as stated by Thurstone [-@T
 ### Limitations and further research {#sec-LFR}
 
 <!-- We are trying to do prospective power analysis, however, you should pose the possibility that other authors perform replication power [see @Kruschke_2015, pp. 393]. The next paper is going to perform retrospective power analysis -->
+
+<!-- The study only compared the reliability coefficients between the adaptive and non-adaptive studies, without considering other aspects of validity or the impact on external variables -->
 
 <!-- Prospect of future research: -->
 
