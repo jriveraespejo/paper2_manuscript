@@ -131,10 +131,10 @@ editing" vocab-term-identifier="https://credit.niso.org/contributor-roles/writin
 <corresp id="cor-1">JoseManuel.RiveraEspejo@uantwerpen.be</corresp>
 </author-notes>
 
-<pub-date date-type="pub" publication-format="electronic" iso-8601-date="2024-03-12">
+<pub-date date-type="pub" publication-format="electronic" iso-8601-date="2024-03-14">
 <year>2024</year>
 <month>3</month>
-<day>12</day>
+<day>14</day>
 </pub-date>
 
 
@@ -170,42 +170,60 @@ the University of Antwerp (BOF).</funding-statement>
 <body>
 <sec id="sec-introduction">
   <title>1 Introduction</title>
-  <p>In contemporary contexts, Comparative Judgment (CJ), as stated by
-  Thurstone
-  (<xref alt="1927" rid="ref-Thurstone_1927" ref-type="bibr">1927</xref>),
-  is primarily associated with the method of
-  <italic>Dichotomous</italic> Comparative Judgment (DCJ). Within this
-  approach, a panel of judges evaluates the relative manifestation of a
-  particular trait or quality within a pair of stimuli. The result of
-  this evaluation produces a dichotomous value, indicating which
-  stimulus in the pair has a higher degree of the trait or quality
+  <p>In contemporary contexts, Thurstone’s law of comparative judgment
+  (<xref alt="Thurstone 1927" rid="ref-Thurstone_1927" ref-type="bibr">Thurstone
+  1927</xref>) primarily refers to the method of
+  <italic>Dichotomous</italic> Comparative Judgment (DCJ). Within DCJ, a
+  judge assesses the relative manifestation of a trait within a pair of
+  stimuli, resulting in a dichotomous value indicating which stimulus
+  appears to possess a higher degree of the trait
   (<xref alt="Pollitt 2012a" rid="ref-Pollitt_2012a" ref-type="bibr">Pollitt
   2012a</xref>,
   <xref alt="2012b" rid="ref-Pollitt_2012b" ref-type="bibr">2012b</xref>).
-  It has been shown that DCJ produces reliable and valid measures of the
-  assessed traits and qualities
+  Following multiple rounds of pairwise comparisons made by different
+  judges, an outcome vector is produced. Typically, this vector is
+  modeled using the Bradley-Terry-Luce model (BTL,
+  <xref alt="Bradley and Terry 1952" rid="ref-Bradley_et_al_1952" ref-type="bibr">Bradley
+  and Terry 1952</xref>;
+  <xref alt="Luce 1959" rid="ref-Luce_1959" ref-type="bibr">Luce
+  1959</xref>;
+  <xref alt="Pollitt 2012a" rid="ref-Pollitt_2012a" ref-type="bibr">Pollitt
+  2012a</xref>). The set of latent variables produced by the model can
+  then be utilized, for example, to rank the stimuli from lowest to
+  highest, or to assess the impact of certain characteristics of the
+  stimuli on their position in the ranking.</p>
+  <p>DCJ have been successfully employed to assess competences and
+  traits primarily within education, as demonstrated by the works of
+  Pollitt
+  (<xref alt="2012b" rid="ref-Pollitt_2012b" ref-type="bibr">2012b</xref>),
+  Bartholomew et al.
+  (<xref alt="2018" rid="ref-Bartholomew_et_al_2018" ref-type="bibr">2018</xref>),
+  Daal et al.
+  (<xref alt="2019" rid="ref-van_Daal_et_al_2016" ref-type="bibr">2019</xref>)
+  Lesterhuis
+  (<xref alt="2018" rid="ref-Lesterhuis_2018" ref-type="bibr">2018</xref>),
+  and Bartholomew and Williams
+  (<xref alt="2020" rid="ref-Bartholomew_et_al_2020" ref-type="bibr">2020</xref>);
+  however, applications to other fields can be also be found
+  (<xref alt="Boonen, Kloots, and Gillis 2020" rid="ref-Boonen_et_al_2020" ref-type="bibr">Boonen,
+  Kloots, and Gillis 2020</xref>). Moreover, the methodology has been
+  extended to contemplate multiple, as opposed to pairwise comparisons
+  (<xref alt="Luce 1959" rid="ref-Luce_1959" ref-type="bibr">Luce
+  1959</xref>;
+  <xref alt="Plackett 1975" rid="ref-Placket_1975" ref-type="bibr">Plackett
+  1975</xref>) and comparisons with ordinal outcomes
+  (<xref alt="Tutz 1986" rid="ref-Tutz_1986" ref-type="bibr">Tutz
+  1986</xref>;
+  <xref alt="Agresti 1992" rid="ref-Agresti_1992" ref-type="bibr">Agresti
+  1992</xref>). In summary, the body of research suggests that DCJ
+  offers an alternative and efficient approach to measurement and
+  evaluation that is reliable and valid
   (<xref alt="Lesterhuis 2018" rid="ref-Lesterhuis_2018" ref-type="bibr">Lesterhuis
   2018</xref>;
   <xref alt="van Daal 2020" rid="ref-vanDaal_2020" ref-type="bibr">van
-  Daal 2020</xref>). Consequently, DCJ have been successfully employed
-  to assess competences and traits in various domains, including
-  education
-  (<xref alt="Bartholomew et al. 2018" rid="ref-Bartholomew_et_al_2018" ref-type="bibr">Bartholomew
-  et al. 2018</xref>;
-  <xref alt="Lesterhuis 2018" rid="ref-Lesterhuis_2018" ref-type="bibr">Lesterhuis
-  2018</xref>;
-  <xref alt="Pollitt 2012b" rid="ref-Pollitt_2012b" ref-type="bibr">Pollitt
-  2012b</xref>;
-  <xref alt="van Daal 2020" rid="ref-vanDaal_2020" ref-type="bibr">van
-  Daal 2020</xref>;
-  <xref alt="Bartholomew and Williams 2020" rid="ref-Bartholomew_et_al_2020" ref-type="bibr">Bartholomew
-  and Williams 2020</xref>), linguistics
-  (<xref alt="Boonen, Kloots, and Gillis 2020" rid="ref-Boonen_et_al_2020" ref-type="bibr">Boonen,
-  Kloots, and Gillis 2020</xref>), and psychology
-  <styled-content style="color:red;">(citation needed)</styled-content>.
-  In summary, DCJ presents itself as an alternative and efficient
-  approach to measurement and evaluation that is reliable and valid
-  across diverse domains.</p>
+  Daal 2020</xref>); however, only few lines have been devoted to
+  explore which assessment characteristics are behind its resounding
+  success.</p>
 </sec>
 <sec id="sec-ResearchQuestions">
   <title>2 Research questions</title>
@@ -270,6 +288,87 @@ the University of Antwerp (BOF).</funding-statement>
       <lpage>499</lpage>
     </element-citation>
   </ref>
+  <ref id="ref-Bradley_et_al_1952">
+    <element-citation publication-type="article-journal">
+      <person-group person-group-type="author">
+        <name><surname>Bradley</surname><given-names>R.</given-names></name>
+        <name><surname>Terry</surname><given-names>M.</given-names></name>
+      </person-group>
+      <article-title>Rank analysis of incomplete block designs: I. The method of paired comparisons</article-title>
+      <source>Biometrika</source>
+      <year iso-8601-date="1952">1952</year>
+      <volume>39</volume>
+      <issue>3-4</issue>
+      <uri>http://www.jstor.com/stable/2334029</uri>
+      <pub-id pub-id-type="doi">10.2307/2334029</pub-id>
+      <fpage>324</fpage>
+      <lpage>345</lpage>
+    </element-citation>
+  </ref>
+  <ref id="ref-Luce_1959">
+    <element-citation publication-type="article-journal">
+      <person-group person-group-type="author">
+        <name><surname>Luce</surname><given-names>R.</given-names></name>
+      </person-group>
+      <article-title>On the possible psychophysical laws</article-title>
+      <source>The Psychologcal Review</source>
+      <year iso-8601-date="1959">1959</year>
+      <volume>66</volume>
+      <issue>2</issue>
+      <uri></uri>
+      <pub-id pub-id-type="doi">10.1037/h0043178</pub-id>
+      <fpage>482</fpage>
+      <lpage>499</lpage>
+    </element-citation>
+  </ref>
+  <ref id="ref-Placket_1975">
+    <element-citation publication-type="article-journal">
+      <person-group person-group-type="author">
+        <name><surname>Plackett</surname><given-names>R.</given-names></name>
+      </person-group>
+      <article-title>The analysis of permutations</article-title>
+      <source>Journal of the Royal Statistical Society</source>
+      <year iso-8601-date="1975">1975</year>
+      <volume>24</volume>
+      <issue>2</issue>
+      <uri>https://www.jstor.org/stable/2346567</uri>
+      <pub-id pub-id-type="doi">10.2307/2346567</pub-id>
+      <fpage>193</fpage>
+      <lpage>202</lpage>
+    </element-citation>
+  </ref>
+  <ref id="ref-Tutz_1986">
+    <element-citation publication-type="article-journal">
+      <person-group person-group-type="author">
+        <name><surname>Tutz</surname><given-names>G.</given-names></name>
+      </person-group>
+      <article-title>Bradley-terry-luce model with an ordered response</article-title>
+      <source>Journal of Mathemathical Psychology</source>
+      <year iso-8601-date="1986">1986</year>
+      <volume>30</volume>
+      <issue>3</issue>
+      <uri></uri>
+      <pub-id pub-id-type="doi">10.1016/0022-2496(86)90034-9</pub-id>
+      <fpage>306</fpage>
+      <lpage>316</lpage>
+    </element-citation>
+  </ref>
+  <ref id="ref-Agresti_1992">
+    <element-citation publication-type="article-journal">
+      <person-group person-group-type="author">
+        <name><surname>Agresti</surname><given-names>A.</given-names></name>
+      </person-group>
+      <article-title>Analysis of ordinal paired comparison data</article-title>
+      <source>Journal of the Royal Statistical Society</source>
+      <year iso-8601-date="1992">1992</year>
+      <volume>41</volume>
+      <issue>2</issue>
+      <uri>https://www.jstor.org/stable/2347562</uri>
+      <pub-id pub-id-type="doi">10.2307/2347562</pub-id>
+      <fpage>287</fpage>
+      <lpage>297</lpage>
+    </element-citation>
+  </ref>
   <ref id="ref-Pollitt_2012a">
     <element-citation publication-type="article-journal">
       <person-group person-group-type="author">
@@ -300,6 +399,25 @@ the University of Antwerp (BOF).</funding-statement>
       <pub-id pub-id-type="doi">10.1080/0969594X.2012.665354</pub-id>
       <fpage>281</fpage>
       <lpage>300</lpage>
+    </element-citation>
+  </ref>
+  <ref id="ref-van_Daal_et_al_2016">
+    <element-citation publication-type="article-journal">
+      <person-group person-group-type="author">
+        <name><surname>Daal</surname><given-names>T. van</given-names></name>
+        <name><surname>Lesterhuis</surname><given-names>M.</given-names></name>
+        <name><surname>Coertjens</surname><given-names>L.</given-names></name>
+        <name><surname>Donche</surname><given-names>V.</given-names></name>
+        <name><surname>De Maeyer</surname><given-names>S.</given-names></name>
+      </person-group>
+      <article-title>Validity of comparative judgement to assess academic writing: Examining implications of its holistic character and building on a shared consensus</article-title>
+      <source>Assessment in Education: Principles, Policy &amp; Practice</source>
+      <year iso-8601-date="2019">2019</year>
+      <volume>26</volume>
+      <issue>1</issue>
+      <pub-id pub-id-type="doi">10.1080/0969594X.2016.1253542</pub-id>
+      <fpage>59</fpage>
+      <lpage>74</lpage>
     </element-citation>
   </ref>
   <ref id="ref-Bartholomew_et_al_2018">
