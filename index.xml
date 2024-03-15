@@ -171,18 +171,18 @@ the University of Antwerp (BOF).</funding-statement>
 <sec id="sec-introduction">
   <title>1 Introduction</title>
   <p>In contemporary contexts, Thurstone’s law of comparative judgment
-  (<xref alt="Thurstone 1927" rid="ref-Thurstone_1927" ref-type="bibr">Thurstone
-  1927</xref>) primarily refers to the method of
-  <italic>Dichotomous</italic> Comparative Judgment (DCJ). Within DCJ, a
-  judge assesses the relative manifestation of a trait within a pair of
-  stimuli, resulting in a dichotomous value indicating which stimulus
-  appears to possess a higher degree of the trait
+  (<xref alt="1927" rid="ref-Thurstone_1927" ref-type="bibr">1927</xref>)
+  primarily refers to the method of <italic>Dichotomous</italic>
+  Comparative Judgment (DCJ). Within DCJ, a judge assesses the relative
+  manifestation of a trait within a pair of stimuli. This results in a
+  dichotomous value indicating which stimulus appears to possess a
+  higher degree of the trait
   (<xref alt="Pollitt 2012a" rid="ref-Pollitt_2012a" ref-type="bibr">Pollitt
   2012a</xref>,
   <xref alt="2012b" rid="ref-Pollitt_2012b" ref-type="bibr">2012b</xref>).
   Following multiple rounds of pairwise comparisons made by different
   judges, an outcome vector is produced. Typically, this vector is
-  modeled using the Bradley-Terry-Luce model (BTL,
+  modeled using the Bradley-Terry-Luce model (BTL model,
   <xref alt="Bradley and Terry 1952" rid="ref-Bradley_et_al_1952" ref-type="bibr">Bradley
   and Terry 1952</xref>;
   <xref alt="Luce 1959" rid="ref-Luce_1959" ref-type="bibr">Luce
@@ -192,23 +192,23 @@ the University of Antwerp (BOF).</funding-statement>
   then be utilized, for example, to rank the stimuli from lowest to
   highest, or to assess the impact of certain characteristics of the
   stimuli on their position in the ranking.</p>
-  <p>DCJ has been effectively employed to assess competences and traits
-  predominantly in the educational field, as evidenced by the works of
-  Pollitt
+  <p>DCJ has proven effective in assessing competences and traits
+  predominantly within the educational realm, as demonstrated by the
+  works of Pollitt
   (<xref alt="2012b" rid="ref-Pollitt_2012b" ref-type="bibr">2012b</xref>),
   Bartholomew et al.
   (<xref alt="2018" rid="ref-Bartholomew_et_al_2018" ref-type="bibr">2018</xref>),
-  Daal et al.
-  (<xref alt="2019" rid="ref-van_Daal_et_al_2016" ref-type="bibr">2019</xref>)
+  van Daal et al.
+  (<xref alt="2019" rid="ref-vanDaal_et_al_2016" ref-type="bibr">2019</xref>)
   Lesterhuis
   (<xref alt="2018" rid="ref-Lesterhuis_2018" ref-type="bibr">2018</xref>),
   and Bartholomew and Williams
   (<xref alt="2020" rid="ref-Bartholomew_et_al_2020" ref-type="bibr">2020</xref>).
-  However, its application extends beyond education, with a notable
-  example in the work of Boonen, Kloots, and Gillis
+  However, its application transcends education, as exemplified by
+  Boonen, Kloots, and Gillis
   (<xref alt="2020" rid="ref-Boonen_et_al_2020" ref-type="bibr">2020</xref>).
   The methodology has also evolved to include multiple, as opposed to
-  pairwise, comparisons
+  pairwise comparisons
   (<xref alt="Luce 1959" rid="ref-Luce_1959" ref-type="bibr">Luce
   1959</xref>;
   <xref alt="Plackett 1975" rid="ref-Placket_1975" ref-type="bibr">Plackett
@@ -216,7 +216,7 @@ the University of Antwerp (BOF).</funding-statement>
   (<xref alt="Tutz 1986" rid="ref-Tutz_1986" ref-type="bibr">Tutz
   1986</xref>;
   <xref alt="Agresti 1992" rid="ref-Agresti_1992" ref-type="bibr">Agresti
-  1992</xref>). Overall, the research indicates that DCJ offers an
+  1992</xref>). Overall, research suggests that DCJ offers an
   alternative and efficient approach to measurement and evaluation,
   characterized by its reliability and validity
   (<xref alt="Lesterhuis 2018" rid="ref-Lesterhuis_2018" ref-type="bibr">Lesterhuis
@@ -224,52 +224,87 @@ the University of Antwerp (BOF).</funding-statement>
   <xref alt="van Daal 2020" rid="ref-vanDaal_2020" ref-type="bibr">van
   Daal 2020</xref>;
   <xref alt="Marshall et al. 2020" rid="ref-Marshall_et_al_2020" ref-type="bibr">Marshall
-  et al. 2020</xref>). Nonetheless, there has been limited investigation
-  into the specific factors that contribute to the method’s
-  effectiveness.</p>
-  <p>According to recent research
-  <styled-content style="color:red;">(citation needed)</styled-content>,
-  several factors influence the effectiveness of the DCJ method. These
+  et al. 2020</xref>). Nevertheless, there has been limited
+  investigation into the specific factors contributing to the method’s
+  reliability.</p>
+  <p>According to Verhavert et al.
+  (<xref alt="2019" rid="ref-Verhavert_et_al_2019" ref-type="bibr">2019</xref>),
+  several factors contribute to the reliability of the DCJ method. These
   factors include the number of stimuli, the characteristics of the
-  stimuli, the number of comparison per stimulus, their
-  <italic>proximity</italic> to each other in terms of the trait being
-  assessed, and the pairing algorithm used. Furthermore, since the
-  method relies on judges’ assessments, the number of judges, their
-  characteristics, their <italic>discrimination</italic> abilities, and
-  the number of comparisons per judge also play pivotal roles.
-  Additionally, in cases where the stimuli represent objects nested
-  within subjects, the number of subjects, their characteristics and
-  their <italic>proximity</italic> to each other in terms of the trait
-  can also significantly influence the assessment outcome. An
-  illustrative example of these factors can be made with the research of
-  Boonen, Kloots, and Gillis
-  (<xref alt="2020" rid="ref-Boonen_et_al_2020" ref-type="bibr">2020</xref>).
-  In their study, the trait under assessment was children’s
-  <italic>speech intelligibility</italic>. The trait was evaluated using
-  six utterances (objects) obtained from <inline-formula><alternatives>
+  stimuli, their <italic>proximity</italic> in terms of the assessed
+  trait, the number of comparison per stimulus, and the pairing
+  algorithm used. Furthermore, since the method relies on judges’
+  assessments, the number of judges, the characteristics of judges,
+  their <italic>discrimination</italic> abilities, and the number of
+  comparisons per judge also play pivotal roles. Additionally, in cases
+  where the stimuli represent sub-units of higher levels units, in which
+  the research is focused, then the number of units, the characteristics
+  of the units and their <italic>proximity</italic> in terms of the
+  trait can also significantly influence the assessment outcome. The
+  research of Boonen, Kloots, and Gillis
+  (<xref alt="2020" rid="ref-Boonen_et_al_2020" ref-type="bibr">2020</xref>)
+  offers a clear illustration of these factors. In their study, they
+  focused on assessing children’s <italic>speech
+  intelligibility</italic>. They evaluated this trait using six
+  utterances (sub-units), each originating from
+  <inline-formula><alternatives>
   <tex-math><![CDATA[21]]></tex-math>
   <mml:math display="inline" xmlns:mml="http://www.w3.org/1998/Math/MathML"><mml:mn>21</mml:mn></mml:math></alternatives></inline-formula>
-  children (subjects). The objects were derived from an imitation task,
-  while the subjects were selected in equal numbers from three groups of
-  children: those with cochlear implants (CI), those with hearing aids
-  (HA), and normal hearing children (NH). Pairwise comparisons for the
+  children (units). The utterances were derived from an imitation task,
+  while the children were evenly distributed across three groups: those
+  with cochlear implants, those with hearing aids, and normal hearing
+  children. To establish pairwise comparisons for the
   <inline-formula><alternatives>
   <tex-math><![CDATA[126]]></tex-math>
   <mml:math display="inline" xmlns:mml="http://www.w3.org/1998/Math/MathML"><mml:mn>126</mml:mn></mml:math></alternatives></inline-formula>
-  stimuli were established using a random pairing algorithm, with
+  stimuli, a random pairing algorithm was employed, with
   <inline-formula><alternatives>
   <tex-math><![CDATA[20]]></tex-math>
   <mml:math display="inline" xmlns:mml="http://www.w3.org/1998/Math/MathML"><mml:mn>20</mml:mn></mml:math></alternatives></inline-formula>
-  comparisons per stimulus. A total of <inline-formula><alternatives>
+  comparisons per stimulus. Lastly, a total of
+  <inline-formula><alternatives>
   <tex-math><![CDATA[60]]></tex-math>
   <mml:math display="inline" xmlns:mml="http://www.w3.org/1998/Math/MathML"><mml:mn>60</mml:mn></mml:math></alternatives></inline-formula>
   listeners (judges) compared each stimulus approximately
   <inline-formula><alternatives>
   <tex-math><![CDATA[65]]></tex-math>
   <mml:math display="inline" xmlns:mml="http://www.w3.org/1998/Math/MathML"><mml:mn>65</mml:mn></mml:math></alternatives></inline-formula>
-  times. The judges were selected from three groups with varying degrees
-  of experience with the speech of hearing-impaired children:
-  audiologists, primary school teachers and inexperienced listeners.</p>
+  times. The judges were selected from three distinct groups, each
+  possessing varying degrees of experience with the speech of
+  hearing-impaired children: audiologists, primary school teachers and
+  inexperienced listeners.</p>
+  <p>Previous research have investigated some of the factors and their
+  impact on the reliability of the method. Bramley
+  (<xref alt="2015" rid="ref-Bramley_2015" ref-type="bibr">2015</xref>)
+  conducted a simulation-based study to explore the impact originated
+  from using random versus adaptive pairing algorithms. On the other
+  hand, Bramley and Vitello
+  (<xref alt="2019" rid="ref-Bramley_et_al_2019" ref-type="bibr">2019</xref>)
+  explore the impact of adaptive algorithms on a more realistic setting.
+  The study used autobiographical essays written by candidates as part
+  of their English Language course, where the essay worth half of the
+  total marks for the final exam. In contrast, Verhavert et al.
+  (<xref alt="2019" rid="ref-Verhavert_et_al_2019" ref-type="bibr">2019</xref>)
+  conducted a meta-analysis exploring the impact of the number of
+  stimuli, the format of the stimuli, the number of comparisons per
+  stimulus, the number of judges, the judges’ expertise, and feedback on
+  reliability. Conversely, Crompvoets, Béguin, and Sijtsma
+  (<xref alt="2022" rid="ref-Crompvoets_et_al_2022" ref-type="bibr">2022</xref>)
+  conducted a simulation-based study investigating the bias and
+  stability of the components of reliability in relation to the number
+  of comparisons per stimulus. In all previous cases, reliability was
+  measured by the scale Separation Reliability (SSR ,
+  <xref alt="Pollitt 2012b" rid="ref-Pollitt_2012b" ref-type="bibr">Pollitt
+  2012b</xref>) either on simulated or estimated data. Lastly, van Daal
+  et al.
+  (<xref alt="2017" rid="ref-vanDaal_et_al_2017" ref-type="bibr">2017</xref>)
+  explored the role of objective complexity in the comparison of two
+  stimuli and decision accuracy of judges and on the reliability. While,
+  Gijsen et al.
+  (<xref alt="2021" rid="ref-Gijsen_et_al_2021" ref-type="bibr">2021</xref>)
+  used eye-tracking data to explore similar objectives as the latter
+  study.</p>
+  <p>In summary, the studies have …</p>
 </sec>
 <sec id="sec-ResearchQuestions">
   <title>2 Research questions</title>
@@ -447,10 +482,10 @@ the University of Antwerp (BOF).</funding-statement>
       <lpage>300</lpage>
     </element-citation>
   </ref>
-  <ref id="ref-van_Daal_et_al_2016">
+  <ref id="ref-vanDaal_et_al_2016">
     <element-citation publication-type="article-journal">
       <person-group person-group-type="author">
-        <name><surname>Daal</surname><given-names>T. van</given-names></name>
+        <name><surname>van Daal</surname><given-names>T.</given-names></name>
         <name><surname>Lesterhuis</surname><given-names>M.</given-names></name>
         <name><surname>Coertjens</surname><given-names>L.</given-names></name>
         <name><surname>Donche</surname><given-names>V.</given-names></name>
@@ -464,6 +499,24 @@ the University of Antwerp (BOF).</funding-statement>
       <pub-id pub-id-type="doi">10.1080/0969594X.2016.1253542</pub-id>
       <fpage>59</fpage>
       <lpage>74</lpage>
+    </element-citation>
+  </ref>
+  <ref id="ref-vanDaal_et_al_2017">
+    <element-citation publication-type="article-journal">
+      <person-group person-group-type="author">
+        <name><surname>van Daal</surname><given-names>T.</given-names></name>
+        <name><surname>Lesterhuis</surname><given-names>M.</given-names></name>
+        <name><surname>Coertjens</surname><given-names>L.</given-names></name>
+        <name><surname>van de Kamp</surname><given-names>MT.</given-names></name>
+        <name><surname>Donche</surname><given-names>V.</given-names></name>
+        <name><surname>de Maeyer</surname><given-names>Sven</given-names></name>
+      </person-group>
+      <article-title>The complexity of assessing student work using comparative judgment: The moderating role of decision accuracy</article-title>
+      <source>Frontiers in Education</source>
+      <year iso-8601-date="2017">2017</year>
+      <volume>2</volume>
+      <uri>https://www.frontiersin.org/articles/10.3389/feduc.2017.00044</uri>
+      <pub-id pub-id-type="doi">10.3389/feduc.2017.00044</pub-id>
     </element-citation>
   </ref>
   <ref id="ref-Bartholomew_et_al_2018">
@@ -484,6 +537,41 @@ the University of Antwerp (BOF).</funding-statement>
       <pub-id pub-id-type="doi">10.1080/10627197.2018.1444986</pub-id>
       <fpage>85</fpage>
       <lpage>101</lpage>
+    </element-citation>
+  </ref>
+  <ref id="ref-Bramley_et_al_2019">
+    <element-citation publication-type="article-journal">
+      <person-group person-group-type="author">
+        <name><surname>Bramley</surname><given-names>T.</given-names></name>
+        <name><surname>Vitello</surname><given-names>S.</given-names></name>
+      </person-group>
+      <article-title>The effect of adaptivity on the reliability coefficient in adaptive comparative judgement</article-title>
+      <source>Assessment in Education: Principles, Policy and Practice</source>
+      <year iso-8601-date="2019">2019</year>
+      <volume>71</volume>
+      <issue>9</issue>
+      <pub-id pub-id-type="doi">10.1080/0969594X.2017.1418734</pub-id>
+      <fpage>1</fpage>
+      <lpage>25</lpage>
+    </element-citation>
+  </ref>
+  <ref id="ref-Verhavert_et_al_2019">
+    <element-citation publication-type="article-journal">
+      <person-group person-group-type="author">
+        <name><surname>Verhavert</surname><given-names>S.</given-names></name>
+        <name><surname>Bouwer</surname><given-names>R.</given-names></name>
+        <name><surname>Donche</surname><given-names>V</given-names></name>
+        <name><surname>De Maeyer</surname><given-names>S.</given-names></name>
+      </person-group>
+      <article-title>A meta-analysis on the reliability of comparative judgement</article-title>
+      <source>Assessment in Education: Principles, Policy and Practice</source>
+      <year iso-8601-date="2019">2019</year>
+      <volume>26</volume>
+      <issue>5</issue>
+      <uri></uri>
+      <pub-id pub-id-type="doi">10.1080/0969594X.2019.1602027</pub-id>
+      <fpage>541</fpage>
+      <lpage>562</lpage>
     </element-citation>
   </ref>
   <ref id="ref-Boonen_et_al_2020">
@@ -522,6 +610,38 @@ the University of Antwerp (BOF).</funding-statement>
       <pub-id pub-id-type="doi">10.1007/s40841-020-00163-3</pub-id>
       <fpage>49</fpage>
       <lpage>71</lpage>
+    </element-citation>
+  </ref>
+  <ref id="ref-Gijsen_et_al_2021">
+    <element-citation publication-type="article-journal">
+      <person-group person-group-type="author">
+        <name><surname>Gijsen</surname><given-names>M.</given-names></name>
+        <name><surname>van Daal</surname><given-names>T.</given-names></name>
+        <name><surname>Lesterhuis</surname><given-names>Marije</given-names></name>
+        <name><surname>Gijbels</surname><given-names>David</given-names></name>
+        <name><surname>de Maeyer</surname><given-names>Sven</given-names></name>
+      </person-group>
+      <article-title>The complexity of comparative judgments in assessing argumentative writing: An eye tracking study</article-title>
+      <source>Frontiers in Education</source>
+      <year iso-8601-date="2021">2021</year>
+      <volume>5</volume>
+      <uri>https://www.frontiersin.org/articles/10.3389/feduc.2020.582800</uri>
+      <pub-id pub-id-type="doi">10.3389/feduc.2020.582800</pub-id>
+    </element-citation>
+  </ref>
+  <ref id="ref-Crompvoets_et_al_2022">
+    <element-citation publication-type="article-journal">
+      <person-group person-group-type="author">
+        <name><surname>Crompvoets</surname><given-names>Elise A. V.</given-names></name>
+        <name><surname>Béguin</surname><given-names>Anton A.</given-names></name>
+        <name><surname>Sijtsma</surname><given-names>Klaas</given-names></name>
+      </person-group>
+      <article-title>On the bias and stability of the results of comparative judgment</article-title>
+      <source>Frontiers in Education</source>
+      <year iso-8601-date="2022">2022</year>
+      <volume>6</volume>
+      <uri>https://www.frontiersin.org/articles/10.3389/feduc.2021.788202</uri>
+      <pub-id pub-id-type="doi">10.3389/feduc.2021.788202</pub-id>
     </element-citation>
   </ref>
   <ref id="ref-Lesterhuis_2018">
@@ -563,6 +683,16 @@ the University of Antwerp (BOF).</funding-statement>
       <pub-id pub-id-type="doi">10.1007/978-3-030-52229-2_18</pub-id>
       <fpage></fpage>
       <lpage></lpage>
+    </element-citation>
+  </ref>
+  <ref id="ref-Bramley_2015">
+    <element-citation>
+      <person-group person-group-type="author">
+        <name><surname>Bramley</surname><given-names>T.</given-names></name>
+      </person-group>
+      <article-title>Investigating the reliability of adaptive comparative judgment</article-title>
+      <year iso-8601-date="2015">2015</year>
+      <uri>http://www.cambridgeassessment.org.uk/Images/232694-investigating-the-reliability-of-adaptive-comparative-judgment.pdf</uri>
     </element-citation>
   </ref>
 </ref-list>
