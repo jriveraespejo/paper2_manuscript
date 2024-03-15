@@ -131,10 +131,10 @@ editing" vocab-term-identifier="https://credit.niso.org/contributor-roles/writin
 <corresp id="cor-1">JoseManuel.RiveraEspejo@uantwerpen.be</corresp>
 </author-notes>
 
-<pub-date date-type="pub" publication-format="electronic" iso-8601-date="2024-03-14">
+<pub-date date-type="pub" publication-format="electronic" iso-8601-date="2024-03-15">
 <year>2024</year>
 <month>3</month>
-<day>14</day>
+<day>15</day>
 </pub-date>
 
 
@@ -192,8 +192,8 @@ the University of Antwerp (BOF).</funding-statement>
   then be utilized, for example, to rank the stimuli from lowest to
   highest, or to assess the impact of certain characteristics of the
   stimuli on their position in the ranking.</p>
-  <p>DCJ have been successfully employed to assess competences and
-  traits primarily within education, as demonstrated by the works of
+  <p>DCJ has been effectively employed to assess competences and traits
+  predominantly in the educational field, as evidenced by the works of
   Pollitt
   (<xref alt="2012b" rid="ref-Pollitt_2012b" ref-type="bibr">2012b</xref>),
   Bartholomew et al.
@@ -203,27 +203,73 @@ the University of Antwerp (BOF).</funding-statement>
   Lesterhuis
   (<xref alt="2018" rid="ref-Lesterhuis_2018" ref-type="bibr">2018</xref>),
   and Bartholomew and Williams
-  (<xref alt="2020" rid="ref-Bartholomew_et_al_2020" ref-type="bibr">2020</xref>);
-  however, applications to other fields can be also be found
-  (<xref alt="Boonen, Kloots, and Gillis 2020" rid="ref-Boonen_et_al_2020" ref-type="bibr">Boonen,
-  Kloots, and Gillis 2020</xref>). Moreover, the methodology has been
-  extended to contemplate multiple, as opposed to pairwise comparisons
+  (<xref alt="2020" rid="ref-Bartholomew_et_al_2020" ref-type="bibr">2020</xref>).
+  However, its application extends beyond education, with a notable
+  example in the work of Boonen, Kloots, and Gillis
+  (<xref alt="2020" rid="ref-Boonen_et_al_2020" ref-type="bibr">2020</xref>).
+  The methodology has also evolved to include multiple, as opposed to
+  pairwise, comparisons
   (<xref alt="Luce 1959" rid="ref-Luce_1959" ref-type="bibr">Luce
   1959</xref>;
   <xref alt="Plackett 1975" rid="ref-Placket_1975" ref-type="bibr">Plackett
-  1975</xref>) and comparisons with ordinal outcomes
+  1975</xref>) and to accommodate comparisons with ordinal outcomes
   (<xref alt="Tutz 1986" rid="ref-Tutz_1986" ref-type="bibr">Tutz
   1986</xref>;
   <xref alt="Agresti 1992" rid="ref-Agresti_1992" ref-type="bibr">Agresti
-  1992</xref>). In summary, the body of research suggests that DCJ
-  offers an alternative and efficient approach to measurement and
-  evaluation that is reliable and valid
+  1992</xref>). Overall, the research indicates that DCJ offers an
+  alternative and efficient approach to measurement and evaluation,
+  characterized by its reliability and validity
   (<xref alt="Lesterhuis 2018" rid="ref-Lesterhuis_2018" ref-type="bibr">Lesterhuis
   2018</xref>;
   <xref alt="van Daal 2020" rid="ref-vanDaal_2020" ref-type="bibr">van
-  Daal 2020</xref>); however, only a few set of investigations have been
-  devoted to explore which assessment characteristics are behind its
-  resounding success.</p>
+  Daal 2020</xref>;
+  <xref alt="Marshall et al. 2020" rid="ref-Marshall_et_al_2020" ref-type="bibr">Marshall
+  et al. 2020</xref>). Nonetheless, there has been limited investigation
+  into the specific factors that contribute to the method’s
+  effectiveness.</p>
+  <p>According to recent research
+  <styled-content style="color:red;">(citation needed)</styled-content>,
+  several factors influence the effectiveness of the DCJ method. These
+  factors include the number of stimuli, the characteristics of the
+  stimuli, the number of comparison per stimulus, their
+  <italic>proximity</italic> to each other in terms of the trait being
+  assessed, and the pairing algorithm used. Furthermore, since the
+  method relies on judges’ assessments, the number of judges, their
+  characteristics, their <italic>discrimination</italic> abilities, and
+  the number of comparisons per judge also play pivotal roles.
+  Additionally, in cases where the stimuli represent objects nested
+  within subjects, the number of subjects, their characteristics and
+  their <italic>proximity</italic> to each other in terms of the trait
+  can also significantly influence the assessment outcome. An
+  illustrative example of these factors can be made with the research of
+  Boonen, Kloots, and Gillis
+  (<xref alt="2020" rid="ref-Boonen_et_al_2020" ref-type="bibr">2020</xref>).
+  In their study, the trait under assessment was children’s
+  <italic>speech intelligibility</italic>. The trait was evaluated using
+  six utterances (objects) obtained from <inline-formula><alternatives>
+  <tex-math><![CDATA[21]]></tex-math>
+  <mml:math display="inline" xmlns:mml="http://www.w3.org/1998/Math/MathML"><mml:mn>21</mml:mn></mml:math></alternatives></inline-formula>
+  children (subjects). The objects were derived from an imitation task,
+  while the subjects were selected in equal numbers from three groups of
+  children: those with cochlear implants (CI), those with hearing aids
+  (HA), and normal hearing children (NH). Pairwise comparisons for the
+  <inline-formula><alternatives>
+  <tex-math><![CDATA[126]]></tex-math>
+  <mml:math display="inline" xmlns:mml="http://www.w3.org/1998/Math/MathML"><mml:mn>126</mml:mn></mml:math></alternatives></inline-formula>
+  stimuli were established using a random pairing algorithm, with
+  <inline-formula><alternatives>
+  <tex-math><![CDATA[20]]></tex-math>
+  <mml:math display="inline" xmlns:mml="http://www.w3.org/1998/Math/MathML"><mml:mn>20</mml:mn></mml:math></alternatives></inline-formula>
+  comparisons per stimulus. A total of <inline-formula><alternatives>
+  <tex-math><![CDATA[60]]></tex-math>
+  <mml:math display="inline" xmlns:mml="http://www.w3.org/1998/Math/MathML"><mml:mn>60</mml:mn></mml:math></alternatives></inline-formula>
+  listeners (judges) compared each stimulus approximately
+  <inline-formula><alternatives>
+  <tex-math><![CDATA[65]]></tex-math>
+  <mml:math display="inline" xmlns:mml="http://www.w3.org/1998/Math/MathML"><mml:mn>65</mml:mn></mml:math></alternatives></inline-formula>
+  times. The judges were selected from three groups with varying degrees
+  of experience with the speech of hearing-impaired children:
+  audiologists, primary school teachers and inexperienced listeners.</p>
 </sec>
 <sec id="sec-ResearchQuestions">
   <title>2 Research questions</title>
@@ -456,6 +502,26 @@ the University of Antwerp (BOF).</funding-statement>
       <pub-id pub-id-type="doi">10.1016/j.jcomdis.2019.105969</pub-id>
       <fpage>1675</fpage>
       <lpage>1687</lpage>
+    </element-citation>
+  </ref>
+  <ref id="ref-Marshall_et_al_2020">
+    <element-citation publication-type="article-journal">
+      <person-group person-group-type="author">
+        <name><surname>Marshall</surname><given-names>N.</given-names></name>
+        <name><surname>Shaw</surname><given-names>K</given-names></name>
+        <name><surname>Hunter</surname><given-names>J.</given-names></name>
+        <name><surname>Jones</surname><given-names>I.</given-names></name>
+      </person-group>
+      <article-title>Assessment by comparative judgement: An application to secondary statistics and english in new zealand</article-title>
+      <source>New Zealand Journal of Educational Studies</source>
+      <publisher-name>International Society for Bayesian Analysis</publisher-name>
+      <year iso-8601-date="2020">2020</year>
+      <volume>55</volume>
+      <issue></issue>
+      <uri></uri>
+      <pub-id pub-id-type="doi">10.1007/s40841-020-00163-3</pub-id>
+      <fpage>49</fpage>
+      <lpage>71</lpage>
     </element-citation>
   </ref>
   <ref id="ref-Lesterhuis_2018">
