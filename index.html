@@ -9,7 +9,7 @@
 <meta name="author" content="Jose Manuel Rivera Espejo">
 <meta name="author" content="Sven de Maeyer">
 <meta name="author" content="Steven Gillis">
-<meta name="dcterms.date" content="2024-03-15">
+<meta name="dcterms.date" content="2024-03-18">
 <meta name="keywords" content="power analysis, comparative judgment, bayesian analysis, simulation">
 
 <title>Power analysis for Dichotomous Comparative Judgment experiments (DCJ)</title>
@@ -102,10 +102,10 @@ window.Quarto = {
 <meta name="citation_author" content="Jose Manuel Rivera Espejo">
 <meta name="citation_author" content="Sven de Maeyer">
 <meta name="citation_author" content="Steven Gillis">
-<meta name="citation_publication_date" content="2024-03-15">
-<meta name="citation_cover_date" content="2024-03-15">
+<meta name="citation_publication_date" content="2024-03-18">
+<meta name="citation_cover_date" content="2024-03-18">
 <meta name="citation_year" content="2024">
-<meta name="citation_online_date" content="2024-03-15">
+<meta name="citation_online_date" content="2024-03-18">
 <meta name="citation_language" content="en">
 <meta name="citation_reference" content="citation_title=A law of comparative judgment;,citation_author=L. Thurstone;,citation_publication_date=1927;,citation_cover_date=1927;,citation_year=1927;,citation_issue=4;,citation_doi=10.1037/h0070288;,citation_volume=34;,citation_journal_title=Psychological Review;">
 <meta name="citation_reference" content="citation_title=On the theory of scales of measurement;,citation_author=S. Stevens;,citation_publication_date=1946;,citation_cover_date=1946;,citation_year=1946;,citation_fulltext_html_url=https://www.science.org/doi/abs/10.1126/science.103.2684.677;,citation_issue=2684;,citation_doi=10.1126/science.103.2684.677;,citation_volume=103;,citation_journal_title=Science;">
@@ -320,7 +320,7 @@ window.Quarto = {
   <div class="quarto-title-banner page-columns page-full">
     <div class="quarto-title column-body">
       <h1 class="title">Power analysis for Dichotomous Comparative Judgment experiments (DCJ)</h1>
-            <p class="subtitle lead">A Bayesian simulation-based study exploring the factors that impact DCJ</p>
+            <p class="subtitle lead">A Bayesian simulation-based study exploring the assessment factors that impact DCJ</p>
           </div>
 
     
@@ -362,7 +362,7 @@ window.Quarto = {
                 <div>
             <div class="quarto-title-meta-heading">Published</div>
             <div class="quarto-title-meta-contents">
-              <p class="date">March 15, 2024</p>
+              <p class="date">March 18, 2024</p>
             </div>
           </div>
           
@@ -396,24 +396,28 @@ window.Quarto = {
    
   <ul>
   <li><a href="#sec-introduction" id="toc-sec-introduction" class="nav-link active" data-scroll-target="#sec-introduction"><span class="header-section-number">1</span> Introduction</a></li>
-  <li><a href="#sec-ResearchQuestions" id="toc-sec-ResearchQuestions" class="nav-link" data-scroll-target="#sec-ResearchQuestions"><span class="header-section-number">2</span> Research questions</a></li>
-  <li><a href="#sec-methods" id="toc-sec-methods" class="nav-link" data-scroll-target="#sec-methods"><span class="header-section-number">3</span> Methods</a>
+  <li><a href="#sec-TheoreticalFramework" id="toc-sec-TheoreticalFramework" class="nav-link" data-scroll-target="#sec-TheoreticalFramework"><span class="header-section-number">2</span> Theoretical framework</a>
   <ul class="collapse">
-  <li><a href="#sec-TF" id="toc-sec-TF" class="nav-link" data-scroll-target="#sec-TF"><span class="header-section-number">3.1</span> Theoretical framework</a></li>
-  <li><a href="#sec-SM" id="toc-sec-SM" class="nav-link" data-scroll-target="#sec-SM"><span class="header-section-number">3.2</span> Statistical model</a></li>
-  <li><a href="#power-analysis" id="toc-power-analysis" class="nav-link" data-scroll-target="#power-analysis"><span class="header-section-number">3.3</span> Power analysis</a></li>
+  <li><a href="#sec-DCJcomp" id="toc-sec-DCJcomp" class="nav-link" data-scroll-target="#sec-DCJcomp"><span class="header-section-number">2.1</span> The compexity of DCJ</a></li>
+  <li><a href="#sec-DCJrethink" id="toc-sec-DCJrethink" class="nav-link" data-scroll-target="#sec-DCJrethink"><span class="header-section-number">2.2</span> Rethinking DCJ</a></li>
+  <li><a href="#sec-SM" id="toc-sec-SM" class="nav-link" data-scroll-target="#sec-SM"><span class="header-section-number">2.3</span> Statistical model</a></li>
   </ul></li>
-  <li><a href="#sec-results" id="toc-sec-results" class="nav-link" data-scroll-target="#sec-results"><span class="header-section-number">4</span> Results</a>
+  <li><a href="#sec-ResearchQuestions" id="toc-sec-ResearchQuestions" class="nav-link" data-scroll-target="#sec-ResearchQuestions"><span class="header-section-number">3</span> Research questions</a></li>
+  <li><a href="#sec-methods" id="toc-sec-methods" class="nav-link" data-scroll-target="#sec-methods"><span class="header-section-number">4</span> Methods</a>
   <ul class="collapse">
-  <li><a href="#sec-RQ1" id="toc-sec-RQ1" class="nav-link" data-scroll-target="#sec-RQ1"><span class="header-section-number">4.1</span> Research question 1</a></li>
-  <li><a href="#sec-RQ2" id="toc-sec-RQ2" class="nav-link" data-scroll-target="#sec-RQ2"><span class="header-section-number">4.2</span> Research question 2</a></li>
-  <li><a href="#sec-RQ3" id="toc-sec-RQ3" class="nav-link" data-scroll-target="#sec-RQ3"><span class="header-section-number">4.3</span> Research question 3</a></li>
+  <li><a href="#bayesian-simulation-and-power-analysis" id="toc-bayesian-simulation-and-power-analysis" class="nav-link" data-scroll-target="#bayesian-simulation-and-power-analysis"><span class="header-section-number">4.1</span> Bayesian simulation and power analysis</a></li>
   </ul></li>
-  <li><a href="#sec-discussion" id="toc-sec-discussion" class="nav-link" data-scroll-target="#sec-discussion"><span class="header-section-number">5</span> Discussion</a>
+  <li><a href="#sec-results" id="toc-sec-results" class="nav-link" data-scroll-target="#sec-results"><span class="header-section-number">5</span> Results</a>
   <ul class="collapse">
-  <li><a href="#sec-LFR" id="toc-sec-LFR" class="nav-link" data-scroll-target="#sec-LFR"><span class="header-section-number">5.1</span> Limitations and further research</a></li>
+  <li><a href="#sec-RQ1" id="toc-sec-RQ1" class="nav-link" data-scroll-target="#sec-RQ1"><span class="header-section-number">5.1</span> Research question 1</a></li>
+  <li><a href="#sec-RQ2" id="toc-sec-RQ2" class="nav-link" data-scroll-target="#sec-RQ2"><span class="header-section-number">5.2</span> Research question 2</a></li>
+  <li><a href="#sec-RQ3" id="toc-sec-RQ3" class="nav-link" data-scroll-target="#sec-RQ3"><span class="header-section-number">5.3</span> Research question 3</a></li>
   </ul></li>
-  <li><a href="#sec-conclusion" id="toc-sec-conclusion" class="nav-link" data-scroll-target="#sec-conclusion"><span class="header-section-number">6</span> Conclusion</a></li>
+  <li><a href="#sec-discussion" id="toc-sec-discussion" class="nav-link" data-scroll-target="#sec-discussion"><span class="header-section-number">6</span> Discussion</a>
+  <ul class="collapse">
+  <li><a href="#sec-LFR" id="toc-sec-LFR" class="nav-link" data-scroll-target="#sec-LFR"><span class="header-section-number">6.1</span> Limitations and further research</a></li>
+  </ul></li>
+  <li><a href="#sec-conclusion" id="toc-sec-conclusion" class="nav-link" data-scroll-target="#sec-conclusion"><span class="header-section-number">7</span> Conclusion</a></li>
   <li><a href="#references" id="toc-references" class="nav-link" data-scroll-target="#references">References</a></li>
   </ul>
 <div class="quarto-alternate-notebooks"><h2>Notebooks</h2><ul><li><a href="notebooks/data_simulation-preview.html"><i class="bi bi-journal-code"></i>Data Simulation</a></li></ul></div></nav>
@@ -432,41 +436,28 @@ window.Quarto = {
 <!-- [(citation needed)]{style="color:red;"} -->
 <!-- 1. What is comparative judgment? -->
 <p>In contemporary contexts, Thurstone’s law of comparative judgment <span class="citation" data-cites="Thurstone_1927">(<a href="#ref-Thurstone_1927" role="doc-biblioref">1927</a>)</span> primarily refers to the method of <em>Dichotomous</em> Comparative Judgment (DCJ). Within DCJ, a judge assesses the relative manifestation of a trait within a pair of stimuli. This results in a dichotomous value indicating which stimulus appears to possess a higher degree of the trait <span class="citation" data-cites="Pollitt_2012a Pollitt_2012b">(<a href="#ref-Pollitt_2012a" role="doc-biblioref">Pollitt 2012a</a>, <a href="#ref-Pollitt_2012b" role="doc-biblioref">2012b</a>)</span>. Following multiple rounds of pairwise comparisons made by different judges, an outcome vector is produced. Typically, this vector is modeled using the Bradley-Terry-Luce model <span class="citation" data-cites="Bradley_et_al_1952 Luce_1959 Pollitt_2012a">(BTL model, <a href="#ref-Bradley_et_al_1952" role="doc-biblioref">Bradley and Terry 1952</a>; <a href="#ref-Luce_1959" role="doc-biblioref">Luce 1959</a>; <a href="#ref-Pollitt_2012a" role="doc-biblioref">Pollitt 2012a</a>)</span>. The set of latent variables produced by the model can then be utilized, for example, to rank the stimuli from lowest to highest, or to assess the impact of certain characteristics of the stimuli on their position in the ranking.</p>
-<!-- 2. in what DCJ has been applied on?, and where is the gap? -->
-<p>DCJ has proven effective in assessing competences and traits predominantly within the educational realm, as demonstrated by the works of <span class="citation" data-cites="Pollitt_2012b">Pollitt (<a href="#ref-Pollitt_2012b" role="doc-biblioref">2012b</a>)</span>, <span class="citation" data-cites="Bartholomew_et_al_2018">Bartholomew et al. (<a href="#ref-Bartholomew_et_al_2018" role="doc-biblioref">2018</a>)</span>, <span class="citation" data-cites="vanDaal_et_al_2016">van Daal et al. (<a href="#ref-vanDaal_et_al_2016" role="doc-biblioref">2019</a>)</span> <span class="citation" data-cites="Lesterhuis_2018">Lesterhuis (<a href="#ref-Lesterhuis_2018" role="doc-biblioref">2018</a>)</span>, and <span class="citation" data-cites="Bartholomew_et_al_2020">Bartholomew and Williams (<a href="#ref-Bartholomew_et_al_2020" role="doc-biblioref">2020</a>)</span>. However, its application transcends education, as exemplified by <span class="citation" data-cites="Boonen_et_al_2020">Boonen, Kloots, and Gillis (<a href="#ref-Boonen_et_al_2020" role="doc-biblioref">2020</a>)</span>. The methodology has also evolved to include multiple, as opposed to pairwise comparisons <span class="citation" data-cites="Luce_1959 Placket_1975">(<a href="#ref-Luce_1959" role="doc-biblioref">Luce 1959</a>; <a href="#ref-Placket_1975" role="doc-biblioref">Plackett 1975</a>)</span> and to accommodate comparisons with ordinal outcomes <span class="citation" data-cites="Tutz_1986 Agresti_1992">(<a href="#ref-Tutz_1986" role="doc-biblioref">Tutz 1986</a>; <a href="#ref-Agresti_1992" role="doc-biblioref">Agresti 1992</a>)</span>. Overall, research suggests that DCJ offers an alternative and efficient approach to measurement and evaluation, characterized by its reliability and validity <span class="citation" data-cites="Lesterhuis_2018 vanDaal_2020 Marshall_et_al_2020">(<a href="#ref-Lesterhuis_2018" role="doc-biblioref">Lesterhuis 2018</a>; <a href="#ref-vanDaal_2020" role="doc-biblioref">van Daal 2020</a>; <a href="#ref-Marshall_et_al_2020" role="doc-biblioref">Marshall et al. 2020</a>)</span>. Nevertheless, there has been limited investigation into the specific factors contributing to the method’s reliability.</p>
+<!-- 2. in what has been applied on?, and where is the gap? -->
+<p>DCJ has proven effective in assessing competences and traits predominantly within the educational realm, as demonstrated by the works of <span class="citation" data-cites="Pollitt_2012b">Pollitt (<a href="#ref-Pollitt_2012b" role="doc-biblioref">2012b</a>)</span>, <span class="citation" data-cites="Bartholomew_et_al_2018">Bartholomew et al. (<a href="#ref-Bartholomew_et_al_2018" role="doc-biblioref">2018</a>)</span>, <span class="citation" data-cites="vanDaal_et_al_2016">van Daal et al. (<a href="#ref-vanDaal_et_al_2016" role="doc-biblioref">2019</a>)</span> <span class="citation" data-cites="Lesterhuis_2018">Lesterhuis (<a href="#ref-Lesterhuis_2018" role="doc-biblioref">2018</a>)</span>, and <span class="citation" data-cites="Bartholomew_et_al_2020">Bartholomew and Williams (<a href="#ref-Bartholomew_et_al_2020" role="doc-biblioref">2020</a>)</span>. However, its application transcends education, as exemplified by the work of <span class="citation" data-cites="Boonen_et_al_2020">Boonen, Kloots, and Gillis (<a href="#ref-Boonen_et_al_2020" role="doc-biblioref">2020</a>)</span>. The methodology has also evolved to include multiple, as opposed to pairwise comparisons <span class="citation" data-cites="Luce_1959 Placket_1975">(<a href="#ref-Luce_1959" role="doc-biblioref">Luce 1959</a>; <a href="#ref-Placket_1975" role="doc-biblioref">Plackett 1975</a>)</span> and to accommodate comparisons with ordinal outcomes <span class="citation" data-cites="Tutz_1986 Agresti_1992">(<a href="#ref-Tutz_1986" role="doc-biblioref">Tutz 1986</a>; <a href="#ref-Agresti_1992" role="doc-biblioref">Agresti 1992</a>)</span>. Overall, research suggests that DCJ offers an alternative and efficient approach to measurement and evaluation, characterized by its reliability and validity <span class="citation" data-cites="Lesterhuis_2018 vanDaal_2020 Marshall_et_al_2020">(<a href="#ref-Lesterhuis_2018" role="doc-biblioref">Lesterhuis 2018</a>; <a href="#ref-vanDaal_2020" role="doc-biblioref">van Daal 2020</a>; <a href="#ref-Marshall_et_al_2020" role="doc-biblioref">Marshall et al. 2020</a>)</span>. Nevertheless, there has been limited investigation into the interplay of the multiple assessment factors and their contribution to the method’s reliability.</p>
 <!-- 3. What are the factors behind DCJ? -->
-<p>According to <span class="citation" data-cites="Verhavert_et_al_2019">Verhavert et al. (<a href="#ref-Verhavert_et_al_2019" role="doc-biblioref">2019</a>)</span>, several factors contribute to the reliability of the DCJ method. These factors include the number of stimuli, the characteristics of the stimuli, their <em>proximity</em> in terms of the assessed trait, the number of comparison per stimulus, and the pairing algorithm used. Furthermore, since the method relies on judges’ assessments, the number of judges, the characteristics of judges, their <em>discrimination</em> abilities, and the number of comparisons per judge also play pivotal roles. Additionally, in cases where the stimuli represent sub-units of higher levels units, in which the research is focused, then the number of units, the characteristics of the units and their <em>proximity</em> in terms of the trait can also significantly influence the assessment outcome. The research of <span class="citation" data-cites="Boonen_et_al_2020">Boonen, Kloots, and Gillis (<a href="#ref-Boonen_et_al_2020" role="doc-biblioref">2020</a>)</span> offers a clear illustration of these factors. In their study, they focused on assessing children’s <em>speech intelligibility</em>. They evaluated this trait using six utterances (sub-units), each originating from <span class="math inline">\(21\)</span> children (units). The utterances were derived from an imitation task, while the children were evenly distributed across three groups: those with cochlear implants, those with hearing aids, and normal hearing children. To establish pairwise comparisons for the <span class="math inline">\(126\)</span> stimuli, a random pairing algorithm was employed, with <span class="math inline">\(20\)</span> comparisons per stimulus. Lastly, a total of <span class="math inline">\(60\)</span> listeners (judges) compared each stimulus approximately <span class="math inline">\(65\)</span> times. The judges were selected from three distinct groups, each possessing varying degrees of experience with the speech of hearing-impaired children: audiologists, primary school teachers and inexperienced listeners.</p>
-<!-- 4. What has been explored so far? -->
-<p>Previous research have investigated some of the factors and their impact on the reliability of the method. <span class="citation" data-cites="Bramley_2015">Bramley (<a href="#ref-Bramley_2015" role="doc-biblioref">2015</a>)</span> conducted a simulation-based study to explore the impact originated from using random versus adaptive pairing algorithms. On the other hand, <span class="citation" data-cites="Bramley_et_al_2019">Bramley and Vitello (<a href="#ref-Bramley_et_al_2019" role="doc-biblioref">2019</a>)</span> explore the impact of adaptive algorithms on a more realistic setting. The study used autobiographical essays written by candidates as part of their English Language course, where the essay worth half of the total marks for the final exam. In contrast, <span class="citation" data-cites="Verhavert_et_al_2019">Verhavert et al. (<a href="#ref-Verhavert_et_al_2019" role="doc-biblioref">2019</a>)</span> conducted a meta-analysis exploring the impact of the number of stimuli, the format of the stimuli, the number of comparisons per stimulus, the number of judges, the judges’ expertise, and feedback on reliability. Conversely, <span class="citation" data-cites="Crompvoets_et_al_2022">Crompvoets, Béguin, and Sijtsma (<a href="#ref-Crompvoets_et_al_2022" role="doc-biblioref">2022</a>)</span> conducted a simulation-based study investigating the bias and stability of the components of reliability in relation to the number of comparisons per stimulus. In all previous cases, reliability was measured by the scale Separation Reliability <span class="citation" data-cites="Pollitt_2012b">(SSR , <a href="#ref-Pollitt_2012b" role="doc-biblioref">Pollitt 2012b</a>)</span> either on simulated or estimated data. Lastly, <span class="citation" data-cites="vanDaal_et_al_2017">van Daal et al. (<a href="#ref-vanDaal_et_al_2017" role="doc-biblioref">2017</a>)</span> explored the role of objective complexity in the comparison of two stimuli and decision accuracy of judges and on the reliability. While, <span class="citation" data-cites="Gijsen_et_al_2021">Gijsen et al. (<a href="#ref-Gijsen_et_al_2021" role="doc-biblioref">2021</a>)</span> used eye-tracking data to explore similar objectives as the latter study.</p>
-<p>In summary, the studies have …</p>
-<!-- 4. Solution to the gap -->
-<!-- No CJ research have been submitted on the *intersection* of -->
-<!-- 1. Simulation-based power analysis -->
-<!--     importance for planning and reliability of results -->
-<!-- 2. For comparative judgments: -->
-<!--     sophisticated procedure to score traits: -->
-<!--     - between subjects -->
-<!--     - against a reference subject -->
-<!--     - to test research theories -->
-<!--     - to test judges' reliability -->
-<!-- 3. Considering the predictability of the phenomena -->
-<!--       its importance in @Shmueli_et_al_2011 and Lawson [-@Lawson_2015, pp. 7] -->
-<!-- 4. Under Bayesian framework -->
-<!-- 5. Keeping a documentation of the implementation -->
+<p>According to <span class="citation" data-cites="Verhavert_et_al_2019">Verhavert et al. (<a href="#ref-Verhavert_et_al_2019" role="doc-biblioref">2019</a>)</span> and <span class="citation" data-cites="vanDaal_2020">van Daal (<a href="#ref-vanDaal_2020" role="doc-biblioref">2020</a>)</span>, several assessment factors interplay and contribute to the reliability of the DCJ method. These factors include the number of stimuli, the characteristics of the stimuli, their <em>proximity</em> in terms of the assessed trait, the number of comparison per stimulus, and the pairing algorithm used. Furthermore, since the method relies on judges’ assessments, the number of judges, the characteristics of judges, their <em>discrimination</em> abilities, and the number of comparisons per judge also play pivotal roles. Additionally, in cases where the stimuli represent sub-units of higher levels units, then the number of units, the characteristics of the units, and their <em>proximity</em> in terms of the trait can also significantly influence the assessment outcome.</p>
+<p>The research of <span class="citation" data-cites="Boonen_et_al_2020">Boonen, Kloots, and Gillis (<a href="#ref-Boonen_et_al_2020" role="doc-biblioref">2020</a>)</span> offers a clear illustration of these factors and their interplay. In their study, the authors focused on assessing children’s <em>overall perceived speech quality</em>. They evaluated this trait using six utterances (sub-units), each originating from <span class="math inline">\(21\)</span> children (units). The utterances were derived from an imitation task, while the children were evenly distributed across three groups: those with cochlear implants, those with hearing aids, and normal hearing children. To establish pairwise comparisons for the <span class="math inline">\(126\)</span> stimuli, a random pairing algorithm was employed, with <span class="math inline">\(20\)</span> comparisons per stimulus. Lastly, a total of <span class="math inline">\(60\)</span> listeners (judges) evaluated <span class="math inline">\(65\)</span> pairs of stimuli. The judges were selected from three distinct groups, each possessing varying degrees of experience with the speech of hearing-impaired children: audiologists, primary school teachers and inexperienced listeners. Ultimately, the authors were interested in assessing if there were differences in the <em>overall perceived speech quality</em> between groups of subjects and judges.</p>
+<!-- 4. Where is the gap? -->
+<p>Previous studies have primarily focused on examining the individual impact of assessment factors on the reliability of the method. For instance, <span class="citation" data-cites="Bramley_2015">Bramley (<a href="#ref-Bramley_2015" role="doc-biblioref">2015</a>)</span> conducted a simulation-based study to investigate the effects of using random versus adaptive pairing algorithms on the Scale Separation Reliability <span class="citation" data-cites="Pollitt_2012b">(SSR, <a href="#ref-Pollitt_2012b" role="doc-biblioref">Pollitt 2012b</a>)</span>. Similarly, <span class="citation" data-cites="Bramley_et_al_2019">Bramley and Vitello (<a href="#ref-Bramley_et_al_2019" role="doc-biblioref">2019</a>)</span> explored the influence of adaptive algorithms on the SSR using autobiographical essays from candidates in an English Language course, where the essays constituted half of the total marks for the final exam. In contrast, <span class="citation" data-cites="Verhavert_et_al_2019">Verhavert et al. (<a href="#ref-Verhavert_et_al_2019" role="doc-biblioref">2019</a>)</span> conducted a meta-analysis examining the individual effects of various assessment factors on the SSR, including the number of stimuli, the format of stimuli, the number of comparisons per stimulus, the number of judges, the judges’ expertise, and feedback. Conversely, <span class="citation" data-cites="Crompvoets_et_al_2022">Crompvoets, Béguin, and Sijtsma (<a href="#ref-Crompvoets_et_al_2022" role="doc-biblioref">2022</a>)</span> conducted a simulation-based study to investigate the bias and stability of SSR components concerning the number of comparisons per stimulus. Lastly, <span class="citation" data-cites="vanDaal_et_al_2017">van Daal et al. (<a href="#ref-vanDaal_et_al_2017" role="doc-biblioref">2017</a>)</span> and <span class="citation" data-cites="Gijsen_et_al_2021">Gijsen et al. (<a href="#ref-Gijsen_et_al_2021" role="doc-biblioref">2021</a>)</span> explored the moderating role of judges’ decision accuracy on the perceived complexity during the comparison of two stimuli.</p>
+<!-- 5. Solution to the gap -->
+<p>However, no study to the authors’ knowledge has explored in a principled manner the interplay of assessment factors and their impact on the reliability of specific research or analysis queries. Consequently, this study aims to close this gap by conducting a Bayesian simulation-based investigation. Additionally, to conceptualize DCJ, the research will introduce the framework of Structural Causal Models (SCM) and Directed Acyclic Graphs (DAG) <span class="citation" data-cites="Pearl_2009">Cinelli, Forney, and Pearl (<a href="#ref-Cinelli_et_al_2021" role="doc-biblioref">2022</a>)</span>. This theoretical framework facilitates the visualization and translation of the assumptions underlying the DCJ procedure into causal assumptions and statistical models. Ultimately, the results of this study will have implications for planning DCJ experiments, and will hold significance for researchers or analysts implementing DCJ procedures, as well as methodologists in education and assessment procedures.</p>
 </section>
-<section id="sec-ResearchQuestions" class="level2" data-number="2">
-<h2 data-number="2" class="anchored" data-anchor-id="sec-ResearchQuestions"><span class="header-section-number">2</span> Research questions</h2>
-<!-- **Research question 1** is interested in *which factors have an impact on the power to make comparisons between subjects' traits, with $95\%$ ($1-\alpha$) confidence?* (RQ1), when we want to compare: two random subjects, or one random subject versus a reference subject. Consequently the parameter of interest is $\theta_{i} - \theta_{j}$. -->
-<!-- Considering the results of **RQ1**, **Research question 2a** is interested in *which factors have an impact on the power to make comparisons of the average trait between groups of subjects / objects, with $95\%$ ($1-\alpha$) confidence?* (RQ2a). Consequently, the parameters of interest will be the $\beta_{X}$ or $\beta_{Y}$, if $X$ or $Y$ define two or more groups (or interactions). -->
-<!-- Considering the results of **RQ1**, **Research question 2b** is interested in *which factors have an impact on the power of covariates' regression parameters on the trait of subjects / objects, with $95\%$ ($1-\alpha$) confidence?* (RQ2b). Consequently, the parameters of interest will be the $\beta_{X}$ or $\beta_{Y}$, if $X$ or $Y$ define a continuous covariate. -->
-<!-- Considering the results of **RQ1**, **Research question 3a** is interested in *which factors have an impact on the power to make comparisons of the average "discrimination" ability between groups of judges, with $95\%$ ($1-\alpha$) confidence?}* (RQ3a). Consequently, the parameters of interest will be the $\beta_{Z}$ or $\beta_{Y}$, if $Z$ define two or more groups (or interactions). -->
-<!-- Considering the results of **RQ1**, **Research question 3b** is interested in *which factors have an impact on the power of covariates' regression parameters from covariates on the judgment ability of judges, with $95\%$ ($1-\alpha$) confidence?* (RQ3b). Consequently, the parameters of interest will be the $\beta_{Z}$, if $Z$ define a continuous covariate. -->
+<section id="sec-TheoreticalFramework" class="level2" data-number="2">
+<h2 data-number="2" class="anchored" data-anchor-id="sec-TheoreticalFramework"><span class="header-section-number">2</span> Theoretical framework</h2>
+<section id="sec-DCJcomp" class="level3" data-number="2.1">
+<h3 data-number="2.1" class="anchored" data-anchor-id="sec-DCJcomp"><span class="header-section-number">2.1</span> The compexity of DCJ</h3>
+<!-- According to @Verhavert_et_al_2019 and @vanDaal_2020, several assessment factors interplay and contribute to the reliability of the DCJ method. These factors include the number of stimuli, the characteristics of the stimuli, their *proximity* in terms of the assessed trait, the number of comparison per stimulus, and the pairing algorithm used. Furthermore, since the method relies on judges' assessments, the number of judges, the characteristics of judges, their *discrimination* abilities, and the number of comparisons per judge also play pivotal roles. Additionally, in cases where the stimuli represent sub-units of higher levels units, then the number of units, the characteristics of the units, and their *proximity* in terms of the trait can also significantly influence the assessment outcome.  -->
+<!-- The research of @Boonen_et_al_2020 offers a clear illustration of these factors and their interplay. In their study, the authors focused on assessing children's  *overall perceived speech quality*. They evaluated this trait using six utterances (sub-units), each originating from $21$ children (units). The utterances were derived from an imitation task, while the children were evenly distributed across three groups: those with cochlear implants, those with hearing aids, and normal hearing children. To establish pairwise comparisons for the $126$ stimuli, a random pairing algorithm was employed, with $20$ comparisons per stimulus. Lastly, a total of $60$ listeners (judges) evaluated $65$ pairs of stimuli. The judges were selected from three distinct groups, each possessing varying degrees of experience with the speech of hearing-impaired children: audiologists, primary school teachers and inexperienced listeners. Ultimately, the authors were interested in assessing if there were differences in the *overall perceived speech quality* between groups of subjects and judges. -->
+<!-- It is more likely that we can decide the characteristics of the objects we want to include in the study (independent variables), ensuring groups that are more balanced. However, in the case of subjects sometimes the independent variables cannot be assigned (e.g., hearing status). -->
 </section>
-<section id="sec-methods" class="level2" data-number="3">
-<h2 data-number="3" class="anchored" data-anchor-id="sec-methods"><span class="header-section-number">3</span> Methods</h2>
-<section id="sec-TF" class="level3" data-number="3.1">
-<h3 data-number="3.1" class="anchored" data-anchor-id="sec-TF"><span class="header-section-number">3.1</span> Theoretical framework</h3>
-<!-- Use of Directed Acyclic Graph (DAG) [@Pearl_2009, @Pearl_et_al_2016, @Cinelli_et_al_2021] to state the estimation problem andthe research hypotheses. -->
+<section id="sec-DCJrethink" class="level3" data-number="2.2">
+<h3 data-number="2.2" class="anchored" data-anchor-id="sec-DCJrethink"><span class="header-section-number">2.2</span> Rethinking DCJ</h3>
+<!-- The Identification-Estimation Flowchart -->
+<!-- Use of Structural Causal Models (SCM) and Directed Acyclic Graph (DAG) [@Pearl_2009, @Pearl_et_al_2016, @Cinelli_et_al_2021] to state the estimation problem and the research hypotheses. -->
 <!-- DAG conventions (for this proposal): -->
 <!-- 1. Open circles $=$ unobservable / latent variable -->
 <!-- 2. Close circles $=$ observable variable -->
@@ -486,10 +477,12 @@ window.Quarto = {
 <!-- \end{aligned} -->
 <!-- $$ {#eq-StructuralModel} -->
 </section>
-<section id="sec-SM" class="level3" data-number="3.2">
-<h3 data-number="3.2" class="anchored" data-anchor-id="sec-SM"><span class="header-section-number">3.2</span> Statistical model</h3>
+<section id="sec-SM" class="level3" data-number="2.3">
+<h3 data-number="2.3" class="anchored" data-anchor-id="sec-SM"><span class="header-section-number">2.3</span> Statistical model</h3>
 <!-- "An appropriate analysis of data cannot be completed without knowledge of what experimental design was used and how the data was collected, and conclusions are not reliable if they are not justified by the proper modeling and analysis of the data" [see @Lawson_2015, pp. 7] -->
 <!-- "In many cases where observational units are different than the experimental units, the observational units will not be independent" [see @Lawson_2015, pp. 177] -->
+<!-- 3. Considering the predictability of the phenomena -->
+<!--       its importance in @Shmueli_et_al_2011 and Lawson [-@Lawson_2015, pp. 7] -->
 <!-- Bayesian Bradley-Terry-Luce model (BTL) [@Bradley_et_al_1952, @Luce_1959, @Pollitt_2012b, @BradleyTerry2_2012]  -->
 <!-- $$ -->
 <!-- \begin{aligned}[t] -->
@@ -517,8 +510,54 @@ window.Quarto = {
 <!-- \end{aligned} -->
 <!-- $$ {#eq-StatisticalModel2} -->
 </section>
-<section id="power-analysis" class="level3" data-number="3.3">
-<h3 data-number="3.3" class="anchored" data-anchor-id="power-analysis"><span class="header-section-number">3.3</span> Power analysis</h3>
+</section>
+<section id="sec-ResearchQuestions" class="level2" data-number="3">
+<h2 data-number="3" class="anchored" data-anchor-id="sec-ResearchQuestions"><span class="header-section-number">3</span> Research questions</h2>
+<!-- **Research question 1** is interested in *which factors have an impact on the power to make comparisons between subjects' traits, with $95\%$ ($1-\alpha$) confidence?* (RQ1), when we want to compare: two random subjects, or one random subject versus a reference subject. Consequently the parameter of interest is $\theta_{i} - \theta_{j}$. -->
+<!-- Considering the results of **RQ1**, **Research question 2a** is interested in *which factors have an impact on the power to make comparisons of the average trait between groups of subjects / objects, with $95\%$ ($1-\alpha$) confidence?* (RQ2a). Consequently, the parameters of interest will be the $\beta_{X}$ or $\beta_{Y}$, if $X$ or $Y$ define two or more groups (or interactions). -->
+<!-- Considering the results of **RQ1**, **Research question 2b** is interested in *which factors have an impact on the power of covariates' regression parameters on the trait of subjects / objects, with $95\%$ ($1-\alpha$) confidence?* (RQ2b). Consequently, the parameters of interest will be the $\beta_{X}$ or $\beta_{Y}$, if $X$ or $Y$ define a continuous covariate. -->
+<!-- Considering the results of **RQ1**, **Research question 3a** is interested in *which factors have an impact on the power to make comparisons of the average "discrimination" ability between groups of judges, with $95\%$ ($1-\alpha$) confidence?}* (RQ3a). Consequently, the parameters of interest will be the $\beta_{Z}$ or $\beta_{Y}$, if $Z$ define two or more groups (or interactions). -->
+<!-- Considering the results of **RQ1**, **Research question 3b** is interested in *which factors have an impact on the power of covariates' regression parameters from covariates on the judgment ability of judges, with $95\%$ ($1-\alpha$) confidence?* (RQ3b). Consequently, the parameters of interest will be the $\beta_{Z}$, if $Z$ define a continuous covariate. -->
+<!-- For **RQ1** the factors of interest will be: -->
+<!-- 1. Number of objects per subject ($R_{i}$) -->
+<!-- 2. Number of comparisons per object -->
+<!-- 3. Variability of objects within each subject ($\sigma_{r_{i}}$) -->
+<!-- 4. Number of judges ($K$) -->
+<!--     indirectly determined by the number of comparison per judge, see \cite{Lawson_2015}, p. 263-264) -->
+<!-- 5. Judges' "discrimination" ability ($\gamma_{k}$) -->
+<!-- 6. Trait difference size between subjects ($\theta_{i} - \theta_{j}$) -->
+<!-- **RQ1** will not investigate the following factors: -->
+<!-- 1. Pairing algorithm (see \cite{Bramley_2015}). -->
+<!--       We will use a random algorithm (Balanced Incomplete Block design, BIB \cite{Lawson_2015})  -->
+<!-- 2. Number of comparisons per judge,  -->
+<!--       we assign the maximum number of comparison physically possible per judge, i.e., a fixed value (although, this is task specific)  -->
+<!-- 3. Format of the assessed object (see \cite{Verhavert_2018})  -->
+<!--     It is indirectly investigated in \textit{RQ2a} and \textit{RQ2b} -->
+<!-- 4. The variability proportion among group of subjects  -->
+<!--     It is indirectly investigated in \textit{RQ2a} and \textit{RQ2b}  -->
+<!-- For **RQ2a** the factors of interest will be: -->
+<!-- 1. Trait difference size between group of subjects / objects ($\beta_{X}$ or $\beta_{Y}$) -->
+<!-- 2. Number of subjects per group -->
+<!--     ($N_{g}$ where $g = 1, \dots, G$ groups). Questions: are balanced designs the best?, what if the cost of data is different for each group? -->
+<!-- 3. Proportion of variability among group of subjects \\ -->
+<!--     ($\sigma_{i} = \sigma_{g}$ where $g = 1, \dots, G$ groups), e.g., assuming two balanced groups ($N_{A} = N_{B}$) with $\sigma_{A[i]}^2 = p^{2}$ and $\sigma_{B[i]}^2 = 1-p^{2}$, where $0 \leq p \leq 1$, then the variance for a t-test among groups would be: $s_{p} = 1/\sqrt{2}$ -->
+<!-- For **RQ2b** the factors of interest will be: -->
+<!-- 1. Size of the effect ($\beta_{X}$ or $\beta_{Y}$) -->
+<!-- 2. Total number of subjects ($N$) -->
+<!-- For **RQ3a** the factors of interest will be: -->
+<!-- 1. Size of the difference between group of judges ($\beta_{Z}$) -->
+<!-- 2. Number of judges per group  -->
+<!--     ($K_{g}$ where $g=1,\dots,G$ groups). Questions: are balanced designs the best?, what if the cost of data is different for each group? -->
+<!-- 3. Proportion of variability among group of judges -->
+<!--     ($\sigma_{k} = \sigma_{g}$ where $g = 1, \dots, G$ groups), e.g., assuming two balanced groups ($K_{A} = K_{B}$) with $\sigma_{A[i]}^2 = p^{2}$ and $\sigma_{B[i]}^2 = 1-p^{2}$, where $0 \leq p \leq 1$, then the variance for a t-test among groups would be: $s_{p} = 1/\sqrt{2}$ -->
+<!-- For **RQ3b** the factors of interest will be: -->
+<!-- 1. Size of the effect $\beta_{Z}$ -->
+<!-- 2. Total number of judges ($K$) -->
+</section>
+<section id="sec-methods" class="level2" data-number="4">
+<h2 data-number="4" class="anchored" data-anchor-id="sec-methods"><span class="header-section-number">4</span> Methods</h2>
+<section id="bayesian-simulation-and-power-analysis" class="level3" data-number="4.1">
+<h3 data-number="4.1" class="anchored" data-anchor-id="bayesian-simulation-and-power-analysis"><span class="header-section-number">4.1</span> Bayesian simulation and power analysis</h3>
 <!-- "Power analysis is only useful when the simulated data imitate actual data ... We assume that the model is a reasonably good description of the actual data" [see @Kruschke_2015, pp. 394] -->
 <!-- In terms of the highest density interval (HDI), power can be expressed in three goals [@Kruschke_2015]: -->
 <!-- 1. **Reject a null value of a parameter** -->
@@ -560,47 +599,8 @@ window.Quarto = {
 <!-- If the same judge assess the same two objects from the same two subjects more than one time, then the variability of the assessment of the judge can be partitioned additionally into variance between pairs of objects and variance within pairs of objects. -->
 <!-- From @Lawson_2015, another way to see DCJ experiments I'd that you are grouping heterogeneous experimental units (objects and subjects) into homogeneous ones (judges), which are your "blocks". In that case if you expect that blocking will reduce the variance of EUs within blocks by a percentage equal to $100*\left(1-\frac{1}{RE}\right)$ where $RE$ is the relative efficiency in respect to a CRD  then the replicates would be $r=r_{crd}/RE$ and the number of blocks of size $k$ would be $b=tr/k$ [see @Lawson_2015, pp. 121-122, pp. 267] -->
 <!-- Usually, in these types of experiments the objects are observational units from higher hierarchical levels, such as subjects. For example, when researchers are interested in assessing the trait of speech intelligibility of individuals (subjects), judges rate dichotomously two uttered sentences (objects, nested within individuals). -->
-<section id="sec-FI" class="level4" data-number="3.3.1">
-<h4 data-number="3.3.1" class="anchored" data-anchor-id="sec-FI"><span class="header-section-number">3.3.1</span> Factors of interest</h4>
-<!-- It is more likely that we can decide the characteristics of the objects we want to include in the study (independent variables), ensuring groups that are more balanced. However, in the case of subjects sometimes the independent variables cannot be assigned (e.g., hearing status). -->
-<!-- For **RQ1** the factors of interest will be: -->
-<!-- 1. Number of objects per subject ($R_{i}$) -->
-<!-- 2. Number of comparisons per object -->
-<!-- 3. Variability of objects within each subject ($\sigma_{r_{i}}$) -->
-<!-- 4. Number of judges ($K$) -->
-<!--     indirectly determined by the number of comparison per judge, see \cite{Lawson_2015}, p. 263-264) -->
-<!-- 5. Judges' "discrimination" ability ($\gamma_{k}$) -->
-<!-- 6. Trait difference size between subjects ($\theta_{i} - \theta_{j}$) -->
-<!-- **RQ1** will not investigate the following factors: -->
-<!-- 1. Pairing algorithm (see \cite{Bramley_2015}). -->
-<!--       We will use a random algorithm (Balanced Incomplete Block design, BIB \cite{Lawson_2015})  -->
-<!-- 2. Number of comparisons per judge,  -->
-<!--       we assign the maximum number of comparison physically possible per judge, i.e., a fixed value (although, this is task specific)  -->
-<!-- 3. Format of the assessed object (see \cite{Verhavert_2018})  -->
-<!--     It is indirectly investigated in \textit{RQ2a} and \textit{RQ2b} -->
-<!-- 4. The variability proportion among group of subjects  -->
-<!--     It is indirectly investigated in \textit{RQ2a} and \textit{RQ2b}  -->
-<!-- For **RQ2a** the factors of interest will be: -->
-<!-- 1. Trait difference size between group of subjects / objects ($\beta_{X}$ or $\beta_{Y}$) -->
-<!-- 2. Number of subjects per group -->
-<!--     ($N_{g}$ where $g = 1, \dots, G$ groups). Questions: are balanced designs the best?, what if the cost of data is different for each group? -->
-<!-- 3. Proportion of variability among group of subjects \\ -->
-<!--     ($\sigma_{i} = \sigma_{g}$ where $g = 1, \dots, G$ groups), e.g., assuming two balanced groups ($N_{A} = N_{B}$) with $\sigma_{A[i]}^2 = p^{2}$ and $\sigma_{B[i]}^2 = 1-p^{2}$, where $0 \leq p \leq 1$, then the variance for a t-test among groups would be: $s_{p} = 1/\sqrt{2}$ -->
-<!-- For **RQ2b** the factors of interest will be: -->
-<!-- 1. Size of the effect ($\beta_{X}$ or $\beta_{Y}$) -->
-<!-- 2. Total number of subjects ($N$) -->
-<!-- For **RQ3a** the factors of interest will be: -->
-<!-- 1. Size of the difference between group of judges ($\beta_{Z}$) -->
-<!-- 2. Number of judges per group  -->
-<!--     ($K_{g}$ where $g=1,\dots,G$ groups). Questions: are balanced designs the best?, what if the cost of data is different for each group? -->
-<!-- 3. Proportion of variability among group of judges -->
-<!--     ($\sigma_{k} = \sigma_{g}$ where $g = 1, \dots, G$ groups), e.g., assuming two balanced groups ($K_{A} = K_{B}$) with $\sigma_{A[i]}^2 = p^{2}$ and $\sigma_{B[i]}^2 = 1-p^{2}$, where $0 \leq p \leq 1$, then the variance for a t-test among groups would be: $s_{p} = 1/\sqrt{2}$ -->
-<!-- For **RQ3b** the factors of interest will be: -->
-<!-- 1. Size of the effect $\beta_{Z}$ -->
-<!-- 2. Total number of judges ($K$) -->
-</section>
-<section id="sec-D" class="level4" data-number="3.3.2">
-<h4 data-number="3.3.2" class="anchored" data-anchor-id="sec-D"><span class="header-section-number">3.3.2</span> Data</h4>
+<section id="sec-D" class="level4" data-number="4.1.1">
+<h4 data-number="4.1.1" class="anchored" data-anchor-id="sec-D"><span class="header-section-number">4.1.1</span> Data</h4>
 <!-- Generate random data up until judges and subjects abilities. Then for the population assume you made all comparisons. Then sample with BIB [@Lawson_2015] the pairs compared. -->
 <!-- For effect size test, simulate individuals from the distribution, identify which have a desired difference and calculate power on those individuals. -->
 <!-- Track the total number of comparison per subjects as another representation -->
@@ -615,23 +615,23 @@ window.Quarto = {
 </section>
 </section>
 </section>
-<section id="sec-results" class="level2" data-number="4">
-<h2 data-number="4" class="anchored" data-anchor-id="sec-results"><span class="header-section-number">4</span> Results</h2>
-<section id="sec-RQ1" class="level3" data-number="4.1">
-<h3 data-number="4.1" class="anchored" data-anchor-id="sec-RQ1"><span class="header-section-number">4.1</span> Research question 1</h3>
+<section id="sec-results" class="level2" data-number="5">
+<h2 data-number="5" class="anchored" data-anchor-id="sec-results"><span class="header-section-number">5</span> Results</h2>
+<section id="sec-RQ1" class="level3" data-number="5.1">
+<h3 data-number="5.1" class="anchored" data-anchor-id="sec-RQ1"><span class="header-section-number">5.1</span> Research question 1</h3>
 </section>
-<section id="sec-RQ2" class="level3" data-number="4.2">
-<h3 data-number="4.2" class="anchored" data-anchor-id="sec-RQ2"><span class="header-section-number">4.2</span> Research question 2</h3>
+<section id="sec-RQ2" class="level3" data-number="5.2">
+<h3 data-number="5.2" class="anchored" data-anchor-id="sec-RQ2"><span class="header-section-number">5.2</span> Research question 2</h3>
 </section>
-<section id="sec-RQ3" class="level3" data-number="4.3">
-<h3 data-number="4.3" class="anchored" data-anchor-id="sec-RQ3"><span class="header-section-number">4.3</span> Research question 3</h3>
+<section id="sec-RQ3" class="level3" data-number="5.3">
+<h3 data-number="5.3" class="anchored" data-anchor-id="sec-RQ3"><span class="header-section-number">5.3</span> Research question 3</h3>
 </section>
 </section>
-<section id="sec-discussion" class="level2" data-number="5">
-<h2 data-number="5" class="anchored" data-anchor-id="sec-discussion"><span class="header-section-number">5</span> Discussion</h2>
+<section id="sec-discussion" class="level2" data-number="6">
+<h2 data-number="6" class="anchored" data-anchor-id="sec-discussion"><span class="header-section-number">6</span> Discussion</h2>
 <!-- When you want to investigate objects, the experiment has an experimental unit: the trial on the objects, but you only have one object per subject. Consequently, objects and subjects are confounded. -->
-<section id="sec-LFR" class="level3" data-number="5.1">
-<h3 data-number="5.1" class="anchored" data-anchor-id="sec-LFR"><span class="header-section-number">5.1</span> Limitations and further research</h3>
+<section id="sec-LFR" class="level3" data-number="6.1">
+<h3 data-number="6.1" class="anchored" data-anchor-id="sec-LFR"><span class="header-section-number">6.1</span> Limitations and further research</h3>
 <!-- We are trying to do prospective power analysis, however, you should pose the possibility that other authors perform replication power [see @Kruschke_2015, pp. 393]. The next paper is going to perform retrospective power analysis -->
 <!-- The study only compared the reliability coefficients between the adaptive and non-adaptive studies, without considering other aspects of validity or the impact on external variables -->
 <!-- Prospect of future research: -->
@@ -639,8 +639,8 @@ window.Quarto = {
 <!-- - What is the maximum of comparisons per judge to avoid loosing discrimination ability?, is it task-specific? (most likely) -->
 </section>
 </section>
-<section id="sec-conclusion" class="level2" data-number="6">
-<h2 data-number="6" class="anchored" data-anchor-id="sec-conclusion"><span class="header-section-number">6</span> Conclusion</h2>
+<section id="sec-conclusion" class="level2" data-number="7">
+<h2 data-number="7" class="anchored" data-anchor-id="sec-conclusion"><span class="header-section-number">7</span> Conclusion</h2>
 </section>
 <section id="references" class="level2 unnumbered">
 <h2 class="unnumbered anchored" data-anchor-id="references">References</h2>
@@ -666,6 +666,9 @@ Bramley, T. 2015. <span>“Investigating the Reliability of Adaptive Comparative
 <div id="ref-Bramley_et_al_2019" class="csl-entry" role="listitem">
 Bramley, T., and S. Vitello. 2019. <span>“The Effect of Adaptivity on the Reliability Coefficient in Adaptive Comparative Judgement.”</span> <em>Assessment in Education: Principles, Policy and Practice</em> 71 (9): 1–25. <a href="https://doi.org/10.1080/0969594X.2017.1418734">https://doi.org/10.1080/0969594X.2017.1418734</a>.
 </div>
+<div id="ref-Cinelli_et_al_2021" class="csl-entry" role="listitem">
+Cinelli, C., A. Forney, and J. Pearl. 2022. <span>“A Crash Course in Good and Bad Controls.”</span> <em>SSRN</em>, September. https://doi.org/<a href="http://dx.doi.org/10.2139/ssrn.3689437">http://dx.doi.org/10.2139/ssrn.3689437</a>.
+</div>
 <div id="ref-Crompvoets_et_al_2022" class="csl-entry" role="listitem">
 Crompvoets, Elise A. V., Anton A. Béguin, and Klaas Sijtsma. 2022. <span>“On the Bias and Stability of the Results of Comparative Judgment.”</span> <em>Frontiers in Education</em> 6. <a href="https://doi.org/10.3389/feduc.2021.788202">https://doi.org/10.3389/feduc.2021.788202</a>.
 </div>
@@ -680,6 +683,12 @@ Luce, R. 1959. <span>“On the Possible Psychophysical Laws.”</span> <em>The P
 </div>
 <div id="ref-Marshall_et_al_2020" class="csl-entry" role="listitem">
 Marshall, N., K Shaw, J. Hunter, and I. Jones. 2020. <span>“Assessment by Comparative Judgement: An Application to Secondary Statistics and English in New Zealand.”</span> <em>New Zealand Journal of Educational Studies</em> 55: 49–71. <a href="https://doi.org/10.1007/s40841-020-00163-3">https://doi.org/10.1007/s40841-020-00163-3</a>.
+</div>
+<div id="ref-Pearl_2009" class="csl-entry" role="listitem">
+Pearl, J. 2009. <em><a href="">Causality: Models, Reasoning and Inference</a></em>. Cambrige University Press.
+</div>
+<div id="ref-Pearl_et_al_2016" class="csl-entry" role="listitem">
+Pearl, J., M. Glymour, and N. Jewell. 2016. <em><a href="">Causal Inference in Statistics: A Primer</a></em>. John Wiley &amp; Sons, Inc.
 </div>
 <div id="ref-Placket_1975" class="csl-entry" role="listitem">
 Plackett, R. 1975. <span>“The Analysis of Permutations.”</span> <em>Journal of the Royal Statistical Society</em> 24 (2): 193–202. <a href="https://doi.org/10.2307/2346567">https://doi.org/10.2307/2346567</a>.
@@ -716,14 +725,14 @@ Verhavert, S., R. Bouwer, V Donche, and S. De Maeyer. 2019. <span>“A Meta-Anal
     Steven},
   title = {Power Analysis for {Dichotomous} {Comparative} {Judgment}
     Experiments {(DCJ)}},
-  date = {2024-03-15},
+  date = {2024-03-18},
   langid = {en},
   abstract = {(to do) ...}
 }
 </code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre><div class="quarto-appendix-secondary-label">For attribution, please cite this work as:</div><div id="ref-rivera_espejo2024" class="csl-entry quarto-appendix-citeas" role="listitem">
 Rivera Espejo, Jose Manuel, Sven de Maeyer, and Steven Gillis. 2024.
 <span>“Power Analysis for Dichotomous Comparative Judgment Experiments
-(DCJ).”</span> March 15, 2024.
+(DCJ).”</span> March 18, 2024.
 </div></div></section></div></main>
 <!-- /main column -->
 <script id="quarto-html-after-body" type="application/javascript">

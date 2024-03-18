@@ -24,8 +24,8 @@ and Interchange DTD v1.2 20190208//EN" "JATS-archivearticle1.dtd">
 <title-group>
 <article-title>Power analysis for Dichotomous Comparative Judgment
 experiments (DCJ)</article-title>
-<subtitle>A Bayesian simulation-based study exploring the factors that
-impact DCJ</subtitle>
+<subtitle>A Bayesian simulation-based study exploring the assessment
+factors that impact DCJ</subtitle>
 </title-group>
 
 <contrib-group>
@@ -131,10 +131,10 @@ editing" vocab-term-identifier="https://credit.niso.org/contributor-roles/writin
 <corresp id="cor-1">JoseManuel.RiveraEspejo@uantwerpen.be</corresp>
 </author-notes>
 
-<pub-date date-type="pub" publication-format="electronic" iso-8601-date="2024-03-15">
+<pub-date date-type="pub" publication-format="electronic" iso-8601-date="2024-03-18">
 <year>2024</year>
 <month>3</month>
-<day>15</day>
+<day>18</day>
 </pub-date>
 
 
@@ -204,8 +204,8 @@ the University of Antwerp (BOF).</funding-statement>
   (<xref alt="2018" rid="ref-Lesterhuis_2018" ref-type="bibr">2018</xref>),
   and Bartholomew and Williams
   (<xref alt="2020" rid="ref-Bartholomew_et_al_2020" ref-type="bibr">2020</xref>).
-  However, its application transcends education, as exemplified by
-  Boonen, Kloots, and Gillis
+  However, its application transcends education, as exemplified by the
+  work of Boonen, Kloots, and Gillis
   (<xref alt="2020" rid="ref-Boonen_et_al_2020" ref-type="bibr">2020</xref>).
   The methodology has also evolved to include multiple, as opposed to
   pairwise comparisons
@@ -225,28 +225,30 @@ the University of Antwerp (BOF).</funding-statement>
   Daal 2020</xref>;
   <xref alt="Marshall et al. 2020" rid="ref-Marshall_et_al_2020" ref-type="bibr">Marshall
   et al. 2020</xref>). Nevertheless, there has been limited
-  investigation into the specific factors contributing to the method’s
-  reliability.</p>
+  investigation into the interplay of the multiple assessment factors
+  and their contribution to the method’s reliability.</p>
   <p>According to Verhavert et al.
-  (<xref alt="2019" rid="ref-Verhavert_et_al_2019" ref-type="bibr">2019</xref>),
-  several factors contribute to the reliability of the DCJ method. These
-  factors include the number of stimuli, the characteristics of the
-  stimuli, their <italic>proximity</italic> in terms of the assessed
-  trait, the number of comparison per stimulus, and the pairing
-  algorithm used. Furthermore, since the method relies on judges’
-  assessments, the number of judges, the characteristics of judges,
-  their <italic>discrimination</italic> abilities, and the number of
-  comparisons per judge also play pivotal roles. Additionally, in cases
-  where the stimuli represent sub-units of higher levels units, in which
-  the research is focused, then the number of units, the characteristics
-  of the units and their <italic>proximity</italic> in terms of the
-  trait can also significantly influence the assessment outcome. The
-  research of Boonen, Kloots, and Gillis
+  (<xref alt="2019" rid="ref-Verhavert_et_al_2019" ref-type="bibr">2019</xref>)
+  and van Daal
+  (<xref alt="2020" rid="ref-vanDaal_2020" ref-type="bibr">2020</xref>),
+  several assessment factors interplay and contribute to the reliability
+  of the DCJ method. These factors include the number of stimuli, the
+  characteristics of the stimuli, their <italic>proximity</italic> in
+  terms of the assessed trait, the number of comparison per stimulus,
+  and the pairing algorithm used. Furthermore, since the method relies
+  on judges’ assessments, the number of judges, the characteristics of
+  judges, their <italic>discrimination</italic> abilities, and the
+  number of comparisons per judge also play pivotal roles. Additionally,
+  in cases where the stimuli represent sub-units of higher levels units,
+  then the number of units, the characteristics of the units, and their
+  <italic>proximity</italic> in terms of the trait can also
+  significantly influence the assessment outcome.</p>
+  <p>The research of Boonen, Kloots, and Gillis
   (<xref alt="2020" rid="ref-Boonen_et_al_2020" ref-type="bibr">2020</xref>)
-  offers a clear illustration of these factors. In their study, they
-  focused on assessing children’s <italic>speech
-  intelligibility</italic>. They evaluated this trait using six
-  utterances (sub-units), each originating from
+  offers a clear illustration of these factors and their interplay. In
+  their study, the authors focused on assessing children’s
+  <italic>overall perceived speech quality</italic>. They evaluated this
+  trait using six utterances (sub-units), each originating from
   <inline-formula><alternatives>
   <tex-math><![CDATA[21]]></tex-math>
   <mml:math display="inline" xmlns:mml="http://www.w3.org/1998/Math/MathML"><mml:mn>21</mml:mn></mml:math></alternatives></inline-formula>
@@ -265,88 +267,105 @@ the University of Antwerp (BOF).</funding-statement>
   <inline-formula><alternatives>
   <tex-math><![CDATA[60]]></tex-math>
   <mml:math display="inline" xmlns:mml="http://www.w3.org/1998/Math/MathML"><mml:mn>60</mml:mn></mml:math></alternatives></inline-formula>
-  listeners (judges) compared each stimulus approximately
-  <inline-formula><alternatives>
+  listeners (judges) evaluated <inline-formula><alternatives>
   <tex-math><![CDATA[65]]></tex-math>
   <mml:math display="inline" xmlns:mml="http://www.w3.org/1998/Math/MathML"><mml:mn>65</mml:mn></mml:math></alternatives></inline-formula>
-  times. The judges were selected from three distinct groups, each
-  possessing varying degrees of experience with the speech of
+  pairs of stimuli. The judges were selected from three distinct groups,
+  each possessing varying degrees of experience with the speech of
   hearing-impaired children: audiologists, primary school teachers and
-  inexperienced listeners.</p>
-  <p>Previous research have investigated some of the factors and their
-  impact on the reliability of the method. Bramley
+  inexperienced listeners. Ultimately, the authors were interested in
+  assessing if there were differences in the <italic>overall perceived
+  speech quality</italic> between groups of subjects and judges.</p>
+  <p>Previous studies have primarily focused on examining the individual
+  impact of assessment factors on the reliability of the method. For
+  instance, Bramley
   (<xref alt="2015" rid="ref-Bramley_2015" ref-type="bibr">2015</xref>)
-  conducted a simulation-based study to explore the impact originated
-  from using random versus adaptive pairing algorithms. On the other
-  hand, Bramley and Vitello
-  (<xref alt="2019" rid="ref-Bramley_et_al_2019" ref-type="bibr">2019</xref>)
-  explore the impact of adaptive algorithms on a more realistic setting.
-  The study used autobiographical essays written by candidates as part
-  of their English Language course, where the essay worth half of the
-  total marks for the final exam. In contrast, Verhavert et al.
-  (<xref alt="2019" rid="ref-Verhavert_et_al_2019" ref-type="bibr">2019</xref>)
-  conducted a meta-analysis exploring the impact of the number of
-  stimuli, the format of the stimuli, the number of comparisons per
-  stimulus, the number of judges, the judges’ expertise, and feedback on
-  reliability. Conversely, Crompvoets, Béguin, and Sijtsma
-  (<xref alt="2022" rid="ref-Crompvoets_et_al_2022" ref-type="bibr">2022</xref>)
-  conducted a simulation-based study investigating the bias and
-  stability of the components of reliability in relation to the number
-  of comparisons per stimulus. In all previous cases, reliability was
-  measured by the scale Separation Reliability (SSR ,
+  conducted a simulation-based study to investigate the effects of using
+  random versus adaptive pairing algorithms on the Scale Separation
+  Reliability (SSR,
   <xref alt="Pollitt 2012b" rid="ref-Pollitt_2012b" ref-type="bibr">Pollitt
-  2012b</xref>) either on simulated or estimated data. Lastly, van Daal
-  et al.
+  2012b</xref>). Similarly, Bramley and Vitello
+  (<xref alt="2019" rid="ref-Bramley_et_al_2019" ref-type="bibr">2019</xref>)
+  explored the influence of adaptive algorithms on the SSR using
+  autobiographical essays from candidates in an English Language course,
+  where the essays constituted half of the total marks for the final
+  exam. In contrast, Verhavert et al.
+  (<xref alt="2019" rid="ref-Verhavert_et_al_2019" ref-type="bibr">2019</xref>)
+  conducted a meta-analysis examining the individual effects of various
+  assessment factors on the SSR, including the number of stimuli, the
+  format of stimuli, the number of comparisons per stimulus, the number
+  of judges, the judges’ expertise, and feedback. Conversely,
+  Crompvoets, Béguin, and Sijtsma
+  (<xref alt="2022" rid="ref-Crompvoets_et_al_2022" ref-type="bibr">2022</xref>)
+  conducted a simulation-based study to investigate the bias and
+  stability of SSR components concerning the number of comparisons per
+  stimulus. Lastly, van Daal et al.
   (<xref alt="2017" rid="ref-vanDaal_et_al_2017" ref-type="bibr">2017</xref>)
-  explored the role of objective complexity in the comparison of two
-  stimuli and decision accuracy of judges and on the reliability. While,
-  Gijsen et al.
+  and Gijsen et al.
   (<xref alt="2021" rid="ref-Gijsen_et_al_2021" ref-type="bibr">2021</xref>)
-  used eye-tracking data to explore similar objectives as the latter
-  study.</p>
-  <p>In summary, the studies have …</p>
+  explored the moderating role of judges’ decision accuracy on the
+  perceived complexity during the comparison of two stimuli.</p>
+  <p>However, no study to the authors’ knowledge has explored in a
+  principled manner the interplay of assessment factors and their impact
+  on the reliability of specific research or analysis queries.
+  Consequently, this study aims to close this gap by conducting a
+  Bayesian simulation-based investigation. Additionally, to
+  conceptualize DCJ, the research will introduce the framework of
+  Structural Causal Models (SCM) and Directed Acyclic Graphs (DAG)
+  Cinelli, Forney, and Pearl
+  (<xref alt="2022" rid="ref-Cinelli_et_al_2021" ref-type="bibr">2022</xref>).
+  This theoretical framework facilitates the visualization and
+  translation of the assumptions underlying the DCJ procedure into
+  causal assumptions and statistical models. Ultimately, the results of
+  this study will have implications for planning DCJ experiments, and
+  will hold significance for researchers or analysts implementing DCJ
+  procedures, as well as methodologists in education and assessment
+  procedures.</p>
 </sec>
-<sec id="sec-ResearchQuestions">
-  <title>2 Research questions</title>
-</sec>
-<sec id="sec-methods">
-  <title>3 Methods</title>
-  <sec id="sec-TF">
-    <title>3.1 Theoretical framework</title>
+<sec id="sec-TheoreticalFramework">
+  <title>2 Theoretical framework</title>
+  <sec id="sec-DCJcomp">
+    <title>2.1 The compexity of DCJ</title>
+  </sec>
+  <sec id="sec-DCJrethink">
+    <title>2.2 Rethinking DCJ</title>
   </sec>
   <sec id="sec-SM">
-    <title>3.2 Statistical model</title>
+    <title>2.3 Statistical model</title>
   </sec>
-  <sec id="power-analysis">
-    <title>3.3 Power analysis</title>
-    <sec id="sec-FI">
-      <title>3.3.1 Factors of interest</title>
-    </sec>
+</sec>
+<sec id="sec-ResearchQuestions">
+  <title>3 Research questions</title>
+</sec>
+<sec id="sec-methods">
+  <title>4 Methods</title>
+  <sec id="bayesian-simulation-and-power-analysis">
+    <title>4.1 Bayesian simulation and power analysis</title>
     <sec id="sec-D">
-      <title>3.3.2 Data</title>
+      <title>4.1.1 Data</title>
     </sec>
   </sec>
 </sec>
 <sec id="sec-results">
-  <title>4 Results</title>
+  <title>5 Results</title>
   <sec id="sec-RQ1">
-    <title>4.1 Research question 1</title>
+    <title>5.1 Research question 1</title>
   </sec>
   <sec id="sec-RQ2">
-    <title>4.2 Research question 2</title>
+    <title>5.2 Research question 2</title>
   </sec>
   <sec id="sec-RQ3">
-    <title>4.3 Research question 3</title>
+    <title>5.3 Research question 3</title>
   </sec>
 </sec>
 <sec id="sec-discussion">
-  <title>5 Discussion</title>
+  <title>6 Discussion</title>
   <sec id="sec-LFR">
-    <title>5.1 Limitations and further research</title>
+    <title>6.1 Limitations and further research</title>
   </sec>
 </sec>
 <sec id="sec-conclusion">
-  <title>6 Conclusion</title>
+  <title>7 Conclusion</title>
 </sec>
 </body>
 
@@ -612,6 +631,24 @@ the University of Antwerp (BOF).</funding-statement>
       <lpage>71</lpage>
     </element-citation>
   </ref>
+  <ref id="ref-Cinelli_et_al_2021">
+    <element-citation publication-type="article-journal">
+      <person-group person-group-type="author">
+        <name><surname>Cinelli</surname><given-names>C.</given-names></name>
+        <name><surname>Forney</surname><given-names>A.</given-names></name>
+        <name><surname>Pearl</surname><given-names>J.</given-names></name>
+      </person-group>
+      <article-title>A crash course in good and bad controls</article-title>
+      <source>SSRN</source>
+      <year iso-8601-date="2022-09">2022</year><month>09</month>
+      <volume></volume>
+      <issue></issue>
+      <uri>https://ssrn.com/abstract=3689437</uri>
+      <pub-id pub-id-type="doi">http://dx.doi.org/10.2139/ssrn.3689437</pub-id>
+      <fpage></fpage>
+      <lpage></lpage>
+    </element-citation>
+  </ref>
   <ref id="ref-Gijsen_et_al_2021">
     <element-citation publication-type="article-journal">
       <person-group person-group-type="author">
@@ -642,6 +679,35 @@ the University of Antwerp (BOF).</funding-statement>
       <volume>6</volume>
       <uri>https://www.frontiersin.org/articles/10.3389/feduc.2021.788202</uri>
       <pub-id pub-id-type="doi">10.3389/feduc.2021.788202</pub-id>
+    </element-citation>
+  </ref>
+  <ref id="ref-Pearl_2009">
+    <element-citation publication-type="book">
+      <person-group person-group-type="author">
+        <name><surname>Pearl</surname><given-names>J.</given-names></name>
+      </person-group>
+      <source>Causality: Models, reasoning and inference</source>
+      <publisher-name>Cambrige University Press</publisher-name>
+      <year iso-8601-date="2009">2009</year>
+      <isbn></isbn>
+      <uri></uri>
+      <pub-id pub-id-type="doi"></pub-id>
+    </element-citation>
+  </ref>
+  <ref id="ref-Pearl_et_al_2016">
+    <element-citation publication-type="book">
+      <person-group person-group-type="author">
+        <name><surname>Pearl</surname><given-names>J.</given-names></name>
+        <name><surname>Glymour</surname><given-names>M.</given-names></name>
+        <name><surname>Jewell</surname><given-names>N.</given-names></name>
+      </person-group>
+      <source>Causal inference in statistics: A primer</source>
+      <publisher-name>John Wiley &amp; Sons, Inc.</publisher-name>
+      <year iso-8601-date="2016">2016</year>
+      <edition></edition>
+      <isbn>978-1-119-18686-1</isbn>
+      <uri></uri>
+      <pub-id pub-id-type="doi"></pub-id>
     </element-citation>
   </ref>
   <ref id="ref-Lesterhuis_2018">
