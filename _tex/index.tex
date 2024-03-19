@@ -238,9 +238,9 @@ and to accommodate comparisons with ordinal outcomes (Tutz 1986; Agresti
 1992). Overall, research suggests that DCJ offers an alternative and
 efficient approach to measurement and evaluation, characterized by its
 reliability and validity (Lesterhuis 2018; van Daal 2020; Marshall et
-al. 2020). Nevertheless, there has been limited investigation about the
-interplay of the different assessment factors and their contribution to
-the consistency of the method (i.e., its reliability).
+al. 2020). Nevertheless, considering the method's sophistication, there
+has been limited investigation about the interplay of the different
+assessment factors and their contribution to the method's reliability.
 
 According to Verhavert et al. (2019) and van Daal (2020), several
 assessment factors interplay and contribute to the reliability of the
@@ -251,78 +251,80 @@ algorithm used. Furthermore, since the method relies on judges'
 assessments, the number of judges, the characteristics of judges, their
 \emph{discrimination} abilities, and the number of comparisons per judge
 also play pivotal roles. Additionally, in cases where the stimuli
-represent sub-units of higher-levels units, then the number of units,
-the characteristics of the units, and their \emph{proximity} in terms of
-the trait can also significantly influence the assessment outcome.
+represent sub-units or objects from higher-levels units or subjects,
+then the number of subjects, the characteristics of the subjects, and
+their \emph{proximity} in terms of the trait can also significantly
+influence the assessment outcome.
 
 The research of Boonen, Kloots, and Gillis (2020) offers a clear
-illustration of these factors and their interplay. In their study, the
-authors focused on assessing children's \emph{overall perceived speech
-quality}. They evaluated this trait using six utterances (sub-units),
-each originating from \(21\) children (units). The utterances were
-derived from an imitation task, while the children were evenly
-distributed across three groups: those with cochlear implants, those
-with hearing aids, and normal hearing children. To establish pairwise
-comparisons for the \(126\) stimuli, a random pairing algorithm was
-employed, with \(20\) comparisons per stimulus. Lastly, a total of
-\(60\) listeners (judges) evaluated \(65\) pairs of stimuli. The judges
-were selected from three distinct groups, each possessing varying
-degrees of experience with the speech of hearing-impaired children:
-audiologists, primary school teachers and inexperienced listeners.
-Ultimately, the authors were interested in assessing if there were
-differences in the \emph{overall perceived speech quality} between
-groups of subjects and judges.
+illustration of these factors and their interplay in a DCJ procedure. In
+their study, the authors evaluated the \emph{overall perceived speech
+quality} (i.e., the trait) using six utterances (objects), each
+originating from \(21\) children (subjects). The utterances were derived
+from an imitation task, while the children were evenly distributed
+across three groups: those with cochlear implants, those with hearing
+aids, and normal hearing children. To establish pairwise comparisons for
+the \(126\) stimuli, a random pairing algorithm was employed, with
+\(20\) comparisons per stimulus. Lastly, a total of \(60\) listeners
+(judges) evaluated \(65\) pairs of stimuli. The judges were selected
+from three distinct groups, each possessing varying degrees of
+experience with the speech of hearing-impaired children: audiologists,
+primary school teachers and inexperienced listeners. Ultimately, the
+authors were interested in assessing if there were differences in the
+\emph{overall perceived speech quality} between groups of subjects and
+judges.
 
 Previous studies have primarily focused on examining the individual
 impact of the different assessment factors on the reliability of the
 method. For instance, Bramley (2015) conducted a simulation-based study
 to investigate the effects of using random versus adaptive pairing
-algorithms on the Scale Separation Reliability (SSR, Pollitt 2012b).
-Similarly, Bramley and Vitello (2019) explored the influence of adaptive
-algorithms on the SSR, using autobiographical essays from candidates in
-an English Language course, where the essays constituted half of the
-total marks for the final exam. In contrast, Verhavert et al. (2019)
-conducted a meta-analysis examining the individual effects of various
-assessment factors on the SSR, including the number of stimuli, the
-format of stimuli, the number of comparisons per stimulus, the number of
-judges, the judges' expertise, and feedback. Conversely, Crompvoets,
-Béguin, and Sijtsma (2022) conducted a simulation-based study to
-investigate the bias and stability of the SSR components under different
-number of comparisons per stimulus. Lastly, van Daal et al. (2017) and
+algorithms on the Scale Separation Reliability (SSR, Pollitt 2012b). In
+a similar vein, Bramley and Vitello (2019) explored the influence of
+adaptive algorithms on the SSR using autobiographical essays from
+candidates in an English Language course, where the essays constituted
+half of the total marks for the final exam. In contrast, Verhavert et
+al. (2019) conducted a meta-analysis examining the individual effects of
+various assessment factors on the SSR, including the number of stimuli,
+the format of stimuli, the number of comparisons per stimulus, the
+number of judges, the judges' expertise, and feedback. Crompvoets,
+Béguin, and Sijtsma (2022) then examined how variations in the number of
+comparisons per stimulus affect the bias and stability of SSR components
+through a simulation study. Additionally, van Daal et al. (2017) and
 Gijsen et al. (2021) explored the moderating role of judges' decision
-accuracy on the perceived complexity during the comparison of two
-stimuli.
+accuracy on the perceived complexity when comparing two stimuli.
+However, to the best of the author's knowledge, there has been no
+systematic investigation into how different relevant assessment factors
+interact and what is their collective effect on the reliability of the
+DCJ method.
 
-Considering the method's sophistication and data complexity, it is
-surprising that no study has explored in a principled manner the
-interplay between the different relevant assessment factors and their
-impact on the reliability of the DCJ method. This study aims to address
-this gap by conducting a Bayesian simulation-based power analysis. The
-research will follow the workflow outlined by McElreath (2020) and Neal
-(2020). First, the study defines the targets of inference, commonly
-known as the \emph{estimands}. These estimands are described in three
-research questions, over which the reliability of the DCJ method is
-evaluated. Next, the study constructs a \emph{scientific model} for the
-DCJ procedure. Scientific (causal) models describe the causal
-assumptions and mechanisms underlying a system, and facilitate
-inferences about causal relationships from data (Hitchcock 2023). To
-facilitate the translation and visualization of the assumptions
-underlying the DCJ procedure, this study uses Directed Acyclic Graphs
-(DAG) and Structural Causal Models (SCM) (Pearl 2009; Pearl, Glymour,
-and Jewell 2016; Cinelli, Forney, and Pearl 2022). Subsequently, a
-statistical model (i.e., an \emph{estimator}) is used to obtain an
-approximation of the target of inference (i.e., an \emph{estimate}).
-Bayesian statistical methods provide an intuitive way to translate
-estimands and scientific models into probabilistic statistical models.
-Lastly, using the statistical model and simulated data, the study
-provides an \emph{estimate} for the different targets of inference. The
-study repeats this final step of the workflow for different combinations
-of assessment factors multiple times. Since the estimands in simulated
-data are known, assesses the proximity between the estimates derived
-from the true estimands, which constitutes a power analysis. Ultimately,
-the results of this study will have implications for planning DCJ
-experiments, and will hold significance for researchers or analysts, in
-education and assessment procedures, implementing the DCJ method.
+This study aims to address this gap by conducting a Bayesian
+simulation-based power analysis. The research will follow the workflow
+outlined by McElreath (2020) and Neal (2020). First, the study defines
+the targets of inference, commonly known as the \emph{estimands}. These
+estimands are described in three research questions, over which the
+reliability of the DCJ method is evaluated. Next, the study constructs a
+\emph{scientific model} for the DCJ procedure. Scientific (causal)
+models describe the causal assumptions and mechanisms underlying a
+system, and facilitate inferences about causal relationships from data
+(Hitchcock 2023). To facilitate the translation and visualization of the
+assumptions underlying the DCJ procedure, this study uses Directed
+Acyclic Graphs (DAG) and Structural Causal Models (SCM) (Pearl 2009;
+Pearl, Glymour, and Jewell 2016; Cinelli, Forney, and Pearl 2022).
+Subsequently, an \emph{estimator} in the form of a statistical model is
+used to obtain an \emph{estimate} for the different targets of
+inference. Bayesian statistical method provide an intuitive way to
+translate estimands and scientific models into (probabilistic)
+statistical models. Lastly, using multiple simulated data for different
+combinations of the relevant assessment factors, the study will produce
+multiple estimates for the different estimands. Since the estimands in
+simulated data are known, assessing their \emph{proximity} to the
+generated estimates will allow to test the reliability of the DCJ
+method. This last step is akin to a power analysis.
+
+Ultimately, the results of this study will have implications for
+planning DCJ experiments, and will hold significance for researchers or
+analysts, in education and assessment procedures, implementing DCJ
+procedures.
 
 \section{Theoretical framework}\label{sec-TheoreticalFramework}
 
