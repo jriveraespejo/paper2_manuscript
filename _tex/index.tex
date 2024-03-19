@@ -184,7 +184,7 @@ analysis, simulation},
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\date{March 18, 2024}
+\date{March 19, 2024}
 \title{\bf Power analysis for Dichotomous Comparative Judgment
 experiments (DCJ)}
 \author{
@@ -238,9 +238,9 @@ and to accommodate comparisons with ordinal outcomes (Tutz 1986; Agresti
 1992). Overall, research suggests that DCJ offers an alternative and
 efficient approach to measurement and evaluation, characterized by its
 reliability and validity (Lesterhuis 2018; van Daal 2020; Marshall et
-al. 2020). Nevertheless, there has been limited investigation into the
-interplay of the multiple assessment factors and their contribution to
-the method's reliability.
+al. 2020). Nevertheless, there has been limited investigation about the
+interplay of the different assessment factors and their contribution to
+the consistency of the method (i.e., its reliability).
 
 According to Verhavert et al. (2019) and van Daal (2020), several
 assessment factors interplay and contribute to the reliability of the
@@ -251,7 +251,7 @@ algorithm used. Furthermore, since the method relies on judges'
 assessments, the number of judges, the characteristics of judges, their
 \emph{discrimination} abilities, and the number of comparisons per judge
 also play pivotal roles. Additionally, in cases where the stimuli
-represent sub-units of higher levels units, then the number of units,
+represent sub-units of higher-levels units, then the number of units,
 the characteristics of the units, and their \emph{proximity} in terms of
 the trait can also significantly influence the assessment outcome.
 
@@ -274,12 +274,12 @@ differences in the \emph{overall perceived speech quality} between
 groups of subjects and judges.
 
 Previous studies have primarily focused on examining the individual
-impact of assessment factors on the reliability of the method. For
-instance, Bramley (2015) conducted a simulation-based study to
-investigate the effects of using random versus adaptive pairing
+impact of the different assessment factors on the reliability of the
+method. For instance, Bramley (2015) conducted a simulation-based study
+to investigate the effects of using random versus adaptive pairing
 algorithms on the Scale Separation Reliability (SSR, Pollitt 2012b).
 Similarly, Bramley and Vitello (2019) explored the influence of adaptive
-algorithms on the SSR using autobiographical essays from candidates in
+algorithms on the SSR, using autobiographical essays from candidates in
 an English Language course, where the essays constituted half of the
 total marks for the final exam. In contrast, Verhavert et al. (2019)
 conducted a meta-analysis examining the individual effects of various
@@ -287,36 +287,52 @@ assessment factors on the SSR, including the number of stimuli, the
 format of stimuli, the number of comparisons per stimulus, the number of
 judges, the judges' expertise, and feedback. Conversely, Crompvoets,
 Béguin, and Sijtsma (2022) conducted a simulation-based study to
-investigate the bias and stability of SSR components concerning the
+investigate the bias and stability of the SSR components under different
 number of comparisons per stimulus. Lastly, van Daal et al. (2017) and
 Gijsen et al. (2021) explored the moderating role of judges' decision
 accuracy on the perceived complexity during the comparison of two
 stimuli.
 
-However, no study to the authors' knowledge has explored in a principled
-manner the interplay of assessment factors and their impact on the
-reliability of specific research or analysis queries. Consequently, this
-study aims to close this gap by conducting a Bayesian simulation-based
-investigation. Additionally, to conceptualize DCJ, the research will
-introduce the framework of Structural Causal Models (SCM) and Directed
-Acyclic Graphs (DAG) Cinelli, Forney, and Pearl (2022). This theoretical
-framework facilitates the visualization and translation of the
-assumptions underlying the DCJ procedure into causal assumptions and
-statistical models. Ultimately, the results of this study will have
-implications for planning DCJ experiments, and will hold significance
-for researchers or analysts implementing DCJ procedures, as well as
-methodologists in education and assessment procedures.
+Considering the method's sophistication and data complexity, it is
+surprising that no study has explored in a principled manner the
+interplay between the different relevant assessment factors and their
+impact on the reliability of the DCJ method. This study aims to address
+this gap by conducting a Bayesian simulation-based power analysis. The
+research will follow the workflow outlined by McElreath (2020) and Neal
+(2020). First, the study defines the targets of inference, commonly
+known as the \emph{estimands}. These estimands are described in three
+research questions, over which the reliability of the DCJ method is
+evaluated. Next, the study constructs a \emph{scientific model} for the
+DCJ procedure. Scientific (causal) models describe the causal
+assumptions and mechanisms underlying a system, and facilitate
+inferences about causal relationships from data (Hitchcock 2023). To
+facilitate the translation and visualization of the assumptions
+underlying the DCJ procedure, this study uses Directed Acyclic Graphs
+(DAG) and Structural Causal Models (SCM) (Pearl 2009; Pearl, Glymour,
+and Jewell 2016; Cinelli, Forney, and Pearl 2022). Subsequently, a
+statistical model (i.e., an \emph{estimator}) is used to obtain an
+approximation of the target of inference (i.e., an \emph{estimate}).
+Bayesian statistical methods provide an intuitive way to translate
+estimands and scientific models into probabilistic statistical models.
+Lastly, using the statistical model and simulated data, the study
+provides an \emph{estimate} for the different targets of inference. The
+study repeats this final step of the workflow for different combinations
+of assessment factors multiple times. Since the estimands in simulated
+data are known, assesses the proximity between the estimates derived
+from the true estimands, which constitutes a power analysis. Ultimately,
+the results of this study will have implications for planning DCJ
+experiments, and will hold significance for researchers or analysts, in
+education and assessment procedures, implementing the DCJ method.
 
 \section{Theoretical framework}\label{sec-TheoreticalFramework}
 
-\subsection{The compexity of DCJ}\label{sec-DCJcomp}
-
-\subsection{Rethinking DCJ}\label{sec-DCJrethink}
+\subsection{A scientific model for the DCJ procedure}\label{sec-SciMod}
 
 \newcommand{\dsep}[2]{#1 \perp\kern-5pt\perp #2}
 \newcommand{\ndsep}[2]{#1 \not\!\perp\!\!\!\perp #2}
 
-\subsection{Statistical model}\label{sec-SM}
+\subsection{From the scientific to the statistical DCJ
+model}\label{sec-Sci2StatMod}
 
 \section{Research questions}\label{sec-ResearchQuestions}
 
@@ -324,8 +340,6 @@ methodologists in education and assessment procedures.
 
 \subsection{Bayesian simulation and power
 analysis}\label{bayesian-simulation-and-power-analysis}
-
-\subsubsection{Data}\label{sec-D}
 
 \section{Results}\label{sec-results}
 
@@ -404,6 +418,12 @@ Maeyer. 2021. {``The Complexity of Comparative Judgments in Assessing
 Argumentative Writing: An Eye Tracking Study.''} \emph{Frontiers in
 Education} 5. \url{https://doi.org/10.3389/feduc.2020.582800}.
 
+\bibitem[\citeproctext]{ref-Hitchcock_2023}
+Hitchcock, C. 2023. {``{Causal Models}.''} In \emph{The {Stanford}
+Encyclopedia of Philosophy}, edited by Edward N. Zalta and Uri Nodelman,
+{S}pring 2023. Metaphysics Research Lab, Stanford University.
+\url{https://plato.stanford.edu/archives/spr2023/entries/causal-models/}.
+
 \bibitem[\citeproctext]{ref-Lesterhuis_2018}
 Lesterhuis, M. 2018. {``The Validity of Comparative Judgement for
 Assessing Text Quality: An Assessor's Perspective.''} PhD thesis,
@@ -419,6 +439,15 @@ Marshall, N., K Shaw, J. Hunter, and I. Jones. 2020. {``Assessment by
 Comparative Judgement: An Application to Secondary Statistics and
 English in New Zealand.''} \emph{New Zealand Journal of Educational
 Studies} 55: 49--71. \url{https://doi.org/10.1007/s40841-020-00163-3}.
+
+\bibitem[\citeproctext]{ref-McElreath_2020}
+McElreath, R. 2020. \emph{\href{}{Statistical Rethinking: A Bayesian
+Course with Examples in r and STAN}}. Chapman; Hall/CRC.
+
+\bibitem[\citeproctext]{ref-Neal_2020}
+Neal, B. 2020. {``Introduction to Causal Inference from a Machine
+Learning Perspective.''}
+\url{https://www.bradyneal.com/Introduction_to_Causal_Inference-Dec17_2020-Neal.pdf2}.
 
 \bibitem[\citeproctext]{ref-Pearl_2009}
 Pearl, J. 2009. \emph{\href{}{Causality: Models, Reasoning and

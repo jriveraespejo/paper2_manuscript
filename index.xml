@@ -131,10 +131,10 @@ editing" vocab-term-identifier="https://credit.niso.org/contributor-roles/writin
 <corresp id="cor-1">JoseManuel.RiveraEspejo@uantwerpen.be</corresp>
 </author-notes>
 
-<pub-date date-type="pub" publication-format="electronic" iso-8601-date="2024-03-18">
+<pub-date date-type="pub" publication-format="electronic" iso-8601-date="2024-03-19">
 <year>2024</year>
 <month>3</month>
-<day>18</day>
+<day>19</day>
 </pub-date>
 
 
@@ -225,8 +225,9 @@ the University of Antwerp (BOF).</funding-statement>
   Daal 2020</xref>;
   <xref alt="Marshall et al. 2020" rid="ref-Marshall_et_al_2020" ref-type="bibr">Marshall
   et al. 2020</xref>). Nevertheless, there has been limited
-  investigation into the interplay of the multiple assessment factors
-  and their contribution to the method’s reliability.</p>
+  investigation about the interplay of the different assessment factors
+  and their contribution to the consistency of the method (i.e., its
+  reliability).</p>
   <p>According to Verhavert et al.
   (<xref alt="2019" rid="ref-Verhavert_et_al_2019" ref-type="bibr">2019</xref>)
   and van Daal
@@ -239,7 +240,7 @@ the University of Antwerp (BOF).</funding-statement>
   on judges’ assessments, the number of judges, the characteristics of
   judges, their <italic>discrimination</italic> abilities, and the
   number of comparisons per judge also play pivotal roles. Additionally,
-  in cases where the stimuli represent sub-units of higher levels units,
+  in cases where the stimuli represent sub-units of higher-levels units,
   then the number of units, the characteristics of the units, and their
   <italic>proximity</italic> in terms of the trait can also
   significantly influence the assessment outcome.</p>
@@ -277,8 +278,8 @@ the University of Antwerp (BOF).</funding-statement>
   assessing if there were differences in the <italic>overall perceived
   speech quality</italic> between groups of subjects and judges.</p>
   <p>Previous studies have primarily focused on examining the individual
-  impact of assessment factors on the reliability of the method. For
-  instance, Bramley
+  impact of the different assessment factors on the reliability of the
+  method. For instance, Bramley
   (<xref alt="2015" rid="ref-Bramley_2015" ref-type="bibr">2015</xref>)
   conducted a simulation-based study to investigate the effects of using
   random versus adaptive pairing algorithms on the Scale Separation
@@ -286,7 +287,7 @@ the University of Antwerp (BOF).</funding-statement>
   <xref alt="Pollitt 2012b" rid="ref-Pollitt_2012b" ref-type="bibr">Pollitt
   2012b</xref>). Similarly, Bramley and Vitello
   (<xref alt="2019" rid="ref-Bramley_et_al_2019" ref-type="bibr">2019</xref>)
-  explored the influence of adaptive algorithms on the SSR using
+  explored the influence of adaptive algorithms on the SSR, using
   autobiographical essays from candidates in an English Language course,
   where the essays constituted half of the total marks for the final
   exam. In contrast, Verhavert et al.
@@ -298,40 +299,61 @@ the University of Antwerp (BOF).</funding-statement>
   Crompvoets, Béguin, and Sijtsma
   (<xref alt="2022" rid="ref-Crompvoets_et_al_2022" ref-type="bibr">2022</xref>)
   conducted a simulation-based study to investigate the bias and
-  stability of SSR components concerning the number of comparisons per
-  stimulus. Lastly, van Daal et al.
+  stability of the SSR components under different number of comparisons
+  per stimulus. Lastly, van Daal et al.
   (<xref alt="2017" rid="ref-vanDaal_et_al_2017" ref-type="bibr">2017</xref>)
   and Gijsen et al.
   (<xref alt="2021" rid="ref-Gijsen_et_al_2021" ref-type="bibr">2021</xref>)
   explored the moderating role of judges’ decision accuracy on the
   perceived complexity during the comparison of two stimuli.</p>
-  <p>However, no study to the authors’ knowledge has explored in a
-  principled manner the interplay of assessment factors and their impact
-  on the reliability of specific research or analysis queries.
-  Consequently, this study aims to close this gap by conducting a
-  Bayesian simulation-based investigation. Additionally, to
-  conceptualize DCJ, the research will introduce the framework of
-  Structural Causal Models (SCM) and Directed Acyclic Graphs (DAG)
-  Cinelli, Forney, and Pearl
-  (<xref alt="2022" rid="ref-Cinelli_et_al_2021" ref-type="bibr">2022</xref>).
-  This theoretical framework facilitates the visualization and
-  translation of the assumptions underlying the DCJ procedure into
-  causal assumptions and statistical models. Ultimately, the results of
-  this study will have implications for planning DCJ experiments, and
-  will hold significance for researchers or analysts implementing DCJ
-  procedures, as well as methodologists in education and assessment
-  procedures.</p>
+  <p>Considering the method’s sophistication and data complexity, it is
+  surprising that no study has explored in a principled manner the
+  interplay between the different relevant assessment factors and their
+  impact on the reliability of the DCJ method. This study aims to
+  address this gap by conducting a Bayesian simulation-based power
+  analysis. The research will follow the workflow outlined by McElreath
+  (<xref alt="2020" rid="ref-McElreath_2020" ref-type="bibr">2020</xref>)
+  and Neal
+  (<xref alt="2020" rid="ref-Neal_2020" ref-type="bibr">2020</xref>).
+  First, the study defines the targets of inference, commonly known as
+  the <italic>estimands</italic>. These estimands are described in three
+  research questions, over which the reliability of the DCJ method is
+  evaluated. Next, the study constructs a <italic>scientific
+  model</italic> for the DCJ procedure. Scientific (causal) models
+  describe the causal assumptions and mechanisms underlying a system,
+  and facilitate inferences about causal relationships from data
+  (<xref alt="Hitchcock 2023" rid="ref-Hitchcock_2023" ref-type="bibr">Hitchcock
+  2023</xref>). To facilitate the translation and visualization of the
+  assumptions underlying the DCJ procedure, this study uses Directed
+  Acyclic Graphs (DAG) and Structural Causal Models (SCM)
+  (<xref alt="Pearl 2009" rid="ref-Pearl_2009" ref-type="bibr">Pearl
+  2009</xref>;
+  <xref alt="Pearl, Glymour, and Jewell 2016" rid="ref-Pearl_et_al_2016" ref-type="bibr">Pearl,
+  Glymour, and Jewell 2016</xref>;
+  <xref alt="Cinelli, Forney, and Pearl 2022" rid="ref-Cinelli_et_al_2021" ref-type="bibr">Cinelli,
+  Forney, and Pearl 2022</xref>). Subsequently, a statistical model
+  (i.e., an <italic>estimator</italic>) is used to obtain an
+  approximation of the target of inference (i.e., an
+  <italic>estimate</italic>). Bayesian statistical methods provide an
+  intuitive way to translate estimands and scientific models into
+  probabilistic statistical models. Lastly, using the statistical model
+  and simulated data, the study provides an <italic>estimate</italic>
+  for the different targets of inference. The study repeats this final
+  step of the workflow for different combinations of assessment factors
+  multiple times. Since the estimands in simulated data are known,
+  assesses the proximity between the estimates derived from the true
+  estimands, which constitutes a power analysis. Ultimately, the results
+  of this study will have implications for planning DCJ experiments, and
+  will hold significance for researchers or analysts, in education and
+  assessment procedures, implementing the DCJ method.</p>
 </sec>
 <sec id="sec-TheoreticalFramework">
   <title>2 Theoretical framework</title>
-  <sec id="sec-DCJcomp">
-    <title>2.1 The compexity of DCJ</title>
+  <sec id="sec-SciMod">
+    <title>2.1 A scientific model for the DCJ procedure</title>
   </sec>
-  <sec id="sec-DCJrethink">
-    <title>2.2 Rethinking DCJ</title>
-  </sec>
-  <sec id="sec-SM">
-    <title>2.3 Statistical model</title>
+  <sec id="sec-Sci2StatMod">
+    <title>2.2 From the scientific to the statistical DCJ model</title>
   </sec>
 </sec>
 <sec id="sec-ResearchQuestions">
@@ -341,9 +363,6 @@ the University of Antwerp (BOF).</funding-statement>
   <title>4 Methods</title>
   <sec id="bayesian-simulation-and-power-analysis">
     <title>4.1 Bayesian simulation and power analysis</title>
-    <sec id="sec-D">
-      <title>4.1.1 Data</title>
-    </sec>
   </sec>
 </sec>
 <sec id="sec-results">
@@ -710,6 +729,19 @@ the University of Antwerp (BOF).</funding-statement>
       <pub-id pub-id-type="doi"></pub-id>
     </element-citation>
   </ref>
+  <ref id="ref-McElreath_2020">
+    <element-citation publication-type="book">
+      <person-group person-group-type="author">
+        <name><surname>McElreath</surname><given-names>R.</given-names></name>
+      </person-group>
+      <source>Statistical rethinking: A bayesian course with examples in r and STAN</source>
+      <publisher-name>Chapman; Hall/CRC</publisher-name>
+      <year iso-8601-date="2020">2020</year>
+      <isbn>9780367139919</isbn>
+      <uri></uri>
+      <pub-id pub-id-type="doi"></pub-id>
+    </element-citation>
+  </ref>
   <ref id="ref-Lesterhuis_2018">
     <element-citation publication-type="thesis">
       <person-group person-group-type="author">
@@ -751,6 +783,23 @@ the University of Antwerp (BOF).</funding-statement>
       <lpage></lpage>
     </element-citation>
   </ref>
+  <ref id="ref-Hitchcock_2023">
+    <element-citation publication-type="chapter">
+      <person-group person-group-type="author">
+        <name><surname>Hitchcock</surname><given-names>C.</given-names></name>
+      </person-group>
+      <article-title>Causal Models</article-title>
+      <source>The Stanford encyclopedia of philosophy</source>
+      <person-group person-group-type="editor">
+        <name><surname>Zalta</surname><given-names>Edward N.</given-names></name>
+        <name><surname>Nodelman</surname><given-names>Uri</given-names></name>
+      </person-group>
+      <publisher-name>Metaphysics Research Lab, Stanford University</publisher-name>
+      <year iso-8601-date="2023">2023</year>
+      <edition>Spring 2023</edition>
+      <uri>https://plato.stanford.edu/archives/spr2023/entries/causal-models/</uri>
+    </element-citation>
+  </ref>
   <ref id="ref-Bramley_2015">
     <element-citation>
       <person-group person-group-type="author">
@@ -759,6 +808,16 @@ the University of Antwerp (BOF).</funding-statement>
       <article-title>Investigating the reliability of adaptive comparative judgment</article-title>
       <year iso-8601-date="2015">2015</year>
       <uri>http://www.cambridgeassessment.org.uk/Images/232694-investigating-the-reliability-of-adaptive-comparative-judgment.pdf</uri>
+    </element-citation>
+  </ref>
+  <ref id="ref-Neal_2020">
+    <element-citation>
+      <person-group person-group-type="author">
+        <name><surname>Neal</surname><given-names>B.</given-names></name>
+      </person-group>
+      <article-title>Introduction to causal inference from a machine learning perspective</article-title>
+      <year iso-8601-date="2020">2020</year>
+      <uri>https://www.bradyneal.com/Introduction_to_Causal_Inference-Dec17_2020-Neal.pdf2</uri>
     </element-citation>
   </ref>
 </ref-list>
