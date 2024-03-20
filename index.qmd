@@ -1,6 +1,6 @@
 ---
-title: Power analysis for Dichotomous Comparative Judgment experiments (DCJ)
-subtitle: A Bayesian simulation-based study exploring the assessment factors that impact DCJ
+title: The interplay of assessment factors in Dichotomous Comparative Judgments
+subtitle: A Bayesian simulation-based power analysis exploring their impacts on the reliability of the methodology
 author:
   - name: 
       given: Jose Manuel
