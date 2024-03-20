@@ -25,7 +25,7 @@ and Interchange DTD v1.2 20190208//EN" "JATS-archivearticle1.dtd">
 <article-title>The interplay of assessment factors in Dichotomous
 Comparative Judgments</article-title>
 <subtitle>A Bayesian simulation-based power analysis exploring their
-impacts on the reliability of the methodology</subtitle>
+impacts on the method’s reliability</subtitle>
 </title-group>
 
 <contrib-group>
@@ -169,7 +169,7 @@ the University of Antwerp (BOF).</funding-statement>
 
 <body>
 <sec id="sec-introduction">
-  <title>1 Introduction</title>
+  <title>Introduction</title>
   <p>In contemporary contexts, Thurstone’s law of comparative judgment
   (<xref alt="1927" rid="ref-Thurstone_1927" ref-type="bibr">1927</xref>)
   primarily refers to the method of <italic>Dichotomous</italic>
@@ -272,12 +272,13 @@ the University of Antwerp (BOF).</funding-statement>
   listeners (judges) evaluated <inline-formula><alternatives>
   <tex-math><![CDATA[65]]></tex-math>
   <mml:math display="inline" xmlns:mml="http://www.w3.org/1998/Math/MathML"><mml:mn>65</mml:mn></mml:math></alternatives></inline-formula>
-  pairs of stimuli. The judges were selected from three distinct groups,
-  each possessing varying degrees of experience with the speech of
-  hearing-impaired children: audiologists, primary school teachers and
-  inexperienced listeners. Ultimately, the authors were interested in
-  assessing if there were differences in the <italic>overall perceived
-  speech quality</italic> between groups of subjects and judges.</p>
+  pairs of stimuli. The judges were equally selected from three distinct
+  groups, each possessing varying degrees of experience with the speech
+  of hearing-impaired children: audiologists, primary school teachers
+  and inexperienced listeners. Ultimately, the authors were interested
+  in assessing if there were differences in the <italic>overall
+  perceived speech quality</italic> between groups of subjects and
+  judges.</p>
   <p>Previous studies have primarily focused on examining the individual
   impact of the different assessment factors on the reliability of DCJ.
   For instance, Bramley
@@ -312,7 +313,7 @@ the University of Antwerp (BOF).</funding-statement>
   their collective effect on the reliability of the DCJ method.</p>
   <p>This study aims to address this gap by conducting a Bayesian
   simulation-based power analysis, following the
-  Identification-Estimation workflow outlined by McElreath
+  Identification-Estimation flowchart outlined by McElreath
   (<xref alt="2020" rid="ref-McElreath_2020" ref-type="bibr">2020</xref>)
   and Neal
   (<xref alt="2020" rid="ref-Neal_2020" ref-type="bibr">2020</xref>).
@@ -334,58 +335,88 @@ the University of Antwerp (BOF).</funding-statement>
   <xref alt="Cinelli, Forney, and Pearl 2022" rid="ref-Cinelli_et_al_2021" ref-type="bibr">Cinelli,
   Forney, and Pearl 2022</xref>) are employed. Next, an
   <italic>estimator</italic> in the form of a statistical model is
-  utilized to derive an <italic>estimate</italic> for the various
-  targets of inference. Bayesian statistical method offer an intuitive
-  approach to translate scientific models into probabilistic estimators.
-  Finally, employing multiple simulated datasets for different
-  combinations of the relevant assessment factors, the study generates
-  multiple estimates for the targets of inference. Notably, since the
-  targets of inference in simulated data are known, the study can assess
-  the DCJ reliability by evaluating the <italic>proximity</italic> to
-  these estimands to the generated estimates. This final step resembles
-  a power analysis. Ultimately, the outcomes of this study will inform
-  the planning of DCJ experiments and hold significance for researchers
-  or analysts involved in education and assessment procedures who
-  implement DCJ methodologies.</p>
+  utilized to derive an <italic>statistical estimand</italic> for the
+  various targets of inference. Bayesian statistical method offer an
+  intuitive approach to translate scientific models into probabilistic
+  estimators. Finally, employing multiple simulated datasets for
+  different combinations of the relevant assessment factors, the study
+  generates multiple <italic>estimates</italic> for the statistical
+  estimands. Notably, the statistical estimands in simulated data are
+  known, consequently, the study can assess the DCJ reliability by
+  evaluating the <italic>proximity</italic> to these estimands to the
+  generated estimates. This final step resembles a power analysis.
+  Ultimately, the outcomes of this study will inform the planning of DCJ
+  experiments and hold significance for researchers or analysts involved
+  in education and assessment procedures who implement DCJ
+  methodologies.</p>
 </sec>
 <sec id="sec-TheoreticalFramework">
-  <title>2 Theoretical framework</title>
+  <title>Theoretical framework</title>
+  <p>In order to evaluate the reliability of the DCJ method, first the
+  study need to define certain terminology. This study uses the
+  Identification-Estimation flowchart
+  (<xref alt="McElreath 2020" rid="ref-McElreath_2020" ref-type="bibr">McElreath
+  2020</xref>;
+  <xref alt="Neal 2020" rid="ref-Neal_2020" ref-type="bibr">Neal
+  2020</xref>). The flowchart illustrates the process of moving from a
+  target (causal) <italic>estimand</italic> to a corresponding
+  <italic>estimate</italic>, through identification and estimation
+  (<xref alt="Figure 1" rid="fig-IEflowchart">Figure 1</xref>). An
+  <italic>estimand</italic> is the target of inference of the quantity
+  that we want to estimate. An <italic>estimate</italic> is an
+  approximation of the <italic>estimand</italic>, which is obtained by
+  using data. Moreover, identification refers to the process of moving
+  from a (causal) <italic>estimand</italic> to an equivalent
+  <italic>statistical estimand</italic>, and estimation refers to the
+  process of moving from a <italic>statistical estimand</italic> to an
+  <italic>estimate</italic>.</p>
+  <fig id="fig-IEflowchart">
+    <caption><p>Figure 1: Identification-Estimation flowchart. Extracted
+    from Neal
+    (<xref alt="2020" rid="ref-Neal_2020" ref-type="bibr">2020</xref>)</p></caption>
+    <graphic mimetype="image" mime-subtype="png" xlink:href="index_files/figure-jats/dot-figure-2.png" />
+  </fig>
+  <sec id="sec-ResearchQuestions">
+    <title>Research questions and their estimands</title>
+  </sec>
   <sec id="sec-SciMod">
-    <title>2.1 A scientific model for the DCJ procedure</title>
+    <title>A scientific model for the DCJ procedure</title>
+    <p>A <italic>scientific (causal) model</italic> describe the causal
+    assumptions and mechanisms underlying a system, and facilitate
+    inferences about causal relationships from data
+    (<xref alt="Hitchcock 2023" rid="ref-Hitchcock_2023" ref-type="bibr">Hitchcock
+    2023</xref>).</p>
   </sec>
   <sec id="sec-Sci2StatMod">
-    <title>2.2 From the scientific to the statistical DCJ model</title>
+    <title>From the scientific to the statistical DCJ model</title>
   </sec>
 </sec>
-<sec id="sec-ResearchQuestions">
-  <title>3 Research questions</title>
-</sec>
 <sec id="sec-methods">
-  <title>4 Methods</title>
+  <title>Methods</title>
   <sec id="bayesian-simulation-and-power-analysis">
-    <title>4.1 Bayesian simulation and power analysis</title>
+    <title>Bayesian simulation and power analysis</title>
   </sec>
 </sec>
 <sec id="sec-results">
-  <title>5 Results</title>
+  <title>Results</title>
   <sec id="sec-RQ1">
-    <title>5.1 Research question 1</title>
+    <title>Research question 1</title>
   </sec>
   <sec id="sec-RQ2">
-    <title>5.2 Research question 2</title>
+    <title>Research question 2</title>
   </sec>
   <sec id="sec-RQ3">
-    <title>5.3 Research question 3</title>
+    <title>Research question 3</title>
   </sec>
 </sec>
 <sec id="sec-discussion">
-  <title>6 Discussion</title>
+  <title>Discussion</title>
   <sec id="sec-LFR">
-    <title>6.1 Limitations and further research</title>
+    <title>Limitations and further research</title>
   </sec>
 </sec>
 <sec id="sec-conclusion">
-  <title>7 Conclusion</title>
+  <title>Conclusion</title>
 </sec>
 </body>
 
@@ -818,12 +849,821 @@ the University of Antwerp (BOF).</funding-statement>
       </person-group>
       <article-title>Introduction to causal inference from a machine learning perspective</article-title>
       <year iso-8601-date="2020">2020</year>
-      <uri>https://www.bradyneal.com/Introduction_to_Causal_Inference-Dec17_2020-Neal.pdf2</uri>
+      <uri>\url{https://www.bradyneal.com/Introduction_to_Causal_Inference-Dec17_2020-Neal.pdf}</uri>
     </element-citation>
   </ref>
 </ref-list>
 </back>
 
+<sub-article article-type="notebook" id="nb-8-nb-article">
+<front-stub>
+<title-group>
+<article-title>The interplay of assessment factors in Dichotomous
+Comparative Judgments</article-title>
+<subtitle>A Bayesian simulation-based power analysis exploring their
+impacts on the method’s reliability</subtitle>
+</title-group>
+<contrib-group>
+<contrib contrib-type="author" corresp="yes">
+<contrib-id contrib-id-type="orcid">0000-0002-3088-2783</contrib-id>
+<name>
+<surname>Rivera Espejo</surname>
+<given-names>Jose Manuel</given-names>
+</name>
+<string-name>Jose Manuel Rivera Espejo</string-name>
+
+<email>JoseManuel.RiveraEspejo@uantwerpen.be</email>
+<role vocab="https://credit.niso.org" vocab-term="conceptualization" vocab-term-identifier="https://credit.niso.org/contributor-roles/conceptualization/">conceptualization</role>
+<role vocab="https://credit.niso.org" vocab-term="data
+curation" vocab-term-identifier="https://credit.niso.org/contributor-roles/data-curation/">data
+curation</role>
+<role vocab="https://credit.niso.org" vocab-term="formal
+analysis" vocab-term-identifier="https://credit.niso.org/contributor-roles/formal-analysis/">analysis</role>
+<role vocab="https://credit.niso.org" vocab-term="investigation" vocab-term-identifier="https://credit.niso.org/contributor-roles/investigation/">investigation</role>
+<role vocab="https://credit.niso.org" vocab-term="methodology" vocab-term-identifier="https://credit.niso.org/contributor-roles/methodology/">methodology</role>
+<role vocab="https://credit.niso.org" vocab-term="software" vocab-term-identifier="https://credit.niso.org/contributor-roles/software/">software</role>
+<role vocab="https://credit.niso.org" vocab-term="validation" vocab-term-identifier="https://credit.niso.org/contributor-roles/validation/">validation</role>
+<role vocab="https://credit.niso.org" vocab-term="visualization" vocab-term-identifier="https://credit.niso.org/contributor-roles/visualization/">visualization</role>
+<role vocab="https://credit.niso.org" vocab-term="writing – original
+draft" vocab-term-identifier="https://credit.niso.org/contributor-roles/writing-original-draft/">writing</role>
+<xref ref-type="aff" rid="aff-1-nb-article">a</xref>
+<xref ref-type="corresp" rid="cor-1-nb-article">&#x002A;</xref>
+</contrib>
+<contrib contrib-type="author">
+<contrib-id contrib-id-type="orcid">0000-0003-2888-1631</contrib-id>
+<name>
+<surname>Maeyer</surname>
+<given-names>Sven</given-names>
+</name>
+<string-name>Sven Maeyer</string-name>
+
+<email>sven.demaeyer@uantwerpen.be</email>
+<role vocab="https://credit.niso.org" vocab-term="conceptualization" vocab-term-identifier="https://credit.niso.org/contributor-roles/conceptualization/">conceptualization</role>
+<role vocab="https://credit.niso.org" vocab-term="funding
+acquisition" vocab-term-identifier="https://credit.niso.org/contributor-roles/funding-acquisition/">funding</role>
+<role vocab="https://credit.niso.org" vocab-term="investigation" vocab-term-identifier="https://credit.niso.org/contributor-roles/investigation/">investigation</role>
+<role vocab="https://credit.niso.org" vocab-term="methodology" vocab-term-identifier="https://credit.niso.org/contributor-roles/methodology/">methodology</role>
+<role vocab="https://credit.niso.org" vocab-term="project
+administration" vocab-term-identifier="https://credit.niso.org/contributor-roles/project-administration/">project
+administration</role>
+<role vocab="https://credit.niso.org" vocab-term="resources" vocab-term-identifier="https://credit.niso.org/contributor-roles/resources/">resources</role>
+<role vocab="https://credit.niso.org" vocab-term="supervision" vocab-term-identifier="https://credit.niso.org/contributor-roles/supervision/">supervision</role>
+<role vocab="https://credit.niso.org" vocab-term="validation" vocab-term-identifier="https://credit.niso.org/contributor-roles/validation/">validation</role>
+<role vocab="https://credit.niso.org" vocab-term="writing – review &amp;
+editing" vocab-term-identifier="https://credit.niso.org/contributor-roles/writing-review-editing/">editing</role>
+<xref ref-type="aff" rid="aff-1-nb-article">a</xref>
+</contrib>
+<contrib contrib-type="author">
+<name>
+<surname>Gillis</surname>
+<given-names>Steven</given-names>
+</name>
+<string-name>Steven Gillis</string-name>
+
+<email>steven.gillis@uantwerpen.be</email>
+<role vocab="https://credit.niso.org" vocab-term="conceptualization" vocab-term-identifier="https://credit.niso.org/contributor-roles/conceptualization/">conceptualization</role>
+<role vocab="https://credit.niso.org" vocab-term="funding
+acquisition" vocab-term-identifier="https://credit.niso.org/contributor-roles/funding-acquisition/">funding</role>
+<role vocab="https://credit.niso.org" vocab-term="investigation" vocab-term-identifier="https://credit.niso.org/contributor-roles/investigation/">investigation</role>
+<role vocab="https://credit.niso.org" vocab-term="methodology" vocab-term-identifier="https://credit.niso.org/contributor-roles/methodology/">methodology</role>
+<role vocab="https://credit.niso.org" vocab-term="project
+administration" vocab-term-identifier="https://credit.niso.org/contributor-roles/project-administration/">project
+administration</role>
+<role vocab="https://credit.niso.org" vocab-term="resources" vocab-term-identifier="https://credit.niso.org/contributor-roles/resources/">resources</role>
+<role vocab="https://credit.niso.org" vocab-term="supervision" vocab-term-identifier="https://credit.niso.org/contributor-roles/supervision/">supervision</role>
+<role vocab="https://credit.niso.org" vocab-term="writing – review &amp;
+editing" vocab-term-identifier="https://credit.niso.org/contributor-roles/writing-review-editing/">editing</role>
+<xref ref-type="aff" rid="aff-2-nb-article">b</xref>
+</contrib>
+</contrib-group>
+<aff id="aff-1-nb-article">
+<institution content-type="dept">Education sciences</institution>
+<institution-wrap>
+<institution>University of Antwerp</institution>
+</institution-wrap>
+
+
+
+
+
+
+
+</aff>
+<aff id="aff-2-nb-article">
+<institution content-type="dept">Linguistics</institution>
+<institution-wrap>
+<institution>University of Antwerp</institution>
+</institution-wrap>
+
+
+
+
+
+
+
+</aff>
+<author-notes>
+<corresp id="cor-1-nb-article">JoseManuel.RiveraEspejo@uantwerpen.be</corresp>
+</author-notes>
+<abstract>
+<p>(to do) …</p>
+</abstract>
+</front-stub>
+
+<body>
+<sec id="sec-introduction-nb-article">
+  <title>Introduction</title>
+  <p>In contemporary contexts, Thurstone’s law of comparative judgment
+  (<xref alt="1927" rid="ref-Thurstone_1927-nb-article" ref-type="bibr">1927</xref>)
+  primarily refers to the method of <italic>Dichotomous</italic>
+  Comparative Judgment (DCJ). Within DCJ, a judge assesses the relative
+  manifestation of a trait within a pair of stimuli. This results in a
+  dichotomous value indicating which stimulus appears to possess a
+  higher degree of the trait
+  (<xref alt="Pollitt 2012a" rid="ref-Pollitt_2012a-nb-article" ref-type="bibr">Pollitt
+  2012a</xref>,
+  <xref alt="2012b" rid="ref-Pollitt_2012b-nb-article" ref-type="bibr">2012b</xref>).
+  Following multiple rounds of pairwise comparisons made by different
+  judges, an outcome vector is produced. Typically, this vector is
+  modeled using the Bradley-Terry-Luce model (BTL model,
+  <xref alt="Bradley and Terry 1952" rid="ref-Bradley_et_al_1952-nb-article" ref-type="bibr">Bradley
+  and Terry 1952</xref>;
+  <xref alt="Luce 1959" rid="ref-Luce_1959-nb-article" ref-type="bibr">Luce
+  1959</xref>;
+  <xref alt="Pollitt 2012a" rid="ref-Pollitt_2012a-nb-article" ref-type="bibr">Pollitt
+  2012a</xref>). The set of latent variables produced by the model can
+  then be utilized, for example, to rank the stimuli from lowest to
+  highest, or to assess the impact of certain characteristics of the
+  stimuli on their position in the ranking.</p>
+  <p>DCJ has proven effective in assessing competences and traits
+  predominantly within the educational realm, as demonstrated by the
+  works of Pollitt
+  (<xref alt="2012b" rid="ref-Pollitt_2012b-nb-article" ref-type="bibr">2012b</xref>),
+  Bartholomew et al.
+  (<xref alt="2018" rid="ref-Bartholomew_et_al_2018-nb-article" ref-type="bibr">2018</xref>),
+  van Daal et al.
+  (<xref alt="2019" rid="ref-vanDaal_et_al_2016-nb-article" ref-type="bibr">2019</xref>)
+  Lesterhuis
+  (<xref alt="2018" rid="ref-Lesterhuis_2018-nb-article" ref-type="bibr">2018</xref>),
+  and Bartholomew and Williams
+  (<xref alt="2020" rid="ref-Bartholomew_et_al_2020-nb-article" ref-type="bibr">2020</xref>).
+  However, its application transcends education, as exemplified by the
+  work of Boonen, Kloots, and Gillis
+  (<xref alt="2020" rid="ref-Boonen_et_al_2020-nb-article" ref-type="bibr">2020</xref>).
+  The methodology has also evolved to include multiple, as opposed to
+  pairwise comparisons
+  (<xref alt="Luce 1959" rid="ref-Luce_1959-nb-article" ref-type="bibr">Luce
+  1959</xref>;
+  <xref alt="Plackett 1975" rid="ref-Placket_1975-nb-article" ref-type="bibr">Plackett
+  1975</xref>) and to accommodate comparisons with ordinal outcomes
+  (<xref alt="Tutz 1986" rid="ref-Tutz_1986-nb-article" ref-type="bibr">Tutz
+  1986</xref>;
+  <xref alt="Agresti 1992" rid="ref-Agresti_1992-nb-article" ref-type="bibr">Agresti
+  1992</xref>). Overall, research suggests that DCJ offers an
+  alternative and efficient approach to measurement and evaluation,
+  characterized by its reliability and validity
+  (<xref alt="Lesterhuis 2018" rid="ref-Lesterhuis_2018-nb-article" ref-type="bibr">Lesterhuis
+  2018</xref>;
+  <xref alt="van Daal 2020" rid="ref-vanDaal_2020-nb-article" ref-type="bibr">van
+  Daal 2020</xref>;
+  <xref alt="Marshall et al. 2020" rid="ref-Marshall_et_al_2020-nb-article" ref-type="bibr">Marshall
+  et al. 2020</xref>). Nevertheless, considering the method’s
+  sophistication, there has been limited investigation about the
+  interplay of the different assessment factors and their contribution
+  to the method’s reliability.</p>
+  <p>According to Verhavert et al.
+  (<xref alt="2019" rid="ref-Verhavert_et_al_2019-nb-article" ref-type="bibr">2019</xref>)
+  and van Daal
+  (<xref alt="2020" rid="ref-vanDaal_2020-nb-article" ref-type="bibr">2020</xref>),
+  several assessment factors interplay and contribute to the reliability
+  of the DCJ method. These factors include the number of stimuli, the
+  characteristics of the stimuli, their <italic>proximity</italic> in
+  terms of the assessed trait, the number of comparison per stimulus,
+  and the pairing algorithm used. Furthermore, since the method relies
+  on judges’ assessments, the number of judges, the characteristics of
+  judges, their <italic>discrimination</italic> abilities, and the
+  number of comparisons per judge also play pivotal roles. Additionally,
+  in cases where the stimuli represent sub-units (e.g., objects) from
+  higher-levels units (e.g., subjects), then the number of units, the
+  characteristics of the units, and their <italic>proximity</italic> in
+  terms of the trait can also significantly influence the assessment
+  outcome.</p>
+  <p>The research of Boonen, Kloots, and Gillis
+  (<xref alt="2020" rid="ref-Boonen_et_al_2020-nb-article" ref-type="bibr">2020</xref>)
+  offers a clear illustration of these factors and their interplay in a
+  DCJ procedure. In their study, the authors evaluated the
+  <italic>overall perceived speech quality</italic> (i.e., the trait)
+  using six utterances (objects), each originating from
+  <inline-formula><alternatives>
+  <tex-math><![CDATA[21]]></tex-math>
+  <mml:math display="inline" xmlns:mml="http://www.w3.org/1998/Math/MathML"><mml:mn>21</mml:mn></mml:math></alternatives></inline-formula>
+  children (subjects). The utterances were derived from an imitation
+  task, while the children were evenly distributed across three groups:
+  those with cochlear implants, those with hearing aids, and normal
+  hearing children. To establish pairwise comparisons for the
+  <inline-formula><alternatives>
+  <tex-math><![CDATA[126]]></tex-math>
+  <mml:math display="inline" xmlns:mml="http://www.w3.org/1998/Math/MathML"><mml:mn>126</mml:mn></mml:math></alternatives></inline-formula>
+  stimuli, a random pairing algorithm was employed, with
+  <inline-formula><alternatives>
+  <tex-math><![CDATA[20]]></tex-math>
+  <mml:math display="inline" xmlns:mml="http://www.w3.org/1998/Math/MathML"><mml:mn>20</mml:mn></mml:math></alternatives></inline-formula>
+  comparisons per stimulus. Lastly, a total of
+  <inline-formula><alternatives>
+  <tex-math><![CDATA[60]]></tex-math>
+  <mml:math display="inline" xmlns:mml="http://www.w3.org/1998/Math/MathML"><mml:mn>60</mml:mn></mml:math></alternatives></inline-formula>
+  listeners (judges) evaluated <inline-formula><alternatives>
+  <tex-math><![CDATA[65]]></tex-math>
+  <mml:math display="inline" xmlns:mml="http://www.w3.org/1998/Math/MathML"><mml:mn>65</mml:mn></mml:math></alternatives></inline-formula>
+  pairs of stimuli. The judges were equally selected from three distinct
+  groups, each possessing varying degrees of experience with the speech
+  of hearing-impaired children: audiologists, primary school teachers
+  and inexperienced listeners. Ultimately, the authors were interested
+  in assessing if there were differences in the <italic>overall
+  perceived speech quality</italic> between groups of subjects and
+  judges.</p>
+  <p>Previous studies have primarily focused on examining the individual
+  impact of the different assessment factors on the reliability of DCJ.
+  For instance, Bramley
+  (<xref alt="2015" rid="ref-Bramley_2015-nb-article" ref-type="bibr">2015</xref>)
+  conducted a simulation-based study to investigate the effects of using
+  random versus adaptive pairing algorithms on the Scale Separation
+  Reliability (SSR,
+  <xref alt="Pollitt 2012b" rid="ref-Pollitt_2012b-nb-article" ref-type="bibr">Pollitt
+  2012b</xref>). In a similar vein, Bramley and Vitello
+  (<xref alt="2019" rid="ref-Bramley_et_al_2019-nb-article" ref-type="bibr">2019</xref>)
+  explored the influence of adaptive algorithms on the SSR using
+  autobiographical essays from candidates in an English Language course,
+  where the essays constituted half of the total marks for the final
+  exam. In contrast, Verhavert et al.
+  (<xref alt="2019" rid="ref-Verhavert_et_al_2019-nb-article" ref-type="bibr">2019</xref>)
+  conducted a meta-analysis examining the individual effects of various
+  assessment factors on the SSR, including the number of stimuli, the
+  format of stimuli, the number of comparisons per stimulus, the number
+  of judges, the judges’ expertise, and feedback. Crompvoets, Béguin,
+  and Sijtsma
+  (<xref alt="2022" rid="ref-Crompvoets_et_al_2022-nb-article" ref-type="bibr">2022</xref>)
+  then examined through a simulation study how variations in the number
+  of comparisons per stimulus affect the bias and stability of SSR
+  components. Additionally, van Daal et al.
+  (<xref alt="2017" rid="ref-vanDaal_et_al_2017-nb-article" ref-type="bibr">2017</xref>)
+  and Gijsen et al.
+  (<xref alt="2021" rid="ref-Gijsen_et_al_2021-nb-article" ref-type="bibr">2021</xref>)
+  explored the moderating role of judges’ decision accuracy on the
+  perceived complexity when comparing two stimuli. However, to the best
+  of the author’s knowledge, there has been no systematic investigation
+  into how different relevant assessment factors interact and what is
+  their collective effect on the reliability of the DCJ method.</p>
+  <p>This study aims to address this gap by conducting a Bayesian
+  simulation-based power analysis, following the
+  Identification-Estimation flowchart outlined by McElreath
+  (<xref alt="2020" rid="ref-McElreath_2020-nb-article" ref-type="bibr">2020</xref>)
+  and Neal
+  (<xref alt="2020" rid="ref-Neal_2020-nb-article" ref-type="bibr">2020</xref>).
+  First, it defines the different targets of inference (i.e., the
+  <italic>estimands</italic>), which are articulated through three
+  research questions, over which the reliability of the DCJ method is
+  evaluated. Subsequently, a <italic>scientific model</italic> for the
+  DCJ procedure is constructed. These models describe the causal
+  assumptions and mechanisms underlying the system, and facilitate
+  inferences about causal relationships from data
+  (<xref alt="Hitchcock 2023" rid="ref-Hitchcock_2023-nb-article" ref-type="bibr">Hitchcock
+  2023</xref>). To aid in the translation and visualization of the
+  assumption underlying the DCJ procedure, Directed Acyclic Graphs (DAG)
+  and Structural Causal Models (SCM)
+  (<xref alt="Pearl 2009" rid="ref-Pearl_2009-nb-article" ref-type="bibr">Pearl
+  2009</xref>;
+  <xref alt="Pearl, Glymour, and Jewell 2016" rid="ref-Pearl_et_al_2016-nb-article" ref-type="bibr">Pearl,
+  Glymour, and Jewell 2016</xref>;
+  <xref alt="Cinelli, Forney, and Pearl 2022" rid="ref-Cinelli_et_al_2021-nb-article" ref-type="bibr">Cinelli,
+  Forney, and Pearl 2022</xref>) are employed. Next, an
+  <italic>estimator</italic> in the form of a statistical model is
+  utilized to derive an <italic>statistical estimand</italic> for the
+  various targets of inference. Bayesian statistical method offer an
+  intuitive approach to translate scientific models into probabilistic
+  estimators. Finally, employing multiple simulated datasets for
+  different combinations of the relevant assessment factors, the study
+  generates multiple <italic>estimates</italic> for the statistical
+  estimands. Notably, the statistical estimands in simulated data are
+  known, consequently, the study can assess the DCJ reliability by
+  evaluating the <italic>proximity</italic> to these estimands to the
+  generated estimates. This final step resembles a power analysis.
+  Ultimately, the outcomes of this study will inform the planning of DCJ
+  experiments and hold significance for researchers or analysts involved
+  in education and assessment procedures who implement DCJ
+  methodologies.</p>
+</sec>
+<sec id="sec-TheoreticalFramework-nb-article">
+  <title>Theoretical framework</title>
+  <p>In order to evaluate the reliability of the DCJ method, first the
+  study need to define certain terminology. This study uses the
+  Identification-Estimation flowchart
+  (<xref alt="McElreath 2020" rid="ref-McElreath_2020-nb-article" ref-type="bibr">McElreath
+  2020</xref>;
+  <xref alt="Neal 2020" rid="ref-Neal_2020-nb-article" ref-type="bibr">Neal
+  2020</xref>). The flowchart illustrates the process of moving from a
+  target (causal) <italic>estimand</italic> to a corresponding
+  <italic>estimate</italic>, through identification and estimation
+  (<xref alt="Figure 1" rid="fig-IEflowchart-nb-article">Figure 1</xref>). An
+  <italic>estimand</italic> is the target of inference of the quantity
+  that we want to estimate. An <italic>estimate</italic> is an
+  approximation of the <italic>estimand</italic>, which is obtained by
+  using data. Moreover, identification refers to the process of moving
+  from a (causal) <italic>estimand</italic> to an equivalent
+  <italic>statistical estimand</italic>, and estimation refers to the
+  process of moving from a <italic>statistical estimand</italic> to an
+  <italic>estimate</italic>.</p>
+  <sec id="nb-code-cell-1-nb-article" specific-use="notebook-code">
+  <fig id="fig-IEflowchart-nb-article">
+    <caption><p>Figure 1: Identification-Estimation flowchart. Extracted
+    from Neal
+    (<xref alt="2020" rid="ref-Neal_2020-nb-article" ref-type="bibr">2020</xref>)</p></caption>
+    <graphic mimetype="image" mime-subtype="png" xlink:href="index_files/figure-jats/dot-figure-2.png" />
+  </fig>
+  </sec>
+  <sec id="sec-ResearchQuestions-nb-article">
+    <title>Research questions and their estimands</title>
+  </sec>
+  <sec id="sec-SciMod-nb-article">
+    <title>A scientific model for the DCJ procedure</title>
+    <p>A <italic>scientific (causal) model</italic> describe the causal
+    assumptions and mechanisms underlying a system, and facilitate
+    inferences about causal relationships from data
+    (<xref alt="Hitchcock 2023" rid="ref-Hitchcock_2023-nb-article" ref-type="bibr">Hitchcock
+    2023</xref>).</p>
+  </sec>
+  <sec id="sec-Sci2StatMod-nb-article">
+    <title>From the scientific to the statistical DCJ model</title>
+  </sec>
+</sec>
+<sec id="sec-methods-nb-article">
+  <title>Methods</title>
+  <sec id="bayesian-simulation-and-power-analysis-nb-article">
+    <title>Bayesian simulation and power analysis</title>
+  </sec>
+</sec>
+<sec id="sec-results-nb-article">
+  <title>Results</title>
+  <sec id="sec-RQ1-nb-article">
+    <title>Research question 1</title>
+  </sec>
+  <sec id="sec-RQ2-nb-article">
+    <title>Research question 2</title>
+  </sec>
+  <sec id="sec-RQ3-nb-article">
+    <title>Research question 3</title>
+  </sec>
+</sec>
+<sec id="sec-discussion-nb-article">
+  <title>Discussion</title>
+  <sec id="sec-LFR-nb-article">
+    <title>Limitations and further research</title>
+  </sec>
+</sec>
+<sec id="sec-conclusion-nb-article">
+  <title>Conclusion</title>
+</sec>
+</body>
+
+
+
+<back>
+<ref-list>
+  <title>References</title>
+  <ref id="ref-Thurstone_1927-nb-article">
+    <element-citation publication-type="article-journal">
+      <person-group person-group-type="author">
+        <name><surname>Thurstone</surname><given-names>L.</given-names></name>
+      </person-group>
+      <article-title>A law of comparative judgment</article-title>
+      <source>Psychological Review</source>
+      <year iso-8601-date="1927">1927</year>
+      <volume>34</volume>
+      <issue>4</issue>
+      <uri></uri>
+      <pub-id pub-id-type="doi">10.1037/h0070288</pub-id>
+      <fpage>482</fpage>
+      <lpage>499</lpage>
+    </element-citation>
+  </ref>
+  <ref id="ref-Bradley_et_al_1952-nb-article">
+    <element-citation publication-type="article-journal">
+      <person-group person-group-type="author">
+        <name><surname>Bradley</surname><given-names>R.</given-names></name>
+        <name><surname>Terry</surname><given-names>M.</given-names></name>
+      </person-group>
+      <article-title>Rank analysis of incomplete block designs: I. The method of paired comparisons</article-title>
+      <source>Biometrika</source>
+      <year iso-8601-date="1952">1952</year>
+      <volume>39</volume>
+      <issue>3-4</issue>
+      <uri>http://www.jstor.com/stable/2334029</uri>
+      <pub-id pub-id-type="doi">10.2307/2334029</pub-id>
+      <fpage>324</fpage>
+      <lpage>345</lpage>
+    </element-citation>
+  </ref>
+  <ref id="ref-Luce_1959-nb-article">
+    <element-citation publication-type="article-journal">
+      <person-group person-group-type="author">
+        <name><surname>Luce</surname><given-names>R.</given-names></name>
+      </person-group>
+      <article-title>On the possible psychophysical laws</article-title>
+      <source>The Psychologcal Review</source>
+      <year iso-8601-date="1959">1959</year>
+      <volume>66</volume>
+      <issue>2</issue>
+      <uri></uri>
+      <pub-id pub-id-type="doi">10.1037/h0043178</pub-id>
+      <fpage>482</fpage>
+      <lpage>499</lpage>
+    </element-citation>
+  </ref>
+  <ref id="ref-Placket_1975-nb-article">
+    <element-citation publication-type="article-journal">
+      <person-group person-group-type="author">
+        <name><surname>Plackett</surname><given-names>R.</given-names></name>
+      </person-group>
+      <article-title>The analysis of permutations</article-title>
+      <source>Journal of the Royal Statistical Society</source>
+      <year iso-8601-date="1975">1975</year>
+      <volume>24</volume>
+      <issue>2</issue>
+      <uri>https://www.jstor.org/stable/2346567</uri>
+      <pub-id pub-id-type="doi">10.2307/2346567</pub-id>
+      <fpage>193</fpage>
+      <lpage>202</lpage>
+    </element-citation>
+  </ref>
+  <ref id="ref-Tutz_1986-nb-article">
+    <element-citation publication-type="article-journal">
+      <person-group person-group-type="author">
+        <name><surname>Tutz</surname><given-names>G.</given-names></name>
+      </person-group>
+      <article-title>Bradley-terry-luce model with an ordered response</article-title>
+      <source>Journal of Mathemathical Psychology</source>
+      <year iso-8601-date="1986">1986</year>
+      <volume>30</volume>
+      <issue>3</issue>
+      <uri></uri>
+      <pub-id pub-id-type="doi">10.1016/0022-2496(86)90034-9</pub-id>
+      <fpage>306</fpage>
+      <lpage>316</lpage>
+    </element-citation>
+  </ref>
+  <ref id="ref-Agresti_1992-nb-article">
+    <element-citation publication-type="article-journal">
+      <person-group person-group-type="author">
+        <name><surname>Agresti</surname><given-names>A.</given-names></name>
+      </person-group>
+      <article-title>Analysis of ordinal paired comparison data</article-title>
+      <source>Journal of the Royal Statistical Society</source>
+      <year iso-8601-date="1992">1992</year>
+      <volume>41</volume>
+      <issue>2</issue>
+      <uri>https://www.jstor.org/stable/2347562</uri>
+      <pub-id pub-id-type="doi">10.2307/2347562</pub-id>
+      <fpage>287</fpage>
+      <lpage>297</lpage>
+    </element-citation>
+  </ref>
+  <ref id="ref-Pollitt_2012a-nb-article">
+    <element-citation publication-type="article-journal">
+      <person-group person-group-type="author">
+        <name><surname>Pollitt</surname><given-names>A.</given-names></name>
+      </person-group>
+      <article-title>Comparative judgement for assessment</article-title>
+      <source>International Journal of Technology and Design Education</source>
+      <year iso-8601-date="2012">2012</year>
+      <volume>22</volume>
+      <issue>2</issue>
+      <uri></uri>
+      <pub-id pub-id-type="doi">10.1007/s10798-011-9189-x</pub-id>
+      <fpage>157</fpage>
+      <lpage>170</lpage>
+    </element-citation>
+  </ref>
+  <ref id="ref-Pollitt_2012b-nb-article">
+    <element-citation publication-type="article-journal">
+      <person-group person-group-type="author">
+        <name><surname>Pollitt</surname><given-names>A.</given-names></name>
+      </person-group>
+      <article-title>The method of adaptive comparative judgement</article-title>
+      <source>Assessment in Education: Principles, Policy and Practice</source>
+      <year iso-8601-date="2012">2012</year>
+      <volume>19</volume>
+      <issue>3</issue>
+      <uri></uri>
+      <pub-id pub-id-type="doi">10.1080/0969594X.2012.665354</pub-id>
+      <fpage>281</fpage>
+      <lpage>300</lpage>
+    </element-citation>
+  </ref>
+  <ref id="ref-vanDaal_et_al_2016-nb-article">
+    <element-citation publication-type="article-journal">
+      <person-group person-group-type="author">
+        <name><surname>van Daal</surname><given-names>T.</given-names></name>
+        <name><surname>Lesterhuis</surname><given-names>M.</given-names></name>
+        <name><surname>Coertjens</surname><given-names>L.</given-names></name>
+        <name><surname>Donche</surname><given-names>V.</given-names></name>
+        <name><surname>De Maeyer</surname><given-names>S.</given-names></name>
+      </person-group>
+      <article-title>Validity of comparative judgement to assess academic writing: Examining implications of its holistic character and building on a shared consensus</article-title>
+      <source>Assessment in Education: Principles, Policy &amp; Practice</source>
+      <year iso-8601-date="2019">2019</year>
+      <volume>26</volume>
+      <issue>1</issue>
+      <pub-id pub-id-type="doi">10.1080/0969594X.2016.1253542</pub-id>
+      <fpage>59</fpage>
+      <lpage>74</lpage>
+    </element-citation>
+  </ref>
+  <ref id="ref-vanDaal_et_al_2017-nb-article">
+    <element-citation publication-type="article-journal">
+      <person-group person-group-type="author">
+        <name><surname>van Daal</surname><given-names>T.</given-names></name>
+        <name><surname>Lesterhuis</surname><given-names>M.</given-names></name>
+        <name><surname>Coertjens</surname><given-names>L.</given-names></name>
+        <name><surname>van de Kamp</surname><given-names>MT.</given-names></name>
+        <name><surname>Donche</surname><given-names>V.</given-names></name>
+        <name><surname>de Maeyer</surname><given-names>Sven</given-names></name>
+      </person-group>
+      <article-title>The complexity of assessing student work using comparative judgment: The moderating role of decision accuracy</article-title>
+      <source>Frontiers in Education</source>
+      <year iso-8601-date="2017">2017</year>
+      <volume>2</volume>
+      <uri>https://www.frontiersin.org/articles/10.3389/feduc.2017.00044</uri>
+      <pub-id pub-id-type="doi">10.3389/feduc.2017.00044</pub-id>
+    </element-citation>
+  </ref>
+  <ref id="ref-Bartholomew_et_al_2018-nb-article">
+    <element-citation publication-type="article-journal">
+      <person-group person-group-type="author">
+        <name><surname>Bartholomew</surname><given-names>S.</given-names></name>
+        <name><surname>Nadelson</surname><given-names>L.</given-names></name>
+        <name><surname>Goodridge</surname><given-names>W.</given-names></name>
+        <name><surname>Reeve</surname><given-names>E.</given-names></name>
+      </person-group>
+      <article-title>Adaptive comparative judgment as a tool for assessing open-ended design problems and model eliciting activities</article-title>
+      <source>Educational Assessment</source>
+      <publisher-name>Routledge</publisher-name>
+      <year iso-8601-date="2018">2018</year>
+      <volume>23</volume>
+      <issue>2</issue>
+      <uri></uri>
+      <pub-id pub-id-type="doi">10.1080/10627197.2018.1444986</pub-id>
+      <fpage>85</fpage>
+      <lpage>101</lpage>
+    </element-citation>
+  </ref>
+  <ref id="ref-Bramley_et_al_2019-nb-article">
+    <element-citation publication-type="article-journal">
+      <person-group person-group-type="author">
+        <name><surname>Bramley</surname><given-names>T.</given-names></name>
+        <name><surname>Vitello</surname><given-names>S.</given-names></name>
+      </person-group>
+      <article-title>The effect of adaptivity on the reliability coefficient in adaptive comparative judgement</article-title>
+      <source>Assessment in Education: Principles, Policy and Practice</source>
+      <year iso-8601-date="2019">2019</year>
+      <volume>71</volume>
+      <issue>9</issue>
+      <pub-id pub-id-type="doi">10.1080/0969594X.2017.1418734</pub-id>
+      <fpage>1</fpage>
+      <lpage>25</lpage>
+    </element-citation>
+  </ref>
+  <ref id="ref-Verhavert_et_al_2019-nb-article">
+    <element-citation publication-type="article-journal">
+      <person-group person-group-type="author">
+        <name><surname>Verhavert</surname><given-names>S.</given-names></name>
+        <name><surname>Bouwer</surname><given-names>R.</given-names></name>
+        <name><surname>Donche</surname><given-names>V</given-names></name>
+        <name><surname>De Maeyer</surname><given-names>S.</given-names></name>
+      </person-group>
+      <article-title>A meta-analysis on the reliability of comparative judgement</article-title>
+      <source>Assessment in Education: Principles, Policy and Practice</source>
+      <year iso-8601-date="2019">2019</year>
+      <volume>26</volume>
+      <issue>5</issue>
+      <uri></uri>
+      <pub-id pub-id-type="doi">10.1080/0969594X.2019.1602027</pub-id>
+      <fpage>541</fpage>
+      <lpage>562</lpage>
+    </element-citation>
+  </ref>
+  <ref id="ref-Boonen_et_al_2020-nb-article">
+    <element-citation publication-type="article-journal">
+      <person-group person-group-type="author">
+        <name><surname>Boonen</surname><given-names>N.</given-names></name>
+        <name><surname>Kloots</surname><given-names>H.</given-names></name>
+        <name><surname>Gillis</surname><given-names>S.</given-names></name>
+      </person-group>
+      <article-title>Rating the overall speech quality of hearing-impaired children by means of comparative judgements</article-title>
+      <source>Journal of Communication Disorders</source>
+      <year iso-8601-date="2020">2020</year>
+      <volume>83</volume>
+      <issue></issue>
+      <uri></uri>
+      <pub-id pub-id-type="doi">10.1016/j.jcomdis.2019.105969</pub-id>
+      <fpage>1675</fpage>
+      <lpage>1687</lpage>
+    </element-citation>
+  </ref>
+  <ref id="ref-Marshall_et_al_2020-nb-article">
+    <element-citation publication-type="article-journal">
+      <person-group person-group-type="author">
+        <name><surname>Marshall</surname><given-names>N.</given-names></name>
+        <name><surname>Shaw</surname><given-names>K</given-names></name>
+        <name><surname>Hunter</surname><given-names>J.</given-names></name>
+        <name><surname>Jones</surname><given-names>I.</given-names></name>
+      </person-group>
+      <article-title>Assessment by comparative judgement: An application to secondary statistics and english in new zealand</article-title>
+      <source>New Zealand Journal of Educational Studies</source>
+      <publisher-name>International Society for Bayesian Analysis</publisher-name>
+      <year iso-8601-date="2020">2020</year>
+      <volume>55</volume>
+      <issue></issue>
+      <uri></uri>
+      <pub-id pub-id-type="doi">10.1007/s40841-020-00163-3</pub-id>
+      <fpage>49</fpage>
+      <lpage>71</lpage>
+    </element-citation>
+  </ref>
+  <ref id="ref-Cinelli_et_al_2021-nb-article">
+    <element-citation publication-type="article-journal">
+      <person-group person-group-type="author">
+        <name><surname>Cinelli</surname><given-names>C.</given-names></name>
+        <name><surname>Forney</surname><given-names>A.</given-names></name>
+        <name><surname>Pearl</surname><given-names>J.</given-names></name>
+      </person-group>
+      <article-title>A crash course in good and bad controls</article-title>
+      <source>SSRN</source>
+      <year iso-8601-date="2022-09">2022</year><month>09</month>
+      <volume></volume>
+      <issue></issue>
+      <uri>https://ssrn.com/abstract=3689437</uri>
+      <pub-id pub-id-type="doi">http://dx.doi.org/10.2139/ssrn.3689437</pub-id>
+      <fpage></fpage>
+      <lpage></lpage>
+    </element-citation>
+  </ref>
+  <ref id="ref-Gijsen_et_al_2021-nb-article">
+    <element-citation publication-type="article-journal">
+      <person-group person-group-type="author">
+        <name><surname>Gijsen</surname><given-names>M.</given-names></name>
+        <name><surname>van Daal</surname><given-names>T.</given-names></name>
+        <name><surname>Lesterhuis</surname><given-names>Marije</given-names></name>
+        <name><surname>Gijbels</surname><given-names>David</given-names></name>
+        <name><surname>de Maeyer</surname><given-names>Sven</given-names></name>
+      </person-group>
+      <article-title>The complexity of comparative judgments in assessing argumentative writing: An eye tracking study</article-title>
+      <source>Frontiers in Education</source>
+      <year iso-8601-date="2021">2021</year>
+      <volume>5</volume>
+      <uri>https://www.frontiersin.org/articles/10.3389/feduc.2020.582800</uri>
+      <pub-id pub-id-type="doi">10.3389/feduc.2020.582800</pub-id>
+    </element-citation>
+  </ref>
+  <ref id="ref-Crompvoets_et_al_2022-nb-article">
+    <element-citation publication-type="article-journal">
+      <person-group person-group-type="author">
+        <name><surname>Crompvoets</surname><given-names>Elise A. V.</given-names></name>
+        <name><surname>Béguin</surname><given-names>Anton A.</given-names></name>
+        <name><surname>Sijtsma</surname><given-names>Klaas</given-names></name>
+      </person-group>
+      <article-title>On the bias and stability of the results of comparative judgment</article-title>
+      <source>Frontiers in Education</source>
+      <year iso-8601-date="2022">2022</year>
+      <volume>6</volume>
+      <uri>https://www.frontiersin.org/articles/10.3389/feduc.2021.788202</uri>
+      <pub-id pub-id-type="doi">10.3389/feduc.2021.788202</pub-id>
+    </element-citation>
+  </ref>
+  <ref id="ref-Pearl_2009-nb-article">
+    <element-citation publication-type="book">
+      <person-group person-group-type="author">
+        <name><surname>Pearl</surname><given-names>J.</given-names></name>
+      </person-group>
+      <source>Causality: Models, reasoning and inference</source>
+      <publisher-name>Cambrige University Press</publisher-name>
+      <year iso-8601-date="2009">2009</year>
+      <isbn></isbn>
+      <uri></uri>
+      <pub-id pub-id-type="doi"></pub-id>
+    </element-citation>
+  </ref>
+  <ref id="ref-Pearl_et_al_2016-nb-article">
+    <element-citation publication-type="book">
+      <person-group person-group-type="author">
+        <name><surname>Pearl</surname><given-names>J.</given-names></name>
+        <name><surname>Glymour</surname><given-names>M.</given-names></name>
+        <name><surname>Jewell</surname><given-names>N.</given-names></name>
+      </person-group>
+      <source>Causal inference in statistics: A primer</source>
+      <publisher-name>John Wiley &amp; Sons, Inc.</publisher-name>
+      <year iso-8601-date="2016">2016</year>
+      <edition></edition>
+      <isbn>978-1-119-18686-1</isbn>
+      <uri></uri>
+      <pub-id pub-id-type="doi"></pub-id>
+    </element-citation>
+  </ref>
+  <ref id="ref-McElreath_2020-nb-article">
+    <element-citation publication-type="book">
+      <person-group person-group-type="author">
+        <name><surname>McElreath</surname><given-names>R.</given-names></name>
+      </person-group>
+      <source>Statistical rethinking: A bayesian course with examples in r and STAN</source>
+      <publisher-name>Chapman; Hall/CRC</publisher-name>
+      <year iso-8601-date="2020">2020</year>
+      <isbn>9780367139919</isbn>
+      <uri></uri>
+      <pub-id pub-id-type="doi"></pub-id>
+    </element-citation>
+  </ref>
+  <ref id="ref-Lesterhuis_2018-nb-article">
+    <element-citation publication-type="thesis">
+      <person-group person-group-type="author">
+        <name><surname>Lesterhuis</surname><given-names>M.</given-names></name>
+      </person-group>
+      <article-title>The validity of comparative judgement for assessing text quality: An assessor’s perspective</article-title>
+      <publisher-name>University of Antwerp</publisher-name>
+      <year iso-8601-date="2018">2018</year>
+    </element-citation>
+  </ref>
+  <ref id="ref-vanDaal_2020-nb-article">
+    <element-citation publication-type="thesis">
+      <person-group person-group-type="author">
+        <name><surname>van Daal</surname><given-names>T.</given-names></name>
+      </person-group>
+      <article-title>Making a choice is not easy?!: Unravelling the task difficulty of comparative judgement to assess student work</article-title>
+      <publisher-name>University of Antwerp</publisher-name>
+      <year iso-8601-date="2020">2020</year>
+    </element-citation>
+  </ref>
+  <ref id="ref-Bartholomew_et_al_2020-nb-article">
+    <element-citation publication-type="chapter">
+      <person-group person-group-type="author">
+        <name><surname>Bartholomew</surname><given-names>S.</given-names></name>
+        <name><surname>Williams</surname><given-names>P.</given-names></name>
+      </person-group>
+      <article-title>STEM skill assessment: An application of adaptive comparative judgment</article-title>
+      <source>Integrated approaches to STEM education. Advances in STEM education</source>
+      <person-group person-group-type="editor">
+        <name><surname>Anderson</surname><given-names>J.</given-names></name>
+        <name><surname>Li</surname><given-names>Y.</given-names></name>
+      </person-group>
+      <publisher-name>Springer</publisher-name>
+      <year iso-8601-date="2020">2020</year>
+      <volume></volume>
+      <uri></uri>
+      <pub-id pub-id-type="doi">10.1007/978-3-030-52229-2_18</pub-id>
+      <fpage></fpage>
+      <lpage></lpage>
+    </element-citation>
+  </ref>
+  <ref id="ref-Hitchcock_2023-nb-article">
+    <element-citation publication-type="chapter">
+      <person-group person-group-type="author">
+        <name><surname>Hitchcock</surname><given-names>C.</given-names></name>
+      </person-group>
+      <article-title>Causal Models</article-title>
+      <source>The Stanford encyclopedia of philosophy</source>
+      <person-group person-group-type="editor">
+        <name><surname>Zalta</surname><given-names>Edward N.</given-names></name>
+        <name><surname>Nodelman</surname><given-names>Uri</given-names></name>
+      </person-group>
+      <publisher-name>Metaphysics Research Lab, Stanford University</publisher-name>
+      <year iso-8601-date="2023">2023</year>
+      <edition>Spring 2023</edition>
+      <uri>https://plato.stanford.edu/archives/spr2023/entries/causal-models/</uri>
+    </element-citation>
+  </ref>
+  <ref id="ref-Bramley_2015-nb-article">
+    <element-citation>
+      <person-group person-group-type="author">
+        <name><surname>Bramley</surname><given-names>T.</given-names></name>
+      </person-group>
+      <article-title>Investigating the reliability of adaptive comparative judgment</article-title>
+      <year iso-8601-date="2015">2015</year>
+      <uri>http://www.cambridgeassessment.org.uk/Images/232694-investigating-the-reliability-of-adaptive-comparative-judgment.pdf</uri>
+    </element-citation>
+  </ref>
+  <ref id="ref-Neal_2020-nb-article">
+    <element-citation>
+      <person-group person-group-type="author">
+        <name><surname>Neal</surname><given-names>B.</given-names></name>
+      </person-group>
+      <article-title>Introduction to causal inference from a machine learning perspective</article-title>
+      <year iso-8601-date="2020">2020</year>
+      <uri>\url{https://www.bradyneal.com/Introduction_to_Causal_Inference-Dec17_2020-Neal.pdf}</uri>
+    </element-citation>
+  </ref>
+</ref-list>
+</back>
+
+
+</sub-article>
 <sub-article article-type="notebook" id="nb-4-nb-1">
 <front-stub>
 <title-group>
