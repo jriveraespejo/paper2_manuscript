@@ -16,9 +16,41 @@ execute:
 
 format:
   html:
-    toc: true
+    google-scholar: true
+    licence: 'CC BY-SA'
     comments:
       hypothesis: true
+    cite-method: citeproc
+    # csl: apa.csl
+    keep-tex: true
+    embed-resources: true
+    link-external-icon: true
+    link-external-newwindow: true
+    page-layout: article
+    # theme: default
+    fontsize: 11pt
+    smooth-scroll: true
+    toc: true
+    toc-depth: 3
+    toc-expand: 1
+    toc-title: 'Table of Contents'
+    toc-location: left
+    number-sections: true
+    # number-depth: 3
+    anchor-sections: true
+    html-math-method: katex
+    citations-hover: true
+    footnotes-hover: true
+    reference-location: document
+    code-fold: true
+    code-summary: "Code"
+    code-overflow: scroll
+    code-tools: true
+    code-annotations: hover
+    code-line-numbers: false
+    code-copy: true
+    tbl-cap-location: top
+    fig-cap-location: top
   docx: default
   jats: default
   jasa-pdf: default
