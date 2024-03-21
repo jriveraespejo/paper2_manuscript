@@ -24,8 +24,8 @@ format:
     # csl: apa.csl
     keep-tex: true
     embed-resources: true
-    link-external-icon: true
-    link-external-newwindow: true
+    # link-external-icon: true
+    # link-external-newwindow: true
     page-layout: article
     # theme: default
     fontsize: 11pt
