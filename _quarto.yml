@@ -4,9 +4,6 @@ project:
 manuscript:
   article: index.qmd
   notebooks:
-    - notebook: notebooks/graphviz_figures.qmd
-      title: Graphviz figures
-      download-url: notebooks/graphviz_figures.qmd
     - notebook: notebooks/data_simulation.qmd
       title: Data Simulation
       download-url: notebooks/data_simulation.qmd

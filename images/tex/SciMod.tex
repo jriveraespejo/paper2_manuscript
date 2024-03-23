@@ -1,3 +1,10 @@
+\documentclass[tikz, border=1mm]{standalone}
+\usepackage{tikz} 
+\usetikzlibrary{arrows.meta}
+\usepackage{pgfplots}
+
+\begin{document}
+
 \begin{tikzpicture}
     % nodes
     \node at (-3,1) {$X_{i}$};
@@ -9,7 +16,7 @@
     \node at (-1.5,-1) {$e_{r_{i}}$};
     \node at (0,2) {$\gamma_{k}$};
     \node at (0,0.1) {$\theta_{ir_{i}}$};
-	\node at (1.5,1) {$\delta_{kijr_{ij}}$};
+	\node at (1.6,1) {$\delta_{kijr_{ij}}$};
     \node at (3,1) {$O_{kijr_{ij}}$};
         
 	% paths
@@ -27,3 +34,5 @@
 	% extras
 	%\node at (2,0.4) {$g(\cdot)$}; % function
 \end{tikzpicture}
+
+\end{document}

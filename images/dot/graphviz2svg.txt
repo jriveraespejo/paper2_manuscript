@@ -1,0 +1,1 @@
+echo 'digraph { a -> b }' | dot -Tsvg > output.svg
