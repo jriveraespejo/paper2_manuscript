@@ -131,10 +131,10 @@ editing" vocab-term-identifier="https://credit.niso.org/contributor-roles/writin
 <corresp id="cor-1">JoseManuel.RiveraEspejo@uantwerpen.be</corresp>
 </author-notes>
 
-<pub-date date-type="pub" publication-format="electronic" iso-8601-date="2024-03-21">
+<pub-date date-type="pub" publication-format="electronic" iso-8601-date="2024-03-23">
 <year>2024</year>
 <month>3</month>
-<day>21</day>
+<day>23</day>
 </pub-date>
 
 
@@ -233,17 +233,17 @@ the University of Antwerp (BOF).</funding-statement>
   and van Daal
   (<xref alt="2020" rid="ref-vanDaal_2020" ref-type="bibr">2020</xref>),
   several assessment factors interact and contribute to the reliability
-  of the DCJ method. These factors include the number of stimuli, the
+  of the DCJ method. These factors include the number and
   characteristics of the stimuli, their <italic>proximity</italic> in
   terms of the assessed trait, the number of comparison per stimulus,
   and the pairing algorithm used. Furthermore, since the method relies
-  on judges’ assessments, the number of judges, the characteristics of
-  judges, their <italic>discrimination</italic> abilities, and the
-  number of comparisons per judge also play pivotal roles. Moreover, in
-  cases where the stimuli represent sub-units of higher-levels units,
-  factors such as the number and characteristics of these units, along
-  with their <italic>proximity</italic> in terms of the assessed trait,
-  can significantly influence the assessment outcome. An example of the
+  on judges’ assessments, the number and characteristics of judges,
+  their <italic>discrimination</italic> abilities, and the number of
+  comparisons per judge also play pivotal roles. Moreover, in cases
+  where the stimuli represent sub-units of higher-levels units, factors
+  such as the number and characteristics of these units, along with
+  their <italic>proximity</italic> in terms of the assessed trait, can
+  significantly influence the assessment outcome. An example of the
   latter can be found in the work of Boonen, Kloots, and Gillis
   (<xref alt="2020" rid="ref-Boonen_et_al_2020" ref-type="bibr">2020</xref>).
   The study evaluated the <italic>overall perceived speech
@@ -290,27 +290,34 @@ the University of Antwerp (BOF).</funding-statement>
   three research questions. Subsequently, the research constructs a
   <italic>scientific model</italic> for the DCJ procedure, elucidating
   the causal assumptions and mechanisms underlying the system, aiding in
-  drawing inferences about causal relationships from data
-  (<xref alt="Hitchcock 2023" rid="ref-Hitchcock_2023" ref-type="bibr">Hitchcock
-  2023</xref>). Next, the study translates the scientific model into a
-  probabilistic statistical model to derive a <italic>statistical
-  estimand</italic> for the various inference targets. Bayesian
-  statistical methods offer an intuitive approach for the task. Finally,
-  employing multiple simulated datasets for different combinations of
-  the relevant assessment factors, the study generates multiple
-  <italic>estimates</italic> for the statistical estimands. Notably, the
-  statistical estimands in simulated data are known, enabling the study
-  to assess the reliability of DCJ by evaluating the
-  <italic>proximity</italic> of these estimands to the generated
-  estimates, resembling a power analysis. Ultimately, the outcomes of
-  this study will inform the planning of DCJ experiments and hold
-  significance for researchers or analysts involved in education and
-  assessment procedures who implement the DCJ methodology.</p>
+  drawing inferences about causal relationships from DCJ data. Next, the
+  study translates the scientific model into a probabilistic statistical
+  model to derive a <italic>statistical estimand</italic> for the
+  various inference targets. Bayesian statistical methods offer an
+  intuitive approach for the task. Finally, employing multiple simulated
+  datasets for different combinations of the relevant assessment
+  factors, the study generates multiple <italic>estimates</italic> for
+  the statistical estimands. Notably, the statistical estimands in
+  simulated data are known, enabling the study to assess the reliability
+  of DCJ by evaluating the <italic>proximity</italic> of these estimands
+  to the generated estimates, resembling a power analysis. Ultimately,
+  the outcomes of this study will inform the planning of DCJ experiments
+  and hold significance for researchers or analysts involved in
+  education and assessment procedures who implement the DCJ
+  methodology.</p>
 </sec>
 <sec id="sec-TheoreticalFramework">
   <title>Theoretical framework</title>
   <p>To evaluate the reliability of the DCJ method, the study first need
-  to define specific terminology.</p>
+  to define specific terminology.
+  <xref alt="Figure 1" rid="fig-IEflowchart">Figure 1</xref></p>
+  <fig id="fig-IEflowchart">
+    <caption><p>Figure 1: Identification-Estimation flowchart. Extracted
+    from Neal
+    (<xref alt="2020, 32" rid="ref-Neal_2020" ref-type="bibr">2020,
+    32</xref>)</p></caption>
+    <graphic mimetype="image" mime-subtype="png" xlink:href="notebooks/graphviz_figures_files/figure-ipynb/dot-figure-1.png" />
+  </fig>
   <sec id="sec-ResearchQuestions">
     <title>Research questions and their estimands</title>
   </sec>
@@ -323,7 +330,7 @@ the University of Antwerp (BOF).</funding-statement>
     2023</xref>).</p>
   </sec>
   <sec id="sec-Sci2StatMod">
-    <title>From the scientific to the statistical DCJ model</title>
+    <title>From the scientific to the Bradley-Terry-Luce model</title>
   </sec>
 </sec>
 <sec id="sec-methods">
@@ -717,10 +724,210 @@ the University of Antwerp (BOF).</funding-statement>
       <uri>\url{http://www.cambridgeassessment.org.uk/Images/232694-investigating-the-reliability-of-adaptive-comparative-judgment.pdf}</uri>
     </element-citation>
   </ref>
+  <ref id="ref-Neal_2020">
+    <element-citation>
+      <person-group person-group-type="author">
+        <name><surname>Neal</surname><given-names>B.</given-names></name>
+      </person-group>
+      <article-title>Introduction to causal inference from a machine learning perspective</article-title>
+      <year iso-8601-date="2020">2020</year>
+      <uri>\url{https://www.bradyneal.com/Introduction_to_Causal_Inference-Dec17_2020-Neal.pdf}</uri>
+    </element-citation>
+  </ref>
 </ref-list>
 </back>
 
 <sub-article article-type="notebook" id="nb-4-nb-1">
+<front-stub>
+<title-group>
+<article-title>Graphviz figures</article-title>
+</title-group>
+<contrib-group>
+<contrib contrib-type="author">
+<name>
+<surname>Espejo</surname>
+<given-names>Jose Manuel Rivera</given-names>
+</name>
+<string-name>Jose Manuel Rivera Espejo</string-name>
+
+</contrib>
+</contrib-group>
+</front-stub>
+
+<body>
+<sec id="the-identification-estimation-flowchart-nb-1">
+  <title>The Identification-Estimation flowchart</title>
+  <p>The Identification-Estimation flowchart
+  (<xref alt="McElreath 2020" rid="ref-McElreath_2020-nb-1" ref-type="bibr">McElreath
+  2020</xref>;
+  <xref alt="Neal 2020" rid="ref-Neal_2020-nb-1" ref-type="bibr">Neal
+  2020</xref>) defines the specific terminology for the study, as well
+  as it provides the steps to follow in order to test the reliability of
+  the DCJ method. Initially, it defines the different targets of
+  inference (i.e., the <italic>estimands</italic>), which form the basis
+  for evaluating the reliability of the DCJ method. The targets are
+  articulated through three research questions. Subsequently, the
+  research constructs a <italic>scientific model</italic> for the DCJ
+  procedure, elucidating the causal assumptions and mechanisms
+  underlying the system, aiding in drawing inferences about causal
+  relationships from DCJ data. Next, the study translates the scientific
+  model into a probabilistic statistical model (i.e., an
+  <italic>estimator</italic>) to derive a <italic>statistical
+  estimand</italic> for the various inference targets. Bayesian
+  statistical methods offer an intuitive approach for the task. Finally,
+  employing multiple simulated datasets for different combinations of
+  the relevant assessment factors, the study generates multiple
+  <italic>estimates</italic> for the statistical estimands. Notably, the
+  statistical estimands in simulated data are known, enabling the study
+  to assess the reliability of DCJ by evaluating the
+  <italic>proximity</italic> of these estimands to the generated
+  estimates, resembling a power analysis.</p>
+  <sec id="nb-code-cell-1-nb-1" specific-use="notebook-code">
+  <code language="dot">digraph mrdag {
+
+  graph [rankdir=TB, layout=neato]
+
+  node [shape=box, height=0.3, width=0.3]
+  CE [label=&quot;(Causal) Estimand&quot;, pos=&quot;0,1!&quot;]
+  SM [label=&quot;Scientific model&quot;, pos=&quot;2,1!&quot;]
+  SE [label=&quot;Statistical estimand&quot;, pos=&quot;0,0!&quot;]
+  D [label=&quot;Data&quot;, pos=&quot;2,0!&quot;]
+  ES [label=&quot;Estimate&quot;, pos=&quot;0,-1!&quot;]
+  
+  node [shape=plaintext, height=0.3, width=0.3]
+  IT [label=&quot;Identification&quot;, pos=&quot;0.6,0.7!&quot;]
+  ET [label=&quot;Estimation&quot;, pos=&quot;0.5,-0.3!&quot;]
+
+  {CE SM} -&gt; SE
+  {SE D} -&gt; ES
+  
+}
+  </code>
+  <fig id="fig-IEflowchart_Appendix-nb-1">
+    <caption><p>Identification-Estimation flowchart. Extracted from Neal
+    (<xref alt="2020, 32" rid="ref-Neal_2020-nb-1" ref-type="bibr">2020,
+    32</xref>)</p></caption>
+    <graphic mimetype="image" mime-subtype="png" xlink:href="graphviz_figures_files/figure-jats/dot-figure-1.png" />
+  </fig>
+  </sec>
+</sec>
+<sec id="a-scientific-model-for-the-dcj-procedure-nb-1">
+  <title>A scientific model for the DCJ procedure</title>
+  <p>A <italic>scientific (causal) model</italic> describe the causal
+  assumptions and mechanisms underlying a system, and facilitate
+  inferences about causal relationships from data
+  (<xref alt="Hitchcock 2023" rid="ref-Hitchcock_2023-nb-1" ref-type="bibr">Hitchcock
+  2023</xref>).</p>
+  <p>To aid in the translation and visualization of the assumption
+  underlying the DCJ procedure, Directed Acyclic Graphs (DAG) and
+  Structural Causal Models (SCM)
+  (<xref alt="Pearl 2009" rid="ref-Pearl_2009-nb-1" ref-type="bibr">Pearl
+  2009</xref>;
+  <xref alt="Pearl, Glymour, and Jewell 2016" rid="ref-Pearl_et_al_2016-nb-1" ref-type="bibr">Pearl,
+  Glymour, and Jewell 2016</xref>;
+  <xref alt="Cinelli, Forney, and Pearl 2022" rid="ref-Cinelli_et_al_2021-nb-1" ref-type="bibr">Cinelli,
+  Forney, and Pearl 2022</xref>) are employed.</p>
+</sec>
+</body>
+
+
+
+<back>
+<ref-list>
+  <title>References</title>
+  <ref id="ref-Cinelli_et_al_2021-nb-1">
+    <element-citation publication-type="article-journal">
+      <person-group person-group-type="author">
+        <name><surname>Cinelli</surname><given-names>C.</given-names></name>
+        <name><surname>Forney</surname><given-names>A.</given-names></name>
+        <name><surname>Pearl</surname><given-names>J.</given-names></name>
+      </person-group>
+      <article-title>A crash course in good and bad controls</article-title>
+      <source>SSRN</source>
+      <year iso-8601-date="2022-09">2022</year><month>09</month>
+      <volume></volume>
+      <issue></issue>
+      <uri>\url{https://ssrn.com/abstract=3689437}</uri>
+      <pub-id pub-id-type="doi">http://dx.doi.org/10.2139/ssrn.3689437</pub-id>
+      <fpage></fpage>
+      <lpage></lpage>
+    </element-citation>
+  </ref>
+  <ref id="ref-Pearl_2009-nb-1">
+    <element-citation publication-type="book">
+      <person-group person-group-type="author">
+        <name><surname>Pearl</surname><given-names>J.</given-names></name>
+      </person-group>
+      <source>Causality: Models, reasoning and inference</source>
+      <publisher-name>Cambrige University Press</publisher-name>
+      <year iso-8601-date="2009">2009</year>
+      <isbn></isbn>
+      <uri></uri>
+      <pub-id pub-id-type="doi"></pub-id>
+    </element-citation>
+  </ref>
+  <ref id="ref-Pearl_et_al_2016-nb-1">
+    <element-citation publication-type="book">
+      <person-group person-group-type="author">
+        <name><surname>Pearl</surname><given-names>J.</given-names></name>
+        <name><surname>Glymour</surname><given-names>M.</given-names></name>
+        <name><surname>Jewell</surname><given-names>N.</given-names></name>
+      </person-group>
+      <source>Causal inference in statistics: A primer</source>
+      <publisher-name>John Wiley &amp; Sons, Inc.</publisher-name>
+      <year iso-8601-date="2016">2016</year>
+      <edition></edition>
+      <isbn>978-1-119-18686-1</isbn>
+      <uri></uri>
+      <pub-id pub-id-type="doi"></pub-id>
+    </element-citation>
+  </ref>
+  <ref id="ref-McElreath_2020-nb-1">
+    <element-citation publication-type="book">
+      <person-group person-group-type="author">
+        <name><surname>McElreath</surname><given-names>R.</given-names></name>
+      </person-group>
+      <source>Statistical rethinking: A bayesian course with examples in r and STAN</source>
+      <publisher-name>Chapman; Hall/CRC</publisher-name>
+      <year iso-8601-date="2020">2020</year>
+      <isbn>9780367139919</isbn>
+      <uri></uri>
+      <pub-id pub-id-type="doi"></pub-id>
+    </element-citation>
+  </ref>
+  <ref id="ref-Hitchcock_2023-nb-1">
+    <element-citation publication-type="chapter">
+      <person-group person-group-type="author">
+        <name><surname>Hitchcock</surname><given-names>C.</given-names></name>
+      </person-group>
+      <article-title>Causal Models</article-title>
+      <source>The Stanford encyclopedia of philosophy</source>
+      <person-group person-group-type="editor">
+        <name><surname>Zalta</surname><given-names>Edward N.</given-names></name>
+        <name><surname>Nodelman</surname><given-names>Uri</given-names></name>
+      </person-group>
+      <publisher-name>Metaphysics Research Lab, Stanford University</publisher-name>
+      <year iso-8601-date="2023">2023</year>
+      <edition>Spring 2023</edition>
+      <uri>https://plato.stanford.edu/archives/spr2023/entries/causal-models/</uri>
+    </element-citation>
+  </ref>
+  <ref id="ref-Neal_2020-nb-1">
+    <element-citation>
+      <person-group person-group-type="author">
+        <name><surname>Neal</surname><given-names>B.</given-names></name>
+      </person-group>
+      <article-title>Introduction to causal inference from a machine learning perspective</article-title>
+      <year iso-8601-date="2020">2020</year>
+      <uri>\url{https://www.bradyneal.com/Introduction_to_Causal_Inference-Dec17_2020-Neal.pdf}</uri>
+    </element-citation>
+  </ref>
+</ref-list>
+</back>
+
+
+</sub-article>
+<sub-article article-type="notebook" id="nb-8-nb-2">
 <front-stub>
 <title-group>
 <article-title>Data simulation</article-title>
