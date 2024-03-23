@@ -278,14 +278,14 @@ methodology.
 
 \section{Theoretical framework}\label{sec-TheoreticalFramework}
 
-To evaluate the reliability of the DCJ method, the study first need to
-define specific terminology. Figure~\ref{fig-IEflowchart}
+To evaluate the reliability of the DCJ method, this study first define
+specific terminology.
 
 \begin{figure}
 
 \centering{
 
-\includegraphics[width=0.5\textwidth,height=\textheight]{notebooks/graphviz_figures_files/figure-ipynb/dot-figure-1.png}
+\includegraphics[width=0.5\textwidth,height=\textheight]{images/tex/IEflowchart.png}
 
 }
 
@@ -306,8 +306,57 @@ A \emph{scientific (causal) model} describe the causal assumptions and
 mechanisms underlying a system, and facilitate inferences about causal
 relationships from data \citep{Hitchcock_2023}.
 
+To aid in the translation and visualization of the assumption underlying
+the DCJ procedure, Directed Acyclic Graphs (DAG) and Structural Causal
+Models (SCM) \citep{Pearl_2009, Pearl_et_al_2016, Cinelli_et_al_2021}
+are employed. DAG are {(\ldots)}. While SCM are {(\ldots)}.
+
+\begin{figure}
+
+\centering{
+
+\includegraphics[width=0.6\textwidth,height=\textheight]{images/tex/SciMod.png}
+
+}
+
+\caption{\label{fig-IEflowchart}Scientific model for the DCJ method}
+
+\end{figure}%
+
+where \(X_{i}\) describe the background variables for the units
+(\(i = 1, \dots, j, \dots, N\)), \(Z_{k}\) background variables for the
+judges (\(k = 1, \dots, K\)), and \(Y_{r}\) the background variables for
+the sub-units (\(r_{i} = 1, \dots, R_{i}\)). Furthermore, \(\theta_{i}\)
+denotes the trait of unit \(i\), \(\gamma_{k}\) the judges'
+\emph{discrimination} ability, \(\theta_{ir_{i}}\) the trait of sub-unit
+\(r_{i}\) from unit \(i\), \(\delta_{kijr_{ij}}\) the judge \(k\)
+perception of trait differences between objects \(r_{i}\) and \(r_{j}\),
+from subjects \(i\) and \(j\), respectively. Additionally, \(e_{k}\),
+\(e_{i}\), and \(e_{r_{i}}\) are the judges, units and sub-units
+idiosyncratic deviations. Lastly, \(O_{kijr_{ij}}\) describes the
+dichotomous \emph{observed} outcome.
+
+Following what it is stated by the DAG, we can transform it into an SCM,
+in the following way
+
+\begin{equation}\phantomsection\label{eq-StructuralModel}{
+\begin{aligned}
+  O_{kijr_{ij}} := & \; f_{O}( \delta_{kijr_{ij}} ) \\
+  \delta_{kijr_{ij}} := & \; f_{D}( \gamma_{k}, \theta_{ir_{i}} ) \\
+  \gamma_{k} := & \; f_{G}( Z_{k}, e_{k} ) \\
+  \theta_{ir_{i}} := & \; f_{R}( \theta_{i}, Y_{r}, e_{r_{i}} ) \\
+  \theta_{i} := & \; f_{T}( X_{i}, e_{i} ) \\
+  & \; e_{k} \perp\kern-5pt\perp e_{i} \\
+  & \; e_{k} \perp\kern-5pt\perp e_{r_{i}} \\
+  & \; e_{i} \perp\kern-5pt\perp e_{r_{i}}
+\end{aligned}
+}\end{equation}
+
 \subsection{From the scientific to the Bradley-Terry-Luce
 model}\label{sec-Sci2StatMod}
+
+Bayesian Bradley-Terry-Luce model (BTL)
+\citep[@Luce\_1959, @Pollitt\_2012b, @BradleyTerry2\_2012]{Bradley_et_al_1952}
 
 \section{Methods}\label{sec-methods}
 

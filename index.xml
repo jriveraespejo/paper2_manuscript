@@ -308,15 +308,14 @@ the University of Antwerp (BOF).</funding-statement>
 </sec>
 <sec id="sec-TheoreticalFramework">
   <title>Theoretical framework</title>
-  <p>To evaluate the reliability of the DCJ method, the study first need
-  to define specific terminology.
-  <xref alt="Figure 1" rid="fig-IEflowchart">Figure 1</xref></p>
+  <p>To evaluate the reliability of the DCJ method, this study first
+  define specific terminology.</p>
   <fig id="fig-IEflowchart">
     <caption><p>Figure 1: Identification-Estimation flowchart. Extracted
     from Neal
     (<xref alt="2020, 32" rid="ref-Neal_2020" ref-type="bibr">2020,
     32</xref>)</p></caption>
-    <graphic mimetype="image" mime-subtype="png" xlink:href="notebooks/graphviz_figures_files/figure-ipynb/dot-figure-1.png" />
+    <graphic mimetype="image" mime-subtype="png" xlink:href="images/tex/IEflowchart.png" />
   </fig>
   <sec id="sec-ResearchQuestions">
     <title>Research questions and their estimands</title>
@@ -328,9 +327,113 @@ the University of Antwerp (BOF).</funding-statement>
     inferences about causal relationships from data
     (<xref alt="Hitchcock 2023" rid="ref-Hitchcock_2023" ref-type="bibr">Hitchcock
     2023</xref>).</p>
+    <p>To aid in the translation and visualization of the assumption
+    underlying the DCJ procedure, Directed Acyclic Graphs (DAG) and
+    Structural Causal Models (SCM)
+    (<xref alt="Pearl 2009" rid="ref-Pearl_2009" ref-type="bibr">Pearl
+    2009</xref>;
+    <xref alt="Pearl, Glymour, and Jewell 2016" rid="ref-Pearl_et_al_2016" ref-type="bibr">Pearl,
+    Glymour, and Jewell 2016</xref>;
+    <xref alt="Cinelli, Forney, and Pearl 2022" rid="ref-Cinelli_et_al_2021" ref-type="bibr">Cinelli,
+    Forney, and Pearl 2022</xref>) are employed. DAG are
+    <styled-content style="color:red;">(…)</styled-content>. While SCM
+    are <styled-content style="color:red;">(…)</styled-content>.</p>
+    <fig id="fig-IEflowchart">
+      <caption><p>Figure 2: Scientific model for the DCJ
+      method</p></caption>
+      <graphic mimetype="image" mime-subtype="png" xlink:href="images/tex/SciMod.png" />
+    </fig>
+    <p>where <inline-formula><alternatives>
+    <tex-math><![CDATA[X_{i}]]></tex-math>
+    <mml:math display="inline" xmlns:mml="http://www.w3.org/1998/Math/MathML"><mml:msub><mml:mi>X</mml:mi><mml:mi>i</mml:mi></mml:msub></mml:math></alternatives></inline-formula>
+    describe the background variables for the units
+    (<inline-formula><alternatives>
+    <tex-math><![CDATA[i = 1, \dots, j, \dots, N]]></tex-math>
+    <mml:math display="inline" xmlns:mml="http://www.w3.org/1998/Math/MathML"><mml:mrow><mml:mi>i</mml:mi><mml:mo>=</mml:mo><mml:mn>1</mml:mn><mml:mo>,</mml:mo><mml:mi>…</mml:mi><mml:mo>,</mml:mo><mml:mi>j</mml:mi><mml:mo>,</mml:mo><mml:mi>…</mml:mi><mml:mo>,</mml:mo><mml:mi>N</mml:mi></mml:mrow></mml:math></alternatives></inline-formula>),
+    <inline-formula><alternatives>
+    <tex-math><![CDATA[Z_{k}]]></tex-math>
+    <mml:math display="inline" xmlns:mml="http://www.w3.org/1998/Math/MathML"><mml:msub><mml:mi>Z</mml:mi><mml:mi>k</mml:mi></mml:msub></mml:math></alternatives></inline-formula>
+    background variables for the judges (<inline-formula><alternatives>
+    <tex-math><![CDATA[k = 1, \dots, K]]></tex-math>
+    <mml:math display="inline" xmlns:mml="http://www.w3.org/1998/Math/MathML"><mml:mrow><mml:mi>k</mml:mi><mml:mo>=</mml:mo><mml:mn>1</mml:mn><mml:mo>,</mml:mo><mml:mi>…</mml:mi><mml:mo>,</mml:mo><mml:mi>K</mml:mi></mml:mrow></mml:math></alternatives></inline-formula>),
+    and <inline-formula><alternatives>
+    <tex-math><![CDATA[Y_{r}]]></tex-math>
+    <mml:math display="inline" xmlns:mml="http://www.w3.org/1998/Math/MathML"><mml:msub><mml:mi>Y</mml:mi><mml:mi>r</mml:mi></mml:msub></mml:math></alternatives></inline-formula>
+    the background variables for the sub-units
+    (<inline-formula><alternatives>
+    <tex-math><![CDATA[r_{i} = 1, \dots, R_{i}]]></tex-math>
+    <mml:math display="inline" xmlns:mml="http://www.w3.org/1998/Math/MathML"><mml:mrow><mml:msub><mml:mi>r</mml:mi><mml:mi>i</mml:mi></mml:msub><mml:mo>=</mml:mo><mml:mn>1</mml:mn><mml:mo>,</mml:mo><mml:mi>…</mml:mi><mml:mo>,</mml:mo><mml:msub><mml:mi>R</mml:mi><mml:mi>i</mml:mi></mml:msub></mml:mrow></mml:math></alternatives></inline-formula>).
+    Furthermore, <inline-formula><alternatives>
+    <tex-math><![CDATA[\theta_{i}]]></tex-math>
+    <mml:math display="inline" xmlns:mml="http://www.w3.org/1998/Math/MathML"><mml:msub><mml:mi>θ</mml:mi><mml:mi>i</mml:mi></mml:msub></mml:math></alternatives></inline-formula>
+    denotes the trait of unit <inline-formula><alternatives>
+    <tex-math><![CDATA[i]]></tex-math>
+    <mml:math display="inline" xmlns:mml="http://www.w3.org/1998/Math/MathML"><mml:mi>i</mml:mi></mml:math></alternatives></inline-formula>,
+    <inline-formula><alternatives>
+    <tex-math><![CDATA[\gamma_{k}]]></tex-math>
+    <mml:math display="inline" xmlns:mml="http://www.w3.org/1998/Math/MathML"><mml:msub><mml:mi>γ</mml:mi><mml:mi>k</mml:mi></mml:msub></mml:math></alternatives></inline-formula>
+    the judges’ <italic>discrimination</italic> ability,
+    <inline-formula><alternatives>
+    <tex-math><![CDATA[\theta_{ir_{i}}]]></tex-math>
+    <mml:math display="inline" xmlns:mml="http://www.w3.org/1998/Math/MathML"><mml:msub><mml:mi>θ</mml:mi><mml:mrow><mml:mi>i</mml:mi><mml:msub><mml:mi>r</mml:mi><mml:mi>i</mml:mi></mml:msub></mml:mrow></mml:msub></mml:math></alternatives></inline-formula>
+    the trait of sub-unit <inline-formula><alternatives>
+    <tex-math><![CDATA[r_{i}]]></tex-math>
+    <mml:math display="inline" xmlns:mml="http://www.w3.org/1998/Math/MathML"><mml:msub><mml:mi>r</mml:mi><mml:mi>i</mml:mi></mml:msub></mml:math></alternatives></inline-formula>
+    from unit <inline-formula><alternatives>
+    <tex-math><![CDATA[i]]></tex-math>
+    <mml:math display="inline" xmlns:mml="http://www.w3.org/1998/Math/MathML"><mml:mi>i</mml:mi></mml:math></alternatives></inline-formula>,
+    <inline-formula><alternatives>
+    <tex-math><![CDATA[\delta_{kijr_{ij}}]]></tex-math>
+    <mml:math display="inline" xmlns:mml="http://www.w3.org/1998/Math/MathML"><mml:msub><mml:mi>δ</mml:mi><mml:mrow><mml:mi>k</mml:mi><mml:mi>i</mml:mi><mml:mi>j</mml:mi><mml:msub><mml:mi>r</mml:mi><mml:mrow><mml:mi>i</mml:mi><mml:mi>j</mml:mi></mml:mrow></mml:msub></mml:mrow></mml:msub></mml:math></alternatives></inline-formula>
+    the judge <inline-formula><alternatives>
+    <tex-math><![CDATA[k]]></tex-math>
+    <mml:math display="inline" xmlns:mml="http://www.w3.org/1998/Math/MathML"><mml:mi>k</mml:mi></mml:math></alternatives></inline-formula>
+    perception of trait differences between objects
+    <inline-formula><alternatives>
+    <tex-math><![CDATA[r_{i}]]></tex-math>
+    <mml:math display="inline" xmlns:mml="http://www.w3.org/1998/Math/MathML"><mml:msub><mml:mi>r</mml:mi><mml:mi>i</mml:mi></mml:msub></mml:math></alternatives></inline-formula>
+    and <inline-formula><alternatives>
+    <tex-math><![CDATA[r_{j}]]></tex-math>
+    <mml:math display="inline" xmlns:mml="http://www.w3.org/1998/Math/MathML"><mml:msub><mml:mi>r</mml:mi><mml:mi>j</mml:mi></mml:msub></mml:math></alternatives></inline-formula>,
+    from subjects <inline-formula><alternatives>
+    <tex-math><![CDATA[i]]></tex-math>
+    <mml:math display="inline" xmlns:mml="http://www.w3.org/1998/Math/MathML"><mml:mi>i</mml:mi></mml:math></alternatives></inline-formula>
+    and <inline-formula><alternatives>
+    <tex-math><![CDATA[j]]></tex-math>
+    <mml:math display="inline" xmlns:mml="http://www.w3.org/1998/Math/MathML"><mml:mi>j</mml:mi></mml:math></alternatives></inline-formula>,
+    respectively. Additionally, <inline-formula><alternatives>
+    <tex-math><![CDATA[e_{k}]]></tex-math>
+    <mml:math display="inline" xmlns:mml="http://www.w3.org/1998/Math/MathML"><mml:msub><mml:mi>e</mml:mi><mml:mi>k</mml:mi></mml:msub></mml:math></alternatives></inline-formula>,
+    <inline-formula><alternatives>
+    <tex-math><![CDATA[e_{i}]]></tex-math>
+    <mml:math display="inline" xmlns:mml="http://www.w3.org/1998/Math/MathML"><mml:msub><mml:mi>e</mml:mi><mml:mi>i</mml:mi></mml:msub></mml:math></alternatives></inline-formula>,
+    and <inline-formula><alternatives>
+    <tex-math><![CDATA[e_{r_{i}}]]></tex-math>
+    <mml:math display="inline" xmlns:mml="http://www.w3.org/1998/Math/MathML"><mml:msub><mml:mi>e</mml:mi><mml:msub><mml:mi>r</mml:mi><mml:mi>i</mml:mi></mml:msub></mml:msub></mml:math></alternatives></inline-formula>
+    are the judges, units and sub-units idiosyncratic deviations.
+    Lastly, <inline-formula><alternatives>
+    <tex-math><![CDATA[O_{kijr_{ij}}]]></tex-math>
+    <mml:math display="inline" xmlns:mml="http://www.w3.org/1998/Math/MathML"><mml:msub><mml:mi>O</mml:mi><mml:mrow><mml:mi>k</mml:mi><mml:mi>i</mml:mi><mml:mi>j</mml:mi><mml:msub><mml:mi>r</mml:mi><mml:mrow><mml:mi>i</mml:mi><mml:mi>j</mml:mi></mml:mrow></mml:msub></mml:mrow></mml:msub></mml:math></alternatives></inline-formula>
+    describes the dichotomous <italic>observed</italic> outcome.</p>
+    <p>Following what it is stated by the DAG, we can transform it into
+    an SCM, in the following way</p>
+    <p><styled-content id="eq-StructuralModel"><disp-formula><tex-math><![CDATA[
+    \begin{aligned}
+      O_{kijr_{ij}} := & \; f_{O}( \delta_{kijr_{ij}} ) \\
+      \delta_{kijr_{ij}} := & \; f_{D}( \gamma_{k}, \theta_{ir_{i}} ) \\
+      \gamma_{k} := & \; f_{G}( Z_{k}, e_{k} ) \\
+      \theta_{ir_{i}} := & \; f_{R}( \theta_{i}, Y_{r}, e_{r_{i}} ) \\
+      \theta_{i} := & \; f_{T}( X_{i}, e_{i} ) \\
+      & \; e_{k} \perp\kern-5pt\perp e_{i} \\
+      & \; e_{k} \perp\kern-5pt\perp e_{r_{i}} \\
+      & \; e_{i} \perp\kern-5pt\perp e_{r_{i}}
+    \end{aligned}
+     \qquad(1)]]></tex-math></disp-formula></styled-content></p>
   </sec>
   <sec id="sec-Sci2StatMod">
     <title>From the scientific to the Bradley-Terry-Luce model</title>
+    <p>Bayesian Bradley-Terry-Luce model (BTL) Turner and Firth
+    (<xref alt="2012" rid="ref-BradleyTerry2_2012" ref-type="bibr">2012</xref>)</p>
   </sec>
 </sec>
 <sec id="sec-methods">
@@ -624,6 +727,24 @@ the University of Antwerp (BOF).</funding-statement>
       <lpage>71</lpage>
     </element-citation>
   </ref>
+  <ref id="ref-Cinelli_et_al_2021">
+    <element-citation publication-type="article-journal">
+      <person-group person-group-type="author">
+        <name><surname>Cinelli</surname><given-names>C.</given-names></name>
+        <name><surname>Forney</surname><given-names>A.</given-names></name>
+        <name><surname>Pearl</surname><given-names>J.</given-names></name>
+      </person-group>
+      <article-title>A crash course in good and bad controls</article-title>
+      <source>SSRN</source>
+      <year iso-8601-date="2022-09">2022</year><month>09</month>
+      <volume></volume>
+      <issue></issue>
+      <uri>\url{https://ssrn.com/abstract=3689437}</uri>
+      <pub-id pub-id-type="doi">http://dx.doi.org/10.2139/ssrn.3689437</pub-id>
+      <fpage></fpage>
+      <lpage></lpage>
+    </element-citation>
+  </ref>
   <ref id="ref-Gijsen_et_al_2021">
     <element-citation publication-type="article-journal">
       <person-group person-group-type="author">
@@ -654,6 +775,35 @@ the University of Antwerp (BOF).</funding-statement>
       <volume>6</volume>
       <uri>url{https://www.frontiersin.org/articles/10.3389/feduc.2021.788202}</uri>
       <pub-id pub-id-type="doi">10.3389/feduc.2021.788202</pub-id>
+    </element-citation>
+  </ref>
+  <ref id="ref-Pearl_2009">
+    <element-citation publication-type="book">
+      <person-group person-group-type="author">
+        <name><surname>Pearl</surname><given-names>J.</given-names></name>
+      </person-group>
+      <source>Causality: Models, reasoning and inference</source>
+      <publisher-name>Cambrige University Press</publisher-name>
+      <year iso-8601-date="2009">2009</year>
+      <isbn></isbn>
+      <uri></uri>
+      <pub-id pub-id-type="doi"></pub-id>
+    </element-citation>
+  </ref>
+  <ref id="ref-Pearl_et_al_2016">
+    <element-citation publication-type="book">
+      <person-group person-group-type="author">
+        <name><surname>Pearl</surname><given-names>J.</given-names></name>
+        <name><surname>Glymour</surname><given-names>M.</given-names></name>
+        <name><surname>Jewell</surname><given-names>N.</given-names></name>
+      </person-group>
+      <source>Causal inference in statistics: A primer</source>
+      <publisher-name>John Wiley &amp; Sons, Inc.</publisher-name>
+      <year iso-8601-date="2016">2016</year>
+      <edition></edition>
+      <isbn>978-1-119-18686-1</isbn>
+      <uri></uri>
+      <pub-id pub-id-type="doi"></pub-id>
     </element-citation>
   </ref>
   <ref id="ref-Lesterhuis_2018">
@@ -734,200 +884,22 @@ the University of Antwerp (BOF).</funding-statement>
       <uri>\url{https://www.bradyneal.com/Introduction_to_Causal_Inference-Dec17_2020-Neal.pdf}</uri>
     </element-citation>
   </ref>
-</ref-list>
-</back>
-
-<sub-article article-type="notebook" id="nb-4-nb-1">
-<front-stub>
-<title-group>
-<article-title>Graphviz figures</article-title>
-</title-group>
-<contrib-group>
-<contrib contrib-type="author">
-<name>
-<surname>Espejo</surname>
-<given-names>Jose Manuel Rivera</given-names>
-</name>
-<string-name>Jose Manuel Rivera Espejo</string-name>
-
-</contrib>
-</contrib-group>
-</front-stub>
-
-<body>
-<sec id="the-identification-estimation-flowchart-nb-1">
-  <title>The Identification-Estimation flowchart</title>
-  <p>The Identification-Estimation flowchart
-  (<xref alt="McElreath 2020" rid="ref-McElreath_2020-nb-1" ref-type="bibr">McElreath
-  2020</xref>;
-  <xref alt="Neal 2020" rid="ref-Neal_2020-nb-1" ref-type="bibr">Neal
-  2020</xref>) defines the specific terminology for the study, as well
-  as it provides the steps to follow in order to test the reliability of
-  the DCJ method. Initially, it defines the different targets of
-  inference (i.e., the <italic>estimands</italic>), which form the basis
-  for evaluating the reliability of the DCJ method. The targets are
-  articulated through three research questions. Subsequently, the
-  research constructs a <italic>scientific model</italic> for the DCJ
-  procedure, elucidating the causal assumptions and mechanisms
-  underlying the system, aiding in drawing inferences about causal
-  relationships from DCJ data. Next, the study translates the scientific
-  model into a probabilistic statistical model (i.e., an
-  <italic>estimator</italic>) to derive a <italic>statistical
-  estimand</italic> for the various inference targets. Bayesian
-  statistical methods offer an intuitive approach for the task. Finally,
-  employing multiple simulated datasets for different combinations of
-  the relevant assessment factors, the study generates multiple
-  <italic>estimates</italic> for the statistical estimands. Notably, the
-  statistical estimands in simulated data are known, enabling the study
-  to assess the reliability of DCJ by evaluating the
-  <italic>proximity</italic> of these estimands to the generated
-  estimates, resembling a power analysis.</p>
-  <sec id="nb-code-cell-1-nb-1" specific-use="notebook-code">
-  <code language="dot">digraph mrdag {
-
-  graph [rankdir=TB, layout=neato]
-
-  node [shape=box, height=0.3, width=0.3]
-  CE [label=&quot;(Causal) Estimand&quot;, pos=&quot;0,1!&quot;]
-  SM [label=&quot;Scientific model&quot;, pos=&quot;2,1!&quot;]
-  SE [label=&quot;Statistical estimand&quot;, pos=&quot;0,0!&quot;]
-  D [label=&quot;Data&quot;, pos=&quot;2,0!&quot;]
-  ES [label=&quot;Estimate&quot;, pos=&quot;0,-1!&quot;]
-  
-  node [shape=plaintext, height=0.3, width=0.3]
-  IT [label=&quot;Identification&quot;, pos=&quot;0.6,0.7!&quot;]
-  ET [label=&quot;Estimation&quot;, pos=&quot;0.5,-0.3!&quot;]
-
-  {CE SM} -&gt; SE
-  {SE D} -&gt; ES
-  
-}
-  </code>
-  <fig id="fig-IEflowchart_Appendix-nb-1">
-    <caption><p>Identification-Estimation flowchart. Extracted from Neal
-    (<xref alt="2020, 32" rid="ref-Neal_2020-nb-1" ref-type="bibr">2020,
-    32</xref>)</p></caption>
-    <graphic mimetype="image" mime-subtype="png" xlink:href="graphviz_figures_files/figure-jats/dot-figure-1.png" />
-  </fig>
-  </sec>
-</sec>
-<sec id="a-scientific-model-for-the-dcj-procedure-nb-1">
-  <title>A scientific model for the DCJ procedure</title>
-  <p>A <italic>scientific (causal) model</italic> describe the causal
-  assumptions and mechanisms underlying a system, and facilitate
-  inferences about causal relationships from data
-  (<xref alt="Hitchcock 2023" rid="ref-Hitchcock_2023-nb-1" ref-type="bibr">Hitchcock
-  2023</xref>).</p>
-  <p>To aid in the translation and visualization of the assumption
-  underlying the DCJ procedure, Directed Acyclic Graphs (DAG) and
-  Structural Causal Models (SCM)
-  (<xref alt="Pearl 2009" rid="ref-Pearl_2009-nb-1" ref-type="bibr">Pearl
-  2009</xref>;
-  <xref alt="Pearl, Glymour, and Jewell 2016" rid="ref-Pearl_et_al_2016-nb-1" ref-type="bibr">Pearl,
-  Glymour, and Jewell 2016</xref>;
-  <xref alt="Cinelli, Forney, and Pearl 2022" rid="ref-Cinelli_et_al_2021-nb-1" ref-type="bibr">Cinelli,
-  Forney, and Pearl 2022</xref>) are employed.</p>
-</sec>
-</body>
-
-
-
-<back>
-<ref-list>
-  <title>References</title>
-  <ref id="ref-Cinelli_et_al_2021-nb-1">
-    <element-citation publication-type="article-journal">
-      <person-group person-group-type="author">
-        <name><surname>Cinelli</surname><given-names>C.</given-names></name>
-        <name><surname>Forney</surname><given-names>A.</given-names></name>
-        <name><surname>Pearl</surname><given-names>J.</given-names></name>
-      </person-group>
-      <article-title>A crash course in good and bad controls</article-title>
-      <source>SSRN</source>
-      <year iso-8601-date="2022-09">2022</year><month>09</month>
-      <volume></volume>
-      <issue></issue>
-      <uri>\url{https://ssrn.com/abstract=3689437}</uri>
-      <pub-id pub-id-type="doi">http://dx.doi.org/10.2139/ssrn.3689437</pub-id>
-      <fpage></fpage>
-      <lpage></lpage>
-    </element-citation>
-  </ref>
-  <ref id="ref-Pearl_2009-nb-1">
+  <ref id="ref-BradleyTerry2_2012">
     <element-citation publication-type="book">
       <person-group person-group-type="author">
-        <name><surname>Pearl</surname><given-names>J.</given-names></name>
+        <name><surname>Turner</surname><given-names>H.</given-names></name>
+        <name><surname>Firth</surname><given-names>D.</given-names></name>
       </person-group>
-      <source>Causality: Models, reasoning and inference</source>
-      <publisher-name>Cambrige University Press</publisher-name>
-      <year iso-8601-date="2009">2009</year>
-      <isbn></isbn>
-      <uri></uri>
-      <pub-id pub-id-type="doi"></pub-id>
-    </element-citation>
-  </ref>
-  <ref id="ref-Pearl_et_al_2016-nb-1">
-    <element-citation publication-type="book">
-      <person-group person-group-type="author">
-        <name><surname>Pearl</surname><given-names>J.</given-names></name>
-        <name><surname>Glymour</surname><given-names>M.</given-names></name>
-        <name><surname>Jewell</surname><given-names>N.</given-names></name>
-      </person-group>
-      <source>Causal inference in statistics: A primer</source>
-      <publisher-name>John Wiley &amp; Sons, Inc.</publisher-name>
-      <year iso-8601-date="2016">2016</year>
-      <edition></edition>
-      <isbn>978-1-119-18686-1</isbn>
-      <uri></uri>
-      <pub-id pub-id-type="doi"></pub-id>
-    </element-citation>
-  </ref>
-  <ref id="ref-McElreath_2020-nb-1">
-    <element-citation publication-type="book">
-      <person-group person-group-type="author">
-        <name><surname>McElreath</surname><given-names>R.</given-names></name>
-      </person-group>
-      <source>Statistical rethinking: A bayesian course with examples in r and STAN</source>
-      <publisher-name>Chapman; Hall/CRC</publisher-name>
-      <year iso-8601-date="2020">2020</year>
-      <isbn>9780367139919</isbn>
-      <uri></uri>
-      <pub-id pub-id-type="doi"></pub-id>
-    </element-citation>
-  </ref>
-  <ref id="ref-Hitchcock_2023-nb-1">
-    <element-citation publication-type="chapter">
-      <person-group person-group-type="author">
-        <name><surname>Hitchcock</surname><given-names>C.</given-names></name>
-      </person-group>
-      <article-title>Causal Models</article-title>
-      <source>The Stanford encyclopedia of philosophy</source>
-      <person-group person-group-type="editor">
-        <name><surname>Zalta</surname><given-names>Edward N.</given-names></name>
-        <name><surname>Nodelman</surname><given-names>Uri</given-names></name>
-      </person-group>
-      <publisher-name>Metaphysics Research Lab, Stanford University</publisher-name>
-      <year iso-8601-date="2023">2023</year>
-      <edition>Spring 2023</edition>
-      <uri>https://plato.stanford.edu/archives/spr2023/entries/causal-models/</uri>
-    </element-citation>
-  </ref>
-  <ref id="ref-Neal_2020-nb-1">
-    <element-citation>
-      <person-group person-group-type="author">
-        <name><surname>Neal</surname><given-names>B.</given-names></name>
-      </person-group>
-      <article-title>Introduction to causal inference from a machine learning perspective</article-title>
-      <year iso-8601-date="2020">2020</year>
-      <uri>\url{https://www.bradyneal.com/Introduction_to_Causal_Inference-Dec17_2020-Neal.pdf}</uri>
+      <source>Bradley-terry models in r: The BradleyTerry2 package</source>
+      <publisher-name>University of Warwick</publisher-name>
+      <year iso-8601-date="2012">2012</year>
+      <uri>\url{https://cran.r-project.org/web/packages/BradleyTerry2/vignettes/BradleyTerry.pdf}</uri>
     </element-citation>
   </ref>
 </ref-list>
 </back>
 
-
-</sub-article>
-<sub-article article-type="notebook" id="nb-8-nb-2">
+<sub-article article-type="notebook" id="nb-4-nb-1">
 <front-stub>
 <title-group>
 <article-title>Data simulation</article-title>
