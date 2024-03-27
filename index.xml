@@ -131,10 +131,10 @@ editing" vocab-term-identifier="https://credit.niso.org/contributor-roles/writin
 <corresp id="cor-1">JoseManuel.RiveraEspejo@uantwerpen.be</corresp>
 </author-notes>
 
-<pub-date date-type="pub" publication-format="electronic" iso-8601-date="2024-03-23">
+<pub-date date-type="pub" publication-format="electronic" iso-8601-date="2024-03-27">
 <year>2024</year>
 <month>3</month>
-<day>23</day>
+<day>27</day>
 </pub-date>
 
 
@@ -341,7 +341,7 @@ the University of Antwerp (BOF).</funding-statement>
     <fig id="fig-IEflowchart">
       <caption><p>Figure 2: Scientific model for the DCJ
       method</p></caption>
-      <graphic mimetype="image" mime-subtype="png" xlink:href="images/tex/SciMod.png" />
+      <graphic mimetype="image" mime-subtype="png" xlink:href="images/tex/SciMod_extended.png" />
     </fig>
     <p>where <inline-formula><alternatives>
     <tex-math><![CDATA[X_{i}]]></tex-math>
@@ -432,8 +432,13 @@ the University of Antwerp (BOF).</funding-statement>
   </sec>
   <sec id="sec-Sci2StatMod">
     <title>From the scientific to the Bradley-Terry-Luce model</title>
-    <p>Bayesian Bradley-Terry-Luce model (BTL) Turner and Firth
-    (<xref alt="2012" rid="ref-BradleyTerry2_2012" ref-type="bibr">2012</xref>)</p>
+    <p>Bayesian Bradley-Terry-Luce model (BTL model,
+    <xref alt="Bradley and Terry 1952" rid="ref-Bradley_et_al_1952" ref-type="bibr">Bradley
+    and Terry 1952</xref>;
+    <xref alt="Luce 1959" rid="ref-Luce_1959" ref-type="bibr">Luce
+    1959</xref>;
+    <xref alt="Pollitt 2012b" rid="ref-Pollitt_2012b" ref-type="bibr">Pollitt
+    2012b</xref>)</p>
   </sec>
 </sec>
 <sec id="sec-methods">
@@ -882,18 +887,6 @@ the University of Antwerp (BOF).</funding-statement>
       <article-title>Introduction to causal inference from a machine learning perspective</article-title>
       <year iso-8601-date="2020">2020</year>
       <uri>\url{https://www.bradyneal.com/Introduction_to_Causal_Inference-Dec17_2020-Neal.pdf}</uri>
-    </element-citation>
-  </ref>
-  <ref id="ref-BradleyTerry2_2012">
-    <element-citation publication-type="book">
-      <person-group person-group-type="author">
-        <name><surname>Turner</surname><given-names>H.</given-names></name>
-        <name><surname>Firth</surname><given-names>D.</given-names></name>
-      </person-group>
-      <source>Bradley-terry models in r: The BradleyTerry2 package</source>
-      <publisher-name>University of Warwick</publisher-name>
-      <year iso-8601-date="2012">2012</year>
-      <uri>\url{https://cran.r-project.org/web/packages/BradleyTerry2/vignettes/BradleyTerry.pdf}</uri>
     </element-citation>
   </ref>
 </ref-list>
