@@ -201,7 +201,7 @@ To aid in the translation and visualization of the assumption underlying the DCJ
 
 <!-- The research of @Boonen_et_al_2020 offers a clear illustration of these factors and their interplay. In their study, the authors focused on assessing children's  *overall perceived speech quality*. They evaluated this trait using six utterances (sub-units), each originating from $21$ children (units). The utterances were derived from an imitation task, while the children were evenly distributed across three groups: those with cochlear implants, those with hearing aids, and normal hearing children. To establish pairwise comparisons for the $126$ stimuli, a random pairing algorithm was employed, with $20$ comparisons per stimulus. Lastly, a total of $60$ listeners (judges) evaluated $65$ pairs of stimuli. The judges were selected from three distinct groups, each possessing varying degrees of experience with the speech of hearing-impaired children: audiologists, primary school teachers and inexperienced listeners. Ultimately, the authors were interested in assessing if there were differences in the *overall perceived speech quality* between groups of subjects and judges. -->
 
-![ Scientific model for the DCJ method ](images/tex/SciMod.png){#fig-IEflowchart fig-align="center" width=60%}
+![ Scientific model for the DCJ method ](images/tex/SciMod_extended.png){#fig-IEflowchart fig-align="center" width=60%}
 
 where $X_{i}$ describe the background variables for the units ($i = 1, \dots, j, \dots, N$), $Z_{k}$ background variables for the judges ($k = 1, \dots, K$), and $Y_{r}$ the background variables for the sub-units ($r_{i} = 1, \dots, R_{i}$). Furthermore, $\theta_{i}$ denotes the trait of unit $i$, $\gamma_{k}$ the judges' *discrimination* ability, $\theta_{ir_{i}}$ the trait of sub-unit $r_{i}$ from unit $i$, $\delta_{kijr_{ij}}$ the judge $k$ perception of trait differences between objects $r_{i}$ and $r_{j}$, from subjects $i$ and $j$, respectively. Additionally, $e_{k}$, $e_{i}$, and $e_{r_{i}}$ are the judges, units and sub-units idiosyncratic deviations. Lastly, $O_{kijr_{ij}}$ describes the dichotomous *observed* outcome.
 
@@ -233,7 +233,7 @@ $$ {#eq-StructuralModel}
 <!-- 3. Considering the predictability of the phenomena -->
 <!--       its importance in @Shmueli_et_al_2011 and Lawson [-@Lawson_2015, pp. 7] -->
 
-Bayesian Bradley-Terry-Luce model (BTL) [@Bradley_et_al_1952, @Luce_1959, @Pollitt_2012b, @BradleyTerry2_2012]
+Bayesian Bradley-Terry-Luce model [BTL model, @Bradley_et_al_1952; @Luce_1959; @Pollitt_2012b]
 
 <!-- ::: {layout-ncol=2} -->
 
