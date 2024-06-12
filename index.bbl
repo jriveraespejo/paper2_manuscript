@@ -1,0 +1,162 @@
+\begin{thebibliography}{26}
+\expandafter\ifx\csname natexlab\endcsname\relax\def\natexlab#1{#1}\fi
+\providecommand{\url}[1]{\texttt{#1}}
+\providecommand{\href}[2]{#2}
+\providecommand{\path}[1]{#1}
+\providecommand{\DOIprefix}{doi:}
+\providecommand{\ArXivprefix}{arXiv:}
+\providecommand{\URLprefix}{URL: }
+\providecommand{\Pubmedprefix}{pmid:}
+\providecommand{\doi}[1]{\href{http://dx.doi.org/#1}{\path{#1}}}
+\providecommand{\Pubmed}[1]{\href{pmid:#1}{\path{#1}}}
+\providecommand{\bibinfo}[2]{#2}
+\ifx\xfnm\relax \def\xfnm[#1]{\unskip,\space#1}\fi
+%Type = Article
+\bibitem[{Agresti(1992)}]{Agresti_1992}
+\bibinfo{author}{Agresti, A.}, \bibinfo{year}{1992}.
+\newblock \bibinfo{title}{Analysis of ordinal paired comparison data}.
+\newblock \bibinfo{journal}{Journal of the Royal Statistical Society} \bibinfo{volume}{41}, \bibinfo{pages}{287--297}.
+\newblock \URLprefix \url{\url{https://www.jstor.org/stable/2347562}}, \DOIprefix\doi{10.2307/2347562}.
+%Type = Article
+\bibitem[{Bartholomew et~al.(2018)Bartholomew, Nadelson, Goodridge and Reeve}]{Bartholomew_et_al_2018}
+\bibinfo{author}{Bartholomew, S.}, \bibinfo{author}{Nadelson, L.}, \bibinfo{author}{Goodridge, W.}, \bibinfo{author}{Reeve, E.}, \bibinfo{year}{2018}.
+\newblock \bibinfo{title}{Adaptive comparative judgment as a tool for assessing open-ended design problems and model eliciting activities}.
+\newblock \bibinfo{journal}{Educational Assessment} \bibinfo{volume}{23}, \bibinfo{pages}{85--101}.
+\newblock \DOIprefix\doi{10.1080/10627197.2018.1444986}.
+%Type = Incollection
+\bibitem[{Bartholomew and Williams(2020)}]{Bartholomew_et_al_2020}
+\bibinfo{author}{Bartholomew, S.}, \bibinfo{author}{Williams, P.}, \bibinfo{year}{2020}.
+\newblock \bibinfo{title}{Stem skill assessment: An application of adaptive comparative judgment}, in: \bibinfo{editor}{Anderson, J.}, \bibinfo{editor}{Li, Y.} (Eds.), \bibinfo{booktitle}{Integrated Approaches to STEM Education. Advances in STEM Education}. \bibinfo{publisher}{Springer}.
+\newblock \DOIprefix\doi{10.1007/978-3-030-52229-2_18}.
+%Type = Article
+\bibitem[{Boonen et~al.(2020)Boonen, Kloots and Gillis}]{Boonen_et_al_2020}
+\bibinfo{author}{Boonen, N.}, \bibinfo{author}{Kloots, H.}, \bibinfo{author}{Gillis, S.}, \bibinfo{year}{2020}.
+\newblock \bibinfo{title}{Rating the overall speech quality of hearing-impaired children by means of comparative judgements}.
+\newblock \bibinfo{journal}{Journal of Communication Disorders} \bibinfo{volume}{83}, \bibinfo{pages}{1675--1687}.
+\newblock \DOIprefix\doi{10.1016/j.jcomdis.2019.105969}.
+%Type = Article
+\bibitem[{Bradley and Terry(1952)}]{Bradley_et_al_1952}
+\bibinfo{author}{Bradley, R.}, \bibinfo{author}{Terry, M.}, \bibinfo{year}{1952}.
+\newblock \bibinfo{title}{Rank analysis of incomplete block designs: I. the method of paired comparisons}.
+\newblock \bibinfo{journal}{Biometrika} \bibinfo{volume}{39}, \bibinfo{pages}{324--345}.
+\newblock \URLprefix \url{\url{http://www.jstor.com/stable/2334029}}, \DOIprefix\doi{10.2307/2334029}.
+%Type = Misc
+\bibitem[{Bramley(2015)}]{Bramley_2015}
+\bibinfo{author}{Bramley, T.}, \bibinfo{year}{2015}.
+\newblock \bibinfo{title}{Investigating the reliability of adaptive comparative judgment}.
+\newblock \URLprefix \url{\url{http://www.cambridgeassessment.org.uk/Images/232694-investigating-the-reliability-of-adaptive-comparative-judgment.pdf}}. \bibinfo{note}{cambridge Assessment Research Report}.
+%Type = Article
+\bibitem[{Bramley and Vitello(2019)}]{Bramley_et_al_2019}
+\bibinfo{author}{Bramley, T.}, \bibinfo{author}{Vitello, S.}, \bibinfo{year}{2019}.
+\newblock \bibinfo{title}{The effect of adaptivity on the reliability coefficient in adaptive comparative judgement}.
+\newblock \bibinfo{journal}{Assessment in Education: Principles, Policy and Practice} \bibinfo{volume}{71}, \bibinfo{pages}{1--25}.
+\newblock \DOIprefix\doi{10.1080/0969594X.2017.1418734}.
+%Type = Article
+\bibitem[{Cinelli et~al.(2022)Cinelli, Forney and Pearl}]{Cinelli_et_al_2021}
+\bibinfo{author}{Cinelli, C.}, \bibinfo{author}{Forney, A.}, \bibinfo{author}{Pearl, J.}, \bibinfo{year}{2022}.
+\newblock \bibinfo{title}{A crash course in good and bad controls}.
+\newblock \bibinfo{journal}{SSRN} \URLprefix \url{\url{https://ssrn.com/abstract=3689437}}, \DOIprefix\doi{http://dx.doi.org/10.2139/ssrn.3689437}.
+%Type = Article
+\bibitem[{Crompvoets et~al.(2022)Crompvoets, Béguin and Sijtsma}]{Crompvoets_et_al_2022}
+\bibinfo{author}{Crompvoets, E.A.V.}, \bibinfo{author}{Béguin, A.A.}, \bibinfo{author}{Sijtsma, K.}, \bibinfo{year}{2022}.
+\newblock \bibinfo{title}{On the bias and stability of the results of comparative judgment}.
+\newblock \bibinfo{journal}{Frontiers in Education} \bibinfo{volume}{6}.
+\newblock \URLprefix \url{url{https://www.frontiersin.org/articles/10.3389/feduc.2021.788202}}, \DOIprefix\doi{10.3389/feduc.2021.788202}.
+%Type = Article
+\bibitem[{Gijsen et~al.(2021)Gijsen, {van Daal}, Lesterhuis, Gijbels and {De Maeyer}}]{Gijsen_et_al_2021}
+\bibinfo{author}{Gijsen, M.}, \bibinfo{author}{{van Daal}, T.}, \bibinfo{author}{Lesterhuis, M.}, \bibinfo{author}{Gijbels, D.}, \bibinfo{author}{{De Maeyer}, S.}, \bibinfo{year}{2021}.
+\newblock \bibinfo{title}{The complexity of comparative judgments in assessing argumentative writing: An eye tracking study}.
+\newblock \bibinfo{journal}{Frontiers in Education} \bibinfo{volume}{5}.
+\newblock \URLprefix \url{url{https://www.frontiersin.org/articles/10.3389/feduc.2020.582800}}, \DOIprefix\doi{10.3389/feduc.2020.582800}.
+%Type = Incollection
+\bibitem[{Hitchcock(2023)}]{Hitchcock_2023}
+\bibinfo{author}{Hitchcock, C.}, \bibinfo{year}{2023}.
+\newblock \bibinfo{title}{{Causal Models}}, in: \bibinfo{editor}{Zalta, E.N.}, \bibinfo{editor}{Nodelman, U.} (Eds.), \bibinfo{booktitle}{The {Stanford} Encyclopedia of Philosophy}. \bibinfo{edition}{{S}pring 2023} ed.. \bibinfo{publisher}{Metaphysics Research Lab, Stanford University}.
+\newblock \URLprefix \url{https://plato.stanford.edu/archives/spr2023/entries/causal-models/}.
+%Type = Phdthesis
+\bibitem[{Lesterhuis(2018)}]{Lesterhuis_2018}
+\bibinfo{author}{Lesterhuis, M.}, \bibinfo{year}{2018}.
+\newblock \bibinfo{title}{The validity of comparative judgement for assessing text quality: An assessor’s perspective}.
+\newblock Ph.D. thesis. University of Antwerp.
+%Type = Article
+\bibitem[{Luce(1959)}]{Luce_1959}
+\bibinfo{author}{Luce, R.}, \bibinfo{year}{1959}.
+\newblock \bibinfo{title}{On the possible psychophysical laws}.
+\newblock \bibinfo{journal}{The Psychologcal Review} \bibinfo{volume}{66}, \bibinfo{pages}{482--499}.
+\newblock \DOIprefix\doi{10.1037/h0043178}.
+%Type = Article
+\bibitem[{Marshall et~al.(2020)Marshall, Shaw, Hunter and Jones}]{Marshall_et_al_2020}
+\bibinfo{author}{Marshall, N.}, \bibinfo{author}{Shaw, K.}, \bibinfo{author}{Hunter, J.}, \bibinfo{author}{Jones, I.}, \bibinfo{year}{2020}.
+\newblock \bibinfo{title}{Assessment by comparative judgement: An application to secondary statistics and english in new zealand}.
+\newblock \bibinfo{journal}{New Zealand Journal of Educational Studies} \bibinfo{volume}{55}, \bibinfo{pages}{49--71}.
+\newblock \DOIprefix\doi{10.1007/s40841-020-00163-3}.
+%Type = Misc
+\bibitem[{Neal(2020)}]{Neal_2020}
+\bibinfo{author}{Neal, B.}, \bibinfo{year}{2020}.
+\newblock \bibinfo{title}{Introduction to causal inference from a machine learning perspective}.
+\newblock \URLprefix \url{\url{https://www.bradyneal.com/Introduction_to_Causal_Inference-Dec17_2020-Neal.pdf}}. \bibinfo{note}{last accessed 30 April 2024}.
+%Type = Book
+\bibitem[{Pearl(2009)}]{Pearl_2009}
+\bibinfo{author}{Pearl, J.}, \bibinfo{year}{2009}.
+\newblock \bibinfo{title}{Causality: Models, Reasoning and Inference}.
+\newblock \bibinfo{publisher}{Cambrige University Press}.
+%Type = Book
+\bibitem[{Pearl et~al.(2016)Pearl, Glymour and Jewell}]{Pearl_et_al_2016}
+\bibinfo{author}{Pearl, J.}, \bibinfo{author}{Glymour, M.}, \bibinfo{author}{Jewell, N.}, \bibinfo{year}{2016}.
+\newblock \bibinfo{title}{Causal Inference in Statistics: A Primer}.
+\newblock \bibinfo{publisher}{John Wiley \& Sons, Inc.}
+%Type = Article
+\bibitem[{Plackett(1975)}]{Placket_1975}
+\bibinfo{author}{Plackett, R.}, \bibinfo{year}{1975}.
+\newblock \bibinfo{title}{The analysis of permutations}.
+\newblock \bibinfo{journal}{Journal of the Royal Statistical Society} \bibinfo{volume}{24}, \bibinfo{pages}{193--202}.
+\newblock \URLprefix \url{\url{https://www.jstor.org/stable/2346567}}, \DOIprefix\doi{10.2307/2346567}.
+%Type = Article
+\bibitem[{Pollitt(2012a)}]{Pollitt_2012a}
+\bibinfo{author}{Pollitt, A.}, \bibinfo{year}{2012}a.
+\newblock \bibinfo{title}{Comparative judgement for assessment}.
+\newblock \bibinfo{journal}{International Journal of Technology and Design Education} \bibinfo{volume}{22}, \bibinfo{pages}{157–--170}.
+\newblock \DOIprefix\doi{10.1007/s10798-011-9189-x}.
+%Type = Article
+\bibitem[{Pollitt(2012b)}]{Pollitt_2012b}
+\bibinfo{author}{Pollitt, A.}, \bibinfo{year}{2012}b.
+\newblock \bibinfo{title}{The method of adaptive comparative judgement}.
+\newblock \bibinfo{journal}{Assessment in Education: Principles, Policy and Practice} \bibinfo{volume}{19}, \bibinfo{pages}{281–--300}.
+\newblock \DOIprefix\doi{10.1080/0969594X.2012.665354}.
+%Type = Article
+\bibitem[{Thurstone(1927)}]{Thurstone_1927}
+\bibinfo{author}{Thurstone, L.}, \bibinfo{year}{1927}.
+\newblock \bibinfo{title}{A law of comparative judgment}.
+\newblock \bibinfo{journal}{Psychological Review} \bibinfo{volume}{34}, \bibinfo{pages}{482--499}.
+\newblock \DOIprefix\doi{10.1037/h0070288}.
+%Type = Article
+\bibitem[{Tutz(1986)}]{Tutz_1986}
+\bibinfo{author}{Tutz, G.}, \bibinfo{year}{1986}.
+\newblock \bibinfo{title}{Bradley-terry-luce model with an ordered response}.
+\newblock \bibinfo{journal}{Journal of Mathemathical Psychology} \bibinfo{volume}{30}, \bibinfo{pages}{306--316}.
+\newblock \DOIprefix\doi{10.1016/0022-2496(86)90034-9}.
+%Type = Phdthesis
+\bibitem[{{van Daal}(2020)}]{vanDaal_2020}
+\bibinfo{author}{{van Daal}, T.}, \bibinfo{year}{2020}.
+\newblock \bibinfo{title}{Making a choice is not easy?!: Unravelling the task difficulty of comparative judgement to assess student work}.
+\newblock Ph.D. thesis. University of Antwerp.
+%Type = Article
+\bibitem[{{van Daal} et~al.(2019){van Daal}, Lesterhuis, Coertjens, Donche and {De Maeyer}}]{vanDaal_et_al_2016}
+\bibinfo{author}{{van Daal}, T.}, \bibinfo{author}{Lesterhuis, M.}, \bibinfo{author}{Coertjens, L.}, \bibinfo{author}{Donche, V.}, \bibinfo{author}{{De Maeyer}, S.}, \bibinfo{year}{2019}.
+\newblock \bibinfo{title}{Validity of comparative judgement to assess academic writing: examining implications of its holistic character and building on a shared consensus}.
+\newblock \bibinfo{journal}{Assessment in Education: Principles, Policy \& Practice} \bibinfo{volume}{26}, \bibinfo{pages}{59--74}.
+\newblock \DOIprefix\doi{10.1080/0969594X.2016.1253542}.
+%Type = Article
+\bibitem[{{van Daal} et~al.(2017){van Daal}, Lesterhuis, Coertjens, {van de Kamp}, Donche and {De Maeyer}}]{vanDaal_et_al_2017}
+\bibinfo{author}{{van Daal}, T.}, \bibinfo{author}{Lesterhuis, M.}, \bibinfo{author}{Coertjens, L.}, \bibinfo{author}{{van de Kamp}, M.}, \bibinfo{author}{Donche, V.}, \bibinfo{author}{{De Maeyer}, S.}, \bibinfo{year}{2017}.
+\newblock \bibinfo{title}{The complexity of assessing student work using comparative judgment: The moderating role of decision accuracy}.
+\newblock \bibinfo{journal}{Frontiers in Education} \bibinfo{volume}{2}.
+\newblock \URLprefix \url{\url{https://www.frontiersin.org/articles/10.3389/feduc.2017.00044}}, \DOIprefix\doi{10.3389/feduc.2017.00044}.
+%Type = Article
+\bibitem[{Verhavert et~al.(2019)Verhavert, Bouwer, Donche and {De Maeyer}}]{Verhavert_et_al_2019}
+\bibinfo{author}{Verhavert, S.}, \bibinfo{author}{Bouwer, R.}, \bibinfo{author}{Donche, V.}, \bibinfo{author}{{De Maeyer}, S.}, \bibinfo{year}{2019}.
+\newblock \bibinfo{title}{A meta-analysis on the reliability of comparative judgement}.
+\newblock \bibinfo{journal}{Assessment in Education: Principles, Policy and Practice} \bibinfo{volume}{26}, \bibinfo{pages}{541--562}.
+\newblock \DOIprefix\doi{10.1080/0969594X.2019.1602027}.
+
+\end{thebibliography}

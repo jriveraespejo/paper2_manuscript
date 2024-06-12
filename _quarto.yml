@@ -4,56 +4,55 @@ project:
 manuscript:
   article: index.qmd
   notebooks:
+    #- text: Submission Manuscript
+    #  icon: filetype-pdf
+    #  href: manual_renderization/index.pdf
     - notebook: notebooks/data_simulation.qmd
       title: Data Simulation
       download-url: notebooks/data_simulation.qmd
+    - text: Github repository
+      icon: filetype-html
+      href: https://github.com/jriveraespejo/paper2_manuscript.git
+    - text: User-defined functions
+      icon: file-code-fill
+      href: code/user-defined-functions.R
   #resources:
   #  - data/replication_seeds.rds
   meca-bundle: "manuscript-meca.zip"
-  
+    
 execute:
   freeze: auto
 
 format:
   html:
-    google-scholar: true
-    licence: 'CC BY-SA'
     comments:
       hypothesis: true
-    cite-method: citeproc
-    # csl: apa.csl
-    keep-tex: true
-    embed-resources: true
-    # link-external-icon: true
-    # link-external-newwindow: true
-    page-layout: article
-    # theme: default
-    fontsize: 11pt
-    smooth-scroll: true
+    google-scholar: true
+    licence: 'CC BY-SA'
     toc: true
-    toc-depth: 3
-    toc-expand: 1
     toc-title: 'Table of Contents'
     toc-location: left
+    fontsize: 12pt
     number-sections: true
-    # number-depth: 3
-    anchor-sections: true
-    html-math-method: katex
-    citations-hover: true
-    footnotes-hover: true
-    reference-location: document
     code-fold: true
-    code-summary: "Code"
+    code-summary: "code"
     code-overflow: scroll
-    code-tools: true
-    code-annotations: hover
-    code-line-numbers: false
-    code-copy: true
+    #code-annotations: hover
+    #code-line-numbers: false
     tbl-cap-location: top
     fig-cap-location: top
+    default image extension: png
   docx: default
   jats: default
-  jasa-pdf: default
-
-
+  #agu-pdf: default
+  #nature-pdf: 
+  #  journal: sn-apacite
+  #  keep-tex: true
+  elsevier-pdf:
+    keep-tex: true
+    journal:
+      name: Behavior Research Methods
+      formatting: preprint
+      model: 1p
+      cite-style: authoryear
 
