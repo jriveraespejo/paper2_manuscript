@@ -3,6 +3,7 @@
 
 /.quarto/
 /_manuscript
+/_results
 
 /agujournal2019.cls
 /trackchanges.sty
@@ -11,3 +12,4 @@
 .Rdata
 .httr-oauth
 .DS_Store
+.exe

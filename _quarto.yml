@@ -1,17 +1,49 @@
 project:
   type: manuscript
 
+manuscript:
+  article: index.qmd 
+  meca-bundle: "manuscript-meca.zip"
+  code-links:
+     - text: Github repository
+       icon: filetype-html
+       href: https://github.com/jriveraespejo/paper2_manuscript.git
+  #  - text: Submission Manuscript
+  #    icon: filetype-pdf
+  #    href: manual_renderization/index.pdf
+  #  - text: User-defined functions
+  #    icon: file-code-fill
+  #    href: code/user-defined-functions.R
+    
 execute:
   freeze: auto
 
 format:
   html:
-    toc: true
     comments:
       hypothesis: true
+    google-scholar: true
+    licence: 'CC BY-SA'
+    toc: true
+    toc-title: 'Table of Contents'
+    toc-location: left
+    fontsize: 12pt
+    number-sections: true
+    code-fold: true
+    code-summary: "code"
+    code-overflow: scroll
+    #code-annotations: hover
+    #code-line-numbers: false
+    tbl-cap-location: top
+    fig-cap-location: top
+    default image extension: png
   docx: default
   jats: default
-  agu-pdf: default
-
-
+  elsevier-pdf:
+    keep-tex: true
+    journal:
+      name: Psychometrika
+      formatting: preprint
+      model: 1p
+      cite-style: authoryear
 

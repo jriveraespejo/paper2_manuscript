@@ -1,4 +1,4 @@
-## A Quarto Manuscript Template
+## Quarto Manuscript
 
-This is a template repo for generating a manuscript from Quarto that accompanies the tutorial at: [Quarto Manuscripts: RStudio](https://quarto.org/docs/manuscripts/authoring/rstudio.html)
+This is the repository to generate the Quarto manuscript from the study: *Causes and effects in Dichotomous Comparative Judgments: a plausible information-theoretical system of mechanism*.
 
