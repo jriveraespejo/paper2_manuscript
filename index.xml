@@ -9,7 +9,6 @@ and Interchange DTD v1.2 20190208//EN" "JATS-archivearticle1.dtd">
 <journal-id></journal-id>
 
 <journal-title-group>
-<journal-title>Earth and Space Science</journal-title>
 </journal-title-group>
 <issn></issn>
 
@@ -23,42 +22,122 @@ and Interchange DTD v1.2 20190208//EN" "JATS-archivearticle1.dtd">
 
 
 <title-group>
-<article-title>La Palma Earthquakes</article-title>
+<article-title>Causes and effects in Dichotomous Comparative Judgments:
+a plausible information-theoretical system of mechanism</article-title>
 </title-group>
 
 <contrib-group>
 <contrib contrib-type="author" corresp="yes">
-<contrib-id contrib-id-type="orcid">0000-0002-0760-5497</contrib-id>
+<contrib-id contrib-id-type="orcid">0000-0002-3088-2783</contrib-id>
 <name>
-<surname>Purves</surname>
-<given-names>Steve</given-names>
+<surname>Rivera Espejo</surname>
+<given-names>Jose Manuel</given-names>
 </name>
-<string-name>Steve Purves</string-name>
+<string-name>Jose Manuel Rivera Espejo</string-name>
 
-<email>steve@curvenote.com</email>
-<role vocab="https://credit.niso.org" vocab-term="investigation" vocab-term-identifier="https://credit.niso.org/contributor-roles/investigation/">Investigation</role>
-<role vocab="https://credit.niso.org" vocab-term="project
-administration" vocab-term-identifier="https://credit.niso.org/contributor-roles/project-administration/">Project
-administration</role>
-<role vocab="https://credit.niso.org" vocab-term="software" vocab-term-identifier="https://credit.niso.org/contributor-roles/software/">Software</role>
-<role vocab="https://credit.niso.org" vocab-term="visualization" vocab-term-identifier="https://credit.niso.org/contributor-roles/visualization/">Visualization</role>
+<email>JoseManuel.RiveraEspejo@uantwerpen.be</email>
+<role vocab="https://credit.niso.org" vocab-term="conceptualization" vocab-term-identifier="https://credit.niso.org/contributor-roles/conceptualization/">conceptualization</role>
+<role vocab="https://credit.niso.org" vocab-term="methodology" vocab-term-identifier="https://credit.niso.org/contributor-roles/methodology/">methodology</role>
+<role vocab="https://credit.niso.org" vocab-term="data
+curation" vocab-term-identifier="https://credit.niso.org/contributor-roles/data-curation/">data
+curation</role>
+<role vocab="https://credit.niso.org" vocab-term="formal
+analysis" vocab-term-identifier="https://credit.niso.org/contributor-roles/formal-analysis/">analysis</role>
+<role vocab="https://credit.niso.org" vocab-term="writing – original
+draft" vocab-term-identifier="https://credit.niso.org/contributor-roles/writing-original-draft/">writing</role>
+<role vocab="https://credit.niso.org" vocab-term="software" vocab-term-identifier="https://credit.niso.org/contributor-roles/software/">software</role>
+<role vocab="https://credit.niso.org" vocab-term="investigation" vocab-term-identifier="https://credit.niso.org/contributor-roles/investigation/">investigation</role>
+<role vocab="https://credit.niso.org" vocab-term="validation" vocab-term-identifier="https://credit.niso.org/contributor-roles/validation/">validation</role>
+<role vocab="https://credit.niso.org" vocab-term="visualization" vocab-term-identifier="https://credit.niso.org/contributor-roles/visualization/">visualization</role>
 <xref ref-type="aff" rid="aff-1">a</xref>
 <xref ref-type="corresp" rid="cor-1">&#x002A;</xref>
 </contrib>
 <contrib contrib-type="author">
-<contrib-id contrib-id-type="orcid">0000-0002-7859-8394</contrib-id>
+<contrib-id contrib-id-type="orcid">https://orcid.org/0000-0001-9398-9775</contrib-id>
 <name>
-<surname>Cockett</surname>
-<given-names>Rowan</given-names>
+<surname>van Daal</surname>
+<given-names>Tine</given-names>
 </name>
-<string-name>Rowan Cockett</string-name>
+<string-name>Tine van Daal</string-name>
 
+<email>tine.vandaal@uantwerpen.be</email>
+<role vocab="https://credit.niso.org" vocab-term="conceptualization" vocab-term-identifier="https://credit.niso.org/contributor-roles/conceptualization/">conceptualization</role>
+<role vocab="https://credit.niso.org" vocab-term="methodology" vocab-term-identifier="https://credit.niso.org/contributor-roles/methodology/">methodology</role>
+<role vocab="https://credit.niso.org" vocab-term="writing – review &amp;
+editing" vocab-term-identifier="https://credit.niso.org/contributor-roles/writing-review-editing/">editing</role>
+<role vocab="https://credit.niso.org" vocab-term="supervision" vocab-term-identifier="https://credit.niso.org/contributor-roles/supervision/">supervision</role>
+<role vocab="https://credit.niso.org" vocab-term="project
+administration" vocab-term-identifier="https://credit.niso.org/contributor-roles/project-administration/">project
+administration</role>
+<role vocab="https://credit.niso.org" vocab-term="funding
+acquisition" vocab-term-identifier="https://credit.niso.org/contributor-roles/funding-acquisition/">funding</role>
+<role vocab="https://credit.niso.org" vocab-term="investigation" vocab-term-identifier="https://credit.niso.org/contributor-roles/investigation/">investigation</role>
+<role vocab="https://credit.niso.org" vocab-term="resources" vocab-term-identifier="https://credit.niso.org/contributor-roles/resources/">resources</role>
 <xref ref-type="aff" rid="aff-1">a</xref>
+</contrib>
+<contrib contrib-type="author">
+<contrib-id contrib-id-type="orcid">0000-0003-2888-1631</contrib-id>
+<name>
+<surname>De Maeyer</surname>
+<given-names>Sven</given-names>
+</name>
+<string-name>Sven De Maeyer</string-name>
+
+<email>sven.demaeyer@uantwerpen.be</email>
+<role vocab="https://credit.niso.org" vocab-term="conceptualization" vocab-term-identifier="https://credit.niso.org/contributor-roles/conceptualization/">conceptualization</role>
+<role vocab="https://credit.niso.org" vocab-term="methodology" vocab-term-identifier="https://credit.niso.org/contributor-roles/methodology/">methodology</role>
+<role vocab="https://credit.niso.org" vocab-term="writing – review &amp;
+editing" vocab-term-identifier="https://credit.niso.org/contributor-roles/writing-review-editing/">editing</role>
+<role vocab="https://credit.niso.org" vocab-term="supervision" vocab-term-identifier="https://credit.niso.org/contributor-roles/supervision/">supervision</role>
+<role vocab="https://credit.niso.org" vocab-term="project
+administration" vocab-term-identifier="https://credit.niso.org/contributor-roles/project-administration/">project
+administration</role>
+<role vocab="https://credit.niso.org" vocab-term="funding
+acquisition" vocab-term-identifier="https://credit.niso.org/contributor-roles/funding-acquisition/">funding</role>
+<role vocab="https://credit.niso.org" vocab-term="investigation" vocab-term-identifier="https://credit.niso.org/contributor-roles/investigation/">investigation</role>
+<role vocab="https://credit.niso.org" vocab-term="resources" vocab-term-identifier="https://credit.niso.org/contributor-roles/resources/">resources</role>
+<xref ref-type="aff" rid="aff-1">a</xref>
+</contrib>
+<contrib contrib-type="author">
+<name>
+<surname>Gillis</surname>
+<given-names>Steven</given-names>
+</name>
+<string-name>Steven Gillis</string-name>
+
+<email>steven.gillis@uantwerpen.be</email>
+<role vocab="https://credit.niso.org" vocab-term="conceptualization" vocab-term-identifier="https://credit.niso.org/contributor-roles/conceptualization/">conceptualization</role>
+<role vocab="https://credit.niso.org" vocab-term="methodology" vocab-term-identifier="https://credit.niso.org/contributor-roles/methodology/">methodology</role>
+<role vocab="https://credit.niso.org" vocab-term="writing – review &amp;
+editing" vocab-term-identifier="https://credit.niso.org/contributor-roles/writing-review-editing/">editing</role>
+<role vocab="https://credit.niso.org" vocab-term="supervision" vocab-term-identifier="https://credit.niso.org/contributor-roles/supervision/">supervision</role>
+<role vocab="https://credit.niso.org" vocab-term="project
+administration" vocab-term-identifier="https://credit.niso.org/contributor-roles/project-administration/">project
+administration</role>
+<role vocab="https://credit.niso.org" vocab-term="funding
+acquisition" vocab-term-identifier="https://credit.niso.org/contributor-roles/funding-acquisition/">funding</role>
+<role vocab="https://credit.niso.org" vocab-term="investigation" vocab-term-identifier="https://credit.niso.org/contributor-roles/investigation/">investigation</role>
+<role vocab="https://credit.niso.org" vocab-term="resources" vocab-term-identifier="https://credit.niso.org/contributor-roles/resources/">resources</role>
+<xref ref-type="aff" rid="aff-2">b</xref>
 </contrib>
 </contrib-group>
 <aff id="aff-1">
+<institution content-type="dept">Education sciences</institution>
 <institution-wrap>
-<institution>Curvenote</institution>
+<institution>University of Antwerp</institution>
+</institution-wrap>
+
+
+
+
+
+
+
+</aff>
+<aff id="aff-2">
+<institution content-type="dept">Linguistics</institution>
+<institution-wrap>
+<institution>University of Antwerp</institution>
 </institution-wrap>
 
 
@@ -69,7 +148,7 @@ administration</role>
 
 </aff>
 <author-notes>
-<corresp id="cor-1">steve@curvenote.com</corresp>
+<corresp id="cor-1">JoseManuel.RiveraEspejo@uantwerpen.be</corresp>
 </author-notes>
 
 <pub-date date-type="pub" publication-format="electronic" iso-8601-date="2024-07-16">
@@ -88,18 +167,54 @@ administration</role>
 
 
 <abstract>
-<p>In September 2021, a significant jump in seismic activity on the
-island of La Palma (Canary Islands, Spain) signaled the start of a
-volcanic crisis that still continues at the time of writing. Earthquake
-data is continually collected and published by the Instituto Geográphico
-Nacional (IGN). …</p>
+<p>Dichotomous Comparative Judgment (DCJ, Pollitt
+(<xref alt="2012a" rid="ref-Pollitt_2012a" ref-type="bibr">2012a</xref>),
+Pollitt
+(<xref alt="2012b" rid="ref-Pollitt_2012b" ref-type="bibr">2012b</xref>))
+requires judges to evaluate the relative manifestation of traits between
+pairs of stimuli, resulting in a dichotomous outcome indicating which
+stimulus exhibits the trait more strongly. Research has demonstrated
+DCJ’s effectiveness and reliability in various domains
+(<xref alt="Pollitt 2012b" rid="ref-Pollitt_2012b" ref-type="bibr">Pollitt
+2012b</xref>;
+<xref alt="Bartholomew et al. 2018" rid="ref-Bartholomew_et_al_2018" ref-type="bibr">Bartholomew
+et al. 2018</xref>;
+<xref alt="van Daal et al. 2019" rid="ref-vanDaal_et_al_2016" ref-type="bibr">van
+Daal et al. 2019</xref>;
+<xref alt="Lesterhuis 2018" rid="ref-Lesterhuis_2018" ref-type="bibr">Lesterhuis
+2018</xref>;
+<xref alt="Bartholomew and Williams 2020" rid="ref-Bartholomew_et_al_2020" ref-type="bibr">Bartholomew
+and Williams 2020</xref>;
+<xref alt="Boonen, Kloots, and Gillis 2020" rid="ref-Boonen_et_al_2020" ref-type="bibr">Boonen,
+Kloots, and Gillis 2020</xref>). However, the literature lacks a clear
+and transparent depiction of the plausible mechanisms underlying DCJ
+data. Specifically, there is no detail explanation of how the different
+assessment factors can potentially influence the observed DCJ data. This
+study aims to fill this gap by applying the framework of causal analysis
+and Directed Acyclic Graphs (DAG; Pearl
+(<xref alt="2009" rid="ref-Pearl_2009" ref-type="bibr">2009</xref>)).
+Using this framework, the study will construct a scientific model to
+elucidate the causal assumptions and mechanisms inherent the system.
+This model will enable researchers to draw inferences about causal
+relationships from DCJ data. Subsequently, the study will translate this
+model into a probabilistic statistical model, aiming to derive
+statistical estimands for different targets of inference. The outcomes
+of this study will inform the planning of DCJ experiments and hold
+significance for researchers or analysts involved in education and
+assessment procedures who implement the DCJ methodology.</p>
 </abstract>
 <kwd-group kwd-group-type="author">
-<kwd>La Palma</kwd>
-<kwd>Earthquakes</kwd>
+<kwd>comparative judgement</kwd>
+<kwd>directed acycilc graph</kwd>
+<kwd>causal analysis</kwd>
+<kwd>probabilistic statistics</kwd>
 </kwd-group>
 
 
+<funding-group>
+<funding-statement>The project was founded through the Research Fund of
+the University of Antwerp (BOF).</funding-statement>
+</funding-group>
 
 
 </article-meta>
@@ -107,369 +222,198 @@ Nacional (IGN). …</p>
 </front>
 
 <body>
-<sec id="introduction">
-  <title>1 Introduction</title>
-  <fig id="fig-timeline">
-    <caption><p>Figure 1: Timeline of recent earthquakes on La
-    Palma</p></caption>
-    <graphic mimetype="image" mime-subtype="png" xlink:href="index_files/figure-jats/fig-timeline-1.png" />
-  </fig>
-  <p>Based on data up to and including 1971, eruptions on La Palma
-  happen every 79.8 years on average.</p>
-  <p>Studies of the magma systems feeding the volcano, such as Marrero
-  et al.
-  (<xref alt="2019" rid="ref-marrero2019" ref-type="bibr">2019</xref>),
-  have proposed that there are two main magma reservoirs feeding the
-  Cumbre Vieja volcano; one in the mantle (30-40km depth) which charges
-  and in turn feeds a shallower crustal reservoir (10-20km depth).</p>
-  <p>Eight eruptions have been recorded since the late 1400s
-  (<xref alt="Figure 1" rid="fig-timeline">Figure 1</xref>).</p>
-  <p>Data and methods are discussed in
-  <xref alt="Section 2" rid="sec-data-methods">Section 2</xref>.</p>
-  <p>Let <inline-formula><alternatives>
-  <tex-math><![CDATA[x]]></tex-math>
-  <mml:math display="inline" xmlns:mml="http://www.w3.org/1998/Math/MathML"><mml:mi>x</mml:mi></mml:math></alternatives></inline-formula>
-  denote the number of eruptions in a year. Then,
-  <inline-formula><alternatives>
-  <tex-math><![CDATA[x]]></tex-math>
-  <mml:math display="inline" xmlns:mml="http://www.w3.org/1998/Math/MathML"><mml:mi>x</mml:mi></mml:math></alternatives></inline-formula>
-  can be modeled by a Poisson distribution</p>
-  <p><styled-content id="eq-poisson"><disp-formula><alternatives>
-  <tex-math><![CDATA[
-  p(x) = \frac{e^{-\lambda} \lambda^{x}}{x !}
-   \qquad(1)]]></tex-math>
-  <mml:math display="block" xmlns:mml="http://www.w3.org/1998/Math/MathML"><mml:mrow><mml:mi>p</mml:mi><mml:mrow><mml:mo stretchy="true" form="prefix">(</mml:mo><mml:mi>x</mml:mi><mml:mo stretchy="true" form="postfix">)</mml:mo></mml:mrow><mml:mo>=</mml:mo><mml:mfrac><mml:mrow><mml:msup><mml:mi>e</mml:mi><mml:mrow><mml:mi>−</mml:mi><mml:mi>λ</mml:mi></mml:mrow></mml:msup><mml:msup><mml:mi>λ</mml:mi><mml:mi>x</mml:mi></mml:msup></mml:mrow><mml:mrow><mml:mi>x</mml:mi><mml:mi>!</mml:mi></mml:mrow></mml:mfrac><mml:mspace width="2.0em"></mml:mspace><mml:mrow><mml:mo stretchy="true" form="prefix">(</mml:mo><mml:mn>1</mml:mn><mml:mo stretchy="true" form="postfix">)</mml:mo></mml:mrow></mml:mrow></mml:math></alternatives></disp-formula></styled-content></p>
-  <p>where <inline-formula><alternatives>
-  <tex-math><![CDATA[\lambda]]></tex-math>
-  <mml:math display="inline" xmlns:mml="http://www.w3.org/1998/Math/MathML"><mml:mi>λ</mml:mi></mml:math></alternatives></inline-formula>
-  is the rate of eruptions per year. Using
-  <xref alt="Equation 1" rid="eq-poisson">Equation 1</xref>, the
-  probability of an eruption in the next <inline-formula><alternatives>
-  <tex-math><![CDATA[t]]></tex-math>
-  <mml:math display="inline" xmlns:mml="http://www.w3.org/1998/Math/MathML"><mml:mi>t</mml:mi></mml:math></alternatives></inline-formula>
-  years can be calculated.</p>
-  <fig id="tbl-history">
-    <caption><p>Table 1: Recent historic eruptions on La
-    Palma</p></caption>
-    <table-wrap>
-      <table>
-        <thead>
-          <tr>
-            <th>Name</th>
-            <th>Year</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td>Current</td>
-            <td>2021</td>
-          </tr>
-          <tr>
-            <td>Teneguía</td>
-            <td>1971</td>
-          </tr>
-          <tr>
-            <td>Nambroque</td>
-            <td>1949</td>
-          </tr>
-          <tr>
-            <td>El Charco</td>
-            <td>1712</td>
-          </tr>
-          <tr>
-            <td>Volcán San Antonio</td>
-            <td>1677</td>
-          </tr>
-          <tr>
-            <td>Volcán San Martin</td>
-            <td>1646</td>
-          </tr>
-          <tr>
-            <td>Tajuya near El Paso</td>
-            <td>1585</td>
-          </tr>
-          <tr>
-            <td>Montaña Quemada</td>
-            <td>1492</td>
-          </tr>
-        </tbody>
-      </table>
-    </table-wrap>
-  </fig>
-  <p><xref alt="Table 1" rid="tbl-history">Table 1</xref> summarises the
-  eruptions recorded since the colonization of the islands by Europeans
-  in the late 1400s.</p>
-  <fig id="fig-map">
-    <caption><p>Figure 2: Map of La Palma</p></caption>
-    <graphic mimetype="image" mime-subtype="png" xlink:href="images/la-palma-map.png" />
-  </fig>
-  <p>La Palma is one of the west most islands in the Volcanic
-  Archipelago of the Canary Islands
-  (<xref alt="Figure 2" rid="fig-map">Figure 2</xref>).</p>
-  <fig id="fig-spatial-plot">
-    <caption><p>Figure 3: Locations of earthquakes on La Palma since
-    2017</p></caption>
-    <graphic mimetype="image" mime-subtype="png" xlink:href="index_files/figure-jats/notebooks-explore-earthquakes-fig-spatial-plot-output-1.png" />
-  </fig>
-  <p><xref alt="Figure 3" rid="fig-spatial-plot">Figure 3</xref> shows
-  the location of recent Earthquakes on La Palma.</p>
+<sec id="sec-introduction">
+  <title>Introduction</title>
 </sec>
-<sec id="sec-data-methods">
-  <title>2 Data &amp; Methods</title>
+<sec id="sec-TheoreticalFramework">
+  <title>Theoretical framework</title>
+  <sec id="sec-ResearchQuestions">
+    <title>Research questions and their estimands</title>
+  </sec>
+  <sec id="sec-SciMod">
+    <title>A scientific model for the DCJ procedure</title>
+  </sec>
+  <sec id="sec-Sci2StatMod">
+    <title>From the scientific to the Bradley-Terry-Luce model</title>
+  </sec>
 </sec>
-<sec id="conclusion">
-  <title>3 Conclusion</title>
+<sec id="sec-discussion">
+  <title>Discussion</title>
+  <sec id="sec-LFR">
+    <title>Limitations and further research</title>
+  </sec>
+</sec>
+<sec id="sec-conclusion">
+  <title>Conclusion</title>
+  <p></p>
+</sec>
+<sec id="declarations">
+  <title>Declarations</title>
+  <p><bold>Funding:</bold> The project was founded through the Research
+  Fund of the University of Antwerp (BOF).</p>
+  <p><bold>Conflict of interests:</bold> The authors declare no conflict
+  of interest.</p>
+  <p><bold>Ethics approval:</bold> The University of Antwerp Research
+  Ethics Committee has confirmed that no ethical approval is
+  required.</p>
+  <p><bold>Consent to participate:</bold> Not applicable</p>
+  <p><bold>Consent for publication:</bold> All authors have read and
+  agreed to the published version of the manuscript.</p>
+  <p><bold>Availability of data and materials:</bold> No data was
+  utilized in this study</p>
+  <p><bold>Code availability:</bold> All the code utilized in this
+  research is available in the different notebooks and
+  <monospace>CODE LINKS</monospace> referenced in the digital document.
+  The digital document is located at:
+  <ext-link ext-link-type="uri" xlink:href="https://jriveraespejo.github.io/paper2_manuscript/">https://jriveraespejo.github.io/paper2_manuscript/</ext-link>.</p>
+  <p><bold>Authors’ contributions:</bold>
+  <italic>Conceptualization:</italic> S.G., S.dM., and J.M.R.E;
+  <italic>Data curation:</italic> J.M.R.E.; <italic>Formal
+  Analysis:</italic> J.M.R.E.; <italic>Funding acquisition:</italic>
+  S.G. and S.dM; <italic>Investigation:</italic> S.G.;
+  <italic>Methodology:</italic> S.G., S.dM., and J.M.R.E;
+  <italic>Project administration:</italic> S.G. and S.dM.;
+  <italic>Resources:</italic> S.G. and S.dM.; <italic>Software:
+  J.M.R.E.</italic>; <italic>Supervision:</italic> S.G. and S.dM.;
+  <italic>Validation:</italic> J.M.R.E.; <italic>Visualization:</italic>
+  J.M.R.E.; <italic>Writing - original draft:</italic> J.M.R.E.;
+  <italic>Writing - review &amp; editing:</italic> S.G. and S.dM.</p>
+  <p></p>
 </sec>
 </body>
 
 <back>
 <ref-list>
   <title>References</title>
-  <ref id="ref-marrero2019">
+  <ref id="ref-Pollitt_2012a">
     <element-citation publication-type="article-journal">
       <person-group person-group-type="author">
-        <name><surname>Marrero</surname><given-names>José</given-names></name>
-        <name><surname>García</surname><given-names>Alicia</given-names></name>
-        <name><surname>Berrocoso</surname><given-names>Manuel</given-names></name>
-        <name><surname>Llinares</surname><given-names>Ángeles</given-names></name>
-        <name><surname>Rodríguez-Losada</surname><given-names>Antonio</given-names></name>
-        <name><surname>Ortiz</surname><given-names>R.</given-names></name>
+        <name><surname>Pollitt</surname><given-names>A.</given-names></name>
       </person-group>
-      <article-title>Strategies for the development of volcanic hazard maps in monogenetic volcanic fields: The example of La Palma (Canary Islands)</article-title>
-      <source>Journal of Applied Volcanology</source>
-      <year iso-8601-date="2019-07">2019</year><month>07</month>
-      <volume>8</volume>
-      <pub-id pub-id-type="doi">10.1186/s13617-019-0085-5</pub-id>
-      <fpage></fpage>
-      <lpage></lpage>
+      <article-title>Comparative judgement for assessment</article-title>
+      <source>International Journal of Technology and Design Education</source>
+      <year iso-8601-date="2012">2012</year>
+      <volume>22</volume>
+      <issue>2</issue>
+      <uri></uri>
+      <pub-id pub-id-type="doi">10.1007/s10798-011-9189-x</pub-id>
+      <fpage>157</fpage>
+      <lpage>170</lpage>
     </element-citation>
   </ref>
-</ref-list>
-</back>
-
-<sub-article article-type="notebook" id="nb-8-nb-article">
-<front-stub>
-<title-group>
-<article-title>La Palma Earthquakes</article-title>
-</title-group>
-<contrib-group>
-<contrib contrib-type="author" corresp="yes">
-<contrib-id contrib-id-type="orcid">0000-0002-0760-5497</contrib-id>
-<name>
-<surname>Purves</surname>
-<given-names>Steve</given-names>
-</name>
-<string-name>Steve Purves</string-name>
-
-<email>steve@curvenote.com</email>
-<role vocab="https://credit.niso.org" vocab-term="investigation" vocab-term-identifier="https://credit.niso.org/contributor-roles/investigation/">Investigation</role>
-<role vocab="https://credit.niso.org" vocab-term="project
-administration" vocab-term-identifier="https://credit.niso.org/contributor-roles/project-administration/">Project
-administration</role>
-<role vocab="https://credit.niso.org" vocab-term="software" vocab-term-identifier="https://credit.niso.org/contributor-roles/software/">Software</role>
-<role vocab="https://credit.niso.org" vocab-term="visualization" vocab-term-identifier="https://credit.niso.org/contributor-roles/visualization/">Visualization</role>
-<xref ref-type="aff" rid="aff-1-nb-article">a</xref>
-<xref ref-type="corresp" rid="cor-1-nb-article">&#x002A;</xref>
-</contrib>
-<contrib contrib-type="author">
-<contrib-id contrib-id-type="orcid">0000-0002-7859-8394</contrib-id>
-<name>
-<surname>Cockett</surname>
-<given-names>Rowan</given-names>
-</name>
-<string-name>Rowan Cockett</string-name>
-
-<xref ref-type="aff" rid="aff-1-nb-article">a</xref>
-</contrib>
-</contrib-group>
-<aff id="aff-1-nb-article">
-<institution-wrap>
-<institution>Curvenote</institution>
-</institution-wrap>
-
-
-
-
-
-
-
-</aff>
-<author-notes>
-<corresp id="cor-1-nb-article">steve@curvenote.com</corresp>
-</author-notes>
-<abstract>
-<p>In September 2021, a significant jump in seismic activity on the
-island of La Palma (Canary Islands, Spain) signaled the start of a
-volcanic crisis that still continues at the time of writing. Earthquake
-data is continually collected and published by the Instituto Geográphico
-Nacional (IGN). …</p>
-</abstract>
-</front-stub>
-
-<body>
-<sec id="introduction-nb-article">
-  <title>1 Introduction</title>
-  <sec specific-use="notebook-content">
-  <code language="r script">eruptions &lt;- c(1492, 1585, 1646, 1677, 1712, 1949, 1971, 2021)
-n_eruptions &lt;- length(eruptions)</code>
-  </sec>
-  <sec id="cell-fig-timeline-nb-article" specific-use="notebook-content">
-  <code language="r script">par(mar = c(3, 1, 1, 1) + 0.1)
-plot(eruptions, rep(0, n_eruptions), 
-  pch = &quot;|&quot;, axes = FALSE)
-axis(1)
-box()</code>
-  <fig id="fig-timeline-nb-article">
-    <caption><p>Figure 1: Timeline of recent earthquakes on La
-    Palma</p></caption>
-    <graphic mimetype="image" mime-subtype="png" xlink:href="index_files/figure-jats/fig-timeline-1.png" />
-  </fig>
-  </sec>
-  <sec specific-use="notebook-content">
-  <code language="r script">avg_years_between_eruptions &lt;- mean(diff(eruptions[-n_eruptions]))
-avg_years_between_eruptions</code>
-  <boxed-text>
-    <preformat>[1] 79.83333</preformat>
-  </boxed-text>
-  </sec>
-  <p>Based on data up to and including 1971, eruptions on La Palma
-  happen every 79.8 years on average.</p>
-  <p>Studies of the magma systems feeding the volcano, such as Marrero
-  et al.
-  (<xref alt="2019" rid="ref-marrero2019-nb-article" ref-type="bibr">2019</xref>),
-  have proposed that there are two main magma reservoirs feeding the
-  Cumbre Vieja volcano; one in the mantle (30-40km depth) which charges
-  and in turn feeds a shallower crustal reservoir (10-20km depth).</p>
-  <p>Eight eruptions have been recorded since the late 1400s
-  (<xref alt="Figure 1" rid="fig-timeline-nb-article">Figure 1</xref>).</p>
-  <p>Data and methods are discussed in
-  <xref alt="Section 2" rid="sec-data-methods-nb-article">Section 2</xref>.</p>
-  <p>Let <inline-formula><alternatives>
-  <tex-math><![CDATA[x]]></tex-math>
-  <mml:math display="inline" xmlns:mml="http://www.w3.org/1998/Math/MathML"><mml:mi>x</mml:mi></mml:math></alternatives></inline-formula>
-  denote the number of eruptions in a year. Then,
-  <inline-formula><alternatives>
-  <tex-math><![CDATA[x]]></tex-math>
-  <mml:math display="inline" xmlns:mml="http://www.w3.org/1998/Math/MathML"><mml:mi>x</mml:mi></mml:math></alternatives></inline-formula>
-  can be modeled by a Poisson distribution</p>
-  <p><styled-content id="eq-poisson-nb-article"><disp-formula><alternatives>
-  <tex-math><![CDATA[
-  p(x) = \frac{e^{-\lambda} \lambda^{x}}{x !}
-   \qquad(1)]]></tex-math>
-  <mml:math display="block" xmlns:mml="http://www.w3.org/1998/Math/MathML"><mml:mrow><mml:mi>p</mml:mi><mml:mrow><mml:mo stretchy="true" form="prefix">(</mml:mo><mml:mi>x</mml:mi><mml:mo stretchy="true" form="postfix">)</mml:mo></mml:mrow><mml:mo>=</mml:mo><mml:mfrac><mml:mrow><mml:msup><mml:mi>e</mml:mi><mml:mrow><mml:mi>−</mml:mi><mml:mi>λ</mml:mi></mml:mrow></mml:msup><mml:msup><mml:mi>λ</mml:mi><mml:mi>x</mml:mi></mml:msup></mml:mrow><mml:mrow><mml:mi>x</mml:mi><mml:mi>!</mml:mi></mml:mrow></mml:mfrac><mml:mspace width="2.0em"></mml:mspace><mml:mrow><mml:mo stretchy="true" form="prefix">(</mml:mo><mml:mn>1</mml:mn><mml:mo stretchy="true" form="postfix">)</mml:mo></mml:mrow></mml:mrow></mml:math></alternatives></disp-formula></styled-content></p>
-  <p>where <inline-formula><alternatives>
-  <tex-math><![CDATA[\lambda]]></tex-math>
-  <mml:math display="inline" xmlns:mml="http://www.w3.org/1998/Math/MathML"><mml:mi>λ</mml:mi></mml:math></alternatives></inline-formula>
-  is the rate of eruptions per year. Using
-  <xref alt="Equation 1" rid="eq-poisson-nb-article">Equation 1</xref>, the
-  probability of an eruption in the next <inline-formula><alternatives>
-  <tex-math><![CDATA[t]]></tex-math>
-  <mml:math display="inline" xmlns:mml="http://www.w3.org/1998/Math/MathML"><mml:mi>t</mml:mi></mml:math></alternatives></inline-formula>
-  years can be calculated.</p>
-  <fig id="tbl-history-nb-article">
-    <caption><p>Table 1: Recent historic eruptions on La
-    Palma</p></caption>
-    <table-wrap>
-      <table>
-        <thead>
-          <tr>
-            <th>Name</th>
-            <th>Year</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td>Current</td>
-            <td>2021</td>
-          </tr>
-          <tr>
-            <td>Teneguía</td>
-            <td>1971</td>
-          </tr>
-          <tr>
-            <td>Nambroque</td>
-            <td>1949</td>
-          </tr>
-          <tr>
-            <td>El Charco</td>
-            <td>1712</td>
-          </tr>
-          <tr>
-            <td>Volcán San Antonio</td>
-            <td>1677</td>
-          </tr>
-          <tr>
-            <td>Volcán San Martin</td>
-            <td>1646</td>
-          </tr>
-          <tr>
-            <td>Tajuya near El Paso</td>
-            <td>1585</td>
-          </tr>
-          <tr>
-            <td>Montaña Quemada</td>
-            <td>1492</td>
-          </tr>
-        </tbody>
-      </table>
-    </table-wrap>
-  </fig>
-  <p><xref alt="Table 1" rid="tbl-history-nb-article">Table 1</xref> summarises the
-  eruptions recorded since the colonization of the islands by Europeans
-  in the late 1400s.</p>
-  <fig id="fig-map-nb-article">
-    <caption><p>Figure 2: Map of La Palma</p></caption>
-    <graphic mimetype="image" mime-subtype="png" xlink:href="images/la-palma-map.png" />
-  </fig>
-  <p>La Palma is one of the west most islands in the Volcanic
-  Archipelago of the Canary Islands
-  (<xref alt="Figure 2" rid="fig-map-nb-article">Figure 2</xref>).</p>
-  <sec id="cell-fig-spatial-plot-nb-article" specific-use="notebook-content">
-  <code language="python">la_palma |&gt; 
-  ggplot(aes(Longitude, Latitude)) +
-  geom_point(aes(color = Magnitude, size = 40-`Depth(km)`)) +
-  scale_color_viridis_c(direction = -1) + 
-  scale_size(range = c(0.5, 2), guide = &quot;none&quot;) +
-  theme_bw()</code>
-  <boxed-text>
-    <fig id="fig-spatial-plot-nb-article">
-      <caption><p>Figure 3: Locations of earthquakes on La Palma since
-      2017</p></caption>
-      <graphic mimetype="image" mime-subtype="png" xlink:href="index_files/figure-jats/notebooks-explore-earthquakes-fig-spatial-plot-output-1.png" />
-    </fig>
-  </boxed-text>
-  </sec>
-  <p><xref alt="Figure 3" rid="fig-spatial-plot-nb-article">Figure 3</xref> shows
-  the location of recent Earthquakes on La Palma.</p>
-</sec>
-<sec id="sec-data-methods-nb-article">
-  <title>2 Data &amp; Methods</title>
-</sec>
-<sec id="conclusion-nb-article">
-  <title>3 Conclusion</title>
-</sec>
-</body>
-
-
-
-<back>
-<ref-list>
-  <title>References</title>
-  <ref id="ref-marrero2019-nb-article">
+  <ref id="ref-Pollitt_2012b">
     <element-citation publication-type="article-journal">
       <person-group person-group-type="author">
-        <name><surname>Marrero</surname><given-names>José</given-names></name>
-        <name><surname>García</surname><given-names>Alicia</given-names></name>
-        <name><surname>Berrocoso</surname><given-names>Manuel</given-names></name>
-        <name><surname>Llinares</surname><given-names>Ángeles</given-names></name>
-        <name><surname>Rodríguez-Losada</surname><given-names>Antonio</given-names></name>
-        <name><surname>Ortiz</surname><given-names>R.</given-names></name>
+        <name><surname>Pollitt</surname><given-names>A.</given-names></name>
       </person-group>
-      <article-title>Strategies for the development of volcanic hazard maps in monogenetic volcanic fields: The example of La Palma (Canary Islands)</article-title>
-      <source>Journal of Applied Volcanology</source>
-      <year iso-8601-date="2019-07">2019</year><month>07</month>
-      <volume>8</volume>
-      <pub-id pub-id-type="doi">10.1186/s13617-019-0085-5</pub-id>
+      <article-title>The method of adaptive comparative judgement</article-title>
+      <source>Assessment in Education: Principles, Policy and Practice</source>
+      <year iso-8601-date="2012">2012</year>
+      <volume>19</volume>
+      <issue>3</issue>
+      <uri></uri>
+      <pub-id pub-id-type="doi">10.1080/0969594X.2012.665354</pub-id>
+      <fpage>281</fpage>
+      <lpage>300</lpage>
+    </element-citation>
+  </ref>
+  <ref id="ref-vanDaal_et_al_2016">
+    <element-citation publication-type="article-journal">
+      <person-group person-group-type="author">
+        <name><surname>van Daal</surname><given-names>T.</given-names></name>
+        <name><surname>Lesterhuis</surname><given-names>M.</given-names></name>
+        <name><surname>Coertjens</surname><given-names>L.</given-names></name>
+        <name><surname>Donche</surname><given-names>V.</given-names></name>
+        <name><surname>De Maeyer</surname><given-names>S.</given-names></name>
+      </person-group>
+      <article-title>Validity of comparative judgement to assess academic writing: Examining implications of its holistic character and building on a shared consensus</article-title>
+      <source>Assessment in Education: Principles, Policy &amp; Practice</source>
+      <year iso-8601-date="2019">2019</year>
+      <volume>26</volume>
+      <issue>1</issue>
+      <pub-id pub-id-type="doi">10.1080/0969594X.2016.1253542</pub-id>
+      <fpage>59</fpage>
+      <lpage>74</lpage>
+    </element-citation>
+  </ref>
+  <ref id="ref-Bartholomew_et_al_2018">
+    <element-citation publication-type="article-journal">
+      <person-group person-group-type="author">
+        <name><surname>Bartholomew</surname><given-names>S.</given-names></name>
+        <name><surname>Nadelson</surname><given-names>L.</given-names></name>
+        <name><surname>Goodridge</surname><given-names>W.</given-names></name>
+        <name><surname>Reeve</surname><given-names>E.</given-names></name>
+      </person-group>
+      <article-title>Adaptive comparative judgment as a tool for assessing open-ended design problems and model eliciting activities</article-title>
+      <source>Educational Assessment</source>
+      <publisher-name>Routledge</publisher-name>
+      <year iso-8601-date="2018">2018</year>
+      <volume>23</volume>
+      <issue>2</issue>
+      <uri></uri>
+      <pub-id pub-id-type="doi">10.1080/10627197.2018.1444986</pub-id>
+      <fpage>85</fpage>
+      <lpage>101</lpage>
+    </element-citation>
+  </ref>
+  <ref id="ref-Boonen_et_al_2020">
+    <element-citation publication-type="article-journal">
+      <person-group person-group-type="author">
+        <name><surname>Boonen</surname><given-names>N.</given-names></name>
+        <name><surname>Kloots</surname><given-names>H.</given-names></name>
+        <name><surname>Gillis</surname><given-names>S.</given-names></name>
+      </person-group>
+      <article-title>Rating the overall speech quality of hearing-impaired children by means of comparative judgements</article-title>
+      <source>Journal of Communication Disorders</source>
+      <year iso-8601-date="2020">2020</year>
+      <volume>83</volume>
+      <issue></issue>
+      <uri></uri>
+      <pub-id pub-id-type="doi">10.1016/j.jcomdis.2019.105969</pub-id>
+      <fpage>1675</fpage>
+      <lpage>1687</lpage>
+    </element-citation>
+  </ref>
+  <ref id="ref-Pearl_2009">
+    <element-citation publication-type="book">
+      <person-group person-group-type="author">
+        <name><surname>Pearl</surname><given-names>J.</given-names></name>
+      </person-group>
+      <source>Causality: Models, reasoning and inference</source>
+      <publisher-name>Cambrige University Press</publisher-name>
+      <year iso-8601-date="2009">2009</year>
+      <isbn></isbn>
+      <uri></uri>
+      <pub-id pub-id-type="doi"></pub-id>
+    </element-citation>
+  </ref>
+  <ref id="ref-Lesterhuis_2018">
+    <element-citation publication-type="thesis">
+      <person-group person-group-type="author">
+        <name><surname>Lesterhuis</surname><given-names>M.</given-names></name>
+      </person-group>
+      <article-title>The validity of comparative judgement for assessing text quality: An assessor’s perspective</article-title>
+      <publisher-name>University of Antwerp</publisher-name>
+      <year iso-8601-date="2018">2018</year>
+    </element-citation>
+  </ref>
+  <ref id="ref-Bartholomew_et_al_2020">
+    <element-citation publication-type="chapter">
+      <person-group person-group-type="author">
+        <name><surname>Bartholomew</surname><given-names>S.</given-names></name>
+        <name><surname>Williams</surname><given-names>P.</given-names></name>
+      </person-group>
+      <article-title>STEM skill assessment: An application of adaptive comparative judgment</article-title>
+      <source>Integrated approaches to STEM education. Advances in STEM education</source>
+      <person-group person-group-type="editor">
+        <name><surname>Anderson</surname><given-names>J.</given-names></name>
+        <name><surname>Li</surname><given-names>Y.</given-names></name>
+      </person-group>
+      <publisher-name>Springer</publisher-name>
+      <year iso-8601-date="2020">2020</year>
+      <volume></volume>
+      <uri></uri>
+      <pub-id pub-id-type="doi">10.1007/978-3-030-52229-2_18</pub-id>
       <fpage></fpage>
       <lpage></lpage>
     </element-citation>
@@ -478,80 +422,5 @@ avg_years_between_eruptions</code>
 </back>
 
 
-</sub-article>
-<sub-article article-type="notebook" id="nb-4-nb-1">
-<front-stub>
-<title-group>
-<article-title>Explore Earthquakes</article-title>
-</title-group>
-<contrib-group>
-<contrib contrib-type="author">
-<name>
-<surname>Wickham</surname>
-<given-names>Charlotte</given-names>
-</name>
-<string-name>Charlotte Wickham</string-name>
-
-</contrib>
-</contrib-group>
-</front-stub>
-
-<body>
-<sec specific-use="notebook-content">
-<code language="r script">library(tidyverse)
-</code>
-<boxed-text>
-  <preformat>── Attaching core tidyverse packages ──────────────────────── tidyverse 2.0.0 ──
-✔ dplyr     1.1.3     ✔ readr     2.1.4
-✔ forcats   1.0.0     ✔ stringr   1.5.0
-✔ ggplot2   3.4.3     ✔ tibble    3.2.1
-✔ lubridate 1.9.2     ✔ tidyr     1.3.0
-✔ purrr     1.0.2     
-── Conflicts ────────────────────────────────────────── tidyverse_conflicts() ──
-✖ dplyr::filter() masks stats::filter()
-✖ dplyr::lag()    masks stats::lag()
-ℹ Use the conflicted package (&lt;http://conflicted.r-lib.org/&gt;) to force all conflicts to become errors</preformat>
-</boxed-text>
-</sec>
-<p>Read a clean version of data:</p>
-<sec specific-use="notebook-content">
-<code language="r script">la_palma &lt;- read_csv(&quot;la-palma.csv&quot;)
-</code>
-<boxed-text>
-  <preformat>Rows: 11347 Columns: 5
-── Column specification ────────────────────────────────────────────────────────
-Delimiter: &quot;,&quot;
-dbl  (4): Longitude, Latitude, Depth(km), Magnitude
-dttm (1): DateTime
-
-ℹ Use `spec()` to retrieve the full column specification for this data.
-ℹ Specify the column types or set `show_col_types = FALSE` to quiet this message.</preformat>
-</boxed-text>
-</sec>
-<p>Create spatial plot:</p>
-<sec id="cell-fig-spatial-plot-nb-1" specific-use="notebook-content">
-<code language="r script">#|   against longitude.&quot;
-la_palma |&gt; 
-  ggplot(aes(Longitude, Latitude)) +
-  geom_point(aes(color = Magnitude, size = 40-`Depth(km)`)) +
-  scale_color_viridis_c(direction = -1) + 
-  scale_size(range = c(0.5, 2), guide = &quot;none&quot;) +
-  theme_bw()
-</code>
-<fig id="fig-spatial-plot-nb-1">
-  <caption><p>Locations of earthquakes on La Palma since
-  2017</p></caption>
-  <graphic mimetype="image" mime-subtype="png" xlink:href="explore-earthquakes_files/figure-jats/fig-spatial-plot-1.png" />
-</fig>
-</sec>
-</body>
-
-
-
-<back>
-</back>
-
-
-</sub-article>
 
 </article>
