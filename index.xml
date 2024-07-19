@@ -200,10 +200,10 @@ sciences</institution>
 <corresp id="cor-1">JoseManuel.RiveraEspejo@uantwerpen.be</corresp>
 </author-notes>
 
-<pub-date date-type="pub" publication-format="electronic" iso-8601-date="2024-07-18">
+<pub-date date-type="pub" publication-format="electronic" iso-8601-date="2024-07-19">
 <year>2024</year>
 <month>7</month>
-<day>18</day>
+<day>19</day>
 </pub-date>
 
 
@@ -328,11 +328,11 @@ the University of Antwerp (BOF).</funding-statement>
   Daal 2020</xref>;
   <xref alt="Marshall et al. 2020" rid="ref-Marshall_et_al_2020" ref-type="bibr">Marshall
   et al. 2020</xref>). Nevertheless, despite the method’s widespread
-  use, there is no clear representation in the literature of the
-  plausible mechanisms that generate DCJ data. Particularly, there is no
-  depiction of the complexity and the underlying assumptions of the DCJ
-  system, nor how different assessment factors can potentially influence
-  the observed DCJ outcome.</p>
+  use, the literature does not offer a clear representation of the
+  plausible mechanisms that generate the DCJ data. Particularly, there
+  is no depiction of the complexity and the underlying assumptions of
+  the DCJ system, nor how different assessment factors can potentially
+  influence the observed DCJ outcome.</p>
   <p>According to Verhavert et al.
   (<xref alt="2019" rid="ref-Verhavert_et_al_2019" ref-type="bibr">2019</xref>)
   and van Daal
@@ -354,56 +354,73 @@ the University of Antwerp (BOF).</funding-statement>
   multiple argumentative essays (stimuli, sub-units) originating from
   various students (units).</p>
   <p>Although several studies have examined the individual impact of
-  these factors on the method’s reliability, including Bramley
-  (<xref alt="2015" rid="ref-Bramley_2015" ref-type="bibr">2015</xref>),
-  Pollitt
-  (<xref alt="2012b" rid="ref-Pollitt_2012b" ref-type="bibr">2012b</xref>),
-  Bramley and Vitello
-  (<xref alt="2019" rid="ref-Bramley_et_al_2019" ref-type="bibr">2019</xref>),
-  Verhavert et al.
-  (<xref alt="2019" rid="ref-Verhavert_et_al_2019" ref-type="bibr">2019</xref>),
-  Crompvoets, Béguin, and Sijtsma
-  (<xref alt="2022" rid="ref-Crompvoets_et_al_2022" ref-type="bibr">2022</xref>),
-  van Daal et al.
-  (<xref alt="2017" rid="ref-vanDaal_et_al_2017" ref-type="bibr">2017</xref>),
-  and Gijsen et al.
-  (<xref alt="2021" rid="ref-Gijsen_et_al_2021" ref-type="bibr">2021</xref>),
-  to the best of the authors’ knowledge, none have provided such
-  transparent depiction of DCJ system and the plausible mechanisms that
-  generate the DCJ outcome. This study aims to fill this gap by
-  utilizing the framework of causal analysis and Directed Acyclic Graphs
-  [DAG; Pearl
-  (<xref alt="2009" rid="ref-Pearl_2009" ref-type="bibr">2009</xref>);
-  Pearl, Glymour, and Jewell
-  (<xref alt="2016" rid="ref-Pearl_et_al_2016" ref-type="bibr">2016</xref>)].
-  Using this framework, the study will construct a scientific model to
-  elucidate the underlying assumptions of the DCJ system, providing
-  plausible mechanisms of how the DCJ data is generated. This model will
-  enable researchers to draw inferences about plausible causal
-  relationships within the DCJ system. Furthermore, using a minimal set
-  of assumptions from the framework, the study will translate the
-  scientific model into a probabilistic statistical model, aiming to
-  derive statistical estimands for different targets of inference.
-  Ultimately, the results of this study could inform the planning of DCJ
-  experiments and hold significance for researchers or analysts involved
-  in education and assessment procedures who implement the DCJ
-  methodology.</p>
+  these factors on the method’s reliability
+  (<xref alt="Bramley 2015" rid="ref-Bramley_2015" ref-type="bibr">Bramley
+  2015</xref>;
+  <xref alt="Pollitt 2012b" rid="ref-Pollitt_2012b" ref-type="bibr">Pollitt
+  2012b</xref>;
+  <xref alt="Bramley and Vitello 2019" rid="ref-Bramley_et_al_2019" ref-type="bibr">Bramley
+  and Vitello 2019</xref>;
+  <xref alt="Verhavert et al. 2019" rid="ref-Verhavert_et_al_2019" ref-type="bibr">Verhavert
+  et al. 2019</xref>;
+  <xref alt="Crompvoets, Béguin, and Sijtsma 2022" rid="ref-Crompvoets_et_al_2022" ref-type="bibr">Crompvoets,
+  Béguin, and Sijtsma 2022</xref>;
+  <xref alt="van Daal et al. 2017" rid="ref-vanDaal_et_al_2017" ref-type="bibr">van
+  Daal et al. 2017</xref>;
+  <xref alt="Gijsen et al. 2021" rid="ref-Gijsen_et_al_2021" ref-type="bibr">Gijsen
+  et al. 2021</xref>), none, to the best of the authors’ knowledge, have
+  provided a transparent depiction of the DCJ system and the plausible
+  mechanisms generating the DCJ outcome. This study aims to fill this
+  gap by representing DCJ within the causal analysis framework
+  (<xref alt="Pearl 2009" rid="ref-Pearl_2009" ref-type="bibr">Pearl
+  2009</xref>;
+  <xref alt="Pearl, Glymour, and Jewell 2016" rid="ref-Pearl_et_al_2016" ref-type="bibr">Pearl,
+  Glymour, and Jewell 2016</xref>). Using Directed Acyclic Graphs (DAG,
+  <xref alt="Gross, Yellen, and Anderson 2018" rid="ref-Gross_et_al_2018" ref-type="bibr">Gross,
+  Yellen, and Anderson 2018</xref>;
+  <xref alt="Neal 2020" rid="ref-Neal_2020" ref-type="bibr">Neal
+  2020</xref>), the study will construct a scientific model to elucidate
+  the underlying assumptions of the DCJ system, providing plausible
+  mechanisms for how the DCJ outcome could be generated. Next, using a
+  minimal set of assumptions embedded in the framework, the study will
+  translate the scientific model into a probabilistic statistical model.
+  This model derives statistical estimands to draw inferences about
+  plausible causal relationships within the DCJ system. Ultimately, this
+  research aims to extend the law of comparative judgment initially
+  proposed by Thurstone
+  (<xref alt="1927" rid="ref-Thurstone_1927" ref-type="bibr">1927</xref>)
+  and provide a sound probabilistic base for the statistical analysis of
+  DCJ data. Consequently, this research holds significance for
+  researchers and analysts involved in education and assessment
+  procedures who implement or design DCJ experiments.</p>
 </sec>
-<sec id="sec-TheoreticalFramework">
+<sec id="sec-prelim">
+  <title>Preliminaries</title>
+  <sec id="sec-prelim-causal">
+    <title>Causal analysis and DAGs</title>
+  </sec>
+  <sec id="sec-prelim-flow">
+    <title>The flow of association and causation</title>
+  </sec>
+</sec>
+<sec id="sec-theory">
   <title>Theoretical framework</title>
-  <sec id="sec-ResearchQuestions">
-    <title>Research questions and their estimands</title>
+  <sec id="sec-theory-scientific">
+    <title>A scientific model for the DCJ</title>
   </sec>
-  <sec id="sec-SciMod">
-    <title>A scientific model for the DCJ procedure</title>
+  <sec id="sec-theory-statistics">
+    <title>From the scientific to statistical model</title>
   </sec>
-  <sec id="sec-Sci2StatMod">
-    <title>From the scientific to the Bradley-Terry-Luce model</title>
+  <sec id="sec-theory-where">
+    <title>Where does it all fit?</title>
   </sec>
 </sec>
-<sec id="sec-discussion">
+<sec id="sec-discuss">
   <title>Discussion</title>
-  <sec id="sec-LFR">
+  <sec id="sec-discuss-finding">
+    <title>Findings</title>
+  </sec>
+  <sec id="sec-discuss-limitations">
     <title>Limitations and further research</title>
   </sec>
 </sec>
@@ -443,399 +460,433 @@ the University of Antwerp (BOF).</funding-statement>
   acquisition:</italic> S.G. and S.DM.</p>
   <p></p>
 </sec>
+<sec id="sec-appendix">
+  <title>Appendix</title>
+  <sec id="sec-appA">
+    <title>Why estimate judges appart?</title>
+    <p></p>
+  </sec>
+  <sec id="references">
+    <title>References</title>
+    <ref-list>
+      <ref id="ref-Thurstone_1927">
+        <element-citation publication-type="article-journal">
+          <person-group person-group-type="author">
+            <name><surname>Thurstone</surname><given-names>L.</given-names></name>
+          </person-group>
+          <article-title>A law of comparative judgment</article-title>
+          <source>Psychological Review</source>
+          <year iso-8601-date="1927">1927</year>
+          <volume>34</volume>
+          <issue>4</issue>
+          <uri></uri>
+          <pub-id pub-id-type="doi">10.1037/h0070288</pub-id>
+          <fpage>482</fpage>
+          <lpage>499</lpage>
+        </element-citation>
+      </ref>
+      <ref id="ref-Bradley_et_al_1952">
+        <element-citation publication-type="article-journal">
+          <person-group person-group-type="author">
+            <name><surname>Bradley</surname><given-names>R.</given-names></name>
+            <name><surname>Terry</surname><given-names>M.</given-names></name>
+          </person-group>
+          <article-title>Rank analysis of incomplete block designs: I. The method of paired comparisons</article-title>
+          <source>Biometrika</source>
+          <year iso-8601-date="1952">1952</year>
+          <volume>39</volume>
+          <issue>3-4</issue>
+          <uri>http://www.jstor.com/stable/2334029</uri>
+          <pub-id pub-id-type="doi">10.2307/2334029</pub-id>
+          <fpage>324</fpage>
+          <lpage>345</lpage>
+        </element-citation>
+      </ref>
+      <ref id="ref-Luce_1959">
+        <element-citation publication-type="article-journal">
+          <person-group person-group-type="author">
+            <name><surname>Luce</surname><given-names>R.</given-names></name>
+          </person-group>
+          <article-title>On the possible psychophysical laws</article-title>
+          <source>The Psychologcal Review</source>
+          <year iso-8601-date="1959">1959</year>
+          <volume>66</volume>
+          <issue>2</issue>
+          <uri></uri>
+          <pub-id pub-id-type="doi">10.1037/h0043178</pub-id>
+          <fpage>482</fpage>
+          <lpage>499</lpage>
+        </element-citation>
+      </ref>
+      <ref id="ref-Placket_1975">
+        <element-citation publication-type="article-journal">
+          <person-group person-group-type="author">
+            <name><surname>Plackett</surname><given-names>R.</given-names></name>
+          </person-group>
+          <article-title>The analysis of permutations</article-title>
+          <source>Journal of the Royal Statistical Society</source>
+          <year iso-8601-date="1975">1975</year>
+          <volume>24</volume>
+          <issue>2</issue>
+          <uri>https://www.jstor.org/stable/2346567</uri>
+          <pub-id pub-id-type="doi">10.2307/2346567</pub-id>
+          <fpage>193</fpage>
+          <lpage>202</lpage>
+        </element-citation>
+      </ref>
+      <ref id="ref-Tutz_1986">
+        <element-citation publication-type="article-journal">
+          <person-group person-group-type="author">
+            <name><surname>Tutz</surname><given-names>G.</given-names></name>
+          </person-group>
+          <article-title>Bradley-terry-luce model with an ordered response</article-title>
+          <source>Journal of Mathemathical Psychology</source>
+          <year iso-8601-date="1986">1986</year>
+          <volume>30</volume>
+          <issue>3</issue>
+          <uri></uri>
+          <pub-id pub-id-type="doi">10.1016/0022-2496(86)90034-9</pub-id>
+          <fpage>306</fpage>
+          <lpage>316</lpage>
+        </element-citation>
+      </ref>
+      <ref id="ref-Agresti_1992">
+        <element-citation publication-type="article-journal">
+          <person-group person-group-type="author">
+            <name><surname>Agresti</surname><given-names>A.</given-names></name>
+          </person-group>
+          <article-title>Analysis of ordinal paired comparison data</article-title>
+          <source>Journal of the Royal Statistical Society</source>
+          <year iso-8601-date="1992">1992</year>
+          <volume>41</volume>
+          <issue>2</issue>
+          <uri>https://www.jstor.org/stable/2347562</uri>
+          <pub-id pub-id-type="doi">10.2307/2347562</pub-id>
+          <fpage>287</fpage>
+          <lpage>297</lpage>
+        </element-citation>
+      </ref>
+      <ref id="ref-Pollitt_2012a">
+        <element-citation publication-type="article-journal">
+          <person-group person-group-type="author">
+            <name><surname>Pollitt</surname><given-names>A.</given-names></name>
+          </person-group>
+          <article-title>Comparative judgement for assessment</article-title>
+          <source>International Journal of Technology and Design Education</source>
+          <year iso-8601-date="2012">2012</year>
+          <volume>22</volume>
+          <issue>2</issue>
+          <uri></uri>
+          <pub-id pub-id-type="doi">10.1007/s10798-011-9189-x</pub-id>
+          <fpage>157</fpage>
+          <lpage>170</lpage>
+        </element-citation>
+      </ref>
+      <ref id="ref-Pollitt_2012b">
+        <element-citation publication-type="article-journal">
+          <person-group person-group-type="author">
+            <name><surname>Pollitt</surname><given-names>A.</given-names></name>
+          </person-group>
+          <article-title>The method of adaptive comparative judgement</article-title>
+          <source>Assessment in Education: Principles, Policy and Practice</source>
+          <year iso-8601-date="2012">2012</year>
+          <volume>19</volume>
+          <issue>3</issue>
+          <uri></uri>
+          <pub-id pub-id-type="doi">10.1080/0969594X.2012.665354</pub-id>
+          <fpage>281</fpage>
+          <lpage>300</lpage>
+        </element-citation>
+      </ref>
+      <ref id="ref-Jones_2015">
+        <element-citation publication-type="article-journal">
+          <person-group person-group-type="author">
+            <name><surname>Jones</surname><given-names>I.</given-names></name>
+          </person-group>
+          <article-title>The problem of assessing problem solving: Can comparative judgement help?</article-title>
+          <source>Educational Studies in Mathematics</source>
+          <year iso-8601-date="2015">2015</year>
+          <volume>89</volume>
+          <issue>3</issue>
+          <uri></uri>
+          <pub-id pub-id-type="doi">10.1007/s10649-015-9607-1</pub-id>
+          <fpage>337</fpage>
+          <lpage>355</lpage>
+        </element-citation>
+      </ref>
+      <ref id="ref-vanDaal_et_al_2016">
+        <element-citation publication-type="article-journal">
+          <person-group person-group-type="author">
+            <name><surname>van Daal</surname><given-names>T.</given-names></name>
+            <name><surname>Lesterhuis</surname><given-names>M.</given-names></name>
+            <name><surname>Coertjens</surname><given-names>L.</given-names></name>
+            <name><surname>Donche</surname><given-names>V.</given-names></name>
+            <name><surname>De Maeyer</surname><given-names>S.</given-names></name>
+          </person-group>
+          <article-title>Validity of comparative judgement to assess academic writing: Examining implications of its holistic character and building on a shared consensus</article-title>
+          <source>Assessment in Education: Principles, Policy &amp; Practice</source>
+          <year iso-8601-date="2019">2019</year>
+          <volume>26</volume>
+          <issue>1</issue>
+          <pub-id pub-id-type="doi">10.1080/0969594X.2016.1253542</pub-id>
+          <fpage>59</fpage>
+          <lpage>74</lpage>
+        </element-citation>
+      </ref>
+      <ref id="ref-vanDaal_et_al_2017">
+        <element-citation publication-type="article-journal">
+          <person-group person-group-type="author">
+            <name><surname>van Daal</surname><given-names>T.</given-names></name>
+            <name><surname>Lesterhuis</surname><given-names>M.</given-names></name>
+            <name><surname>Coertjens</surname><given-names>L.</given-names></name>
+            <name><surname>van de Kamp</surname><given-names>MT.</given-names></name>
+            <name><surname>Donche</surname><given-names>V.</given-names></name>
+            <name><surname>De Maeyer</surname><given-names>Sven</given-names></name>
+          </person-group>
+          <article-title>The complexity of assessing student work using comparative judgment: The moderating role of decision accuracy</article-title>
+          <source>Frontiers in Education</source>
+          <year iso-8601-date="2017">2017</year>
+          <volume>2</volume>
+          <uri>https://www.frontiersin.org/articles/10.3389/feduc.2017.00044</uri>
+          <pub-id pub-id-type="doi">10.3389/feduc.2017.00044</pub-id>
+        </element-citation>
+      </ref>
+      <ref id="ref-Bartholomew_et_al_2018">
+        <element-citation publication-type="article-journal">
+          <person-group person-group-type="author">
+            <name><surname>Bartholomew</surname><given-names>S.</given-names></name>
+            <name><surname>Nadelson</surname><given-names>L.</given-names></name>
+            <name><surname>Goodridge</surname><given-names>W.</given-names></name>
+            <name><surname>Reeve</surname><given-names>E.</given-names></name>
+          </person-group>
+          <article-title>Adaptive comparative judgment as a tool for assessing open-ended design problems and model eliciting activities</article-title>
+          <source>Educational Assessment</source>
+          <publisher-name>Routledge</publisher-name>
+          <year iso-8601-date="2018">2018</year>
+          <volume>23</volume>
+          <issue>2</issue>
+          <uri></uri>
+          <pub-id pub-id-type="doi">10.1080/10627197.2018.1444986</pub-id>
+          <fpage>85</fpage>
+          <lpage>101</lpage>
+        </element-citation>
+      </ref>
+      <ref id="ref-Bramley_et_al_2019">
+        <element-citation publication-type="article-journal">
+          <person-group person-group-type="author">
+            <name><surname>Bramley</surname><given-names>T.</given-names></name>
+            <name><surname>Vitello</surname><given-names>S.</given-names></name>
+          </person-group>
+          <article-title>The effect of adaptivity on the reliability coefficient in adaptive comparative judgement</article-title>
+          <source>Assessment in Education: Principles, Policy and Practice</source>
+          <year iso-8601-date="2019">2019</year>
+          <volume>71</volume>
+          <issue>9</issue>
+          <pub-id pub-id-type="doi">10.1080/0969594X.2017.1418734</pub-id>
+          <fpage>1</fpage>
+          <lpage>25</lpage>
+        </element-citation>
+      </ref>
+      <ref id="ref-Verhavert_et_al_2019">
+        <element-citation publication-type="article-journal">
+          <person-group person-group-type="author">
+            <name><surname>Verhavert</surname><given-names>S.</given-names></name>
+            <name><surname>Bouwer</surname><given-names>R.</given-names></name>
+            <name><surname>Donche</surname><given-names>V</given-names></name>
+            <name><surname>De Maeyer</surname><given-names>S.</given-names></name>
+          </person-group>
+          <article-title>A meta-analysis on the reliability of comparative judgement</article-title>
+          <source>Assessment in Education: Principles, Policy and Practice</source>
+          <year iso-8601-date="2019">2019</year>
+          <volume>26</volume>
+          <issue>5</issue>
+          <uri></uri>
+          <pub-id pub-id-type="doi">10.1080/0969594X.2019.1602027</pub-id>
+          <fpage>541</fpage>
+          <lpage>562</lpage>
+        </element-citation>
+      </ref>
+      <ref id="ref-Boonen_et_al_2020">
+        <element-citation publication-type="article-journal">
+          <person-group person-group-type="author">
+            <name><surname>Boonen</surname><given-names>N.</given-names></name>
+            <name><surname>Kloots</surname><given-names>H.</given-names></name>
+            <name><surname>Gillis</surname><given-names>S.</given-names></name>
+          </person-group>
+          <article-title>Rating the overall speech quality of hearing-impaired children by means of comparative judgements</article-title>
+          <source>Journal of Communication Disorders</source>
+          <year iso-8601-date="2020">2020</year>
+          <volume>83</volume>
+          <issue></issue>
+          <uri></uri>
+          <pub-id pub-id-type="doi">10.1016/j.jcomdis.2019.105969</pub-id>
+          <fpage>1675</fpage>
+          <lpage>1687</lpage>
+        </element-citation>
+      </ref>
+      <ref id="ref-Marshall_et_al_2020">
+        <element-citation publication-type="article-journal">
+          <person-group person-group-type="author">
+            <name><surname>Marshall</surname><given-names>N.</given-names></name>
+            <name><surname>Shaw</surname><given-names>K</given-names></name>
+            <name><surname>Hunter</surname><given-names>J.</given-names></name>
+            <name><surname>Jones</surname><given-names>I.</given-names></name>
+          </person-group>
+          <article-title>Assessment by comparative judgement: An application to secondary statistics and english in new zealand</article-title>
+          <source>New Zealand Journal of Educational Studies</source>
+          <publisher-name>International Society for Bayesian Analysis</publisher-name>
+          <year iso-8601-date="2020">2020</year>
+          <volume>55</volume>
+          <issue></issue>
+          <uri></uri>
+          <pub-id pub-id-type="doi">10.1007/s40841-020-00163-3</pub-id>
+          <fpage>49</fpage>
+          <lpage>71</lpage>
+        </element-citation>
+      </ref>
+      <ref id="ref-Gijsen_et_al_2021">
+        <element-citation publication-type="article-journal">
+          <person-group person-group-type="author">
+            <name><surname>Gijsen</surname><given-names>M.</given-names></name>
+            <name><surname>van Daal</surname><given-names>T.</given-names></name>
+            <name><surname>Lesterhuis</surname><given-names>Marije</given-names></name>
+            <name><surname>Gijbels</surname><given-names>David</given-names></name>
+            <name><surname>De Maeyer</surname><given-names>Sven</given-names></name>
+          </person-group>
+          <article-title>The complexity of comparative judgments in assessing argumentative writing: An eye tracking study</article-title>
+          <source>Frontiers in Education</source>
+          <year iso-8601-date="2021">2021</year>
+          <volume>5</volume>
+          <uri>url{https://www.frontiersin.org/articles/10.3389/feduc.2020.582800}</uri>
+          <pub-id pub-id-type="doi">10.3389/feduc.2020.582800</pub-id>
+        </element-citation>
+      </ref>
+      <ref id="ref-Crompvoets_et_al_2022">
+        <element-citation publication-type="article-journal">
+          <person-group person-group-type="author">
+            <name><surname>Crompvoets</surname><given-names>Elise A. V.</given-names></name>
+            <name><surname>Béguin</surname><given-names>Anton A.</given-names></name>
+            <name><surname>Sijtsma</surname><given-names>Klaas</given-names></name>
+          </person-group>
+          <article-title>On the bias and stability of the results of comparative judgment</article-title>
+          <source>Frontiers in Education</source>
+          <year iso-8601-date="2022">2022</year>
+          <volume>6</volume>
+          <uri>url{https://www.frontiersin.org/articles/10.3389/feduc.2021.788202}</uri>
+          <pub-id pub-id-type="doi">10.3389/feduc.2021.788202</pub-id>
+        </element-citation>
+      </ref>
+      <ref id="ref-Pearl_2009">
+        <element-citation publication-type="book">
+          <person-group person-group-type="author">
+            <name><surname>Pearl</surname><given-names>J.</given-names></name>
+          </person-group>
+          <source>Causality: Models, reasoning and inference</source>
+          <publisher-name>Cambrige University Press</publisher-name>
+          <year iso-8601-date="2009">2009</year>
+          <isbn></isbn>
+          <uri></uri>
+          <pub-id pub-id-type="doi"></pub-id>
+        </element-citation>
+      </ref>
+      <ref id="ref-Pearl_et_al_2016">
+        <element-citation publication-type="book">
+          <person-group person-group-type="author">
+            <name><surname>Pearl</surname><given-names>J.</given-names></name>
+            <name><surname>Glymour</surname><given-names>M.</given-names></name>
+            <name><surname>Jewell</surname><given-names>N.</given-names></name>
+          </person-group>
+          <source>Causal inference in statistics: A primer</source>
+          <publisher-name>John Wiley &amp; Sons, Inc.</publisher-name>
+          <year iso-8601-date="2016">2016</year>
+          <edition></edition>
+          <isbn>978-1-119-18686-1</isbn>
+          <uri></uri>
+          <pub-id pub-id-type="doi"></pub-id>
+        </element-citation>
+      </ref>
+      <ref id="ref-Gross_et_al_2018">
+        <element-citation publication-type="book">
+          <person-group person-group-type="author">
+            <name><surname>Gross</surname><given-names>J.</given-names></name>
+            <name><surname>Yellen</surname><given-names>J.</given-names></name>
+            <name><surname>Anderson</surname><given-names>M.</given-names></name>
+          </person-group>
+          <source>Graph theory and its applications</source>
+          <publisher-name>Chapman; Hall/CRC</publisher-name>
+          <year iso-8601-date="2018">2018</year>
+          <isbn>9780429425134</isbn>
+          <uri></uri>
+          <pub-id pub-id-type="doi">https://doi.org/10.1201/9780429425134 </pub-id>
+        </element-citation>
+      </ref>
+      <ref id="ref-Lesterhuis_2018">
+        <element-citation publication-type="thesis">
+          <person-group person-group-type="author">
+            <name><surname>Lesterhuis</surname><given-names>M.</given-names></name>
+          </person-group>
+          <article-title>The validity of comparative judgement for assessing text quality: An assessor’s perspective</article-title>
+          <publisher-name>University of Antwerp</publisher-name>
+          <year iso-8601-date="2018">2018</year>
+        </element-citation>
+      </ref>
+      <ref id="ref-vanDaal_2020">
+        <element-citation publication-type="thesis">
+          <person-group person-group-type="author">
+            <name><surname>van Daal</surname><given-names>T.</given-names></name>
+          </person-group>
+          <article-title>Making a choice is not easy?!: Unravelling the task difficulty of comparative judgement to assess student work</article-title>
+          <publisher-name>University of Antwerp</publisher-name>
+          <year iso-8601-date="2020">2020</year>
+        </element-citation>
+      </ref>
+      <ref id="ref-Bartholomew_et_al_2020">
+        <element-citation publication-type="chapter">
+          <person-group person-group-type="author">
+            <name><surname>Bartholomew</surname><given-names>S.</given-names></name>
+            <name><surname>Williams</surname><given-names>P.</given-names></name>
+          </person-group>
+          <article-title>STEM skill assessment: An application of adaptive comparative judgment</article-title>
+          <source>Integrated approaches to STEM education. Advances in STEM education</source>
+          <person-group person-group-type="editor">
+            <name><surname>Anderson</surname><given-names>J.</given-names></name>
+            <name><surname>Li</surname><given-names>Y.</given-names></name>
+          </person-group>
+          <publisher-name>Springer</publisher-name>
+          <year iso-8601-date="2020">2020</year>
+          <volume></volume>
+          <uri></uri>
+          <pub-id pub-id-type="doi">10.1007/978-3-030-52229-2_18</pub-id>
+          <fpage>331</fpage>
+          <lpage>349</lpage>
+        </element-citation>
+      </ref>
+      <ref id="ref-Bramley_2015">
+        <element-citation>
+          <person-group person-group-type="author">
+            <name><surname>Bramley</surname><given-names>T.</given-names></name>
+          </person-group>
+          <article-title>Investigating the reliability of adaptive comparative judgment</article-title>
+          <year iso-8601-date="2015">2015</year>
+          <uri>http://www.cambridgeassessment.org.uk/Images/232694-investigating-the-reliability-of-adaptive-comparative-judgment.pdf</uri>
+        </element-citation>
+      </ref>
+      <ref id="ref-Neal_2020">
+        <element-citation>
+          <person-group person-group-type="author">
+            <name><surname>Neal</surname><given-names>B.</given-names></name>
+          </person-group>
+          <article-title>Introduction to causal inference from a machine learning perspective</article-title>
+          <year iso-8601-date="2020">2020</year>
+          <uri>https://www.bradyneal.com/Introduction_to_Causal_Inference-Dec17_2020-Neal.pdf</uri>
+        </element-citation>
+      </ref>
+    </ref-list>
+  </sec>
+</sec>
 </body>
 
 <back>
-<ref-list>
-  <title>References</title>
-  <ref id="ref-Thurstone_1927">
-    <element-citation publication-type="article-journal">
-      <person-group person-group-type="author">
-        <name><surname>Thurstone</surname><given-names>L.</given-names></name>
-      </person-group>
-      <article-title>A law of comparative judgment</article-title>
-      <source>Psychological Review</source>
-      <year iso-8601-date="1927">1927</year>
-      <volume>34</volume>
-      <issue>4</issue>
-      <uri></uri>
-      <pub-id pub-id-type="doi">10.1037/h0070288</pub-id>
-      <fpage>482</fpage>
-      <lpage>499</lpage>
-    </element-citation>
-  </ref>
-  <ref id="ref-Bradley_et_al_1952">
-    <element-citation publication-type="article-journal">
-      <person-group person-group-type="author">
-        <name><surname>Bradley</surname><given-names>R.</given-names></name>
-        <name><surname>Terry</surname><given-names>M.</given-names></name>
-      </person-group>
-      <article-title>Rank analysis of incomplete block designs: I. The method of paired comparisons</article-title>
-      <source>Biometrika</source>
-      <year iso-8601-date="1952">1952</year>
-      <volume>39</volume>
-      <issue>3-4</issue>
-      <uri>http://www.jstor.com/stable/2334029</uri>
-      <pub-id pub-id-type="doi">10.2307/2334029</pub-id>
-      <fpage>324</fpage>
-      <lpage>345</lpage>
-    </element-citation>
-  </ref>
-  <ref id="ref-Luce_1959">
-    <element-citation publication-type="article-journal">
-      <person-group person-group-type="author">
-        <name><surname>Luce</surname><given-names>R.</given-names></name>
-      </person-group>
-      <article-title>On the possible psychophysical laws</article-title>
-      <source>The Psychologcal Review</source>
-      <year iso-8601-date="1959">1959</year>
-      <volume>66</volume>
-      <issue>2</issue>
-      <uri></uri>
-      <pub-id pub-id-type="doi">10.1037/h0043178</pub-id>
-      <fpage>482</fpage>
-      <lpage>499</lpage>
-    </element-citation>
-  </ref>
-  <ref id="ref-Placket_1975">
-    <element-citation publication-type="article-journal">
-      <person-group person-group-type="author">
-        <name><surname>Plackett</surname><given-names>R.</given-names></name>
-      </person-group>
-      <article-title>The analysis of permutations</article-title>
-      <source>Journal of the Royal Statistical Society</source>
-      <year iso-8601-date="1975">1975</year>
-      <volume>24</volume>
-      <issue>2</issue>
-      <uri>https://www.jstor.org/stable/2346567</uri>
-      <pub-id pub-id-type="doi">10.2307/2346567</pub-id>
-      <fpage>193</fpage>
-      <lpage>202</lpage>
-    </element-citation>
-  </ref>
-  <ref id="ref-Tutz_1986">
-    <element-citation publication-type="article-journal">
-      <person-group person-group-type="author">
-        <name><surname>Tutz</surname><given-names>G.</given-names></name>
-      </person-group>
-      <article-title>Bradley-terry-luce model with an ordered response</article-title>
-      <source>Journal of Mathemathical Psychology</source>
-      <year iso-8601-date="1986">1986</year>
-      <volume>30</volume>
-      <issue>3</issue>
-      <uri></uri>
-      <pub-id pub-id-type="doi">10.1016/0022-2496(86)90034-9</pub-id>
-      <fpage>306</fpage>
-      <lpage>316</lpage>
-    </element-citation>
-  </ref>
-  <ref id="ref-Agresti_1992">
-    <element-citation publication-type="article-journal">
-      <person-group person-group-type="author">
-        <name><surname>Agresti</surname><given-names>A.</given-names></name>
-      </person-group>
-      <article-title>Analysis of ordinal paired comparison data</article-title>
-      <source>Journal of the Royal Statistical Society</source>
-      <year iso-8601-date="1992">1992</year>
-      <volume>41</volume>
-      <issue>2</issue>
-      <uri>https://www.jstor.org/stable/2347562</uri>
-      <pub-id pub-id-type="doi">10.2307/2347562</pub-id>
-      <fpage>287</fpage>
-      <lpage>297</lpage>
-    </element-citation>
-  </ref>
-  <ref id="ref-Pollitt_2012a">
-    <element-citation publication-type="article-journal">
-      <person-group person-group-type="author">
-        <name><surname>Pollitt</surname><given-names>A.</given-names></name>
-      </person-group>
-      <article-title>Comparative judgement for assessment</article-title>
-      <source>International Journal of Technology and Design Education</source>
-      <year iso-8601-date="2012">2012</year>
-      <volume>22</volume>
-      <issue>2</issue>
-      <uri></uri>
-      <pub-id pub-id-type="doi">10.1007/s10798-011-9189-x</pub-id>
-      <fpage>157</fpage>
-      <lpage>170</lpage>
-    </element-citation>
-  </ref>
-  <ref id="ref-Pollitt_2012b">
-    <element-citation publication-type="article-journal">
-      <person-group person-group-type="author">
-        <name><surname>Pollitt</surname><given-names>A.</given-names></name>
-      </person-group>
-      <article-title>The method of adaptive comparative judgement</article-title>
-      <source>Assessment in Education: Principles, Policy and Practice</source>
-      <year iso-8601-date="2012">2012</year>
-      <volume>19</volume>
-      <issue>3</issue>
-      <uri></uri>
-      <pub-id pub-id-type="doi">10.1080/0969594X.2012.665354</pub-id>
-      <fpage>281</fpage>
-      <lpage>300</lpage>
-    </element-citation>
-  </ref>
-  <ref id="ref-Jones_2015">
-    <element-citation publication-type="article-journal">
-      <person-group person-group-type="author">
-        <name><surname>Jones</surname><given-names>I.</given-names></name>
-      </person-group>
-      <article-title>The problem of assessing problem solving: Can comparative judgement help?</article-title>
-      <source>Educational Studies in Mathematics</source>
-      <year iso-8601-date="2015">2015</year>
-      <volume>89</volume>
-      <issue>3</issue>
-      <uri></uri>
-      <pub-id pub-id-type="doi">10.1007/s10649-015-9607-1</pub-id>
-      <fpage>337</fpage>
-      <lpage>355</lpage>
-    </element-citation>
-  </ref>
-  <ref id="ref-vanDaal_et_al_2016">
-    <element-citation publication-type="article-journal">
-      <person-group person-group-type="author">
-        <name><surname>van Daal</surname><given-names>T.</given-names></name>
-        <name><surname>Lesterhuis</surname><given-names>M.</given-names></name>
-        <name><surname>Coertjens</surname><given-names>L.</given-names></name>
-        <name><surname>Donche</surname><given-names>V.</given-names></name>
-        <name><surname>De Maeyer</surname><given-names>S.</given-names></name>
-      </person-group>
-      <article-title>Validity of comparative judgement to assess academic writing: Examining implications of its holistic character and building on a shared consensus</article-title>
-      <source>Assessment in Education: Principles, Policy &amp; Practice</source>
-      <year iso-8601-date="2019">2019</year>
-      <volume>26</volume>
-      <issue>1</issue>
-      <pub-id pub-id-type="doi">10.1080/0969594X.2016.1253542</pub-id>
-      <fpage>59</fpage>
-      <lpage>74</lpage>
-    </element-citation>
-  </ref>
-  <ref id="ref-vanDaal_et_al_2017">
-    <element-citation publication-type="article-journal">
-      <person-group person-group-type="author">
-        <name><surname>van Daal</surname><given-names>T.</given-names></name>
-        <name><surname>Lesterhuis</surname><given-names>M.</given-names></name>
-        <name><surname>Coertjens</surname><given-names>L.</given-names></name>
-        <name><surname>van de Kamp</surname><given-names>MT.</given-names></name>
-        <name><surname>Donche</surname><given-names>V.</given-names></name>
-        <name><surname>De Maeyer</surname><given-names>Sven</given-names></name>
-      </person-group>
-      <article-title>The complexity of assessing student work using comparative judgment: The moderating role of decision accuracy</article-title>
-      <source>Frontiers in Education</source>
-      <year iso-8601-date="2017">2017</year>
-      <volume>2</volume>
-      <uri>https://www.frontiersin.org/articles/10.3389/feduc.2017.00044</uri>
-      <pub-id pub-id-type="doi">10.3389/feduc.2017.00044</pub-id>
-    </element-citation>
-  </ref>
-  <ref id="ref-Bartholomew_et_al_2018">
-    <element-citation publication-type="article-journal">
-      <person-group person-group-type="author">
-        <name><surname>Bartholomew</surname><given-names>S.</given-names></name>
-        <name><surname>Nadelson</surname><given-names>L.</given-names></name>
-        <name><surname>Goodridge</surname><given-names>W.</given-names></name>
-        <name><surname>Reeve</surname><given-names>E.</given-names></name>
-      </person-group>
-      <article-title>Adaptive comparative judgment as a tool for assessing open-ended design problems and model eliciting activities</article-title>
-      <source>Educational Assessment</source>
-      <publisher-name>Routledge</publisher-name>
-      <year iso-8601-date="2018">2018</year>
-      <volume>23</volume>
-      <issue>2</issue>
-      <uri></uri>
-      <pub-id pub-id-type="doi">10.1080/10627197.2018.1444986</pub-id>
-      <fpage>85</fpage>
-      <lpage>101</lpage>
-    </element-citation>
-  </ref>
-  <ref id="ref-Bramley_et_al_2019">
-    <element-citation publication-type="article-journal">
-      <person-group person-group-type="author">
-        <name><surname>Bramley</surname><given-names>T.</given-names></name>
-        <name><surname>Vitello</surname><given-names>S.</given-names></name>
-      </person-group>
-      <article-title>The effect of adaptivity on the reliability coefficient in adaptive comparative judgement</article-title>
-      <source>Assessment in Education: Principles, Policy and Practice</source>
-      <year iso-8601-date="2019">2019</year>
-      <volume>71</volume>
-      <issue>9</issue>
-      <pub-id pub-id-type="doi">10.1080/0969594X.2017.1418734</pub-id>
-      <fpage>1</fpage>
-      <lpage>25</lpage>
-    </element-citation>
-  </ref>
-  <ref id="ref-Verhavert_et_al_2019">
-    <element-citation publication-type="article-journal">
-      <person-group person-group-type="author">
-        <name><surname>Verhavert</surname><given-names>S.</given-names></name>
-        <name><surname>Bouwer</surname><given-names>R.</given-names></name>
-        <name><surname>Donche</surname><given-names>V</given-names></name>
-        <name><surname>De Maeyer</surname><given-names>S.</given-names></name>
-      </person-group>
-      <article-title>A meta-analysis on the reliability of comparative judgement</article-title>
-      <source>Assessment in Education: Principles, Policy and Practice</source>
-      <year iso-8601-date="2019">2019</year>
-      <volume>26</volume>
-      <issue>5</issue>
-      <uri></uri>
-      <pub-id pub-id-type="doi">10.1080/0969594X.2019.1602027</pub-id>
-      <fpage>541</fpage>
-      <lpage>562</lpage>
-    </element-citation>
-  </ref>
-  <ref id="ref-Boonen_et_al_2020">
-    <element-citation publication-type="article-journal">
-      <person-group person-group-type="author">
-        <name><surname>Boonen</surname><given-names>N.</given-names></name>
-        <name><surname>Kloots</surname><given-names>H.</given-names></name>
-        <name><surname>Gillis</surname><given-names>S.</given-names></name>
-      </person-group>
-      <article-title>Rating the overall speech quality of hearing-impaired children by means of comparative judgements</article-title>
-      <source>Journal of Communication Disorders</source>
-      <year iso-8601-date="2020">2020</year>
-      <volume>83</volume>
-      <issue></issue>
-      <uri></uri>
-      <pub-id pub-id-type="doi">10.1016/j.jcomdis.2019.105969</pub-id>
-      <fpage>1675</fpage>
-      <lpage>1687</lpage>
-    </element-citation>
-  </ref>
-  <ref id="ref-Marshall_et_al_2020">
-    <element-citation publication-type="article-journal">
-      <person-group person-group-type="author">
-        <name><surname>Marshall</surname><given-names>N.</given-names></name>
-        <name><surname>Shaw</surname><given-names>K</given-names></name>
-        <name><surname>Hunter</surname><given-names>J.</given-names></name>
-        <name><surname>Jones</surname><given-names>I.</given-names></name>
-      </person-group>
-      <article-title>Assessment by comparative judgement: An application to secondary statistics and english in new zealand</article-title>
-      <source>New Zealand Journal of Educational Studies</source>
-      <publisher-name>International Society for Bayesian Analysis</publisher-name>
-      <year iso-8601-date="2020">2020</year>
-      <volume>55</volume>
-      <issue></issue>
-      <uri></uri>
-      <pub-id pub-id-type="doi">10.1007/s40841-020-00163-3</pub-id>
-      <fpage>49</fpage>
-      <lpage>71</lpage>
-    </element-citation>
-  </ref>
-  <ref id="ref-Gijsen_et_al_2021">
-    <element-citation publication-type="article-journal">
-      <person-group person-group-type="author">
-        <name><surname>Gijsen</surname><given-names>M.</given-names></name>
-        <name><surname>van Daal</surname><given-names>T.</given-names></name>
-        <name><surname>Lesterhuis</surname><given-names>Marije</given-names></name>
-        <name><surname>Gijbels</surname><given-names>David</given-names></name>
-        <name><surname>De Maeyer</surname><given-names>Sven</given-names></name>
-      </person-group>
-      <article-title>The complexity of comparative judgments in assessing argumentative writing: An eye tracking study</article-title>
-      <source>Frontiers in Education</source>
-      <year iso-8601-date="2021">2021</year>
-      <volume>5</volume>
-      <uri>url{https://www.frontiersin.org/articles/10.3389/feduc.2020.582800}</uri>
-      <pub-id pub-id-type="doi">10.3389/feduc.2020.582800</pub-id>
-    </element-citation>
-  </ref>
-  <ref id="ref-Crompvoets_et_al_2022">
-    <element-citation publication-type="article-journal">
-      <person-group person-group-type="author">
-        <name><surname>Crompvoets</surname><given-names>Elise A. V.</given-names></name>
-        <name><surname>Béguin</surname><given-names>Anton A.</given-names></name>
-        <name><surname>Sijtsma</surname><given-names>Klaas</given-names></name>
-      </person-group>
-      <article-title>On the bias and stability of the results of comparative judgment</article-title>
-      <source>Frontiers in Education</source>
-      <year iso-8601-date="2022">2022</year>
-      <volume>6</volume>
-      <uri>url{https://www.frontiersin.org/articles/10.3389/feduc.2021.788202}</uri>
-      <pub-id pub-id-type="doi">10.3389/feduc.2021.788202</pub-id>
-    </element-citation>
-  </ref>
-  <ref id="ref-Pearl_2009">
-    <element-citation publication-type="book">
-      <person-group person-group-type="author">
-        <name><surname>Pearl</surname><given-names>J.</given-names></name>
-      </person-group>
-      <source>Causality: Models, reasoning and inference</source>
-      <publisher-name>Cambrige University Press</publisher-name>
-      <year iso-8601-date="2009">2009</year>
-      <isbn></isbn>
-      <uri></uri>
-      <pub-id pub-id-type="doi"></pub-id>
-    </element-citation>
-  </ref>
-  <ref id="ref-Pearl_et_al_2016">
-    <element-citation publication-type="book">
-      <person-group person-group-type="author">
-        <name><surname>Pearl</surname><given-names>J.</given-names></name>
-        <name><surname>Glymour</surname><given-names>M.</given-names></name>
-        <name><surname>Jewell</surname><given-names>N.</given-names></name>
-      </person-group>
-      <source>Causal inference in statistics: A primer</source>
-      <publisher-name>John Wiley &amp; Sons, Inc.</publisher-name>
-      <year iso-8601-date="2016">2016</year>
-      <edition></edition>
-      <isbn>978-1-119-18686-1</isbn>
-      <uri></uri>
-      <pub-id pub-id-type="doi"></pub-id>
-    </element-citation>
-  </ref>
-  <ref id="ref-Lesterhuis_2018">
-    <element-citation publication-type="thesis">
-      <person-group person-group-type="author">
-        <name><surname>Lesterhuis</surname><given-names>M.</given-names></name>
-      </person-group>
-      <article-title>The validity of comparative judgement for assessing text quality: An assessor’s perspective</article-title>
-      <publisher-name>University of Antwerp</publisher-name>
-      <year iso-8601-date="2018">2018</year>
-    </element-citation>
-  </ref>
-  <ref id="ref-vanDaal_2020">
-    <element-citation publication-type="thesis">
-      <person-group person-group-type="author">
-        <name><surname>van Daal</surname><given-names>T.</given-names></name>
-      </person-group>
-      <article-title>Making a choice is not easy?!: Unravelling the task difficulty of comparative judgement to assess student work</article-title>
-      <publisher-name>University of Antwerp</publisher-name>
-      <year iso-8601-date="2020">2020</year>
-    </element-citation>
-  </ref>
-  <ref id="ref-Bartholomew_et_al_2020">
-    <element-citation publication-type="chapter">
-      <person-group person-group-type="author">
-        <name><surname>Bartholomew</surname><given-names>S.</given-names></name>
-        <name><surname>Williams</surname><given-names>P.</given-names></name>
-      </person-group>
-      <article-title>STEM skill assessment: An application of adaptive comparative judgment</article-title>
-      <source>Integrated approaches to STEM education. Advances in STEM education</source>
-      <person-group person-group-type="editor">
-        <name><surname>Anderson</surname><given-names>J.</given-names></name>
-        <name><surname>Li</surname><given-names>Y.</given-names></name>
-      </person-group>
-      <publisher-name>Springer</publisher-name>
-      <year iso-8601-date="2020">2020</year>
-      <volume></volume>
-      <uri></uri>
-      <pub-id pub-id-type="doi">10.1007/978-3-030-52229-2_18</pub-id>
-      <fpage></fpage>
-      <lpage></lpage>
-    </element-citation>
-  </ref>
-  <ref id="ref-Bramley_2015">
-    <element-citation>
-      <person-group person-group-type="author">
-        <name><surname>Bramley</surname><given-names>T.</given-names></name>
-      </person-group>
-      <article-title>Investigating the reliability of adaptive comparative judgment</article-title>
-      <year iso-8601-date="2015">2015</year>
-      <uri>http://www.cambridgeassessment.org.uk/Images/232694-investigating-the-reliability-of-adaptive-comparative-judgment.pdf</uri>
-    </element-citation>
-  </ref>
-</ref-list>
 </back>
 
 

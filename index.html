@@ -10,7 +10,7 @@
 <meta name="author" content="Tine van van Daal">
 <meta name="author" content="Sven De De Maeyer">
 <meta name="author" content="Steven Gillis">
-<meta name="dcterms.date" content="2024-07-18">
+<meta name="dcterms.date" content="2024-07-19">
 <meta name="keywords" content="comparative judgement, directed acycilc graph, causal analysis, probabilistic statistics">
 
 <title>Causes and effects in Dichotomous Comparative Judgments: an information-theoretical system with plausible mechanism</title>
@@ -75,10 +75,10 @@ div.csl-indent {
 <meta name="citation_author" content="Tine van van Daal">
 <meta name="citation_author" content="Sven De De Maeyer">
 <meta name="citation_author" content="Steven Gillis">
-<meta name="citation_publication_date" content="2024-07-18">
-<meta name="citation_cover_date" content="2024-07-18">
+<meta name="citation_publication_date" content="2024-07-19">
+<meta name="citation_cover_date" content="2024-07-19">
 <meta name="citation_year" content="2024">
-<meta name="citation_online_date" content="2024-07-18">
+<meta name="citation_online_date" content="2024-07-19">
 <meta name="citation_language" content="en">
 <meta name="citation_reference" content="citation_title=A law of comparative judgment;,citation_author=L. Thurstone;,citation_publication_date=1927;,citation_cover_date=1927;,citation_year=1927;,citation_issue=4;,citation_doi=10.1037/h0070288;,citation_volume=34;,citation_journal_title=Psychological Review;">
 <meta name="citation_reference" content="citation_title=On the theory of scales of measurement;,citation_author=S. Stevens;,citation_publication_date=1946;,citation_cover_date=1946;,citation_year=1946;,citation_fulltext_html_url=https://www.science.org/doi/abs/10.1126/science.103.2684.677;,citation_issue=2684;,citation_doi=10.1126/science.103.2684.677;,citation_volume=103;,citation_journal_title=Science;">
@@ -252,6 +252,7 @@ div.csl-indent {
 <meta name="citation_reference" content="citation_title=Behavioural economics: A very short introduction;,citation_author=M. Baddeley;,citation_publication_date=2017;,citation_cover_date=2017;,citation_year=2017;,citation_isbn=9780429154522;">
 <meta name="citation_reference" content="citation_title=The book of why: The new science of cause and effect;,citation_author=J. Pearl;,citation_author=D. Mackenzie;,citation_publication_date=2018;,citation_cover_date=2018;,citation_year=2018;,citation_isbn=046509760X;">
 <meta name="citation_reference" content="citation_title=A concise introduction to linguistics;,citation_author=B. Rowe;,citation_author=D. Levine;,citation_publication_date=2018;,citation_cover_date=2018;,citation_year=2018;,citation_isbn=9781315227283;">
+<meta name="citation_reference" content="citation_title=Graph theory and its applications;,citation_author=J. Gross;,citation_author=J. Yellen;,citation_author=M. Anderson;,citation_publication_date=2018;,citation_cover_date=2018;,citation_year=2018;,citation_doi=https://doi.org/10.1201/9780429425134 ;,citation_isbn=9780429425134;,citation_series_title=Textbooks in mathematics;">
 <meta name="citation_reference" content="citation_title=Multilevel modeling using r (2nd edition);,citation_author=W. Holmes;,citation_author=J. Bolin;,citation_author=K. Kelley;,citation_publication_date=2019;,citation_cover_date=2019;,citation_year=2019;,citation_doi=10.1201/9781351062268;">
 <meta name="citation_reference" content="citation_title=Statistical rethinking: A bayesian course with examples in r and STAN;,citation_author=R. McElreath;,citation_publication_date=2020;,citation_cover_date=2020;,citation_year=2020;,citation_isbn=9780367139919;">
 <meta name="citation_reference" content="citation_title=Causal inference: What if;,citation_author=M. Hernán;,citation_author=J. Robins;,citation_publication_date=2020;,citation_cover_date=2020;,citation_year=2020;,citation_fulltext_html_url=https://www.hsph.harvard.edu/miguel-hernan/causal-inference-book;">
@@ -360,7 +361,7 @@ div.csl-indent {
                 <div>
             <div class="quarto-title-meta-heading">Published</div>
             <div class="quarto-title-meta-contents">
-              <p class="date">July 18, 2024</p>
+              <p class="date">July 19, 2024</p>
             </div>
           </div>
           
@@ -394,19 +395,29 @@ div.csl-indent {
    
   <ul>
   <li><a href="#sec-introduction" id="toc-sec-introduction" class="nav-link active" data-scroll-target="#sec-introduction"><span class="header-section-number">1</span> Introduction</a></li>
-  <li><a href="#sec-TheoreticalFramework" id="toc-sec-TheoreticalFramework" class="nav-link" data-scroll-target="#sec-TheoreticalFramework"><span class="header-section-number">2</span> Theoretical framework</a>
+  <li><a href="#sec-prelim" id="toc-sec-prelim" class="nav-link" data-scroll-target="#sec-prelim"><span class="header-section-number">2</span> Preliminaries</a>
   <ul class="collapse">
-  <li><a href="#sec-ResearchQuestions" id="toc-sec-ResearchQuestions" class="nav-link" data-scroll-target="#sec-ResearchQuestions"><span class="header-section-number">2.1</span> Research questions and their estimands</a></li>
-  <li><a href="#sec-SciMod" id="toc-sec-SciMod" class="nav-link" data-scroll-target="#sec-SciMod"><span class="header-section-number">2.2</span> A scientific model for the DCJ procedure</a></li>
-  <li><a href="#sec-Sci2StatMod" id="toc-sec-Sci2StatMod" class="nav-link" data-scroll-target="#sec-Sci2StatMod"><span class="header-section-number">2.3</span> From the scientific to the Bradley-Terry-Luce model</a></li>
+  <li><a href="#sec-prelim-causal" id="toc-sec-prelim-causal" class="nav-link" data-scroll-target="#sec-prelim-causal"><span class="header-section-number">2.1</span> Causal analysis and DAGs</a></li>
+  <li><a href="#sec-prelim-flow" id="toc-sec-prelim-flow" class="nav-link" data-scroll-target="#sec-prelim-flow"><span class="header-section-number">2.2</span> The flow of association and causation</a></li>
   </ul></li>
-  <li><a href="#sec-discussion" id="toc-sec-discussion" class="nav-link" data-scroll-target="#sec-discussion"><span class="header-section-number">3</span> Discussion</a>
+  <li><a href="#sec-theory" id="toc-sec-theory" class="nav-link" data-scroll-target="#sec-theory"><span class="header-section-number">3</span> Theoretical framework</a>
   <ul class="collapse">
-  <li><a href="#sec-LFR" id="toc-sec-LFR" class="nav-link" data-scroll-target="#sec-LFR"><span class="header-section-number">3.1</span> Limitations and further research</a></li>
+  <li><a href="#sec-theory-scientific" id="toc-sec-theory-scientific" class="nav-link" data-scroll-target="#sec-theory-scientific"><span class="header-section-number">3.1</span> A scientific model for the DCJ</a></li>
+  <li><a href="#sec-theory-statistics" id="toc-sec-theory-statistics" class="nav-link" data-scroll-target="#sec-theory-statistics"><span class="header-section-number">3.2</span> From the scientific to statistical model</a></li>
+  <li><a href="#sec-theory-where" id="toc-sec-theory-where" class="nav-link" data-scroll-target="#sec-theory-where"><span class="header-section-number">3.3</span> Where does it all fit?</a></li>
   </ul></li>
-  <li><a href="#sec-conclusion" id="toc-sec-conclusion" class="nav-link" data-scroll-target="#sec-conclusion"><span class="header-section-number">4</span> Conclusion</a></li>
+  <li><a href="#sec-discuss" id="toc-sec-discuss" class="nav-link" data-scroll-target="#sec-discuss"><span class="header-section-number">4</span> Discussion</a>
+  <ul class="collapse">
+  <li><a href="#sec-discuss-finding" id="toc-sec-discuss-finding" class="nav-link" data-scroll-target="#sec-discuss-finding"><span class="header-section-number">4.1</span> Findings</a></li>
+  <li><a href="#sec-discuss-limitations" id="toc-sec-discuss-limitations" class="nav-link" data-scroll-target="#sec-discuss-limitations"><span class="header-section-number">4.2</span> Limitations and further research</a></li>
+  </ul></li>
+  <li><a href="#sec-conclusion" id="toc-sec-conclusion" class="nav-link" data-scroll-target="#sec-conclusion"><span class="header-section-number">5</span> Conclusion</a></li>
   
-  
+  <li><a href="#sec-appendix" id="toc-sec-appendix" class="nav-link" data-scroll-target="#sec-appendix"><span class="header-section-number">6</span> Appendix</a>
+  <ul class="collapse">
+  <li><a href="#sec-appA" id="toc-sec-appA" class="nav-link" data-scroll-target="#sec-appA"><span class="header-section-number">6.1</span> Why estimate judges appart?</a></li>
+  <li><a href="#references" id="toc-references" class="nav-link" data-scroll-target="#references">References</a></li>
+  </ul></li>
   </ul>
 </nav>
 </div>
@@ -419,56 +430,61 @@ div.csl-indent {
   
 
 
-<section id="sec-introduction" class="level2" data-number="1">
-<h2 data-number="1" class="anchored" data-anchor-id="sec-introduction"><span class="header-section-number">1</span> Introduction</h2>
+<section id="sec-introduction" class="level1" data-number="1">
+<h1 data-number="1"><span class="header-section-number">1</span> Introduction</h1>
 <!-- 1. What is comparative judgment? -->
 <p>In contemporary contexts, Thurstone’s law of comparative judgment <span class="citation" data-cites="Thurstone_1927">(<a href="#ref-Thurstone_1927" role="doc-biblioref">1927</a>)</span> primarily refers to the method of <em>Dichotomous</em> Comparative Judgment <span class="citation" data-cites="Pollitt_2012a Pollitt_2012b">(DCJ, <a href="#ref-Pollitt_2012a" role="doc-biblioref">Pollitt 2012a</a>, <a href="#ref-Pollitt_2012b" role="doc-biblioref">2012b</a>)</span>. In DCJ, a judge assesses the relative manifestation of a <em>trait</em> within a pair of stimuli. This assessment results in a dichotomous value indicating which stimulus possesses a higher degree of the trait. After different judges perform multiple rounds of pairwise comparisons, an outcome vector is produced. This vector is modeled using the Bradley-Terry-Luce model <span class="citation" data-cites="Bradley_et_al_1952 Luce_1959">(BTL, <a href="#ref-Bradley_et_al_1952" role="doc-biblioref">Bradley and Terry 1952</a>; <a href="#ref-Luce_1959" role="doc-biblioref">Luce 1959</a>)</span>, which creates a score that corresponds with the trait of interest. This score is then used to rank the stimuli from lowest to highest or to evaluate the influence of certain variables on the stimuli’s positions in the ranking.</p>
 <!-- 2. in what has been applied on?, and where is the gap? -->
-<p>DCJ has proven effective in assessing competencies and traits predominantly within the educational realm, as demonstrated by <span class="citation" data-cites="Pollitt_2012b">Pollitt (<a href="#ref-Pollitt_2012b" role="doc-biblioref">2012b</a>)</span>, <span class="citation" data-cites="Jones_2015">Jones (<a href="#ref-Jones_2015" role="doc-biblioref">2015</a>)</span>, <span class="citation" data-cites="vanDaal_et_al_2016">van Daal et al. (<a href="#ref-vanDaal_et_al_2016" role="doc-biblioref">2019</a>)</span>, <span class="citation" data-cites="Bartholomew_et_al_2018">Bartholomew et al. (<a href="#ref-Bartholomew_et_al_2018" role="doc-biblioref">2018</a>)</span>, <span class="citation" data-cites="Lesterhuis_2018">Lesterhuis (<a href="#ref-Lesterhuis_2018" role="doc-biblioref">2018</a>)</span>, <span class="citation" data-cites="Bartholomew_et_al_2020">Bartholomew and Williams (<a href="#ref-Bartholomew_et_al_2020" role="doc-biblioref">2020</a>)</span>, and <span class="citation" data-cites="Marshall_et_al_2020">Marshall et al. (<a href="#ref-Marshall_et_al_2020" role="doc-biblioref">2020</a>)</span>. However, its application transcends education, as exemplified by <span class="citation" data-cites="Boonen_et_al_2020">Boonen, Kloots, and Gillis (<a href="#ref-Boonen_et_al_2020" role="doc-biblioref">2020</a>)</span>. The methodology has also evolved to include multiple, as opposed to pairwise comparisons <span class="citation" data-cites="Luce_1959 Placket_1975">(<a href="#ref-Luce_1959" role="doc-biblioref">Luce 1959</a>; <a href="#ref-Placket_1975" role="doc-biblioref">Plackett 1975</a>)</span>, and to accommodate comparisons with ordinal outcomes <span class="citation" data-cites="Tutz_1986 Agresti_1992">(<a href="#ref-Tutz_1986" role="doc-biblioref">Tutz 1986</a>; <a href="#ref-Agresti_1992" role="doc-biblioref">Agresti 1992</a>)</span>. Overall, research suggests that DCJ offers an alternative and efficient approach to measurement and evaluation, characterized by its reliability and validity <span class="citation" data-cites="Lesterhuis_2018 vanDaal_2020 Marshall_et_al_2020">(<a href="#ref-Lesterhuis_2018" role="doc-biblioref">Lesterhuis 2018</a>; <a href="#ref-vanDaal_2020" role="doc-biblioref">van Daal 2020</a>; <a href="#ref-Marshall_et_al_2020" role="doc-biblioref">Marshall et al. 2020</a>)</span>. Nevertheless, despite the method’s widespread use, there is no clear representation in the literature of the plausible mechanisms that generate DCJ data. Particularly, there is no depiction of the complexity and the underlying assumptions of the DCJ system, nor how different assessment factors can potentially influence the observed DCJ outcome.</p>
+<p>DCJ has proven effective in assessing competencies and traits predominantly within the educational realm, as demonstrated by <span class="citation" data-cites="Pollitt_2012b">Pollitt (<a href="#ref-Pollitt_2012b" role="doc-biblioref">2012b</a>)</span>, <span class="citation" data-cites="Jones_2015">Jones (<a href="#ref-Jones_2015" role="doc-biblioref">2015</a>)</span>, <span class="citation" data-cites="vanDaal_et_al_2016">van Daal et al. (<a href="#ref-vanDaal_et_al_2016" role="doc-biblioref">2019</a>)</span>, <span class="citation" data-cites="Bartholomew_et_al_2018">Bartholomew et al. (<a href="#ref-Bartholomew_et_al_2018" role="doc-biblioref">2018</a>)</span>, <span class="citation" data-cites="Lesterhuis_2018">Lesterhuis (<a href="#ref-Lesterhuis_2018" role="doc-biblioref">2018</a>)</span>, <span class="citation" data-cites="Bartholomew_et_al_2020">Bartholomew and Williams (<a href="#ref-Bartholomew_et_al_2020" role="doc-biblioref">2020</a>)</span>, and <span class="citation" data-cites="Marshall_et_al_2020">Marshall et al. (<a href="#ref-Marshall_et_al_2020" role="doc-biblioref">2020</a>)</span>. However, its application transcends education, as exemplified by <span class="citation" data-cites="Boonen_et_al_2020">Boonen, Kloots, and Gillis (<a href="#ref-Boonen_et_al_2020" role="doc-biblioref">2020</a>)</span>. The methodology has also evolved to include multiple, as opposed to pairwise comparisons <span class="citation" data-cites="Luce_1959 Placket_1975">(<a href="#ref-Luce_1959" role="doc-biblioref">Luce 1959</a>; <a href="#ref-Placket_1975" role="doc-biblioref">Plackett 1975</a>)</span>, and to accommodate comparisons with ordinal outcomes <span class="citation" data-cites="Tutz_1986 Agresti_1992">(<a href="#ref-Tutz_1986" role="doc-biblioref">Tutz 1986</a>; <a href="#ref-Agresti_1992" role="doc-biblioref">Agresti 1992</a>)</span>. Overall, research suggests that DCJ offers an alternative and efficient approach to measurement and evaluation, characterized by its reliability and validity <span class="citation" data-cites="Lesterhuis_2018 vanDaal_2020 Marshall_et_al_2020">(<a href="#ref-Lesterhuis_2018" role="doc-biblioref">Lesterhuis 2018</a>; <a href="#ref-vanDaal_2020" role="doc-biblioref">van Daal 2020</a>; <a href="#ref-Marshall_et_al_2020" role="doc-biblioref">Marshall et al. 2020</a>)</span>. Nevertheless, despite the method’s widespread use, the literature does not offer a clear representation of the plausible mechanisms that generate the DCJ data. Particularly, there is no depiction of the complexity and the underlying assumptions of the DCJ system, nor how different assessment factors can potentially influence the observed DCJ outcome.</p>
 <!-- 3. What are the factors behind DCJ? -->
 <p>According to <span class="citation" data-cites="Verhavert_et_al_2019">Verhavert et al. (<a href="#ref-Verhavert_et_al_2019" role="doc-biblioref">2019</a>)</span> and <span class="citation" data-cites="vanDaal_2020">van Daal (<a href="#ref-vanDaal_2020" role="doc-biblioref">2020</a>)</span>, several assessment factors interact and influence the DCJ outcome. These factors include the number and characteristics of the stimuli, their <em>proximity</em> in terms of the assessed trait, the number of comparison per stimulus, and the pairing algorithm used. Furthermore, since the method relies on judges’ assessments, the number and characteristics of judges, their <em>discrimination</em> abilities, and the number of comparisons per judge also play pivotal roles. Moreover, when the stimuli represent sub-units of higher-levels units, factors such as the number and characteristics of these units, along with their <em>proximity</em> in terms of the assessed trait, can significantly influence the outcome. For instance, <span class="citation" data-cites="vanDaal_et_al_2016">van Daal et al. (<a href="#ref-vanDaal_et_al_2016" role="doc-biblioref">2019</a>)</span> assessed university students’ skills in academic writing, utilizing multiple argumentative essays (stimuli, sub-units) originating from various students (units).</p>
-<!-- 4. Solution to the gap -->
-<p>Although several studies have examined the individual impact of these factors on the method’s reliability, including <span class="citation" data-cites="Bramley_2015">Bramley (<a href="#ref-Bramley_2015" role="doc-biblioref">2015</a>)</span>, <span class="citation" data-cites="Pollitt_2012b">Pollitt (<a href="#ref-Pollitt_2012b" role="doc-biblioref">2012b</a>)</span>, <span class="citation" data-cites="Bramley_et_al_2019">Bramley and Vitello (<a href="#ref-Bramley_et_al_2019" role="doc-biblioref">2019</a>)</span>, <span class="citation" data-cites="Verhavert_et_al_2019">Verhavert et al. (<a href="#ref-Verhavert_et_al_2019" role="doc-biblioref">2019</a>)</span>, <span class="citation" data-cites="Crompvoets_et_al_2022">Crompvoets, Béguin, and Sijtsma (<a href="#ref-Crompvoets_et_al_2022" role="doc-biblioref">2022</a>)</span>, <span class="citation" data-cites="vanDaal_et_al_2017">van Daal et al. (<a href="#ref-vanDaal_et_al_2017" role="doc-biblioref">2017</a>)</span>, and <span class="citation" data-cites="Gijsen_et_al_2021">Gijsen et al. (<a href="#ref-Gijsen_et_al_2021" role="doc-biblioref">2021</a>)</span>, to the best of the authors’ knowledge, none have provided such transparent depiction of DCJ system and the plausible mechanisms that generate the DCJ outcome. This study aims to fill this gap by utilizing the framework of causal analysis and Directed Acyclic Graphs [DAG; <span class="citation" data-cites="Pearl_2009">Pearl (<a href="#ref-Pearl_2009" role="doc-biblioref">2009</a>)</span>; <span class="citation" data-cites="Pearl_et_al_2016">Pearl, Glymour, and Jewell (<a href="#ref-Pearl_et_al_2016" role="doc-biblioref">2016</a>)</span>]. Using this framework, the study will construct a scientific model to elucidate the underlying assumptions of the DCJ system, providing plausible mechanisms of how the DCJ data is generated. This model will enable researchers to draw inferences about plausible causal relationships within the DCJ system. Furthermore, using a minimal set of assumptions from the framework, the study will translate the scientific model into a probabilistic statistical model, aiming to derive statistical estimands for different targets of inference. Ultimately, the results of this study could inform the planning of DCJ experiments and hold significance for researchers or analysts involved in education and assessment procedures who implement the DCJ methodology.</p>
+<!-- 4. Solution to the gap, final objective and relevance -->
+<p>Although several studies have examined the individual impact of these factors on the method’s reliability <span class="citation" data-cites="Bramley_2015 Pollitt_2012b Bramley_et_al_2019 Verhavert_et_al_2019 Crompvoets_et_al_2022 vanDaal_et_al_2017 Gijsen_et_al_2021">(<a href="#ref-Bramley_2015" role="doc-biblioref">Bramley 2015</a>; <a href="#ref-Pollitt_2012b" role="doc-biblioref">Pollitt 2012b</a>; <a href="#ref-Bramley_et_al_2019" role="doc-biblioref">Bramley and Vitello 2019</a>; <a href="#ref-Verhavert_et_al_2019" role="doc-biblioref">Verhavert et al. 2019</a>; <a href="#ref-Crompvoets_et_al_2022" role="doc-biblioref">Crompvoets, Béguin, and Sijtsma 2022</a>; <a href="#ref-vanDaal_et_al_2017" role="doc-biblioref">van Daal et al. 2017</a>; <a href="#ref-Gijsen_et_al_2021" role="doc-biblioref">Gijsen et al. 2021</a>)</span>, none, to the best of the authors’ knowledge, have provided a transparent depiction of the DCJ system and the plausible mechanisms generating the DCJ outcome. This study aims to fill this gap by representing DCJ within the causal analysis framework <span class="citation" data-cites="Pearl_2009 Pearl_et_al_2016">(<a href="#ref-Pearl_2009" role="doc-biblioref">Pearl 2009</a>; <a href="#ref-Pearl_et_al_2016" role="doc-biblioref">Pearl, Glymour, and Jewell 2016</a>)</span>. Using Directed Acyclic Graphs <span class="citation" data-cites="Gross_et_al_2018 Neal_2020">(DAG, <a href="#ref-Gross_et_al_2018" role="doc-biblioref">Gross, Yellen, and Anderson 2018</a>; <a href="#ref-Neal_2020" role="doc-biblioref">Neal 2020</a>)</span>, the study will construct a scientific model to elucidate the underlying assumptions of the DCJ system, providing plausible mechanisms for how the DCJ outcome could be generated. Next, using a minimal set of assumptions embedded in the framework, the study will translate the scientific model into a probabilistic statistical model. This model derives statistical estimands to draw inferences about plausible causal relationships within the DCJ system. Ultimately, this research aims to extend the law of comparative judgment initially proposed by <span class="citation" data-cites="Thurstone_1927">Thurstone (<a href="#ref-Thurstone_1927" role="doc-biblioref">1927</a>)</span> and provide a sound probabilistic base for the statistical analysis of DCJ data. Consequently, this research holds significance for researchers and analysts involved in education and assessment procedures who implement or design DCJ experiments.</p>
 </section>
-<section id="sec-TheoreticalFramework" class="level2" data-number="2">
-<h2 data-number="2" class="anchored" data-anchor-id="sec-TheoreticalFramework"><span class="header-section-number">2</span> Theoretical framework</h2>
-<section id="sec-ResearchQuestions" class="level3" data-number="2.1">
-<h3 data-number="2.1" class="anchored" data-anchor-id="sec-ResearchQuestions"><span class="header-section-number">2.1</span> Research questions and their estimands</h3>
+<section id="sec-prelim" class="level1" data-number="2">
+<h1 data-number="2"><span class="header-section-number">2</span> Preliminaries</h1>
+<section id="sec-prelim-causal" class="level2" data-number="2.1">
+<h2 data-number="2.1" class="anchored" data-anchor-id="sec-prelim-causal"><span class="header-section-number">2.1</span> Causal analysis and DAGs</h2>
 </section>
-<section id="sec-SciMod" class="level3" data-number="2.2">
-<h3 data-number="2.2" class="anchored" data-anchor-id="sec-SciMod"><span class="header-section-number">2.2</span> A scientific model for the DCJ procedure</h3>
-</section>
-<section id="sec-Sci2StatMod" class="level3" data-number="2.3">
-<h3 data-number="2.3" class="anchored" data-anchor-id="sec-Sci2StatMod"><span class="header-section-number">2.3</span> From the scientific to the Bradley-Terry-Luce model</h3>
+<section id="sec-prelim-flow" class="level2" data-number="2.2">
+<h2 data-number="2.2" class="anchored" data-anchor-id="sec-prelim-flow"><span class="header-section-number">2.2</span> The flow of association and causation</h2>
 </section>
 </section>
-<section id="sec-discussion" class="level2" data-number="3">
-<h2 data-number="3" class="anchored" data-anchor-id="sec-discussion"><span class="header-section-number">3</span> Discussion</h2>
-<section id="sec-LFR" class="level3" data-number="3.1">
-<h3 data-number="3.1" class="anchored" data-anchor-id="sec-LFR"><span class="header-section-number">3.1</span> Limitations and further research</h3>
+<section id="sec-theory" class="level1" data-number="3">
+<h1 data-number="3"><span class="header-section-number">3</span> Theoretical framework</h1>
+<section id="sec-theory-scientific" class="level2" data-number="3.1">
+<h2 data-number="3.1" class="anchored" data-anchor-id="sec-theory-scientific"><span class="header-section-number">3.1</span> A scientific model for the DCJ</h2>
+</section>
+<section id="sec-theory-statistics" class="level2" data-number="3.2">
+<h2 data-number="3.2" class="anchored" data-anchor-id="sec-theory-statistics"><span class="header-section-number">3.2</span> From the scientific to statistical model</h2>
+</section>
+<section id="sec-theory-where" class="level2" data-number="3.3">
+<h2 data-number="3.3" class="anchored" data-anchor-id="sec-theory-where"><span class="header-section-number">3.3</span> Where does it all fit?</h2>
 </section>
 </section>
-<section id="sec-conclusion" class="level2" data-number="4">
-<h2 data-number="4" class="anchored" data-anchor-id="sec-conclusion"><span class="header-section-number">4</span> Conclusion</h2>
+<section id="sec-discuss" class="level1" data-number="4">
+<h1 data-number="4"><span class="header-section-number">4</span> Discussion</h1>
+<section id="sec-discuss-finding" class="level2" data-number="4.1">
+<h2 data-number="4.1" class="anchored" data-anchor-id="sec-discuss-finding"><span class="header-section-number">4.1</span> Findings</h2>
+</section>
+<section id="sec-discuss-limitations" class="level2" data-number="4.2">
+<h2 data-number="4.2" class="anchored" data-anchor-id="sec-discuss-limitations"><span class="header-section-number">4.2</span> Limitations and further research</h2>
+</section>
+</section>
+<section id="sec-conclusion" class="level1" data-number="5">
+<h1 data-number="5"><span class="header-section-number">5</span> Conclusion</h1>
 <div style="page-break-after: always;"></div>
 </section>
 
-
-
-<div id="quarto-appendix" class="default"><section id="declarations" class="level2 appendix unnumbered"><h2 class="anchored quarto-appendix-heading">Declarations</h2><div class="quarto-appendix-contents">
-
-<p><strong>Funding:</strong> The project was founded through the Research Fund of the University of Antwerp (BOF).</p>
-<p><strong>Conflict of interests:</strong> The authors declare no conflict of interest.</p>
-<p><strong>Ethics approval:</strong> The University of Antwerp Research Ethics Committee has confirmed that no ethical approval is required.</p>
-<p><strong>Consent to participate:</strong> Not applicable</p>
-<p><strong>Consent for publication:</strong> All authors have read and agreed to the published version of the manuscript.</p>
-<p><strong>Availability of data and materials:</strong> No data was utilized in this study</p>
-<p><strong>Code availability:</strong> All the code utilized in this research is available in the digital document located at: <a href="https://jriveraespejo.github.io/paper2_manuscript/">https://jriveraespejo.github.io/paper2_manuscript/</a>.</p>
-<p><strong>Authors’ contributions:</strong> <em>Conceptualization:</em> S.G., S.DM., T.vD., and J.M.R.E; <em>Methodology:</em> S.DM., T.vD., and J.M.R.E; <em>Software:</em> J.M.R.E.; <em>Validation:</em> J.M.R.E.; <em>Formal Analysis:</em> J.M.R.E.; <em>Investigation:</em> J.M.R.E; <em>Resources:</em> S.G., S.DM., and T.vD.; <em>Data curation:</em> J.M.R.E.; <em>Writing - original draft:</em> J.M.R.E.; <em>Writing - review &amp; editing:</em> S.G., S.DM., and T.vD.; <em>Visualization:</em> J.M.R.E.; <em>Supervision:</em> S.G. and S.DM.; <em>Project administration:</em> S.G. and S.DM.; <em>Funding acquisition:</em> S.G. and S.DM.</p>
-<!-- **Acknowledgements:** NO additional acknowledgements -->
+<section id="sec-appendix" class="level1" data-number="6">
+<h1 data-number="6"><span class="header-section-number">6</span> Appendix</h1>
+<section id="sec-appA" class="level2" data-number="6.1">
+<h2 data-number="6.1" class="anchored" data-anchor-id="sec-appA"><span class="header-section-number">6.1</span> Why estimate judges appart?</h2>
+<!-- The same idea as interactions: when interactions are significant, the interpretations of the parameters cannot be made in isolation -->
 <div style="page-break-after: always;"></div>
-</div></section><section id="references" class="level2 appendix unnumbered"><h2 class="anchored quarto-appendix-heading">References</h2><div class="quarto-appendix-contents">
-
+</section>
+<section id="references" class="level2 unnumbered">
+<h2 class="unnumbered anchored" data-anchor-id="references">References</h2>
 <div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0" role="list">
 <div id="ref-Agresti_1992" class="csl-entry" role="listitem">
 Agresti, A. 1992. <span>“Analysis of Ordinal Paired Comparison Data.”</span> <em>Journal of the Royal Statistical Society</em> 41 (2): 287–97. <a href="https://doi.org/10.2307/2347562">https://doi.org/10.2307/2347562</a>.
@@ -477,7 +493,7 @@ Agresti, A. 1992. <span>“Analysis of Ordinal Paired Comparison Data.”</span>
 Bartholomew, S., L. Nadelson, W. Goodridge, and E. Reeve. 2018. <span>“Adaptive Comparative Judgment as a Tool for Assessing Open-Ended Design Problems and Model Eliciting Activities.”</span> <em>Educational Assessment</em> 23 (2): 85–101. <a href="https://doi.org/10.1080/10627197.2018.1444986">https://doi.org/10.1080/10627197.2018.1444986</a>.
 </div>
 <div id="ref-Bartholomew_et_al_2020" class="csl-entry" role="listitem">
-Bartholomew, S., and P. Williams. 2020. <span>“STEM Skill Assessment: An Application of Adaptive Comparative Judgment.”</span> In <em>Integrated Approaches to STEM Education. Advances in STEM Education</em>, edited by J. Anderson and Y. Li. Springer. <a href="https://doi.org/10.1007/978-3-030-52229-2_18">https://doi.org/10.1007/978-3-030-52229-2_18</a>.
+Bartholomew, S., and P. Williams. 2020. <span>“STEM Skill Assessment: An Application of Adaptive Comparative Judgment.”</span> In <em>Integrated Approaches to STEM Education. Advances in STEM Education</em>, edited by J. Anderson and Y. Li, 331–49. Springer. <a href="https://doi.org/10.1007/978-3-030-52229-2_18">https://doi.org/10.1007/978-3-030-52229-2_18</a>.
 </div>
 <div id="ref-Boonen_et_al_2020" class="csl-entry" role="listitem">
 Boonen, N., H. Kloots, and S. Gillis. 2020. <span>“Rating the Overall Speech Quality of Hearing-Impaired Children by Means of Comparative Judgements.”</span> <em>Journal of Communication Disorders</em> 83: 1675–87. <a href="https://doi.org/10.1016/j.jcomdis.2019.105969">https://doi.org/10.1016/j.jcomdis.2019.105969</a>.
@@ -497,6 +513,9 @@ Crompvoets, Elise A. V., Anton A. Béguin, and Klaas Sijtsma. 2022. <span>“On 
 <div id="ref-Gijsen_et_al_2021" class="csl-entry" role="listitem">
 Gijsen, M., T. van Daal, Marije Lesterhuis, David Gijbels, and Sven De Maeyer. 2021. <span>“The Complexity of Comparative Judgments in Assessing Argumentative Writing: An Eye Tracking Study.”</span> <em>Frontiers in Education</em> 5. <a href="https://doi.org/10.3389/feduc.2020.582800">https://doi.org/10.3389/feduc.2020.582800</a>.
 </div>
+<div id="ref-Gross_et_al_2018" class="csl-entry" role="listitem">
+Gross, J., J. Yellen, and M. Anderson. 2018. <em>Graph Theory and Its Applications</em>. Textbooks in Mathematics. Chapman; Hall/CRC. https://doi.org/<a href="https://doi.org/10.1201/9780429425134 ">https://doi.org/10.1201/9780429425134 </a>.
+</div>
 <div id="ref-Jones_2015" class="csl-entry" role="listitem">
 Jones, I. 2015. <span>“The Problem of Assessing Problem Solving: Can Comparative Judgement Help?”</span> <em>Educational Studies in Mathematics</em> 89 (3): 337–55. <a href="https://doi.org/10.1007/s10649-015-9607-1">https://doi.org/10.1007/s10649-015-9607-1</a>.
 </div>
@@ -508,6 +527,9 @@ Luce, R. 1959. <span>“On the Possible Psychophysical Laws.”</span> <em>The P
 </div>
 <div id="ref-Marshall_et_al_2020" class="csl-entry" role="listitem">
 Marshall, N., K Shaw, J. Hunter, and I. Jones. 2020. <span>“Assessment by Comparative Judgement: An Application to Secondary Statistics and English in New Zealand.”</span> <em>New Zealand Journal of Educational Studies</em> 55: 49–71. <a href="https://doi.org/10.1007/s40841-020-00163-3">https://doi.org/10.1007/s40841-020-00163-3</a>.
+</div>
+<div id="ref-Neal_2020" class="csl-entry" role="listitem">
+Neal, B. 2020. <span>“Introduction to Causal Inference from a Machine Learning Perspective.”</span> <a href="https://www.bradyneal.com/Introduction_to_Causal_Inference-Dec17_2020-Neal.pdf">https://www.bradyneal.com/Introduction_to_Causal_Inference-Dec17_2020-Neal.pdf</a>.
 </div>
 <div id="ref-Pearl_2009" class="csl-entry" role="listitem">
 Pearl, J. 2009. <em><a href="">Causality: Models, Reasoning and Inference</a></em>. Cambrige University Press.
@@ -543,13 +565,28 @@ van Daal, T., M. Lesterhuis, L. Coertjens, MT. van de Kamp, V. Donche, and Sven 
 Verhavert, S., R. Bouwer, V Donche, and S. De Maeyer. 2019. <span>“A Meta-Analysis on the Reliability of Comparative Judgement.”</span> <em>Assessment in Education: Principles, Policy and Practice</em> 26 (5): 541–62. <a href="https://doi.org/10.1080/0969594X.2019.1602027">https://doi.org/10.1080/0969594X.2019.1602027</a>.
 </div>
 </div>
+</section>
+</section>
+
+<div id="quarto-appendix" class="default"><section id="declarations" class="level1 appendix unnumbered"><h2 class="anchored quarto-appendix-heading">Declarations</h2><div class="quarto-appendix-contents">
+
+<p><strong>Funding:</strong> The project was founded through the Research Fund of the University of Antwerp (BOF).</p>
+<p><strong>Conflict of interests:</strong> The authors declare no conflict of interest.</p>
+<p><strong>Ethics approval:</strong> The University of Antwerp Research Ethics Committee has confirmed that no ethical approval is required.</p>
+<p><strong>Consent to participate:</strong> Not applicable</p>
+<p><strong>Consent for publication:</strong> All authors have read and agreed to the published version of the manuscript.</p>
+<p><strong>Availability of data and materials:</strong> No data was utilized in this study</p>
+<p><strong>Code availability:</strong> All the code utilized in this research is available in the digital document located at: <a href="https://jriveraespejo.github.io/paper2_manuscript/">https://jriveraespejo.github.io/paper2_manuscript/</a>.</p>
+<p><strong>Authors’ contributions:</strong> <em>Conceptualization:</em> S.G., S.DM., T.vD., and J.M.R.E; <em>Methodology:</em> S.DM., T.vD., and J.M.R.E; <em>Software:</em> J.M.R.E.; <em>Validation:</em> J.M.R.E.; <em>Formal Analysis:</em> J.M.R.E.; <em>Investigation:</em> J.M.R.E; <em>Resources:</em> S.G., S.DM., and T.vD.; <em>Data curation:</em> J.M.R.E.; <em>Writing - original draft:</em> J.M.R.E.; <em>Writing - review &amp; editing:</em> S.G., S.DM., and T.vD.; <em>Visualization:</em> J.M.R.E.; <em>Supervision:</em> S.G. and S.DM.; <em>Project administration:</em> S.G. and S.DM.; <em>Funding acquisition:</em> S.G. and S.DM.</p>
+<!-- **Acknowledgements:** NO additional acknowledgements -->
+<div style="page-break-after: always;"></div>
 </div></section><section class="quarto-appendix-contents" id="quarto-citation"><h2 class="anchored quarto-appendix-heading">Citation</h2><div><div class="quarto-appendix-secondary-label">BibTeX citation:</div><pre class="sourceCode code-with-copy quarto-appendix-bibtex"><code class="sourceCode bibtex">@online{rivera_espejo2024,
   author = {Rivera Espejo, Jose Manuel and van van Daal, Tine and De De
     Maeyer, Sven and Gillis, Steven},
   title = {Causes and Effects in {Dichotomous} {Comparative}
     {Judgments:} An Information-Theoretical System with Plausible
     Mechanism},
-  date = {2024-07-18},
+  date = {2024-07-19},
   langid = {en},
   abstract = {Dichotomous Comparative Judgment {[}DCJ, @Pollitt\_2012a,
     @Pollitt\_2012b{]} requires judges to evaluate the relative
@@ -581,7 +618,7 @@ Verhavert, S., R. Bouwer, V Donche, and S. De Maeyer. 2019. <span>“A Meta-Anal
 Rivera Espejo, Jose Manuel, Tine van van Daal, Sven De De Maeyer, and
 Steven Gillis. 2024. <span>“Causes and Effects in Dichotomous
 Comparative Judgments: An Information-Theoretical System with Plausible
-Mechanism.”</span> July 18, 2024.
+Mechanism.”</span> July 19, 2024.
 </div></div></section></div></main>
 <!-- /main column -->
 <script id="quarto-html-after-body" type="application/javascript">
