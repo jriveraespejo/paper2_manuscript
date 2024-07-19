@@ -398,21 +398,277 @@ the University of Antwerp (BOF).</funding-statement>
   <title>Preliminaries</title>
   <sec id="sec-prelim-causal">
     <title>Causal analysis and DAGs</title>
+    <p>Causal analysis is the field of experimental design and
+    statistics pertaining to establishing cause and effect from
+    data.</p>
+    <p>Causal inference</p>
+    <p>Directed Acyclic Graph (DAG)</p>
+    <p>the four components of DAGs</p>
+    <p>Structural Causal Model (SCM)</p>
+    <p>the four components of DAGs in SCM notation</p>
   </sec>
   <sec id="sec-prelim-flow">
     <title>The flow of association and causation</title>
+    <fig id="fig-ACflow">
+      <caption><p>Figure 1: The flow of association and causation in
+      graphs. Extracted from Neal
+      (<xref alt="2020, 31" rid="ref-Neal_2020" ref-type="bibr">2020,
+      31</xref>)</p></caption>
+      <graphic mimetype="image" mime-subtype="png" xlink:href="images/figures/ACflow.png" />
+    </fig>
   </sec>
 </sec>
 <sec id="sec-theory">
   <title>Theoretical framework</title>
+  <sec id="sec-theory-where">
+    <title>Where does it all fit?</title>
+    <fig id="fig-IEflow">
+      <caption><p>Figure 2: Identification-Estimation flowchart.
+      Extracted from Neal
+      (<xref alt="2020, 32" rid="ref-Neal_2020" ref-type="bibr">2020,
+      32</xref>)</p></caption>
+      <graphic mimetype="image" mime-subtype="png" xlink:href="images/figures/IEflow.png" />
+    </fig>
+  </sec>
   <sec id="sec-theory-scientific">
     <title>A scientific model for the DCJ</title>
+    <fig id="fig-SciModel_simp1">
+      <caption><p>Figure 3: DCJ causal diagram, simplified
+      description</p></caption>
+      <graphic mimetype="image" mime-subtype="png" xlink:href="images/figures/SciModel_simp1.png" />
+    </fig>
+    <fig id="fig-SciModel_simp2">
+      <caption><p>Figure 4: DCJ causal diagram, simplified mathematical
+      description</p></caption>
+      <graphic mimetype="image" mime-subtype="png" xlink:href="images/figures/SciModel_simp2.png" />
+    </fig>
+    <fig id="fig-SciModel_pop">
+      <caption><p>Figure 5: DCJ causal diagram, population mathematical
+      description</p></caption>
+      <graphic mimetype="image" mime-subtype="png" xlink:href="images/figures/SciModel_pop.png" />
+    </fig>
+    <fig id="fig-SciModel_samp">
+      <caption><p>Figure 6: DCJ causal diagram, sample with comparisons
+      mathematical description</p></caption>
+      <graphic mimetype="image" mime-subtype="png" xlink:href="images/figures/SciModel_samp.png" />
+    </fig>
+  </sec>
+  <sec id="sec-theory-probability">
+    <title>Probabilitics assumptions of the scientific model</title>
+    <p><styled-content id="eq-StructuralModel"><disp-formula><alternatives>
+    <tex-math><![CDATA[
+    \begin{aligned}
+      O_{kijr_{ij}} := & \; f_{O}( \delta_{kijr_{ij}} ) \\
+      \delta_{kijr_{ij}} := & \; f_{D}( \gamma_{k}, \theta_{ir_{i}} ) \\
+      \gamma_{k} := & \; f_{G}( Z_{k}, e_{k} ) \\
+      \theta_{ir_{i}} := & \; f_{R}( \theta_{i}, Y_{r}, e_{r_{i}} ) \\
+      \theta_{i} := & \; f_{T}( X_{i}, e_{i} ) \\
+      & \; e_{k} \perp\!\!\!\perp e_{i} \\
+      & \; e_{k} \perp\!\!\!\perp e_{r_{i}} \\
+      & \; e_{i} \perp\!\!\!\perp e_{r_{i}}
+    \end{aligned}
+     \qquad(1)]]></tex-math>
+    <mml:math display="block" xmlns:mml="http://www.w3.org/1998/Math/MathML"><mml:mrow><mml:mtable><mml:mtr><mml:mtd columnalign="right" style="text-align: right"><mml:msub><mml:mi>O</mml:mi><mml:mrow><mml:mi>k</mml:mi><mml:mi>i</mml:mi><mml:mi>j</mml:mi><mml:msub><mml:mi>r</mml:mi><mml:mrow><mml:mi>i</mml:mi><mml:mi>j</mml:mi></mml:mrow></mml:msub></mml:mrow></mml:msub><mml:mo>:=</mml:mo></mml:mtd><mml:mtd columnalign="left" style="text-align: left"><mml:mspace width="0.278em"></mml:mspace><mml:msub><mml:mi>f</mml:mi><mml:mi>O</mml:mi></mml:msub><mml:mrow><mml:mo stretchy="true" form="prefix">(</mml:mo><mml:msub><mml:mi>δ</mml:mi><mml:mrow><mml:mi>k</mml:mi><mml:mi>i</mml:mi><mml:mi>j</mml:mi><mml:msub><mml:mi>r</mml:mi><mml:mrow><mml:mi>i</mml:mi><mml:mi>j</mml:mi></mml:mrow></mml:msub></mml:mrow></mml:msub><mml:mo stretchy="true" form="postfix">)</mml:mo></mml:mrow></mml:mtd></mml:mtr><mml:mtr><mml:mtd columnalign="right" style="text-align: right"><mml:msub><mml:mi>δ</mml:mi><mml:mrow><mml:mi>k</mml:mi><mml:mi>i</mml:mi><mml:mi>j</mml:mi><mml:msub><mml:mi>r</mml:mi><mml:mrow><mml:mi>i</mml:mi><mml:mi>j</mml:mi></mml:mrow></mml:msub></mml:mrow></mml:msub><mml:mo>:=</mml:mo></mml:mtd><mml:mtd columnalign="left" style="text-align: left"><mml:mspace width="0.278em"></mml:mspace><mml:msub><mml:mi>f</mml:mi><mml:mi>D</mml:mi></mml:msub><mml:mrow><mml:mo stretchy="true" form="prefix">(</mml:mo><mml:msub><mml:mi>γ</mml:mi><mml:mi>k</mml:mi></mml:msub><mml:mo>,</mml:mo><mml:msub><mml:mi>θ</mml:mi><mml:mrow><mml:mi>i</mml:mi><mml:msub><mml:mi>r</mml:mi><mml:mi>i</mml:mi></mml:msub></mml:mrow></mml:msub><mml:mo stretchy="true" form="postfix">)</mml:mo></mml:mrow></mml:mtd></mml:mtr><mml:mtr><mml:mtd columnalign="right" style="text-align: right"><mml:msub><mml:mi>γ</mml:mi><mml:mi>k</mml:mi></mml:msub><mml:mo>:=</mml:mo></mml:mtd><mml:mtd columnalign="left" style="text-align: left"><mml:mspace width="0.278em"></mml:mspace><mml:msub><mml:mi>f</mml:mi><mml:mi>G</mml:mi></mml:msub><mml:mrow><mml:mo stretchy="true" form="prefix">(</mml:mo><mml:msub><mml:mi>Z</mml:mi><mml:mi>k</mml:mi></mml:msub><mml:mo>,</mml:mo><mml:msub><mml:mi>e</mml:mi><mml:mi>k</mml:mi></mml:msub><mml:mo stretchy="true" form="postfix">)</mml:mo></mml:mrow></mml:mtd></mml:mtr><mml:mtr><mml:mtd columnalign="right" style="text-align: right"><mml:msub><mml:mi>θ</mml:mi><mml:mrow><mml:mi>i</mml:mi><mml:msub><mml:mi>r</mml:mi><mml:mi>i</mml:mi></mml:msub></mml:mrow></mml:msub><mml:mo>:=</mml:mo></mml:mtd><mml:mtd columnalign="left" style="text-align: left"><mml:mspace width="0.278em"></mml:mspace><mml:msub><mml:mi>f</mml:mi><mml:mi>R</mml:mi></mml:msub><mml:mrow><mml:mo stretchy="true" form="prefix">(</mml:mo><mml:msub><mml:mi>θ</mml:mi><mml:mi>i</mml:mi></mml:msub><mml:mo>,</mml:mo><mml:msub><mml:mi>Y</mml:mi><mml:mi>r</mml:mi></mml:msub><mml:mo>,</mml:mo><mml:msub><mml:mi>e</mml:mi><mml:msub><mml:mi>r</mml:mi><mml:mi>i</mml:mi></mml:msub></mml:msub><mml:mo stretchy="true" form="postfix">)</mml:mo></mml:mrow></mml:mtd></mml:mtr><mml:mtr><mml:mtd columnalign="right" style="text-align: right"><mml:msub><mml:mi>θ</mml:mi><mml:mi>i</mml:mi></mml:msub><mml:mo>:=</mml:mo></mml:mtd><mml:mtd columnalign="left" style="text-align: left"><mml:mspace width="0.278em"></mml:mspace><mml:msub><mml:mi>f</mml:mi><mml:mi>T</mml:mi></mml:msub><mml:mrow><mml:mo stretchy="true" form="prefix">(</mml:mo><mml:msub><mml:mi>X</mml:mi><mml:mi>i</mml:mi></mml:msub><mml:mo>,</mml:mo><mml:msub><mml:mi>e</mml:mi><mml:mi>i</mml:mi></mml:msub><mml:mo stretchy="true" form="postfix">)</mml:mo></mml:mrow></mml:mtd></mml:mtr><mml:mtr><mml:mtd columnalign="right" style="text-align: right"></mml:mtd><mml:mtd columnalign="left" style="text-align: left"><mml:mspace width="0.278em"></mml:mspace><mml:msub><mml:mi>e</mml:mi><mml:mi>k</mml:mi></mml:msub><mml:mo>⊥</mml:mo><mml:mspace width="-0.167em"></mml:mspace><mml:mspace width="-0.167em"></mml:mspace><mml:mspace width="-0.167em"></mml:mspace><mml:mo>⊥</mml:mo><mml:msub><mml:mi>e</mml:mi><mml:mi>i</mml:mi></mml:msub></mml:mtd></mml:mtr><mml:mtr><mml:mtd columnalign="right" style="text-align: right"></mml:mtd><mml:mtd columnalign="left" style="text-align: left"><mml:mspace width="0.278em"></mml:mspace><mml:msub><mml:mi>e</mml:mi><mml:mi>k</mml:mi></mml:msub><mml:mo>⊥</mml:mo><mml:mspace width="-0.167em"></mml:mspace><mml:mspace width="-0.167em"></mml:mspace><mml:mspace width="-0.167em"></mml:mspace><mml:mo>⊥</mml:mo><mml:msub><mml:mi>e</mml:mi><mml:msub><mml:mi>r</mml:mi><mml:mi>i</mml:mi></mml:msub></mml:msub></mml:mtd></mml:mtr><mml:mtr><mml:mtd columnalign="right" style="text-align: right"></mml:mtd><mml:mtd columnalign="left" style="text-align: left"><mml:mspace width="0.278em"></mml:mspace><mml:msub><mml:mi>e</mml:mi><mml:mi>i</mml:mi></mml:msub><mml:mo>⊥</mml:mo><mml:mspace width="-0.167em"></mml:mspace><mml:mspace width="-0.167em"></mml:mspace><mml:mspace width="-0.167em"></mml:mspace><mml:mo>⊥</mml:mo><mml:msub><mml:mi>e</mml:mi><mml:msub><mml:mi>r</mml:mi><mml:mi>i</mml:mi></mml:msub></mml:msub></mml:mtd></mml:mtr></mml:mtable><mml:mspace width="2.0em"></mml:mspace><mml:mrow><mml:mo stretchy="true" form="prefix">(</mml:mo><mml:mn>1</mml:mn><mml:mo stretchy="true" form="postfix">)</mml:mo></mml:mrow></mml:mrow></mml:math></alternatives></disp-formula></styled-content></p>
   </sec>
   <sec id="sec-theory-statistics">
     <title>From the scientific to statistical model</title>
+    <p><styled-content id="eq-StatModel_general"><disp-formula><alternatives>
+    <tex-math><![CDATA[
+    \begin{aligned}
+      O_{kijr_{ij}} \sim & \; \text{Bernoulli}\left[ \; logit^{-1}\left( \delta_{kijr_{ij}} \right) \; \right] \\
+      \delta_{kijr_{ij}} = & \; \gamma_{k}( \theta_{ir_{i}} - \theta_{jr_{j}} ) \\
+      \gamma_{k} = & \; logit^{-1}\left[ \beta_{Z} Z_{k} + e_{k} \right] \\
+      \theta_{ir_{i}} = & \; \theta_{i} + \beta_{Y} Y_{r} + e_{r_{i}}  \\
+      \theta_{i} = & \; \beta_{X} X_{i} + e_{i}  \\
+      e_{k} \sim & \; \text{Normal}(0, \sigma_{k(g)}) \\
+      e_{i} \sim & \; \text{Normal}(0, \sigma_{i(g)}) \\
+      e_{r_{i}} \sim & \; \text{Normal}(0, \sigma_{r(g)})
+    \end{aligned}
+     \qquad(2)]]></tex-math>
+    <mml:math display="block" xmlns:mml="http://www.w3.org/1998/Math/MathML"><mml:mrow><mml:mtable><mml:mtr><mml:mtd columnalign="right" style="text-align: right"><mml:msub><mml:mi>O</mml:mi><mml:mrow><mml:mi>k</mml:mi><mml:mi>i</mml:mi><mml:mi>j</mml:mi><mml:msub><mml:mi>r</mml:mi><mml:mrow><mml:mi>i</mml:mi><mml:mi>j</mml:mi></mml:mrow></mml:msub></mml:mrow></mml:msub><mml:mo>∼</mml:mo></mml:mtd><mml:mtd columnalign="left" style="text-align: left"><mml:mspace width="0.278em"></mml:mspace><mml:mtext mathvariant="normal">Bernoulli</mml:mtext><mml:mrow><mml:mo stretchy="true" form="prefix">[</mml:mo><mml:mspace width="0.278em"></mml:mspace><mml:mi>l</mml:mi><mml:mi>o</mml:mi><mml:mi>g</mml:mi><mml:mi>i</mml:mi><mml:msup><mml:mi>t</mml:mi><mml:mrow><mml:mi>−</mml:mi><mml:mn>1</mml:mn></mml:mrow></mml:msup><mml:mrow><mml:mo stretchy="true" form="prefix">(</mml:mo><mml:msub><mml:mi>δ</mml:mi><mml:mrow><mml:mi>k</mml:mi><mml:mi>i</mml:mi><mml:mi>j</mml:mi><mml:msub><mml:mi>r</mml:mi><mml:mrow><mml:mi>i</mml:mi><mml:mi>j</mml:mi></mml:mrow></mml:msub></mml:mrow></mml:msub><mml:mo stretchy="true" form="postfix">)</mml:mo></mml:mrow><mml:mspace width="0.278em"></mml:mspace><mml:mo stretchy="true" form="postfix">]</mml:mo></mml:mrow></mml:mtd></mml:mtr><mml:mtr><mml:mtd columnalign="right" style="text-align: right"><mml:msub><mml:mi>δ</mml:mi><mml:mrow><mml:mi>k</mml:mi><mml:mi>i</mml:mi><mml:mi>j</mml:mi><mml:msub><mml:mi>r</mml:mi><mml:mrow><mml:mi>i</mml:mi><mml:mi>j</mml:mi></mml:mrow></mml:msub></mml:mrow></mml:msub><mml:mo>=</mml:mo></mml:mtd><mml:mtd columnalign="left" style="text-align: left"><mml:mspace width="0.278em"></mml:mspace><mml:msub><mml:mi>γ</mml:mi><mml:mi>k</mml:mi></mml:msub><mml:mrow><mml:mo stretchy="true" form="prefix">(</mml:mo><mml:msub><mml:mi>θ</mml:mi><mml:mrow><mml:mi>i</mml:mi><mml:msub><mml:mi>r</mml:mi><mml:mi>i</mml:mi></mml:msub></mml:mrow></mml:msub><mml:mo>−</mml:mo><mml:msub><mml:mi>θ</mml:mi><mml:mrow><mml:mi>j</mml:mi><mml:msub><mml:mi>r</mml:mi><mml:mi>j</mml:mi></mml:msub></mml:mrow></mml:msub><mml:mo stretchy="true" form="postfix">)</mml:mo></mml:mrow></mml:mtd></mml:mtr><mml:mtr><mml:mtd columnalign="right" style="text-align: right"><mml:msub><mml:mi>γ</mml:mi><mml:mi>k</mml:mi></mml:msub><mml:mo>=</mml:mo></mml:mtd><mml:mtd columnalign="left" style="text-align: left"><mml:mspace width="0.278em"></mml:mspace><mml:mi>l</mml:mi><mml:mi>o</mml:mi><mml:mi>g</mml:mi><mml:mi>i</mml:mi><mml:msup><mml:mi>t</mml:mi><mml:mrow><mml:mi>−</mml:mi><mml:mn>1</mml:mn></mml:mrow></mml:msup><mml:mrow><mml:mo stretchy="true" form="prefix">[</mml:mo><mml:msub><mml:mi>β</mml:mi><mml:mi>Z</mml:mi></mml:msub><mml:msub><mml:mi>Z</mml:mi><mml:mi>k</mml:mi></mml:msub><mml:mo>+</mml:mo><mml:msub><mml:mi>e</mml:mi><mml:mi>k</mml:mi></mml:msub><mml:mo stretchy="true" form="postfix">]</mml:mo></mml:mrow></mml:mtd></mml:mtr><mml:mtr><mml:mtd columnalign="right" style="text-align: right"><mml:msub><mml:mi>θ</mml:mi><mml:mrow><mml:mi>i</mml:mi><mml:msub><mml:mi>r</mml:mi><mml:mi>i</mml:mi></mml:msub></mml:mrow></mml:msub><mml:mo>=</mml:mo></mml:mtd><mml:mtd columnalign="left" style="text-align: left"><mml:mspace width="0.278em"></mml:mspace><mml:msub><mml:mi>θ</mml:mi><mml:mi>i</mml:mi></mml:msub><mml:mo>+</mml:mo><mml:msub><mml:mi>β</mml:mi><mml:mi>Y</mml:mi></mml:msub><mml:msub><mml:mi>Y</mml:mi><mml:mi>r</mml:mi></mml:msub><mml:mo>+</mml:mo><mml:msub><mml:mi>e</mml:mi><mml:msub><mml:mi>r</mml:mi><mml:mi>i</mml:mi></mml:msub></mml:msub></mml:mtd></mml:mtr><mml:mtr><mml:mtd columnalign="right" style="text-align: right"><mml:msub><mml:mi>θ</mml:mi><mml:mi>i</mml:mi></mml:msub><mml:mo>=</mml:mo></mml:mtd><mml:mtd columnalign="left" style="text-align: left"><mml:mspace width="0.278em"></mml:mspace><mml:msub><mml:mi>β</mml:mi><mml:mi>X</mml:mi></mml:msub><mml:msub><mml:mi>X</mml:mi><mml:mi>i</mml:mi></mml:msub><mml:mo>+</mml:mo><mml:msub><mml:mi>e</mml:mi><mml:mi>i</mml:mi></mml:msub></mml:mtd></mml:mtr><mml:mtr><mml:mtd columnalign="right" style="text-align: right"><mml:msub><mml:mi>e</mml:mi><mml:mi>k</mml:mi></mml:msub><mml:mo>∼</mml:mo></mml:mtd><mml:mtd columnalign="left" style="text-align: left"><mml:mspace width="0.278em"></mml:mspace><mml:mtext mathvariant="normal">Normal</mml:mtext><mml:mrow><mml:mo stretchy="true" form="prefix">(</mml:mo><mml:mn>0</mml:mn><mml:mo>,</mml:mo><mml:msub><mml:mi>σ</mml:mi><mml:mrow><mml:mi>k</mml:mi><mml:mrow><mml:mo stretchy="true" form="prefix">(</mml:mo><mml:mi>g</mml:mi><mml:mo stretchy="true" form="postfix">)</mml:mo></mml:mrow></mml:mrow></mml:msub><mml:mo stretchy="true" form="postfix">)</mml:mo></mml:mrow></mml:mtd></mml:mtr><mml:mtr><mml:mtd columnalign="right" style="text-align: right"><mml:msub><mml:mi>e</mml:mi><mml:mi>i</mml:mi></mml:msub><mml:mo>∼</mml:mo></mml:mtd><mml:mtd columnalign="left" style="text-align: left"><mml:mspace width="0.278em"></mml:mspace><mml:mtext mathvariant="normal">Normal</mml:mtext><mml:mrow><mml:mo stretchy="true" form="prefix">(</mml:mo><mml:mn>0</mml:mn><mml:mo>,</mml:mo><mml:msub><mml:mi>σ</mml:mi><mml:mrow><mml:mi>i</mml:mi><mml:mrow><mml:mo stretchy="true" form="prefix">(</mml:mo><mml:mi>g</mml:mi><mml:mo stretchy="true" form="postfix">)</mml:mo></mml:mrow></mml:mrow></mml:msub><mml:mo stretchy="true" form="postfix">)</mml:mo></mml:mrow></mml:mtd></mml:mtr><mml:mtr><mml:mtd columnalign="right" style="text-align: right"><mml:msub><mml:mi>e</mml:mi><mml:msub><mml:mi>r</mml:mi><mml:mi>i</mml:mi></mml:msub></mml:msub><mml:mo>∼</mml:mo></mml:mtd><mml:mtd columnalign="left" style="text-align: left"><mml:mspace width="0.278em"></mml:mspace><mml:mtext mathvariant="normal">Normal</mml:mtext><mml:mrow><mml:mo stretchy="true" form="prefix">(</mml:mo><mml:mn>0</mml:mn><mml:mo>,</mml:mo><mml:msub><mml:mi>σ</mml:mi><mml:mrow><mml:mi>r</mml:mi><mml:mrow><mml:mo stretchy="true" form="prefix">(</mml:mo><mml:mi>g</mml:mi><mml:mo stretchy="true" form="postfix">)</mml:mo></mml:mrow></mml:mrow></mml:msub><mml:mo stretchy="true" form="postfix">)</mml:mo></mml:mrow></mml:mtd></mml:mtr></mml:mtable><mml:mspace width="2.0em"></mml:mspace><mml:mrow><mml:mo stretchy="true" form="prefix">(</mml:mo><mml:mn>2</mml:mn><mml:mo stretchy="true" form="postfix">)</mml:mo></mml:mrow></mml:mrow></mml:math></alternatives></disp-formula></styled-content></p>
+    <p>for identification purposes we can set
+    <inline-formula><alternatives>
+    <tex-math><![CDATA[\frac{1}{G}\sum_{g=1}^{G} \sigma_{k(g)} = 0.02]]></tex-math>
+    <mml:math display="inline" xmlns:mml="http://www.w3.org/1998/Math/MathML"><mml:mrow><mml:mfrac><mml:mn>1</mml:mn><mml:mi>G</mml:mi></mml:mfrac><mml:msubsup><mml:mo>∑</mml:mo><mml:mrow><mml:mi>g</mml:mi><mml:mo>=</mml:mo><mml:mn>1</mml:mn></mml:mrow><mml:mi>G</mml:mi></mml:msubsup><mml:msub><mml:mi>σ</mml:mi><mml:mrow><mml:mi>k</mml:mi><mml:mrow><mml:mo stretchy="true" form="prefix">(</mml:mo><mml:mi>g</mml:mi><mml:mo stretchy="true" form="postfix">)</mml:mo></mml:mrow></mml:mrow></mml:msub><mml:mo>=</mml:mo><mml:mn>0.02</mml:mn></mml:mrow></mml:math></alternatives></inline-formula>,
+    <inline-formula><alternatives>
+    <tex-math><![CDATA[\frac{1}{G}\sum_{g=1}^{G} \sigma_{i(g)} = 1]]></tex-math>
+    <mml:math display="inline" xmlns:mml="http://www.w3.org/1998/Math/MathML"><mml:mrow><mml:mfrac><mml:mn>1</mml:mn><mml:mi>G</mml:mi></mml:mfrac><mml:msubsup><mml:mo>∑</mml:mo><mml:mrow><mml:mi>g</mml:mi><mml:mo>=</mml:mo><mml:mn>1</mml:mn></mml:mrow><mml:mi>G</mml:mi></mml:msubsup><mml:msub><mml:mi>σ</mml:mi><mml:mrow><mml:mi>i</mml:mi><mml:mrow><mml:mo stretchy="true" form="prefix">(</mml:mo><mml:mi>g</mml:mi><mml:mo stretchy="true" form="postfix">)</mml:mo></mml:mrow></mml:mrow></mml:msub><mml:mo>=</mml:mo><mml:mn>1</mml:mn></mml:mrow></mml:math></alternatives></inline-formula>,
+    and <inline-formula><alternatives>
+    <tex-math><![CDATA[\frac{1}{G}\sum_{g=1}^{G} \sigma_{r(g)} = 1]]></tex-math>
+    <mml:math display="inline" xmlns:mml="http://www.w3.org/1998/Math/MathML"><mml:mrow><mml:mfrac><mml:mn>1</mml:mn><mml:mi>G</mml:mi></mml:mfrac><mml:msubsup><mml:mo>∑</mml:mo><mml:mrow><mml:mi>g</mml:mi><mml:mo>=</mml:mo><mml:mn>1</mml:mn></mml:mrow><mml:mi>G</mml:mi></mml:msubsup><mml:msub><mml:mi>σ</mml:mi><mml:mrow><mml:mi>r</mml:mi><mml:mrow><mml:mo stretchy="true" form="prefix">(</mml:mo><mml:mi>g</mml:mi><mml:mo stretchy="true" form="postfix">)</mml:mo></mml:mrow></mml:mrow></mml:msub><mml:mo>=</mml:mo><mml:mn>1</mml:mn></mml:mrow></mml:math></alternatives></inline-formula>.
+    A special case of this would be to assume that the data comes from
+    the same population, in that case, <inline-formula><alternatives>
+    <tex-math><![CDATA[\sigma_{k(g)} = \sigma_{k} = 0.02]]></tex-math>
+    <mml:math display="inline" xmlns:mml="http://www.w3.org/1998/Math/MathML"><mml:mrow><mml:msub><mml:mi>σ</mml:mi><mml:mrow><mml:mi>k</mml:mi><mml:mrow><mml:mo stretchy="true" form="prefix">(</mml:mo><mml:mi>g</mml:mi><mml:mo stretchy="true" form="postfix">)</mml:mo></mml:mrow></mml:mrow></mml:msub><mml:mo>=</mml:mo><mml:msub><mml:mi>σ</mml:mi><mml:mi>k</mml:mi></mml:msub><mml:mo>=</mml:mo><mml:mn>0.02</mml:mn></mml:mrow></mml:math></alternatives></inline-formula>,
+    <inline-formula><alternatives>
+    <tex-math><![CDATA[\sigma_{i(g)} = \sigma_{i} = 1]]></tex-math>
+    <mml:math display="inline" xmlns:mml="http://www.w3.org/1998/Math/MathML"><mml:mrow><mml:msub><mml:mi>σ</mml:mi><mml:mrow><mml:mi>i</mml:mi><mml:mrow><mml:mo stretchy="true" form="prefix">(</mml:mo><mml:mi>g</mml:mi><mml:mo stretchy="true" form="postfix">)</mml:mo></mml:mrow></mml:mrow></mml:msub><mml:mo>=</mml:mo><mml:msub><mml:mi>σ</mml:mi><mml:mi>i</mml:mi></mml:msub><mml:mo>=</mml:mo><mml:mn>1</mml:mn></mml:mrow></mml:math></alternatives></inline-formula></p>
   </sec>
-  <sec id="sec-theory-where">
-    <title>Where does it all fit?</title>
+  <sec id="sec-theory-thurstone">
+    <title>Let’s talk about Thurstone</title>
+    <p>Thurstone’s comparative judgment Thurstone
+    (<xref alt="1927" rid="ref-Thurstone_1927" ref-type="bibr">1927</xref>)
+    is based on the formula: <disp-formula><alternatives>
+    <tex-math><![CDATA[
+    X_{AB} = \frac{S_{A} - S_{B}}{\sigma_{AB}}
+    ]]></tex-math>
+    <mml:math display="block" xmlns:mml="http://www.w3.org/1998/Math/MathML"><mml:mrow><mml:msub><mml:mi>X</mml:mi><mml:mrow><mml:mi>A</mml:mi><mml:mi>B</mml:mi></mml:mrow></mml:msub><mml:mo>=</mml:mo><mml:mfrac><mml:mrow><mml:msub><mml:mi>S</mml:mi><mml:mi>A</mml:mi></mml:msub><mml:mo>−</mml:mo><mml:msub><mml:mi>S</mml:mi><mml:mi>B</mml:mi></mml:msub></mml:mrow><mml:msub><mml:mi>σ</mml:mi><mml:mrow><mml:mi>A</mml:mi><mml:mi>B</mml:mi></mml:mrow></mml:msub></mml:mfrac></mml:mrow></mml:math></alternatives></disp-formula></p>
+    <p>where <inline-formula><alternatives>
+    <tex-math><![CDATA[X_{AB}]]></tex-math>
+    <mml:math display="inline" xmlns:mml="http://www.w3.org/1998/Math/MathML"><mml:msub><mml:mi>X</mml:mi><mml:mrow><mml:mi>A</mml:mi><mml:mi>B</mml:mi></mml:mrow></mml:msub></mml:math></alternatives></inline-formula>
+    defines the comparative judgment outcome,
+    <inline-formula><alternatives>
+    <tex-math><![CDATA[S_{A}]]></tex-math>
+    <mml:math display="inline" xmlns:mml="http://www.w3.org/1998/Math/MathML"><mml:msub><mml:mi>S</mml:mi><mml:mi>A</mml:mi></mml:msub></mml:math></alternatives></inline-formula>
+    and <inline-formula><alternatives>
+    <tex-math><![CDATA[S_{B}]]></tex-math>
+    <mml:math display="inline" xmlns:mml="http://www.w3.org/1998/Math/MathML"><mml:msub><mml:mi>S</mml:mi><mml:mi>B</mml:mi></mml:msub></mml:math></alternatives></inline-formula>
+    are the modal discriminal processes, <inline-formula><alternatives>
+    <tex-math><![CDATA[\sigma_{AB} = \sqrt{ \sigma^{2}_{A} + \sigma^{2}_{B} + 2 \rho \sigma_{A} \sigma_{B}}]]></tex-math>
+    <mml:math display="inline" xmlns:mml="http://www.w3.org/1998/Math/MathML"><mml:mrow><mml:msub><mml:mi>σ</mml:mi><mml:mrow><mml:mi>A</mml:mi><mml:mi>B</mml:mi></mml:mrow></mml:msub><mml:mo>=</mml:mo><mml:msqrt><mml:mrow><mml:msubsup><mml:mi>σ</mml:mi><mml:mi>A</mml:mi><mml:mn>2</mml:mn></mml:msubsup><mml:mo>+</mml:mo><mml:msubsup><mml:mi>σ</mml:mi><mml:mi>B</mml:mi><mml:mn>2</mml:mn></mml:msubsup><mml:mo>+</mml:mo><mml:mn>2</mml:mn><mml:mi>ρ</mml:mi><mml:msub><mml:mi>σ</mml:mi><mml:mi>A</mml:mi></mml:msub><mml:msub><mml:mi>σ</mml:mi><mml:mi>B</mml:mi></mml:msub></mml:mrow></mml:msqrt></mml:mrow></mml:math></alternatives></inline-formula>,
+    with <inline-formula><alternatives>
+    <tex-math><![CDATA[\sigma_{A}]]></tex-math>
+    <mml:math display="inline" xmlns:mml="http://www.w3.org/1998/Math/MathML"><mml:msub><mml:mi>σ</mml:mi><mml:mi>A</mml:mi></mml:msub></mml:math></alternatives></inline-formula>
+    and <inline-formula><alternatives>
+    <tex-math><![CDATA[\sigma_{B}]]></tex-math>
+    <mml:math display="inline" xmlns:mml="http://www.w3.org/1998/Math/MathML"><mml:msub><mml:mi>σ</mml:mi><mml:mi>B</mml:mi></mml:msub></mml:math></alternatives></inline-formula>
+    being the dispersion of discriminal processes
+    <inline-formula><alternatives>
+    <tex-math><![CDATA[A]]></tex-math>
+    <mml:math display="inline" xmlns:mml="http://www.w3.org/1998/Math/MathML"><mml:mi>A</mml:mi></mml:math></alternatives></inline-formula>
+    and <inline-formula><alternatives>
+    <tex-math><![CDATA[B]]></tex-math>
+    <mml:math display="inline" xmlns:mml="http://www.w3.org/1998/Math/MathML"><mml:mi>B</mml:mi></mml:math></alternatives></inline-formula>,
+    respectively, and <inline-formula><alternatives>
+    <tex-math><![CDATA[\rho]]></tex-math>
+    <mml:math display="inline" xmlns:mml="http://www.w3.org/1998/Math/MathML"><mml:mi>ρ</mml:mi></mml:math></alternatives></inline-formula>
+    the correlation between discriminal processes.</p>
+    <p>The theory identifies five cases:</p>
+    <list list-type="bullet">
+      <list-item>
+        <p><bold>Case 1:</bold> only constant
+        <inline-formula><alternatives>
+        <tex-math><![CDATA[\rho]]></tex-math>
+        <mml:math display="inline" xmlns:mml="http://www.w3.org/1998/Math/MathML"><mml:mi>ρ</mml:mi></mml:math></alternatives></inline-formula>
+        (not <inline-formula><alternatives>
+        <tex-math><![CDATA[\rho_{ij}]]></tex-math>
+        <mml:math display="inline" xmlns:mml="http://www.w3.org/1998/Math/MathML"><mml:msub><mml:mi>ρ</mml:mi><mml:mrow><mml:mi>i</mml:mi><mml:mi>j</mml:mi></mml:mrow></mml:msub></mml:math></alternatives></inline-formula>)</p>
+      </list-item>
+      <list-item>
+        <p><bold>Case 2:</bold> <inline-formula><alternatives>
+        <tex-math><![CDATA[X_{ij}]]></tex-math>
+        <mml:math display="inline" xmlns:mml="http://www.w3.org/1998/Math/MathML"><mml:msub><mml:mi>X</mml:mi><mml:mrow><mml:mi>i</mml:mi><mml:mi>j</mml:mi></mml:mrow></mml:msub></mml:math></alternatives></inline-formula>
+        becomes <inline-formula><alternatives>
+        <tex-math><![CDATA[X_{kij}]]></tex-math>
+        <mml:math display="inline" xmlns:mml="http://www.w3.org/1998/Math/MathML"><mml:msub><mml:mi>X</mml:mi><mml:mrow><mml:mi>k</mml:mi><mml:mi>i</mml:mi><mml:mi>j</mml:mi></mml:mrow></mml:msub></mml:math></alternatives></inline-formula>
+        with <inline-formula><alternatives>
+        <tex-math><![CDATA[k=1, \dots, K]]></tex-math>
+        <mml:math display="inline" xmlns:mml="http://www.w3.org/1998/Math/MathML"><mml:mrow><mml:mi>k</mml:mi><mml:mo>=</mml:mo><mml:mn>1</mml:mn><mml:mo>,</mml:mo><mml:mi>…</mml:mi><mml:mo>,</mml:mo><mml:mi>K</mml:mi></mml:mrow></mml:math></alternatives></inline-formula>
+        judges (replication, not duplication)</p>
+      </list-item>
+      <list-item>
+        <p><bold>Case 3:</bold> <inline-formula><alternatives>
+        <tex-math><![CDATA[\rho = 0]]></tex-math>
+        <mml:math display="inline" xmlns:mml="http://www.w3.org/1998/Math/MathML"><mml:mrow><mml:mi>ρ</mml:mi><mml:mo>=</mml:mo><mml:mn>0</mml:mn></mml:mrow></mml:math></alternatives></inline-formula>,
+        then <inline-formula><alternatives>
+        <tex-math><![CDATA[\sigma_{AB} = \sqrt{ \sigma^{2}_{A} + \sigma^{2}_{B}}]]></tex-math>
+        <mml:math display="inline" xmlns:mml="http://www.w3.org/1998/Math/MathML"><mml:mrow><mml:msub><mml:mi>σ</mml:mi><mml:mrow><mml:mi>A</mml:mi><mml:mi>B</mml:mi></mml:mrow></mml:msub><mml:mo>=</mml:mo><mml:msqrt><mml:mrow><mml:msubsup><mml:mi>σ</mml:mi><mml:mi>A</mml:mi><mml:mn>2</mml:mn></mml:msubsup><mml:mo>+</mml:mo><mml:msubsup><mml:mi>σ</mml:mi><mml:mi>B</mml:mi><mml:mn>2</mml:mn></mml:msubsup></mml:mrow></mml:msqrt></mml:mrow></mml:math></alternatives></inline-formula></p>
+      </list-item>
+      <list-item>
+        <p><bold>Case 4:</bold> <inline-formula><alternatives>
+        <tex-math><![CDATA[\sigma_{B}=\sigma_{A}+d]]></tex-math>
+        <mml:math display="inline" xmlns:mml="http://www.w3.org/1998/Math/MathML"><mml:mrow><mml:msub><mml:mi>σ</mml:mi><mml:mi>B</mml:mi></mml:msub><mml:mo>=</mml:mo><mml:msub><mml:mi>σ</mml:mi><mml:mi>A</mml:mi></mml:msub><mml:mo>+</mml:mo><mml:mi>d</mml:mi></mml:mrow></mml:math></alternatives></inline-formula>,
+        then <inline-formula><alternatives>
+        <tex-math><![CDATA[\lim_{d \leq 0.1\sigma_{A}} \sigma_{AB} = (\sigma_{A} + \sigma_{B}) /\sqrt{2}]]></tex-math>
+        <mml:math display="inline" xmlns:mml="http://www.w3.org/1998/Math/MathML"><mml:mrow><mml:msub><mml:mo>lim</mml:mo><mml:mrow><mml:mi>d</mml:mi><mml:mo>≤</mml:mo><mml:mn>0.1</mml:mn><mml:msub><mml:mi>σ</mml:mi><mml:mi>A</mml:mi></mml:msub></mml:mrow></mml:msub><mml:msub><mml:mi>σ</mml:mi><mml:mrow><mml:mi>A</mml:mi><mml:mi>B</mml:mi></mml:mrow></mml:msub><mml:mo>=</mml:mo><mml:mrow><mml:mo stretchy="true" form="prefix">(</mml:mo><mml:msub><mml:mi>σ</mml:mi><mml:mi>A</mml:mi></mml:msub><mml:mo>+</mml:mo><mml:msub><mml:mi>σ</mml:mi><mml:mi>B</mml:mi></mml:msub><mml:mo stretchy="true" form="postfix">)</mml:mo></mml:mrow><mml:mi>/</mml:mi><mml:msqrt><mml:mn>2</mml:mn></mml:msqrt></mml:mrow></mml:math></alternatives></inline-formula></p>
+      </list-item>
+      <list-item>
+        <p><bold>Case 5:</bold> <inline-formula><alternatives>
+        <tex-math><![CDATA[\sigma_{B}=\sigma_{A}]]></tex-math>
+        <mml:math display="inline" xmlns:mml="http://www.w3.org/1998/Math/MathML"><mml:mrow><mml:msub><mml:mi>σ</mml:mi><mml:mi>B</mml:mi></mml:msub><mml:mo>=</mml:mo><mml:msub><mml:mi>σ</mml:mi><mml:mi>A</mml:mi></mml:msub></mml:mrow></mml:math></alternatives></inline-formula>,
+        then <inline-formula><alternatives>
+        <tex-math><![CDATA[\sigma_{AB} = \sqrt{2}\sigma]]></tex-math>
+        <mml:math display="inline" xmlns:mml="http://www.w3.org/1998/Math/MathML"><mml:mrow><mml:msub><mml:mi>σ</mml:mi><mml:mrow><mml:mi>A</mml:mi><mml:mi>B</mml:mi></mml:mrow></mml:msub><mml:mo>=</mml:mo><mml:msqrt><mml:mn>2</mml:mn></mml:msqrt><mml:mi>σ</mml:mi></mml:mrow></mml:math></alternatives></inline-formula></p>
+      </list-item>
+    </list>
+    <p>Now using the DAG and statistical notation</p>
+    <p><styled-content id="eq-StatModel_thurstone"><disp-formula><alternatives>
+    <tex-math><![CDATA[
+    \begin{aligned}
+      O_{kijr_{ij}} := & \; f_{O}( \delta_{kijr_{ij}} ) \\
+      \delta_{kijr_{ij}} = & \; \gamma_{k}( \theta_{ir_{i}} - \theta_{jr_{j}} ) \\
+      \gamma_{k} = & \; f_{G}( Z_{k}, e_{k} ) \\
+      \theta_{ir_{i}} = & \; \theta_{i} + \beta_{Y} Y_{r} + e_{r_{i}}  \\
+      \theta_{i} = & \; \beta_{X} X_{i} + e_{i}  \\
+      e_{k} \sim & \; \text{Normal}(0, \sigma_{k(g)}) \\
+      e_{i} \sim & \; \text{Normal}(0, \sigma_{i(g)}) \\
+      e_{r_{i}} \sim & \; \text{Normal}(0, \sigma_{r(g)})
+    \end{aligned}
+     \qquad(3)]]></tex-math>
+    <mml:math display="block" xmlns:mml="http://www.w3.org/1998/Math/MathML"><mml:mrow><mml:mtable><mml:mtr><mml:mtd columnalign="right" style="text-align: right"><mml:msub><mml:mi>O</mml:mi><mml:mrow><mml:mi>k</mml:mi><mml:mi>i</mml:mi><mml:mi>j</mml:mi><mml:msub><mml:mi>r</mml:mi><mml:mrow><mml:mi>i</mml:mi><mml:mi>j</mml:mi></mml:mrow></mml:msub></mml:mrow></mml:msub><mml:mo>:=</mml:mo></mml:mtd><mml:mtd columnalign="left" style="text-align: left"><mml:mspace width="0.278em"></mml:mspace><mml:msub><mml:mi>f</mml:mi><mml:mi>O</mml:mi></mml:msub><mml:mrow><mml:mo stretchy="true" form="prefix">(</mml:mo><mml:msub><mml:mi>δ</mml:mi><mml:mrow><mml:mi>k</mml:mi><mml:mi>i</mml:mi><mml:mi>j</mml:mi><mml:msub><mml:mi>r</mml:mi><mml:mrow><mml:mi>i</mml:mi><mml:mi>j</mml:mi></mml:mrow></mml:msub></mml:mrow></mml:msub><mml:mo stretchy="true" form="postfix">)</mml:mo></mml:mrow></mml:mtd></mml:mtr><mml:mtr><mml:mtd columnalign="right" style="text-align: right"><mml:msub><mml:mi>δ</mml:mi><mml:mrow><mml:mi>k</mml:mi><mml:mi>i</mml:mi><mml:mi>j</mml:mi><mml:msub><mml:mi>r</mml:mi><mml:mrow><mml:mi>i</mml:mi><mml:mi>j</mml:mi></mml:mrow></mml:msub></mml:mrow></mml:msub><mml:mo>=</mml:mo></mml:mtd><mml:mtd columnalign="left" style="text-align: left"><mml:mspace width="0.278em"></mml:mspace><mml:msub><mml:mi>γ</mml:mi><mml:mi>k</mml:mi></mml:msub><mml:mrow><mml:mo stretchy="true" form="prefix">(</mml:mo><mml:msub><mml:mi>θ</mml:mi><mml:mrow><mml:mi>i</mml:mi><mml:msub><mml:mi>r</mml:mi><mml:mi>i</mml:mi></mml:msub></mml:mrow></mml:msub><mml:mo>−</mml:mo><mml:msub><mml:mi>θ</mml:mi><mml:mrow><mml:mi>j</mml:mi><mml:msub><mml:mi>r</mml:mi><mml:mi>j</mml:mi></mml:msub></mml:mrow></mml:msub><mml:mo stretchy="true" form="postfix">)</mml:mo></mml:mrow></mml:mtd></mml:mtr><mml:mtr><mml:mtd columnalign="right" style="text-align: right"><mml:msub><mml:mi>γ</mml:mi><mml:mi>k</mml:mi></mml:msub><mml:mo>=</mml:mo></mml:mtd><mml:mtd columnalign="left" style="text-align: left"><mml:mspace width="0.278em"></mml:mspace><mml:msub><mml:mi>f</mml:mi><mml:mi>G</mml:mi></mml:msub><mml:mrow><mml:mo stretchy="true" form="prefix">(</mml:mo><mml:msub><mml:mi>Z</mml:mi><mml:mi>k</mml:mi></mml:msub><mml:mo>,</mml:mo><mml:msub><mml:mi>e</mml:mi><mml:mi>k</mml:mi></mml:msub><mml:mo stretchy="true" form="postfix">)</mml:mo></mml:mrow></mml:mtd></mml:mtr><mml:mtr><mml:mtd columnalign="right" style="text-align: right"><mml:msub><mml:mi>θ</mml:mi><mml:mrow><mml:mi>i</mml:mi><mml:msub><mml:mi>r</mml:mi><mml:mi>i</mml:mi></mml:msub></mml:mrow></mml:msub><mml:mo>=</mml:mo></mml:mtd><mml:mtd columnalign="left" style="text-align: left"><mml:mspace width="0.278em"></mml:mspace><mml:msub><mml:mi>θ</mml:mi><mml:mi>i</mml:mi></mml:msub><mml:mo>+</mml:mo><mml:msub><mml:mi>β</mml:mi><mml:mi>Y</mml:mi></mml:msub><mml:msub><mml:mi>Y</mml:mi><mml:mi>r</mml:mi></mml:msub><mml:mo>+</mml:mo><mml:msub><mml:mi>e</mml:mi><mml:msub><mml:mi>r</mml:mi><mml:mi>i</mml:mi></mml:msub></mml:msub></mml:mtd></mml:mtr><mml:mtr><mml:mtd columnalign="right" style="text-align: right"><mml:msub><mml:mi>θ</mml:mi><mml:mi>i</mml:mi></mml:msub><mml:mo>=</mml:mo></mml:mtd><mml:mtd columnalign="left" style="text-align: left"><mml:mspace width="0.278em"></mml:mspace><mml:msub><mml:mi>β</mml:mi><mml:mi>X</mml:mi></mml:msub><mml:msub><mml:mi>X</mml:mi><mml:mi>i</mml:mi></mml:msub><mml:mo>+</mml:mo><mml:msub><mml:mi>e</mml:mi><mml:mi>i</mml:mi></mml:msub></mml:mtd></mml:mtr><mml:mtr><mml:mtd columnalign="right" style="text-align: right"><mml:msub><mml:mi>e</mml:mi><mml:mi>k</mml:mi></mml:msub><mml:mo>∼</mml:mo></mml:mtd><mml:mtd columnalign="left" style="text-align: left"><mml:mspace width="0.278em"></mml:mspace><mml:mtext mathvariant="normal">Normal</mml:mtext><mml:mrow><mml:mo stretchy="true" form="prefix">(</mml:mo><mml:mn>0</mml:mn><mml:mo>,</mml:mo><mml:msub><mml:mi>σ</mml:mi><mml:mrow><mml:mi>k</mml:mi><mml:mrow><mml:mo stretchy="true" form="prefix">(</mml:mo><mml:mi>g</mml:mi><mml:mo stretchy="true" form="postfix">)</mml:mo></mml:mrow></mml:mrow></mml:msub><mml:mo stretchy="true" form="postfix">)</mml:mo></mml:mrow></mml:mtd></mml:mtr><mml:mtr><mml:mtd columnalign="right" style="text-align: right"><mml:msub><mml:mi>e</mml:mi><mml:mi>i</mml:mi></mml:msub><mml:mo>∼</mml:mo></mml:mtd><mml:mtd columnalign="left" style="text-align: left"><mml:mspace width="0.278em"></mml:mspace><mml:mtext mathvariant="normal">Normal</mml:mtext><mml:mrow><mml:mo stretchy="true" form="prefix">(</mml:mo><mml:mn>0</mml:mn><mml:mo>,</mml:mo><mml:msub><mml:mi>σ</mml:mi><mml:mrow><mml:mi>i</mml:mi><mml:mrow><mml:mo stretchy="true" form="prefix">(</mml:mo><mml:mi>g</mml:mi><mml:mo stretchy="true" form="postfix">)</mml:mo></mml:mrow></mml:mrow></mml:msub><mml:mo stretchy="true" form="postfix">)</mml:mo></mml:mrow></mml:mtd></mml:mtr><mml:mtr><mml:mtd columnalign="right" style="text-align: right"><mml:msub><mml:mi>e</mml:mi><mml:msub><mml:mi>r</mml:mi><mml:mi>i</mml:mi></mml:msub></mml:msub><mml:mo>∼</mml:mo></mml:mtd><mml:mtd columnalign="left" style="text-align: left"><mml:mspace width="0.278em"></mml:mspace><mml:mtext mathvariant="normal">Normal</mml:mtext><mml:mrow><mml:mo stretchy="true" form="prefix">(</mml:mo><mml:mn>0</mml:mn><mml:mo>,</mml:mo><mml:msub><mml:mi>σ</mml:mi><mml:mrow><mml:mi>r</mml:mi><mml:mrow><mml:mo stretchy="true" form="prefix">(</mml:mo><mml:mi>g</mml:mi><mml:mo stretchy="true" form="postfix">)</mml:mo></mml:mrow></mml:mrow></mml:msub><mml:mo stretchy="true" form="postfix">)</mml:mo></mml:mrow></mml:mtd></mml:mtr></mml:mtable><mml:mspace width="2.0em"></mml:mspace><mml:mrow><mml:mo stretchy="true" form="prefix">(</mml:mo><mml:mn>3</mml:mn><mml:mo stretchy="true" form="postfix">)</mml:mo></mml:mrow></mml:mrow></mml:math></alternatives></disp-formula></styled-content></p>
+    <p>The theory identifies five cases:</p>
+    <list list-type="bullet">
+      <list-item>
+        <p><bold>Case 1:</bold> only constant
+        <inline-formula><alternatives>
+        <tex-math><![CDATA[\rho \approx \sigma_{i}]]></tex-math>
+        <mml:math display="inline" xmlns:mml="http://www.w3.org/1998/Math/MathML"><mml:mrow><mml:mi>ρ</mml:mi><mml:mo>≈</mml:mo><mml:msub><mml:mi>σ</mml:mi><mml:mi>i</mml:mi></mml:msub></mml:mrow></mml:math></alternatives></inline-formula></p>
+      </list-item>
+      <list-item>
+        <p><bold>Case 2:</bold> now judges are separated by using
+        <inline-formula><alternatives>
+        <tex-math><![CDATA[\gamma_{k}]]></tex-math>
+        <mml:math display="inline" xmlns:mml="http://www.w3.org/1998/Math/MathML"><mml:msub><mml:mi>γ</mml:mi><mml:mi>k</mml:mi></mml:msub></mml:math></alternatives></inline-formula></p>
+      </list-item>
+      <list-item>
+        <p><bold>Case 3:</bold> <inline-formula><alternatives>
+        <tex-math><![CDATA[\rho \approx \sigma_{e_{i}} = 0]]></tex-math>
+        <mml:math display="inline" xmlns:mml="http://www.w3.org/1998/Math/MathML"><mml:mrow><mml:mi>ρ</mml:mi><mml:mo>≈</mml:mo><mml:msub><mml:mi>σ</mml:mi><mml:msub><mml:mi>e</mml:mi><mml:mi>i</mml:mi></mml:msub></mml:msub><mml:mo>=</mml:mo><mml:mn>0</mml:mn></mml:mrow></mml:math></alternatives></inline-formula>
+        (no nesting of texts on students), then
+        <inline-formula><alternatives>
+        <tex-math><![CDATA[\sigma_{AB} = \sqrt{ \sigma^{2}_{A} + \sigma^{2}_{B}}]]></tex-math>
+        <mml:math display="inline" xmlns:mml="http://www.w3.org/1998/Math/MathML"><mml:mrow><mml:msub><mml:mi>σ</mml:mi><mml:mrow><mml:mi>A</mml:mi><mml:mi>B</mml:mi></mml:mrow></mml:msub><mml:mo>=</mml:mo><mml:msqrt><mml:mrow><mml:msubsup><mml:mi>σ</mml:mi><mml:mi>A</mml:mi><mml:mn>2</mml:mn></mml:msubsup><mml:mo>+</mml:mo><mml:msubsup><mml:mi>σ</mml:mi><mml:mi>B</mml:mi><mml:mn>2</mml:mn></mml:msubsup></mml:mrow></mml:msqrt></mml:mrow></mml:math></alternatives></inline-formula></p>
+      </list-item>
+      <list-item>
+        <p><bold>Case 4:</bold> <inline-formula><alternatives>
+        <tex-math><![CDATA[\sigma_{B}=\sigma_{A}+d]]></tex-math>
+        <mml:math display="inline" xmlns:mml="http://www.w3.org/1998/Math/MathML"><mml:mrow><mml:msub><mml:mi>σ</mml:mi><mml:mi>B</mml:mi></mml:msub><mml:mo>=</mml:mo><mml:msub><mml:mi>σ</mml:mi><mml:mi>A</mml:mi></mml:msub><mml:mo>+</mml:mo><mml:mi>d</mml:mi></mml:mrow></mml:math></alternatives></inline-formula>,
+        then <inline-formula><alternatives>
+        <tex-math><![CDATA[\lim_{d \leq 0.1\sigma_{A}} \sigma_{AB} = (\sigma_{A} + \sigma_{B}) /\sqrt{2}]]></tex-math>
+        <mml:math display="inline" xmlns:mml="http://www.w3.org/1998/Math/MathML"><mml:mrow><mml:msub><mml:mo>lim</mml:mo><mml:mrow><mml:mi>d</mml:mi><mml:mo>≤</mml:mo><mml:mn>0.1</mml:mn><mml:msub><mml:mi>σ</mml:mi><mml:mi>A</mml:mi></mml:msub></mml:mrow></mml:msub><mml:msub><mml:mi>σ</mml:mi><mml:mrow><mml:mi>A</mml:mi><mml:mi>B</mml:mi></mml:mrow></mml:msub><mml:mo>=</mml:mo><mml:mrow><mml:mo stretchy="true" form="prefix">(</mml:mo><mml:msub><mml:mi>σ</mml:mi><mml:mi>A</mml:mi></mml:msub><mml:mo>+</mml:mo><mml:msub><mml:mi>σ</mml:mi><mml:mi>B</mml:mi></mml:msub><mml:mo stretchy="true" form="postfix">)</mml:mo></mml:mrow><mml:mi>/</mml:mi><mml:msqrt><mml:mn>2</mml:mn></mml:msqrt></mml:mrow></mml:math></alternatives></inline-formula></p>
+      </list-item>
+      <list-item>
+        <p><bold>Case 5:</bold> <inline-formula><alternatives>
+        <tex-math><![CDATA[\sigma_{B}=\sigma_{A}]]></tex-math>
+        <mml:math display="inline" xmlns:mml="http://www.w3.org/1998/Math/MathML"><mml:mrow><mml:msub><mml:mi>σ</mml:mi><mml:mi>B</mml:mi></mml:msub><mml:mo>=</mml:mo><mml:msub><mml:mi>σ</mml:mi><mml:mi>A</mml:mi></mml:msub></mml:mrow></mml:math></alternatives></inline-formula>,
+        then <inline-formula><alternatives>
+        <tex-math><![CDATA[\sigma_{AB} = \sqrt{2}\sigma]]></tex-math>
+        <mml:math display="inline" xmlns:mml="http://www.w3.org/1998/Math/MathML"><mml:mrow><mml:msub><mml:mi>σ</mml:mi><mml:mrow><mml:mi>A</mml:mi><mml:mi>B</mml:mi></mml:mrow></mml:msub><mml:mo>=</mml:mo><mml:msqrt><mml:mn>2</mml:mn></mml:msqrt><mml:mi>σ</mml:mi></mml:mrow></mml:math></alternatives></inline-formula></p>
+      </list-item>
+    </list>
+    <p>But now can we see other scenarios than just those 5 cases?</p>
+    <list list-type="bullet">
+      <list-item>
+        <p>consider different <inline-formula><alternatives>
+        <tex-math><![CDATA[\rho \approx \sum_{p=1}^{P} \sigma_{p}]]></tex-math>
+        <mml:math display="inline" xmlns:mml="http://www.w3.org/1998/Math/MathML"><mml:mrow><mml:mi>ρ</mml:mi><mml:mo>≈</mml:mo><mml:msubsup><mml:mo>∑</mml:mo><mml:mrow><mml:mi>p</mml:mi><mml:mo>=</mml:mo><mml:mn>1</mml:mn></mml:mrow><mml:mi>P</mml:mi></mml:msubsup><mml:msub><mml:mi>σ</mml:mi><mml:mi>p</mml:mi></mml:msub></mml:mrow></mml:math></alternatives></inline-formula>,
+        depending on <inline-formula><alternatives>
+        <tex-math><![CDATA[P]]></tex-math>
+        <mml:math display="inline" xmlns:mml="http://www.w3.org/1998/Math/MathML"><mml:mi>P</mml:mi></mml:math></alternatives></inline-formula>
+        nesting structures</p>
+      </list-item>
+      <list-item>
+        <p>we can now investigate <inline-formula><alternatives>
+        <tex-math><![CDATA[\gamma_{k}]]></tex-math>
+        <mml:math display="inline" xmlns:mml="http://www.w3.org/1998/Math/MathML"><mml:msub><mml:mi>γ</mml:mi><mml:mi>k</mml:mi></mml:msub></mml:math></alternatives></inline-formula></p>
+      </list-item>
+      <list-item>
+        <p>we can assume <inline-formula><alternatives>
+        <tex-math><![CDATA[\sigma_{B} \neq \sigma_{A}]]></tex-math>
+        <mml:math display="inline" xmlns:mml="http://www.w3.org/1998/Math/MathML"><mml:mrow><mml:msub><mml:mi>σ</mml:mi><mml:mi>B</mml:mi></mml:msub><mml:mo>≠</mml:mo><mml:msub><mml:mi>σ</mml:mi><mml:mi>A</mml:mi></mml:msub></mml:mrow></mml:math></alternatives></inline-formula>,
+        no need for results on the limit</p>
+      </list-item>
+    </list>
   </sec>
 </sec>
 <sec id="sec-discuss">
@@ -463,7 +719,7 @@ the University of Antwerp (BOF).</funding-statement>
 <sec id="sec-appendix">
   <title>Appendix</title>
   <sec id="sec-appA">
-    <title>Why estimate judges appart?</title>
+    <title>Why do we need to estimate judges’ abilities?</title>
     <p></p>
   </sec>
   <sec id="references">

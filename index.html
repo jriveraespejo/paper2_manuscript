@@ -59,6 +59,9 @@ div.csl-indent {
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
 <link href="site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<script src="site_libs/quarto-contrib/glightbox/glightbox.min.js"></script>
+<link href="site_libs/quarto-contrib/glightbox/glightbox.min.css" rel="stylesheet">
+<link href="site_libs/quarto-contrib/glightbox/lightbox.css" rel="stylesheet">
 <script async="" src="https://hypothes.is/embed.js"></script>
 <script>
   window.document.addEventListener("DOMContentLoaded", function (_event) {
@@ -66,6 +69,35 @@ div.csl-indent {
   });
 </script>
 
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN") {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
 
 <meta name="citation_title" content="Causes and effects in Dichotomous Comparative Judgments: an information-theoretical system with plausible mechanism">
 <meta name="citation_abstract" content="Dichotomous Comparative Judgment [DCJ, @Pollitt_2012a, @Pollitt_2012b] requires judges to evaluate the relative manifestation of traits between pairs of stimuli, resulting in a dichotomous outcome indicating which stimulus exhibits the trait more strongly. Research has demonstrated DCJ&amp;amp;#039;s effectiveness and reliability in various domains [@Pollitt_2012b; @Bartholomew_et_al_2018; @vanDaal_et_al_2016; @Lesterhuis_2018; @Bartholomew_et_al_2020; @Boonen_et_al_2020]. Nevertheless, despite the method's widespread use, the literature lacks a transparent depiction of the DCJ system and the plausible mechanisms that generate the DCJ data. Particularly, there is no detailed explanation of how different assessment factors can potentially influence the observed DCJ data. This study aims to fill this gap by applying the framework of causal analysis and Directed Acyclic Graphs [DAG; @Pearl_2009]. Using this framework, the study will construct a scientific model to elucidate the causal assumptions and mechanisms inherent the system. This model will enable researchers to draw inferences about causal relationships from DCJ data. Subsequently, the study will translate this model into a probabilistic statistical model, aiming to derive statistical estimands for different targets of inference. The outcomes of this study will inform the planning of DCJ experiments and hold significance for researchers or analysts involved in education and assessment procedures who implement the DCJ methodology.
@@ -402,9 +434,11 @@ div.csl-indent {
   </ul></li>
   <li><a href="#sec-theory" id="toc-sec-theory" class="nav-link" data-scroll-target="#sec-theory"><span class="header-section-number">3</span> Theoretical framework</a>
   <ul class="collapse">
-  <li><a href="#sec-theory-scientific" id="toc-sec-theory-scientific" class="nav-link" data-scroll-target="#sec-theory-scientific"><span class="header-section-number">3.1</span> A scientific model for the DCJ</a></li>
-  <li><a href="#sec-theory-statistics" id="toc-sec-theory-statistics" class="nav-link" data-scroll-target="#sec-theory-statistics"><span class="header-section-number">3.2</span> From the scientific to statistical model</a></li>
-  <li><a href="#sec-theory-where" id="toc-sec-theory-where" class="nav-link" data-scroll-target="#sec-theory-where"><span class="header-section-number">3.3</span> Where does it all fit?</a></li>
+  <li><a href="#sec-theory-where" id="toc-sec-theory-where" class="nav-link" data-scroll-target="#sec-theory-where"><span class="header-section-number">3.1</span> Where does it all fit?</a></li>
+  <li><a href="#sec-theory-scientific" id="toc-sec-theory-scientific" class="nav-link" data-scroll-target="#sec-theory-scientific"><span class="header-section-number">3.2</span> A scientific model for the DCJ</a></li>
+  <li><a href="#sec-theory-probability" id="toc-sec-theory-probability" class="nav-link" data-scroll-target="#sec-theory-probability"><span class="header-section-number">3.3</span> Probabilitics assumptions of the scientific model</a></li>
+  <li><a href="#sec-theory-statistics" id="toc-sec-theory-statistics" class="nav-link" data-scroll-target="#sec-theory-statistics"><span class="header-section-number">3.4</span> From the scientific to statistical model</a></li>
+  <li><a href="#sec-theory-thurstone" id="toc-sec-theory-thurstone" class="nav-link" data-scroll-target="#sec-theory-thurstone"><span class="header-section-number">3.5</span> Let’s talk about Thurstone</a></li>
   </ul></li>
   <li><a href="#sec-discuss" id="toc-sec-discuss" class="nav-link" data-scroll-target="#sec-discuss"><span class="header-section-number">4</span> Discussion</a>
   <ul class="collapse">
@@ -415,7 +449,7 @@ div.csl-indent {
   
   <li><a href="#sec-appendix" id="toc-sec-appendix" class="nav-link" data-scroll-target="#sec-appendix"><span class="header-section-number">6</span> Appendix</a>
   <ul class="collapse">
-  <li><a href="#sec-appA" id="toc-sec-appA" class="nav-link" data-scroll-target="#sec-appA"><span class="header-section-number">6.1</span> Why estimate judges appart?</a></li>
+  <li><a href="#sec-appA" id="toc-sec-appA" class="nav-link" data-scroll-target="#sec-appA"><span class="header-section-number">6.1</span> Why do we need to estimate judges’ abilities?</a></li>
   <li><a href="#references" id="toc-references" class="nav-link" data-scroll-target="#references">References</a></li>
   </ul></li>
   </ul>
@@ -445,21 +479,160 @@ div.csl-indent {
 <h1 data-number="2"><span class="header-section-number">2</span> Preliminaries</h1>
 <section id="sec-prelim-causal" class="level2" data-number="2.1">
 <h2 data-number="2.1" class="anchored" data-anchor-id="sec-prelim-causal"><span class="header-section-number">2.1</span> Causal analysis and DAGs</h2>
+<p>Causal analysis is the field of experimental design and statistics pertaining to establishing cause and effect from data.</p>
+<p>Causal inference</p>
+<p>Directed Acyclic Graph (DAG)</p>
+<p>the four components of DAGs</p>
+<p>Structural Causal Model (SCM)</p>
+<p>the four components of DAGs in SCM notation</p>
 </section>
 <section id="sec-prelim-flow" class="level2" data-number="2.2">
 <h2 data-number="2.2" class="anchored" data-anchor-id="sec-prelim-flow"><span class="header-section-number">2.2</span> The flow of association and causation</h2>
+<div id="fig-ACflow" class="quarto-float quarto-figure quarto-figure-center anchored" data-fig-align="center">
+<figure class="quarto-float quarto-float-fig figure">
+<figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-fig" id="fig-ACflow-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;1: The flow of association and causation in graphs. Extracted from <span class="citation" data-cites="Neal_2020">Neal (<a href="#ref-Neal_2020" role="doc-biblioref">2020, 31</a>)</span>
+</figcaption>
+<div aria-describedby="fig-ACflow-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<a href="images/figures/ACflow.png" class="lightbox" data-gallery="quarto-lightbox-gallery-1" title="Figure&nbsp;1: The flow of association and causation in graphs. Extracted from @Neal_2020 [pp. 31]"><img src="images/figures/ACflow.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:100.0%"></a>
+</div>
+</figure>
+</div>
 </section>
 </section>
 <section id="sec-theory" class="level1" data-number="3">
 <h1 data-number="3"><span class="header-section-number">3</span> Theoretical framework</h1>
-<section id="sec-theory-scientific" class="level2" data-number="3.1">
-<h2 data-number="3.1" class="anchored" data-anchor-id="sec-theory-scientific"><span class="header-section-number">3.1</span> A scientific model for the DCJ</h2>
+<section id="sec-theory-where" class="level2" data-number="3.1">
+<h2 data-number="3.1" class="anchored" data-anchor-id="sec-theory-where"><span class="header-section-number">3.1</span> Where does it all fit?</h2>
+<div id="fig-IEflow" class="quarto-float quarto-figure quarto-figure-center anchored" data-fig-align="center">
+<figure class="quarto-float quarto-float-fig figure">
+<figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-fig" id="fig-IEflow-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;2: Identification-Estimation flowchart. Extracted from <span class="citation" data-cites="Neal_2020">Neal (<a href="#ref-Neal_2020" role="doc-biblioref">2020, 32</a>)</span>
+</figcaption>
+<div aria-describedby="fig-IEflow-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<a href="images/figures/IEflow.png" class="lightbox" data-gallery="quarto-lightbox-gallery-2" title="Figure&nbsp;2: Identification-Estimation flowchart. Extracted from @Neal_2020 [pp. 32]"><img src="images/figures/IEflow.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:40.0%"></a>
+</div>
+</figure>
+</div>
 </section>
-<section id="sec-theory-statistics" class="level2" data-number="3.2">
-<h2 data-number="3.2" class="anchored" data-anchor-id="sec-theory-statistics"><span class="header-section-number">3.2</span> From the scientific to statistical model</h2>
+<section id="sec-theory-scientific" class="level2" data-number="3.2">
+<h2 data-number="3.2" class="anchored" data-anchor-id="sec-theory-scientific"><span class="header-section-number">3.2</span> A scientific model for the DCJ</h2>
+<div id="fig-SciModel_simp1" class="quarto-float quarto-figure quarto-figure-center anchored" data-fig-align="center">
+<figure class="quarto-float quarto-float-fig figure">
+<figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-fig" id="fig-SciModel_simp1-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;3: DCJ causal diagram, simplified description
+</figcaption>
+<div aria-describedby="fig-SciModel_simp1-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<a href="images/figures/SciModel_simp1.png" class="lightbox" data-gallery="quarto-lightbox-gallery-3" title="Figure&nbsp;3: DCJ causal diagram, simplified description"><img src="images/figures/SciModel_simp1.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:80.0%"></a>
+</div>
+</figure>
+</div>
+<div id="fig-SciModel_simp2" class="quarto-float quarto-figure quarto-figure-center anchored" data-fig-align="center">
+<figure class="quarto-float quarto-float-fig figure">
+<figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-fig" id="fig-SciModel_simp2-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;4: DCJ causal diagram, simplified mathematical description
+</figcaption>
+<div aria-describedby="fig-SciModel_simp2-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<a href="images/figures/SciModel_simp2.png" class="lightbox" data-gallery="quarto-lightbox-gallery-4" title="Figure&nbsp;4: DCJ causal diagram, simplified mathematical description"><img src="images/figures/SciModel_simp2.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:70.0%"></a>
+</div>
+</figure>
+</div>
+<div id="fig-SciModel_pop" class="quarto-float quarto-figure quarto-figure-center anchored" data-fig-align="center">
+<figure class="quarto-float quarto-float-fig figure">
+<figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-fig" id="fig-SciModel_pop-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;5: DCJ causal diagram, population mathematical description
+</figcaption>
+<div aria-describedby="fig-SciModel_pop-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<a href="images/figures/SciModel_pop.png" class="lightbox" data-gallery="quarto-lightbox-gallery-5" title="Figure&nbsp;5: DCJ causal diagram, population mathematical description"><img src="images/figures/SciModel_pop.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:70.0%"></a>
+</div>
+</figure>
+</div>
+<!-- check the directionality of the arrow from $p_{I}$ to $\sigma_{i(g)}$ and equivalents -->
+<div id="fig-SciModel_samp" class="quarto-float quarto-figure quarto-figure-center anchored" data-fig-align="center">
+<figure class="quarto-float quarto-float-fig figure">
+<figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-fig" id="fig-SciModel_samp-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;6: DCJ causal diagram, sample with comparisons mathematical description
+</figcaption>
+<div aria-describedby="fig-SciModel_samp-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<a href="images/figures/SciModel_samp.png" class="lightbox" data-gallery="quarto-lightbox-gallery-6" title="Figure&nbsp;6: DCJ causal diagram, sample with comparisons mathematical description"><img src="images/figures/SciModel_samp.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:80.0%"></a>
+</div>
+</figure>
+</div>
 </section>
-<section id="sec-theory-where" class="level2" data-number="3.3">
-<h2 data-number="3.3" class="anchored" data-anchor-id="sec-theory-where"><span class="header-section-number">3.3</span> Where does it all fit?</h2>
+<section id="sec-theory-probability" class="level2" data-number="3.3">
+<h2 data-number="3.3" class="anchored" data-anchor-id="sec-theory-probability"><span class="header-section-number">3.3</span> Probabilitics assumptions of the scientific model</h2>
+<!-- what does it mean in probabilistic terms? describe probabilities and arrive to structural model -->
+<!-- commands for d-separation -->
+<p><span id="eq-StructuralModel"><span class="math display">\[
+\begin{aligned}
+  O_{kijr_{ij}} := &amp; \; f_{O}( \delta_{kijr_{ij}} ) \\
+  \delta_{kijr_{ij}} := &amp; \; f_{D}( \gamma_{k}, \theta_{ir_{i}} ) \\
+  \gamma_{k} := &amp; \; f_{G}( Z_{k}, e_{k} ) \\
+  \theta_{ir_{i}} := &amp; \; f_{R}( \theta_{i}, Y_{r}, e_{r_{i}} ) \\
+  \theta_{i} := &amp; \; f_{T}( X_{i}, e_{i} ) \\
+  &amp; \; e_{k} \perp\!\!\!\perp e_{i} \\
+  &amp; \; e_{k} \perp\!\!\!\perp e_{r_{i}} \\
+  &amp; \; e_{i} \perp\!\!\!\perp e_{r_{i}}
+\end{aligned}
+\tag{1}\]</span></span></p>
+</section>
+<section id="sec-theory-statistics" class="level2" data-number="3.4">
+<h2 data-number="3.4" class="anchored" data-anchor-id="sec-theory-statistics"><span class="header-section-number">3.4</span> From the scientific to statistical model</h2>
+<p><span id="eq-StatModel_general"><span class="math display">\[
+\begin{aligned}
+  O_{kijr_{ij}} \sim &amp; \; \text{Bernoulli}\left[ \; logit^{-1}\left( \delta_{kijr_{ij}} \right) \; \right] \\
+  \delta_{kijr_{ij}} = &amp; \; \gamma_{k}( \theta_{ir_{i}} - \theta_{jr_{j}} ) \\
+  \gamma_{k} = &amp; \; logit^{-1}\left[ \beta_{Z} Z_{k} + e_{k} \right] \\
+  \theta_{ir_{i}} = &amp; \; \theta_{i} + \beta_{Y} Y_{r} + e_{r_{i}}  \\
+  \theta_{i} = &amp; \; \beta_{X} X_{i} + e_{i}  \\
+  e_{k} \sim &amp; \; \text{Normal}(0, \sigma_{k(g)}) \\
+  e_{i} \sim &amp; \; \text{Normal}(0, \sigma_{i(g)}) \\
+  e_{r_{i}} \sim &amp; \; \text{Normal}(0, \sigma_{r(g)})
+\end{aligned}
+\tag{2}\]</span></span></p>
+<p>for identification purposes we can set <span class="math inline">\(\frac{1}{G}\sum_{g=1}^{G} \sigma_{k(g)} = 0.02\)</span>, <span class="math inline">\(\frac{1}{G}\sum_{g=1}^{G} \sigma_{i(g)} = 1\)</span>, and <span class="math inline">\(\frac{1}{G}\sum_{g=1}^{G} \sigma_{r(g)} = 1\)</span>. A special case of this would be to assume that the data comes from the same population, in that case, <span class="math inline">\(\sigma_{k(g)} = \sigma_{k} = 0.02\)</span>, <span class="math inline">\(\sigma_{i(g)} = \sigma_{i} = 1\)</span></p>
+</section>
+<section id="sec-theory-thurstone" class="level2" data-number="3.5">
+<h2 data-number="3.5" class="anchored" data-anchor-id="sec-theory-thurstone"><span class="header-section-number">3.5</span> Let’s talk about Thurstone</h2>
+<p>Thurstone’s comparative judgment <span class="citation" data-cites="Thurstone_1927">Thurstone (<a href="#ref-Thurstone_1927" role="doc-biblioref">1927</a>)</span> is based on the formula: <span class="math display">\[
+X_{AB} = \frac{S_{A} - S_{B}}{\sigma_{AB}}
+\]</span></p>
+<p>where <span class="math inline">\(X_{AB}\)</span> defines the comparative judgment outcome, <span class="math inline">\(S_{A}\)</span> and <span class="math inline">\(S_{B}\)</span> are the modal discriminal processes, <span class="math inline">\(\sigma_{AB} = \sqrt{ \sigma^{2}_{A} + \sigma^{2}_{B} + 2 \rho \sigma_{A} \sigma_{B}}\)</span>, with <span class="math inline">\(\sigma_{A}\)</span> and <span class="math inline">\(\sigma_{B}\)</span> being the dispersion of discriminal processes <span class="math inline">\(A\)</span> and <span class="math inline">\(B\)</span>, respectively, and <span class="math inline">\(\rho\)</span> the correlation between discriminal processes.</p>
+<p>The theory identifies five cases:</p>
+<ul>
+<li><strong>Case 1:</strong> only constant <span class="math inline">\(\rho\)</span> (not <span class="math inline">\(\rho_{ij}\)</span>)</li>
+<li><strong>Case 2:</strong> <span class="math inline">\(X_{ij}\)</span> becomes <span class="math inline">\(X_{kij}\)</span> with <span class="math inline">\(k=1, \dots, K\)</span> judges (replication, not duplication)</li>
+<li><strong>Case 3:</strong> <span class="math inline">\(\rho = 0\)</span>, then <span class="math inline">\(\sigma_{AB} = \sqrt{ \sigma^{2}_{A} + \sigma^{2}_{B}}\)</span></li>
+<li><strong>Case 4:</strong> <span class="math inline">\(\sigma_{B}=\sigma_{A}+d\)</span>, then <span class="math inline">\(\lim_{d \leq 0.1\sigma_{A}} \sigma_{AB} = (\sigma_{A} + \sigma_{B}) /\sqrt{2}\)</span></li>
+<li><strong>Case 5:</strong> <span class="math inline">\(\sigma_{B}=\sigma_{A}\)</span>, then <span class="math inline">\(\sigma_{AB} = \sqrt{2}\sigma\)</span></li>
+</ul>
+<p>Now using the DAG and statistical notation</p>
+<p><span id="eq-StatModel_thurstone"><span class="math display">\[
+\begin{aligned}
+  O_{kijr_{ij}} := &amp; \; f_{O}( \delta_{kijr_{ij}} ) \\
+  \delta_{kijr_{ij}} = &amp; \; \gamma_{k}( \theta_{ir_{i}} - \theta_{jr_{j}} ) \\
+  \gamma_{k} = &amp; \; f_{G}( Z_{k}, e_{k} ) \\
+  \theta_{ir_{i}} = &amp; \; \theta_{i} + \beta_{Y} Y_{r} + e_{r_{i}}  \\
+  \theta_{i} = &amp; \; \beta_{X} X_{i} + e_{i}  \\
+  e_{k} \sim &amp; \; \text{Normal}(0, \sigma_{k(g)}) \\
+  e_{i} \sim &amp; \; \text{Normal}(0, \sigma_{i(g)}) \\
+  e_{r_{i}} \sim &amp; \; \text{Normal}(0, \sigma_{r(g)})
+\end{aligned}
+\tag{3}\]</span></span></p>
+<p>The theory identifies five cases:</p>
+<ul>
+<li><strong>Case 1:</strong> only constant <span class="math inline">\(\rho \approx \sigma_{i}\)</span></li>
+<li><strong>Case 2:</strong> now judges are separated by using <span class="math inline">\(\gamma_{k}\)</span></li>
+<li><strong>Case 3:</strong> <span class="math inline">\(\rho \approx \sigma_{e_{i}} = 0\)</span> (no nesting of texts on students), then <span class="math inline">\(\sigma_{AB} = \sqrt{ \sigma^{2}_{A} + \sigma^{2}_{B}}\)</span></li>
+<li><strong>Case 4:</strong> <span class="math inline">\(\sigma_{B}=\sigma_{A}+d\)</span>, then <span class="math inline">\(\lim_{d \leq 0.1\sigma_{A}} \sigma_{AB} = (\sigma_{A} + \sigma_{B}) /\sqrt{2}\)</span></li>
+<li><strong>Case 5:</strong> <span class="math inline">\(\sigma_{B}=\sigma_{A}\)</span>, then <span class="math inline">\(\sigma_{AB} = \sqrt{2}\sigma\)</span></li>
+</ul>
+<p>But now can we see other scenarios than just those 5 cases?</p>
+<ul>
+<li>consider different <span class="math inline">\(\rho \approx \sum_{p=1}^{P} \sigma_{p}\)</span>, depending on <span class="math inline">\(P\)</span> nesting structures</li>
+<li>we can now investigate <span class="math inline">\(\gamma_{k}\)</span></li>
+<li>we can assume <span class="math inline">\(\sigma_{B} \neq \sigma_{A}\)</span>, no need for results on the limit</li>
+</ul>
 </section>
 </section>
 <section id="sec-discuss" class="level1" data-number="4">
@@ -479,7 +652,7 @@ div.csl-indent {
 <section id="sec-appendix" class="level1" data-number="6">
 <h1 data-number="6"><span class="header-section-number">6</span> Appendix</h1>
 <section id="sec-appA" class="level2" data-number="6.1">
-<h2 data-number="6.1" class="anchored" data-anchor-id="sec-appA"><span class="header-section-number">6.1</span> Why estimate judges appart?</h2>
+<h2 data-number="6.1" class="anchored" data-anchor-id="sec-appA"><span class="header-section-number">6.1</span> Why do we need to estimate judges’ abilities?</h2>
 <!-- The same idea as interactions: when interactions are significant, the interpretations of the parameters cannot be made in isolation -->
 <div style="page-break-after: always;"></div>
 </section>
@@ -1042,6 +1215,38 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 });
 </script>
 </div> <!-- /content -->
+<script>var lightboxQuarto = GLightbox({"closeEffect":"zoom","descPosition":"bottom","loop":false,"openEffect":"zoom","selector":".lightbox"});
+(function() {
+  let previousOnload = window.onload;
+  window.onload = () => {
+    if (previousOnload) {
+      previousOnload();
+    }
+    lightboxQuarto.on('slide_before_load', (data) => {
+      const { slideIndex, slideNode, slideConfig, player, trigger } = data;
+      const href = trigger.getAttribute('href');
+      if (href !== null) {
+        const imgEl = window.document.querySelector(`a[href="${href}"] img`);
+        if (imgEl !== null) {
+          const srcAttr = imgEl.getAttribute("src");
+          if (srcAttr && srcAttr.startsWith("data:")) {
+            slideConfig.href = srcAttr;
+          }
+        }
+      } 
+    });
+  
+    lightboxQuarto.on('slide_after_load', (data) => {
+      const { slideIndex, slideNode, slideConfig, player, trigger } = data;
+      if (window.Quarto?.typesetMath) {
+        window.Quarto.typesetMath(slideNode);
+      }
+    });
+  
+  };
+  
+})();
+          </script>
 
 
 
