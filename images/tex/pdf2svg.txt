@@ -1,1 +1,0 @@
-pdf2svg SciMod.pdf SciMod.svg

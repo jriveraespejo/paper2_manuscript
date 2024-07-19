@@ -156,18 +156,136 @@ Although several studies have examined the individual impact of these factors on
 
 ## Causal analysis and DAGs {#sec-prelim-causal}
 
+Causal analysis is the field of experimental design and statistics pertaining to establishing cause and effect from data.
+
+Causal inference
+
+Directed Acyclic Graph (DAG)
+
+the four components of DAGs
+
+Structural Causal Model (SCM)
+
+the four components of DAGs in SCM notation
+
+
+
 ## The flow of association and causation {#sec-prelim-flow}
 
+![ The flow of association and causation in graphs. Extracted from @Neal_2020 [pp. 31] ](images/figures/ACflow.png){#fig-ACflow fig-align="center" width=100%}
 
 
 # Theoretical framework {#sec-theory}
 
+## Where does it all fit? {#sec-theory-where}
+
+![ Identification-Estimation flowchart. Extracted from @Neal_2020 [pp. 32] ](images/figures/IEflow.png){#fig-IEflow fig-align="center" width=40%}
+
+
 ## A scientific model for the DCJ {#sec-theory-scientific}
+
+![ DCJ causal diagram, simplified description ](images/figures/SciModel_simp1.png){#fig-SciModel_simp1 fig-align="center" width=80%}
+
+![ DCJ causal diagram, simplified mathematical description ](images/figures/SciModel_simp2.png){#fig-SciModel_simp2 fig-align="center" width=70%}
+
+![ DCJ causal diagram, population mathematical description ](images/figures/SciModel_pop.png){#fig-SciModel_pop fig-align="center" width=70%}
+
+<!-- check the directionality of the arrow from $p_{I}$ to $\sigma_{i(g)}$ and equivalents -->
+
+
+![ DCJ causal diagram, sample with comparisons mathematical description ](images/figures/SciModel_samp.png){#fig-SciModel_samp fig-align="center" width=80%}
+
+
+
+## Probabilitics assumptions of the scientific model {#sec-theory-probability}
+
+<!-- what does it mean in probabilistic terms? describe probabilities and arrive to structural model -->
+
+<!-- commands for d-separation -->
+\newcommand{\dsep}{\perp\!\!\!\perp}
+\newcommand{\ndsep}{\not\!\perp\!\!\!\perp}
+
+
+$$
+\begin{aligned}
+  O_{kijr_{ij}} := & \; f_{O}( \delta_{kijr_{ij}} ) \\
+  \delta_{kijr_{ij}} := & \; f_{D}( \gamma_{k}, \theta_{ir_{i}} ) \\
+  \gamma_{k} := & \; f_{G}( Z_{k}, e_{k} ) \\
+  \theta_{ir_{i}} := & \; f_{R}( \theta_{i}, Y_{r}, e_{r_{i}} ) \\
+  \theta_{i} := & \; f_{T}( X_{i}, e_{i} ) \\
+  & \; e_{k} \dsep e_{i} \\
+  & \; e_{k} \dsep e_{r_{i}} \\
+  & \; e_{i} \dsep e_{r_{i}}
+\end{aligned}
+$$ {#eq-StructuralModel}
+
+
 
 ## From the scientific to statistical model {#sec-theory-statistics}
 
-## Where does it all fit? {#sec-theory-where}
+$$
+\begin{aligned}
+  O_{kijr_{ij}} \sim & \; \text{Bernoulli}\left[ \; logit^{-1}\left( \delta_{kijr_{ij}} \right) \; \right] \\
+  \delta_{kijr_{ij}} = & \; \gamma_{k}( \theta_{ir_{i}} - \theta_{jr_{j}} ) \\
+  \gamma_{k} = & \; logit^{-1}\left[ \beta_{Z} Z_{k} + e_{k} \right] \\
+  \theta_{ir_{i}} = & \; \theta_{i} + \beta_{Y} Y_{r} + e_{r_{i}}  \\
+  \theta_{i} = & \; \beta_{X} X_{i} + e_{i}  \\
+  e_{k} \sim & \; \text{Normal}(0, \sigma_{k(g)}) \\
+  e_{i} \sim & \; \text{Normal}(0, \sigma_{i(g)}) \\
+  e_{r_{i}} \sim & \; \text{Normal}(0, \sigma_{r(g)})
+\end{aligned}
+$$ {#eq-StatModel_general}
 
+for identification purposes we can set $\frac{1}{G}\sum_{g=1}^{G} \sigma_{k(g)} = 0.02$, $\frac{1}{G}\sum_{g=1}^{G} \sigma_{i(g)} = 1$, and $\frac{1}{G}\sum_{g=1}^{G} \sigma_{r(g)} = 1$. A special case of this would be to assume that the data comes from the same population, in that case, $\sigma_{k(g)} = \sigma_{k} = 0.02$, $\sigma_{i(g)} = \sigma_{i} = 1$
+
+
+
+## Let's talk about Thurstone {#sec-theory-thurstone}
+
+
+Thurstone's comparative judgment @Thurstone_1927 is based on the formula:
+$$
+X_{AB} = \frac{S_{A} - S_{B}}{\sigma_{AB}}
+$$
+
+where $X_{AB}$ defines the comparative judgment outcome, $S_{A}$ and $S_{B}$ are the modal discriminal processes, $\sigma_{AB} = \sqrt{ \sigma^{2}_{A} + \sigma^{2}_{B} + 2 \rho \sigma_{A} \sigma_{B}}$, with $\sigma_{A}$ and $\sigma_{B}$ being the dispersion of discriminal processes $A$ and $B$, respectively, and $\rho$ the correlation between discriminal processes.   
+
+The theory identifies five cases:
+
+- **Case 1:** only constant $\rho$ (not $\rho_{ij}$)
+- **Case 2:** $X_{ij}$ becomes $X_{kij}$ with $k=1, \dots, K$ judges (replication, not duplication)
+- **Case 3:** $\rho = 0$, then $\sigma_{AB} = \sqrt{ \sigma^{2}_{A} + \sigma^{2}_{B}}$ 
+- **Case 4:** $\sigma_{B}=\sigma_{A}+d$, then $\lim_{d \leq 0.1\sigma_{A}} \sigma_{AB} = (\sigma_{A} + \sigma_{B}) /\sqrt{2}$
+- **Case 5:** $\sigma_{B}=\sigma_{A}$, then $\sigma_{AB} = \sqrt{2}\sigma$
+
+Now using the DAG and statistical notation
+
+$$
+\begin{aligned}
+  O_{kijr_{ij}} := & \; f_{O}( \delta_{kijr_{ij}} ) \\
+  \delta_{kijr_{ij}} = & \; \gamma_{k}( \theta_{ir_{i}} - \theta_{jr_{j}} ) \\
+  \gamma_{k} = & \; f_{G}( Z_{k}, e_{k} ) \\
+  \theta_{ir_{i}} = & \; \theta_{i} + \beta_{Y} Y_{r} + e_{r_{i}}  \\
+  \theta_{i} = & \; \beta_{X} X_{i} + e_{i}  \\
+  e_{k} \sim & \; \text{Normal}(0, \sigma_{k(g)}) \\
+  e_{i} \sim & \; \text{Normal}(0, \sigma_{i(g)}) \\
+  e_{r_{i}} \sim & \; \text{Normal}(0, \sigma_{r(g)})
+\end{aligned}
+$$ {#eq-StatModel_thurstone}
+
+The theory identifies five cases:
+
+- **Case 1:** only constant $\rho \approx \sigma_{i}$
+- **Case 2:** now judges are separated by using $\gamma_{k}$
+- **Case 3:** $\rho \approx \sigma_{e_{i}} = 0$ (no nesting of texts on students), then $\sigma_{AB} = \sqrt{ \sigma^{2}_{A} + \sigma^{2}_{B}}$ 
+- **Case 4:** $\sigma_{B}=\sigma_{A}+d$, then $\lim_{d \leq 0.1\sigma_{A}} \sigma_{AB} = (\sigma_{A} + \sigma_{B}) /\sqrt{2}$
+- **Case 5:** $\sigma_{B}=\sigma_{A}$, then $\sigma_{AB} = \sqrt{2}\sigma$
+
+But now can we see other scenarios than just those 5 cases?
+
+- consider different $\rho \approx \sum_{p=1}^{P} \sigma_{p}$, depending on $P$ nesting structures 
+- we can now investigate $\gamma_{k}$
+- we can assume $\sigma_{B} \neq \sigma_{A}$, no need for results on the limit
 
 
 # Discussion {#sec-discuss}
@@ -210,7 +328,7 @@ Although several studies have examined the individual impact of these factors on
 
 # Appendix {#sec-appendix}
 
-## Why estimate judges appart? {#sec-appA}
+## Why do we need to estimate judges' abilities? {#sec-appA}
 
 <!-- The same idea as interactions: when interactions are significant, the interpretations of the parameters cannot be made in isolation -->
 
