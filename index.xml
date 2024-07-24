@@ -216,40 +216,41 @@ sciences</institution>
 
 
 <abstract>
-<p>Dichotomous Comparative Judgment Pollitt
-(<xref alt="2012b" rid="ref-Pollitt_2012b" ref-type="bibr">2012b</xref>)
-requires judges to evaluate the relative manifestation of traits between
-pairs of stimuli, resulting in a dichotomous outcome indicating which
-stimulus exhibits the trait more strongly. Research has demonstrated
-DCJ’s effectiveness and reliability in various domains
-(<xref alt="Pollitt 2012b" rid="ref-Pollitt_2012b" ref-type="bibr">Pollitt
-2012b</xref>;
-<xref alt="Bartholomew et al. 2018" rid="ref-Bartholomew_et_al_2018" ref-type="bibr">Bartholomew
-et al. 2018</xref>;
-<xref alt="van Daal et al. 2019" rid="ref-vanDaal_et_al_2016" ref-type="bibr">van
-Daal et al. 2019</xref>;
-<xref alt="Lesterhuis 2018" rid="ref-Lesterhuis_2018" ref-type="bibr">Lesterhuis
-2018</xref>;
-<xref alt="Bartholomew and Williams 2020" rid="ref-Bartholomew_et_al_2020" ref-type="bibr">Bartholomew
-and Williams 2020</xref>;
-<xref alt="Boonen, Kloots, and Gillis 2020" rid="ref-Boonen_et_al_2020" ref-type="bibr">Boonen,
-Kloots, and Gillis 2020</xref>). Nevertheless, despite the method’s
-widespread use, the literature lacks a transparent depiction of the DCJ
-system and the plausible mechanisms that generate the DCJ data.
-Particularly, there is no detailed explanation of how different
-assessment factors can potentially influence the observed DCJ data. This
-study aims to fill this gap by applying the framework of causal analysis
-and Directed Acyclic Graphs [DAG; Pearl
-(<xref alt="2009" rid="ref-Pearl_2009" ref-type="bibr">2009</xref>)].
-Using this framework, the study will construct a scientific model to
-elucidate the causal assumptions and mechanisms inherent the system.
-This model will enable researchers to draw inferences about causal
-relationships from DCJ data. Subsequently, the study will translate this
-model into a probabilistic statistical model, aiming to derive
-statistical estimands for different targets of inference. The outcomes
-of this study will inform the planning of DCJ experiments and hold
-significance for researchers or analysts involved in education and
-assessment procedures who implement the DCJ methodology.</p>
+<p>Dichotomous Comparative Judgment (DCJ) requires judges to compare
+pairs of stimuli to determine which one exhibits a higher degree of a
+specific trait. DCJ has proven effective and reliable across various
+fields Pollitt
+(<xref alt="2012b" rid="ref-Pollitt_2012b" ref-type="bibr">2012b</xref>);
+Jones
+(<xref alt="2015" rid="ref-Jones_2015" ref-type="bibr">2015</xref>); van
+Daal et al.
+(<xref alt="2019" rid="ref-vanDaal_et_al_2016" ref-type="bibr">2019</xref>);
+Bartholomew et al.
+(<xref alt="2018" rid="ref-Bartholomew_et_al_2018" ref-type="bibr">2018</xref>);
+Lesterhuis
+(<xref alt="2018" rid="ref-Lesterhuis_2018" ref-type="bibr">2018</xref>);
+Bartholomew and Williams
+(<xref alt="2020" rid="ref-Bartholomew_et_al_2020" ref-type="bibr">2020</xref>);
+Marshall et al.
+(<xref alt="2020" rid="ref-Marshall_et_al_2020" ref-type="bibr">2020</xref>);
+Boonen, Kloots, and Gillis
+(<xref alt="2020" rid="ref-Boonen_et_al_2020" ref-type="bibr">2020</xref>)].
+However, despite the method’s widespread use, existing literature lacks
+a clear explanation of the complexities and assumptions underpinning the
+DCJ system, as well as the plausible mechanisms through which DCJ data
+are generated. This study addresses these issues by integrating DCJ into
+the framework of causal inference. Specifically, utilizing a structural
+approach to causal inference, the study develops a scientific model to
+clarify the causal assumptions and mechanisms inherent in the DCJ
+system. It then translates this model into a probabilistic statistical
+framework to estimate statistical relationships and infer causal
+connections within the system. This research builds upon Thurstone’s law
+of comparative judgment
+(<xref alt="1927" rid="ref-Thurstone_1927" ref-type="bibr">1927</xref>)
+and provide a robust probabilistic foundation for the statistical
+analysis of DCJ data. The findings of this study offer valuable insights
+for researchers and analysts involved in education and assessment
+procedures who implement or design DCJ experiments.</p>
 </abstract>
 <kwd-group kwd-group-type="author">
 <kwd>comparative judgement</kwd>
@@ -385,13 +386,13 @@ the University of Antwerp (BOF).</funding-statement>
   statistical model. This model will produce statistical estimates to
   draw inferences about plausible causal relationships within the DCJ
   system.</p>
-  <p>Ultimately, this research aims to extend the law of comparative
-  judgment initially proposed by Thurstone
+  <p>Ultimately, this research builds upon Thurstone’s law of
+  comparative judgment
   (<xref alt="1927" rid="ref-Thurstone_1927" ref-type="bibr">1927</xref>)
-  and provide a sound probabilistic base for the statistical analysis of
-  DCJ data. Consequently, this research holds significance for
-  researchers and analysts involved in education and assessment
-  procedures who implement or design DCJ experiments.</p>
+  and provide a robust probabilistic foundation for the statistical
+  analysis of DCJ data. Consequently, the findings of this study offer
+  valuable insights for researchers and analysts involved in education
+  and assessment procedures who implement or design DCJ experiments.</p>
 </sec>
 <sec id="sec-background">
   <title>Theoretical background</title>
@@ -405,8 +406,8 @@ the University of Antwerp (BOF).</funding-statement>
     <xref alt="Neal 2020" rid="ref-Neal_2020" ref-type="bibr">Neal
     2020</xref>). Unlike classical statistical modeling, which focuses
     solely on summarizing data and inferring associations, causal
-    inference provides a coherent mathematical representation for
-    analyzing causes and counterfactuals
+    inference provides a coherent mathematical notation for analyzing
+    causes and counterfactuals
     (<xref alt="Pearl 2009" rid="ref-Pearl_2009" ref-type="bibr">Pearl
     2009</xref>).</p>
     <p>According to Pearl and Mackenzie
@@ -423,11 +424,12 @@ the University of Antwerp (BOF).</funding-statement>
     2024</xref>). Nevertheless, despite their abstract nature,
     counterfactuals enable the development of a <italic>theory of the
     world</italic> that explains why specific causes have specific
-    effects and what occurs in the absence of those causes
+    effects and what occurs in their absence
     (<xref alt="Pearl and Mackenzie 2018" rid="ref-Pearl_et_al_2018" ref-type="bibr">Pearl
-    and Mackenzie 2018</xref>). Counterfactuals achieves this by
-    translating causal statements to statements about “what would have
-    happened under different circumstances.”</p>
+    and Mackenzie 2018</xref>). They achieve this by translating causal
+    statements into counterfactual statements, that is, statements about
+    “what would have happened in the world under different
+    circumstances.”</p>
     <p>Several approaches to causal inference and counterfactuals exist,
     but two are particularly prominent: the potential outcomes approach,
     also known as the Neyman-Rubin causal model
@@ -462,28 +464,33 @@ the University of Antwerp (BOF).</funding-statement>
     <xref alt="Gross, Yellen, and Anderson 2018" rid="ref-Gross_et_al_2018" ref-type="bibr">Gross,
     Yellen, and Anderson 2018</xref>;
     <xref alt="Neal 2020" rid="ref-Neal_2020" ref-type="bibr">Neal
-    2020</xref>). These graphical representations provide a transparent
-    depiction of a system’s complexity, revealing its underlying
-    assumptions and the plausible causal mechanisms responsible for
-    generating the system’s outcome. Ultimately, DAGs play the important
-    role of effectively conveying the assumed causal structure of the
-    system, and also determine wich variables should be controlled for
-    to be able to estimate causal effects. Consequently, the structural
-    approach will be the primary method used to address one of the
-    study’s research goals.</p>
+    2020</xref>). In this context, DAGs fulfill the role of a heuristic,
+    effectively conveying the assumed causal structure of a system. They
+    do not represent detailed statistical models but allow researchers
+    to deduce which statistical models can provide valid causal
+    inferences, assuming the causal structure depicted in the DAG is
+    accurate
+    (<xref alt="McElreath 2020" rid="ref-McElreath_2020" ref-type="bibr">McElreath
+    2020</xref>).</p>
   </sec>
   <sec id="sec-background-dag">
     <title>DAGs, SCMs, and the flow of association and causation</title>
-    <p>As previously mentioned, the structural approach employs Directed
-    Acyclic Graphs (DAGs) for the graphical representation of systems. A
-    <italic>graph</italic> consists of nodes connected by edges
+    <p>Graph theory is the branch of mathematics focused on the study of
+    graphs. Graphs are mathematical structures used to model pairwise
+    relations between objects
     (<xref alt="Gross, Yellen, and Anderson 2018" rid="ref-Gross_et_al_2018" ref-type="bibr">Gross,
-    Yellen, and Anderson 2018</xref>). In a <italic>directed
-    graph</italic>, edges extend from a <italic>parent</italic> node to
-    a <italic>child</italic> node, with arrows indicating the direction
-    of causal influence. In directed <italic>acyclic</italic> graphs,
-    the direction of causal influences does not loop back on themselves,
-    meaning the graph contains no cycles McElreath
+    Yellen, and Anderson 2018</xref>). While graph theory covers a wide
+    array of topics, the field of causal inference, particularly its
+    structural approach, has incorporated some of its concepts to
+    represent causes and counterfactuals formally and transparently. A
+    causal graph, or Directed Acyclic Graph (DAG), as its name suggest,
+    is a directed graph without cycles. A <italic>graph</italic> is a
+    collection of nodes connected by edges. In a <italic>directed
+    graph</italic>, edges extend from a node to another node, with
+    arrows indicating the direction of causal influence. In a directed
+    <italic>acyclic</italic> graph, the direction of causal influences
+    does not loop back on itself, ensuring that the graph contains no
+    cycles McElreath
     (<xref alt="2020" rid="ref-McElreath_2020" ref-type="bibr">2020</xref>).</p>
     <fig id="fig-ACflow">
       <caption><p>Figure 1: The flow of association and causation in
