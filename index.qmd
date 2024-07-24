@@ -149,26 +149,60 @@ DCJ has proven effective in assessing competencies and traits predominantly with
 According to @Verhavert_et_al_2019 and @vanDaal_2020, several assessment factors interact and influence the method's outcome. These factors include the number and characteristics of the stimuli, their *proximity* in terms of the assessed trait, the number of comparison per stimulus, and the pairing algorithm used. Furthermore, since the method relies on judges' assessments, the number and characteristics of judges, their *discrimination* abilities, and the number of comparisons per judge also play pivotal roles. Moreover, when the stimuli represent sub-units of higher-levels units, factors such as the number and characteristics of these units, along with their *proximity* in terms of the assessed trait, can significantly influence the outcome. For example, @vanDaal_et_al_2016 assessed the academic writing skills of university students (units) using multiple argumentative essays (sub-units).
 
 <!-- 4. Solution to the gap -->
-Although several studies have examined the individual impact of these factors on the method's reliability [@Bramley_2015; @Pollitt_2012b; @Bramley_et_al_2019; @Verhavert_et_al_2019; @Crompvoets_et_al_2022; @vanDaal_et_al_2017; @Gijsen_et_al_2021], none, to the best of the authors' knowledge, have provided a transparent depiction of the DCJ system and the mechanisms generating the DCJ outcome. This study aims to fill this gap by representing DCJ within the causal inference framework. Specifically, using the *structural approach* to causal inference [@Wright_1921; @Pearl_2009; @Pearl_et_al_2016], the study aims to construct a scientific model. This model will elucidate the underlying assumptions of the DCJ system, providing plausible mechanisms for how the DCJ outcome is generated. Next, using a minimal set of assumptions, the study will translate the scientific model into a probabilistic statistical model. This model will produce statistical estimates to draw inferences about plausible causal relationships within the DCJ system. 
+Although several studies have examined the individual impact of these factors on the method's reliability [@Bramley_2015; @Pollitt_2012b; @Bramley_et_al_2019; @Verhavert_et_al_2019; @Crompvoets_et_al_2022; @vanDaal_et_al_2017; @Gijsen_et_al_2021], none, to the best of the authors' knowledge, have provided a transparent depiction of the DCJ system and the mechanisms generating the DCJ outcome. This study aims to fill this gap by representing DCJ within the causal inference framework. Specifically, using the structural approach to causal inference [@Wright_1921; @Pearl_2009; @Pearl_et_al_2016], the study aims to construct a scientific model. This model will elucidate the underlying assumptions of the DCJ system, providing plausible mechanisms for how the DCJ outcome is generated. Next, using a minimal set of assumptions, the study will translate the scientific model into a probabilistic statistical model. This model will produce statistical estimates to draw inferences about plausible causal relationships within the DCJ system. 
 
 <!-- 5. final objective and relevance -->
 Ultimately, this research aims to extend the law of comparative judgment initially proposed by @Thurstone_1927 and provide a sound probabilistic base for the statistical analysis of DCJ data. Consequently, this research holds significance for researchers and analysts involved in education and assessment procedures who implement or design DCJ experiments.
 
 
-# Preliminaries {#sec-prelim}
+# Theoretical background {#sec-background}
 
-<!-- This section aims to provide the reader with the essential terms, definitions, notation, and assumptions inherent in the structural causal models (SCM) and directed acyclic graphs (DAG) framework.  -->
+## The structural approach to causal inference {#sec-background-structural}
 
-## The structural approach to causal inference {#sec-prelim-structural}
+<!-- 1. What is causal inference? -->
+In statistics, *causal inference* refers to the process of identifying the causes of a phenomenon and estimating their effects using data [@Shaughnessy_et_al_2010; @Neal_2020]. Unlike classical statistical modeling, which focuses solely on summarizing data and inferring associations, causal inference provides a coherent mathematical representation for analyzing causes and counterfactuals [@Pearl_2009]. 
 
-<!-- 1. What is causal inference and counterfactuals? -->
-In statistics, *causal inference* refers to the process of identifying the causes of a phenomenon and estimating their effects using data [@Shaughnessy_et_al_2010; @Neal_2020]. Unlike classical statistical modeling, which focuses solely on summarizing data and inferring associations, causal inference provides a coherent mathematical representation for analyzing causes and counterfactuals [@Pearl_2009]. Counterfactuals reflect scenarios *contrary to fact*, where alternative *potential* outcomes have not been observed and cannot be observed [@Neal_2020; @Counterfactual_2024]. Using counterfactuals, researchers can construct a theory of the world that explains why specific causes have specific effects, and what happens in the absence of those causes. Consequently, counterfactuals represent the highest level of abstraction in causal inference [@Pearl_et_al_2018].
+<!-- 2. what are counterfactuals? -->
+According to @Pearl_et_al_2018, counterfactuals occupy the highest level of cognitive abstraction in the ladder of causation, followed by intervention and association, and form the foundation of causal inference. Counterfactuals represent scenarios *contrary to fact*, where alternative *potential* outcomes resulting from a cause are neither observed nor observable [@Neal_2020; @Counterfactual_2024]. Nevertheless, despite their abstract nature, counterfactuals enable the development of a *theory of the world* that explains why specific causes have specific effects and what occurs in the absence of those causes [@Pearl_et_al_2018]. Counterfactuals achieves this by translating causal statements to statements about "what would have happened under different circumstances."
 
-<!-- 2. How can we construct counterfactuals and apply causal inference? -->
-Several approaches to constructing counterfactuals and applying causal inference exist, but two are particularly prominent: the potential outcomes approach and the structural approach. The potential outcomes approach, also known as the Neyman-Rubin causal model, was developed by @Neyman_et_al_1990 and @Rubin_1974. In contrast, the structural approach was pioneered by @Wright_1921, and later extended by Pearl [@Pearl_2009; @Pearl_et_al_2016]. Both approaches employ rigorous mathematical notation to characterize causal inference, but they do so in different ways [@Neal_2020]. The potential outcomes approach relies on counterfactual notation, whereas the structural approach utilizes the do-operator and Structural Causal Models [SCM, @Pearl_2009; @Pearl_et_al_2016]. Despite these differences, both approaches provide methods for using experimental and observational data to estimate causal effects [@Pearl_2010].
+<!-- 3. How do we apply causal inference and counterfactuals? -->
+Several approaches to causal inference and counterfactuals exist, but two are particularly prominent: the potential outcomes approach, also known as the Neyman-Rubin causal model [@Neyman_et_al_1923; @Rubin_1974], and the structural approach [@Wright_1921; @Pearl_2009; @Pearl_et_al_2016]. Both approaches employ rigorous mathematical notation to characterize causal inference, but they do so in different ways [@Neal_2020]. The potential outcomes approach relies on counterfactual notation, whereas the structural approach utilizes the do-operator and structural causal models [SCM, @Pearl_2009; @Pearl_et_al_2016]. Despite these differences, both notations can be expressed in terms of the other, and both approaches provide methods for using experimental and observational data to estimate causal effects [@Pearl_2010]. 
 
-<!-- 3. But which approach are we going to use? -->
-However, the structural approach offers a significant advantage over the potential outcomes approach by enabling the graphical representation of systems through directed acyclic graphs [DAG, @Gross_et_al_2018; @Neal_2020]. These graphical representations provides a transparent depiction of a system's complexity, revealing its underlying assumptions and the plausible mechanisms generating the system's outcome. This capability aligns well with the aims of this study. Consequently, the structural approach will be the primary method used to address the study's research goal.
+<!-- 4. But approach are we going to use? -->
+However, the structural approach offers a key advantage over the potential outcomes approach: it enables the graphical representation of systems through directed acyclic graphs [DAG, @Gross_et_al_2018; @Neal_2020]. These graphical representations provide a transparent depiction of a system’s complexity, revealing its underlying assumptions and the plausible causal mechanisms responsible for generating the system’s outcome. Ultimately, DAGs play the important role of effectively conveying the assumed causal structure of the system, and also determine wich variables should be controlled for to be able to estimate causal effects. Consequently, the structural approach will be the primary method used to address one of the study’s research goals.
+
+
+## DAGs, SCMs, and the flow of association and causation {#sec-background-dag}
+
+<!-- 1. What are DAGs? and how are they represented? -->
+As previously mentioned, the structural approach employs Directed Acyclic Graphs (DAGs) for the graphical representation of systems. A *graph* consists of nodes connected by edges [@Gross_et_al_2018]. In a *directed graph*, edges extend from a *parent* node to a *child* node, with arrows indicating the direction of causal influence. In directed *acyclic* graphs, the direction of causal influences does not loop back on themselves, meaning the graph contains no cycles [@Neal_2020, @McElreath_2020]. 
+
+
+<!-- 2. What does a DAG imply? -->
+<!-- and utilizes the do-operator and Structural Causal Models (SCMs) for mathematical notation in causal inference. -->
+<!-- Structural Causal Model (SCM) -->
+<!-- Causal models are mathematical models representing causal relationships within an individual system or population. They facilitate inferences about causal relationships from statistical data. They can teach us a good deal about the epistemology of causation, and about the relationship between causation and probability. They have also been applied to topics of interest to philosophers, such as the logic of counterfactuals, decision theory, and the analysis of actual causation. -->
+
+
+<!-- 3. But what are those mysterious functions?, and how do they become statistical quantities? -->
+![ The flow of association and causation in graphs. Extracted from @Neal_2020 [pp. 31] ](images/figures/ACflow.png){#fig-ACflow fig-align="center" width=100%}
+
+
+<!-- 4. What is the local markov assumption? and where does it lead? -->
+
+<!-- 5. What is the minimality assumption? and where does it lead? -->
+
+
+<!-- 6. What is the causal edges assumption? and where does it lead? -->
+
+<!-- 7. putting it all together -->
+
+
+<!-- 8. What are the DAG's building blocks?, and what do they imply? (SCMs) -->
+
+
+
+## But where does it all fit? {#sec-background-where}
 
 <!-- 4. But how do we move from targets of inference to estimates -->
 
@@ -182,63 +216,27 @@ However, the structural approach offers a significant advantage over the potenti
 
 <!-- In this context, identification refers to the process of moving from a (causal) *estimand* to an equivalent *statistical estimand*, and estimation refers to the process of moving from a *statistical estimand* to an *estimate*. -->
 
-
 ![ Identification-Estimation flowchart. Extracted from @Neal_2020 [pp. 32] ](images/figures/IEflow.png){#fig-IEflow fig-align="center" width=40%}
 
 
-## Graphs, DAGs and SCMs {#sec-prelim-graphs}
 
 
 
 
 
 
-<!-- why to use it? -->
-
-<!-- Causal models as a tool for causal inference -->
-
-<!-- DAGs as a graphical representation of an SCM -->
-
-<!-- Terms and definitions -->
-
-<!-- the four components of DAGs -->
 
 
 
-<!-- A *scientific (causal) model* describe the causal assumptions and mechanisms underlying a system, and facilitate inferences about causal relationships from data [@Hitchcock_2023]. -->
-
-<!-- To aid in the translation and visualization of the assumption underlying the DCJ procedure, Directed Acyclic Graphs (DAG) and Structural Causal Models (SCM) [@Pearl_2009; @Pearl_et_al_2016; @Cinelli_et_al_2021] are employed. DAG are [(...)]{style="color:red;"}. While SCM are [(...)]{style="color:red;"}.  -->
-
-
-<!-- Directed Acyclic Graph (DAG) -->
-
-<!-- Plays an important role in effectively conveying an assumed -->
-<!-- causal model and determining which variables that should be controlled for in estimation of -->
-<!-- causal effects. -->
-
-<!-- Graph means it is nodes and con- -->
-<!-- nections. Directed means the connections have arrows that indicate directions of causal in- -->
-<!-- fluence. And acyclic means that causes do not eventually flow back on themselves. A DAG -->
-<!-- is a way of describing qualitative causal relationships among variables. -->
-
-
-
-<!-- Structural Causal Model (SCM) -->
-<!-- Causal models are mathematical models representing causal relationships within an individual system or population. They facilitate inferences about causal relationships from statistical data. They can teach us a good deal about the epistemology of causation, and about the relationship between causation and probability. They have also been applied to topics of interest to philosophers, such as the logic of counterfactuals, decision theory, and the analysis of actual causation. -->
-
-
-<!-- the four components of DAGs in SCM notation -->
-
-
-
-## The flow of association and causation {#sec-prelim-flow}
-
-![ The flow of association and causation in graphs. Extracted from @Neal_2020 [pp. 31] ](images/figures/ACflow.png){#fig-ACflow fig-align="center" width=100%}
 
 
 # Theoretical framework {#sec-theory}
 
 ## A scientific model for the DCJ {#sec-theory-scientific}
+
+
+<!-- A *scientific (causal) model* describe the causal assumptions and mechanisms underlying a system, and facilitate inferences about causal relationships from data [@Hitchcock_2023]. -->
+
 
 ![ DCJ causal diagram, simplified description ](images/figures/SciModel_simp1.png){#fig-SciModel_simp1 fig-align="center" width=80%}
 
@@ -363,7 +361,9 @@ But now can we see other scenarios than just those 5 cases?
 
 **Funding:** The project was founded through the Research Fund of the University of Antwerp (BOF).
 
-**Conflict of interests:** The authors declare no conflict of interest.
+**Financial interests:** The authors have no relevant financial interest to disclose.
+
+**Non-financial interests:** Author XX serve on advisory broad of Company Y but receives no compensation this role.
 
 **Ethics approval:** The University of Antwerp Research Ethics Committee has confirmed that no ethical approval is required.
 
@@ -371,7 +371,7 @@ But now can we see other scenarios than just those 5 cases?
 
 **Consent for publication:** All authors have read and agreed to the published version of the manuscript.
 
-**Availability of data and materials:** No data was utilized in this study
+**Availability of data and materials:** No data was utilized in this study.
 
 **Code availability:** All the code utilized in this research is available in the digital document located at: [https://jriveraespejo.github.io/paper2_manuscript/](https://jriveraespejo.github.io/paper2_manuscript/).  
 
@@ -386,8 +386,6 @@ But now can we see other scenarios than just those 5 cases?
 # Appendix {#sec-appendix}
 
 ## Additional definitions {#sec-appA}
-
-**Counterfactual:**  
 
 
 ## Why do we need to estimate judges' abilities? {#sec-appB}
