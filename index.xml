@@ -200,10 +200,10 @@ sciences</institution>
 <corresp id="cor-1">JoseManuel.RiveraEspejo@uantwerpen.be</corresp>
 </author-notes>
 
-<pub-date date-type="pub" publication-format="electronic" iso-8601-date="2024-07-23">
+<pub-date date-type="pub" publication-format="electronic" iso-8601-date="2024-07-24">
 <year>2024</year>
 <month>7</month>
-<day>23</day>
+<day>24</day>
 </pub-date>
 
 
@@ -371,7 +371,7 @@ the University of Antwerp (BOF).</funding-statement>
   provided a transparent depiction of the DCJ system and the mechanisms
   generating the DCJ outcome. This study aims to fill this gap by
   representing DCJ within the causal inference framework. Specifically,
-  using the <italic>structural approach</italic> to causal inference
+  using the structural approach to causal inference
   (<xref alt="Wright 1927" rid="ref-Wright_1921" ref-type="bibr">Wright
   1927</xref>;
   <xref alt="Pearl 2009" rid="ref-Pearl_2009" ref-type="bibr">Pearl
@@ -393,9 +393,9 @@ the University of Antwerp (BOF).</funding-statement>
   researchers and analysts involved in education and assessment
   procedures who implement or design DCJ experiments.</p>
 </sec>
-<sec id="sec-prelim">
-  <title>Preliminaries</title>
-  <sec id="sec-prelim-structural">
+<sec id="sec-background">
+  <title>Theoretical background</title>
+  <sec id="sec-background-structural">
     <title>The structural approach to causal inference</title>
     <p>In statistics, <italic>causal inference</italic> refers to the
     process of identifying the causes of a phenomenon and estimating
@@ -408,31 +408,36 @@ the University of Antwerp (BOF).</funding-statement>
     inference provides a coherent mathematical representation for
     analyzing causes and counterfactuals
     (<xref alt="Pearl 2009" rid="ref-Pearl_2009" ref-type="bibr">Pearl
-    2009</xref>). Counterfactuals reflect scenarios <italic>contrary to
-    fact</italic>, where alternative <italic>potential</italic> outcomes
-    have not been observed and cannot be observed
+    2009</xref>).</p>
+    <p>According to Pearl and Mackenzie
+    (<xref alt="2018" rid="ref-Pearl_et_al_2018" ref-type="bibr">2018</xref>),
+    counterfactuals occupy the highest level of cognitive abstraction in
+    the ladder of causation, followed by intervention and association,
+    and form the foundation of causal inference. Counterfactuals
+    represent scenarios <italic>contrary to fact</italic>, where
+    alternative <italic>potential</italic> outcomes resulting from a
+    cause are neither observed nor observable
     (<xref alt="Neal 2020" rid="ref-Neal_2020" ref-type="bibr">Neal
     2020</xref>;
     <xref alt="Counterfactual 2024" rid="ref-Counterfactual_2024" ref-type="bibr">Counterfactual
-    2024</xref>). Using counterfactuals, researchers can construct a
-    theory of the world that explains why specific causes have specific
-    effects, and what happens in the absence of those causes.
-    Consequently, counterfactuals represent the highest level of
-    abstraction in causal inference
+    2024</xref>). Nevertheless, despite their abstract nature,
+    counterfactuals enable the development of a <italic>theory of the
+    world</italic> that explains why specific causes have specific
+    effects and what occurs in the absence of those causes
     (<xref alt="Pearl and Mackenzie 2018" rid="ref-Pearl_et_al_2018" ref-type="bibr">Pearl
-    and Mackenzie 2018</xref>).</p>
-    <p>Several approaches to constructing counterfactuals and applying
-    causal inference exist, but two are particularly prominent: the
-    potential outcomes approach and the structural approach. The
-    potential outcomes approach, also known as the Neyman-Rubin causal
-    model, was developed by Neyman, Dabrowska, and Speed
-    (<xref alt="1990" rid="ref-Neyman_et_al_1990" ref-type="bibr">1990</xref>)
-    and Rubin
-    (<xref alt="1974" rid="ref-Rubin_1974" ref-type="bibr">1974</xref>).
-    In contrast, the structural approach was pioneered by Wright
-    (<xref alt="1927" rid="ref-Wright_1921" ref-type="bibr">1927</xref>),
-    and later extended by Pearl
-    (<xref alt="Pearl 2009" rid="ref-Pearl_2009" ref-type="bibr">Pearl
+    and Mackenzie 2018</xref>). Counterfactuals achieves this by
+    translating causal statements to statements about “what would have
+    happened under different circumstances.”</p>
+    <p>Several approaches to causal inference and counterfactuals exist,
+    but two are particularly prominent: the potential outcomes approach,
+    also known as the Neyman-Rubin causal model
+    (<xref alt="Neyman 1923" rid="ref-Neyman_et_al_1923" ref-type="bibr">Neyman
+    1923</xref>;
+    <xref alt="Rubin 1974" rid="ref-Rubin_1974" ref-type="bibr">Rubin
+    1974</xref>), and the structural approach
+    (<xref alt="Wright 1927" rid="ref-Wright_1921" ref-type="bibr">Wright
+    1927</xref>;
+    <xref alt="Pearl 2009" rid="ref-Pearl_2009" ref-type="bibr">Pearl
     2009</xref>;
     <xref alt="Pearl, Glymour, and Jewell 2016" rid="ref-Pearl_et_al_2016" ref-type="bibr">Pearl,
     Glymour, and Jewell 2016</xref>). Both approaches employ rigorous
@@ -441,46 +446,61 @@ the University of Antwerp (BOF).</funding-statement>
     (<xref alt="Neal 2020" rid="ref-Neal_2020" ref-type="bibr">Neal
     2020</xref>). The potential outcomes approach relies on
     counterfactual notation, whereas the structural approach utilizes
-    the do-operator and Structural Causal Models (SCM,
+    the do-operator and structural causal models (SCM,
     <xref alt="Pearl 2009" rid="ref-Pearl_2009" ref-type="bibr">Pearl
     2009</xref>;
     <xref alt="Pearl, Glymour, and Jewell 2016" rid="ref-Pearl_et_al_2016" ref-type="bibr">Pearl,
     Glymour, and Jewell 2016</xref>). Despite these differences, both
+    notations can be expressed in terms of the other, and both
     approaches provide methods for using experimental and observational
     data to estimate causal effects
     (<xref alt="Pearl 2010" rid="ref-Pearl_2010" ref-type="bibr">Pearl
     2010</xref>).</p>
-    <p>However, the structural approach offers a significant advantage
-    over the potential outcomes approach by enabling the graphical
-    representation of systems through directed acyclic graphs (DAG,
+    <p>However, the structural approach offers a key advantage over the
+    potential outcomes approach: it enables the graphical representation
+    of systems through directed acyclic graphs (DAG,
     <xref alt="Gross, Yellen, and Anderson 2018" rid="ref-Gross_et_al_2018" ref-type="bibr">Gross,
     Yellen, and Anderson 2018</xref>;
     <xref alt="Neal 2020" rid="ref-Neal_2020" ref-type="bibr">Neal
-    2020</xref>). These graphical representations provides a transparent
+    2020</xref>). These graphical representations provide a transparent
     depiction of a system’s complexity, revealing its underlying
-    assumptions and the plausible mechanisms generating the system’s
-    outcome. This capability aligns well with the aims of this study.
-    Consequently, the structural approach will be the primary method
-    used to address the study’s research goal.</p>
-    <fig id="fig-IEflow">
-      <caption><p>Figure 1: Identification-Estimation flowchart.
-      Extracted from Neal
-      (<xref alt="2020, 32" rid="ref-Neal_2020" ref-type="bibr">2020,
-      32</xref>)</p></caption>
-      <graphic mimetype="image" mime-subtype="png" xlink:href="images/figures/IEflow.png" />
-    </fig>
+    assumptions and the plausible causal mechanisms responsible for
+    generating the system’s outcome. Ultimately, DAGs play the important
+    role of effectively conveying the assumed causal structure of the
+    system, and also determine wich variables should be controlled for
+    to be able to estimate causal effects. Consequently, the structural
+    approach will be the primary method used to address one of the
+    study’s research goals.</p>
   </sec>
-  <sec id="sec-prelim-graphs">
-    <title>Graphs, DAGs and SCMs</title>
-  </sec>
-  <sec id="sec-prelim-flow">
-    <title>The flow of association and causation</title>
+  <sec id="sec-background-dag">
+    <title>DAGs, SCMs, and the flow of association and causation</title>
+    <p>As previously mentioned, the structural approach employs Directed
+    Acyclic Graphs (DAGs) for the graphical representation of systems. A
+    <italic>graph</italic> consists of nodes connected by edges
+    (<xref alt="Gross, Yellen, and Anderson 2018" rid="ref-Gross_et_al_2018" ref-type="bibr">Gross,
+    Yellen, and Anderson 2018</xref>). In a <italic>directed
+    graph</italic>, edges extend from a <italic>parent</italic> node to
+    a <italic>child</italic> node, with arrows indicating the direction
+    of causal influence. In directed <italic>acyclic</italic> graphs,
+    the direction of causal influences does not loop back on themselves,
+    meaning the graph contains no cycles McElreath
+    (<xref alt="2020" rid="ref-McElreath_2020" ref-type="bibr">2020</xref>).</p>
     <fig id="fig-ACflow">
-      <caption><p>Figure 2: The flow of association and causation in
+      <caption><p>Figure 1: The flow of association and causation in
       graphs. Extracted from Neal
       (<xref alt="2020, 31" rid="ref-Neal_2020" ref-type="bibr">2020,
       31</xref>)</p></caption>
       <graphic mimetype="image" mime-subtype="png" xlink:href="images/figures/ACflow.png" />
+    </fig>
+  </sec>
+  <sec id="sec-background-where">
+    <title>But where does it all fit?</title>
+    <fig id="fig-IEflow">
+      <caption><p>Figure 2: Identification-Estimation flowchart.
+      Extracted from Neal
+      (<xref alt="2020, 32" rid="ref-Neal_2020" ref-type="bibr">2020,
+      32</xref>)</p></caption>
+      <graphic mimetype="image" mime-subtype="png" xlink:href="images/figures/IEflow.png" />
     </fig>
   </sec>
 </sec>
@@ -744,8 +764,10 @@ the University of Antwerp (BOF).</funding-statement>
   <title>Declarations</title>
   <p><bold>Funding:</bold> The project was founded through the Research
   Fund of the University of Antwerp (BOF).</p>
-  <p><bold>Conflict of interests:</bold> The authors declare no conflict
-  of interest.</p>
+  <p><bold>Financial interests:</bold> The authors have no relevant
+  financial interest to disclose.</p>
+  <p><bold>Non-financial interests:</bold> Author XX serve on advisory
+  broad of Company Y but receives no compensation this role.</p>
   <p><bold>Ethics approval:</bold> The University of Antwerp Research
   Ethics Committee has confirmed that no ethical approval is
   required.</p>
@@ -753,7 +775,7 @@ the University of Antwerp (BOF).</funding-statement>
   <p><bold>Consent for publication:</bold> All authors have read and
   agreed to the published version of the manuscript.</p>
   <p><bold>Availability of data and materials:</bold> No data was
-  utilized in this study</p>
+  utilized in this study.</p>
   <p><bold>Code availability:</bold> All the code utilized in this
   research is available in the digital document located at:
   <ext-link ext-link-type="uri" xlink:href="https://jriveraespejo.github.io/paper2_manuscript/">https://jriveraespejo.github.io/paper2_manuscript/</ext-link>.</p>
@@ -776,7 +798,6 @@ the University of Antwerp (BOF).</funding-statement>
   <title>Appendix</title>
   <sec id="sec-appA">
     <title>Additional definitions</title>
-    <p><bold>Counterfactual:</bold></p>
   </sec>
   <sec id="sec-appB">
     <title>Why do we need to estimate judges’ abilities?</title>
@@ -799,6 +820,23 @@ the University of Antwerp (BOF).</funding-statement>
           <pub-id pub-id-type="doi"></pub-id>
           <fpage>557</fpage>
           <lpage>585</lpage>
+        </element-citation>
+      </ref>
+      <ref id="ref-Neyman_et_al_1923">
+        <element-citation publication-type="article-journal">
+          <person-group person-group-type="author">
+            <name><surname>Neyman</surname><given-names>J.</given-names></name>
+          </person-group>
+          <article-title>On the application of probability theory to agricultural experiments. Essay on principles. Section 9</article-title>
+          <source>Statistical Science</source>
+          <publisher-name>Institute of Mathematical Statistics</publisher-name>
+          <year iso-8601-date="1923">1923</year>
+          <volume>5</volume>
+          <issue>4</issue>
+          <uri>http://www.jstor.org/stable/2245382</uri>
+          <pub-id pub-id-type="doi"></pub-id>
+          <fpage>465</fpage>
+          <lpage>472</lpage>
         </element-citation>
       </ref>
       <ref id="ref-Thurstone_1927">
@@ -896,25 +934,6 @@ the University of Antwerp (BOF).</funding-statement>
           <pub-id pub-id-type="doi">10.1016/0022-2496(86)90034-9</pub-id>
           <fpage>306</fpage>
           <lpage>316</lpage>
-        </element-citation>
-      </ref>
-      <ref id="ref-Neyman_et_al_1990">
-        <element-citation publication-type="article-journal">
-          <person-group person-group-type="author">
-            <name><surname>Neyman</surname><given-names>J.</given-names></name>
-            <name><surname>Dabrowska</surname><given-names>D.</given-names></name>
-            <name><surname>Speed</surname><given-names>T.</given-names></name>
-          </person-group>
-          <article-title>On the application of probability theory to agricultural experiments. Essay on principles. Section 9</article-title>
-          <source>Statistical Science</source>
-          <publisher-name>Institute of Mathematical Statistics</publisher-name>
-          <year iso-8601-date="1990">1990</year>
-          <volume>5</volume>
-          <issue>4</issue>
-          <uri>http://www.jstor.org/stable/2245382</uri>
-          <pub-id pub-id-type="doi"></pub-id>
-          <fpage>465</fpage>
-          <lpage>472</lpage>
         </element-citation>
       </ref>
       <ref id="ref-Agresti_1992">
@@ -1231,6 +1250,19 @@ the University of Antwerp (BOF).</funding-statement>
           <isbn>9780429425134</isbn>
           <uri></uri>
           <pub-id pub-id-type="doi">https://doi.org/10.1201/9780429425134 </pub-id>
+        </element-citation>
+      </ref>
+      <ref id="ref-McElreath_2020">
+        <element-citation publication-type="book">
+          <person-group person-group-type="author">
+            <name><surname>McElreath</surname><given-names>R.</given-names></name>
+          </person-group>
+          <source>Statistical rethinking: A bayesian course with examples in r and STAN</source>
+          <publisher-name>Chapman; Hall/CRC</publisher-name>
+          <year iso-8601-date="2020">2020</year>
+          <isbn>9780367139919</isbn>
+          <uri></uri>
+          <pub-id pub-id-type="doi"></pub-id>
         </element-citation>
       </ref>
       <ref id="ref-Lesterhuis_2018">

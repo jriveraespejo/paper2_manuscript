@@ -285,15 +285,15 @@ factors on the method's reliability
 none, to the best of the authors' knowledge, have provided a transparent
 depiction of the DCJ system and the mechanisms generating the DCJ
 outcome. This study aims to fill this gap by representing DCJ within the
-causal inference framework. Specifically, using the \emph{structural
-approach} to causal inference
-\citep{Wright_1921, Pearl_2009, Pearl_et_al_2016}, the study aims to
-construct a scientific model. This model will elucidate the underlying
-assumptions of the DCJ system, providing plausible mechanisms for how
-the DCJ outcome is generated. Next, using a minimal set of assumptions,
-the study will translate the scientific model into a probabilistic
-statistical model. This model will produce statistical estimates to draw
-inferences about plausible causal relationships within the DCJ system.
+causal inference framework. Specifically, using the structural approach
+to causal inference \citep{Wright_1921, Pearl_2009, Pearl_et_al_2016},
+the study aims to construct a scientific model. This model will
+elucidate the underlying assumptions of the DCJ system, providing
+plausible mechanisms for how the DCJ outcome is generated. Next, using a
+minimal set of assumptions, the study will translate the scientific
+model into a probabilistic statistical model. This model will produce
+statistical estimates to draw inferences about plausible causal
+relationships within the DCJ system.
 
 Ultimately, this research aims to extend the law of comparative judgment
 initially proposed by \citet{Thurstone_1927} and provide a sound
@@ -302,10 +302,10 @@ Consequently, this research holds significance for researchers and
 analysts involved in education and assessment procedures who implement
 or design DCJ experiments.
 
-\section{Preliminaries}\label{sec-prelim}
+\section{Theoretical background}\label{sec-background}
 
 \subsection{The structural approach to causal
-inference}\label{sec-prelim-structural}
+inference}\label{sec-background-structural}
 
 In statistics, \emph{causal inference} refers to the process of
 identifying the causes of a phenomenon and estimating their effects
@@ -313,57 +313,60 @@ using data \citep{Shaughnessy_et_al_2010, Neal_2020}. Unlike classical
 statistical modeling, which focuses solely on summarizing data and
 inferring associations, causal inference provides a coherent
 mathematical representation for analyzing causes and counterfactuals
-\citep{Pearl_2009}. Counterfactuals reflect scenarios \emph{contrary to
-fact}, where alternative \emph{potential} outcomes have not been
-observed and cannot be observed \citep{Neal_2020, Counterfactual_2024}.
-Using counterfactuals, researchers can construct a theory of the world
-that explains why specific causes have specific effects, and what
-happens in the absence of those causes. Consequently, counterfactuals
-represent the highest level of abstraction in causal inference
-\citep{Pearl_et_al_2018}.
+\citep{Pearl_2009}.
 
-Several approaches to constructing counterfactuals and applying causal
-inference exist, but two are particularly prominent: the potential
-outcomes approach and the structural approach. The potential outcomes
-approach, also known as the Neyman-Rubin causal model, was developed by
-\citet{Neyman_et_al_1990} and \citet{Rubin_1974}. In contrast, the
-structural approach was pioneered by \citet{Wright_1921}, and later
-extended by Pearl \citep{Pearl_2009, Pearl_et_al_2016}. Both approaches
+According to \citet{Pearl_et_al_2018}, counterfactuals occupy the
+highest level of cognitive abstraction in the ladder of causation,
+followed by intervention and association, and form the foundation of
+causal inference. Counterfactuals represent scenarios \emph{contrary to
+fact}, where alternative \emph{potential} outcomes resulting from a
+cause are neither observed nor observable
+\citep{Neal_2020, Counterfactual_2024}. Nevertheless, despite their
+abstract nature, counterfactuals enable the development of a
+\emph{theory of the world} that explains why specific causes have
+specific effects and what occurs in the absence of those causes
+\citep{Pearl_et_al_2018}. Counterfactuals achieves this by translating
+causal statements to statements about ``what would have happened under
+different circumstances.''
+
+Several approaches to causal inference and counterfactuals exist, but
+two are particularly prominent: the potential outcomes approach, also
+known as the Neyman-Rubin causal model
+\citep{Neyman_et_al_1923, Rubin_1974}, and the structural approach
+\citep{Wright_1921, Pearl_2009, Pearl_et_al_2016}. Both approaches
 employ rigorous mathematical notation to characterize causal inference,
 but they do so in different ways \citep{Neal_2020}. The potential
 outcomes approach relies on counterfactual notation, whereas the
-structural approach utilizes the do-operator and Structural Causal
-Models \citep[SCM,][]{Pearl_2009, Pearl_et_al_2016}. Despite these
-differences, both approaches provide methods for using experimental and
-observational data to estimate causal effects \citep{Pearl_2010}.
+structural approach utilizes the do-operator and structural causal
+models \citep[SCM,][]{Pearl_2009, Pearl_et_al_2016}. Despite these
+differences, both notations can be expressed in terms of the other, and
+both approaches provide methods for using experimental and observational
+data to estimate causal effects \citep{Pearl_2010}.
 
-However, the structural approach offers a significant advantage over the
-potential outcomes approach by enabling the graphical representation of
+However, the structural approach offers a key advantage over the
+potential outcomes approach: it enables the graphical representation of
 systems through directed acyclic graphs
 \citep[DAG,][]{Gross_et_al_2018, Neal_2020}. These graphical
-representations provides a transparent depiction of a system's
+representations provide a transparent depiction of a system's
 complexity, revealing its underlying assumptions and the plausible
-mechanisms generating the system's outcome. This capability aligns well
-with the aims of this study. Consequently, the structural approach will
-be the primary method used to address the study's research goal.
+causal mechanisms responsible for generating the system's outcome.
+Ultimately, DAGs play the important role of effectively conveying the
+assumed causal structure of the system, and also determine wich
+variables should be controlled for to be able to estimate causal
+effects. Consequently, the structural approach will be the primary
+method used to address one of the study's research goals.
 
-\begin{figure}
+\subsection{DAGs, SCMs, and the flow of association and
+causation}\label{sec-background-dag}
 
-\centering{
-
-\includegraphics[width=0.4\textwidth,height=\textheight]{images/figures/IEflow.png}
-
-}
-
-\caption{\label{fig-IEflow}Identification-Estimation flowchart.
-Extracted from \citet[32]{Neal_2020}}
-
-\end{figure}%
-
-\subsection{Graphs, DAGs and SCMs}\label{sec-prelim-graphs}
-
-\subsection{The flow of association and
-causation}\label{sec-prelim-flow}
+As previously mentioned, the structural approach employs Directed
+Acyclic Graphs (DAGs) for the graphical representation of systems. A
+\emph{graph} consists of nodes connected by edges
+\citep{Gross_et_al_2018}. In a \emph{directed graph}, edges extend from
+a \emph{parent} node to a \emph{child} node, with arrows indicating the
+direction of causal influence. In directed \emph{acyclic} graphs, the
+direction of causal influences does not loop back on themselves, meaning
+the graph contains no cycles \citep[@McElreath\_2020]{Neal_2020}.
 
 \begin{figure}
 
@@ -375,6 +378,21 @@ causation}\label{sec-prelim-flow}
 
 \caption{\label{fig-ACflow}The flow of association and causation in
 graphs. Extracted from \citet[31]{Neal_2020}}
+
+\end{figure}%
+
+\subsection{But where does it all fit?}\label{sec-background-where}
+
+\begin{figure}
+
+\centering{
+
+\includegraphics[width=0.4\textwidth,height=\textheight]{images/figures/IEflow.png}
+
+}
+
+\caption{\label{fig-IEflow}Identification-Estimation flowchart.
+Extracted from \citet[32]{Neal_2020}}
 
 \end{figure}%
 
@@ -577,8 +595,11 @@ research}\label{sec-discuss-limitations}
 \textbf{Funding:} The project was founded through the Research Fund of
 the University of Antwerp (BOF).
 
-\textbf{Conflict of interests:} The authors declare no conflict of
-interest.
+\textbf{Financial interests:} The authors have no relevant financial
+interest to disclose.
+
+\textbf{Non-financial interests:} Author XX serve on advisory broad of
+Company Y but receives no compensation this role.
 
 \textbf{Ethics approval:} The University of Antwerp Research Ethics
 Committee has confirmed that no ethical approval is required.
@@ -589,7 +610,7 @@ Committee has confirmed that no ethical approval is required.
 the published version of the manuscript.
 
 \textbf{Availability of data and materials:} No data was utilized in
-this study
+this study.
 
 \textbf{Code availability:} All the code utilized in this research is
 available in the digital document located at:
@@ -610,8 +631,6 @@ S.G. and S.DM.; \emph{Project administration:} S.G. and S.DM.;
 \section{Appendix}\label{sec-appendix}
 
 \subsection{Additional definitions}\label{sec-appA}
-
-\textbf{Counterfactual:}
 
 \subsection{Why do we need to estimate judges'
 abilities?}\label{sec-appB}
