@@ -199,17 +199,17 @@ trait. DCJ has proven effective and reliable across various fields
 However, despite the method's widespread use, existing literature lacks
 a clear explanation of the complexities and assumptions underpinning the
 DCJ system, as well as the plausible mechanisms through which DCJ data
-are generated. This study addresses these issues by representing DCJ
-within the framework of causal inference. Specifically, utilizing a
-structural approach to causal inference, the study develops a scientific
-model to clarify the causal assumptions and mechanisms inherent in the
-DCJ system. It then translates this model into a probabilistic
-statistical framework to estimate statistical relationships and infer
-causal connections within the system. This research provides a robust
-probabilistic foundation for the statistical analysis of DCJ data,
-building upon Thurstone's law of comparative judgment
-\citeyearpar{Thurstone_1927}. Its findings offer valuable insights for
-researchers and analysts designing and implementing DCJ experiments.
+could be generated. This study addresses these issues by representing
+DCJ within the framework of causal inference. Specifically, utilizing
+the structural approach, the study develops a scientific model to
+clarify the causal assumptions and mechanisms inherent in the DCJ
+system. It then translates this model into a probabilistic statistical
+framework to estimate statistical relationships and infer causal effects
+within the system. This research provides a robust probabilistic
+foundation for the statistical analysis of DCJ data, building upon
+Thurstone's law of comparative judgment \citeyearpar{Thurstone_1927}.
+Its findings offer valuable insights for researchers and analysts
+designing and implementing DCJ experiments.
 \end{abstract}
 
 
@@ -255,7 +255,7 @@ measurement and evaluation, characterized by its reliability and
 validity \citep{Lesterhuis_2018, vanDaal_2020, Marshall_et_al_2020}.
 Nevertheless, despite the method's widespread use, existing literature
 lacks a clear representation of the plausible mechanisms through which
-DCJ data are generated. Particularly, there is no depiction of the
+DCJ data could be generated. Particularly, there is no depiction of the
 complexity and the assumptions underpinning the DCJ system, nor how
 different assessment factors can potentially influence the observed DCJ
 outcome.
@@ -281,15 +281,14 @@ factors on the method's reliability
 none, to the best of the authors' knowledge, have provided a transparent
 depiction of the DCJ system and the mechanisms generating the DCJ
 outcome. This study aims to fill this gap by representing DCJ within the
-framework of causal inference. Specifically, utilizing a structural
-approach to causal inference
-\citep{Wright_1921, Pearl_2009, Pearl_et_al_2016}, the study develops a
-scientific model to clarify the causal assumptions and mechanisms
-inherent in the DCJ system. Next, using a minimal set of assumptions,
-the study translates the scientific model into a probabilistic
-statistical model. This model aims to produce statistical estimates to
-draw inferences about plausible causal relationships within the DCJ
-system.
+framework of causal inference. Specifically, utilizing the structural
+approach \citep{Wright_1921, Pearl_2009, Pearl_et_al_2016}, the study
+develops a scientific model to clarify the causal assumptions and
+mechanisms inherent in the DCJ system. Next, using a minimal set of
+assumptions, the study translates the scientific model into a
+probabilistic statistical model. This model aims to produce statistical
+estimates to draw inferences about plausible causal relationships within
+the DCJ system.
 
 Ultimately, this research provides a robust probabilistic foundation for
 the statistical analysis of DCJ data, building upon Thurstone's law of
@@ -310,16 +309,15 @@ inferring associations, causal inference provides a coherent
 mathematical notation for analyzing causes and counterfactuals
 \citep{Pearl_2009}.
 
-According to \citet{Pearl_et_al_2018}, counterfactuals occupy the
-highest level of cognitive abstraction in the ladder of causation,
-followed by intervention and association, and form the foundation of
-causal inference. Counterfactuals represent scenarios \emph{contrary to
-fact}, where alternative \emph{potential} outcomes resulting from a
-cause are neither observed nor observable
-\citep{Neal_2020, Counterfactual_2024}. Nevertheless, despite their
-abstract nature, counterfactuals enable the development of a
-\emph{theory of the world} that explains why specific causes have
-specific effects and what occurs in their absence
+Counterfactuals represent scenarios \emph{contrary to fact}, where
+alternative \emph{potential} outcomes resulting from a cause are neither
+observed nor observable \citep{Neal_2020, Counterfactual_2024}.
+According to \citet{Pearl_et_al_2018}, counterfactuals form the
+foundation of causal inference and occupy the highest level of cognitive
+abstraction in the ladder of causation, followed by intervention and
+association. Despite this abstract nature, counterfactuals enable the
+development of a \emph{theory of the world} that explains why specific
+causes have specific effects and what occurs in their absence
 \citep{Pearl_et_al_2018}. They achieve this by translating causal
 statements into counterfactual statements, that is, statements about
 ``what would have happened in the world under different circumstances.''
@@ -332,38 +330,24 @@ known as the Neyman-Rubin causal model
 employ rigorous mathematical notation to characterize causal inference,
 but they do so in different ways \citep{Neal_2020}. The potential
 outcomes approach relies on counterfactual notation, whereas the
-structural approach utilizes the do-operator and structural causal
-models \citep[SCM,][]{Pearl_2009, Pearl_et_al_2016}. Despite these
-differences, both notations can be expressed in terms of the other, and
-both approaches provide methods for using experimental and observational
-data to estimate causal effects \citep{Pearl_2010}.
+structural approach employs the do-operator and structural causal models
+\citep[SCM,][]{Pearl_2009, Pearl_et_al_2016}. Despite these differences,
+both notations can be expressed in terms of the other, and both
+approaches provide methods for using experimental and observational data
+to estimate causal effects \citep{Pearl_2010}.
 
-However, the structural approach offers a key advantage over the
-potential outcomes approach: it enables the graphical representation of
-systems through directed acyclic graphs
+Nevertheless, the structural approach offers an additional key advantage
+over the potential outcomes approach: it enables the graphical
+representation of any system through directed acyclic graphs
 \citep[DAG,][]{Gross_et_al_2018, Neal_2020}. DAGs are heuristics that
-effectively convey the assumed causal structure of a system. They do not
-represent detailed statistical models but allow researchers to deduce
-which statistical models can provide valid causal inferences, assuming
-the causal structure depicted in the DAG is accurate
+can effectively convey the assumed causal structure of a system. They do
+not represent detailed statistical models but allow researchers to
+deduce which statistical models can provide valid causal inferences,
+assuming the causal structure depicted in the DAG is accurate
 \citep{McElreath_2020}.
 
 \subsection{DAGs, SCMs, and the flow of association and
 causation}\label{sec-background-dag}
-
-Graph theory is the branch of mathematics focused on the study of
-graphs. Graphs are mathematical structures used to model pairwise
-relations between objects \citep{Gross_et_al_2018}. While graph theory
-covers a wide array of topics, the field of causal inference,
-particularly its structural approach, has incorporated some of its
-concepts to represent causes and counterfactuals formally and
-transparently. A causal graph, or Directed Acyclic Graph (DAG), as its
-name suggest, is a directed graph without cycles. A \emph{graph} is a
-collection of nodes connected by edges. In a \emph{directed graph},
-edges extend from a node to another node, with arrows indicating the
-direction of causal influence. In a directed \emph{acyclic} graph, the
-direction of causal influences does not loop back on itself, ensuring
-that the graph contains no cycles \citep[@McElreath\_2020]{Neal_2020}.
 
 \begin{figure}
 
@@ -452,128 +436,10 @@ comparisons mathematical description}
 \subsection{Probabilitics assumptions of the scientific
 model}\label{sec-theory-probability}
 
-\newcommand{\dsep}{\perp\!\!\!\perp}
-\newcommand{\ndsep}{\not\!\perp\!\!\!\perp}
-
-\begin{equation}\phantomsection\label{eq-StructuralModel}{
-\begin{aligned}
-  O_{kijr_{ij}} := & \; f_{O}( \delta_{kijr_{ij}} ) \\
-  \delta_{kijr_{ij}} := & \; f_{D}( \gamma_{k}, \theta_{ir_{i}} ) \\
-  \gamma_{k} := & \; f_{G}( Z_{k}, e_{k} ) \\
-  \theta_{ir_{i}} := & \; f_{R}( \theta_{i}, Y_{r}, e_{r_{i}} ) \\
-  \theta_{i} := & \; f_{T}( X_{i}, e_{i} ) \\
-  & \; e_{k} \perp\!\!\!\perp e_{i} \\
-  & \; e_{k} \perp\!\!\!\perp e_{r_{i}} \\
-  & \; e_{i} \perp\!\!\!\perp e_{r_{i}}
-\end{aligned}
-}\end{equation}
-
 \subsection{From the scientific to statistical
 model}\label{sec-theory-statistics}
 
-\begin{equation}\phantomsection\label{eq-StatModel_general}{
-\begin{aligned}
-  O_{kijr_{ij}} \sim & \; \text{Bernoulli}\left[ \; logit^{-1}\left( \delta_{kijr_{ij}} \right) \; \right] \\
-  \delta_{kijr_{ij}} = & \; \gamma_{k}( \theta_{ir_{i}} - \theta_{jr_{j}} ) \\
-  \gamma_{k} = & \; logit^{-1}\left[ \beta_{Z} Z_{k} + e_{k} \right] \\
-  \theta_{ir_{i}} = & \; \theta_{i} + \beta_{Y} Y_{r} + e_{r_{i}}  \\
-  \theta_{i} = & \; \beta_{X} X_{i} + e_{i}  \\
-  e_{k} \sim & \; \text{Normal}(0, \sigma_{k(g)}) \\
-  e_{i} \sim & \; \text{Normal}(0, \sigma_{i(g)}) \\
-  e_{r_{i}} \sim & \; \text{Normal}(0, \sigma_{r(g)})
-\end{aligned}
-}\end{equation}
-
-for identification purposes we can set
-\(\frac{1}{G}\sum_{g=1}^{G} \sigma_{k(g)} = 0.02\),
-\(\frac{1}{G}\sum_{g=1}^{G} \sigma_{i(g)} = 1\), and
-\(\frac{1}{G}\sum_{g=1}^{G} \sigma_{r(g)} = 1\). A special case of this
-would be to assume that the data comes from the same population, in that
-case, \(\sigma_{k(g)} = \sigma_{k} = 0.02\),
-\(\sigma_{i(g)} = \sigma_{i} = 1\)
-
 \subsection{Let's talk about Thurstone}\label{sec-theory-thurstone}
-
-Thurstone's comparative judgment \citet{Thurstone_1927} is based on the
-formula: \[
-X_{AB} = \frac{S_{A} - S_{B}}{\sigma_{AB}}
-\]
-
-where \(X_{AB}\) defines the comparative judgment outcome, \(S_{A}\) and
-\(S_{B}\) are the modal discriminal processes,
-\(\sigma_{AB} = \sqrt{ \sigma^{2}_{A} + \sigma^{2}_{B} + 2 \rho \sigma_{A} \sigma_{B}}\),
-with \(\sigma_{A}\) and \(\sigma_{B}\) being the dispersion of
-discriminal processes \(A\) and \(B\), respectively, and \(\rho\) the
-correlation between discriminal processes.
-
-The theory identifies five cases:
-
-\begin{itemize}
-\tightlist
-\item
-  \textbf{Case 1:} only constant \(\rho\) (not \(\rho_{ij}\))
-\item
-  \textbf{Case 2:} \(X_{ij}\) becomes \(X_{kij}\) with \(k=1, \dots, K\)
-  judges (replication, not duplication)
-\item
-  \textbf{Case 3:} \(\rho = 0\), then
-  \(\sigma_{AB} = \sqrt{ \sigma^{2}_{A} + \sigma^{2}_{B}}\)
-\item
-  \textbf{Case 4:} \(\sigma_{B}=\sigma_{A}+d\), then
-  \(\lim_{d \leq 0.1\sigma_{A}} \sigma_{AB} = (\sigma_{A} + \sigma_{B}) /\sqrt{2}\)
-\item
-  \textbf{Case 5:} \(\sigma_{B}=\sigma_{A}\), then
-  \(\sigma_{AB} = \sqrt{2}\sigma\)
-\end{itemize}
-
-Now using the DAG and statistical notation
-
-\begin{equation}\phantomsection\label{eq-StatModel_thurstone}{
-\begin{aligned}
-  O_{kijr_{ij}} := & \; f_{O}( \delta_{kijr_{ij}} ) \\
-  \delta_{kijr_{ij}} = & \; \gamma_{k}( \theta_{ir_{i}} - \theta_{jr_{j}} ) \\
-  \gamma_{k} = & \; f_{G}( Z_{k}, e_{k} ) \\
-  \theta_{ir_{i}} = & \; \theta_{i} + \beta_{Y} Y_{r} + e_{r_{i}}  \\
-  \theta_{i} = & \; \beta_{X} X_{i} + e_{i}  \\
-  e_{k} \sim & \; \text{Normal}(0, \sigma_{k(g)}) \\
-  e_{i} \sim & \; \text{Normal}(0, \sigma_{i(g)}) \\
-  e_{r_{i}} \sim & \; \text{Normal}(0, \sigma_{r(g)})
-\end{aligned}
-}\end{equation}
-
-The theory identifies five cases:
-
-\begin{itemize}
-\tightlist
-\item
-  \textbf{Case 1:} only constant \(\rho \approx \sigma_{i}\)
-\item
-  \textbf{Case 2:} now judges are separated by using \(\gamma_{k}\)
-\item
-  \textbf{Case 3:} \(\rho \approx \sigma_{e_{i}} = 0\) (no nesting of
-  texts on students), then
-  \(\sigma_{AB} = \sqrt{ \sigma^{2}_{A} + \sigma^{2}_{B}}\)
-\item
-  \textbf{Case 4:} \(\sigma_{B}=\sigma_{A}+d\), then
-  \(\lim_{d \leq 0.1\sigma_{A}} \sigma_{AB} = (\sigma_{A} + \sigma_{B}) /\sqrt{2}\)
-\item
-  \textbf{Case 5:} \(\sigma_{B}=\sigma_{A}\), then
-  \(\sigma_{AB} = \sqrt{2}\sigma\)
-\end{itemize}
-
-But now can we see other scenarios than just those 5 cases?
-
-\begin{itemize}
-\tightlist
-\item
-  consider different \(\rho \approx \sum_{p=1}^{P} \sigma_{p}\),
-  depending on \(P\) nesting structures
-\item
-  we can now investigate \(\gamma_{k}\)
-\item
-  we can assume \(\sigma_{B} \neq \sigma_{A}\), no need for results on
-  the limit
-\end{itemize}
 
 \section{Discussion}\label{sec-discuss}
 
