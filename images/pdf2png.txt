@@ -1,1 +1,2 @@
-pdftocairo SciMod.pdf -png
+pdftocairo fig.pdf -png -rx 400 -ry 400
+

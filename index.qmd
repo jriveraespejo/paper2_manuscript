@@ -173,41 +173,68 @@ Nevertheless, the structural approach offers an additional key advantage over th
 
 <!-- A Directed Acyclic Graph (DAG) allows for the transparent depiction of a system’s complexity, revealing its underlying assumptions and the plausible mechanisms generating the system’s outcome, assuming the DAG is true.  -->
 
-## DAGs, SCMs, and the flow of association and causation {#sec-background-dag}
+## DAGs, SCMs, and the flow of association and causation in graphs {#sec-background-dag}
 
-<!-- 1. What are DAGs? and how are they represented? -->
-Graph theory is a branch of mathematics focused on the study of graphs. Graphs are mathematical structures that model pairwise relations between objects. They can represent physical relations, such as electrical circuits and roadways, and less tangible structures, such as ecosystems and sociological relations[@Gross_et_al_2018]. Graphs have proven useful in various fields, spanning statistics, computer science, operations research, and the natural and social sciences. One application in statistics that incorporates concepts from graph theory is causal inference. Specifically, the structural approach to causal inference uses directed acyclic graphs (DAG) to provide a formal and graphical representation of the causal structure of a system [@Neal_2020].
+<!-- 1. Graph theory and the use of graphs -->
+Graph theory is a branch of mathematics focused on the study of graphs. Graphs are mathematical structures that model pairwise relations between objects. They can represent physical relations, such as electrical circuits and roadways, and less tangible structures, such as ecosystems and sociological relations. Graphs have proven useful in various fields, including computer science, operations research, and the natural and social sciences [@Gross_et_al_2018].
 
-A graph is a collection of nodes connected by edges. In a directed graph, edges extend from a *parent* node to a *child* node, with arrows indicating the direction of the causal influence. Two nodes that are connected by edge are said to be *adjacent* [@Gross_et_al_2018]. In a directed acyclic graph (DAG), the direction of causal influences does not loop back on itself, ensuring that the graph contains no cycles [@Neal_2020; @McElreath_2020].
-
-
-
+<!-- 2. How graphs are use in the structural approach? and what are DAGs? -->
+In statistics, one application that incorporates concepts from graph theory is causal inference. Specifically, the structural approach to causal inference uses DAGs to provide a formal and graphical representation of a system's causal structure [@Neal_2020]. In this context, a graph is a collection of nodes connected by edges, where nodes represent random variables. In a directed graph, edges extend from one node to another, with arrows indicating the direction of causal influence. In a directed acyclic graph, the direction of causal influences does not form a loop, ensuring that causal influences do not cycle back on themselves [@McElreath_2020].
 
 
-<!-- To draw a DAG use the exclusion restriction assumption: a variable should not appear in the graph if it is not a part of the causal mechanisms that generate the outcome under analysis (see Neal, 2020). -->
+<!-- 8. What are the DAG's building blocks?
+<!-- Ultimately, DAGs play the important role of identifying which variables should be controlled for to be able to estimate causal effects. -->
+
+<!-- 4. A motivating example -->
+Given the heuristic nature of DAGs, these are easier to understand using a motivating example. Consider a system where variables $X$ and $Z$ influence a third variable $Y$. In this system, it is assumed that $X$ and $Z$ are dependent on their own processes and are, therefore, independent from each other. @fig-dag1a presents the plausible causal structure of this system. The DAG shows the endogenous variables $V=\{X,Z,Y\}$ as circled black nodes, indicating these variables are observed. The arrows connecting the variables indicate the direction of causal influence, while a lack of influence is indicated by the absence of arrows. Moreover, the exogenous variables $E=\{e_{X},e_{Z},e_{Y}\}$ represent everything else that is chosen not to be modeled explicitly. These exogenous variables, or *disturbances*, are usually represented by open circles to indicate their unobserved nature. Although this DAG explicitly shows the exogenous variables, conventionally these are omitted for brevity, resulting in an equivalent graph as shown in @fig-dag1b [@Cinelli_et_al_2020].
+
+<!-- emphasize that everything can be observed -->
+<!-- change the motivating example to include all building blocks  -->
+
+::: {#fig-dags layout-ncol=2}
+
+![Full DAG](images/figures/dag1a.png){#fig-dag1a fig-align="center" width=90%}
+
+![Simplified DAG](images/figures/dag1b.png){#fig-dag1b fig-align="center" width=35%}
+
+DAGs for a plausible causal structure in a system.
+:::
+
 
 <!-- 2. What does a DAG imply? -->
-<!-- and utilizes the do-operator and Structural Causal Models (SCMs) for mathematical notation in causal inference. -->
 <!-- Structural Causal Model (SCM) -->
 <!-- Causal models are mathematical models representing causal relationships within an individual system or population. They facilitate inferences about causal relationships from statistical data. They can teach us a good deal about the epistemology of causation, and about the relationship between causation and probability. They have also been applied to topics of interest to philosophers, such as the logic of counterfactuals, decision theory, and the analysis of actual causation. -->
 
+<!-- \begin{aligned} -->
+<!--     Y & := \; f_{Y}( X,Z,e_{Y} ) \\ -->
+<!--     X & := \; f_{X}( e_{X} ) \\ -->
+<!--     Z & := \; f_{Z}( e_{Z} ) \\ -->
+<!--     e_{X} & \dsep e_{Z} \\ -->
+<!--     e_{X} & \dsep e_{Y} \\ -->
+<!--     e_{Z} & \dsep e_{Y} -->
+<!-- \end{aligned}  -->
 
 <!-- 3. But what are those mysterious functions?, and how do they become statistical quantities? -->
 ![ The flow of association and causation in graphs. Extracted from @Neal_2020 [pp. 31] ](images/figures/ACflow.png){#fig-ACflow fig-align="center" width=100%}
 
 
 <!-- 4. What is the local markov assumption? and where does it lead? -->
+<!-- 4.1 Bayesian factorization -->
 
 <!-- 5. What is the minimality assumption? and where does it lead? -->
-
 
 <!-- 6. What is the causal edges assumption? and where does it lead? -->
 
 <!-- 7. putting it all together -->
 
 
-<!-- 8. What are the DAG's building blocks?, and what do they imply? (SCMs) -->
-<!-- Ultimately, DAGs play the important role of identifying which variables should be controlled for to be able to estimate causal effects. -->
+<!-- 9. dependence and independence in building blocks -->
+
+<!-- 9.1 Blocked path definition-->
+
+<!-- 9.2 d-separation -->
+
+
 
 
 
