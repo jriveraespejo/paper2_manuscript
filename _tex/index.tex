@@ -346,29 +346,75 @@ deduce which statistical models can provide valid causal inferences,
 assuming the causal structure depicted in the DAG is accurate
 \citep{McElreath_2020}.
 
-\subsection{DAGs, SCMs, and the flow of association and
-causation}\label{sec-background-dag}
+\subsection{DAGs, SCMs, and the flow of association and causation in
+graphs}\label{sec-background-dag}
 
 Graph theory is a branch of mathematics focused on the study of graphs.
 Graphs are mathematical structures that model pairwise relations between
 objects. They can represent physical relations, such as electrical
 circuits and roadways, and less tangible structures, such as ecosystems
-and sociological relations\citep{Gross_et_al_2018}. Graphs have proven
-useful in various fields, spanning statistics, computer science,
-operations research, and the natural and social sciences. One
-application in statistics that incorporates concepts from graph theory
-is causal inference. Specifically, the structural approach to causal
-inference uses directed acyclic graphs (DAG) to provide a formal and
-graphical representation of the causal structure of a system
-\citep{Neal_2020}.
+and sociological relations. Graphs have proven useful in various fields,
+including computer science, operations research, and the natural and
+social sciences \citep{Gross_et_al_2018}.
 
-A graph is a collection of nodes connected by edges. In a directed
-graph, edges extend from a \emph{parent} node to a \emph{child} node,
-with arrows indicating the direction of the causal influence. Two nodes
-that are connected by edge are said to be \emph{adjacent}
-\citep{Gross_et_al_2018}. In a directed acyclic graph (DAG), the
-direction of causal influences does not loop back on itself, ensuring
-that the graph contains no cycles \citep{Neal_2020, McElreath_2020}.
+In statistics, one application that incorporates concepts from graph
+theory is causal inference. Specifically, the structural approach to
+causal inference uses DAGs to provide a formal and graphical
+representation of a system's causal structure \citep{Neal_2020}. In this
+context, a graph is a collection of nodes connected by edges, where
+nodes represent random variables. In a directed graph, edges extend from
+one node to another, with arrows indicating the direction of causal
+influence. In a directed acyclic graph, the direction of causal
+influences does not form a loop, ensuring that causal influences do not
+cycle back on themselves \citep{McElreath_2020}.
+
+Given the heuristic nature of DAGs, these are easier to understand using
+a motivating example. Consider a system where variables \(X\) and \(Z\)
+influence a third variable \(Y\). In this system, it is assumed that
+\(X\) and \(Z\) are dependent on their own processes and are, therefore,
+independent from each other. Figure~\ref{fig-dag1a} presents the
+plausible causal structure of this system. The DAG shows the endogenous
+variables \(V=\{X,Z,Y\}\) as circled black nodes, indicating these
+variables are observed. The arrows connecting the variables indicate the
+direction of causal influence, while a lack of influence is indicated by
+the absence of arrows. Moreover, the exogenous variables
+\(E=\{e_{X},e_{Z},e_{Y}\}\) represent everything else that is chosen not
+to be modeled explicitly. These exogenous variables, or
+\emph{disturbances}, are usually represented by open circles to indicate
+their unobserved nature. Although this DAG explicitly shows the
+exogenous variables, conventionally these are omitted for brevity,
+resulting in an equivalent graph as shown in Figure~\ref{fig-dag1b}.
+
+\begin{figure}
+
+\begin{minipage}{0.50\linewidth}
+
+\centering{
+
+\includegraphics[width=0.9\textwidth,height=\textheight]{images/figures/dag1a.png}
+
+}
+
+\subcaption{\label{fig-dag1a}Full DAG}
+
+\end{minipage}%
+%
+\begin{minipage}{0.50\linewidth}
+
+\centering{
+
+\includegraphics[width=0.35\textwidth,height=\textheight]{images/figures/dag1b.png}
+
+}
+
+\subcaption{\label{fig-dag1b}Simplified DAG}
+
+\end{minipage}%
+
+\caption{\label{fig-dags}DAGs for a plausible causal structure in a
+system.}
+
+\end{figure}%
 
 \begin{figure}
 

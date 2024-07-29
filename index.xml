@@ -200,10 +200,10 @@ sciences</institution>
 <corresp id="cor-1">JoseManuel.RiveraEspejo@uantwerpen.be</corresp>
 </author-notes>
 
-<pub-date date-type="pub" publication-format="electronic" iso-8601-date="2024-07-26">
+<pub-date date-type="pub" publication-format="electronic" iso-8601-date="2024-07-29">
 <year>2024</year>
 <month>7</month>
-<day>26</day>
+<day>29</day>
 </pub-date>
 
 
@@ -470,37 +470,102 @@ the University of Antwerp (BOF).</funding-statement>
     2020</xref>).</p>
   </sec>
   <sec id="sec-background-dag">
-    <title>DAGs, SCMs, and the flow of association and causation</title>
+    <title>DAGs, SCMs, and the flow of association and causation in
+    graphs</title>
     <p>Graph theory is a branch of mathematics focused on the study of
     graphs. Graphs are mathematical structures that model pairwise
     relations between objects. They can represent physical relations,
     such as electrical circuits and roadways, and less tangible
-    structures, such as ecosystems and sociological
-    relations(<xref alt="Gross, Yellen, and Anderson 2018" rid="ref-Gross_et_al_2018" ref-type="bibr">Gross,
-    Yellen, and Anderson 2018</xref>). Graphs have proven useful in
-    various fields, spanning statistics, computer science, operations
-    research, and the natural and social sciences. One application in
-    statistics that incorporates concepts from graph theory is causal
-    inference. Specifically, the structural approach to causal inference
-    uses directed acyclic graphs (DAG) to provide a formal and graphical
-    representation of the causal structure of a system
-    (<xref alt="Neal 2020" rid="ref-Neal_2020" ref-type="bibr">Neal
-    2020</xref>).</p>
-    <p>A graph is a collection of nodes connected by edges. In a
-    directed graph, edges extend from a <italic>parent</italic> node to
-    a <italic>child</italic> node, with arrows indicating the direction
-    of the causal influence. Two nodes that are connected by edge are
-    said to be <italic>adjacent</italic>
+    structures, such as ecosystems and sociological relations. Graphs
+    have proven useful in various fields, including computer science,
+    operations research, and the natural and social sciences
     (<xref alt="Gross, Yellen, and Anderson 2018" rid="ref-Gross_et_al_2018" ref-type="bibr">Gross,
-    Yellen, and Anderson 2018</xref>). In a directed acyclic graph
-    (DAG), the direction of causal influences does not loop back on
-    itself, ensuring that the graph contains no cycles
+    Yellen, and Anderson 2018</xref>).</p>
+    <p>In statistics, one application that incorporates concepts from
+    graph theory is causal inference. Specifically, the structural
+    approach to causal inference uses DAGs to provide a formal and
+    graphical representation of a system’s causal structure
     (<xref alt="Neal 2020" rid="ref-Neal_2020" ref-type="bibr">Neal
-    2020</xref>;
-    <xref alt="McElreath 2020" rid="ref-McElreath_2020" ref-type="bibr">McElreath
+    2020</xref>). In this context, a graph is a collection of nodes
+    connected by edges, where nodes represent random variables. In a
+    directed graph, edges extend from one node to another, with arrows
+    indicating the direction of causal influence. In a directed acyclic
+    graph, the direction of causal influences does not form a loop,
+    ensuring that causal influences do not cycle back on themselves
+    (<xref alt="McElreath 2020" rid="ref-McElreath_2020" ref-type="bibr">McElreath
     2020</xref>).</p>
+    <p>Given the heuristic nature of DAGs, these are easier to
+    understand using a motivating example. Consider a system where
+    variables <inline-formula><alternatives>
+    <tex-math><![CDATA[X]]></tex-math>
+    <mml:math display="inline" xmlns:mml="http://www.w3.org/1998/Math/MathML"><mml:mi>X</mml:mi></mml:math></alternatives></inline-formula>
+    and <inline-formula><alternatives>
+    <tex-math><![CDATA[Z]]></tex-math>
+    <mml:math display="inline" xmlns:mml="http://www.w3.org/1998/Math/MathML"><mml:mi>Z</mml:mi></mml:math></alternatives></inline-formula>
+    influence a third variable <inline-formula><alternatives>
+    <tex-math><![CDATA[Y]]></tex-math>
+    <mml:math display="inline" xmlns:mml="http://www.w3.org/1998/Math/MathML"><mml:mi>Y</mml:mi></mml:math></alternatives></inline-formula>.
+    In this system, it is assumed that <inline-formula><alternatives>
+    <tex-math><![CDATA[X]]></tex-math>
+    <mml:math display="inline" xmlns:mml="http://www.w3.org/1998/Math/MathML"><mml:mi>X</mml:mi></mml:math></alternatives></inline-formula>
+    and <inline-formula><alternatives>
+    <tex-math><![CDATA[Z]]></tex-math>
+    <mml:math display="inline" xmlns:mml="http://www.w3.org/1998/Math/MathML"><mml:mi>Z</mml:mi></mml:math></alternatives></inline-formula>
+    are dependent on their own processes and are, therefore, independent
+    from each other. <xref alt="Figure 1 (a)" rid="fig-dag1a">Figure 1
+    (a)</xref> presents the plausible causal structure of this system.
+    The DAG shows the endogenous variables
+    <inline-formula><alternatives>
+    <tex-math><![CDATA[V=\{X,Z,Y\}]]></tex-math>
+    <mml:math display="inline" xmlns:mml="http://www.w3.org/1998/Math/MathML"><mml:mrow><mml:mi>V</mml:mi><mml:mo>=</mml:mo><mml:mo stretchy="false" form="prefix">{</mml:mo><mml:mi>X</mml:mi><mml:mo>,</mml:mo><mml:mi>Z</mml:mi><mml:mo>,</mml:mo><mml:mi>Y</mml:mi><mml:mo stretchy="false" form="postfix">}</mml:mo></mml:mrow></mml:math></alternatives></inline-formula>
+    as circled black nodes, indicating these variables are observed. The
+    arrows connecting the variables indicate the direction of causal
+    influence, while a lack of influence is indicated by the absence of
+    arrows. Moreover, the exogenous variables
+    <inline-formula><alternatives>
+    <tex-math><![CDATA[E=\{e_{X},e_{Z},e_{Y}\}]]></tex-math>
+    <mml:math display="inline" xmlns:mml="http://www.w3.org/1998/Math/MathML"><mml:mrow><mml:mi>E</mml:mi><mml:mo>=</mml:mo><mml:mo stretchy="false" form="prefix">{</mml:mo><mml:msub><mml:mi>e</mml:mi><mml:mi>X</mml:mi></mml:msub><mml:mo>,</mml:mo><mml:msub><mml:mi>e</mml:mi><mml:mi>Z</mml:mi></mml:msub><mml:mo>,</mml:mo><mml:msub><mml:mi>e</mml:mi><mml:mi>Y</mml:mi></mml:msub><mml:mo stretchy="false" form="postfix">}</mml:mo></mml:mrow></mml:math></alternatives></inline-formula>
+    represent everything else that is chosen not to be modeled
+    explicitly. These exogenous variables, or
+    <italic>disturbances</italic>, are usually represented by open
+    circles to indicate their unobserved nature. Although this DAG
+    explicitly shows the exogenous variables, conventionally these are
+    omitted for brevity, resulting in an equivalent graph as shown in
+    <xref alt="Figure 1 (b)" rid="fig-dag1b">Figure 1 (b)</xref>.</p>
+    <fig id="fig-dags">
+      <caption><p>Figure 1: DAGs for a plausible causal structure in a
+      system.</p></caption>
+      <table-wrap>
+        <table>
+          <colgroup>
+            <col width="50%" />
+            <col width="50%" />
+          </colgroup>
+          <tbody>
+            <tr>
+              <td align="left"><p specific-use="wrapper">
+                <boxed-text>
+                  <fig id="fig-dag1a">
+                    <caption><p>(a) Full DAG</p></caption>
+                    <graphic mimetype="image" mime-subtype="png" xlink:href="images/figures/dag1a.png" />
+                  </fig>
+                </boxed-text>
+              </p></td>
+              <td align="left"><p specific-use="wrapper">
+                <boxed-text>
+                  <fig id="fig-dag1b">
+                    <caption><p>(b) Simplified DAG</p></caption>
+                    <graphic mimetype="image" mime-subtype="png" xlink:href="images/figures/dag1b.png" />
+                  </fig>
+                </boxed-text>
+              </p></td>
+            </tr>
+          </tbody>
+        </table>
+      </table-wrap>
+    </fig>
     <fig id="fig-ACflow">
-      <caption><p>Figure 1: The flow of association and causation in
+      <caption><p>Figure 2: The flow of association and causation in
       graphs. Extracted from Neal
       (<xref alt="2020, 31" rid="ref-Neal_2020" ref-type="bibr">2020,
       31</xref>)</p></caption>
@@ -510,7 +575,7 @@ the University of Antwerp (BOF).</funding-statement>
   <sec id="sec-background-where">
     <title>But where does it all fit?</title>
     <fig id="fig-IEflow">
-      <caption><p>Figure 2: Identification-Estimation flowchart.
+      <caption><p>Figure 3: Identification-Estimation flowchart.
       Extracted from Neal
       (<xref alt="2020, 32" rid="ref-Neal_2020" ref-type="bibr">2020,
       32</xref>)</p></caption>
@@ -523,22 +588,22 @@ the University of Antwerp (BOF).</funding-statement>
   <sec id="sec-theory-scientific">
     <title>A scientific model for the DCJ</title>
     <fig id="fig-SciModel_simp1">
-      <caption><p>Figure 3: DCJ causal diagram, simplified
+      <caption><p>Figure 4: DCJ causal diagram, simplified
       description</p></caption>
       <graphic mimetype="image" mime-subtype="png" xlink:href="images/figures/SciModel_simp1.png" />
     </fig>
     <fig id="fig-SciModel_simp2">
-      <caption><p>Figure 4: DCJ causal diagram, simplified mathematical
+      <caption><p>Figure 5: DCJ causal diagram, simplified mathematical
       description</p></caption>
       <graphic mimetype="image" mime-subtype="png" xlink:href="images/figures/SciModel_simp2.png" />
     </fig>
     <fig id="fig-SciModel_pop">
-      <caption><p>Figure 5: DCJ causal diagram, population mathematical
+      <caption><p>Figure 6: DCJ causal diagram, population mathematical
       description</p></caption>
       <graphic mimetype="image" mime-subtype="png" xlink:href="images/figures/SciModel_pop.png" />
     </fig>
     <fig id="fig-SciModel_samp">
-      <caption><p>Figure 6: DCJ causal diagram, sample with comparisons
+      <caption><p>Figure 7: DCJ causal diagram, sample with comparisons
       mathematical description</p></caption>
       <graphic mimetype="image" mime-subtype="png" xlink:href="images/figures/SciModel_samp.png" />
     </fig>
