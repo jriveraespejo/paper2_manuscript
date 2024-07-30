@@ -180,13 +180,11 @@ Nevertheless, the structural approach offers an additional key advantage over th
 Graph theory is a branch of mathematics focused on the study of graphs. Graphs are mathematical structures that model pairwise relations between objects. They can represent physical relations, such as electrical circuits and roadways, and less tangible structures, such as ecosystems and sociological relations. Graphs have proven useful in various fields, including computer science, operations research, and the natural and social sciences [@Gross_et_al_2018].
 
 <!-- 2. How graphs are use in the structural approach? and what are DAGs? -->
-In statistics, one application that incorporates concepts from graph theory is causal inference. Specifically, the structural approach to causal inference uses directed acyclic graphs (DAG) to provide a formal and graphical representation of a system's causal structure [@Neal_2020]. In this context, a *graph* is a collection of nodes connected by edges, where nodes represent random variables. The term *directed* indicates that the edges of the graph extend from a *parent* node to a *child* node, with arrows showing the direction of causal influence. The term *acyclic* indicates that the direction of causal influences does not form a loop, ensuring that the influences do not cycle back on themselves [@McElreath_2020].
+In statistics, one application incorporating concepts from graph theory is causal inference. Specifically, the structural approach to causal inference uses directed acyclic graphs (DAG) to provide a formal and graphical representation of the causal structure of a system [@Neal_2020]. In this context, a *graph* is a collection of nodes connected by edges, where nodes represent random variables. The term *directed* indicates that the edges of the graph extend from one node to another, with arrows showing the direction of causal influence. Moreover, the term *acyclic* indicates the causal influences do not form a loop, meaning the influences do not cycle back on themselves [@McElreath_2020].
 
-<!-- 3. How do we draw DAGs? -->
-A key advantage of DAGs is that, regardless of the complexity of the causal structure, these structures can be composed using a minimal set of building blocks. Moreover, representing any complex structure requires only five fundamental building blocks [@Neal_2020; @McElreath_2020]. These advantages imply that a researcher seeking to depict and understand the causal assumptions of a complex system only needs to decompose the structure into these basic building blocks and then analyze the causal assumptions associated with each block [@McElreath_2020].
+<!-- 3. How do we draw DAGs? and what are the building blocks of DAGs? -->
+Regardless of complexity, DAGs can represent various causal structures using only five fundamental building blocks [@Neal_2020; @McElreath_2020]. Each panel of @fig-dags illustrates these building blocks. @fig-dag_bb1 depicts two unconnected nodes, representing an scenario where variables $X_{1}$ and $X_{2}$ are not causally related. @fig-dag_bb2 shows two connected nodes, illustrating a scenario where a parent node $X_{1}$ exerts a causal influence on a child node $X_{2}$. Consequently, $X_{2}$ is considered a *descendant* of $X_{1}$. @fig-dag_bb3 depicts a *chain* (or *pipe*), where $X_{1}$ influences $X_{2}$, and $X_{2}$ influences $X_{3}$. In this configuration, $X_{1}$ is a parent node of $X_{2}$, and $X_{2}$ a parent node of $X_{3}$. Furthermore, the DAG shows that $X_{1}$ is an *ancestor* of $X_{3}$, and that the relationship between these variables is entirely mediated by $X_{2}$. @fig-dag_bb4 illustrates a *fork*, where variables $X_{1}$ and $X_{3}$ are both influenced by $X_{2}$. In this scenario $X_{2}$ is a parent node of both $X_{1}$ and $X_{3}$. Finally, @fig-dag_bb5 depicts a *collider*, also known as *inmorality*, where variables $X_{1}$ and $X_{3}$ are concurrent causes of $X_{2}$. In this configuration, $X_{1}$ and $X_{3}$ are not causally related to each other but both influence $X_{2}$. 
 
-<!-- 4. What are DAG's building blocks?  -->
-@fig-dags presents the five fundamental building blocks of any DAG. @fig-dag_bb1 illustrates two unconnected nodes, representing an scenario where variables $X_{1}$ and $X_{2}$ are not causally related. @fig-dag_bb2 shows two connected nodes, depicting an scenario where a *parent* node $X_{1}$ has a causal influence on a *child* node $X_{2}$. This implies that variable $X_{2}$ is a *descendant* of $X_{1}$. @fig-dag_bb3 illustrates a *chain* (or *pipe*), where $X_{1}$ influences $X_{2}$, and $X_{2}$ influences $X_{3}$. This DAG indicates that $X_{1}$ is a parent node of $X_{2}$, and $X_{2}$ is a parent node $X_{3}$. Furthermore, it shows that $X_{1}$ is an *ancestor* of $X_{3}$, with the relationship between the two variables being mediated entirely by $X_{2}$. @fig-dag_bb4 depicts a *fork*, illustrating an scenario where variables $X_{1}$ and $X_{3}$ are both influenced by $X_{2}$. In this scenario $X_{2}$ is a parent node for both $X_{1}$ and $X_{3}$. Finally, @fig-dag_bb5 illustrates a *collider* (also known as *inmorality*), where variables $X_{1}$ and $X_{3}$ are concurrent causes of $X_{2}$. In this configuration, $X_{1}$ and $X_{3}$ are not causally related to each other but both influence $X_{2}$. Given the heuristic nature of DAGs, the use of fundamental building block to construct a causal structure of a system is easier to understand using a motivating example. The motivating example can also serve to point out about other conventions when using DAGs.
 
 ::: {#fig-dags layout="[[1,1],[1,1,1]]"}
 
@@ -203,8 +201,9 @@ A key advantage of DAGs is that, regardless of the complexity of the causal stru
 DAG's fundamental building blocks.
 :::
 
+
 <!-- 4. A motivating example -->
-Consider a system where variables $X$ and $Z$ influence a third variable $Y$. In this system, it is assumed that $X$ and $Z$ are dependent on their own processes and are, therefore, independent from each other. @fig-dag_example1 presents the plausible causal structure of this system. The DAG shows the endogenous variables $V=\{X,Z,Y\}$ as circled black nodes, indicating these variables are observed. The arrows connecting the variables indicate the direction of causal influence, while a lack of influence is indicated by the absence of arrows. Moreover, the exogenous variables $E=\{e_{X},e_{Z},e_{Y}\}$ represent everything else that is chosen not to be modeled explicitly. These exogenous variables, or *disturbances*, are usually represented by open circles to indicate their unobserved nature. Although this DAG explicitly shows the exogenous variables, conventionally these are omitted for brevity, resulting in an equivalent graph as shown in @fig-dag_example2 [@Cinelli_et_al_2020].
+Given the heuristic nature of DAGs, the use of fundamental building block to construct a causal structure of a system is easier to understand using a motivating example. The motivating example can also serve to signal about other conventions when using DAGs. Consider a system where variables $X$ and $Z$ influence a third variable $Y$. In this system, it is assumed that $X$ and $Z$ are dependent on their own processes and are, therefore, independent from each other. @fig-dag_example1 presents the plausible causal structure of this system. The DAG shows the endogenous variables $V=\{X,Z,Y\}$ as circled black nodes, indicating these variables are observed. The arrows connecting the variables indicate the direction of causal influence, while a lack of influence is indicated by the absence of arrows. Moreover, the exogenous variables $E=\{e_{X},e_{Z},e_{Y}\}$ represent everything else that is chosen not to be modeled explicitly. These exogenous variables, or *disturbances*, are usually represented by open circles to indicate their unobserved nature. Although this DAG explicitly shows the exogenous variables, conventionally these are omitted for brevity, resulting in an equivalent graph as shown in @fig-dag_example2 [@Cinelli_et_al_2020].
 
 <!-- emphasize that everything can be observed -->
 <!-- change the motivating example to include all building blocks  -->
@@ -220,6 +219,7 @@ DAGs for a plausible causal structure in a system.
 
 
 ## The flow of association and causation in graphs {#sec-framework-flow}
+
 
 <!-- 2. What does a DAG imply? -->
 <!-- Structural Causal Model (SCM) -->
@@ -253,6 +253,8 @@ DAGs for a plausible causal structure in a system.
 <!-- 9.1 Blocked path definition-->
 
 <!-- 9.2 d-separation -->
+
+<!-- This further implies that to understand the causal assumptions of a complex system, one can decompose the structure into these basic building blocks and analyze the causal assumptions associated with each block individually [@McElreath_2020]. -->
 
 <!-- Ultimately, DAGs play the important role of identifying which variables should be controlled for to be able to estimate causal effects. -->
 
