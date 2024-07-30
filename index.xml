@@ -200,10 +200,10 @@ sciences</institution>
 <corresp id="cor-1">JoseManuel.RiveraEspejo@uantwerpen.be</corresp>
 </author-notes>
 
-<pub-date date-type="pub" publication-format="electronic" iso-8601-date="2024-07-29">
+<pub-date date-type="pub" publication-format="electronic" iso-8601-date="2024-07-30">
 <year>2024</year>
 <month>7</month>
-<day>29</day>
+<day>30</day>
 </pub-date>
 
 
@@ -241,12 +241,13 @@ complexities and assumptions underpinning the DCJ system, as well as the
 plausible mechanisms through which DCJ data could be generated. This
 study addresses these issues by representing DCJ within the framework of
 causal inference. Specifically, utilizing the structural approach, the
-study develops a scientific model to clarify the causal assumptions and
-mechanisms inherent in the DCJ system. It then translates this model
-into a probabilistic statistical framework to estimate statistical
-relationships and infer causal effects within the system. This research
-provides a robust probabilistic foundation for the statistical analysis
-of DCJ data, building upon Thurstone’s law of comparative judgment
+study develops a scientific model to clarify plausible causal
+assumptions and mechanisms inherent in the DCJ system. The study then
+translates this model into a probabilistic statistical framework to
+estimate statistical relationships and infer causal effects within the
+system. This research provides a robust probabilistic foundation for the
+statistical analysis of DCJ data, building upon Thurstone’s law of
+comparative judgment
 (<xref alt="1927" rid="ref-Thurstone_1927" ref-type="bibr">1927</xref>).
 Its findings offer valuable insights for researchers and analysts
 designing and implementing DCJ experiments.</p>
@@ -378,12 +379,11 @@ the University of Antwerp (BOF).</funding-statement>
   2009</xref>;
   <xref alt="Pearl, Glymour, and Jewell 2016" rid="ref-Pearl_et_al_2016" ref-type="bibr">Pearl,
   Glymour, and Jewell 2016</xref>), the study develops a scientific
-  model to clarify the causal assumptions and mechanisms inherent in the
-  DCJ system. Next, using a minimal set of assumptions, the study
-  translates the scientific model into a probabilistic statistical
-  model. This model aims to produce statistical estimates to draw
-  inferences about plausible causal relationships within the DCJ
-  system.</p>
+  model to clarify plausible causal assumptions and mechanisms inherent
+  in the DCJ system. The study then translates the scientific model into
+  a probabilistic statistical model. This model aims to produce
+  statistical estimates to draw inferences about plausible causal
+  relationships within the DCJ system.</p>
   <p>Ultimately, this research provides a robust probabilistic
   foundation for the statistical analysis of DCJ data, building upon
   Thurstone’s law of comparative judgment
@@ -391,9 +391,9 @@ the University of Antwerp (BOF).</funding-statement>
   Consequently, its findings offer valuable insights for researchers and
   analysts designing and implementing DCJ experiments.</p>
 </sec>
-<sec id="sec-background">
-  <title>Theoretical background</title>
-  <sec id="sec-background-structural">
+<sec id="sec-framework">
+  <title>Theoretical framework</title>
+  <sec id="sec-framework-structural">
     <title>The structural approach to causal inference</title>
     <p>In statistics, <italic>causal inference</italic> refers to the
     process of identifying the causes of a phenomenon and estimating
@@ -417,10 +417,11 @@ the University of Antwerp (BOF).</funding-statement>
     (<xref alt="2018" rid="ref-Pearl_et_al_2018" ref-type="bibr">2018</xref>),
     counterfactuals form the foundation of causal inference and occupy
     the highest level of cognitive abstraction in the ladder of
-    causation, followed by intervention and association. Despite this
-    abstract nature, counterfactuals enable the development of a
-    <italic>theory of the world</italic> that explains why specific
-    causes have specific effects and what occurs in their absence
+    causation, followed by intervention and association. Nevertheless,
+    despite their abstract nature, counterfactuals enable the
+    development of a <italic>theory of the world</italic> that explains
+    why specific causes have specific effects and what occurs in their
+    absence
     (<xref alt="Pearl and Mackenzie 2018" rid="ref-Pearl_et_al_2018" ref-type="bibr">Pearl
     and Mackenzie 2018</xref>). They achieve this by translating causal
     statements into counterfactual statements, that is, statements about
@@ -469,9 +470,8 @@ the University of Antwerp (BOF).</funding-statement>
     (<xref alt="McElreath 2020" rid="ref-McElreath_2020" ref-type="bibr">McElreath
     2020</xref>).</p>
   </sec>
-  <sec id="sec-background-dag">
-    <title>DAGs, SCMs, and the flow of association and causation in
-    graphs</title>
+  <sec id="sec-framework-dag">
+    <title>Directed acyclic graphs (DAG)</title>
     <p>Graph theory is a branch of mathematics focused on the study of
     graphs. Graphs are mathematical structures that model pairwise
     relations between objects. They can represent physical relations,
@@ -483,20 +483,213 @@ the University of Antwerp (BOF).</funding-statement>
     Yellen, and Anderson 2018</xref>).</p>
     <p>In statistics, one application that incorporates concepts from
     graph theory is causal inference. Specifically, the structural
-    approach to causal inference uses DAGs to provide a formal and
-    graphical representation of a system’s causal structure
+    approach to causal inference uses directed acyclic graphs (DAG) to
+    provide a formal and graphical representation of a system’s causal
+    structure
     (<xref alt="Neal 2020" rid="ref-Neal_2020" ref-type="bibr">Neal
-    2020</xref>). In this context, a graph is a collection of nodes
-    connected by edges, where nodes represent random variables. In a
-    directed graph, edges extend from one node to another, with arrows
-    indicating the direction of causal influence. In a directed acyclic
-    graph, the direction of causal influences does not form a loop,
-    ensuring that causal influences do not cycle back on themselves
+    2020</xref>). In this context, a <italic>graph</italic> is a
+    collection of nodes connected by edges, where nodes represent random
+    variables. The term <italic>directed</italic> indicates that the
+    edges of the graph extend from a <italic>parent</italic> node to a
+    <italic>child</italic> node, with arrows showing the direction of
+    causal influence. The term <italic>acyclic</italic> indicates that
+    the direction of causal influences does not form a loop, ensuring
+    that the influences do not cycle back on themselves
     (<xref alt="McElreath 2020" rid="ref-McElreath_2020" ref-type="bibr">McElreath
     2020</xref>).</p>
-    <p>Given the heuristic nature of DAGs, these are easier to
-    understand using a motivating example. Consider a system where
+    <p>A key advantage of DAGs is that, regardless of the complexity of
+    the causal structure, these structures can be composed using a
+    minimal set of building blocks. Moreover, representing any complex
+    structure requires only five fundamental building blocks
+    (<xref alt="Neal 2020" rid="ref-Neal_2020" ref-type="bibr">Neal
+    2020</xref>;
+    <xref alt="McElreath 2020" rid="ref-McElreath_2020" ref-type="bibr">McElreath
+    2020</xref>). These advantages imply that a researcher seeking to
+    depict and understand the causal assumptions of a complex system
+    only needs to decompose the structure into these basic building
+    blocks and then analyze the causal assumptions associated with each
+    block
+    (<xref alt="McElreath 2020" rid="ref-McElreath_2020" ref-type="bibr">McElreath
+    2020</xref>).</p>
+    <p><xref alt="Figure 1" rid="fig-dags">Figure 1</xref> presents the
+    five fundamental building blocks of any DAG.
+    <xref alt="Figure 1 (a)" rid="fig-dag_bb1">Figure 1 (a)</xref>
+    illustrates two unconnected nodes, representing an scenario where
     variables <inline-formula><alternatives>
+    <tex-math><![CDATA[X_{1}]]></tex-math>
+    <mml:math display="inline" xmlns:mml="http://www.w3.org/1998/Math/MathML"><mml:msub><mml:mi>X</mml:mi><mml:mn>1</mml:mn></mml:msub></mml:math></alternatives></inline-formula>
+    and <inline-formula><alternatives>
+    <tex-math><![CDATA[X_{2}]]></tex-math>
+    <mml:math display="inline" xmlns:mml="http://www.w3.org/1998/Math/MathML"><mml:msub><mml:mi>X</mml:mi><mml:mn>2</mml:mn></mml:msub></mml:math></alternatives></inline-formula>
+    are not causally related.
+    <xref alt="Figure 1 (b)" rid="fig-dag_bb2">Figure 1 (b)</xref> shows
+    two connected nodes, depicting an scenario where a
+    <italic>parent</italic> node <inline-formula><alternatives>
+    <tex-math><![CDATA[X_{1}]]></tex-math>
+    <mml:math display="inline" xmlns:mml="http://www.w3.org/1998/Math/MathML"><mml:msub><mml:mi>X</mml:mi><mml:mn>1</mml:mn></mml:msub></mml:math></alternatives></inline-formula>
+    has a causal influence on a <italic>child</italic> node
+    <inline-formula><alternatives>
+    <tex-math><![CDATA[X_{2}]]></tex-math>
+    <mml:math display="inline" xmlns:mml="http://www.w3.org/1998/Math/MathML"><mml:msub><mml:mi>X</mml:mi><mml:mn>2</mml:mn></mml:msub></mml:math></alternatives></inline-formula>.
+    This implies that variable <inline-formula><alternatives>
+    <tex-math><![CDATA[X_{2}]]></tex-math>
+    <mml:math display="inline" xmlns:mml="http://www.w3.org/1998/Math/MathML"><mml:msub><mml:mi>X</mml:mi><mml:mn>2</mml:mn></mml:msub></mml:math></alternatives></inline-formula>
+    is a <italic>descendant</italic> of <inline-formula><alternatives>
+    <tex-math><![CDATA[X_{1}]]></tex-math>
+    <mml:math display="inline" xmlns:mml="http://www.w3.org/1998/Math/MathML"><mml:msub><mml:mi>X</mml:mi><mml:mn>1</mml:mn></mml:msub></mml:math></alternatives></inline-formula>.
+    <xref alt="Figure 1 (c)" rid="fig-dag_bb3">Figure 1 (c)</xref>
+    illustrates a <italic>chain</italic> (or <italic>pipe</italic>),
+    where <inline-formula><alternatives>
+    <tex-math><![CDATA[X_{1}]]></tex-math>
+    <mml:math display="inline" xmlns:mml="http://www.w3.org/1998/Math/MathML"><mml:msub><mml:mi>X</mml:mi><mml:mn>1</mml:mn></mml:msub></mml:math></alternatives></inline-formula>
+    influences <inline-formula><alternatives>
+    <tex-math><![CDATA[X_{2}]]></tex-math>
+    <mml:math display="inline" xmlns:mml="http://www.w3.org/1998/Math/MathML"><mml:msub><mml:mi>X</mml:mi><mml:mn>2</mml:mn></mml:msub></mml:math></alternatives></inline-formula>,
+    and <inline-formula><alternatives>
+    <tex-math><![CDATA[X_{2}]]></tex-math>
+    <mml:math display="inline" xmlns:mml="http://www.w3.org/1998/Math/MathML"><mml:msub><mml:mi>X</mml:mi><mml:mn>2</mml:mn></mml:msub></mml:math></alternatives></inline-formula>
+    influences <inline-formula><alternatives>
+    <tex-math><![CDATA[X_{3}]]></tex-math>
+    <mml:math display="inline" xmlns:mml="http://www.w3.org/1998/Math/MathML"><mml:msub><mml:mi>X</mml:mi><mml:mn>3</mml:mn></mml:msub></mml:math></alternatives></inline-formula>.
+    This DAG indicates that <inline-formula><alternatives>
+    <tex-math><![CDATA[X_{1}]]></tex-math>
+    <mml:math display="inline" xmlns:mml="http://www.w3.org/1998/Math/MathML"><mml:msub><mml:mi>X</mml:mi><mml:mn>1</mml:mn></mml:msub></mml:math></alternatives></inline-formula>
+    is a parent node of <inline-formula><alternatives>
+    <tex-math><![CDATA[X_{2}]]></tex-math>
+    <mml:math display="inline" xmlns:mml="http://www.w3.org/1998/Math/MathML"><mml:msub><mml:mi>X</mml:mi><mml:mn>2</mml:mn></mml:msub></mml:math></alternatives></inline-formula>,
+    and <inline-formula><alternatives>
+    <tex-math><![CDATA[X_{2}]]></tex-math>
+    <mml:math display="inline" xmlns:mml="http://www.w3.org/1998/Math/MathML"><mml:msub><mml:mi>X</mml:mi><mml:mn>2</mml:mn></mml:msub></mml:math></alternatives></inline-formula>
+    is a parent node <inline-formula><alternatives>
+    <tex-math><![CDATA[X_{3}]]></tex-math>
+    <mml:math display="inline" xmlns:mml="http://www.w3.org/1998/Math/MathML"><mml:msub><mml:mi>X</mml:mi><mml:mn>3</mml:mn></mml:msub></mml:math></alternatives></inline-formula>.
+    Furthermore, it shows that <inline-formula><alternatives>
+    <tex-math><![CDATA[X_{1}]]></tex-math>
+    <mml:math display="inline" xmlns:mml="http://www.w3.org/1998/Math/MathML"><mml:msub><mml:mi>X</mml:mi><mml:mn>1</mml:mn></mml:msub></mml:math></alternatives></inline-formula>
+    is an <italic>ancestor</italic> of <inline-formula><alternatives>
+    <tex-math><![CDATA[X_{3}]]></tex-math>
+    <mml:math display="inline" xmlns:mml="http://www.w3.org/1998/Math/MathML"><mml:msub><mml:mi>X</mml:mi><mml:mn>3</mml:mn></mml:msub></mml:math></alternatives></inline-formula>,
+    with the relationship between the two variables being mediated
+    entirely by <inline-formula><alternatives>
+    <tex-math><![CDATA[X_{2}]]></tex-math>
+    <mml:math display="inline" xmlns:mml="http://www.w3.org/1998/Math/MathML"><mml:msub><mml:mi>X</mml:mi><mml:mn>2</mml:mn></mml:msub></mml:math></alternatives></inline-formula>.
+    <xref alt="Figure 1 (d)" rid="fig-dag_bb4">Figure 1 (d)</xref>
+    depicts a <italic>fork</italic>, illustrating an scenario where
+    variables <inline-formula><alternatives>
+    <tex-math><![CDATA[X_{1}]]></tex-math>
+    <mml:math display="inline" xmlns:mml="http://www.w3.org/1998/Math/MathML"><mml:msub><mml:mi>X</mml:mi><mml:mn>1</mml:mn></mml:msub></mml:math></alternatives></inline-formula>
+    and <inline-formula><alternatives>
+    <tex-math><![CDATA[X_{3}]]></tex-math>
+    <mml:math display="inline" xmlns:mml="http://www.w3.org/1998/Math/MathML"><mml:msub><mml:mi>X</mml:mi><mml:mn>3</mml:mn></mml:msub></mml:math></alternatives></inline-formula>
+    are both influenced by <inline-formula><alternatives>
+    <tex-math><![CDATA[X_{2}]]></tex-math>
+    <mml:math display="inline" xmlns:mml="http://www.w3.org/1998/Math/MathML"><mml:msub><mml:mi>X</mml:mi><mml:mn>2</mml:mn></mml:msub></mml:math></alternatives></inline-formula>.
+    In this scenario <inline-formula><alternatives>
+    <tex-math><![CDATA[X_{2}]]></tex-math>
+    <mml:math display="inline" xmlns:mml="http://www.w3.org/1998/Math/MathML"><mml:msub><mml:mi>X</mml:mi><mml:mn>2</mml:mn></mml:msub></mml:math></alternatives></inline-formula>
+    is a parent node for both <inline-formula><alternatives>
+    <tex-math><![CDATA[X_{1}]]></tex-math>
+    <mml:math display="inline" xmlns:mml="http://www.w3.org/1998/Math/MathML"><mml:msub><mml:mi>X</mml:mi><mml:mn>1</mml:mn></mml:msub></mml:math></alternatives></inline-formula>
+    and <inline-formula><alternatives>
+    <tex-math><![CDATA[X_{3}]]></tex-math>
+    <mml:math display="inline" xmlns:mml="http://www.w3.org/1998/Math/MathML"><mml:msub><mml:mi>X</mml:mi><mml:mn>3</mml:mn></mml:msub></mml:math></alternatives></inline-formula>.
+    Finally, <xref alt="Figure 1 (e)" rid="fig-dag_bb5">Figure 1
+    (e)</xref> illustrates a <italic>collider</italic> (also known as
+    <italic>inmorality</italic>), where variables
+    <inline-formula><alternatives>
+    <tex-math><![CDATA[X_{1}]]></tex-math>
+    <mml:math display="inline" xmlns:mml="http://www.w3.org/1998/Math/MathML"><mml:msub><mml:mi>X</mml:mi><mml:mn>1</mml:mn></mml:msub></mml:math></alternatives></inline-formula>
+    and <inline-formula><alternatives>
+    <tex-math><![CDATA[X_{3}]]></tex-math>
+    <mml:math display="inline" xmlns:mml="http://www.w3.org/1998/Math/MathML"><mml:msub><mml:mi>X</mml:mi><mml:mn>3</mml:mn></mml:msub></mml:math></alternatives></inline-formula>
+    are concurrent causes of <inline-formula><alternatives>
+    <tex-math><![CDATA[X_{2}]]></tex-math>
+    <mml:math display="inline" xmlns:mml="http://www.w3.org/1998/Math/MathML"><mml:msub><mml:mi>X</mml:mi><mml:mn>2</mml:mn></mml:msub></mml:math></alternatives></inline-formula>.
+    In this configuration, <inline-formula><alternatives>
+    <tex-math><![CDATA[X_{1}]]></tex-math>
+    <mml:math display="inline" xmlns:mml="http://www.w3.org/1998/Math/MathML"><mml:msub><mml:mi>X</mml:mi><mml:mn>1</mml:mn></mml:msub></mml:math></alternatives></inline-formula>
+    and <inline-formula><alternatives>
+    <tex-math><![CDATA[X_{3}]]></tex-math>
+    <mml:math display="inline" xmlns:mml="http://www.w3.org/1998/Math/MathML"><mml:msub><mml:mi>X</mml:mi><mml:mn>3</mml:mn></mml:msub></mml:math></alternatives></inline-formula>
+    are not causally related to each other but both influence
+    <inline-formula><alternatives>
+    <tex-math><![CDATA[X_{2}]]></tex-math>
+    <mml:math display="inline" xmlns:mml="http://www.w3.org/1998/Math/MathML"><mml:msub><mml:mi>X</mml:mi><mml:mn>2</mml:mn></mml:msub></mml:math></alternatives></inline-formula>.
+    Given the heuristic nature of DAGs, the use of fundamental building
+    block to construct a causal structure of a system is easier to
+    understand using a motivating example. The motivating example can
+    also serve to point out about other conventions when using DAGs.</p>
+    <fig id="fig-dags">
+      <caption><p>Figure 1: DAG’s fundamental building
+      blocks.</p></caption>
+      <table-wrap>
+        <table>
+          <colgroup>
+            <col width="50%" />
+            <col width="50%" />
+          </colgroup>
+          <tbody>
+            <tr>
+              <td align="left"><p specific-use="wrapper">
+                <boxed-text>
+                  <fig id="fig-dag_bb1">
+                    <caption><p>(a) Two unconnected nodes</p></caption>
+                    <graphic mimetype="image" mime-subtype="png" xlink:href="images/figures/dag_bb1.png" />
+                  </fig>
+                </boxed-text>
+              </p></td>
+              <td align="left"><p specific-use="wrapper">
+                <boxed-text>
+                  <fig id="fig-dag_bb2">
+                    <caption><p>(b) Two connected nodes or
+                    descendant</p></caption>
+                    <graphic mimetype="image" mime-subtype="png" xlink:href="images/figures/dag_bb2.png" />
+                  </fig>
+                </boxed-text>
+              </p></td>
+            </tr>
+          </tbody>
+        </table>
+      </table-wrap>
+      <table-wrap>
+        <table>
+          <colgroup>
+            <col width="33%" />
+            <col width="33%" />
+            <col width="33%" />
+          </colgroup>
+          <tbody>
+            <tr>
+              <td align="left"><p specific-use="wrapper">
+                <boxed-text>
+                  <fig id="fig-dag_bb3">
+                    <caption><p>(c) Chain or pipe</p></caption>
+                    <graphic mimetype="image" mime-subtype="png" xlink:href="images/figures/dag_bb3.png" />
+                  </fig>
+                </boxed-text>
+              </p></td>
+              <td align="left"><p specific-use="wrapper">
+                <boxed-text>
+                  <fig id="fig-dag_bb4">
+                    <caption><p>(d) Fork</p></caption>
+                    <graphic mimetype="image" mime-subtype="png" xlink:href="images/figures/dag_bb4.png" />
+                  </fig>
+                </boxed-text>
+              </p></td>
+              <td align="left"><p specific-use="wrapper">
+                <boxed-text>
+                  <fig id="fig-dag_bb5">
+                    <caption><p>(e) Collider or inmorality</p></caption>
+                    <graphic mimetype="image" mime-subtype="png" xlink:href="images/figures/dag_bb5.png" />
+                  </fig>
+                </boxed-text>
+              </p></td>
+            </tr>
+          </tbody>
+        </table>
+      </table-wrap>
+    </fig>
+    <p>Consider a system where variables <inline-formula><alternatives>
     <tex-math><![CDATA[X]]></tex-math>
     <mml:math display="inline" xmlns:mml="http://www.w3.org/1998/Math/MathML"><mml:mi>X</mml:mi></mml:math></alternatives></inline-formula>
     and <inline-formula><alternatives>
@@ -512,10 +705,10 @@ the University of Antwerp (BOF).</funding-statement>
     <tex-math><![CDATA[Z]]></tex-math>
     <mml:math display="inline" xmlns:mml="http://www.w3.org/1998/Math/MathML"><mml:mi>Z</mml:mi></mml:math></alternatives></inline-formula>
     are dependent on their own processes and are, therefore, independent
-    from each other. <xref alt="Figure 1 (a)" rid="fig-dag1a">Figure 1
-    (a)</xref> presents the plausible causal structure of this system.
-    The DAG shows the endogenous variables
-    <inline-formula><alternatives>
+    from each other.
+    <xref alt="Figure 2 (a)" rid="fig-dag_example1">Figure 2 (a)</xref>
+    presents the plausible causal structure of this system. The DAG
+    shows the endogenous variables <inline-formula><alternatives>
     <tex-math><![CDATA[V=\{X,Z,Y\}]]></tex-math>
     <mml:math display="inline" xmlns:mml="http://www.w3.org/1998/Math/MathML"><mml:mrow><mml:mi>V</mml:mi><mml:mo>=</mml:mo><mml:mo stretchy="false" form="prefix">{</mml:mo><mml:mi>X</mml:mi><mml:mo>,</mml:mo><mml:mi>Z</mml:mi><mml:mo>,</mml:mo><mml:mi>Y</mml:mi><mml:mo stretchy="false" form="postfix">}</mml:mo></mml:mrow></mml:math></alternatives></inline-formula>
     as circled black nodes, indicating these variables are observed. The
@@ -531,9 +724,10 @@ the University of Antwerp (BOF).</funding-statement>
     circles to indicate their unobserved nature. Although this DAG
     explicitly shows the exogenous variables, conventionally these are
     omitted for brevity, resulting in an equivalent graph as shown in
-    <xref alt="Figure 1 (b)" rid="fig-dag1b">Figure 1 (b)</xref>.</p>
-    <fig id="fig-dags">
-      <caption><p>Figure 1: DAGs for a plausible causal structure in a
+    <xref alt="Figure 2 (b)" rid="fig-dag_example2">Figure 2
+    (b)</xref>.</p>
+    <fig id="fig-example">
+      <caption><p>Figure 2: DAGs for a plausible causal structure in a
       system.</p></caption>
       <table-wrap>
         <table>
@@ -545,17 +739,17 @@ the University of Antwerp (BOF).</funding-statement>
             <tr>
               <td align="left"><p specific-use="wrapper">
                 <boxed-text>
-                  <fig id="fig-dag1a">
+                  <fig id="fig-dag_example1">
                     <caption><p>(a) Full DAG</p></caption>
-                    <graphic mimetype="image" mime-subtype="png" xlink:href="images/figures/dag1a.png" />
+                    <graphic mimetype="image" mime-subtype="png" xlink:href="images/figures/dag_example1.png" />
                   </fig>
                 </boxed-text>
               </p></td>
               <td align="left"><p specific-use="wrapper">
                 <boxed-text>
-                  <fig id="fig-dag1b">
+                  <fig id="fig-dag_example2">
                     <caption><p>(b) Simplified DAG</p></caption>
-                    <graphic mimetype="image" mime-subtype="png" xlink:href="images/figures/dag1b.png" />
+                    <graphic mimetype="image" mime-subtype="png" xlink:href="images/figures/dag_example2.png" />
                   </fig>
                 </boxed-text>
               </p></td>
@@ -564,8 +758,11 @@ the University of Antwerp (BOF).</funding-statement>
         </table>
       </table-wrap>
     </fig>
+  </sec>
+  <sec id="sec-framework-flow">
+    <title>The flow of association and causation in graphs</title>
     <fig id="fig-ACflow">
-      <caption><p>Figure 2: The flow of association and causation in
+      <caption><p>Figure 3: The flow of association and causation in
       graphs. Extracted from Neal
       (<xref alt="2020, 31" rid="ref-Neal_2020" ref-type="bibr">2020,
       31</xref>)</p></caption>
@@ -575,7 +772,7 @@ the University of Antwerp (BOF).</funding-statement>
   <sec id="sec-background-where">
     <title>But where does it all fit?</title>
     <fig id="fig-IEflow">
-      <caption><p>Figure 3: Identification-Estimation flowchart.
+      <caption><p>Figure 4: Identification-Estimation flowchart.
       Extracted from Neal
       (<xref alt="2020, 32" rid="ref-Neal_2020" ref-type="bibr">2020,
       32</xref>)</p></caption>
@@ -584,26 +781,26 @@ the University of Antwerp (BOF).</funding-statement>
   </sec>
 </sec>
 <sec id="sec-theory">
-  <title>Theoretical framework</title>
+  <title>Theory</title>
   <sec id="sec-theory-scientific">
     <title>A scientific model for the DCJ</title>
     <fig id="fig-SciModel_simp1">
-      <caption><p>Figure 4: DCJ causal diagram, simplified
+      <caption><p>Figure 5: DCJ causal diagram, simplified
       description</p></caption>
       <graphic mimetype="image" mime-subtype="png" xlink:href="images/figures/SciModel_simp1.png" />
     </fig>
     <fig id="fig-SciModel_simp2">
-      <caption><p>Figure 5: DCJ causal diagram, simplified mathematical
+      <caption><p>Figure 6: DCJ causal diagram, simplified mathematical
       description</p></caption>
       <graphic mimetype="image" mime-subtype="png" xlink:href="images/figures/SciModel_simp2.png" />
     </fig>
     <fig id="fig-SciModel_pop">
-      <caption><p>Figure 6: DCJ causal diagram, population mathematical
+      <caption><p>Figure 7: DCJ causal diagram, population mathematical
       description</p></caption>
       <graphic mimetype="image" mime-subtype="png" xlink:href="images/figures/SciModel_pop.png" />
     </fig>
     <fig id="fig-SciModel_samp">
-      <caption><p>Figure 7: DCJ causal diagram, sample with comparisons
+      <caption><p>Figure 8: DCJ causal diagram, sample with comparisons
       mathematical description</p></caption>
       <graphic mimetype="image" mime-subtype="png" xlink:href="images/figures/SciModel_samp.png" />
     </fig>
