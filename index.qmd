@@ -115,12 +115,13 @@ keywords:
   - causal analysis
   - probabilistic statistics
 abstract: |
-  Dichotomous Comparative Judgment (DCJ) requires judges to compare pairs of stimuli to determine which one exhibits a higher degree of a specific trait. DCJ has proven effective and reliable across various fields [@Pollitt_2012b; @Jones_2015; @vanDaal_et_al_2016; @Bartholomew_et_al_2018; @Lesterhuis_2018; @Bartholomew_et_al_2020; @Marshall_et_al_2020; @Boonen_et_al_2020]. However, despite the method's widespread use, existing literature lacks a clear explanation of the complexities and assumptions underpinning the DCJ system, as well as the plausible mechanisms through which DCJ data could be generated. This study addresses these issues by representing DCJ within the framework of causal inference. Specifically, utilizing the structural approach, the study develops a scientific model to clarify the causal assumptions and mechanisms inherent in the DCJ system. It then translates this model into a probabilistic statistical framework to estimate statistical relationships and infer causal effects within the system. This research provides a robust probabilistic foundation for the statistical analysis of DCJ data, building upon Thurstone’s law of comparative judgment [-@Thurstone_1927]. Its findings offer valuable insights for researchers and analysts designing and implementing DCJ experiments.
+  Dichotomous Comparative Judgment (DCJ) requires judges to compare pairs of stimuli to determine which one exhibits a higher degree of a specific trait. DCJ has proven effective and reliable across various fields [@Pollitt_2012b; @Jones_2015; @vanDaal_et_al_2016; @Bartholomew_et_al_2018; @Lesterhuis_2018; @Bartholomew_et_al_2020; @Marshall_et_al_2020; @Boonen_et_al_2020]. However, despite the method's widespread use, existing literature lacks a clear explanation of the complexities and assumptions underpinning the DCJ system, as well as the plausible mechanisms through which DCJ data could be generated. This study addresses these issues by representing DCJ within the framework of causal inference. Specifically, utilizing the structural approach, the study develops a scientific model to clarify plausible causal assumptions and mechanisms inherent in the DCJ system. The study then translates this model into a probabilistic statistical framework to estimate statistical relationships and infer causal effects within the system. This research provides a robust probabilistic foundation for the statistical analysis of DCJ data, building upon Thurstone’s law of comparative judgment [-@Thurstone_1927]. Its findings offer valuable insights for researchers and analysts designing and implementing DCJ experiments.
 key-points:
   - (to do)
 date: last-modified
 bibliography: references.bib
 notebook-links: global
+lightbox: true
 citation: true
   # type: article-journal
   # container-title: "Psychometrika"
@@ -149,21 +150,21 @@ DCJ has proven effective in assessing competencies and traits predominantly with
 According to @Verhavert_et_al_2019 and @vanDaal_2020, several assessment factors interact and influence the method's outcome. These factors include the number and characteristics of the stimuli, their *proximity* in terms of the assessed trait, the number of comparison per stimulus, and the pairing algorithm used. Furthermore, since the method relies on judges' assessments, the number and characteristics of judges, their *discrimination* abilities, and the number of comparisons per judge also play pivotal roles. Moreover, when the stimuli represent sub-units of higher-levels units, factors such as the number and characteristics of these units, along with their *proximity* in terms of the assessed trait, can significantly influence the outcome. For instance, @vanDaal_et_al_2016 assessed academic writing skills of university students (units) using multiple argumentative essays (sub-units).
 
 <!-- 4. Solution to the gap -->
-Although several studies have examined the individual impact of these factors on the method's reliability [@Bramley_2015; @Pollitt_2012b; @Bramley_et_al_2019; @Verhavert_et_al_2019; @Crompvoets_et_al_2022; @vanDaal_et_al_2017; @Gijsen_et_al_2021], none, to the best of the authors' knowledge, have provided a transparent depiction of the DCJ system and the mechanisms generating the DCJ outcome. This study aims to fill this gap by representing DCJ within the framework of causal inference. Specifically, utilizing the structural approach [@Wright_1921; @Pearl_2009; @Pearl_et_al_2016], the study develops a scientific model to clarify the causal assumptions and mechanisms inherent in the DCJ system. Next, using a minimal set of assumptions, the study translates the scientific model into a probabilistic statistical model. This model aims to produce statistical estimates to draw inferences about plausible causal relationships within the DCJ system. 
+Although several studies have examined the individual impact of these factors on the method's reliability [@Bramley_2015; @Pollitt_2012b; @Bramley_et_al_2019; @Verhavert_et_al_2019; @Crompvoets_et_al_2022; @vanDaal_et_al_2017; @Gijsen_et_al_2021], none, to the best of the authors' knowledge, have provided a transparent depiction of the DCJ system and the mechanisms generating the DCJ outcome. This study aims to fill this gap by representing DCJ within the framework of causal inference. Specifically, utilizing the structural approach [@Wright_1921; @Pearl_2009; @Pearl_et_al_2016], the study develops a scientific model to clarify plausible causal assumptions and mechanisms inherent in the DCJ system. The study then translates the scientific model into a probabilistic statistical model. This model aims to produce statistical estimates to draw inferences about plausible causal relationships within the DCJ system. 
 
 <!-- 5. final objective and relevance -->
 Ultimately, this research provides a robust probabilistic foundation for the statistical analysis of DCJ data, building upon Thurstone’s law of comparative judgment [-@Thurstone_1927]. Consequently, its findings offer valuable insights for researchers and analysts designing and implementing DCJ experiments.
 
 
-# Theoretical background {#sec-background}
+# Theoretical framework {#sec-framework}
 
-## The structural approach to causal inference {#sec-background-structural}
+## The structural approach to causal inference {#sec-framework-structural}
 
 <!-- 1. What is causal inference? -->
 In statistics, *causal inference* refers to the process of identifying the causes of a phenomenon and estimating their effects using data [@Shaughnessy_et_al_2010; @Neal_2020]. Unlike classical statistical modeling, which focuses solely on summarizing data and inferring associations, causal inference provides a coherent mathematical notation for analyzing causes and counterfactuals [@Pearl_2009]. 
 
 <!-- 2. what are counterfactuals? -->
-Counterfactuals represent scenarios *contrary to fact*, where alternative *potential* outcomes resulting from a cause are neither observed nor observable [@Neal_2020; @Counterfactual_2024]. According to @Pearl_et_al_2018, counterfactuals form the foundation of causal inference and occupy the highest level of cognitive abstraction in the ladder of causation, followed by intervention and association. Despite this abstract nature, counterfactuals enable the development of a *theory of the world* that explains why specific causes have specific effects and what occurs in their absence [@Pearl_et_al_2018]. They achieve this by translating causal statements into counterfactual statements, that is, statements about "what would have happened in the world under different circumstances."
+Counterfactuals represent scenarios *contrary to fact*, where alternative *potential* outcomes resulting from a cause are neither observed nor observable [@Neal_2020; @Counterfactual_2024]. According to @Pearl_et_al_2018, counterfactuals form the foundation of causal inference and occupy the highest level of cognitive abstraction in the ladder of causation, followed by intervention and association. Nevertheless, despite their abstract nature, counterfactuals enable the development of a *theory of the world* that explains why specific causes have specific effects and what occurs in their absence [@Pearl_et_al_2018]. They achieve this by translating causal statements into counterfactual statements, that is, statements about "what would have happened in the world under different circumstances."
 
 <!-- 3. How do we apply causal inference and counterfactuals? -->
 Several approaches to causal inference and counterfactuals exist, but two are particularly prominent: the potential outcomes approach, also known as the Neyman-Rubin causal model [@Neyman_et_al_1923; @Rubin_1974], and the structural approach [@Wright_1921; @Pearl_2009; @Pearl_et_al_2016]. Both approaches employ rigorous mathematical notation to characterize causal inference, but they do so in different ways [@Neal_2020]. The potential outcomes approach relies on counterfactual notation, whereas the structural approach employs the do-operator and structural causal models [SCM, @Pearl_2009; @Pearl_et_al_2016]. Despite these differences, both notations can be expressed in terms of the other, and both approaches provide methods for using experimental and observational data to estimate causal effects [@Pearl_2010]. 
@@ -173,33 +174,52 @@ Nevertheless, the structural approach offers an additional key advantage over th
 
 <!-- A Directed Acyclic Graph (DAG) allows for the transparent depiction of a system’s complexity, revealing its underlying assumptions and the plausible mechanisms generating the system’s outcome, assuming the DAG is true.  -->
 
-## DAGs, SCMs, and the flow of association and causation in graphs {#sec-background-dag}
+## Directed acyclic graphs (DAG) {#sec-framework-dag}
 
 <!-- 1. Graph theory and the use of graphs -->
 Graph theory is a branch of mathematics focused on the study of graphs. Graphs are mathematical structures that model pairwise relations between objects. They can represent physical relations, such as electrical circuits and roadways, and less tangible structures, such as ecosystems and sociological relations. Graphs have proven useful in various fields, including computer science, operations research, and the natural and social sciences [@Gross_et_al_2018].
 
 <!-- 2. How graphs are use in the structural approach? and what are DAGs? -->
-In statistics, one application that incorporates concepts from graph theory is causal inference. Specifically, the structural approach to causal inference uses DAGs to provide a formal and graphical representation of a system's causal structure [@Neal_2020]. In this context, a graph is a collection of nodes connected by edges, where nodes represent random variables. In a directed graph, edges extend from one node to another, with arrows indicating the direction of causal influence. In a directed acyclic graph, the direction of causal influences does not form a loop, ensuring that causal influences do not cycle back on themselves [@McElreath_2020].
+In statistics, one application that incorporates concepts from graph theory is causal inference. Specifically, the structural approach to causal inference uses directed acyclic graphs (DAG) to provide a formal and graphical representation of a system's causal structure [@Neal_2020]. In this context, a *graph* is a collection of nodes connected by edges, where nodes represent random variables. The term *directed* indicates that the edges of the graph extend from a *parent* node to a *child* node, with arrows showing the direction of causal influence. The term *acyclic* indicates that the direction of causal influences does not form a loop, ensuring that the influences do not cycle back on themselves [@McElreath_2020].
 
+<!-- 3. How do we draw DAGs? -->
+A key advantage of DAGs is that, regardless of the complexity of the causal structure, these structures can be composed using a minimal set of building blocks. Moreover, representing any complex structure requires only five fundamental building blocks [@Neal_2020; @McElreath_2020]. These advantages imply that a researcher seeking to depict and understand the causal assumptions of a complex system only needs to decompose the structure into these basic building blocks and then analyze the causal assumptions associated with each block [@McElreath_2020].
 
-<!-- 8. What are the DAG's building blocks?
-<!-- Ultimately, DAGs play the important role of identifying which variables should be controlled for to be able to estimate causal effects. -->
+<!-- 4. What are DAG's building blocks?  -->
+@fig-dags presents the five fundamental building blocks of any DAG. @fig-dag_bb1 illustrates two unconnected nodes, representing an scenario where variables $X_{1}$ and $X_{2}$ are not causally related. @fig-dag_bb2 shows two connected nodes, depicting an scenario where a *parent* node $X_{1}$ has a causal influence on a *child* node $X_{2}$. This implies that variable $X_{2}$ is a *descendant* of $X_{1}$. @fig-dag_bb3 illustrates a *chain* (or *pipe*), where $X_{1}$ influences $X_{2}$, and $X_{2}$ influences $X_{3}$. This DAG indicates that $X_{1}$ is a parent node of $X_{2}$, and $X_{2}$ is a parent node $X_{3}$. Furthermore, it shows that $X_{1}$ is an *ancestor* of $X_{3}$, with the relationship between the two variables being mediated entirely by $X_{2}$. @fig-dag_bb4 depicts a *fork*, illustrating an scenario where variables $X_{1}$ and $X_{3}$ are both influenced by $X_{2}$. In this scenario $X_{2}$ is a parent node for both $X_{1}$ and $X_{3}$. Finally, @fig-dag_bb5 illustrates a *collider* (also known as *inmorality*), where variables $X_{1}$ and $X_{3}$ are concurrent causes of $X_{2}$. In this configuration, $X_{1}$ and $X_{3}$ are not causally related to each other but both influence $X_{2}$. Given the heuristic nature of DAGs, the use of fundamental building block to construct a causal structure of a system is easier to understand using a motivating example. The motivating example can also serve to point out about other conventions when using DAGs.
+
+::: {#fig-dags layout="[[1,1],[1,1,1]]"}
+
+![Two unconnected nodes](images/figures/dag_bb1.png){#fig-dag_bb1 fig-align="center" width=40%}
+
+![Two connected nodes or descendant](images/figures/dag_bb2.png){#fig-dag_bb2 fig-align="center" width=40%}
+
+![Chain or pipe](images/figures/dag_bb3.png){#fig-dag_bb3 fig-align="center" width=100%}
+
+![Fork](images/figures/dag_bb4.png){#fig-dag_bb4 fig-align="center" width=100%}
+
+![Collider or inmorality](images/figures/dag_bb5.png){#fig-dag_bb5 fig-align="center" width=100%}
+
+DAG's fundamental building blocks.
+:::
 
 <!-- 4. A motivating example -->
-Given the heuristic nature of DAGs, these are easier to understand using a motivating example. Consider a system where variables $X$ and $Z$ influence a third variable $Y$. In this system, it is assumed that $X$ and $Z$ are dependent on their own processes and are, therefore, independent from each other. @fig-dag1a presents the plausible causal structure of this system. The DAG shows the endogenous variables $V=\{X,Z,Y\}$ as circled black nodes, indicating these variables are observed. The arrows connecting the variables indicate the direction of causal influence, while a lack of influence is indicated by the absence of arrows. Moreover, the exogenous variables $E=\{e_{X},e_{Z},e_{Y}\}$ represent everything else that is chosen not to be modeled explicitly. These exogenous variables, or *disturbances*, are usually represented by open circles to indicate their unobserved nature. Although this DAG explicitly shows the exogenous variables, conventionally these are omitted for brevity, resulting in an equivalent graph as shown in @fig-dag1b [@Cinelli_et_al_2020].
+Consider a system where variables $X$ and $Z$ influence a third variable $Y$. In this system, it is assumed that $X$ and $Z$ are dependent on their own processes and are, therefore, independent from each other. @fig-dag_example1 presents the plausible causal structure of this system. The DAG shows the endogenous variables $V=\{X,Z,Y\}$ as circled black nodes, indicating these variables are observed. The arrows connecting the variables indicate the direction of causal influence, while a lack of influence is indicated by the absence of arrows. Moreover, the exogenous variables $E=\{e_{X},e_{Z},e_{Y}\}$ represent everything else that is chosen not to be modeled explicitly. These exogenous variables, or *disturbances*, are usually represented by open circles to indicate their unobserved nature. Although this DAG explicitly shows the exogenous variables, conventionally these are omitted for brevity, resulting in an equivalent graph as shown in @fig-dag_example2 [@Cinelli_et_al_2020].
 
 <!-- emphasize that everything can be observed -->
 <!-- change the motivating example to include all building blocks  -->
 
-::: {#fig-dags layout-ncol=2}
+::: {#fig-example layout-ncol=2}
 
-![Full DAG](images/figures/dag1a.png){#fig-dag1a fig-align="center" width=90%}
+![Full DAG](images/figures/dag_example1.png){#fig-dag_example1 fig-align="center" width=100%}
 
-![Simplified DAG](images/figures/dag1b.png){#fig-dag1b fig-align="center" width=35%}
+![Simplified DAG](images/figures/dag_example2.png){#fig-dag_example2 fig-align="center" width=40%}
 
 DAGs for a plausible causal structure in a system.
 :::
 
+
+## The flow of association and causation in graphs {#sec-framework-flow}
 
 <!-- 2. What does a DAG imply? -->
 <!-- Structural Causal Model (SCM) -->
@@ -234,7 +254,7 @@ DAGs for a plausible causal structure in a system.
 
 <!-- 9.2 d-separation -->
 
-
+<!-- Ultimately, DAGs play the important role of identifying which variables should be controlled for to be able to estimate causal effects. -->
 
 
 
@@ -259,7 +279,7 @@ DAGs for a plausible causal structure in a system.
 
 
 
-# Theoretical framework {#sec-theory}
+# Theory {#sec-theory}
 
 ## A scientific model for the DCJ {#sec-theory-scientific}
 
