@@ -481,40 +481,31 @@ the University of Antwerp (BOF).</funding-statement>
     operations research, and the natural and social sciences
     (<xref alt="Gross, Yellen, and Anderson 2018" rid="ref-Gross_et_al_2018" ref-type="bibr">Gross,
     Yellen, and Anderson 2018</xref>).</p>
-    <p>In statistics, one application that incorporates concepts from
-    graph theory is causal inference. Specifically, the structural
-    approach to causal inference uses directed acyclic graphs (DAG) to
-    provide a formal and graphical representation of a system’s causal
-    structure
+    <p>In statistics, one application incorporating concepts from graph
+    theory is causal inference. Specifically, the structural approach to
+    causal inference uses directed acyclic graphs (DAG) to provide a
+    formal and graphical representation of the causal structure of a
+    system
     (<xref alt="Neal 2020" rid="ref-Neal_2020" ref-type="bibr">Neal
     2020</xref>). In this context, a <italic>graph</italic> is a
     collection of nodes connected by edges, where nodes represent random
     variables. The term <italic>directed</italic> indicates that the
-    edges of the graph extend from a <italic>parent</italic> node to a
-    <italic>child</italic> node, with arrows showing the direction of
-    causal influence. The term <italic>acyclic</italic> indicates that
-    the direction of causal influences does not form a loop, ensuring
-    that the influences do not cycle back on themselves
+    edges of the graph extend from one node to another, with arrows
+    showing the direction of causal influence. Moreover, the term
+    <italic>acyclic</italic> indicates the causal influences do not form
+    a loop, meaning the influences do not cycle back on themselves
     (<xref alt="McElreath 2020" rid="ref-McElreath_2020" ref-type="bibr">McElreath
     2020</xref>).</p>
-    <p>A key advantage of DAGs is that, regardless of the complexity of
-    the causal structure, these structures can be composed using a
-    minimal set of building blocks. Moreover, representing any complex
-    structure requires only five fundamental building blocks
+    <p>Regardless of complexity, DAGs can represent various causal
+    structures using only five fundamental building blocks
     (<xref alt="Neal 2020" rid="ref-Neal_2020" ref-type="bibr">Neal
     2020</xref>;
     <xref alt="McElreath 2020" rid="ref-McElreath_2020" ref-type="bibr">McElreath
-    2020</xref>). These advantages imply that a researcher seeking to
-    depict and understand the causal assumptions of a complex system
-    only needs to decompose the structure into these basic building
-    blocks and then analyze the causal assumptions associated with each
-    block
-    (<xref alt="McElreath 2020" rid="ref-McElreath_2020" ref-type="bibr">McElreath
-    2020</xref>).</p>
-    <p><xref alt="Figure 1" rid="fig-dags">Figure 1</xref> presents the
-    five fundamental building blocks of any DAG.
+    2020</xref>). Each panel of
+    <xref alt="Figure 1" rid="fig-dags">Figure 1</xref> illustrates
+    these building blocks.
     <xref alt="Figure 1 (a)" rid="fig-dag_bb1">Figure 1 (a)</xref>
-    illustrates two unconnected nodes, representing an scenario where
+    depicts two unconnected nodes, representing an scenario where
     variables <inline-formula><alternatives>
     <tex-math><![CDATA[X_{1}]]></tex-math>
     <mml:math display="inline" xmlns:mml="http://www.w3.org/1998/Math/MathML"><mml:msub><mml:mi>X</mml:mi><mml:mn>1</mml:mn></mml:msub></mml:math></alternatives></inline-formula>
@@ -523,23 +514,24 @@ the University of Antwerp (BOF).</funding-statement>
     <mml:math display="inline" xmlns:mml="http://www.w3.org/1998/Math/MathML"><mml:msub><mml:mi>X</mml:mi><mml:mn>2</mml:mn></mml:msub></mml:math></alternatives></inline-formula>
     are not causally related.
     <xref alt="Figure 1 (b)" rid="fig-dag_bb2">Figure 1 (b)</xref> shows
-    two connected nodes, depicting an scenario where a
-    <italic>parent</italic> node <inline-formula><alternatives>
+    two connected nodes, illustrating a scenario where a parent node
+    <inline-formula><alternatives>
     <tex-math><![CDATA[X_{1}]]></tex-math>
     <mml:math display="inline" xmlns:mml="http://www.w3.org/1998/Math/MathML"><mml:msub><mml:mi>X</mml:mi><mml:mn>1</mml:mn></mml:msub></mml:math></alternatives></inline-formula>
-    has a causal influence on a <italic>child</italic> node
+    exerts a causal influence on a child node
     <inline-formula><alternatives>
     <tex-math><![CDATA[X_{2}]]></tex-math>
     <mml:math display="inline" xmlns:mml="http://www.w3.org/1998/Math/MathML"><mml:msub><mml:mi>X</mml:mi><mml:mn>2</mml:mn></mml:msub></mml:math></alternatives></inline-formula>.
-    This implies that variable <inline-formula><alternatives>
+    Consequently, <inline-formula><alternatives>
     <tex-math><![CDATA[X_{2}]]></tex-math>
     <mml:math display="inline" xmlns:mml="http://www.w3.org/1998/Math/MathML"><mml:msub><mml:mi>X</mml:mi><mml:mn>2</mml:mn></mml:msub></mml:math></alternatives></inline-formula>
-    is a <italic>descendant</italic> of <inline-formula><alternatives>
+    is considered a <italic>descendant</italic> of
+    <inline-formula><alternatives>
     <tex-math><![CDATA[X_{1}]]></tex-math>
     <mml:math display="inline" xmlns:mml="http://www.w3.org/1998/Math/MathML"><mml:msub><mml:mi>X</mml:mi><mml:mn>1</mml:mn></mml:msub></mml:math></alternatives></inline-formula>.
     <xref alt="Figure 1 (c)" rid="fig-dag_bb3">Figure 1 (c)</xref>
-    illustrates a <italic>chain</italic> (or <italic>pipe</italic>),
-    where <inline-formula><alternatives>
+    depicts a <italic>chain</italic> (or <italic>pipe</italic>), where
+    <inline-formula><alternatives>
     <tex-math><![CDATA[X_{1}]]></tex-math>
     <mml:math display="inline" xmlns:mml="http://www.w3.org/1998/Math/MathML"><mml:msub><mml:mi>X</mml:mi><mml:mn>1</mml:mn></mml:msub></mml:math></alternatives></inline-formula>
     influences <inline-formula><alternatives>
@@ -551,7 +543,7 @@ the University of Antwerp (BOF).</funding-statement>
     influences <inline-formula><alternatives>
     <tex-math><![CDATA[X_{3}]]></tex-math>
     <mml:math display="inline" xmlns:mml="http://www.w3.org/1998/Math/MathML"><mml:msub><mml:mi>X</mml:mi><mml:mn>3</mml:mn></mml:msub></mml:math></alternatives></inline-formula>.
-    This DAG indicates that <inline-formula><alternatives>
+    In this configuration, <inline-formula><alternatives>
     <tex-math><![CDATA[X_{1}]]></tex-math>
     <mml:math display="inline" xmlns:mml="http://www.w3.org/1998/Math/MathML"><mml:msub><mml:mi>X</mml:mi><mml:mn>1</mml:mn></mml:msub></mml:math></alternatives></inline-formula>
     is a parent node of <inline-formula><alternatives>
@@ -560,22 +552,22 @@ the University of Antwerp (BOF).</funding-statement>
     and <inline-formula><alternatives>
     <tex-math><![CDATA[X_{2}]]></tex-math>
     <mml:math display="inline" xmlns:mml="http://www.w3.org/1998/Math/MathML"><mml:msub><mml:mi>X</mml:mi><mml:mn>2</mml:mn></mml:msub></mml:math></alternatives></inline-formula>
-    is a parent node <inline-formula><alternatives>
+    a parent node of <inline-formula><alternatives>
     <tex-math><![CDATA[X_{3}]]></tex-math>
     <mml:math display="inline" xmlns:mml="http://www.w3.org/1998/Math/MathML"><mml:msub><mml:mi>X</mml:mi><mml:mn>3</mml:mn></mml:msub></mml:math></alternatives></inline-formula>.
-    Furthermore, it shows that <inline-formula><alternatives>
+    Furthermore, the DAG shows that <inline-formula><alternatives>
     <tex-math><![CDATA[X_{1}]]></tex-math>
     <mml:math display="inline" xmlns:mml="http://www.w3.org/1998/Math/MathML"><mml:msub><mml:mi>X</mml:mi><mml:mn>1</mml:mn></mml:msub></mml:math></alternatives></inline-formula>
     is an <italic>ancestor</italic> of <inline-formula><alternatives>
     <tex-math><![CDATA[X_{3}]]></tex-math>
     <mml:math display="inline" xmlns:mml="http://www.w3.org/1998/Math/MathML"><mml:msub><mml:mi>X</mml:mi><mml:mn>3</mml:mn></mml:msub></mml:math></alternatives></inline-formula>,
-    with the relationship between the two variables being mediated
-    entirely by <inline-formula><alternatives>
+    and that the relationship between these variables is entirely
+    mediated by <inline-formula><alternatives>
     <tex-math><![CDATA[X_{2}]]></tex-math>
     <mml:math display="inline" xmlns:mml="http://www.w3.org/1998/Math/MathML"><mml:msub><mml:mi>X</mml:mi><mml:mn>2</mml:mn></mml:msub></mml:math></alternatives></inline-formula>.
     <xref alt="Figure 1 (d)" rid="fig-dag_bb4">Figure 1 (d)</xref>
-    depicts a <italic>fork</italic>, illustrating an scenario where
-    variables <inline-formula><alternatives>
+    illustrates a <italic>fork</italic>, where variables
+    <inline-formula><alternatives>
     <tex-math><![CDATA[X_{1}]]></tex-math>
     <mml:math display="inline" xmlns:mml="http://www.w3.org/1998/Math/MathML"><mml:msub><mml:mi>X</mml:mi><mml:mn>1</mml:mn></mml:msub></mml:math></alternatives></inline-formula>
     and <inline-formula><alternatives>
@@ -587,15 +579,15 @@ the University of Antwerp (BOF).</funding-statement>
     In this scenario <inline-formula><alternatives>
     <tex-math><![CDATA[X_{2}]]></tex-math>
     <mml:math display="inline" xmlns:mml="http://www.w3.org/1998/Math/MathML"><mml:msub><mml:mi>X</mml:mi><mml:mn>2</mml:mn></mml:msub></mml:math></alternatives></inline-formula>
-    is a parent node for both <inline-formula><alternatives>
+    is a parent node of both <inline-formula><alternatives>
     <tex-math><![CDATA[X_{1}]]></tex-math>
     <mml:math display="inline" xmlns:mml="http://www.w3.org/1998/Math/MathML"><mml:msub><mml:mi>X</mml:mi><mml:mn>1</mml:mn></mml:msub></mml:math></alternatives></inline-formula>
     and <inline-formula><alternatives>
     <tex-math><![CDATA[X_{3}]]></tex-math>
     <mml:math display="inline" xmlns:mml="http://www.w3.org/1998/Math/MathML"><mml:msub><mml:mi>X</mml:mi><mml:mn>3</mml:mn></mml:msub></mml:math></alternatives></inline-formula>.
     Finally, <xref alt="Figure 1 (e)" rid="fig-dag_bb5">Figure 1
-    (e)</xref> illustrates a <italic>collider</italic> (also known as
-    <italic>inmorality</italic>), where variables
+    (e)</xref> depicts a <italic>collider</italic>, also known as
+    <italic>inmorality</italic>, where variables
     <inline-formula><alternatives>
     <tex-math><![CDATA[X_{1}]]></tex-math>
     <mml:math display="inline" xmlns:mml="http://www.w3.org/1998/Math/MathML"><mml:msub><mml:mi>X</mml:mi><mml:mn>1</mml:mn></mml:msub></mml:math></alternatives></inline-formula>
@@ -614,11 +606,7 @@ the University of Antwerp (BOF).</funding-statement>
     are not causally related to each other but both influence
     <inline-formula><alternatives>
     <tex-math><![CDATA[X_{2}]]></tex-math>
-    <mml:math display="inline" xmlns:mml="http://www.w3.org/1998/Math/MathML"><mml:msub><mml:mi>X</mml:mi><mml:mn>2</mml:mn></mml:msub></mml:math></alternatives></inline-formula>.
-    Given the heuristic nature of DAGs, the use of fundamental building
-    block to construct a causal structure of a system is easier to
-    understand using a motivating example. The motivating example can
-    also serve to point out about other conventions when using DAGs.</p>
+    <mml:math display="inline" xmlns:mml="http://www.w3.org/1998/Math/MathML"><mml:msub><mml:mi>X</mml:mi><mml:mn>2</mml:mn></mml:msub></mml:math></alternatives></inline-formula>.</p>
     <fig id="fig-dags">
       <caption><p>Figure 1: DAG’s fundamental building
       blocks.</p></caption>
@@ -689,7 +677,11 @@ the University of Antwerp (BOF).</funding-statement>
         </table>
       </table-wrap>
     </fig>
-    <p>Consider a system where variables <inline-formula><alternatives>
+    <p>Given the heuristic nature of DAGs, the use of fundamental
+    building block to construct a causal structure of a system is easier
+    to understand using a motivating example. The motivating example can
+    also serve to signal about other conventions when using DAGs.
+    Consider a system where variables <inline-formula><alternatives>
     <tex-math><![CDATA[X]]></tex-math>
     <mml:math display="inline" xmlns:mml="http://www.w3.org/1998/Math/MathML"><mml:mi>X</mml:mi></mml:math></alternatives></inline-formula>
     and <inline-formula><alternatives>

@@ -356,52 +356,41 @@ and sociological relations. Graphs have proven useful in various fields,
 including computer science, operations research, and the natural and
 social sciences \citep{Gross_et_al_2018}.
 
-In statistics, one application that incorporates concepts from graph
-theory is causal inference. Specifically, the structural approach to
-causal inference uses directed acyclic graphs (DAG) to provide a formal
-and graphical representation of a system's causal structure
+In statistics, one application incorporating concepts from graph theory
+is causal inference. Specifically, the structural approach to causal
+inference uses directed acyclic graphs (DAG) to provide a formal and
+graphical representation of the causal structure of a system
 \citep{Neal_2020}. In this context, a \emph{graph} is a collection of
 nodes connected by edges, where nodes represent random variables. The
-term \emph{directed} indicates that the edges of the graph extend from a
-\emph{parent} node to a \emph{child} node, with arrows showing the
-direction of causal influence. The term \emph{acyclic} indicates that
-the direction of causal influences does not form a loop, ensuring that
-the influences do not cycle back on themselves \citep{McElreath_2020}.
+term \emph{directed} indicates that the edges of the graph extend from
+one node to another, with arrows showing the direction of causal
+influence. Moreover, the term \emph{acyclic} indicates the causal
+influences do not form a loop, meaning the influences do not cycle back
+on themselves \citep{McElreath_2020}.
 
-A key advantage of DAGs is that, regardless of the complexity of the
-causal structure, these structures can be composed using a minimal set
-of building blocks. Moreover, representing any complex structure
-requires only five fundamental building blocks
-\citep{Neal_2020, McElreath_2020}. These advantages imply that a
-researcher seeking to depict and understand the causal assumptions of a
-complex system only needs to decompose the structure into these basic
-building blocks and then analyze the causal assumptions associated with
-each block \citep{McElreath_2020}.
-
-Figure~\ref{fig-dags} presents the five fundamental building blocks of
-any DAG. Figure~\ref{fig-dag_bb1} illustrates two unconnected nodes,
-representing an scenario where variables \(X_{1}\) and \(X_{2}\) are not
-causally related. Figure~\ref{fig-dag_bb2} shows two connected nodes,
-depicting an scenario where a \emph{parent} node \(X_{1}\) has a causal
-influence on a \emph{child} node \(X_{2}\). This implies that variable
-\(X_{2}\) is a \emph{descendant} of \(X_{1}\). Figure~\ref{fig-dag_bb3}
-illustrates a \emph{chain} (or \emph{pipe}), where \(X_{1}\) influences
-\(X_{2}\), and \(X_{2}\) influences \(X_{3}\). This DAG indicates that
-\(X_{1}\) is a parent node of \(X_{2}\), and \(X_{2}\) is a parent node
-\(X_{3}\). Furthermore, it shows that \(X_{1}\) is an \emph{ancestor} of
-\(X_{3}\), with the relationship between the two variables being
-mediated entirely by \(X_{2}\). Figure~\ref{fig-dag_bb4} depicts a
-\emph{fork}, illustrating an scenario where variables \(X_{1}\) and
-\(X_{3}\) are both influenced by \(X_{2}\). In this scenario \(X_{2}\)
-is a parent node for both \(X_{1}\) and \(X_{3}\). Finally,
-Figure~\ref{fig-dag_bb5} illustrates a \emph{collider} (also known as
-\emph{inmorality}), where variables \(X_{1}\) and \(X_{3}\) are
+Regardless of complexity, DAGs can represent various causal structures
+using only five fundamental building blocks
+\citep{Neal_2020, McElreath_2020}. Each panel of Figure~\ref{fig-dags}
+illustrates these building blocks. Figure~\ref{fig-dag_bb1} depicts two
+unconnected nodes, representing an scenario where variables \(X_{1}\)
+and \(X_{2}\) are not causally related. Figure~\ref{fig-dag_bb2} shows
+two connected nodes, illustrating a scenario where a parent node
+\(X_{1}\) exerts a causal influence on a child node \(X_{2}\).
+Consequently, \(X_{2}\) is considered a \emph{descendant} of \(X_{1}\).
+Figure~\ref{fig-dag_bb3} depicts a \emph{chain} (or \emph{pipe}), where
+\(X_{1}\) influences \(X_{2}\), and \(X_{2}\) influences \(X_{3}\). In
+this configuration, \(X_{1}\) is a parent node of \(X_{2}\), and
+\(X_{2}\) a parent node of \(X_{3}\). Furthermore, the DAG shows that
+\(X_{1}\) is an \emph{ancestor} of \(X_{3}\), and that the relationship
+between these variables is entirely mediated by \(X_{2}\).
+Figure~\ref{fig-dag_bb4} illustrates a \emph{fork}, where variables
+\(X_{1}\) and \(X_{3}\) are both influenced by \(X_{2}\). In this
+scenario \(X_{2}\) is a parent node of both \(X_{1}\) and \(X_{3}\).
+Finally, Figure~\ref{fig-dag_bb5} depicts a \emph{collider}, also known
+as \emph{inmorality}, where variables \(X_{1}\) and \(X_{3}\) are
 concurrent causes of \(X_{2}\). In this configuration, \(X_{1}\) and
 \(X_{3}\) are not causally related to each other but both influence
-\(X_{2}\). Given the heuristic nature of DAGs, the use of fundamental
-building block to construct a causal structure of a system is easier to
-understand using a motivating example. The motivating example can also
-serve to point out about other conventions when using DAGs.
+\(X_{2}\).
 
 \begin{figure}
 
@@ -469,21 +458,25 @@ serve to point out about other conventions when using DAGs.
 
 \end{figure}%
 
-Consider a system where variables \(X\) and \(Z\) influence a third
-variable \(Y\). In this system, it is assumed that \(X\) and \(Z\) are
-dependent on their own processes and are, therefore, independent from
-each other. Figure~\ref{fig-dag_example1} presents the plausible causal
-structure of this system. The DAG shows the endogenous variables
-\(V=\{X,Z,Y\}\) as circled black nodes, indicating these variables are
-observed. The arrows connecting the variables indicate the direction of
-causal influence, while a lack of influence is indicated by the absence
-of arrows. Moreover, the exogenous variables \(E=\{e_{X},e_{Z},e_{Y}\}\)
-represent everything else that is chosen not to be modeled explicitly.
-These exogenous variables, or \emph{disturbances}, are usually
-represented by open circles to indicate their unobserved nature.
-Although this DAG explicitly shows the exogenous variables,
-conventionally these are omitted for brevity, resulting in an equivalent
-graph as shown in Figure~\ref{fig-dag_example2}.
+Given the heuristic nature of DAGs, the use of fundamental building
+block to construct a causal structure of a system is easier to
+understand using a motivating example. The motivating example can also
+serve to signal about other conventions when using DAGs. Consider a
+system where variables \(X\) and \(Z\) influence a third variable \(Y\).
+In this system, it is assumed that \(X\) and \(Z\) are dependent on
+their own processes and are, therefore, independent from each other.
+Figure~\ref{fig-dag_example1} presents the plausible causal structure of
+this system. The DAG shows the endogenous variables \(V=\{X,Z,Y\}\) as
+circled black nodes, indicating these variables are observed. The arrows
+connecting the variables indicate the direction of causal influence,
+while a lack of influence is indicated by the absence of arrows.
+Moreover, the exogenous variables \(E=\{e_{X},e_{Z},e_{Y}\}\) represent
+everything else that is chosen not to be modeled explicitly. These
+exogenous variables, or \emph{disturbances}, are usually represented by
+open circles to indicate their unobserved nature. Although this DAG
+explicitly shows the exogenous variables, conventionally these are
+omitted for brevity, resulting in an equivalent graph as shown in
+Figure~\ref{fig-dag_example2}.
 
 \begin{figure}
 
