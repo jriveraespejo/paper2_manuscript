@@ -200,10 +200,10 @@ sciences</institution>
 <corresp id="cor-1">JoseManuel.RiveraEspejo@uantwerpen.be</corresp>
 </author-notes>
 
-<pub-date date-type="pub" publication-format="electronic" iso-8601-date="2024-07-30">
+<pub-date date-type="pub" publication-format="electronic" iso-8601-date="2024-07-31">
 <year>2024</year>
 <month>7</month>
-<day>30</day>
+<day>31</day>
 </pub-date>
 
 
@@ -243,9 +243,9 @@ study addresses these issues by representing DCJ within the framework of
 causal inference. Specifically, utilizing the structural approach, the
 study develops a scientific model to clarify plausible causal
 assumptions and mechanisms inherent in the DCJ system. The study then
-translates this model into a probabilistic statistical framework to
-estimate statistical relationships and infer causal effects within the
-system. This research provides a robust probabilistic foundation for the
+translates this model into a probabilistic statistical model to estimate
+statistical relationships and infer causal effects within the system.
+This research provides a robust probabilistic foundation for the
 statistical analysis of DCJ data, building upon Thurstone’s law of
 comparative judgment
 (<xref alt="1927" rid="ref-Thurstone_1927" ref-type="bibr">1927</xref>).
@@ -253,10 +253,13 @@ Its findings offer valuable insights for researchers and analysts
 designing and implementing DCJ experiments.</p>
 </abstract>
 <kwd-group kwd-group-type="author">
+<kwd>causal inference</kwd>
+<kwd>probability</kwd>
+<kwd>Thurstone</kwd>
 <kwd>comparative judgement</kwd>
-<kwd>directed acycilc graph</kwd>
-<kwd>causal analysis</kwd>
-<kwd>probabilistic statistics</kwd>
+<kwd>directed acyclic graph</kwd>
+<kwd>structural causal models</kwd>
+<kwd>statistical modeling</kwd>
 </kwd-group>
 
 
@@ -393,6 +396,41 @@ the University of Antwerp (BOF).</funding-statement>
 </sec>
 <sec id="sec-framework">
   <title>Theoretical framework</title>
+  <p>This section introduces fundamental concepts in causal inference,
+  such as directed acyclic graphs (DAGs), structural causal models
+  (SCMs), and the flow of association and causation in graphs. It is not
+  a comprehensive description of causal inference methods. Readers
+  interested in deeper exploration should consult introductory papers
+  like Pearl
+  (<xref alt="2010" rid="ref-Pearl_2010" ref-type="bibr">2010</xref>),
+  Rohrer
+  (<xref alt="2018" rid="ref-Rohrer_2018" ref-type="bibr">2018</xref>),
+  Pearl
+  (<xref alt="2019" rid="ref-Pearl_2019" ref-type="bibr">2019</xref>),
+  and Cinelli, Forney, and Pearl
+  (<xref alt="2020" rid="ref-Cinelli_et_al_2020" ref-type="bibr">2020</xref>).
+  They may also find introductory books such as Pearl and Mackenzie
+  (<xref alt="2018" rid="ref-Pearl_et_al_2018" ref-type="bibr">2018</xref>),
+  Neal
+  (<xref alt="2020" rid="ref-Neal_2020" ref-type="bibr">2020</xref>) and
+  McElreath
+  (<xref alt="2020" rid="ref-McElreath_2020" ref-type="bibr">2020</xref>)
+  useful. For more advanced study, seminal intermediate papers like
+  Neyman
+  (<xref alt="1923" rid="ref-Neyman_et_al_1923" ref-type="bibr">1923</xref>),
+  Rubin
+  (<xref alt="1974" rid="ref-Rubin_1974" ref-type="bibr">1974</xref>),
+  Spirtes, Glymour, and Scheines
+  (<xref alt="1991" rid="ref-Spirtes_et_al_1991" ref-type="bibr">1991</xref>),
+  and Sekhon
+  (<xref alt="2009" rid="ref-Sekhon_2009" ref-type="bibr">2009</xref>),
+  as well as books such as Pearl
+  (<xref alt="2009" rid="ref-Pearl_2009" ref-type="bibr">2009</xref>),
+  Morgan and Winship
+  (<xref alt="2014" rid="ref-Morgan_et_al_2014" ref-type="bibr">2014</xref>)
+  and Hern’an and Robins
+  (<xref alt="2020" rid="ref-Hernan_et_al_2020" ref-type="bibr">2020</xref>)
+  are recommended.</p>
   <sec id="sec-framework-structural">
     <title>The structural approach to causal inference</title>
     <p>In statistics, <italic>causal inference</italic> refers to the
@@ -496,14 +534,14 @@ the University of Antwerp (BOF).</funding-statement>
     a loop, meaning the influences do not cycle back on themselves
     (<xref alt="McElreath 2020" rid="ref-McElreath_2020" ref-type="bibr">McElreath
     2020</xref>).</p>
-    <p>Regardless of complexity, DAGs can represent various causal
-    structures using only five fundamental building blocks
+    <p>One key advantage of DAGs is that, regardless of complexity, they
+    can represent various causal structures using only five fundamental
+    building blocks
     (<xref alt="Neal 2020" rid="ref-Neal_2020" ref-type="bibr">Neal
     2020</xref>;
     <xref alt="McElreath 2020" rid="ref-McElreath_2020" ref-type="bibr">McElreath
-    2020</xref>). Each panel of
-    <xref alt="Figure 1" rid="fig-dags">Figure 1</xref> illustrates
-    these building blocks.
+    2020</xref>). <xref alt="Figure 1" rid="fig-dags">Figure 1</xref>
+    illustrates these building blocks.
     <xref alt="Figure 1 (a)" rid="fig-dag_bb1">Figure 1 (a)</xref>
     depicts two unconnected nodes, representing an scenario where
     variables <inline-formula><alternatives>
@@ -560,7 +598,7 @@ the University of Antwerp (BOF).</funding-statement>
     <mml:math display="inline" xmlns:mml="http://www.w3.org/1998/Math/MathML"><mml:msub><mml:mi>X</mml:mi><mml:mn>1</mml:mn></mml:msub></mml:math></alternatives></inline-formula>
     is an <italic>ancestor</italic> of <inline-formula><alternatives>
     <tex-math><![CDATA[X_{3}]]></tex-math>
-    <mml:math display="inline" xmlns:mml="http://www.w3.org/1998/Math/MathML"><mml:msub><mml:mi>X</mml:mi><mml:mn>3</mml:mn></mml:msub></mml:math></alternatives></inline-formula>,
+    <mml:math display="inline" xmlns:mml="http://www.w3.org/1998/Math/MathML"><mml:msub><mml:mi>X</mml:mi><mml:mn>3</mml:mn></mml:msub></mml:math></alternatives></inline-formula>
     and that the relationship between these variables is entirely
     mediated by <inline-formula><alternatives>
     <tex-math><![CDATA[X_{2}]]></tex-math>
@@ -677,47 +715,45 @@ the University of Antwerp (BOF).</funding-statement>
         </table>
       </table-wrap>
     </fig>
-    <p>Given the heuristic nature of DAGs, the use of fundamental
-    building block to construct a causal structure of a system is easier
-    to understand using a motivating example. The motivating example can
-    also serve to signal about other conventions when using DAGs.
-    Consider a system where variables <inline-formula><alternatives>
-    <tex-math><![CDATA[X]]></tex-math>
-    <mml:math display="inline" xmlns:mml="http://www.w3.org/1998/Math/MathML"><mml:mi>X</mml:mi></mml:math></alternatives></inline-formula>
-    and <inline-formula><alternatives>
-    <tex-math><![CDATA[Z]]></tex-math>
-    <mml:math display="inline" xmlns:mml="http://www.w3.org/1998/Math/MathML"><mml:mi>Z</mml:mi></mml:math></alternatives></inline-formula>
-    influence a third variable <inline-formula><alternatives>
-    <tex-math><![CDATA[Y]]></tex-math>
-    <mml:math display="inline" xmlns:mml="http://www.w3.org/1998/Math/MathML"><mml:mi>Y</mml:mi></mml:math></alternatives></inline-formula>.
-    In this system, it is assumed that <inline-formula><alternatives>
-    <tex-math><![CDATA[X]]></tex-math>
-    <mml:math display="inline" xmlns:mml="http://www.w3.org/1998/Math/MathML"><mml:mi>X</mml:mi></mml:math></alternatives></inline-formula>
-    and <inline-formula><alternatives>
-    <tex-math><![CDATA[Z]]></tex-math>
-    <mml:math display="inline" xmlns:mml="http://www.w3.org/1998/Math/MathML"><mml:mi>Z</mml:mi></mml:math></alternatives></inline-formula>
-    are dependent on their own processes and are, therefore, independent
-    from each other.
-    <xref alt="Figure 2 (a)" rid="fig-dag_example1">Figure 2 (a)</xref>
-    presents the plausible causal structure of this system. The DAG
-    shows the endogenous variables <inline-formula><alternatives>
-    <tex-math><![CDATA[V=\{X,Z,Y\}]]></tex-math>
-    <mml:math display="inline" xmlns:mml="http://www.w3.org/1998/Math/MathML"><mml:mrow><mml:mi>V</mml:mi><mml:mo>=</mml:mo><mml:mo stretchy="false" form="prefix">{</mml:mo><mml:mi>X</mml:mi><mml:mo>,</mml:mo><mml:mi>Z</mml:mi><mml:mo>,</mml:mo><mml:mi>Y</mml:mi><mml:mo stretchy="false" form="postfix">}</mml:mo></mml:mrow></mml:math></alternatives></inline-formula>
-    as circled black nodes, indicating these variables are observed. The
-    arrows connecting the variables indicate the direction of causal
-    influence, while a lack of influence is indicated by the absence of
-    arrows. Moreover, the exogenous variables
+    <p>Given the heuristic nature of DAGs, a motivating example can
+    illustrate how these five fundamental building blocks can be used to
+    construct the causal structure of a system. This example can also
+    help clarify additional rules and conventions for drawing DAGs.</p>
+    <p>Consider a research problem where the causal effect of a variable
     <inline-formula><alternatives>
-    <tex-math><![CDATA[E=\{e_{X},e_{Z},e_{Y}\}]]></tex-math>
-    <mml:math display="inline" xmlns:mml="http://www.w3.org/1998/Math/MathML"><mml:mrow><mml:mi>E</mml:mi><mml:mo>=</mml:mo><mml:mo stretchy="false" form="prefix">{</mml:mo><mml:msub><mml:mi>e</mml:mi><mml:mi>X</mml:mi></mml:msub><mml:mo>,</mml:mo><mml:msub><mml:mi>e</mml:mi><mml:mi>Z</mml:mi></mml:msub><mml:mo>,</mml:mo><mml:msub><mml:mi>e</mml:mi><mml:mi>Y</mml:mi></mml:msub><mml:mo stretchy="false" form="postfix">}</mml:mo></mml:mrow></mml:math></alternatives></inline-formula>
-    represent everything else that is chosen not to be modeled
-    explicitly. These exogenous variables, or
-    <italic>disturbances</italic>, are usually represented by open
-    circles to indicate their unobserved nature. Although this DAG
-    explicitly shows the exogenous variables, conventionally these are
-    omitted for brevity, resulting in an equivalent graph as shown in
-    <xref alt="Figure 2 (b)" rid="fig-dag_example2">Figure 2
-    (b)</xref>.</p>
+    <tex-math><![CDATA[T]]></tex-math>
+    <mml:math display="inline" xmlns:mml="http://www.w3.org/1998/Math/MathML"><mml:mi>T</mml:mi></mml:math></alternatives></inline-formula>
+    on an outcome <inline-formula><alternatives>
+    <tex-math><![CDATA[Y]]></tex-math>
+    <mml:math display="inline" xmlns:mml="http://www.w3.org/1998/Math/MathML"><mml:mi>Y</mml:mi></mml:math></alternatives></inline-formula>
+    needs to be investigated. Additionally, the problem indicates that a
+    variable <inline-formula><alternatives>
+    <tex-math><![CDATA[X]]></tex-math>
+    <mml:math display="inline" xmlns:mml="http://www.w3.org/1998/Math/MathML"><mml:mi>X</mml:mi></mml:math></alternatives></inline-formula>
+    potentially influences both <inline-formula><alternatives>
+    <tex-math><![CDATA[Y]]></tex-math>
+    <mml:math display="inline" xmlns:mml="http://www.w3.org/1998/Math/MathML"><mml:mi>Y</mml:mi></mml:math></alternatives></inline-formula>
+    and <inline-formula><alternatives>
+    <tex-math><![CDATA[T]]></tex-math>
+    <mml:math display="inline" xmlns:mml="http://www.w3.org/1998/Math/MathML"><mml:mi>T</mml:mi></mml:math></alternatives></inline-formula>.
+    Such scenarios are not hard to imagine. For instance,
+    <inline-formula><alternatives>
+    <tex-math><![CDATA[T]]></tex-math>
+    <mml:math display="inline" xmlns:mml="http://www.w3.org/1998/Math/MathML"><mml:mi>T</mml:mi></mml:math></alternatives></inline-formula>
+    could describe different treatments potentially influencing the
+    binary onset of cancer (<inline-formula><alternatives>
+    <tex-math><![CDATA[Y]]></tex-math>
+    <mml:math display="inline" xmlns:mml="http://www.w3.org/1998/Math/MathML"><mml:mi>Y</mml:mi></mml:math></alternatives></inline-formula>)
+    while <inline-formula><alternatives>
+    <tex-math><![CDATA[X]]></tex-math>
+    <mml:math display="inline" xmlns:mml="http://www.w3.org/1998/Math/MathML"><mml:mi>X</mml:mi></mml:math></alternatives></inline-formula>
+    could denote the age of a patient. Using an example from DCJ,
+    <styled-content style="color:red;">we need an
+    example</styled-content>.
+    <xref alt="Figure 2" rid="fig-example">Figure 2</xref> presents two
+    graphs describing the plausible causal structure of this system, the
+    <italic>simplified</italic> and the <italic>magnified</italic>
+    DAG.</p>
     <fig id="fig-example">
       <caption><p>Figure 2: DAGs for a plausible causal structure in a
       system.</p></caption>
@@ -732,7 +768,7 @@ the University of Antwerp (BOF).</funding-statement>
               <td align="left"><p specific-use="wrapper">
                 <boxed-text>
                   <fig id="fig-dag_example1">
-                    <caption><p>(a) Full DAG</p></caption>
+                    <caption><p>(a) Simplied DAG</p></caption>
                     <graphic mimetype="image" mime-subtype="png" xlink:href="images/figures/dag_example1.png" />
                   </fig>
                 </boxed-text>
@@ -740,7 +776,7 @@ the University of Antwerp (BOF).</funding-statement>
               <td align="left"><p specific-use="wrapper">
                 <boxed-text>
                   <fig id="fig-dag_example2">
-                    <caption><p>(b) Simplified DAG</p></caption>
+                    <caption><p>(b) Magnified DAG</p></caption>
                     <graphic mimetype="image" mime-subtype="png" xlink:href="images/figures/dag_example2.png" />
                   </fig>
                 </boxed-text>
@@ -857,10 +893,13 @@ the University of Antwerp (BOF).</funding-statement>
 <sec id="sec-appendix">
   <title>Appendix</title>
   <sec id="sec-appA">
-    <title>Additional definitions</title>
+    <title>Why do we need to estimate judges’ abilities?</title>
   </sec>
   <sec id="sec-appB">
-    <title>Why do we need to estimate judges’ abilities?</title>
+    <title>Latent variables as a mean of imputation</title>
+  </sec>
+  <sec id="sec-appC">
+    <title>Other comparative scenarios</title>
     <p></p>
   </sec>
   <sec id="references">
@@ -996,6 +1035,24 @@ the University of Antwerp (BOF).</funding-statement>
           <lpage>316</lpage>
         </element-citation>
       </ref>
+      <ref id="ref-Spirtes_et_al_1991">
+        <element-citation publication-type="article-journal">
+          <person-group person-group-type="author">
+            <name><surname>Spirtes</surname><given-names>P.</given-names></name>
+            <name><surname>Glymour</surname><given-names>C.</given-names></name>
+            <name><surname>Scheines</surname><given-names>R.</given-names></name>
+          </person-group>
+          <article-title>From probability to causality</article-title>
+          <source>Philosophical Studies</source>
+          <year iso-8601-date="1991">1991</year>
+          <volume>64</volume>
+          <issue>1</issue>
+          <uri>https://www.jstor.org/stable/4320244</uri>
+          <pub-id pub-id-type="doi"></pub-id>
+          <fpage>1</fpage>
+          <lpage>36</lpage>
+        </element-citation>
+      </ref>
       <ref id="ref-Agresti_1992">
         <element-citation publication-type="article-journal">
           <person-group person-group-type="author">
@@ -1113,6 +1170,22 @@ the University of Antwerp (BOF).</funding-statement>
           <pub-id pub-id-type="doi">10.3389/feduc.2017.00044</pub-id>
         </element-citation>
       </ref>
+      <ref id="ref-Rohrer_2018">
+        <element-citation publication-type="article-journal">
+          <person-group person-group-type="author">
+            <name><surname>Rohrer</surname><given-names>J.</given-names></name>
+          </person-group>
+          <article-title>Thinking clearly about correlations and causation: Graphical causal models for observational data</article-title>
+          <source>Advances in Methods and Practices in Psychological Science</source>
+          <year iso-8601-date="2018">2018</year>
+          <volume>1</volume>
+          <issue>1</issue>
+          <uri></uri>
+          <pub-id pub-id-type="doi">10.1177/2515245917745629</pub-id>
+          <fpage>27</fpage>
+          <lpage>42</lpage>
+        </element-citation>
+      </ref>
       <ref id="ref-Bartholomew_et_al_2018">
         <element-citation publication-type="article-journal">
           <person-group person-group-type="author">
@@ -1147,6 +1220,22 @@ the University of Antwerp (BOF).</funding-statement>
           <pub-id pub-id-type="doi">10.1080/0969594X.2017.1418734</pub-id>
           <fpage>1</fpage>
           <lpage>25</lpage>
+        </element-citation>
+      </ref>
+      <ref id="ref-Pearl_2019">
+        <element-citation publication-type="article-journal">
+          <person-group person-group-type="author">
+            <name><surname>Pearl</surname><given-names>J.</given-names></name>
+          </person-group>
+          <article-title>The seven tools of causal inference, with reflections on machine learning</article-title>
+          <source>Communications of the ACM</source>
+          <year iso-8601-date="2019">2019</year>
+          <volume>62</volume>
+          <issue>3</issue>
+          <uri></uri>
+          <pub-id pub-id-type="doi">10.1177/0962280215586010</pub-id>
+          <fpage>54</fpage>
+          <lpage>60</lpage>
         </element-citation>
       </ref>
       <ref id="ref-Verhavert_et_al_2019">
@@ -1204,6 +1293,24 @@ the University of Antwerp (BOF).</funding-statement>
           <pub-id pub-id-type="doi">10.1007/s40841-020-00163-3</pub-id>
           <fpage>49</fpage>
           <lpage>71</lpage>
+        </element-citation>
+      </ref>
+      <ref id="ref-Cinelli_et_al_2020">
+        <element-citation publication-type="article-journal">
+          <person-group person-group-type="author">
+            <name><surname>Cinelli</surname><given-names>C.</given-names></name>
+            <name><surname>Forney</surname><given-names>A.</given-names></name>
+            <name><surname>Pearl</surname><given-names>J.</given-names></name>
+          </person-group>
+          <article-title>A crash course in good and bad controls</article-title>
+          <source>SSRN</source>
+          <year iso-8601-date="2020-09">2020</year><month>09</month>
+          <volume></volume>
+          <issue></issue>
+          <uri>https://ssrn.com/abstract=3689437</uri>
+          <pub-id pub-id-type="doi">10.2139/ssrn.3689437</pub-id>
+          <fpage></fpage>
+          <lpage></lpage>
         </element-citation>
       </ref>
       <ref id="ref-Gijsen_et_al_2021">
@@ -1266,6 +1373,20 @@ the University of Antwerp (BOF).</funding-statement>
           <pub-id pub-id-type="doi"></pub-id>
         </element-citation>
       </ref>
+      <ref id="ref-Morgan_et_al_2014">
+        <element-citation publication-type="book">
+          <person-group person-group-type="author">
+            <name><surname>Morgan</surname><given-names>S.</given-names></name>
+            <name><surname>Winship</surname><given-names>C.</given-names></name>
+          </person-group>
+          <source>Counterfactuals and causal inference: Methods and principles for social research</source>
+          <publisher-name>Cambridge University Press</publisher-name>
+          <year iso-8601-date="2014">2014</year>
+          <edition>2</edition>
+          <uri></uri>
+          <pub-id pub-id-type="doi"></pub-id>
+        </element-citation>
+      </ref>
       <ref id="ref-Pearl_et_al_2016">
         <element-citation publication-type="book">
           <person-group person-group-type="author">
@@ -1325,6 +1446,21 @@ the University of Antwerp (BOF).</funding-statement>
           <pub-id pub-id-type="doi"></pub-id>
         </element-citation>
       </ref>
+      <ref id="ref-Hernan_et_al_2020">
+        <element-citation publication-type="book">
+          <person-group person-group-type="author">
+            <name><surname>Hern’an</surname><given-names>M.</given-names></name>
+            <name><surname>Robins</surname><given-names>J.</given-names></name>
+          </person-group>
+          <source>Causal inference: What if</source>
+          <publisher-name>Chapman; Hall/CRC</publisher-name>
+          <year iso-8601-date="2020">2020</year>
+          <volume></volume>
+          <edition>1</edition>
+          <uri>https://www.hsph.harvard.edu/miguel-hernan/causal-inference-book</uri>
+          <pub-id pub-id-type="doi"></pub-id>
+        </element-citation>
+      </ref>
       <ref id="ref-Lesterhuis_2018">
         <element-citation publication-type="thesis">
           <person-group person-group-type="author">
@@ -1343,6 +1479,27 @@ the University of Antwerp (BOF).</funding-statement>
           <article-title>Making a choice is not easy?!: Unravelling the task difficulty of comparative judgement to assess student work</article-title>
           <publisher-name>University of Antwerp</publisher-name>
           <year iso-8601-date="2020">2020</year>
+        </element-citation>
+      </ref>
+      <ref id="ref-Sekhon_2009">
+        <element-citation publication-type="chapter">
+          <person-group person-group-type="author">
+            <name><surname>Sekhon</surname><given-names>J.</given-names></name>
+          </person-group>
+          <article-title>The neyman-rubin model of causal inference and estimation via matching methods</article-title>
+          <source>The oxford handbook of political methodology</source>
+          <person-group person-group-type="editor">
+            <name><surname>Box-Steffensmeier</surname><given-names>J</given-names></name>
+            <name><surname>Brady</surname><given-names>H.</given-names></name>
+            <name><surname>Collier</surname><given-names>D.</given-names></name>
+          </person-group>
+          <publisher-name>Oxford University Press</publisher-name>
+          <year iso-8601-date="2009">2009</year>
+          <volume></volume>
+          <uri></uri>
+          <pub-id pub-id-type="doi">10.1093/oxfordhb/9780199286546.003.0011</pub-id>
+          <fpage>271</fpage>
+          <lpage>299</lpage>
         </element-citation>
       </ref>
       <ref id="ref-Bartholomew_et_al_2020">
