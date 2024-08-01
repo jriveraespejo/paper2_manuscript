@@ -23,8 +23,7 @@ and Interchange DTD v1.2 20190208//EN" "JATS-archivearticle1.dtd">
 
 <title-group>
 <article-title>Causes and effects in Dichotomous Comparative Judgments:
-an information-theoretical system with plausible
-mechanism</article-title>
+an information-theoretical system of plausible mechanism</article-title>
 </title-group>
 
 <contrib-group>
@@ -200,10 +199,10 @@ sciences</institution>
 <corresp id="cor-1">JoseManuel.RiveraEspejo@uantwerpen.be</corresp>
 </author-notes>
 
-<pub-date date-type="pub" publication-format="electronic" iso-8601-date="2024-07-31">
+<pub-date date-type="pub" publication-format="electronic" iso-8601-date="2024-08-01">
 <year>2024</year>
-<month>7</month>
-<day>31</day>
+<month>8</month>
+<day>1</day>
 </pub-date>
 
 
@@ -331,7 +330,9 @@ the University of Antwerp (BOF).</funding-statement>
   <xref alt="van Daal 2020" rid="ref-vanDaal_2020" ref-type="bibr">van
   Daal 2020</xref>;
   <xref alt="Marshall et al. 2020" rid="ref-Marshall_et_al_2020" ref-type="bibr">Marshall
-  et al. 2020</xref>). Nevertheless, despite the method’s widespread
+  et al. 2020</xref>;
+  <xref alt="Bouwer et al. 2023" rid="ref-Bouwer_et_al_2023" ref-type="bibr">Bouwer
+  et al. 2023</xref>). Nevertheless, despite the method’s widespread
   use, existing literature lacks a clear representation of the plausible
   mechanisms through which DCJ data could be generated. Particularly,
   there is no depiction of the complexity and the assumptions
@@ -371,7 +372,9 @@ the University of Antwerp (BOF).</funding-statement>
   <xref alt="van Daal et al. 2017" rid="ref-vanDaal_et_al_2017" ref-type="bibr">van
   Daal et al. 2017</xref>;
   <xref alt="Gijsen et al. 2021" rid="ref-Gijsen_et_al_2021" ref-type="bibr">Gijsen
-  et al. 2021</xref>), none, to the best of the authors’ knowledge, have
+  et al. 2021</xref>;
+  <xref alt="Bouwer et al. 2023" rid="ref-Bouwer_et_al_2023" ref-type="bibr">Bouwer
+  et al. 2023</xref>), none, to the best of the authors’ knowledge, have
   provided a transparent depiction of the DCJ system and the mechanisms
   generating the DCJ outcome. This study aims to fill this gap by
   representing DCJ within the framework of causal inference.
@@ -387,7 +390,7 @@ the University of Antwerp (BOF).</funding-statement>
   a probabilistic statistical model. This model aims to produce
   statistical estimates to draw inferences about plausible causal
   relationships within the DCJ system.</p>
-  <p>Ultimately, this research provides a robust probabilistic
+  <p>Ultimately, this study provides a robust causal and probabilistic
   foundation for the statistical analysis of DCJ data, building upon
   Thurstone’s law of comparative judgment
   (<xref alt="1927" rid="ref-Thurstone_1927" ref-type="bibr">1927</xref>).
@@ -398,10 +401,10 @@ the University of Antwerp (BOF).</funding-statement>
   <title>Theoretical framework</title>
   <p>This section introduces fundamental concepts in causal inference,
   such as directed acyclic graphs (DAGs), structural causal models
-  (SCMs), and the flow of association and causation in graphs. It is not
-  a comprehensive description of causal inference methods. Readers
-  interested in deeper exploration should consult introductory papers
-  like Pearl
+  (SCMs), and the flow of association and causation in graphs. The
+  section is not a comprehensive description of causal inference
+  methods. Readers interested in deeper exploration should consult
+  introductory papers like Pearl
   (<xref alt="2010" rid="ref-Pearl_2010" ref-type="bibr">2010</xref>),
   Rohrer
   (<xref alt="2018" rid="ref-Rohrer_2018" ref-type="bibr">2018</xref>),
@@ -428,7 +431,7 @@ the University of Antwerp (BOF).</funding-statement>
   (<xref alt="2009" rid="ref-Pearl_2009" ref-type="bibr">2009</xref>),
   Morgan and Winship
   (<xref alt="2014" rid="ref-Morgan_et_al_2014" ref-type="bibr">2014</xref>)
-  and Hern’an and Robins
+  and Hernán and Robins
   (<xref alt="2020" rid="ref-Hernan_et_al_2020" ref-type="bibr">2020</xref>)
   are recommended.</p>
   <sec id="sec-framework-structural">
@@ -453,7 +456,7 @@ the University of Antwerp (BOF).</funding-statement>
     <xref alt="Counterfactual 2024" rid="ref-Counterfactual_2024" ref-type="bibr">Counterfactual
     2024</xref>). According to Pearl and Mackenzie
     (<xref alt="2018" rid="ref-Pearl_et_al_2018" ref-type="bibr">2018</xref>),
-    counterfactuals form the foundation of causal inference and occupy
+    counterfactuals are the foundation of causal inference and occupy
     the highest level of cognitive abstraction in the ladder of
     causation, followed by intervention and association. Nevertheless,
     despite their abstract nature, counterfactuals enable the
@@ -511,7 +514,7 @@ the University of Antwerp (BOF).</funding-statement>
   <sec id="sec-framework-dag">
     <title>Directed acyclic graphs (DAG)</title>
     <p>Graph theory is a branch of mathematics focused on the study of
-    graphs. Graphs are mathematical structures that model pairwise
+    graphs. Graphs are mathematical structures modeling pairwise
     relations between objects. They can represent physical relations,
     such as electrical circuits and roadways, and less tangible
     structures, such as ecosystems and sociological relations. Graphs
@@ -541,7 +544,7 @@ the University of Antwerp (BOF).</funding-statement>
     2020</xref>;
     <xref alt="McElreath 2020" rid="ref-McElreath_2020" ref-type="bibr">McElreath
     2020</xref>). <xref alt="Figure 1" rid="fig-dags">Figure 1</xref>
-    illustrates these building blocks.
+    illustrates these blocks.
     <xref alt="Figure 1 (a)" rid="fig-dag_bb1">Figure 1 (a)</xref>
     depicts two unconnected nodes, representing an scenario where
     variables <inline-formula><alternatives>
@@ -600,7 +603,7 @@ the University of Antwerp (BOF).</funding-statement>
     <tex-math><![CDATA[X_{3}]]></tex-math>
     <mml:math display="inline" xmlns:mml="http://www.w3.org/1998/Math/MathML"><mml:msub><mml:mi>X</mml:mi><mml:mn>3</mml:mn></mml:msub></mml:math></alternatives></inline-formula>
     and that the relationship between these variables is entirely
-    mediated by <inline-formula><alternatives>
+    <italic>mediated</italic> by <inline-formula><alternatives>
     <tex-math><![CDATA[X_{2}]]></tex-math>
     <mml:math display="inline" xmlns:mml="http://www.w3.org/1998/Math/MathML"><mml:msub><mml:mi>X</mml:mi><mml:mn>2</mml:mn></mml:msub></mml:math></alternatives></inline-formula>.
     <xref alt="Figure 1 (d)" rid="fig-dag_bb4">Figure 1 (d)</xref>
@@ -715,10 +718,10 @@ the University of Antwerp (BOF).</funding-statement>
         </table>
       </table-wrap>
     </fig>
-    <p>Given the heuristic nature of DAGs, a motivating example can
-    illustrate how these five fundamental building blocks can be used to
-    construct the causal structure of a system. This example can also
-    help clarify additional rules and conventions for drawing DAGs.</p>
+    <p>Given the heuristic nature of DAGs, a motivating example can help
+    illustrate the use of the five fundamental building blocks to
+    construct a system’s causal structure. This example can also help to
+    clarify additional conventions for drawing DAGs.</p>
     <p>Consider a research problem where the causal effect of a variable
     <inline-formula><alternatives>
     <tex-math><![CDATA[T]]></tex-math>
@@ -726,34 +729,115 @@ the University of Antwerp (BOF).</funding-statement>
     on an outcome <inline-formula><alternatives>
     <tex-math><![CDATA[Y]]></tex-math>
     <mml:math display="inline" xmlns:mml="http://www.w3.org/1998/Math/MathML"><mml:mi>Y</mml:mi></mml:math></alternatives></inline-formula>
-    needs to be investigated. Additionally, the problem indicates that a
+    needs to be investigated. Additionally, the problem suggests that a
     variable <inline-formula><alternatives>
     <tex-math><![CDATA[X]]></tex-math>
     <mml:math display="inline" xmlns:mml="http://www.w3.org/1998/Math/MathML"><mml:mi>X</mml:mi></mml:math></alternatives></inline-formula>
     potentially influences both <inline-formula><alternatives>
-    <tex-math><![CDATA[Y]]></tex-math>
-    <mml:math display="inline" xmlns:mml="http://www.w3.org/1998/Math/MathML"><mml:mi>Y</mml:mi></mml:math></alternatives></inline-formula>
-    and <inline-formula><alternatives>
     <tex-math><![CDATA[T]]></tex-math>
-    <mml:math display="inline" xmlns:mml="http://www.w3.org/1998/Math/MathML"><mml:mi>T</mml:mi></mml:math></alternatives></inline-formula>.
+    <mml:math display="inline" xmlns:mml="http://www.w3.org/1998/Math/MathML"><mml:mi>T</mml:mi></mml:math></alternatives></inline-formula>
+    and <inline-formula><alternatives>
+    <tex-math><![CDATA[Y]]></tex-math>
+    <mml:math display="inline" xmlns:mml="http://www.w3.org/1998/Math/MathML"><mml:mi>Y</mml:mi></mml:math></alternatives></inline-formula>.
     Such scenarios are not hard to imagine. For instance,
     <inline-formula><alternatives>
     <tex-math><![CDATA[T]]></tex-math>
     <mml:math display="inline" xmlns:mml="http://www.w3.org/1998/Math/MathML"><mml:mi>T</mml:mi></mml:math></alternatives></inline-formula>
-    could describe different treatments potentially influencing the
-    binary onset of cancer (<inline-formula><alternatives>
+    might represent different treatments that could affect the recovery
+    from cancer <inline-formula><alternatives>
     <tex-math><![CDATA[Y]]></tex-math>
-    <mml:math display="inline" xmlns:mml="http://www.w3.org/1998/Math/MathML"><mml:mi>Y</mml:mi></mml:math></alternatives></inline-formula>)
+    <mml:math display="inline" xmlns:mml="http://www.w3.org/1998/Math/MathML"><mml:mi>Y</mml:mi></mml:math></alternatives></inline-formula>,
     while <inline-formula><alternatives>
     <tex-math><![CDATA[X]]></tex-math>
     <mml:math display="inline" xmlns:mml="http://www.w3.org/1998/Math/MathML"><mml:mi>X</mml:mi></mml:math></alternatives></inline-formula>
-    could denote the age of a patient. Using an example from DCJ,
-    <styled-content style="color:red;">we need an
-    example</styled-content>.
-    <xref alt="Figure 2" rid="fig-example">Figure 2</xref> presents two
-    graphs describing the plausible causal structure of this system, the
-    <italic>simplified</italic> and the <italic>magnified</italic>
-    DAG.</p>
+    could denote the patient’s age. Similarly, in the context of a DCJ
+    study like the one described by Boonen, Kloots, and Gillis
+    (<xref alt="2020" rid="ref-Boonen_et_al_2020" ref-type="bibr">2020</xref>),
+    <inline-formula><alternatives>
+    <tex-math><![CDATA[T]]></tex-math>
+    <mml:math display="inline" xmlns:mml="http://www.w3.org/1998/Math/MathML"><mml:mi>T</mml:mi></mml:math></alternatives></inline-formula>
+    could represent the duration of a child’s cochlear implant use,
+    which might influence the child’s overall speech quality
+    <inline-formula><alternatives>
+    <tex-math><![CDATA[Y]]></tex-math>
+    <mml:math display="inline" xmlns:mml="http://www.w3.org/1998/Math/MathML"><mml:mi>Y</mml:mi></mml:math></alternatives></inline-formula>,
+    with <inline-formula><alternatives>
+    <tex-math><![CDATA[X]]></tex-math>
+    <mml:math display="inline" xmlns:mml="http://www.w3.org/1998/Math/MathML"><mml:mi>X</mml:mi></mml:math></alternatives></inline-formula>
+    indicating the child’s hearing status. Note that these descriptions
+    do not specify the type of data or the functional forms of the
+    variables, highlighting the heuristic nature of DAGs.
+    <styled-content style="color:blue;">(not a bad example, but I prefer
+    one using writing skills)</styled-content></p>
+    <p><xref alt="Figure 2" rid="fig-example">Figure 2</xref> presents
+    two graphs illustrating the plausible causal structure of the
+    motivating example.
+    <xref alt="Figure 2 (a)" rid="fig-dag_example1">Figure 2 (a)</xref>
+    shows the <italic>simplified</italic> DAG. In this graph, the
+    variables of interest or <italic>endogenous</italic> variables
+    <inline-formula><alternatives>
+    <tex-math><![CDATA[V=\{T,X,Y\}]]></tex-math>
+    <mml:math display="inline" xmlns:mml="http://www.w3.org/1998/Math/MathML"><mml:mrow><mml:mi>V</mml:mi><mml:mo>=</mml:mo><mml:mo stretchy="false" form="prefix">{</mml:mo><mml:mi>T</mml:mi><mml:mo>,</mml:mo><mml:mi>X</mml:mi><mml:mo>,</mml:mo><mml:mi>Y</mml:mi><mml:mo stretchy="false" form="postfix">}</mml:mo></mml:mrow></mml:math></alternatives></inline-formula>
+    are depicted as solid black circles, indicating that they are
+    observed variables. The arrows in the graph reflect the expected
+    direction of causal influences among the variables.
+    <xref alt="Figure 2 (b)" rid="fig-dag_example2">Figure 2 (b)</xref>,
+    in contrast, depicts the <italic>magnified</italic> version of the
+    DAG. This graph includes, in addition to the endogenous variables,
+    the <italic>exogenous</italic> variables
+    <inline-formula><alternatives>
+    <tex-math><![CDATA[E=\{e_{T},e_{X},e_{Y}\}]]></tex-math>
+    <mml:math display="inline" xmlns:mml="http://www.w3.org/1998/Math/MathML"><mml:mrow><mml:mi>E</mml:mi><mml:mo>=</mml:mo><mml:mo stretchy="false" form="prefix">{</mml:mo><mml:msub><mml:mi>e</mml:mi><mml:mi>T</mml:mi></mml:msub><mml:mo>,</mml:mo><mml:msub><mml:mi>e</mml:mi><mml:mi>X</mml:mi></mml:msub><mml:mo>,</mml:mo><mml:msub><mml:mi>e</mml:mi><mml:mi>Y</mml:mi></mml:msub><mml:mo stretchy="false" form="postfix">}</mml:mo></mml:mrow></mml:math></alternatives></inline-formula>.
+    These exogenous variables are commonly referred to as
+    <italic>disturbances</italic> or <italic>errors</italic>, because
+    they represent factors not explicitly modeled. They are depicted as
+    open circles, indicating their unobserved nature. While such
+    exogenous variables are often omitted for simplicity, including them
+    in the graph can be advantageous in certain scenarios, as they can
+    help to highlight potential issues related to conditioning and
+    confounding
+    (<xref alt="Cinelli, Forney, and Pearl 2020" rid="ref-Cinelli_et_al_2020" ref-type="bibr">Cinelli,
+    Forney, and Pearl 2020</xref>), concepts that will be discussed in
+    the next section.</p>
+    <p>Furthermore, a detailed examination of both figures reveals the
+    presence of at least four of the five fundamental building blocks.
+    <xref alt="Figure 2 (a)" rid="fig-dag_example1">Figure 2 (a)</xref>
+    displays multiple descendants, evident in pairwise relations such as
+    <inline-formula><alternatives>
+    <tex-math><![CDATA[X \rightarrow T]]></tex-math>
+    <mml:math display="inline" xmlns:mml="http://www.w3.org/1998/Math/MathML"><mml:mrow><mml:mi>X</mml:mi><mml:mo>→</mml:mo><mml:mi>T</mml:mi></mml:mrow></mml:math></alternatives></inline-formula>,
+    <inline-formula><alternatives>
+    <tex-math><![CDATA[X \rightarrow Y]]></tex-math>
+    <mml:math display="inline" xmlns:mml="http://www.w3.org/1998/Math/MathML"><mml:mrow><mml:mi>X</mml:mi><mml:mo>→</mml:mo><mml:mi>Y</mml:mi></mml:mrow></mml:math></alternatives></inline-formula>,
+    and <inline-formula><alternatives>
+    <tex-math><![CDATA[T \rightarrow Y]]></tex-math>
+    <mml:math display="inline" xmlns:mml="http://www.w3.org/1998/Math/MathML"><mml:mrow><mml:mi>T</mml:mi><mml:mo>→</mml:mo><mml:mi>Y</mml:mi></mml:mrow></mml:math></alternatives></inline-formula>.
+    It also illustrates a fork with <inline-formula><alternatives>
+    <tex-math><![CDATA[X \rightarrow \{T,Y\}]]></tex-math>
+    <mml:math display="inline" xmlns:mml="http://www.w3.org/1998/Math/MathML"><mml:mrow><mml:mi>X</mml:mi><mml:mo>→</mml:mo><mml:mo stretchy="false" form="prefix">{</mml:mo><mml:mi>T</mml:mi><mml:mo>,</mml:mo><mml:mi>Y</mml:mi><mml:mo stretchy="false" form="postfix">}</mml:mo></mml:mrow></mml:math></alternatives></inline-formula>.
+    Similarly, <xref alt="Figure 2 (b)" rid="fig-dag_example2">Figure 2
+    (b)</xref> features multiple two-unconnected nodes, evident in the
+    pairwise relations <inline-formula><alternatives>
+    <tex-math><![CDATA[\{e_{T} \perp\!\!\!\perp e_{X}\}]]></tex-math>
+    <mml:math display="inline" xmlns:mml="http://www.w3.org/1998/Math/MathML"><mml:mrow><mml:mo stretchy="false" form="prefix">{</mml:mo><mml:msub><mml:mi>e</mml:mi><mml:mi>T</mml:mi></mml:msub><mml:mo>⊥</mml:mo><mml:mspace width="-0.167em"></mml:mspace><mml:mspace width="-0.167em"></mml:mspace><mml:mspace width="-0.167em"></mml:mspace><mml:mo>⊥</mml:mo><mml:msub><mml:mi>e</mml:mi><mml:mi>X</mml:mi></mml:msub><mml:mo stretchy="false" form="postfix">}</mml:mo></mml:mrow></mml:math></alternatives></inline-formula>,
+    <inline-formula><alternatives>
+    <tex-math><![CDATA[\{e_{T} \perp\!\!\!\perp e_{Y}\}]]></tex-math>
+    <mml:math display="inline" xmlns:mml="http://www.w3.org/1998/Math/MathML"><mml:mrow><mml:mo stretchy="false" form="prefix">{</mml:mo><mml:msub><mml:mi>e</mml:mi><mml:mi>T</mml:mi></mml:msub><mml:mo>⊥</mml:mo><mml:mspace width="-0.167em"></mml:mspace><mml:mspace width="-0.167em"></mml:mspace><mml:mspace width="-0.167em"></mml:mspace><mml:mo>⊥</mml:mo><mml:msub><mml:mi>e</mml:mi><mml:mi>Y</mml:mi></mml:msub><mml:mo stretchy="false" form="postfix">}</mml:mo></mml:mrow></mml:math></alternatives></inline-formula>,
+    and <inline-formula><alternatives>
+    <tex-math><![CDATA[\{e_{X} \perp\!\!\!\perp e_{Y}\}]]></tex-math>
+    <mml:math display="inline" xmlns:mml="http://www.w3.org/1998/Math/MathML"><mml:mrow><mml:mo stretchy="false" form="prefix">{</mml:mo><mml:msub><mml:mi>e</mml:mi><mml:mi>X</mml:mi></mml:msub><mml:mo>⊥</mml:mo><mml:mspace width="-0.167em"></mml:mspace><mml:mspace width="-0.167em"></mml:mspace><mml:mspace width="-0.167em"></mml:mspace><mml:mo>⊥</mml:mo><mml:msub><mml:mi>e</mml:mi><mml:mi>Y</mml:mi></mml:msub><mml:mo stretchy="false" form="postfix">}</mml:mo></mml:mrow></mml:math></alternatives></inline-formula>,
+    as well as colliders such as <inline-formula><alternatives>
+    <tex-math><![CDATA[\{X,e_{T}\} \rightarrow T]]></tex-math>
+    <mml:math display="inline" xmlns:mml="http://www.w3.org/1998/Math/MathML"><mml:mrow><mml:mo stretchy="false" form="prefix">{</mml:mo><mml:mi>X</mml:mi><mml:mo>,</mml:mo><mml:msub><mml:mi>e</mml:mi><mml:mi>T</mml:mi></mml:msub><mml:mo stretchy="false" form="postfix">}</mml:mo><mml:mo>→</mml:mo><mml:mi>T</mml:mi></mml:mrow></mml:math></alternatives></inline-formula>
+    and <inline-formula><alternatives>
+    <tex-math><![CDATA[\{X,T,e_{Y}\} \rightarrow Y]]></tex-math>
+    <mml:math display="inline" xmlns:mml="http://www.w3.org/1998/Math/MathML"><mml:mrow><mml:mo stretchy="false" form="prefix">{</mml:mo><mml:mi>X</mml:mi><mml:mo>,</mml:mo><mml:mi>T</mml:mi><mml:mo>,</mml:mo><mml:msub><mml:mi>e</mml:mi><mml:mi>Y</mml:mi></mml:msub><mml:mo stretchy="false" form="postfix">}</mml:mo><mml:mo>→</mml:mo><mml:mi>Y</mml:mi></mml:mrow></mml:math></alternatives></inline-formula>.
+    The symbol <inline-formula><alternatives>
+    <tex-math><![CDATA[\perp\!\!\!\perp]]></tex-math>
+    <mml:math display="inline" xmlns:mml="http://www.w3.org/1998/Math/MathML"><mml:mrow><mml:mo>⊥</mml:mo><mml:mspace width="-0.167em"></mml:mspace><mml:mspace width="-0.167em"></mml:mspace><mml:mspace width="-0.167em"></mml:mspace><mml:mo>⊥</mml:mo></mml:mrow></mml:math></alternatives></inline-formula>
+    denotes a concept know as <italic>d-separation</italic>, which
+    roughly implies the independence of the variables. This concept will
+    be introduced in the next section.</p>
     <fig id="fig-example">
       <caption><p>Figure 2: DAGs for a plausible causal structure in a
       system.</p></caption>
@@ -1345,6 +1429,26 @@ the University of Antwerp (BOF).</funding-statement>
           <pub-id pub-id-type="doi">10.3389/feduc.2021.788202</pub-id>
         </element-citation>
       </ref>
+      <ref id="ref-Bouwer_et_al_2023">
+        <element-citation publication-type="article-journal">
+          <person-group person-group-type="author">
+            <name><surname>Bouwer</surname><given-names>R.</given-names></name>
+            <name><surname>Lesterhuis</surname><given-names>M.</given-names></name>
+            <name><surname>De Smedt</surname><given-names>F.</given-names></name>
+            <name><surname>Van Keer</surname><given-names>H.</given-names></name>
+            <name><surname>De Maeyer</surname><given-names>S.</given-names></name>
+          </person-group>
+          <article-title>Comparative approaches to the assessment of writing: Reliability and validity of benchmark rating and comparative judgement</article-title>
+          <source>Journal of Writing Research</source>
+          <year iso-8601-date="2023">2023</year>
+          <volume>15</volume>
+          <issue>3</issue>
+          <uri>https://www.jowr.org/index.php/jowr/article/view/867</uri>
+          <pub-id pub-id-type="doi">10.17239/jowr-2024.15.03.03</pub-id>
+          <fpage>497</fpage>
+          <lpage>518</lpage>
+        </element-citation>
+      </ref>
       <ref id="ref-Pearl_2009">
         <element-citation publication-type="book">
           <person-group person-group-type="author">
@@ -1449,7 +1553,7 @@ the University of Antwerp (BOF).</funding-statement>
       <ref id="ref-Hernan_et_al_2020">
         <element-citation publication-type="book">
           <person-group person-group-type="author">
-            <name><surname>Hern’an</surname><given-names>M.</given-names></name>
+            <name><surname>Hernán</surname><given-names>M.</given-names></name>
             <name><surname>Robins</surname><given-names>J.</given-names></name>
           </person-group>
           <source>Causal inference: What if</source>

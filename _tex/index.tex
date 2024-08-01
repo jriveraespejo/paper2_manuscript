@@ -145,7 +145,7 @@
 \IfFileExists{xurl.sty}{\usepackage{xurl}}{} % add URL line breaks if available
 \urlstyle{same} % disable monospaced font for URLs
 \hypersetup{
-  pdftitle={Causes and effects in Dichotomous Comparative Judgments: an information-theoretical system with plausible mechanism},
+  pdftitle={Causes and effects in Dichotomous Comparative Judgments: an information-theoretical system of plausible mechanism},
   pdfauthor={Jose Manuel Rivera Espejo; Tine van van Daal; Sven De De Maeyer; Steven Gillis},
   pdfkeywords={causal inference, probability, Thurstone, comparative
 judgement, directed acyclic graph, structural causal models, statistical
@@ -163,7 +163,7 @@ modeling},
 
 \begin{frontmatter}
 \title{Causes and effects in Dichotomous Comparative Judgments: an
-information-theoretical system with plausible mechanism}
+information-theoretical system of plausible mechanism}
 \author[1]{Jose Manuel Rivera Espejo%
 \corref{cor1}%
 }
@@ -254,7 +254,8 @@ multiple, as opposed to pairwise comparisons
 ordinal outcomes \citep{Tutz_1986, Agresti_1992}. Overall, research
 suggests that DCJ offers an alternative and efficient approach to
 measurement and evaluation, characterized by its reliability and
-validity \citep{Lesterhuis_2018, vanDaal_2020, Marshall_et_al_2020}.
+validity
+\citep{Lesterhuis_2018, vanDaal_2020, Marshall_et_al_2020, Bouwer_et_al_2023}.
 Nevertheless, despite the method's widespread use, existing literature
 lacks a clear representation of the plausible mechanisms through which
 DCJ data could be generated. Particularly, there is no depiction of the
@@ -279,7 +280,7 @@ argumentative essays (sub-units).
 
 Although several studies have examined the individual impact of these
 factors on the method's reliability
-\citep{Bramley_2015, Pollitt_2012b, Bramley_et_al_2019, Verhavert_et_al_2019, Crompvoets_et_al_2022, vanDaal_et_al_2017, Gijsen_et_al_2021},
+\citep{Bramley_2015, Pollitt_2012b, Bramley_et_al_2019, Verhavert_et_al_2019, Crompvoets_et_al_2022, vanDaal_et_al_2017, Gijsen_et_al_2021, Bouwer_et_al_2023},
 none, to the best of the authors' knowledge, have provided a transparent
 depiction of the DCJ system and the mechanisms generating the DCJ
 outcome. This study aims to fill this gap by representing DCJ within the
@@ -291,17 +292,17 @@ scientific model into a probabilistic statistical model. This model aims
 to produce statistical estimates to draw inferences about plausible
 causal relationships within the DCJ system.
 
-Ultimately, this research provides a robust probabilistic foundation for
-the statistical analysis of DCJ data, building upon Thurstone's law of
-comparative judgment \citeyearpar{Thurstone_1927}. Consequently, its
-findings offer valuable insights for researchers and analysts designing
-and implementing DCJ experiments.
+Ultimately, this study provides a robust causal and probabilistic
+foundation for the statistical analysis of DCJ data, building upon
+Thurstone's law of comparative judgment \citeyearpar{Thurstone_1927}.
+Consequently, its findings offer valuable insights for researchers and
+analysts designing and implementing DCJ experiments.
 
 \section{Theoretical framework}\label{sec-framework}
 
 This section introduces fundamental concepts in causal inference, such
 as directed acyclic graphs (DAGs), structural causal models (SCMs), and
-the flow of association and causation in graphs. It is not a
+the flow of association and causation in graphs. The section is not a
 comprehensive description of causal inference methods. Readers
 interested in deeper exploration should consult introductory papers like
 \citet{Pearl_2010}, \citet{Rohrer_2018}, \citet{Pearl_2019}, and
@@ -327,7 +328,7 @@ mathematical notation for analyzing causes and counterfactuals
 Counterfactuals represent scenarios \emph{contrary to fact}, where
 alternative \emph{potential} outcomes resulting from a cause are neither
 observed nor observable \citep{Neal_2020, Counterfactual_2024}.
-According to \citet{Pearl_et_al_2018}, counterfactuals form the
+According to \citet{Pearl_et_al_2018}, counterfactuals are the
 foundation of causal inference and occupy the highest level of cognitive
 abstraction in the ladder of causation, followed by intervention and
 association. Nevertheless, despite their abstract nature,
@@ -365,7 +366,7 @@ assuming the causal structure depicted in the DAG is accurate
 \subsection{Directed acyclic graphs (DAG)}\label{sec-framework-dag}
 
 Graph theory is a branch of mathematics focused on the study of graphs.
-Graphs are mathematical structures that model pairwise relations between
+Graphs are mathematical structures modeling pairwise relations between
 objects. They can represent physical relations, such as electrical
 circuits and roadways, and less tangible structures, such as ecosystems
 and sociological relations. Graphs have proven useful in various fields,
@@ -387,7 +388,7 @@ on themselves \citep{McElreath_2020}.
 One key advantage of DAGs is that, regardless of complexity, they can
 represent various causal structures using only five fundamental building
 blocks \citep{Neal_2020, McElreath_2020}. Figure~\ref{fig-dags}
-illustrates these building blocks. Figure~\ref{fig-dag_bb1} depicts two
+illustrates these blocks. Figure~\ref{fig-dag_bb1} depicts two
 unconnected nodes, representing an scenario where variables \(X_{1}\)
 and \(X_{2}\) are not causally related. Figure~\ref{fig-dag_bb2} shows
 two connected nodes, illustrating a scenario where a parent node
@@ -398,7 +399,7 @@ Figure~\ref{fig-dag_bb3} depicts a \emph{chain} (or \emph{pipe}), where
 this configuration, \(X_{1}\) is a parent node of \(X_{2}\), and
 \(X_{2}\) a parent node of \(X_{3}\). Furthermore, the DAG shows that
 \(X_{1}\) is an \emph{ancestor} of \(X_{3}\) and that the relationship
-between these variables is entirely mediated by \(X_{2}\).
+between these variables is entirely \emph{mediated} by \(X_{2}\).
 Figure~\ref{fig-dag_bb4} illustrates a \emph{fork}, where variables
 \(X_{1}\) and \(X_{3}\) are both influenced by \(X_{2}\). In this
 scenario \(X_{2}\) is a parent node of both \(X_{1}\) and \(X_{3}\).
@@ -474,20 +475,61 @@ concurrent causes of \(X_{2}\). In this configuration, \(X_{1}\) and
 
 \end{figure}%
 
-Given the heuristic nature of DAGs, a motivating example can illustrate
-how these five fundamental building blocks can be used to construct the
-causal structure of a system. This example can also help clarify
-additional rules and conventions for drawing DAGs.
+Given the heuristic nature of DAGs, a motivating example can help
+illustrate the use of the five fundamental building blocks to construct
+a system's causal structure. This example can also help to clarify
+additional conventions for drawing DAGs.
 
 Consider a research problem where the causal effect of a variable \(T\)
 on an outcome \(Y\) needs to be investigated. Additionally, the problem
-indicates that a variable \(X\) potentially influences both \(Y\) and
-\(T\). Such scenarios are not hard to imagine. For instance, \(T\) could
-describe different treatments potentially influencing the binary onset
-of cancer (\(Y\)) while \(X\) could denote the age of a patient. Using
-an example from DCJ, {we need an example}. Figure~\ref{fig-example}
-presents two graphs describing the plausible causal structure of this
-system, the \emph{simplified} and the \emph{magnified} DAG.
+suggests that a variable \(X\) potentially influences both \(T\) and
+\(Y\). Such scenarios are not hard to imagine. For instance, \(T\) might
+represent different treatments that could affect the recovery from
+cancer \(Y\), while \(X\) could denote the patient's age. Similarly, in
+the context of a DCJ study like the one described by
+\citet{Boonen_et_al_2020}, \(T\) could represent the duration of a
+child's cochlear implant use, which might influence the child's overall
+speech quality \(Y\), with \(X\) indicating the child's hearing status.
+Note that these descriptions do not specify the type of data or the
+functional forms of the variables, highlighting the heuristic nature of
+DAGs. {(not a bad example, but I prefer one using writing skills)}
+
+Figure~\ref{fig-example} presents two graphs illustrating the plausible
+causal structure of the motivating example.
+Figure~\ref{fig-dag_example1} shows the \emph{simplified} DAG. In this
+graph, the variables of interest or \emph{endogenous} variables
+\(V=\{T,X,Y\}\) are depicted as solid black circles, indicating that
+they are observed variables. The arrows in the graph reflect the
+expected direction of causal influences among the variables.
+Figure~\ref{fig-dag_example2}, in contrast, depicts the \emph{magnified}
+version of the DAG. This graph includes, in addition to the endogenous
+variables, the \emph{exogenous} variables \(E=\{e_{T},e_{X},e_{Y}\}\).
+These exogenous variables are commonly referred to as
+\emph{disturbances} or \emph{errors}, because they represent factors not
+explicitly modeled. They are depicted as open circles, indicating their
+unobserved nature. While such exogenous variables are often omitted for
+simplicity, including them in the graph can be advantageous in certain
+scenarios, as they can help to highlight potential issues related to
+conditioning and confounding \citep{Cinelli_et_al_2020}, concepts that
+will be discussed in the next section.
+
+\newcommand{\dsep}{\perp\!\!\!\perp}
+\newcommand{\ndsep}{\not\!\perp\!\!\!\perp}
+
+Furthermore, a detailed examination of both figures reveals the presence
+of at least four of the five fundamental building blocks.
+Figure~\ref{fig-dag_example1} displays multiple descendants, evident in
+pairwise relations such as \(X \rightarrow T\), \(X \rightarrow Y\), and
+\(T \rightarrow Y\). It also illustrates a fork with
+\(X \rightarrow \{T,Y\}\). Similarly, Figure~\ref{fig-dag_example2}
+features multiple two-unconnected nodes, evident in the pairwise
+relations \(\{e_{T} \perp\!\!\!\perp e_{X}\}\),
+\(\{e_{T} \perp\!\!\!\perp e_{Y}\}\), and
+\(\{e_{X} \perp\!\!\!\perp e_{Y}\}\), as well as colliders such as
+\(\{X,e_{T}\} \rightarrow T\) and \(\{X,T,e_{Y}\} \rightarrow Y\). The
+symbol \(\perp\!\!\!\perp\) denotes a concept know as
+\emph{d-separation}, which roughly implies the independence of the
+variables. This concept will be introduced in the next section.
 
 \begin{figure}
 
