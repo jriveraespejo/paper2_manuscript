@@ -192,15 +192,15 @@ One key advantage of DAGs is that, regardless of complexity, they can represent 
 
 ::: {#fig-dags layout="[[1,1],[1,1,1]]"}
 
-![Two unconnected nodes](images/figures/dag_bb1.png){#fig-dag_bb1 fig-align="center" width=40%}
+![Two unconnected nodes](images/figures/dag_bb1.png){#fig-dag_bb1 fig-align="center" width=30%}
 
-![Two connected nodes or descendant](images/figures/dag_bb2.png){#fig-dag_bb2 fig-align="center" width=40%}
+![Two connected nodes or descendant](images/figures/dag_bb2.png){#fig-dag_bb2 fig-align="center" width=30%}
 
-![Chain or pipe](images/figures/dag_bb3.png){#fig-dag_bb3 fig-align="center" width=100%}
+![Chain or pipe](images/figures/dag_bb3.png){#fig-dag_bb3 fig-align="center" width=85%}
 
-![Fork](images/figures/dag_bb4.png){#fig-dag_bb4 fig-align="center" width=100%}
+![Fork](images/figures/dag_bb4.png){#fig-dag_bb4 fig-align="center" width=85%}
 
-![Collider or inmorality](images/figures/dag_bb5.png){#fig-dag_bb5 fig-align="center" width=100%}
+![Collider or inmorality](images/figures/dag_bb5.png){#fig-dag_bb5 fig-align="center" width=85%}
 
 DAG's fundamental building blocks.
 :::
@@ -228,7 +228,6 @@ Furthermore, a detailed examination of both figures reveals the presence of at l
 
 DAGs for a plausible causal structure in a system.
 :::
-
 
 ## The flow of association and causation in graphs {#sec-framework-flow}
 
