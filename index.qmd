@@ -153,7 +153,7 @@ DCJ has proven effective in assessing competencies and traits predominantly with
 According to @Verhavert_et_al_2019 and @vanDaal_2020, several assessment factors interact and influence the method's outcome. These factors include the number and characteristics of the stimuli, their *proximity* in terms of the assessed trait, the number of comparison per stimulus, and the pairing algorithm used. Furthermore, since the method relies on judges' assessments, the number and characteristics of judges, their *discrimination* abilities, and the number of comparisons per judge also play pivotal roles. Moreover, when the stimuli represent sub-units of higher-levels units, factors such as the number and characteristics of these units, along with their *proximity* in terms of the assessed trait, can significantly influence the outcome. For instance, @vanDaal_et_al_2016 assessed academic writing skills of university students (units) using multiple argumentative essays (sub-units).
 
 <!-- 4. Solution to the gap -->
-Although several studies have examined the individual impact of these factors on the method's reliability [@Bramley_2015; @Pollitt_2012b; @Bramley_et_al_2019; @Verhavert_et_al_2019; @Crompvoets_et_al_2022; @vanDaal_et_al_2017; @Gijsen_et_al_2021; @Bouwer_et_al_2023], none, to the best of the authors' knowledge, have provided a transparent depiction of the DCJ system and the mechanisms generating the DCJ outcome. This study aims to fill this gap by representing DCJ within the framework of causal inference. Specifically, utilizing the structural approach [@Wright_1921; @Pearl_2009; @Pearl_et_al_2016], the study develops a scientific model to clarify plausible causal assumptions and mechanisms inherent in the DCJ system. The study then translates the scientific model into a probabilistic statistical model. This model aims to produce statistical estimates to draw inferences about plausible causal relationships within the DCJ system. 
+Although several studies have examined the individual impact of these factors on the method's reliability [@Bramley_2015; @Pollitt_2012b; @Bramley_et_al_2019; @Verhavert_et_al_2019; @Crompvoets_et_al_2022; @vanDaal_et_al_2017; @Gijsen_et_al_2021; @Bouwer_et_al_2023], none, to the best of the authors' knowledge, have provided a transparent depiction of the DCJ system and the mechanisms generating the DCJ outcome. This study aims to fill this gap by representing DCJ within the framework of causal inference. Specifically, utilizing the structural approach, the study develops a scientific model to clarify plausible causal assumptions and mechanisms inherent in the DCJ system. The study then translates the scientific model into a probabilistic statistical model. This model aims to produce statistical estimates to draw inferences about plausible causal relationships within the DCJ system. 
 
 <!-- 5. final objective and relevance -->
 Ultimately, this study provides a robust causal and probabilistic foundation for the statistical analysis of DCJ data, building upon Thurstone’s law of comparative judgment [-@Thurstone_1927]. Consequently, its findings offer valuable insights for researchers and analysts designing and implementing DCJ experiments.
@@ -172,7 +172,7 @@ In statistics, *causal inference* refers to the process of identifying the cause
 Counterfactuals represent scenarios *contrary to fact*, where alternative *potential* outcomes resulting from a cause are neither observed nor observable [@Neal_2020; @Counterfactual_2024]. According to @Pearl_et_al_2018, counterfactuals are the foundation of causal inference and occupy the highest level of cognitive abstraction in the ladder of causation, followed by intervention and association. Nevertheless, despite their abstract nature, counterfactuals enable the development of a *theory of the world* that explains why specific causes have specific effects and what occurs in their absence [@Pearl_et_al_2018]. They achieve this by translating causal statements into counterfactual statements, that is, statements about "what would have happened in the world under different circumstances."
 
 <!-- 3. How do we apply causal inference and counterfactuals? -->
-Several approaches to causal inference and counterfactuals exist, but two are particularly prominent: the potential outcomes approach, also known as the Neyman-Rubin causal model [@Neyman_et_al_1923; @Rubin_1974], and the structural approach [@Wright_1921; @Pearl_2009; @Pearl_et_al_2016]. Both approaches employ rigorous mathematical notation to characterize causal inference, but they do so in different ways [@Neal_2020]. The potential outcomes approach relies on counterfactual notation, whereas the structural approach employs the do-operator and structural causal models [SCM, @Pearl_2009; @Pearl_et_al_2016]. Despite these differences, both notations can be expressed in terms of the other, and both approaches provide methods for using experimental and observational data to estimate causal effects [@Pearl_2010]. 
+Several approaches to causal inference and counterfactuals exist, but two are particularly prominent: the potential outcomes approach, also known as the Neyman-Rubin causal model [@Neyman_et_al_1923; @Rubin_1974], and the structural approach [@Pearl_2009; @Pearl_et_al_2016]. Both approaches employ rigorous mathematical notation to characterize causal inference, but they do so in different ways [@Neal_2020]. The potential outcomes approach relies on counterfactual notation, whereas the structural approach employs the do-operator and structural causal models [SCM, @Pearl_2009; @Pearl_et_al_2016]. Despite these differences, both notations can be expressed in terms of the other, and both approaches provide methods for using experimental and observational data to estimate causal effects [@Pearl_2010]. 
 
 <!-- 4. But which approach are we going to use? -->
 Nevertheless, the structural approach offers an additional key advantage over the potential outcomes approach: it enables the graphical representation of any system through directed acyclic graphs [DAG, @Gross_et_al_2018; @Neal_2020]. DAGs are heuristics that can effectively convey the assumed causal structure of a system. They do not represent detailed statistical models but allow researchers to deduce which statistical models can provide valid causal inferences, assuming the causal structure depicted in the DAG is accurate [@McElreath_2020].
@@ -188,7 +188,7 @@ Graph theory is a branch of mathematics focused on the study of graphs. Graphs a
 In statistics, one application incorporating concepts from graph theory is causal inference. Specifically, the structural approach to causal inference uses directed acyclic graphs (DAG) to provide a formal and graphical representation of the causal structure of a system [@Neal_2020]. In this context, a *graph* is a collection of nodes connected by edges, where nodes represent random variables. The term *directed* indicates that the edges of the graph extend from one node to another, with arrows showing the direction of causal influence. Moreover, the term *acyclic* indicates the causal influences do not form a loop, meaning the influences do not cycle back on themselves [@McElreath_2020].
 
 <!-- 3. How do we draw DAGs? and what are the building blocks of DAGs? -->
-One key advantage of DAGs is that, regardless of complexity, they can represent various causal structures using only five fundamental building blocks [@Neal_2020; @McElreath_2020]. @fig-dags illustrates these blocks. @fig-dag_bb1 depicts two unconnected nodes, representing an scenario where variables $X_{1}$ and $X_{2}$ are not causally related. @fig-dag_bb2 shows two connected nodes, illustrating a scenario where a parent node $X_{1}$ exerts a causal influence on a child node $X_{2}$. Consequently, $X_{2}$ is considered a *descendant* of $X_{1}$. @fig-dag_bb3 depicts a *chain* (or *pipe*), where $X_{1}$ influences $X_{2}$, and $X_{2}$ influences $X_{3}$. In this configuration, $X_{1}$ is a parent node of $X_{2}$, and $X_{2}$ a parent node of $X_{3}$. Furthermore, the DAG shows that $X_{1}$ is an *ancestor* of $X_{3}$ and that the relationship between these variables is entirely *mediated* by $X_{2}$. @fig-dag_bb4 illustrates a *fork*, where variables $X_{1}$ and $X_{3}$ are both influenced by $X_{2}$. In this scenario $X_{2}$ is a parent node of both $X_{1}$ and $X_{3}$. Finally, @fig-dag_bb5 depicts a *collider*, also known as *inmorality*, where variables $X_{1}$ and $X_{3}$ are concurrent causes of $X_{2}$. In this configuration, $X_{1}$ and $X_{3}$ are not causally related to each other but both influence $X_{2}$. 
+One key advantage of DAGs is that, regardless of complexity, they can represent various causal structures using only five fundamental building blocks [@Neal_2020; @McElreath_2020; @Morgan_et_al_2014]. @fig-dags illustrates these blocks. @fig-dag_bb1 depicts two unconnected nodes, representing an scenario where variables $X_{1}$ and $X_{2}$ are not causally related. @fig-dag_bb2 shows two connected nodes, illustrating a scenario where a parent node $X_{1}$ exerts a causal influence on a child node $X_{2}$. Consequently, $X_{2}$ is considered a *descendant* of $X_{1}$. @fig-dag_bb3 depicts a *chain* (or *pipe*), where $X_{1}$ influences $X_{2}$, and $X_{2}$ influences $X_{3}$. In this configuration, $X_{1}$ is a parent node of $X_{2}$, and $X_{2}$ a parent node of $X_{3}$. Furthermore, the DAG shows that $X_{1}$ is an *ancestor* of $X_{3}$ and that the relationship between these variables is entirely *mediated* by $X_{2}$. @fig-dag_bb4 illustrates a *fork*, where variables $X_{1}$ and $X_{3}$ are both influenced by $X_{2}$. In this scenario $X_{2}$ is a parent node of both $X_{1}$ and $X_{3}$. Finally, @fig-dag_bb5 depicts a *collider*, also known as *inmorality*, where variables $X_{1}$ and $X_{3}$ are concurrent causes of $X_{2}$. In this configuration, $X_{1}$ and $X_{3}$ are not causally related to each other but both influence $X_{2}$. 
 
 ::: {#fig-dags layout="[[1,1],[1,1,1]]"}
 
@@ -196,29 +196,29 @@ One key advantage of DAGs is that, regardless of complexity, they can represent 
 
 ![Two connected nodes or descendant](images/figures/dag_bb2.png){#fig-dag_bb2 fig-align="center" width=30%}
 
-![Chain or pipe](images/figures/dag_bb3.png){#fig-dag_bb3 fig-align="center" width=85%}
+![Chain or pipe](images/figures/dag_bb3.png){#fig-dag_bb3 fig-align="center" width=75%}
 
-![Fork](images/figures/dag_bb4.png){#fig-dag_bb4 fig-align="center" width=85%}
+![Fork](images/figures/dag_bb4.png){#fig-dag_bb4 fig-align="center" width=75%}
 
-![Collider or inmorality](images/figures/dag_bb5.png){#fig-dag_bb5 fig-align="center" width=85%}
+![Collider or inmorality](images/figures/dag_bb5.png){#fig-dag_bb5 fig-align="center" width=75%}
 
 DAG's fundamental building blocks.
 :::
 
 <!-- 4. A motivating example -->
-Given the heuristic nature of DAGs, a motivating example can help illustrate the use of the five fundamental building blocks to construct a system's causal structure. This example can also help to clarify additional conventions for drawing DAGs.
+Given the heuristic nature of DAGs, a motivating example can help illustrate the use of the five fundamental building blocks to construct a system's causal structure. This example can also help to clarify some additional conventions for drawing DAGs.
 
 Consider a research problem where the causal effect of a variable $T$ on an outcome $Y$ needs to be investigated. Additionally, the problem suggests that a variable $X$ potentially influences both $T$ and $Y$. Such scenarios are not hard to imagine. For instance, $T$ might represent different treatments that could affect the recovery from cancer $Y$, while $X$ could denote the patient's age. Similarly, in the context of a DCJ study like the one described by @Boonen_et_al_2020, $T$ could represent the duration of a child's cochlear implant use, which might influence the child's overall speech quality $Y$, with $X$ indicating the child's hearing status. Note that these descriptions do not specify the type of data or the functional forms of the variables, highlighting the heuristic nature of DAGs. [(not a bad example, but I prefer one using writing skills)]{style="color:blue;"}
 
 <!-- 5. DAG for the motivating example -->
-@fig-example presents two graphs illustrating the plausible causal structure of the motivating example. @fig-dag_example1 shows the *simplified* DAG. In this graph, the variables of interest or *endogenous* variables $V=\{T,X,Y\}$ are depicted as solid black circles, indicating that they are observed variables. The arrows in the graph reflect the expected direction of causal influences among the variables. @fig-dag_example2, in contrast, depicts the *magnified* version of the DAG. This graph includes, in addition to the endogenous variables, the *exogenous* variables $E=\{e_{T},e_{X},e_{Y}\}$. These exogenous variables are commonly referred to as *disturbances* or *errors*, because they represent factors not explicitly modeled. They are depicted as open circles, indicating their unobserved nature. While such exogenous variables are often omitted for simplicity, including them in the graph can be advantageous in certain scenarios, as they can help to highlight potential issues related to conditioning and confounding [@Cinelli_et_al_2020], concepts that will be discussed in the next section.
+@fig-example presents two graphs illustrating the plausible causal structure of the motivating example. @fig-dag_example1 shows the *simplified* DAG. In this graph, the variables of interest or *endogenous* variables $V=\{T,X,Y\}$ are depicted as solid black circles, indicating that they are observed variables. The arrows in the graph reflect the expected direction of causal influences among the variables. In contrast, @fig-dag_example2 depicts the *magnified* version of the DAG. This graph includes, in addition to the endogenous variables, the *exogenous* variables $E=\{e_{T},e_{X},e_{Y}\}$. These exogenous variables are commonly referred to as *disturbances* or *errors*, because they represent factors not explicitly modeled. They are depicted as open circles, indicating their unobserved nature. These exogenous variables are often omitted for simplicity, resulting in the simplified DAG in @fig-dag_example1. However, including them in the graph can be advantageous in certain scenarios, as they can help to highlight potential issues related to conditioning and confounding [@Cinelli_et_al_2020]. These concepts are introduced in the next section.
 
 <!-- 6. But where are the building blocks? -->
 <!-- commands for d-separation -->
 \newcommand{\dsep}{\perp\!\!\!\perp}
 \newcommand{\ndsep}{\not\!\perp\!\!\!\perp}
 
-Furthermore, a detailed examination of both figures reveals the presence of at least four of the five fundamental building blocks. @fig-dag_example1 displays multiple descendants, evident in pairwise relations such as $X \rightarrow T$, $X \rightarrow Y$, and $T \rightarrow Y$. It also illustrates a fork with $X \rightarrow \{T,Y\}$. Similarly, @fig-dag_example2 features multiple two-unconnected nodes, evident in the pairwise relations $\{e_{T} \dsep e_{X}\}$, $\{e_{T} \dsep e_{Y}\}$, and $\{e_{X} \dsep e_{Y}\}$, as well as colliders such as $\{X,e_{T}\} \rightarrow T$ and $\{X,T,e_{Y}\} \rightarrow Y$. The symbol $\dsep$ denotes a concept know as *d-separation*, which roughly implies the independence of the variables. This concept will be introduced in the next section.
+Furthermore, a detailed examination of both figures reveals the presence of at least four of the five fundamental building blocks. @fig-dag_example1 displays multiple descendants, evident in pairwise relations such as $X \rightarrow T$, $X \rightarrow Y$, and $T \rightarrow Y$. It also illustrates a fork with $X \rightarrow \{T,Y\}$. Similarly, @fig-dag_example2 features multiple two-unconnected nodes, evident in the pairwise relations $\{e_{T} \dsep e_{X}\}$, $\{e_{T} \dsep e_{Y}\}$, and $\{e_{X} \dsep e_{Y}\}$, as well as colliders such as $\{X,e_{T}\} \rightarrow T$ and $\{X,T,e_{Y}\} \rightarrow Y$. The symbol $\dsep$ denotes a concept know as *d-separation*, which roughly implies the independence of the variables. This concept is introduced in the next section.
 
 ::: {#fig-example layout-ncol=2}
 
@@ -228,6 +228,7 @@ Furthermore, a detailed examination of both figures reveals the presence of at l
 
 DAGs for a plausible causal structure in a system.
 :::
+
 
 ## The flow of association and causation in graphs {#sec-framework-flow}
 
@@ -331,6 +332,9 @@ DAGs for a plausible causal structure in a system.
 
 ![ DCJ causal diagram, sample with comparisons mathematical description ](images/figures/SciModel_samp.png){#fig-SciModel_samp fig-align="center" width=80%}
 
+<!-- Assuming certain values are decided in the experimental design (proportions, sample size, etc) you can reduce the graph -->
+
+
 
 <!-- It is more likely that we can decide the characteristics of the objects we want to include in the study (independent variables), ensuring groups that are more balanced. However, in the case of subjects sometimes the independent variables cannot be assigned (e.g., hearing status) -->
 
@@ -338,6 +342,10 @@ DAGs for a plausible causal structure in a system.
 ## Probabilitics assumptions of the scientific model {#sec-theory-probability}
 
 <!-- what does it mean in probabilistic terms? describe probabilities and arrive to structural model -->
+
+<!-- Final models does not require the estimation of latent variables, the results can be evaluated without them -->
+
+<!-- Notice that latent variables are kind of like descendants -->
 
 
 <!-- $$ -->
