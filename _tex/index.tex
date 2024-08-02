@@ -355,14 +355,16 @@ to estimate causal effects \citep{Pearl_2010}.
 Nevertheless, the structural approach offers an additional key advantage
 over the potential outcomes approach: it enables the graphical
 representation of any system through directed acyclic graphs
-\citep[DAG,][]{Gross_et_al_2018, Neal_2020}. DAGs are heuristics that
-can effectively convey the assumed causal structure of a system. They do
-not represent detailed statistical models but allow researchers to
-deduce which statistical models can provide valid causal inferences,
-assuming the causal structure depicted in the DAG is accurate
-\citep{McElreath_2020}.
+\citep[DAG,][]{Gross_et_al_2018, Neal_2020}. DAGs serve as heuristics,
+effectively conveying the assumed causal structure of a system. A
+heuristic is a strategy that simplifies information to make decisions
+more quickly, efficiently, and sometimes more accurately than complex
+methods \citep{Chow_2015}. Consequently, DAGs do not represent detailed
+statistical models but allow researchers to deduce which statistical
+models can provide valid causal inferences, assuming the causal
+structure depicted in the DAG is accurate \citep{McElreath_2020}.
 
-\subsection{Directed acyclic graphs (DAG)}\label{sec-framework-dag}
+\subsection{DAGs and SCMs}\label{sec-framework-dag}
 
 Graph theory is a branch of mathematics focused on the study of graphs.
 Graphs are mathematical structures modeling pairwise relations between
@@ -374,63 +376,83 @@ social sciences \citep{Gross_et_al_2018}.
 
 In statistics, one application incorporating concepts from graph theory
 is causal inference. Specifically, the structural approach to causal
-inference uses directed acyclic graphs (DAG) to provide a formal and
-graphical representation of the causal structure of a system
-\citep{Neal_2020}. In this context, a \emph{graph} is a collection of
-nodes connected by edges, where nodes represent random variables. The
-term \emph{directed} indicates that the edges of the graph extend from
-one node to another, with arrows showing the direction of causal
-influence. Moreover, the term \emph{acyclic} indicates the causal
-influences do not form a loop, meaning the influences do not cycle back
-on themselves \citep{McElreath_2020}.
+inference uses directed acyclic graphs (DAG) and its associated
+structural causal models (SCM) to provide a graphical and formal
+representation of the causal structure of a system \citep{Neal_2020}. In
+this context, a \emph{graph} denotes a collection of nodes connected by
+edges, where nodes represent random variables. The term \emph{directed}
+indicates that the edges of the graph extend from one node to another,
+with arrows showing the direction of causal influence. Moreover, the
+term \emph{acyclic} indicates the causal influences do not form a loop,
+meaning the influences do not cycle back on themselves
+\citep{McElreath_2020}.
 
-One key advantage of DAGs is that, regardless of complexity, they can
-represent various causal structures using only five fundamental building
-blocks \citep{Neal_2020, McElreath_2020, Morgan_et_al_2014}.
-Figure~\ref{fig-dags} illustrates these blocks. Figure~\ref{fig-dag_bb1}
-depicts two unconnected nodes, representing an scenario where variables
-\(X_{1}\) and \(X_{2}\) are not causally related.
-Figure~\ref{fig-dag_bb2} shows two connected nodes, illustrating a
-scenario where a parent node \(X_{1}\) exerts a causal influence on a
-child node \(X_{2}\). Consequently, \(X_{2}\) is considered a
-\emph{descendant} of \(X_{1}\). Figure~\ref{fig-dag_bb3} depicts a
-\emph{chain} (or \emph{pipe}), where \(X_{1}\) influences \(X_{2}\), and
-\(X_{2}\) influences \(X_{3}\). In this configuration, \(X_{1}\) is a
-parent node of \(X_{2}\), and \(X_{2}\) a parent node of \(X_{3}\).
-Furthermore, the DAG shows that \(X_{1}\) is an \emph{ancestor} of
-\(X_{3}\) and that the relationship between these variables is entirely
-\emph{mediated} by \(X_{2}\). Figure~\ref{fig-dag_bb4} illustrates a
-\emph{fork}, where variables \(X_{1}\) and \(X_{3}\) are both influenced
-by \(X_{2}\). In this scenario \(X_{2}\) is a parent node of both
-\(X_{1}\) and \(X_{3}\). Finally, Figure~\ref{fig-dag_bb5} depicts a
-\emph{collider}, also known as \emph{inmorality}, where variables
-\(X_{1}\) and \(X_{3}\) are concurrent causes of \(X_{2}\). In this
-configuration, \(X_{1}\) and \(X_{3}\) are not causally related to each
-other but both influence \(X_{2}\).
+One key advantage of DAGs is that they can represent various causal
+structures using only five fundamental building blocks, regardless of
+complexity. The left panels of Figure~\ref{fig-dags_scms} illustrates
+the \emph{simplified} graphs of these block. In these graphs, the
+variables of interest or \emph{endogenous} variables, \(V=\{X,Z,Y\}\),
+are depicted as solid black circles, indicating that they are observed
+variables. The arrows in the graph reflect the expected direction of
+causal influences among the variables.
+
+In contrast, the middle panels of Figure~\ref{fig-dags_scms} depicts the
+\emph{magnified} graphs of these building blocks. These graph include,
+in addition to the endogenous variables, the \emph{exogenous} variables
+\(E=\{e_{X},e_{Z},e_{Y}\}\). These exogenous variables, commonly
+referred to as \emph{disturbances} or \emph{errors}, represent factors
+not explicitly modeled. Moreover, they are depicted as open circles,
+indicating their unobserved nature. These exogenous variables are often
+omitted for simplicity, resulting in the simplified DAGs shown in the
+left panels. However, including them in the graph can be advantageous in
+certain scenarios, as they can help to highlight potential issues
+related to conditioning and confounding \citep{Cinelli_et_al_2020},
+concepts introduced in the next section.
+
+\newcommand{\dsep}{\perp\!\!\!\perp}
+\newcommand{\ndsep}{\not\!\perp\!\!\!\perp}
 
 \begin{figure}
 
-\begin{minipage}{0.50\linewidth}
+\begin{minipage}{0.33\linewidth}
 
 \centering{
 
-\includegraphics[width=0.3\textwidth,height=\textheight]{images/figures/dag_bb1.png}
+\includegraphics[width=0.35\textwidth,height=\textheight]{images/figures/sdag_bb1.png}
 
 }
 
-\subcaption{\label{fig-dag_bb1}Two unconnected nodes}
+\subcaption{\label{fig-sdag_bb1}Two unconnected nodes}
 
 \end{minipage}%
 %
-\begin{minipage}{0.50\linewidth}
+\begin{minipage}{0.33\linewidth}
 
 \centering{
 
-\includegraphics[width=0.3\textwidth,height=\textheight]{images/figures/dag_bb2.png}
+\includegraphics[width=0.8\textwidth,height=\textheight]{images/figures/mdag_bb1.png}
 
 }
 
-\subcaption{\label{fig-dag_bb2}Two connected nodes or descendant}
+\subcaption{\label{fig-mdag_bb1}Two unconnected nodes}
+
+\end{minipage}%
+%
+\begin{minipage}{0.33\linewidth}
+
+\centering{
+
+\[
+\begin{aligned}
+  X & := f_{X}(e_{X}) \\
+  Y & := f_{Y}(e_{Y}) \\
+  e_{X} & \perp\!\!\!\perp e_{Y}
+\end{aligned}
+\]
+
+}
+
+\subcaption{\label{fig-scm_bb1}Two unconnected nodes}
 
 \end{minipage}%
 \newline
@@ -438,11 +460,11 @@ other but both influence \(X_{2}\).
 
 \centering{
 
-\includegraphics[width=0.75\textwidth,height=\textheight]{images/figures/dag_bb3.png}
+\includegraphics[width=0.35\textwidth,height=\textheight]{images/figures/sdag_bb2.png}
 
 }
 
-\subcaption{\label{fig-dag_bb3}Chain or pipe}
+\subcaption{\label{fig-sdag_bb2}Two connected nodes or descendant}
 
 \end{minipage}%
 %
@@ -450,11 +472,11 @@ other but both influence \(X_{2}\).
 
 \centering{
 
-\includegraphics[width=0.75\textwidth,height=\textheight]{images/figures/dag_bb4.png}
+\includegraphics[width=0.8\textwidth,height=\textheight]{images/figures/mdag_bb2.png}
 
 }
 
-\subcaption{\label{fig-dag_bb4}Fork}
+\subcaption{\label{fig-mdag_bb2}Two connected nodes or descendant}
 
 \end{minipage}%
 %
@@ -462,17 +484,183 @@ other but both influence \(X_{2}\).
 
 \centering{
 
-\includegraphics[width=0.75\textwidth,height=\textheight]{images/figures/dag_bb5.png}
+\[
+\begin{aligned}
+  X & := f_{X}(e_{X}) \\
+  Y & := f_{Y}(X,e_{Y}) \\
+  e_{X} & \perp\!\!\!\perp e_{Y}
+\end{aligned}
+\]
 
 }
 
-\subcaption{\label{fig-dag_bb5}Collider or inmorality}
+\subcaption{\label{fig-scm_bb2}Two connected nodes or descendant}
+
+\end{minipage}%
+\newline
+\begin{minipage}{0.33\linewidth}
+
+\centering{
+
+\includegraphics[width=0.6\textwidth,height=\textheight]{images/figures/sdag_bb3.png}
+
+}
+
+\subcaption{\label{fig-sdag_bb3}Chain or pipe}
+
+\end{minipage}%
+%
+\begin{minipage}{0.33\linewidth}
+
+\centering{
+
+\includegraphics[width=1\textwidth,height=\textheight]{images/figures/mdag_bb3.png}
+
+}
+
+\subcaption{\label{fig-mdag_bb3}Chain or pipe}
+
+\end{minipage}%
+%
+\begin{minipage}{0.33\linewidth}
+
+\centering{
+
+\[
+\begin{aligned}
+  X & := f_{X}(e_{X}) \\
+  Z & := f_{Z}(X,e_{Z}) \\
+  Y & := f_{Y}(Z,e_{Y}) \\
+  e_{X} & \perp\!\!\!\perp e_{Y} \\
+  e_{X} & \perp\!\!\!\perp e_{Z} \\
+  e_{Z} & \perp\!\!\!\perp e_{Y}
+\end{aligned}
+\]
+
+}
+
+\subcaption{\label{fig-scm_bb3}Chain or pipe}
+
+\end{minipage}%
+\newline
+\begin{minipage}{0.33\linewidth}
+
+\centering{
+
+\includegraphics[width=0.6\textwidth,height=\textheight]{images/figures/sdag_bb4.png}
+
+}
+
+\subcaption{\label{fig-sdag_bb4}Fork}
+
+\end{minipage}%
+%
+\begin{minipage}{0.33\linewidth}
+
+\centering{
+
+\includegraphics[width=1\textwidth,height=\textheight]{images/figures/mdag_bb4.png}
+
+}
+
+\subcaption{\label{fig-mdag_bb4}Fork}
+
+\end{minipage}%
+%
+\begin{minipage}{0.33\linewidth}
+
+\centering{
+
+\[
+\begin{aligned}
+  X & := f_{X}(Z,e_{X}) \\
+  Z & := f_{Z}(e_{Z}) \\
+  Y & := f_{Y}(Z,e_{Y}) \\
+  e_{X} & \perp\!\!\!\perp e_{Y} \\
+  e_{X} & \perp\!\!\!\perp e_{Z} \\
+  e_{Z} & \perp\!\!\!\perp e_{Y}
+\end{aligned}
+\]
+
+}
+
+\subcaption{\label{fig-scm_bb4}Fork}
+
+\end{minipage}%
+\newline
+\begin{minipage}{0.33\linewidth}
+
+\centering{
+
+\includegraphics[width=0.6\textwidth,height=\textheight]{images/figures/sdag_bb5.png}
+
+}
+
+\subcaption{\label{fig-sdag_bb5}Collider or inmorality}
+
+\end{minipage}%
+%
+\begin{minipage}{0.33\linewidth}
+
+\centering{
+
+\includegraphics[width=1\textwidth,height=\textheight]{images/figures/mdag_bb5.png}
+
+}
+
+\subcaption{\label{fig-mdag_bb5}Collider or inmorality}
+
+\end{minipage}%
+%
+\begin{minipage}{0.33\linewidth}
+
+\centering{
+
+\[
+\begin{aligned}
+  X & := f_{X}(e_{X}) \\
+  Z & := f_{Z}(X,Y,e_{Z}) \\
+  Y & := f_{Y}(e_{Y}) \\
+  e_{X} & \perp\!\!\!\perp e_{Y} \\
+  e_{X} & \perp\!\!\!\perp e_{Z} \\
+  e_{Z} & \perp\!\!\!\perp e_{Y}
+\end{aligned}
+\]
+
+}
+
+\subcaption{\label{fig-scm_bb5}Collider or inmorality}
 
 \end{minipage}%
 
-\caption{\label{fig-dags}DAG's fundamental building blocks.}
+\caption{\label{fig-dags_scms}The five fundamental building blocks of
+DAGs with corresponding SCMs. \textbf{Note:} left column shows
+simplified DAGS, middle column show magnified DAGs, and right column
+shows the corresponding SCMs.}
 
 \end{figure}%
+
+A careful examination of the left and middle panels of
+Figure~\ref{fig-dags_scms} reveal what do the building blocks assume.
+Figures \ref{fig-sdag_bb1} and \ref{fig-mdag_bb1} depict two unconnected
+nodes, representing an scenario where variables \(X\) and \(Y\) are not
+causally related. Figures \ref{fig-sdag_bb2} and \ref{fig-mdag_bb2} show
+two connected nodes, illustrating a scenario where a parent node \(X\)
+exerts a causal influence on a child node \(Y\). Consequently, \(Y\) is
+considered a \emph{descendant} of \(X\). Figures \ref{fig-sdag_bb3} and
+\ref{fig-mdag_bb3} depict a \emph{chain} (or \emph{pipe}), where \(X\)
+influences \(Z\), and \(Z\) influences \(Y\). In this configuration,
+\(X\) is a parent node of \(Z\), and \(Z\) a parent node of \(Y\).
+Furthermore, the DAG shows that \(X\) is an \emph{ancestor} of \(Y\) and
+that the relationship between these variables is entirely
+\emph{mediated} by \(Z\). Figures \ref{fig-sdag_bb4} and
+\ref{fig-mdag_bb4} illustrate a \emph{fork}, where variables \(X\) and
+\(Y\) are both influenced by \(Z\). In this scenario \(Z\) is a parent
+node of both \(X\) and \(Y\). Finally, figures \ref{fig-sdag_bb5} and
+\ref{fig-mdag_bb5} depict a \emph{collider}, also known as
+\emph{inmorality}, where variables \(X\) and \(Y\) are concurrent causes
+of \(Z\). In this configuration, \(X\) and \(Y\) are not causally
+related to each other but both influence \(Z\).
 
 Given the heuristic nature of DAGs, a motivating example can help
 illustrate the use of the five fundamental building blocks to construct
@@ -489,40 +677,18 @@ the context of a DCJ study like the one described by
 \citet{Boonen_et_al_2020}, \(T\) could represent the duration of a
 child's cochlear implant use, which might influence the child's overall
 speech quality \(Y\), with \(X\) indicating the child's hearing status.
-Note that these descriptions do not specify the type of data or the
-functional forms of the variables, highlighting the heuristic nature of
-DAGs. {(not a bad example, but I prefer one using writing skills)}
+{(not a bad example, but I prefer one using writing skills)}
 
 Figure~\ref{fig-example} presents two graphs illustrating the plausible
 causal structure of the motivating example.
-Figure~\ref{fig-dag_example1} shows the \emph{simplified} DAG. In this
-graph, the variables of interest or \emph{endogenous} variables
-\(V=\{T,X,Y\}\) are depicted as solid black circles, indicating that
-they are observed variables. The arrows in the graph reflect the
-expected direction of causal influences among the variables. In
-contrast, Figure~\ref{fig-dag_example2} depicts the \emph{magnified}
-version of the DAG. This graph includes, in addition to the endogenous
-variables, the \emph{exogenous} variables \(E=\{e_{T},e_{X},e_{Y}\}\).
-These exogenous variables are commonly referred to as
-\emph{disturbances} or \emph{errors}, because they represent factors not
-explicitly modeled. They are depicted as open circles, indicating their
-unobserved nature. These exogenous variables are often omitted for
-simplicity, resulting in the simplified DAG in
-Figure~\ref{fig-dag_example1}. However, including them in the graph can
-be advantageous in certain scenarios, as they can help to highlight
-potential issues related to conditioning and confounding
-\citep{Cinelli_et_al_2020}. These concepts are introduced in the next
-section.
-
-\newcommand{\dsep}{\perp\!\!\!\perp}
-\newcommand{\ndsep}{\not\!\perp\!\!\!\perp}
-
-Furthermore, a detailed examination of both figures reveals the presence
-of at least four of the five fundamental building blocks.
-Figure~\ref{fig-dag_example1} displays multiple descendants, evident in
+Figure~\ref{fig-sdag_example1} shows the \emph{simplified} graph, while
+Figure~\ref{fig-mdag_example1} depicts the \emph{magnified} graph of the
+DAG. A detailed examination of both figures reveals the presence of at
+least four of the five fundamental building blocks.
+Figure~\ref{fig-sdag_example1} displays multiple descendants, evident in
 pairwise relations such as \(X \rightarrow T\), \(X \rightarrow Y\), and
 \(T \rightarrow Y\). It also illustrates a fork with
-\(X \rightarrow \{T,Y\}\). Similarly, Figure~\ref{fig-dag_example2}
+\(X \rightarrow \{T,Y\}\). Similarly, Figure~\ref{fig-mdag_example1}
 features multiple two-unconnected nodes, evident in the pairwise
 relations \(\{e_{T} \perp\!\!\!\perp e_{X}\}\),
 \(\{e_{T} \perp\!\!\!\perp e_{Y}\}\), and
@@ -534,27 +700,48 @@ variables. This concept is introduced in the next section.
 
 \begin{figure}
 
-\begin{minipage}{0.50\linewidth}
+\begin{minipage}{0.33\linewidth}
 
 \centering{
 
-\includegraphics[width=0.45\textwidth,height=\textheight]{images/figures/dag_example1.png}
+\includegraphics[width=0.35\textwidth,height=\textheight]{images/figures/sdag_example1.png}
 
 }
 
-\subcaption{\label{fig-dag_example1}Simplied DAG}
+\subcaption{\label{fig-sdag_example1}Simplied DAG}
 
 \end{minipage}%
 %
-\begin{minipage}{0.50\linewidth}
+\begin{minipage}{0.33\linewidth}
 
 \centering{
 
-\includegraphics[width=0.85\textwidth,height=\textheight]{images/figures/dag_example2.png}
+\includegraphics[width=0.65\textwidth,height=\textheight]{images/figures/mdag_example1.png}
 
 }
 
-\subcaption{\label{fig-dag_example2}Magnified DAG}
+\subcaption{\label{fig-mdag_example1}Magnified DAG}
+
+\end{minipage}%
+%
+\begin{minipage}{0.33\linewidth}
+
+\centering{
+
+\[
+\begin{aligned}
+  X & := f_{X}(e_{X}) \\
+  Z & := f_{Z}(X,Y,e_{Z}) \\
+  Y & := f_{Y}(e_{Y}) \\
+  e_{X} & \perp\!\!\!\perp e_{Y} \\
+  e_{X} & \perp\!\!\!\perp e_{Z} \\
+  e_{Z} & \perp\!\!\!\perp e_{Y}
+\end{aligned}
+\]
+
+}
+
+\subcaption{\label{fig-scm_example1}Collider or inmorality}
 
 \end{minipage}%
 

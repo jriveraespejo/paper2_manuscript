@@ -495,8 +495,12 @@ the University of Antwerp (BOF).</funding-statement>
     <xref alt="Gross, Yellen, and Anderson 2018" rid="ref-Gross_et_al_2018" ref-type="bibr">Gross,
     Yellen, and Anderson 2018</xref>;
     <xref alt="Neal 2020" rid="ref-Neal_2020" ref-type="bibr">Neal
-    2020</xref>). DAGs are heuristics that can effectively convey the
-    assumed causal structure of a system. They do not represent detailed
+    2020</xref>). DAGs serve as heuristics, effectively conveying the
+    assumed causal structure of a system. A heuristic is a strategy that
+    simplifies information to make decisions more quickly, efficiently,
+    and sometimes more accurately than complex methods
+    (<xref alt="Chow 2015" rid="ref-Chow_2015" ref-type="bibr">Chow
+    2015</xref>). Consequently, DAGs do not represent detailed
     statistical models but allow researchers to deduce which statistical
     models can provide valid causal inferences, assuming the causal
     structure depicted in the DAG is accurate
@@ -504,7 +508,7 @@ the University of Antwerp (BOF).</funding-statement>
     2020</xref>).</p>
   </sec>
   <sec id="sec-framework-dag">
-    <title>Directed acyclic graphs (DAG)</title>
+    <title>DAGs and SCMs</title>
     <p>Graph theory is a branch of mathematics focused on the study of
     graphs. Graphs are mathematical structures modeling pairwise
     relations between objects. They can represent physical relations,
@@ -516,11 +520,11 @@ the University of Antwerp (BOF).</funding-statement>
     Yellen, and Anderson 2018</xref>).</p>
     <p>In statistics, one application incorporating concepts from graph
     theory is causal inference. Specifically, the structural approach to
-    causal inference uses directed acyclic graphs (DAG) to provide a
-    formal and graphical representation of the causal structure of a
-    system
+    causal inference uses directed acyclic graphs (DAG) and its
+    associated structural causal models (SCM) to provide a graphical and
+    formal representation of the causal structure of a system
     (<xref alt="Neal 2020" rid="ref-Neal_2020" ref-type="bibr">Neal
-    2020</xref>). In this context, a <italic>graph</italic> is a
+    2020</xref>). In this context, a <italic>graph</italic> denotes a
     collection of nodes connected by edges, where nodes represent random
     variables. The term <italic>directed</italic> indicates that the
     edges of the graph extend from one node to another, with arrows
@@ -529,144 +533,80 @@ the University of Antwerp (BOF).</funding-statement>
     a loop, meaning the influences do not cycle back on themselves
     (<xref alt="McElreath 2020" rid="ref-McElreath_2020" ref-type="bibr">McElreath
     2020</xref>).</p>
-    <p>One key advantage of DAGs is that, regardless of complexity, they
-    can represent various causal structures using only five fundamental
-    building blocks
-    (<xref alt="Neal 2020" rid="ref-Neal_2020" ref-type="bibr">Neal
-    2020</xref>;
-    <xref alt="McElreath 2020" rid="ref-McElreath_2020" ref-type="bibr">McElreath
-    2020</xref>;
-    <xref alt="Morgan and Winship 2014" rid="ref-Morgan_et_al_2014" ref-type="bibr">Morgan
-    and Winship 2014</xref>).
-    <xref alt="Figure 1" rid="fig-dags">Figure 1</xref> illustrates
-    these blocks. <xref alt="Figure 1 (a)" rid="fig-dag_bb1">Figure 1
-    (a)</xref> depicts two unconnected nodes, representing an scenario
-    where variables <inline-formula><alternatives>
-    <tex-math><![CDATA[X_{1}]]></tex-math>
-    <mml:math display="inline" xmlns:mml="http://www.w3.org/1998/Math/MathML"><mml:msub><mml:mi>X</mml:mi><mml:mn>1</mml:mn></mml:msub></mml:math></alternatives></inline-formula>
-    and <inline-formula><alternatives>
-    <tex-math><![CDATA[X_{2}]]></tex-math>
-    <mml:math display="inline" xmlns:mml="http://www.w3.org/1998/Math/MathML"><mml:msub><mml:mi>X</mml:mi><mml:mn>2</mml:mn></mml:msub></mml:math></alternatives></inline-formula>
-    are not causally related.
-    <xref alt="Figure 1 (b)" rid="fig-dag_bb2">Figure 1 (b)</xref> shows
-    two connected nodes, illustrating a scenario where a parent node
-    <inline-formula><alternatives>
-    <tex-math><![CDATA[X_{1}]]></tex-math>
-    <mml:math display="inline" xmlns:mml="http://www.w3.org/1998/Math/MathML"><mml:msub><mml:mi>X</mml:mi><mml:mn>1</mml:mn></mml:msub></mml:math></alternatives></inline-formula>
-    exerts a causal influence on a child node
-    <inline-formula><alternatives>
-    <tex-math><![CDATA[X_{2}]]></tex-math>
-    <mml:math display="inline" xmlns:mml="http://www.w3.org/1998/Math/MathML"><mml:msub><mml:mi>X</mml:mi><mml:mn>2</mml:mn></mml:msub></mml:math></alternatives></inline-formula>.
-    Consequently, <inline-formula><alternatives>
-    <tex-math><![CDATA[X_{2}]]></tex-math>
-    <mml:math display="inline" xmlns:mml="http://www.w3.org/1998/Math/MathML"><mml:msub><mml:mi>X</mml:mi><mml:mn>2</mml:mn></mml:msub></mml:math></alternatives></inline-formula>
-    is considered a <italic>descendant</italic> of
-    <inline-formula><alternatives>
-    <tex-math><![CDATA[X_{1}]]></tex-math>
-    <mml:math display="inline" xmlns:mml="http://www.w3.org/1998/Math/MathML"><mml:msub><mml:mi>X</mml:mi><mml:mn>1</mml:mn></mml:msub></mml:math></alternatives></inline-formula>.
-    <xref alt="Figure 1 (c)" rid="fig-dag_bb3">Figure 1 (c)</xref>
-    depicts a <italic>chain</italic> (or <italic>pipe</italic>), where
-    <inline-formula><alternatives>
-    <tex-math><![CDATA[X_{1}]]></tex-math>
-    <mml:math display="inline" xmlns:mml="http://www.w3.org/1998/Math/MathML"><mml:msub><mml:mi>X</mml:mi><mml:mn>1</mml:mn></mml:msub></mml:math></alternatives></inline-formula>
-    influences <inline-formula><alternatives>
-    <tex-math><![CDATA[X_{2}]]></tex-math>
-    <mml:math display="inline" xmlns:mml="http://www.w3.org/1998/Math/MathML"><mml:msub><mml:mi>X</mml:mi><mml:mn>2</mml:mn></mml:msub></mml:math></alternatives></inline-formula>,
-    and <inline-formula><alternatives>
-    <tex-math><![CDATA[X_{2}]]></tex-math>
-    <mml:math display="inline" xmlns:mml="http://www.w3.org/1998/Math/MathML"><mml:msub><mml:mi>X</mml:mi><mml:mn>2</mml:mn></mml:msub></mml:math></alternatives></inline-formula>
-    influences <inline-formula><alternatives>
-    <tex-math><![CDATA[X_{3}]]></tex-math>
-    <mml:math display="inline" xmlns:mml="http://www.w3.org/1998/Math/MathML"><mml:msub><mml:mi>X</mml:mi><mml:mn>3</mml:mn></mml:msub></mml:math></alternatives></inline-formula>.
-    In this configuration, <inline-formula><alternatives>
-    <tex-math><![CDATA[X_{1}]]></tex-math>
-    <mml:math display="inline" xmlns:mml="http://www.w3.org/1998/Math/MathML"><mml:msub><mml:mi>X</mml:mi><mml:mn>1</mml:mn></mml:msub></mml:math></alternatives></inline-formula>
-    is a parent node of <inline-formula><alternatives>
-    <tex-math><![CDATA[X_{2}]]></tex-math>
-    <mml:math display="inline" xmlns:mml="http://www.w3.org/1998/Math/MathML"><mml:msub><mml:mi>X</mml:mi><mml:mn>2</mml:mn></mml:msub></mml:math></alternatives></inline-formula>,
-    and <inline-formula><alternatives>
-    <tex-math><![CDATA[X_{2}]]></tex-math>
-    <mml:math display="inline" xmlns:mml="http://www.w3.org/1998/Math/MathML"><mml:msub><mml:mi>X</mml:mi><mml:mn>2</mml:mn></mml:msub></mml:math></alternatives></inline-formula>
-    a parent node of <inline-formula><alternatives>
-    <tex-math><![CDATA[X_{3}]]></tex-math>
-    <mml:math display="inline" xmlns:mml="http://www.w3.org/1998/Math/MathML"><mml:msub><mml:mi>X</mml:mi><mml:mn>3</mml:mn></mml:msub></mml:math></alternatives></inline-formula>.
-    Furthermore, the DAG shows that <inline-formula><alternatives>
-    <tex-math><![CDATA[X_{1}]]></tex-math>
-    <mml:math display="inline" xmlns:mml="http://www.w3.org/1998/Math/MathML"><mml:msub><mml:mi>X</mml:mi><mml:mn>1</mml:mn></mml:msub></mml:math></alternatives></inline-formula>
-    is an <italic>ancestor</italic> of <inline-formula><alternatives>
-    <tex-math><![CDATA[X_{3}]]></tex-math>
-    <mml:math display="inline" xmlns:mml="http://www.w3.org/1998/Math/MathML"><mml:msub><mml:mi>X</mml:mi><mml:mn>3</mml:mn></mml:msub></mml:math></alternatives></inline-formula>
-    and that the relationship between these variables is entirely
-    <italic>mediated</italic> by <inline-formula><alternatives>
-    <tex-math><![CDATA[X_{2}]]></tex-math>
-    <mml:math display="inline" xmlns:mml="http://www.w3.org/1998/Math/MathML"><mml:msub><mml:mi>X</mml:mi><mml:mn>2</mml:mn></mml:msub></mml:math></alternatives></inline-formula>.
-    <xref alt="Figure 1 (d)" rid="fig-dag_bb4">Figure 1 (d)</xref>
-    illustrates a <italic>fork</italic>, where variables
-    <inline-formula><alternatives>
-    <tex-math><![CDATA[X_{1}]]></tex-math>
-    <mml:math display="inline" xmlns:mml="http://www.w3.org/1998/Math/MathML"><mml:msub><mml:mi>X</mml:mi><mml:mn>1</mml:mn></mml:msub></mml:math></alternatives></inline-formula>
-    and <inline-formula><alternatives>
-    <tex-math><![CDATA[X_{3}]]></tex-math>
-    <mml:math display="inline" xmlns:mml="http://www.w3.org/1998/Math/MathML"><mml:msub><mml:mi>X</mml:mi><mml:mn>3</mml:mn></mml:msub></mml:math></alternatives></inline-formula>
-    are both influenced by <inline-formula><alternatives>
-    <tex-math><![CDATA[X_{2}]]></tex-math>
-    <mml:math display="inline" xmlns:mml="http://www.w3.org/1998/Math/MathML"><mml:msub><mml:mi>X</mml:mi><mml:mn>2</mml:mn></mml:msub></mml:math></alternatives></inline-formula>.
-    In this scenario <inline-formula><alternatives>
-    <tex-math><![CDATA[X_{2}]]></tex-math>
-    <mml:math display="inline" xmlns:mml="http://www.w3.org/1998/Math/MathML"><mml:msub><mml:mi>X</mml:mi><mml:mn>2</mml:mn></mml:msub></mml:math></alternatives></inline-formula>
-    is a parent node of both <inline-formula><alternatives>
-    <tex-math><![CDATA[X_{1}]]></tex-math>
-    <mml:math display="inline" xmlns:mml="http://www.w3.org/1998/Math/MathML"><mml:msub><mml:mi>X</mml:mi><mml:mn>1</mml:mn></mml:msub></mml:math></alternatives></inline-formula>
-    and <inline-formula><alternatives>
-    <tex-math><![CDATA[X_{3}]]></tex-math>
-    <mml:math display="inline" xmlns:mml="http://www.w3.org/1998/Math/MathML"><mml:msub><mml:mi>X</mml:mi><mml:mn>3</mml:mn></mml:msub></mml:math></alternatives></inline-formula>.
-    Finally, <xref alt="Figure 1 (e)" rid="fig-dag_bb5">Figure 1
-    (e)</xref> depicts a <italic>collider</italic>, also known as
-    <italic>inmorality</italic>, where variables
-    <inline-formula><alternatives>
-    <tex-math><![CDATA[X_{1}]]></tex-math>
-    <mml:math display="inline" xmlns:mml="http://www.w3.org/1998/Math/MathML"><mml:msub><mml:mi>X</mml:mi><mml:mn>1</mml:mn></mml:msub></mml:math></alternatives></inline-formula>
-    and <inline-formula><alternatives>
-    <tex-math><![CDATA[X_{3}]]></tex-math>
-    <mml:math display="inline" xmlns:mml="http://www.w3.org/1998/Math/MathML"><mml:msub><mml:mi>X</mml:mi><mml:mn>3</mml:mn></mml:msub></mml:math></alternatives></inline-formula>
-    are concurrent causes of <inline-formula><alternatives>
-    <tex-math><![CDATA[X_{2}]]></tex-math>
-    <mml:math display="inline" xmlns:mml="http://www.w3.org/1998/Math/MathML"><mml:msub><mml:mi>X</mml:mi><mml:mn>2</mml:mn></mml:msub></mml:math></alternatives></inline-formula>.
-    In this configuration, <inline-formula><alternatives>
-    <tex-math><![CDATA[X_{1}]]></tex-math>
-    <mml:math display="inline" xmlns:mml="http://www.w3.org/1998/Math/MathML"><mml:msub><mml:mi>X</mml:mi><mml:mn>1</mml:mn></mml:msub></mml:math></alternatives></inline-formula>
-    and <inline-formula><alternatives>
-    <tex-math><![CDATA[X_{3}]]></tex-math>
-    <mml:math display="inline" xmlns:mml="http://www.w3.org/1998/Math/MathML"><mml:msub><mml:mi>X</mml:mi><mml:mn>3</mml:mn></mml:msub></mml:math></alternatives></inline-formula>
-    are not causally related to each other but both influence
-    <inline-formula><alternatives>
-    <tex-math><![CDATA[X_{2}]]></tex-math>
-    <mml:math display="inline" xmlns:mml="http://www.w3.org/1998/Math/MathML"><mml:msub><mml:mi>X</mml:mi><mml:mn>2</mml:mn></mml:msub></mml:math></alternatives></inline-formula>.</p>
-    <fig id="fig-dags">
-      <caption><p>Figure 1: DAG’s fundamental building
-      blocks.</p></caption>
+    <p>One key advantage of DAGs is that they can represent various
+    causal structures using only five fundamental building blocks,
+    regardless of complexity. The left panels of
+    <xref alt="Figure 1" rid="fig-dags_scms">Figure 1</xref> illustrates
+    the <italic>simplified</italic> graphs of these block. In these
+    graphs, the variables of interest or <italic>endogenous</italic>
+    variables, <inline-formula><alternatives>
+    <tex-math><![CDATA[V=\{X,Z,Y\}]]></tex-math>
+    <mml:math display="inline" xmlns:mml="http://www.w3.org/1998/Math/MathML"><mml:mrow><mml:mi>V</mml:mi><mml:mo>=</mml:mo><mml:mo stretchy="false" form="prefix">{</mml:mo><mml:mi>X</mml:mi><mml:mo>,</mml:mo><mml:mi>Z</mml:mi><mml:mo>,</mml:mo><mml:mi>Y</mml:mi><mml:mo stretchy="false" form="postfix">}</mml:mo></mml:mrow></mml:math></alternatives></inline-formula>,
+    are depicted as solid black circles, indicating that they are
+    observed variables. The arrows in the graph reflect the expected
+    direction of causal influences among the variables.</p>
+    <p>In contrast, the middle panels of
+    <xref alt="Figure 1" rid="fig-dags_scms">Figure 1</xref> depicts the
+    <italic>magnified</italic> graphs of these building blocks. These
+    graph include, in addition to the endogenous variables, the
+    <italic>exogenous</italic> variables <inline-formula><alternatives>
+    <tex-math><![CDATA[E=\{e_{X},e_{Z},e_{Y}\}]]></tex-math>
+    <mml:math display="inline" xmlns:mml="http://www.w3.org/1998/Math/MathML"><mml:mrow><mml:mi>E</mml:mi><mml:mo>=</mml:mo><mml:mo stretchy="false" form="prefix">{</mml:mo><mml:msub><mml:mi>e</mml:mi><mml:mi>X</mml:mi></mml:msub><mml:mo>,</mml:mo><mml:msub><mml:mi>e</mml:mi><mml:mi>Z</mml:mi></mml:msub><mml:mo>,</mml:mo><mml:msub><mml:mi>e</mml:mi><mml:mi>Y</mml:mi></mml:msub><mml:mo stretchy="false" form="postfix">}</mml:mo></mml:mrow></mml:math></alternatives></inline-formula>.
+    These exogenous variables, commonly referred to as
+    <italic>disturbances</italic> or <italic>errors</italic>, represent
+    factors not explicitly modeled. Moreover, they are depicted as open
+    circles, indicating their unobserved nature. These exogenous
+    variables are often omitted for simplicity, resulting in the
+    simplified DAGs shown in the left panels. However, including them in
+    the graph can be advantageous in certain scenarios, as they can help
+    to highlight potential issues related to conditioning and
+    confounding
+    (<xref alt="Cinelli, Forney, and Pearl 2020" rid="ref-Cinelli_et_al_2020" ref-type="bibr">Cinelli,
+    Forney, and Pearl 2020</xref>), concepts introduced in the next
+    section.</p>
+    <fig id="fig-dags_scms">
+      <caption><p>Figure 1: The five fundamental building blocks of DAGs
+      with corresponding SCMs. <bold>Note:</bold> left column shows
+      simplified DAGS, middle column show magnified DAGs, and right
+      column shows the corresponding SCMs.</p></caption>
       <table-wrap>
         <table>
           <colgroup>
-            <col width="50%" />
-            <col width="50%" />
+            <col width="33%" />
+            <col width="33%" />
+            <col width="33%" />
           </colgroup>
           <tbody>
             <tr>
               <td align="left"><p specific-use="wrapper">
                 <boxed-text>
-                  <fig id="fig-dag_bb1">
+                  <fig id="fig-sdag_bb1">
                     <caption><p>(a) Two unconnected nodes</p></caption>
-                    <graphic mimetype="image" mime-subtype="png" xlink:href="images/figures/dag_bb1.png" />
+                    <graphic mimetype="image" mime-subtype="png" xlink:href="images/figures/sdag_bb1.png" />
                   </fig>
                 </boxed-text>
               </p></td>
               <td align="left"><p specific-use="wrapper">
                 <boxed-text>
-                  <fig id="fig-dag_bb2">
-                    <caption><p>(b) Two connected nodes or
-                    descendant</p></caption>
-                    <graphic mimetype="image" mime-subtype="png" xlink:href="images/figures/dag_bb2.png" />
+                  <fig id="fig-mdag_bb1">
+                    <caption><p>(b) Two unconnected nodes</p></caption>
+                    <graphic mimetype="image" mime-subtype="png" xlink:href="images/figures/mdag_bb1.png" />
+                  </fig>
+                </boxed-text>
+              </p></td>
+              <td align="left"><p specific-use="wrapper">
+                <boxed-text>
+                  <fig id="fig-scm_bb1">
+                    <caption><p>(c) Two unconnected nodes</p></caption>
+                    <p><disp-formula><alternatives>
+                    <tex-math><![CDATA[
+                    \begin{aligned}
+                      X & := f_{X}(e_{X}) \\
+                      Y & := f_{Y}(e_{Y}) \\
+                      e_{X} & \perp\!\!\!\perp e_{Y}
+                    \end{aligned}
+                    ]]></tex-math>
+                    <mml:math display="block" xmlns:mml="http://www.w3.org/1998/Math/MathML"><mml:mtable><mml:mtr><mml:mtd columnalign="right" style="text-align: right"><mml:mi>X</mml:mi></mml:mtd><mml:mtd columnalign="left" style="text-align: left"><mml:mo>:=</mml:mo><mml:msub><mml:mi>f</mml:mi><mml:mi>X</mml:mi></mml:msub><mml:mrow><mml:mo stretchy="true" form="prefix">(</mml:mo><mml:msub><mml:mi>e</mml:mi><mml:mi>X</mml:mi></mml:msub><mml:mo stretchy="true" form="postfix">)</mml:mo></mml:mrow></mml:mtd></mml:mtr><mml:mtr><mml:mtd columnalign="right" style="text-align: right"><mml:mi>Y</mml:mi></mml:mtd><mml:mtd columnalign="left" style="text-align: left"><mml:mo>:=</mml:mo><mml:msub><mml:mi>f</mml:mi><mml:mi>Y</mml:mi></mml:msub><mml:mrow><mml:mo stretchy="true" form="prefix">(</mml:mo><mml:msub><mml:mi>e</mml:mi><mml:mi>Y</mml:mi></mml:msub><mml:mo stretchy="true" form="postfix">)</mml:mo></mml:mrow></mml:mtd></mml:mtr><mml:mtr><mml:mtd columnalign="right" style="text-align: right"><mml:msub><mml:mi>e</mml:mi><mml:mi>X</mml:mi></mml:msub></mml:mtd><mml:mtd columnalign="left" style="text-align: left"><mml:mo>⊥</mml:mo><mml:mspace width="-0.167em"></mml:mspace><mml:mspace width="-0.167em"></mml:mspace><mml:mspace width="-0.167em"></mml:mspace><mml:mo>⊥</mml:mo><mml:msub><mml:mi>e</mml:mi><mml:mi>Y</mml:mi></mml:msub></mml:mtd></mml:mtr></mml:mtable></mml:math></alternatives></disp-formula></p>
                   </fig>
                 </boxed-text>
               </p></td>
@@ -685,25 +625,180 @@ the University of Antwerp (BOF).</funding-statement>
             <tr>
               <td align="left"><p specific-use="wrapper">
                 <boxed-text>
-                  <fig id="fig-dag_bb3">
-                    <caption><p>(c) Chain or pipe</p></caption>
-                    <graphic mimetype="image" mime-subtype="png" xlink:href="images/figures/dag_bb3.png" />
+                  <fig id="fig-sdag_bb2">
+                    <caption><p>(d) Two connected nodes or
+                    descendant</p></caption>
+                    <graphic mimetype="image" mime-subtype="png" xlink:href="images/figures/sdag_bb2.png" />
                   </fig>
                 </boxed-text>
               </p></td>
               <td align="left"><p specific-use="wrapper">
                 <boxed-text>
-                  <fig id="fig-dag_bb4">
-                    <caption><p>(d) Fork</p></caption>
-                    <graphic mimetype="image" mime-subtype="png" xlink:href="images/figures/dag_bb4.png" />
+                  <fig id="fig-mdag_bb2">
+                    <caption><p>(e) Two connected nodes or
+                    descendant</p></caption>
+                    <graphic mimetype="image" mime-subtype="png" xlink:href="images/figures/mdag_bb2.png" />
                   </fig>
                 </boxed-text>
               </p></td>
               <td align="left"><p specific-use="wrapper">
                 <boxed-text>
-                  <fig id="fig-dag_bb5">
-                    <caption><p>(e) Collider or inmorality</p></caption>
-                    <graphic mimetype="image" mime-subtype="png" xlink:href="images/figures/dag_bb5.png" />
+                  <fig id="fig-scm_bb2">
+                    <caption><p>(f) Two connected nodes or
+                    descendant</p></caption>
+                    <p><disp-formula><alternatives>
+                    <tex-math><![CDATA[
+                    \begin{aligned}
+                      X & := f_{X}(e_{X}) \\
+                      Y & := f_{Y}(X,e_{Y}) \\
+                      e_{X} & \perp\!\!\!\perp e_{Y}
+                    \end{aligned}
+                    ]]></tex-math>
+                    <mml:math display="block" xmlns:mml="http://www.w3.org/1998/Math/MathML"><mml:mtable><mml:mtr><mml:mtd columnalign="right" style="text-align: right"><mml:mi>X</mml:mi></mml:mtd><mml:mtd columnalign="left" style="text-align: left"><mml:mo>:=</mml:mo><mml:msub><mml:mi>f</mml:mi><mml:mi>X</mml:mi></mml:msub><mml:mrow><mml:mo stretchy="true" form="prefix">(</mml:mo><mml:msub><mml:mi>e</mml:mi><mml:mi>X</mml:mi></mml:msub><mml:mo stretchy="true" form="postfix">)</mml:mo></mml:mrow></mml:mtd></mml:mtr><mml:mtr><mml:mtd columnalign="right" style="text-align: right"><mml:mi>Y</mml:mi></mml:mtd><mml:mtd columnalign="left" style="text-align: left"><mml:mo>:=</mml:mo><mml:msub><mml:mi>f</mml:mi><mml:mi>Y</mml:mi></mml:msub><mml:mrow><mml:mo stretchy="true" form="prefix">(</mml:mo><mml:mi>X</mml:mi><mml:mo>,</mml:mo><mml:msub><mml:mi>e</mml:mi><mml:mi>Y</mml:mi></mml:msub><mml:mo stretchy="true" form="postfix">)</mml:mo></mml:mrow></mml:mtd></mml:mtr><mml:mtr><mml:mtd columnalign="right" style="text-align: right"><mml:msub><mml:mi>e</mml:mi><mml:mi>X</mml:mi></mml:msub></mml:mtd><mml:mtd columnalign="left" style="text-align: left"><mml:mo>⊥</mml:mo><mml:mspace width="-0.167em"></mml:mspace><mml:mspace width="-0.167em"></mml:mspace><mml:mspace width="-0.167em"></mml:mspace><mml:mo>⊥</mml:mo><mml:msub><mml:mi>e</mml:mi><mml:mi>Y</mml:mi></mml:msub></mml:mtd></mml:mtr></mml:mtable></mml:math></alternatives></disp-formula></p>
+                  </fig>
+                </boxed-text>
+              </p></td>
+            </tr>
+          </tbody>
+        </table>
+      </table-wrap>
+      <table-wrap>
+        <table>
+          <colgroup>
+            <col width="33%" />
+            <col width="33%" />
+            <col width="33%" />
+          </colgroup>
+          <tbody>
+            <tr>
+              <td align="left"><p specific-use="wrapper">
+                <boxed-text>
+                  <fig id="fig-sdag_bb3">
+                    <caption><p>(g) Chain or pipe</p></caption>
+                    <graphic mimetype="image" mime-subtype="png" xlink:href="images/figures/sdag_bb3.png" />
+                  </fig>
+                </boxed-text>
+              </p></td>
+              <td align="left"><p specific-use="wrapper">
+                <boxed-text>
+                  <fig id="fig-mdag_bb3">
+                    <caption><p>(h) Chain or pipe</p></caption>
+                    <graphic mimetype="image" mime-subtype="png" xlink:href="images/figures/mdag_bb3.png" />
+                  </fig>
+                </boxed-text>
+              </p></td>
+              <td align="left"><p specific-use="wrapper">
+                <boxed-text>
+                  <fig id="fig-scm_bb3">
+                    <caption><p>(i) Chain or pipe</p></caption>
+                    <p><disp-formula><alternatives>
+                    <tex-math><![CDATA[
+                    \begin{aligned}
+                      X & := f_{X}(e_{X}) \\
+                      Z & := f_{Z}(X,e_{Z}) \\
+                      Y & := f_{Y}(Z,e_{Y}) \\
+                      e_{X} & \perp\!\!\!\perp e_{Y} \\
+                      e_{X} & \perp\!\!\!\perp e_{Z} \\
+                      e_{Z} & \perp\!\!\!\perp e_{Y}
+                    \end{aligned}
+                    ]]></tex-math>
+                    <mml:math display="block" xmlns:mml="http://www.w3.org/1998/Math/MathML"><mml:mtable><mml:mtr><mml:mtd columnalign="right" style="text-align: right"><mml:mi>X</mml:mi></mml:mtd><mml:mtd columnalign="left" style="text-align: left"><mml:mo>:=</mml:mo><mml:msub><mml:mi>f</mml:mi><mml:mi>X</mml:mi></mml:msub><mml:mrow><mml:mo stretchy="true" form="prefix">(</mml:mo><mml:msub><mml:mi>e</mml:mi><mml:mi>X</mml:mi></mml:msub><mml:mo stretchy="true" form="postfix">)</mml:mo></mml:mrow></mml:mtd></mml:mtr><mml:mtr><mml:mtd columnalign="right" style="text-align: right"><mml:mi>Z</mml:mi></mml:mtd><mml:mtd columnalign="left" style="text-align: left"><mml:mo>:=</mml:mo><mml:msub><mml:mi>f</mml:mi><mml:mi>Z</mml:mi></mml:msub><mml:mrow><mml:mo stretchy="true" form="prefix">(</mml:mo><mml:mi>X</mml:mi><mml:mo>,</mml:mo><mml:msub><mml:mi>e</mml:mi><mml:mi>Z</mml:mi></mml:msub><mml:mo stretchy="true" form="postfix">)</mml:mo></mml:mrow></mml:mtd></mml:mtr><mml:mtr><mml:mtd columnalign="right" style="text-align: right"><mml:mi>Y</mml:mi></mml:mtd><mml:mtd columnalign="left" style="text-align: left"><mml:mo>:=</mml:mo><mml:msub><mml:mi>f</mml:mi><mml:mi>Y</mml:mi></mml:msub><mml:mrow><mml:mo stretchy="true" form="prefix">(</mml:mo><mml:mi>Z</mml:mi><mml:mo>,</mml:mo><mml:msub><mml:mi>e</mml:mi><mml:mi>Y</mml:mi></mml:msub><mml:mo stretchy="true" form="postfix">)</mml:mo></mml:mrow></mml:mtd></mml:mtr><mml:mtr><mml:mtd columnalign="right" style="text-align: right"><mml:msub><mml:mi>e</mml:mi><mml:mi>X</mml:mi></mml:msub></mml:mtd><mml:mtd columnalign="left" style="text-align: left"><mml:mo>⊥</mml:mo><mml:mspace width="-0.167em"></mml:mspace><mml:mspace width="-0.167em"></mml:mspace><mml:mspace width="-0.167em"></mml:mspace><mml:mo>⊥</mml:mo><mml:msub><mml:mi>e</mml:mi><mml:mi>Y</mml:mi></mml:msub></mml:mtd></mml:mtr><mml:mtr><mml:mtd columnalign="right" style="text-align: right"><mml:msub><mml:mi>e</mml:mi><mml:mi>X</mml:mi></mml:msub></mml:mtd><mml:mtd columnalign="left" style="text-align: left"><mml:mo>⊥</mml:mo><mml:mspace width="-0.167em"></mml:mspace><mml:mspace width="-0.167em"></mml:mspace><mml:mspace width="-0.167em"></mml:mspace><mml:mo>⊥</mml:mo><mml:msub><mml:mi>e</mml:mi><mml:mi>Z</mml:mi></mml:msub></mml:mtd></mml:mtr><mml:mtr><mml:mtd columnalign="right" style="text-align: right"><mml:msub><mml:mi>e</mml:mi><mml:mi>Z</mml:mi></mml:msub></mml:mtd><mml:mtd columnalign="left" style="text-align: left"><mml:mo>⊥</mml:mo><mml:mspace width="-0.167em"></mml:mspace><mml:mspace width="-0.167em"></mml:mspace><mml:mspace width="-0.167em"></mml:mspace><mml:mo>⊥</mml:mo><mml:msub><mml:mi>e</mml:mi><mml:mi>Y</mml:mi></mml:msub></mml:mtd></mml:mtr></mml:mtable></mml:math></alternatives></disp-formula></p>
+                  </fig>
+                </boxed-text>
+              </p></td>
+            </tr>
+          </tbody>
+        </table>
+      </table-wrap>
+      <table-wrap>
+        <table>
+          <colgroup>
+            <col width="33%" />
+            <col width="33%" />
+            <col width="33%" />
+          </colgroup>
+          <tbody>
+            <tr>
+              <td align="left"><p specific-use="wrapper">
+                <boxed-text>
+                  <fig id="fig-sdag_bb4">
+                    <caption><p>(j) Fork</p></caption>
+                    <graphic mimetype="image" mime-subtype="png" xlink:href="images/figures/sdag_bb4.png" />
+                  </fig>
+                </boxed-text>
+              </p></td>
+              <td align="left"><p specific-use="wrapper">
+                <boxed-text>
+                  <fig id="fig-mdag_bb4">
+                    <caption><p>(k) Fork</p></caption>
+                    <graphic mimetype="image" mime-subtype="png" xlink:href="images/figures/mdag_bb4.png" />
+                  </fig>
+                </boxed-text>
+              </p></td>
+              <td align="left"><p specific-use="wrapper">
+                <boxed-text>
+                  <fig id="fig-scm_bb4">
+                    <caption><p>(l) Fork</p></caption>
+                    <p><disp-formula><alternatives>
+                    <tex-math><![CDATA[
+                    \begin{aligned}
+                      X & := f_{X}(Z,e_{X}) \\
+                      Z & := f_{Z}(e_{Z}) \\
+                      Y & := f_{Y}(Z,e_{Y}) \\
+                      e_{X} & \perp\!\!\!\perp e_{Y} \\
+                      e_{X} & \perp\!\!\!\perp e_{Z} \\
+                      e_{Z} & \perp\!\!\!\perp e_{Y}
+                    \end{aligned}
+                    ]]></tex-math>
+                    <mml:math display="block" xmlns:mml="http://www.w3.org/1998/Math/MathML"><mml:mtable><mml:mtr><mml:mtd columnalign="right" style="text-align: right"><mml:mi>X</mml:mi></mml:mtd><mml:mtd columnalign="left" style="text-align: left"><mml:mo>:=</mml:mo><mml:msub><mml:mi>f</mml:mi><mml:mi>X</mml:mi></mml:msub><mml:mrow><mml:mo stretchy="true" form="prefix">(</mml:mo><mml:mi>Z</mml:mi><mml:mo>,</mml:mo><mml:msub><mml:mi>e</mml:mi><mml:mi>X</mml:mi></mml:msub><mml:mo stretchy="true" form="postfix">)</mml:mo></mml:mrow></mml:mtd></mml:mtr><mml:mtr><mml:mtd columnalign="right" style="text-align: right"><mml:mi>Z</mml:mi></mml:mtd><mml:mtd columnalign="left" style="text-align: left"><mml:mo>:=</mml:mo><mml:msub><mml:mi>f</mml:mi><mml:mi>Z</mml:mi></mml:msub><mml:mrow><mml:mo stretchy="true" form="prefix">(</mml:mo><mml:msub><mml:mi>e</mml:mi><mml:mi>Z</mml:mi></mml:msub><mml:mo stretchy="true" form="postfix">)</mml:mo></mml:mrow></mml:mtd></mml:mtr><mml:mtr><mml:mtd columnalign="right" style="text-align: right"><mml:mi>Y</mml:mi></mml:mtd><mml:mtd columnalign="left" style="text-align: left"><mml:mo>:=</mml:mo><mml:msub><mml:mi>f</mml:mi><mml:mi>Y</mml:mi></mml:msub><mml:mrow><mml:mo stretchy="true" form="prefix">(</mml:mo><mml:mi>Z</mml:mi><mml:mo>,</mml:mo><mml:msub><mml:mi>e</mml:mi><mml:mi>Y</mml:mi></mml:msub><mml:mo stretchy="true" form="postfix">)</mml:mo></mml:mrow></mml:mtd></mml:mtr><mml:mtr><mml:mtd columnalign="right" style="text-align: right"><mml:msub><mml:mi>e</mml:mi><mml:mi>X</mml:mi></mml:msub></mml:mtd><mml:mtd columnalign="left" style="text-align: left"><mml:mo>⊥</mml:mo><mml:mspace width="-0.167em"></mml:mspace><mml:mspace width="-0.167em"></mml:mspace><mml:mspace width="-0.167em"></mml:mspace><mml:mo>⊥</mml:mo><mml:msub><mml:mi>e</mml:mi><mml:mi>Y</mml:mi></mml:msub></mml:mtd></mml:mtr><mml:mtr><mml:mtd columnalign="right" style="text-align: right"><mml:msub><mml:mi>e</mml:mi><mml:mi>X</mml:mi></mml:msub></mml:mtd><mml:mtd columnalign="left" style="text-align: left"><mml:mo>⊥</mml:mo><mml:mspace width="-0.167em"></mml:mspace><mml:mspace width="-0.167em"></mml:mspace><mml:mspace width="-0.167em"></mml:mspace><mml:mo>⊥</mml:mo><mml:msub><mml:mi>e</mml:mi><mml:mi>Z</mml:mi></mml:msub></mml:mtd></mml:mtr><mml:mtr><mml:mtd columnalign="right" style="text-align: right"><mml:msub><mml:mi>e</mml:mi><mml:mi>Z</mml:mi></mml:msub></mml:mtd><mml:mtd columnalign="left" style="text-align: left"><mml:mo>⊥</mml:mo><mml:mspace width="-0.167em"></mml:mspace><mml:mspace width="-0.167em"></mml:mspace><mml:mspace width="-0.167em"></mml:mspace><mml:mo>⊥</mml:mo><mml:msub><mml:mi>e</mml:mi><mml:mi>Y</mml:mi></mml:msub></mml:mtd></mml:mtr></mml:mtable></mml:math></alternatives></disp-formula></p>
+                  </fig>
+                </boxed-text>
+              </p></td>
+            </tr>
+          </tbody>
+        </table>
+      </table-wrap>
+      <table-wrap>
+        <table>
+          <colgroup>
+            <col width="33%" />
+            <col width="33%" />
+            <col width="33%" />
+          </colgroup>
+          <tbody>
+            <tr>
+              <td align="left"><p specific-use="wrapper">
+                <boxed-text>
+                  <fig id="fig-sdag_bb5">
+                    <caption><p>(m) Collider or inmorality</p></caption>
+                    <graphic mimetype="image" mime-subtype="png" xlink:href="images/figures/sdag_bb5.png" />
+                  </fig>
+                </boxed-text>
+              </p></td>
+              <td align="left"><p specific-use="wrapper">
+                <boxed-text>
+                  <fig id="fig-mdag_bb5">
+                    <caption><p>(n) Collider or inmorality</p></caption>
+                    <graphic mimetype="image" mime-subtype="png" xlink:href="images/figures/mdag_bb5.png" />
+                  </fig>
+                </boxed-text>
+              </p></td>
+              <td align="left"><p specific-use="wrapper">
+                <boxed-text>
+                  <fig id="fig-scm_bb5">
+                    <caption><p>(o) Collider or inmorality</p></caption>
+                    <p><disp-formula><alternatives>
+                    <tex-math><![CDATA[
+                    \begin{aligned}
+                      X & := f_{X}(e_{X}) \\
+                      Z & := f_{Z}(X,Y,e_{Z}) \\
+                      Y & := f_{Y}(e_{Y}) \\
+                      e_{X} & \perp\!\!\!\perp e_{Y} \\
+                      e_{X} & \perp\!\!\!\perp e_{Z} \\
+                      e_{Z} & \perp\!\!\!\perp e_{Y}
+                    \end{aligned}
+                    ]]></tex-math>
+                    <mml:math display="block" xmlns:mml="http://www.w3.org/1998/Math/MathML"><mml:mtable><mml:mtr><mml:mtd columnalign="right" style="text-align: right"><mml:mi>X</mml:mi></mml:mtd><mml:mtd columnalign="left" style="text-align: left"><mml:mo>:=</mml:mo><mml:msub><mml:mi>f</mml:mi><mml:mi>X</mml:mi></mml:msub><mml:mrow><mml:mo stretchy="true" form="prefix">(</mml:mo><mml:msub><mml:mi>e</mml:mi><mml:mi>X</mml:mi></mml:msub><mml:mo stretchy="true" form="postfix">)</mml:mo></mml:mrow></mml:mtd></mml:mtr><mml:mtr><mml:mtd columnalign="right" style="text-align: right"><mml:mi>Z</mml:mi></mml:mtd><mml:mtd columnalign="left" style="text-align: left"><mml:mo>:=</mml:mo><mml:msub><mml:mi>f</mml:mi><mml:mi>Z</mml:mi></mml:msub><mml:mrow><mml:mo stretchy="true" form="prefix">(</mml:mo><mml:mi>X</mml:mi><mml:mo>,</mml:mo><mml:mi>Y</mml:mi><mml:mo>,</mml:mo><mml:msub><mml:mi>e</mml:mi><mml:mi>Z</mml:mi></mml:msub><mml:mo stretchy="true" form="postfix">)</mml:mo></mml:mrow></mml:mtd></mml:mtr><mml:mtr><mml:mtd columnalign="right" style="text-align: right"><mml:mi>Y</mml:mi></mml:mtd><mml:mtd columnalign="left" style="text-align: left"><mml:mo>:=</mml:mo><mml:msub><mml:mi>f</mml:mi><mml:mi>Y</mml:mi></mml:msub><mml:mrow><mml:mo stretchy="true" form="prefix">(</mml:mo><mml:msub><mml:mi>e</mml:mi><mml:mi>Y</mml:mi></mml:msub><mml:mo stretchy="true" form="postfix">)</mml:mo></mml:mrow></mml:mtd></mml:mtr><mml:mtr><mml:mtd columnalign="right" style="text-align: right"><mml:msub><mml:mi>e</mml:mi><mml:mi>X</mml:mi></mml:msub></mml:mtd><mml:mtd columnalign="left" style="text-align: left"><mml:mo>⊥</mml:mo><mml:mspace width="-0.167em"></mml:mspace><mml:mspace width="-0.167em"></mml:mspace><mml:mspace width="-0.167em"></mml:mspace><mml:mo>⊥</mml:mo><mml:msub><mml:mi>e</mml:mi><mml:mi>Y</mml:mi></mml:msub></mml:mtd></mml:mtr><mml:mtr><mml:mtd columnalign="right" style="text-align: right"><mml:msub><mml:mi>e</mml:mi><mml:mi>X</mml:mi></mml:msub></mml:mtd><mml:mtd columnalign="left" style="text-align: left"><mml:mo>⊥</mml:mo><mml:mspace width="-0.167em"></mml:mspace><mml:mspace width="-0.167em"></mml:mspace><mml:mspace width="-0.167em"></mml:mspace><mml:mo>⊥</mml:mo><mml:msub><mml:mi>e</mml:mi><mml:mi>Z</mml:mi></mml:msub></mml:mtd></mml:mtr><mml:mtr><mml:mtd columnalign="right" style="text-align: right"><mml:msub><mml:mi>e</mml:mi><mml:mi>Z</mml:mi></mml:msub></mml:mtd><mml:mtd columnalign="left" style="text-align: left"><mml:mo>⊥</mml:mo><mml:mspace width="-0.167em"></mml:mspace><mml:mspace width="-0.167em"></mml:mspace><mml:mspace width="-0.167em"></mml:mspace><mml:mo>⊥</mml:mo><mml:msub><mml:mi>e</mml:mi><mml:mi>Y</mml:mi></mml:msub></mml:mtd></mml:mtr></mml:mtable></mml:math></alternatives></disp-formula></p>
                   </fig>
                 </boxed-text>
               </p></td>
@@ -712,6 +807,117 @@ the University of Antwerp (BOF).</funding-statement>
         </table>
       </table-wrap>
     </fig>
+    <p>A careful examination of the left and middle panels of
+    <xref alt="Figure 1" rid="fig-dags_scms">Figure 1</xref> reveal what
+    do the building blocks assume. Figures
+    <xref alt="1 (a)" rid="fig-sdag_bb1">1 (a)</xref> and
+    <xref alt="1 (b)" rid="fig-mdag_bb1">1 (b)</xref> depict two
+    unconnected nodes, representing an scenario where variables
+    <inline-formula><alternatives>
+    <tex-math><![CDATA[X]]></tex-math>
+    <mml:math display="inline" xmlns:mml="http://www.w3.org/1998/Math/MathML"><mml:mi>X</mml:mi></mml:math></alternatives></inline-formula>
+    and <inline-formula><alternatives>
+    <tex-math><![CDATA[Y]]></tex-math>
+    <mml:math display="inline" xmlns:mml="http://www.w3.org/1998/Math/MathML"><mml:mi>Y</mml:mi></mml:math></alternatives></inline-formula>
+    are not causally related. Figures
+    <xref alt="1 (d)" rid="fig-sdag_bb2">1 (d)</xref> and
+    <xref alt="1 (e)" rid="fig-mdag_bb2">1 (e)</xref> show two connected
+    nodes, illustrating a scenario where a parent node
+    <inline-formula><alternatives>
+    <tex-math><![CDATA[X]]></tex-math>
+    <mml:math display="inline" xmlns:mml="http://www.w3.org/1998/Math/MathML"><mml:mi>X</mml:mi></mml:math></alternatives></inline-formula>
+    exerts a causal influence on a child node
+    <inline-formula><alternatives>
+    <tex-math><![CDATA[Y]]></tex-math>
+    <mml:math display="inline" xmlns:mml="http://www.w3.org/1998/Math/MathML"><mml:mi>Y</mml:mi></mml:math></alternatives></inline-formula>.
+    Consequently, <inline-formula><alternatives>
+    <tex-math><![CDATA[Y]]></tex-math>
+    <mml:math display="inline" xmlns:mml="http://www.w3.org/1998/Math/MathML"><mml:mi>Y</mml:mi></mml:math></alternatives></inline-formula>
+    is considered a <italic>descendant</italic> of
+    <inline-formula><alternatives>
+    <tex-math><![CDATA[X]]></tex-math>
+    <mml:math display="inline" xmlns:mml="http://www.w3.org/1998/Math/MathML"><mml:mi>X</mml:mi></mml:math></alternatives></inline-formula>.
+    Figures <xref alt="1 (g)" rid="fig-sdag_bb3">1 (g)</xref> and
+    <xref alt="1 (h)" rid="fig-mdag_bb3">1 (h)</xref> depict a
+    <italic>chain</italic> (or <italic>pipe</italic>), where
+    <inline-formula><alternatives>
+    <tex-math><![CDATA[X]]></tex-math>
+    <mml:math display="inline" xmlns:mml="http://www.w3.org/1998/Math/MathML"><mml:mi>X</mml:mi></mml:math></alternatives></inline-formula>
+    influences <inline-formula><alternatives>
+    <tex-math><![CDATA[Z]]></tex-math>
+    <mml:math display="inline" xmlns:mml="http://www.w3.org/1998/Math/MathML"><mml:mi>Z</mml:mi></mml:math></alternatives></inline-formula>,
+    and <inline-formula><alternatives>
+    <tex-math><![CDATA[Z]]></tex-math>
+    <mml:math display="inline" xmlns:mml="http://www.w3.org/1998/Math/MathML"><mml:mi>Z</mml:mi></mml:math></alternatives></inline-formula>
+    influences <inline-formula><alternatives>
+    <tex-math><![CDATA[Y]]></tex-math>
+    <mml:math display="inline" xmlns:mml="http://www.w3.org/1998/Math/MathML"><mml:mi>Y</mml:mi></mml:math></alternatives></inline-formula>.
+    In this configuration, <inline-formula><alternatives>
+    <tex-math><![CDATA[X]]></tex-math>
+    <mml:math display="inline" xmlns:mml="http://www.w3.org/1998/Math/MathML"><mml:mi>X</mml:mi></mml:math></alternatives></inline-formula>
+    is a parent node of <inline-formula><alternatives>
+    <tex-math><![CDATA[Z]]></tex-math>
+    <mml:math display="inline" xmlns:mml="http://www.w3.org/1998/Math/MathML"><mml:mi>Z</mml:mi></mml:math></alternatives></inline-formula>,
+    and <inline-formula><alternatives>
+    <tex-math><![CDATA[Z]]></tex-math>
+    <mml:math display="inline" xmlns:mml="http://www.w3.org/1998/Math/MathML"><mml:mi>Z</mml:mi></mml:math></alternatives></inline-formula>
+    a parent node of <inline-formula><alternatives>
+    <tex-math><![CDATA[Y]]></tex-math>
+    <mml:math display="inline" xmlns:mml="http://www.w3.org/1998/Math/MathML"><mml:mi>Y</mml:mi></mml:math></alternatives></inline-formula>.
+    Furthermore, the DAG shows that <inline-formula><alternatives>
+    <tex-math><![CDATA[X]]></tex-math>
+    <mml:math display="inline" xmlns:mml="http://www.w3.org/1998/Math/MathML"><mml:mi>X</mml:mi></mml:math></alternatives></inline-formula>
+    is an <italic>ancestor</italic> of <inline-formula><alternatives>
+    <tex-math><![CDATA[Y]]></tex-math>
+    <mml:math display="inline" xmlns:mml="http://www.w3.org/1998/Math/MathML"><mml:mi>Y</mml:mi></mml:math></alternatives></inline-formula>
+    and that the relationship between these variables is entirely
+    <italic>mediated</italic> by <inline-formula><alternatives>
+    <tex-math><![CDATA[Z]]></tex-math>
+    <mml:math display="inline" xmlns:mml="http://www.w3.org/1998/Math/MathML"><mml:mi>Z</mml:mi></mml:math></alternatives></inline-formula>.
+    Figures <xref alt="1 (j)" rid="fig-sdag_bb4">1 (j)</xref> and
+    <xref alt="1 (k)" rid="fig-mdag_bb4">1 (k)</xref> illustrate a
+    <italic>fork</italic>, where variables
+    <inline-formula><alternatives>
+    <tex-math><![CDATA[X]]></tex-math>
+    <mml:math display="inline" xmlns:mml="http://www.w3.org/1998/Math/MathML"><mml:mi>X</mml:mi></mml:math></alternatives></inline-formula>
+    and <inline-formula><alternatives>
+    <tex-math><![CDATA[Y]]></tex-math>
+    <mml:math display="inline" xmlns:mml="http://www.w3.org/1998/Math/MathML"><mml:mi>Y</mml:mi></mml:math></alternatives></inline-formula>
+    are both influenced by <inline-formula><alternatives>
+    <tex-math><![CDATA[Z]]></tex-math>
+    <mml:math display="inline" xmlns:mml="http://www.w3.org/1998/Math/MathML"><mml:mi>Z</mml:mi></mml:math></alternatives></inline-formula>.
+    In this scenario <inline-formula><alternatives>
+    <tex-math><![CDATA[Z]]></tex-math>
+    <mml:math display="inline" xmlns:mml="http://www.w3.org/1998/Math/MathML"><mml:mi>Z</mml:mi></mml:math></alternatives></inline-formula>
+    is a parent node of both <inline-formula><alternatives>
+    <tex-math><![CDATA[X]]></tex-math>
+    <mml:math display="inline" xmlns:mml="http://www.w3.org/1998/Math/MathML"><mml:mi>X</mml:mi></mml:math></alternatives></inline-formula>
+    and <inline-formula><alternatives>
+    <tex-math><![CDATA[Y]]></tex-math>
+    <mml:math display="inline" xmlns:mml="http://www.w3.org/1998/Math/MathML"><mml:mi>Y</mml:mi></mml:math></alternatives></inline-formula>.
+    Finally, figures <xref alt="1 (m)" rid="fig-sdag_bb5">1 (m)</xref>
+    and <xref alt="1 (n)" rid="fig-mdag_bb5">1 (n)</xref> depict a
+    <italic>collider</italic>, also known as
+    <italic>inmorality</italic>, where variables
+    <inline-formula><alternatives>
+    <tex-math><![CDATA[X]]></tex-math>
+    <mml:math display="inline" xmlns:mml="http://www.w3.org/1998/Math/MathML"><mml:mi>X</mml:mi></mml:math></alternatives></inline-formula>
+    and <inline-formula><alternatives>
+    <tex-math><![CDATA[Y]]></tex-math>
+    <mml:math display="inline" xmlns:mml="http://www.w3.org/1998/Math/MathML"><mml:mi>Y</mml:mi></mml:math></alternatives></inline-formula>
+    are concurrent causes of <inline-formula><alternatives>
+    <tex-math><![CDATA[Z]]></tex-math>
+    <mml:math display="inline" xmlns:mml="http://www.w3.org/1998/Math/MathML"><mml:mi>Z</mml:mi></mml:math></alternatives></inline-formula>.
+    In this configuration, <inline-formula><alternatives>
+    <tex-math><![CDATA[X]]></tex-math>
+    <mml:math display="inline" xmlns:mml="http://www.w3.org/1998/Math/MathML"><mml:mi>X</mml:mi></mml:math></alternatives></inline-formula>
+    and <inline-formula><alternatives>
+    <tex-math><![CDATA[Y]]></tex-math>
+    <mml:math display="inline" xmlns:mml="http://www.w3.org/1998/Math/MathML"><mml:mi>Y</mml:mi></mml:math></alternatives></inline-formula>
+    are not causally related to each other but both influence
+    <inline-formula><alternatives>
+    <tex-math><![CDATA[Z]]></tex-math>
+    <mml:math display="inline" xmlns:mml="http://www.w3.org/1998/Math/MathML"><mml:mi>Z</mml:mi></mml:math></alternatives></inline-formula>.</p>
     <p>Given the heuristic nature of DAGs, a motivating example can help
     illustrate the use of the five fundamental building blocks to
     construct a system’s causal structure. This example can also help to
@@ -758,45 +964,19 @@ the University of Antwerp (BOF).</funding-statement>
     with <inline-formula><alternatives>
     <tex-math><![CDATA[X]]></tex-math>
     <mml:math display="inline" xmlns:mml="http://www.w3.org/1998/Math/MathML"><mml:mi>X</mml:mi></mml:math></alternatives></inline-formula>
-    indicating the child’s hearing status. Note that these descriptions
-    do not specify the type of data or the functional forms of the
-    variables, highlighting the heuristic nature of DAGs.
+    indicating the child’s hearing status.
     <styled-content style="color:blue;">(not a bad example, but I prefer
     one using writing skills)</styled-content></p>
     <p><xref alt="Figure 2" rid="fig-example">Figure 2</xref> presents
     two graphs illustrating the plausible causal structure of the
     motivating example.
-    <xref alt="Figure 2 (a)" rid="fig-dag_example1">Figure 2 (a)</xref>
-    shows the <italic>simplified</italic> DAG. In this graph, the
-    variables of interest or <italic>endogenous</italic> variables
-    <inline-formula><alternatives>
-    <tex-math><![CDATA[V=\{T,X,Y\}]]></tex-math>
-    <mml:math display="inline" xmlns:mml="http://www.w3.org/1998/Math/MathML"><mml:mrow><mml:mi>V</mml:mi><mml:mo>=</mml:mo><mml:mo stretchy="false" form="prefix">{</mml:mo><mml:mi>T</mml:mi><mml:mo>,</mml:mo><mml:mi>X</mml:mi><mml:mo>,</mml:mo><mml:mi>Y</mml:mi><mml:mo stretchy="false" form="postfix">}</mml:mo></mml:mrow></mml:math></alternatives></inline-formula>
-    are depicted as solid black circles, indicating that they are
-    observed variables. The arrows in the graph reflect the expected
-    direction of causal influences among the variables. In contrast,
-    <xref alt="Figure 2 (b)" rid="fig-dag_example2">Figure 2 (b)</xref>
-    depicts the <italic>magnified</italic> version of the DAG. This
-    graph includes, in addition to the endogenous variables, the
-    <italic>exogenous</italic> variables <inline-formula><alternatives>
-    <tex-math><![CDATA[E=\{e_{T},e_{X},e_{Y}\}]]></tex-math>
-    <mml:math display="inline" xmlns:mml="http://www.w3.org/1998/Math/MathML"><mml:mrow><mml:mi>E</mml:mi><mml:mo>=</mml:mo><mml:mo stretchy="false" form="prefix">{</mml:mo><mml:msub><mml:mi>e</mml:mi><mml:mi>T</mml:mi></mml:msub><mml:mo>,</mml:mo><mml:msub><mml:mi>e</mml:mi><mml:mi>X</mml:mi></mml:msub><mml:mo>,</mml:mo><mml:msub><mml:mi>e</mml:mi><mml:mi>Y</mml:mi></mml:msub><mml:mo stretchy="false" form="postfix">}</mml:mo></mml:mrow></mml:math></alternatives></inline-formula>.
-    These exogenous variables are commonly referred to as
-    <italic>disturbances</italic> or <italic>errors</italic>, because
-    they represent factors not explicitly modeled. They are depicted as
-    open circles, indicating their unobserved nature. These exogenous
-    variables are often omitted for simplicity, resulting in the
-    simplified DAG in
-    <xref alt="Figure 2 (a)" rid="fig-dag_example1">Figure 2 (a)</xref>.
-    However, including them in the graph can be advantageous in certain
-    scenarios, as they can help to highlight potential issues related to
-    conditioning and confounding
-    (<xref alt="Cinelli, Forney, and Pearl 2020" rid="ref-Cinelli_et_al_2020" ref-type="bibr">Cinelli,
-    Forney, and Pearl 2020</xref>). These concepts are introduced in the
-    next section.</p>
-    <p>Furthermore, a detailed examination of both figures reveals the
-    presence of at least four of the five fundamental building blocks.
-    <xref alt="Figure 2 (a)" rid="fig-dag_example1">Figure 2 (a)</xref>
+    <xref alt="Figure 2 (a)" rid="fig-sdag_example1">Figure 2 (a)</xref>
+    shows the <italic>simplified</italic> graph, while
+    <xref alt="Figure 2 (b)" rid="fig-mdag_example1">Figure 2 (b)</xref>
+    depicts the <italic>magnified</italic> graph of the DAG. A detailed
+    examination of both figures reveals the presence of at least four of
+    the five fundamental building blocks.
+    <xref alt="Figure 2 (a)" rid="fig-sdag_example1">Figure 2 (a)</xref>
     displays multiple descendants, evident in pairwise relations such as
     <inline-formula><alternatives>
     <tex-math><![CDATA[X \rightarrow T]]></tex-math>
@@ -810,7 +990,7 @@ the University of Antwerp (BOF).</funding-statement>
     It also illustrates a fork with <inline-formula><alternatives>
     <tex-math><![CDATA[X \rightarrow \{T,Y\}]]></tex-math>
     <mml:math display="inline" xmlns:mml="http://www.w3.org/1998/Math/MathML"><mml:mrow><mml:mi>X</mml:mi><mml:mo>→</mml:mo><mml:mo stretchy="false" form="prefix">{</mml:mo><mml:mi>T</mml:mi><mml:mo>,</mml:mo><mml:mi>Y</mml:mi><mml:mo stretchy="false" form="postfix">}</mml:mo></mml:mrow></mml:math></alternatives></inline-formula>.
-    Similarly, <xref alt="Figure 2 (b)" rid="fig-dag_example2">Figure 2
+    Similarly, <xref alt="Figure 2 (b)" rid="fig-mdag_example1">Figure 2
     (b)</xref> features multiple two-unconnected nodes, evident in the
     pairwise relations <inline-formula><alternatives>
     <tex-math><![CDATA[\{e_{T} \perp\!\!\!\perp e_{X}\}]]></tex-math>
@@ -839,24 +1019,44 @@ the University of Antwerp (BOF).</funding-statement>
       <table-wrap>
         <table>
           <colgroup>
-            <col width="50%" />
-            <col width="50%" />
+            <col width="33%" />
+            <col width="33%" />
+            <col width="33%" />
           </colgroup>
           <tbody>
             <tr>
               <td align="left"><p specific-use="wrapper">
                 <boxed-text>
-                  <fig id="fig-dag_example1">
+                  <fig id="fig-sdag_example1">
                     <caption><p>(a) Simplied DAG</p></caption>
-                    <graphic mimetype="image" mime-subtype="png" xlink:href="images/figures/dag_example1.png" />
+                    <graphic mimetype="image" mime-subtype="png" xlink:href="images/figures/sdag_example1.png" />
                   </fig>
                 </boxed-text>
               </p></td>
               <td align="left"><p specific-use="wrapper">
                 <boxed-text>
-                  <fig id="fig-dag_example2">
+                  <fig id="fig-mdag_example1">
                     <caption><p>(b) Magnified DAG</p></caption>
-                    <graphic mimetype="image" mime-subtype="png" xlink:href="images/figures/dag_example2.png" />
+                    <graphic mimetype="image" mime-subtype="png" xlink:href="images/figures/mdag_example1.png" />
+                  </fig>
+                </boxed-text>
+              </p></td>
+              <td align="left"><p specific-use="wrapper">
+                <boxed-text>
+                  <fig id="fig-scm_example1">
+                    <caption><p>(c) Collider or inmorality</p></caption>
+                    <p><disp-formula><alternatives>
+                    <tex-math><![CDATA[
+                    \begin{aligned}
+                      X & := f_{X}(e_{X}) \\
+                      Z & := f_{Z}(X,Y,e_{Z}) \\
+                      Y & := f_{Y}(e_{Y}) \\
+                      e_{X} & \perp\!\!\!\perp e_{Y} \\
+                      e_{X} & \perp\!\!\!\perp e_{Z} \\
+                      e_{Z} & \perp\!\!\!\perp e_{Y}
+                    \end{aligned}
+                    ]]></tex-math>
+                    <mml:math display="block" xmlns:mml="http://www.w3.org/1998/Math/MathML"><mml:mtable><mml:mtr><mml:mtd columnalign="right" style="text-align: right"><mml:mi>X</mml:mi></mml:mtd><mml:mtd columnalign="left" style="text-align: left"><mml:mo>:=</mml:mo><mml:msub><mml:mi>f</mml:mi><mml:mi>X</mml:mi></mml:msub><mml:mrow><mml:mo stretchy="true" form="prefix">(</mml:mo><mml:msub><mml:mi>e</mml:mi><mml:mi>X</mml:mi></mml:msub><mml:mo stretchy="true" form="postfix">)</mml:mo></mml:mrow></mml:mtd></mml:mtr><mml:mtr><mml:mtd columnalign="right" style="text-align: right"><mml:mi>Z</mml:mi></mml:mtd><mml:mtd columnalign="left" style="text-align: left"><mml:mo>:=</mml:mo><mml:msub><mml:mi>f</mml:mi><mml:mi>Z</mml:mi></mml:msub><mml:mrow><mml:mo stretchy="true" form="prefix">(</mml:mo><mml:mi>X</mml:mi><mml:mo>,</mml:mo><mml:mi>Y</mml:mi><mml:mo>,</mml:mo><mml:msub><mml:mi>e</mml:mi><mml:mi>Z</mml:mi></mml:msub><mml:mo stretchy="true" form="postfix">)</mml:mo></mml:mrow></mml:mtd></mml:mtr><mml:mtr><mml:mtd columnalign="right" style="text-align: right"><mml:mi>Y</mml:mi></mml:mtd><mml:mtd columnalign="left" style="text-align: left"><mml:mo>:=</mml:mo><mml:msub><mml:mi>f</mml:mi><mml:mi>Y</mml:mi></mml:msub><mml:mrow><mml:mo stretchy="true" form="prefix">(</mml:mo><mml:msub><mml:mi>e</mml:mi><mml:mi>Y</mml:mi></mml:msub><mml:mo stretchy="true" form="postfix">)</mml:mo></mml:mrow></mml:mtd></mml:mtr><mml:mtr><mml:mtd columnalign="right" style="text-align: right"><mml:msub><mml:mi>e</mml:mi><mml:mi>X</mml:mi></mml:msub></mml:mtd><mml:mtd columnalign="left" style="text-align: left"><mml:mo>⊥</mml:mo><mml:mspace width="-0.167em"></mml:mspace><mml:mspace width="-0.167em"></mml:mspace><mml:mspace width="-0.167em"></mml:mspace><mml:mo>⊥</mml:mo><mml:msub><mml:mi>e</mml:mi><mml:mi>Y</mml:mi></mml:msub></mml:mtd></mml:mtr><mml:mtr><mml:mtd columnalign="right" style="text-align: right"><mml:msub><mml:mi>e</mml:mi><mml:mi>X</mml:mi></mml:msub></mml:mtd><mml:mtd columnalign="left" style="text-align: left"><mml:mo>⊥</mml:mo><mml:mspace width="-0.167em"></mml:mspace><mml:mspace width="-0.167em"></mml:mspace><mml:mspace width="-0.167em"></mml:mspace><mml:mo>⊥</mml:mo><mml:msub><mml:mi>e</mml:mi><mml:mi>Z</mml:mi></mml:msub></mml:mtd></mml:mtr><mml:mtr><mml:mtd columnalign="right" style="text-align: right"><mml:msub><mml:mi>e</mml:mi><mml:mi>Z</mml:mi></mml:msub></mml:mtd><mml:mtd columnalign="left" style="text-align: left"><mml:mo>⊥</mml:mo><mml:mspace width="-0.167em"></mml:mspace><mml:mspace width="-0.167em"></mml:mspace><mml:mspace width="-0.167em"></mml:mspace><mml:mo>⊥</mml:mo><mml:msub><mml:mi>e</mml:mi><mml:mi>Y</mml:mi></mml:msub></mml:mtd></mml:mtr></mml:mtable></mml:math></alternatives></disp-formula></p>
                   </fig>
                 </boxed-text>
               </p></td>
@@ -1468,6 +1668,22 @@ the University of Antwerp (BOF).</funding-statement>
           <edition>2</edition>
           <uri></uri>
           <pub-id pub-id-type="doi"></pub-id>
+        </element-citation>
+      </ref>
+      <ref id="ref-Chow_2015">
+        <element-citation publication-type="article-journal">
+          <person-group person-group-type="author">
+            <name><surname>Chow</surname><given-names>S.</given-names></name>
+          </person-group>
+          <article-title>Many meanings of ‘heuristic’</article-title>
+          <source>The British Journal for the Philosophy of Science</source>
+          <year iso-8601-date="2015">2015</year>
+          <volume>66</volume>
+          <issue>4</issue>
+          <uri></uri>
+          <pub-id pub-id-type="doi">10.1093/bjps/axu028</pub-id>
+          <fpage>977</fpage>
+          <lpage>1016</lpage>
         </element-citation>
       </ref>
       <ref id="ref-Pearl_et_al_2016">

@@ -284,6 +284,7 @@ window.Quarto = {
 <meta name="citation_reference" content="citation_title=Counterfactuals and causal inference: Methods and principles for social research;,citation_author=S. Morgan;,citation_author=C. Winship;,citation_publication_date=2014;,citation_cover_date=2014;,citation_year=2014;,citation_series_title=Analytical methods for social research;">
 <meta name="citation_reference" content="citation_title=Handbook of structural equation modeling;,citation_author=R. (eds.) Hoyle;,citation_publication_date=2014;,citation_cover_date=2014;,citation_year=2014;,citation_isbn=9781462516797;">
 <meta name="citation_reference" content="citation_title=Bayesian data analysis;,citation_author=A. Gelman;,citation_author=J. Carlin;,citation_author=H. Stern;,citation_author=D. Dunson;,citation_author=A. Vehtari;,citation_author=D. Rubin;,citation_publication_date=2014;,citation_cover_date=2014;,citation_year=2014;,citation_series_title=Texts in statistical science;">
+<meta name="citation_reference" content="citation_title=Many meanings of “heuristic”;,citation_author=S. Chow;,citation_publication_date=2015;,citation_cover_date=2015;,citation_year=2015;,citation_issue=4;,citation_doi=10.1093/bjps/axu028;,citation_volume=66;,citation_journal_title=The British Journal for the Philosophy of Science;">
 <meta name="citation_reference" content="citation_title=Doing bayesian data analysis: A tutorial with r, JAGS, and stan;,citation_author=D. Kruschke;,citation_publication_date=2015;,citation_cover_date=2015;,citation_year=2015;,citation_fulltext_html_url=https://www.sciencedirect.com/book/9780124058880/doing-bayesian-data-analysis;,citation_isbn=9780124058880;">
 <meta name="citation_reference" content="citation_title=Design and analysis of experiments with r;,citation_author=J. Lawson;,citation_publication_date=2015;,citation_cover_date=2015;,citation_year=2015;,citation_isbn=9780429154522;">
 <meta name="citation_reference" content="citation_title=Foundations of linear and generalized linear models;,citation_author=A. Agresti;,citation_publication_date=2015;,citation_cover_date=2015;,citation_year=2015;,citation_isbn=9781118730034;,citation_series_title=Wiley series in probability and statistics;">
@@ -439,7 +440,7 @@ window.Quarto = {
   <li><a href="#sec-framework" id="toc-sec-framework" class="nav-link" data-scroll-target="#sec-framework"><span class="header-section-number">2</span> Theoretical framework</a>
   <ul class="collapse">
   <li><a href="#sec-framework-structural" id="toc-sec-framework-structural" class="nav-link" data-scroll-target="#sec-framework-structural"><span class="header-section-number">2.1</span> The structural approach to causal inference</a></li>
-  <li><a href="#sec-framework-dag" id="toc-sec-framework-dag" class="nav-link" data-scroll-target="#sec-framework-dag"><span class="header-section-number">2.2</span> Directed acyclic graphs (DAG)</a></li>
+  <li><a href="#sec-framework-dag" id="toc-sec-framework-dag" class="nav-link" data-scroll-target="#sec-framework-dag"><span class="header-section-number">2.2</span> DAGs and SCMs</a></li>
   <li><a href="#sec-framework-flow" id="toc-sec-framework-flow" class="nav-link" data-scroll-target="#sec-framework-flow"><span class="header-section-number">2.3</span> The flow of association and causation in graphs</a></li>
   <li><a href="#sec-background-where" id="toc-sec-background-where" class="nav-link" data-scroll-target="#sec-background-where"><span class="header-section-number">2.4</span> But where does it all fit?</a></li>
   </ul></li>
@@ -501,82 +502,251 @@ window.Quarto = {
 <!-- 3. How do we apply causal inference and counterfactuals? -->
 <p>Several approaches to causal inference and counterfactuals exist, but two are particularly prominent: the potential outcomes approach, also known as the Neyman-Rubin causal model <span class="citation" data-cites="Neyman_et_al_1923 Rubin_1974">(<a href="#ref-Neyman_et_al_1923" role="doc-biblioref">Neyman 1923</a>; <a href="#ref-Rubin_1974" role="doc-biblioref">Rubin 1974</a>)</span>, and the structural approach <span class="citation" data-cites="Pearl_2009 Pearl_et_al_2016">(<a href="#ref-Pearl_2009" role="doc-biblioref">Pearl 2009</a>; <a href="#ref-Pearl_et_al_2016" role="doc-biblioref">Pearl, Glymour, and Jewell 2016</a>)</span>. Both approaches employ rigorous mathematical notation to characterize causal inference, but they do so in different ways <span class="citation" data-cites="Neal_2020">(<a href="#ref-Neal_2020" role="doc-biblioref">Neal 2020</a>)</span>. The potential outcomes approach relies on counterfactual notation, whereas the structural approach employs the do-operator and structural causal models <span class="citation" data-cites="Pearl_2009 Pearl_et_al_2016">(SCM, <a href="#ref-Pearl_2009" role="doc-biblioref">Pearl 2009</a>; <a href="#ref-Pearl_et_al_2016" role="doc-biblioref">Pearl, Glymour, and Jewell 2016</a>)</span>. Despite these differences, both notations can be expressed in terms of the other, and both approaches provide methods for using experimental and observational data to estimate causal effects <span class="citation" data-cites="Pearl_2010">(<a href="#ref-Pearl_2010" role="doc-biblioref">Pearl 2010</a>)</span>.</p>
 <!-- 4. But which approach are we going to use? -->
-<p>Nevertheless, the structural approach offers an additional key advantage over the potential outcomes approach: it enables the graphical representation of any system through directed acyclic graphs <span class="citation" data-cites="Gross_et_al_2018 Neal_2020">(DAG, <a href="#ref-Gross_et_al_2018" role="doc-biblioref">Gross, Yellen, and Anderson 2018</a>; <a href="#ref-Neal_2020" role="doc-biblioref">Neal 2020</a>)</span>. DAGs are heuristics that can effectively convey the assumed causal structure of a system. They do not represent detailed statistical models but allow researchers to deduce which statistical models can provide valid causal inferences, assuming the causal structure depicted in the DAG is accurate <span class="citation" data-cites="McElreath_2020">(<a href="#ref-McElreath_2020" role="doc-biblioref">McElreath 2020</a>)</span>.</p>
+<p>Nevertheless, the structural approach offers an additional key advantage over the potential outcomes approach: it enables the graphical representation of any system through directed acyclic graphs <span class="citation" data-cites="Gross_et_al_2018 Neal_2020">(DAG, <a href="#ref-Gross_et_al_2018" role="doc-biblioref">Gross, Yellen, and Anderson 2018</a>; <a href="#ref-Neal_2020" role="doc-biblioref">Neal 2020</a>)</span>. DAGs serve as heuristics, effectively conveying the assumed causal structure of a system. A heuristic is a strategy that simplifies information to make decisions more quickly, efficiently, and sometimes more accurately than complex methods <span class="citation" data-cites="Chow_2015">(<a href="#ref-Chow_2015" role="doc-biblioref">Chow 2015</a>)</span>. Consequently, DAGs do not represent detailed statistical models but allow researchers to deduce which statistical models can provide valid causal inferences, assuming the causal structure depicted in the DAG is accurate <span class="citation" data-cites="McElreath_2020">(<a href="#ref-McElreath_2020" role="doc-biblioref">McElreath 2020</a>)</span>.</p>
 <!-- A Directed Acyclic Graph (DAG) allows for the transparent depiction of a system’s complexity, revealing its underlying assumptions and the plausible mechanisms generating the system’s outcome, assuming the DAG is true.  -->
 </section>
 <section id="sec-framework-dag" class="level2" data-number="2.2">
-<h2 data-number="2.2" class="anchored" data-anchor-id="sec-framework-dag"><span class="header-section-number">2.2</span> Directed acyclic graphs (DAG)</h2>
+<h2 data-number="2.2" class="anchored" data-anchor-id="sec-framework-dag"><span class="header-section-number">2.2</span> DAGs and SCMs</h2>
 <!-- 1. Graph theory and the use of graphs -->
 <p>Graph theory is a branch of mathematics focused on the study of graphs. Graphs are mathematical structures modeling pairwise relations between objects. They can represent physical relations, such as electrical circuits and roadways, and less tangible structures, such as ecosystems and sociological relations. Graphs have proven useful in various fields, including computer science, operations research, and the natural and social sciences <span class="citation" data-cites="Gross_et_al_2018">(<a href="#ref-Gross_et_al_2018" role="doc-biblioref">Gross, Yellen, and Anderson 2018</a>)</span>.</p>
-<!-- 2. How graphs are use in the structural approach? and what are DAGs? -->
-<p>In statistics, one application incorporating concepts from graph theory is causal inference. Specifically, the structural approach to causal inference uses directed acyclic graphs (DAG) to provide a formal and graphical representation of the causal structure of a system <span class="citation" data-cites="Neal_2020">(<a href="#ref-Neal_2020" role="doc-biblioref">Neal 2020</a>)</span>. In this context, a <em>graph</em> is a collection of nodes connected by edges, where nodes represent random variables. The term <em>directed</em> indicates that the edges of the graph extend from one node to another, with arrows showing the direction of causal influence. Moreover, the term <em>acyclic</em> indicates the causal influences do not form a loop, meaning the influences do not cycle back on themselves <span class="citation" data-cites="McElreath_2020">(<a href="#ref-McElreath_2020" role="doc-biblioref">McElreath 2020</a>)</span>.</p>
-<!-- 3. How do we draw DAGs? and what are the building blocks of DAGs? -->
-<p>One key advantage of DAGs is that, regardless of complexity, they can represent various causal structures using only five fundamental building blocks <span class="citation" data-cites="Neal_2020 McElreath_2020 Morgan_et_al_2014">(<a href="#ref-Neal_2020" role="doc-biblioref">Neal 2020</a>; <a href="#ref-McElreath_2020" role="doc-biblioref">McElreath 2020</a>; <a href="#ref-Morgan_et_al_2014" role="doc-biblioref">Morgan and Winship 2014</a>)</span>. <a href="#fig-dags" class="quarto-xref">Figure&nbsp;1</a> illustrates these blocks. <a href="#fig-dag_bb1" class="quarto-xref">Figure&nbsp;1 (a)</a> depicts two unconnected nodes, representing an scenario where variables <span class="math inline">\(X_{1}\)</span> and <span class="math inline">\(X_{2}\)</span> are not causally related. <a href="#fig-dag_bb2" class="quarto-xref">Figure&nbsp;1 (b)</a> shows two connected nodes, illustrating a scenario where a parent node <span class="math inline">\(X_{1}\)</span> exerts a causal influence on a child node <span class="math inline">\(X_{2}\)</span>. Consequently, <span class="math inline">\(X_{2}\)</span> is considered a <em>descendant</em> of <span class="math inline">\(X_{1}\)</span>. <a href="#fig-dag_bb3" class="quarto-xref">Figure&nbsp;1 (c)</a> depicts a <em>chain</em> (or <em>pipe</em>), where <span class="math inline">\(X_{1}\)</span> influences <span class="math inline">\(X_{2}\)</span>, and <span class="math inline">\(X_{2}\)</span> influences <span class="math inline">\(X_{3}\)</span>. In this configuration, <span class="math inline">\(X_{1}\)</span> is a parent node of <span class="math inline">\(X_{2}\)</span>, and <span class="math inline">\(X_{2}\)</span> a parent node of <span class="math inline">\(X_{3}\)</span>. Furthermore, the DAG shows that <span class="math inline">\(X_{1}\)</span> is an <em>ancestor</em> of <span class="math inline">\(X_{3}\)</span> and that the relationship between these variables is entirely <em>mediated</em> by <span class="math inline">\(X_{2}\)</span>. <a href="#fig-dag_bb4" class="quarto-xref">Figure&nbsp;1 (d)</a> illustrates a <em>fork</em>, where variables <span class="math inline">\(X_{1}\)</span> and <span class="math inline">\(X_{3}\)</span> are both influenced by <span class="math inline">\(X_{2}\)</span>. In this scenario <span class="math inline">\(X_{2}\)</span> is a parent node of both <span class="math inline">\(X_{1}\)</span> and <span class="math inline">\(X_{3}\)</span>. Finally, <a href="#fig-dag_bb5" class="quarto-xref">Figure&nbsp;1 (e)</a> depicts a <em>collider</em>, also known as <em>inmorality</em>, where variables <span class="math inline">\(X_{1}\)</span> and <span class="math inline">\(X_{3}\)</span> are concurrent causes of <span class="math inline">\(X_{2}\)</span>. In this configuration, <span class="math inline">\(X_{1}\)</span> and <span class="math inline">\(X_{3}\)</span> are not causally related to each other but both influence <span class="math inline">\(X_{2}\)</span>.</p>
-<div id="fig-dags" class="quarto-layout-panel">
+<!-- 2. What does the structural approach uses?, and what are DAGs? -->
+<p>In statistics, one application incorporating concepts from graph theory is causal inference. Specifically, the structural approach to causal inference uses directed acyclic graphs (DAG) and its associated structural causal models (SCM) to provide a graphical and formal representation of the causal structure of a system <span class="citation" data-cites="Neal_2020">(<a href="#ref-Neal_2020" role="doc-biblioref">Neal 2020</a>)</span>. In this context, a <em>graph</em> denotes a collection of nodes connected by edges, where nodes represent random variables. The term <em>directed</em> indicates that the edges of the graph extend from one node to another, with arrows showing the direction of causal influence. Moreover, the term <em>acyclic</em> indicates the causal influences do not form a loop, meaning the influences do not cycle back on themselves <span class="citation" data-cites="McElreath_2020">(<a href="#ref-McElreath_2020" role="doc-biblioref">McElreath 2020</a>)</span>.</p>
+<!-- 3. The first advantage of DAGs is that you need only five building blocks -->
+<!-- 3.1 how DAG can be depicted? Simplified? -->
+<p>One key advantage of DAGs is that they can represent various causal structures using only five fundamental building blocks, regardless of complexity. The left panels of <a href="#fig-dags_scms" class="quarto-xref">Figure&nbsp;1</a> illustrates the <em>simplified</em> graphs of these block. In these graphs, the variables of interest or <em>endogenous</em> variables, <span class="math inline">\(V=\{X,Z,Y\}\)</span>, are depicted as solid black circles, indicating that they are observed variables. The arrows in the graph reflect the expected direction of causal influences among the variables.</p>
+<!-- 3.2 how DAG can be depicted? Magnified? -->
+<p>In contrast, the middle panels of <a href="#fig-dags_scms" class="quarto-xref">Figure&nbsp;1</a> depicts the <em>magnified</em> graphs of these building blocks. These graph include, in addition to the endogenous variables, the <em>exogenous</em> variables <span class="math inline">\(E=\{e_{X},e_{Z},e_{Y}\}\)</span>. These exogenous variables, commonly referred to as <em>disturbances</em> or <em>errors</em>, represent factors not explicitly modeled. Moreover, they are depicted as open circles, indicating their unobserved nature. These exogenous variables are often omitted for simplicity, resulting in the simplified DAGs shown in the left panels. However, including them in the graph can be advantageous in certain scenarios, as they can help to highlight potential issues related to conditioning and confounding <span class="citation" data-cites="Cinelli_et_al_2020">(<a href="#ref-Cinelli_et_al_2020" role="doc-biblioref">Cinelli, Forney, and Pearl 2020</a>)</span>, concepts introduced in the next section.</p>
+<!-- commands for d-separation -->
+<div id="fig-dags_scms" class="quarto-layout-panel">
 <figure class="quarto-float quarto-float-fig figure">
-<figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-fig" id="fig-dags-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Figure&nbsp;1: DAG’s fundamental building blocks.
+<figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-fig" id="fig-dags_scms-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;1: The five fundamental building blocks of DAGs with corresponding SCMs. <strong>Note:</strong> left column shows simplified DAGS, middle column show magnified DAGs, and right column shows the corresponding SCMs.
 </figcaption>
-<div aria-describedby="fig-dags-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<div aria-describedby="fig-dags_scms-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <div class="quarto-layout-row">
-<div class="quarto-layout-cell-subref quarto-layout-cell" data-ref-parent="fig-dags" style="flex-basis: 50.0%;justify-content: flex-start;">
-<div id="fig-dag_bb1" class="quarto-float quarto-figure quarto-figure-center anchored" data-fig-align="center">
+<div class="quarto-layout-cell-subref quarto-layout-cell" data-ref-parent="fig-dags_scms" style="flex-basis: 33.3%;justify-content: flex-start;">
+<div id="fig-sdag_bb1" class="quarto-float quarto-figure quarto-figure-center anchored" data-fig-align="center">
 <figure class="quarto-float quarto-subfloat-fig figure">
-<figcaption class="quarto-float-caption-top quarto-subfloat-caption quarto-subfloat-fig" id="fig-dag_bb1-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<figcaption class="quarto-float-caption-top quarto-subfloat-caption quarto-subfloat-fig" id="fig-sdag_bb1-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 (a) Two unconnected nodes
 </figcaption>
-<div aria-describedby="fig-dag_bb1-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<a href="images/figures/dag_bb1.png" class="lightbox" data-gallery="fig-dags" title="Figure&nbsp;1&nbsp;(a): Two unconnected nodes"><img src="images/figures/dag_bb1.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:30.0%" data-ref-parent="fig-dags"></a>
+<div aria-describedby="fig-sdag_bb1-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<a href="images/figures/sdag_bb1.png" class="lightbox" data-gallery="fig-dags_scms" title="Figure&nbsp;1&nbsp;(a): Two unconnected nodes"><img src="images/figures/sdag_bb1.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:35.0%" data-ref-parent="fig-dags_scms"></a>
 </div>
 </figure>
 </div>
 </div>
-<div class="quarto-layout-cell-subref quarto-layout-cell" data-ref-parent="fig-dags" style="flex-basis: 50.0%;justify-content: flex-start;">
-<div id="fig-dag_bb2" class="quarto-float quarto-figure quarto-figure-center anchored" data-fig-align="center">
+<div class="quarto-layout-cell-subref quarto-layout-cell" data-ref-parent="fig-dags_scms" style="flex-basis: 33.3%;justify-content: flex-start;">
+<div id="fig-mdag_bb1" class="quarto-float quarto-figure quarto-figure-center anchored" data-fig-align="center">
 <figure class="quarto-float quarto-subfloat-fig figure">
-<figcaption class="quarto-float-caption-top quarto-subfloat-caption quarto-subfloat-fig" id="fig-dag_bb2-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-(b) Two connected nodes or descendant
+<figcaption class="quarto-float-caption-top quarto-subfloat-caption quarto-subfloat-fig" id="fig-mdag_bb1-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+(b) Two unconnected nodes
 </figcaption>
-<div aria-describedby="fig-dag_bb2-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<a href="images/figures/dag_bb2.png" class="lightbox" data-gallery="fig-dags" title="Figure&nbsp;1&nbsp;(b): Two connected nodes or descendant"><img src="images/figures/dag_bb2.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:30.0%" data-ref-parent="fig-dags"></a>
+<div aria-describedby="fig-mdag_bb1-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<a href="images/figures/mdag_bb1.png" class="lightbox" data-gallery="fig-dags_scms" title="Figure&nbsp;1&nbsp;(b): Two unconnected nodes"><img src="images/figures/mdag_bb1.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:80.0%" data-ref-parent="fig-dags_scms"></a>
+</div>
+</figure>
+</div>
+</div>
+<div class="quarto-layout-cell-subref quarto-layout-cell" data-ref-parent="fig-dags_scms" style="flex-basis: 33.3%;justify-content: flex-start;">
+<div id="fig-scm_bb1" class="quarto-float quarto-figure quarto-figure-center anchored" data-fig-align="center">
+<figure class="quarto-float quarto-subfloat-fig figure">
+<figcaption class="quarto-float-caption-top quarto-subfloat-caption quarto-subfloat-fig" id="fig-scm_bb1-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+(c) Two unconnected nodes
+</figcaption>
+<div aria-describedby="fig-scm_bb1-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<p><span class="math display">\[
+\begin{aligned}
+  X &amp; := f_{X}(e_{X}) \\
+  Y &amp; := f_{Y}(e_{Y}) \\
+  e_{X} &amp; \perp\!\!\!\perp e_{Y}
+\end{aligned}
+\]</span></p>
 </div>
 </figure>
 </div>
 </div>
 </div>
 <div class="quarto-layout-row">
-<div class="quarto-layout-cell-subref quarto-layout-cell" data-ref-parent="fig-dags" style="flex-basis: 33.3%;justify-content: flex-start;">
-<div id="fig-dag_bb3" class="quarto-float quarto-figure quarto-figure-center anchored" data-fig-align="center">
+<div class="quarto-layout-cell-subref quarto-layout-cell" data-ref-parent="fig-dags_scms" style="flex-basis: 33.3%;justify-content: flex-start;">
+<div id="fig-sdag_bb2" class="quarto-float quarto-figure quarto-figure-center anchored" data-fig-align="center">
 <figure class="quarto-float quarto-subfloat-fig figure">
-<figcaption class="quarto-float-caption-top quarto-subfloat-caption quarto-subfloat-fig" id="fig-dag_bb3-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-(c) Chain or pipe
+<figcaption class="quarto-float-caption-top quarto-subfloat-caption quarto-subfloat-fig" id="fig-sdag_bb2-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+(d) Two connected nodes or descendant
 </figcaption>
-<div aria-describedby="fig-dag_bb3-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<a href="images/figures/dag_bb3.png" class="lightbox" data-gallery="fig-dags" title="Figure&nbsp;1&nbsp;(c): Chain or pipe"><img src="images/figures/dag_bb3.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:75.0%" data-ref-parent="fig-dags"></a>
+<div aria-describedby="fig-sdag_bb2-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<a href="images/figures/sdag_bb2.png" class="lightbox" data-gallery="fig-dags_scms" title="Figure&nbsp;1&nbsp;(d): Two connected nodes or descendant"><img src="images/figures/sdag_bb2.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:35.0%" data-ref-parent="fig-dags_scms"></a>
 </div>
 </figure>
 </div>
 </div>
-<div class="quarto-layout-cell-subref quarto-layout-cell" data-ref-parent="fig-dags" style="flex-basis: 33.3%;justify-content: flex-start;">
-<div id="fig-dag_bb4" class="quarto-float quarto-figure quarto-figure-center anchored" data-fig-align="center">
+<div class="quarto-layout-cell-subref quarto-layout-cell" data-ref-parent="fig-dags_scms" style="flex-basis: 33.3%;justify-content: flex-start;">
+<div id="fig-mdag_bb2" class="quarto-float quarto-figure quarto-figure-center anchored" data-fig-align="center">
 <figure class="quarto-float quarto-subfloat-fig figure">
-<figcaption class="quarto-float-caption-top quarto-subfloat-caption quarto-subfloat-fig" id="fig-dag_bb4-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-(d) Fork
+<figcaption class="quarto-float-caption-top quarto-subfloat-caption quarto-subfloat-fig" id="fig-mdag_bb2-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+(e) Two connected nodes or descendant
 </figcaption>
-<div aria-describedby="fig-dag_bb4-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<a href="images/figures/dag_bb4.png" class="lightbox" data-gallery="fig-dags" title="Figure&nbsp;1&nbsp;(d): Fork"><img src="images/figures/dag_bb4.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:75.0%" data-ref-parent="fig-dags"></a>
+<div aria-describedby="fig-mdag_bb2-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<a href="images/figures/mdag_bb2.png" class="lightbox" data-gallery="fig-dags_scms" title="Figure&nbsp;1&nbsp;(e): Two connected nodes or descendant"><img src="images/figures/mdag_bb2.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:80.0%" data-ref-parent="fig-dags_scms"></a>
 </div>
 </figure>
 </div>
 </div>
-<div class="quarto-layout-cell-subref quarto-layout-cell" data-ref-parent="fig-dags" style="flex-basis: 33.3%;justify-content: flex-start;">
-<div id="fig-dag_bb5" class="quarto-float quarto-figure quarto-figure-center anchored" data-fig-align="center">
+<div class="quarto-layout-cell-subref quarto-layout-cell" data-ref-parent="fig-dags_scms" style="flex-basis: 33.3%;justify-content: flex-start;">
+<div id="fig-scm_bb2" class="quarto-float quarto-figure quarto-figure-center anchored" data-fig-align="center">
 <figure class="quarto-float quarto-subfloat-fig figure">
-<figcaption class="quarto-float-caption-top quarto-subfloat-caption quarto-subfloat-fig" id="fig-dag_bb5-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-(e) Collider or inmorality
+<figcaption class="quarto-float-caption-top quarto-subfloat-caption quarto-subfloat-fig" id="fig-scm_bb2-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+(f) Two connected nodes or descendant
 </figcaption>
-<div aria-describedby="fig-dag_bb5-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<a href="images/figures/dag_bb5.png" class="lightbox" data-gallery="fig-dags" title="Figure&nbsp;1&nbsp;(e): Collider or inmorality"><img src="images/figures/dag_bb5.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:75.0%" data-ref-parent="fig-dags"></a>
+<div aria-describedby="fig-scm_bb2-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<p><span class="math display">\[
+\begin{aligned}
+  X &amp; := f_{X}(e_{X}) \\
+  Y &amp; := f_{Y}(X,e_{Y}) \\
+  e_{X} &amp; \perp\!\!\!\perp e_{Y}
+\end{aligned}
+\]</span></p>
+</div>
+</figure>
+</div>
+</div>
+</div>
+<div class="quarto-layout-row">
+<div class="quarto-layout-cell-subref quarto-layout-cell" data-ref-parent="fig-dags_scms" style="flex-basis: 33.3%;justify-content: flex-start;">
+<div id="fig-sdag_bb3" class="quarto-float quarto-figure quarto-figure-center anchored" data-fig-align="center">
+<figure class="quarto-float quarto-subfloat-fig figure">
+<figcaption class="quarto-float-caption-top quarto-subfloat-caption quarto-subfloat-fig" id="fig-sdag_bb3-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+(g) Chain or pipe
+</figcaption>
+<div aria-describedby="fig-sdag_bb3-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<a href="images/figures/sdag_bb3.png" class="lightbox" data-gallery="fig-dags_scms" title="Figure&nbsp;1&nbsp;(g): Chain or pipe"><img src="images/figures/sdag_bb3.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:60.0%" data-ref-parent="fig-dags_scms"></a>
+</div>
+</figure>
+</div>
+</div>
+<div class="quarto-layout-cell-subref quarto-layout-cell" data-ref-parent="fig-dags_scms" style="flex-basis: 33.3%;justify-content: flex-start;">
+<div id="fig-mdag_bb3" class="quarto-float quarto-figure quarto-figure-center anchored" data-fig-align="center">
+<figure class="quarto-float quarto-subfloat-fig figure">
+<figcaption class="quarto-float-caption-top quarto-subfloat-caption quarto-subfloat-fig" id="fig-mdag_bb3-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+(h) Chain or pipe
+</figcaption>
+<div aria-describedby="fig-mdag_bb3-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<a href="images/figures/mdag_bb3.png" class="lightbox" data-gallery="fig-dags_scms" title="Figure&nbsp;1&nbsp;(h): Chain or pipe"><img src="images/figures/mdag_bb3.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:100.0%" data-ref-parent="fig-dags_scms"></a>
+</div>
+</figure>
+</div>
+</div>
+<div class="quarto-layout-cell-subref quarto-layout-cell" data-ref-parent="fig-dags_scms" style="flex-basis: 33.3%;justify-content: flex-start;">
+<div id="fig-scm_bb3" class="quarto-float quarto-figure quarto-figure-center anchored" data-fig-align="center">
+<figure class="quarto-float quarto-subfloat-fig figure">
+<figcaption class="quarto-float-caption-top quarto-subfloat-caption quarto-subfloat-fig" id="fig-scm_bb3-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+(i) Chain or pipe
+</figcaption>
+<div aria-describedby="fig-scm_bb3-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<p><span class="math display">\[
+\begin{aligned}
+  X &amp; := f_{X}(e_{X}) \\
+  Z &amp; := f_{Z}(X,e_{Z}) \\
+  Y &amp; := f_{Y}(Z,e_{Y}) \\
+  e_{X} &amp; \perp\!\!\!\perp e_{Y} \\
+  e_{X} &amp; \perp\!\!\!\perp e_{Z} \\
+  e_{Z} &amp; \perp\!\!\!\perp e_{Y}
+\end{aligned}
+\]</span></p>
+</div>
+</figure>
+</div>
+</div>
+</div>
+<div class="quarto-layout-row">
+<div class="quarto-layout-cell-subref quarto-layout-cell" data-ref-parent="fig-dags_scms" style="flex-basis: 33.3%;justify-content: flex-start;">
+<div id="fig-sdag_bb4" class="quarto-float quarto-figure quarto-figure-center anchored" data-fig-align="center">
+<figure class="quarto-float quarto-subfloat-fig figure">
+<figcaption class="quarto-float-caption-top quarto-subfloat-caption quarto-subfloat-fig" id="fig-sdag_bb4-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+(j) Fork
+</figcaption>
+<div aria-describedby="fig-sdag_bb4-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<a href="images/figures/sdag_bb4.png" class="lightbox" data-gallery="fig-dags_scms" title="Figure&nbsp;1&nbsp;(j): Fork"><img src="images/figures/sdag_bb4.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:60.0%" data-ref-parent="fig-dags_scms"></a>
+</div>
+</figure>
+</div>
+</div>
+<div class="quarto-layout-cell-subref quarto-layout-cell" data-ref-parent="fig-dags_scms" style="flex-basis: 33.3%;justify-content: flex-start;">
+<div id="fig-mdag_bb4" class="quarto-float quarto-figure quarto-figure-center anchored" data-fig-align="center">
+<figure class="quarto-float quarto-subfloat-fig figure">
+<figcaption class="quarto-float-caption-top quarto-subfloat-caption quarto-subfloat-fig" id="fig-mdag_bb4-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+(k) Fork
+</figcaption>
+<div aria-describedby="fig-mdag_bb4-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<a href="images/figures/mdag_bb4.png" class="lightbox" data-gallery="fig-dags_scms" title="Figure&nbsp;1&nbsp;(k): Fork"><img src="images/figures/mdag_bb4.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:100.0%" data-ref-parent="fig-dags_scms"></a>
+</div>
+</figure>
+</div>
+</div>
+<div class="quarto-layout-cell-subref quarto-layout-cell" data-ref-parent="fig-dags_scms" style="flex-basis: 33.3%;justify-content: flex-start;">
+<div id="fig-scm_bb4" class="quarto-float quarto-figure quarto-figure-center anchored" data-fig-align="center">
+<figure class="quarto-float quarto-subfloat-fig figure">
+<figcaption class="quarto-float-caption-top quarto-subfloat-caption quarto-subfloat-fig" id="fig-scm_bb4-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+(l) Fork
+</figcaption>
+<div aria-describedby="fig-scm_bb4-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<p><span class="math display">\[
+\begin{aligned}
+  X &amp; := f_{X}(Z,e_{X}) \\
+  Z &amp; := f_{Z}(e_{Z}) \\
+  Y &amp; := f_{Y}(Z,e_{Y}) \\
+  e_{X} &amp; \perp\!\!\!\perp e_{Y} \\
+  e_{X} &amp; \perp\!\!\!\perp e_{Z} \\
+  e_{Z} &amp; \perp\!\!\!\perp e_{Y}
+\end{aligned}
+\]</span></p>
+</div>
+</figure>
+</div>
+</div>
+</div>
+<div class="quarto-layout-row">
+<div class="quarto-layout-cell-subref quarto-layout-cell" data-ref-parent="fig-dags_scms" style="flex-basis: 33.3%;justify-content: flex-start;">
+<div id="fig-sdag_bb5" class="quarto-float quarto-figure quarto-figure-center anchored" data-fig-align="center">
+<figure class="quarto-float quarto-subfloat-fig figure">
+<figcaption class="quarto-float-caption-top quarto-subfloat-caption quarto-subfloat-fig" id="fig-sdag_bb5-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+(m) Collider or inmorality
+</figcaption>
+<div aria-describedby="fig-sdag_bb5-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<a href="images/figures/sdag_bb5.png" class="lightbox" data-gallery="fig-dags_scms" title="Figure&nbsp;1&nbsp;(m): Collider or inmorality"><img src="images/figures/sdag_bb5.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:60.0%" data-ref-parent="fig-dags_scms"></a>
+</div>
+</figure>
+</div>
+</div>
+<div class="quarto-layout-cell-subref quarto-layout-cell" data-ref-parent="fig-dags_scms" style="flex-basis: 33.3%;justify-content: flex-start;">
+<div id="fig-mdag_bb5" class="quarto-float quarto-figure quarto-figure-center anchored" data-fig-align="center">
+<figure class="quarto-float quarto-subfloat-fig figure">
+<figcaption class="quarto-float-caption-top quarto-subfloat-caption quarto-subfloat-fig" id="fig-mdag_bb5-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+(n) Collider or inmorality
+</figcaption>
+<div aria-describedby="fig-mdag_bb5-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<a href="images/figures/mdag_bb5.png" class="lightbox" data-gallery="fig-dags_scms" title="Figure&nbsp;1&nbsp;(n): Collider or inmorality"><img src="images/figures/mdag_bb5.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:100.0%" data-ref-parent="fig-dags_scms"></a>
+</div>
+</figure>
+</div>
+</div>
+<div class="quarto-layout-cell-subref quarto-layout-cell" data-ref-parent="fig-dags_scms" style="flex-basis: 33.3%;justify-content: flex-start;">
+<div id="fig-scm_bb5" class="quarto-float quarto-figure quarto-figure-center anchored" data-fig-align="center">
+<figure class="quarto-float quarto-subfloat-fig figure">
+<figcaption class="quarto-float-caption-top quarto-subfloat-caption quarto-subfloat-fig" id="fig-scm_bb5-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+(o) Collider or inmorality
+</figcaption>
+<div aria-describedby="fig-scm_bb5-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<p><span class="math display">\[
+\begin{aligned}
+  X &amp; := f_{X}(e_{X}) \\
+  Z &amp; := f_{Z}(X,Y,e_{Z}) \\
+  Y &amp; := f_{Y}(e_{Y}) \\
+  e_{X} &amp; \perp\!\!\!\perp e_{Y} \\
+  e_{X} &amp; \perp\!\!\!\perp e_{Z} \\
+  e_{Z} &amp; \perp\!\!\!\perp e_{Y}
+\end{aligned}
+\]</span></p>
 </div>
 </figure>
 </div>
@@ -585,14 +755,15 @@ Figure&nbsp;1: DAG’s fundamental building blocks.
 </div>
 </figure>
 </div>
-<!-- 4. A motivating example -->
+<!-- 4. But what does the building blocks mean? -->
+<p>A careful examination of the left and middle panels of <a href="#fig-dags_scms" class="quarto-xref">Figure&nbsp;1</a> reveal what do the building blocks assume. Figures <a href="#fig-sdag_bb1" class="quarto-xref">1 (a)</a> and <a href="#fig-mdag_bb1" class="quarto-xref">1 (b)</a> depict two unconnected nodes, representing an scenario where variables <span class="math inline">\(X\)</span> and <span class="math inline">\(Y\)</span> are not causally related. Figures <a href="#fig-sdag_bb2" class="quarto-xref">1 (d)</a> and <a href="#fig-mdag_bb2" class="quarto-xref">1 (e)</a> show two connected nodes, illustrating a scenario where a parent node <span class="math inline">\(X\)</span> exerts a causal influence on a child node <span class="math inline">\(Y\)</span>. Consequently, <span class="math inline">\(Y\)</span> is considered a <em>descendant</em> of <span class="math inline">\(X\)</span>. Figures <a href="#fig-sdag_bb3" class="quarto-xref">1 (g)</a> and <a href="#fig-mdag_bb3" class="quarto-xref">1 (h)</a> depict a <em>chain</em> (or <em>pipe</em>), where <span class="math inline">\(X\)</span> influences <span class="math inline">\(Z\)</span>, and <span class="math inline">\(Z\)</span> influences <span class="math inline">\(Y\)</span>. In this configuration, <span class="math inline">\(X\)</span> is a parent node of <span class="math inline">\(Z\)</span>, and <span class="math inline">\(Z\)</span> a parent node of <span class="math inline">\(Y\)</span>. Furthermore, the DAG shows that <span class="math inline">\(X\)</span> is an <em>ancestor</em> of <span class="math inline">\(Y\)</span> and that the relationship between these variables is entirely <em>mediated</em> by <span class="math inline">\(Z\)</span>. Figures <a href="#fig-sdag_bb4" class="quarto-xref">1 (j)</a> and <a href="#fig-mdag_bb4" class="quarto-xref">1 (k)</a> illustrate a <em>fork</em>, where variables <span class="math inline">\(X\)</span> and <span class="math inline">\(Y\)</span> are both influenced by <span class="math inline">\(Z\)</span>. In this scenario <span class="math inline">\(Z\)</span> is a parent node of both <span class="math inline">\(X\)</span> and <span class="math inline">\(Y\)</span>. Finally, figures <a href="#fig-sdag_bb5" class="quarto-xref">1 (m)</a> and <a href="#fig-mdag_bb5" class="quarto-xref">1 (n)</a> depict a <em>collider</em>, also known as <em>inmorality</em>, where variables <span class="math inline">\(X\)</span> and <span class="math inline">\(Y\)</span> are concurrent causes of <span class="math inline">\(Z\)</span>. In this configuration, <span class="math inline">\(X\)</span> and <span class="math inline">\(Y\)</span> are not causally related to each other but both influence <span class="math inline">\(Z\)</span>.</p>
+<!-- 4. The second advantage of DAGs is that there is no need for functional form -->
+<!-- The second key advantage of DAGs is their ability to represent causal relations in a nonparametric and fully interactive manner. This means that feasible causal analysis strategies usually do not require specifying the type of data or the nature of the functional dependence among variables. This generality allows modeling causality without assuming a specific functional form [@Morgan_et_al_2014]. -->
+<!-- 5. A motivating example -->
 <p>Given the heuristic nature of DAGs, a motivating example can help illustrate the use of the five fundamental building blocks to construct a system’s causal structure. This example can also help to clarify some additional conventions for drawing DAGs.</p>
-<p>Consider a research problem where the causal effect of a variable <span class="math inline">\(T\)</span> on an outcome <span class="math inline">\(Y\)</span> needs to be investigated. Additionally, the problem suggests that a variable <span class="math inline">\(X\)</span> potentially influences both <span class="math inline">\(T\)</span> and <span class="math inline">\(Y\)</span>. Such scenarios are not hard to imagine. For instance, <span class="math inline">\(T\)</span> might represent different treatments that could affect the recovery from cancer <span class="math inline">\(Y\)</span>, while <span class="math inline">\(X\)</span> could denote the patient’s age. Similarly, in the context of a DCJ study like the one described by <span class="citation" data-cites="Boonen_et_al_2020">Boonen, Kloots, and Gillis (<a href="#ref-Boonen_et_al_2020" role="doc-biblioref">2020</a>)</span>, <span class="math inline">\(T\)</span> could represent the duration of a child’s cochlear implant use, which might influence the child’s overall speech quality <span class="math inline">\(Y\)</span>, with <span class="math inline">\(X\)</span> indicating the child’s hearing status. Note that these descriptions do not specify the type of data or the functional forms of the variables, highlighting the heuristic nature of DAGs. <span style="color:blue;">(not a bad example, but I prefer one using writing skills)</span></p>
-<!-- 5. DAG for the motivating example -->
-<p><a href="#fig-example" class="quarto-xref">Figure&nbsp;2</a> presents two graphs illustrating the plausible causal structure of the motivating example. <a href="#fig-dag_example1" class="quarto-xref">Figure&nbsp;2 (a)</a> shows the <em>simplified</em> DAG. In this graph, the variables of interest or <em>endogenous</em> variables <span class="math inline">\(V=\{T,X,Y\}\)</span> are depicted as solid black circles, indicating that they are observed variables. The arrows in the graph reflect the expected direction of causal influences among the variables. In contrast, <a href="#fig-dag_example2" class="quarto-xref">Figure&nbsp;2 (b)</a> depicts the <em>magnified</em> version of the DAG. This graph includes, in addition to the endogenous variables, the <em>exogenous</em> variables <span class="math inline">\(E=\{e_{T},e_{X},e_{Y}\}\)</span>. These exogenous variables are commonly referred to as <em>disturbances</em> or <em>errors</em>, because they represent factors not explicitly modeled. They are depicted as open circles, indicating their unobserved nature. These exogenous variables are often omitted for simplicity, resulting in the simplified DAG in <a href="#fig-dag_example1" class="quarto-xref">Figure&nbsp;2 (a)</a>. However, including them in the graph can be advantageous in certain scenarios, as they can help to highlight potential issues related to conditioning and confounding <span class="citation" data-cites="Cinelli_et_al_2020">(<a href="#ref-Cinelli_et_al_2020" role="doc-biblioref">Cinelli, Forney, and Pearl 2020</a>)</span>. These concepts are introduced in the next section.</p>
-<!-- 6. But where are the building blocks? -->
-<!-- commands for d-separation -->
-<p>Furthermore, a detailed examination of both figures reveals the presence of at least four of the five fundamental building blocks. <a href="#fig-dag_example1" class="quarto-xref">Figure&nbsp;2 (a)</a> displays multiple descendants, evident in pairwise relations such as <span class="math inline">\(X \rightarrow T\)</span>, <span class="math inline">\(X \rightarrow Y\)</span>, and <span class="math inline">\(T \rightarrow Y\)</span>. It also illustrates a fork with <span class="math inline">\(X \rightarrow \{T,Y\}\)</span>. Similarly, <a href="#fig-dag_example2" class="quarto-xref">Figure&nbsp;2 (b)</a> features multiple two-unconnected nodes, evident in the pairwise relations <span class="math inline">\(\{e_{T} \perp\!\!\!\perp e_{X}\}\)</span>, <span class="math inline">\(\{e_{T} \perp\!\!\!\perp e_{Y}\}\)</span>, and <span class="math inline">\(\{e_{X} \perp\!\!\!\perp e_{Y}\}\)</span>, as well as colliders such as <span class="math inline">\(\{X,e_{T}\} \rightarrow T\)</span> and <span class="math inline">\(\{X,T,e_{Y}\} \rightarrow Y\)</span>. The symbol <span class="math inline">\(\perp\!\!\!\perp\)</span> denotes a concept know as <em>d-separation</em>, which roughly implies the independence of the variables. This concept is introduced in the next section.</p>
+<p>Consider a research problem where the causal effect of a variable <span class="math inline">\(T\)</span> on an outcome <span class="math inline">\(Y\)</span> needs to be investigated. Additionally, the problem suggests that a variable <span class="math inline">\(X\)</span> potentially influences both <span class="math inline">\(T\)</span> and <span class="math inline">\(Y\)</span>. Such scenarios are not hard to imagine. For instance, <span class="math inline">\(T\)</span> might represent different treatments that could affect the recovery from cancer <span class="math inline">\(Y\)</span>, while <span class="math inline">\(X\)</span> could denote the patient’s age. Similarly, in the context of a DCJ study like the one described by <span class="citation" data-cites="Boonen_et_al_2020">Boonen, Kloots, and Gillis (<a href="#ref-Boonen_et_al_2020" role="doc-biblioref">2020</a>)</span>, <span class="math inline">\(T\)</span> could represent the duration of a child’s cochlear implant use, which might influence the child’s overall speech quality <span class="math inline">\(Y\)</span>, with <span class="math inline">\(X\)</span> indicating the child’s hearing status. <span style="color:blue;">(not a bad example, but I prefer one using writing skills)</span></p>
+<!-- 6. DAG for the motivating example -->
+<p><a href="#fig-example" class="quarto-xref">Figure&nbsp;2</a> presents two graphs illustrating the plausible causal structure of the motivating example. <a href="#fig-sdag_example1" class="quarto-xref">Figure&nbsp;2 (a)</a> shows the <em>simplified</em> graph, while <a href="#fig-mdag_example1" class="quarto-xref">Figure&nbsp;2 (b)</a> depicts the <em>magnified</em> graph of the DAG. A detailed examination of both figures reveals the presence of at least four of the five fundamental building blocks. <a href="#fig-sdag_example1" class="quarto-xref">Figure&nbsp;2 (a)</a> displays multiple descendants, evident in pairwise relations such as <span class="math inline">\(X \rightarrow T\)</span>, <span class="math inline">\(X \rightarrow Y\)</span>, and <span class="math inline">\(T \rightarrow Y\)</span>. It also illustrates a fork with <span class="math inline">\(X \rightarrow \{T,Y\}\)</span>. Similarly, <a href="#fig-mdag_example1" class="quarto-xref">Figure&nbsp;2 (b)</a> features multiple two-unconnected nodes, evident in the pairwise relations <span class="math inline">\(\{e_{T} \perp\!\!\!\perp e_{X}\}\)</span>, <span class="math inline">\(\{e_{T} \perp\!\!\!\perp e_{Y}\}\)</span>, and <span class="math inline">\(\{e_{X} \perp\!\!\!\perp e_{Y}\}\)</span>, as well as colliders such as <span class="math inline">\(\{X,e_{T}\} \rightarrow T\)</span> and <span class="math inline">\(\{X,T,e_{Y}\} \rightarrow Y\)</span>. The symbol <span class="math inline">\(\perp\!\!\!\perp\)</span> denotes a concept know as <em>d-separation</em>, which roughly implies the independence of the variables. This concept is introduced in the next section.</p>
 <div id="fig-example" class="quarto-layout-panel">
 <figure class="quarto-float quarto-float-fig figure">
 <figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-fig" id="fig-example-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
@@ -600,26 +771,47 @@ Figure&nbsp;2: DAGs for a plausible causal structure in a system.
 </figcaption>
 <div aria-describedby="fig-example-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <div class="quarto-layout-row">
-<div class="quarto-layout-cell-subref quarto-layout-cell" data-ref-parent="fig-example" style="flex-basis: 50.0%;justify-content: flex-start;">
-<div id="fig-dag_example1" class="quarto-float quarto-figure quarto-figure-center anchored" data-fig-align="center">
+<div class="quarto-layout-cell-subref quarto-layout-cell" data-ref-parent="fig-example" style="flex-basis: 33.3%;justify-content: flex-start;">
+<div id="fig-sdag_example1" class="quarto-float quarto-figure quarto-figure-center anchored" data-fig-align="center">
 <figure class="quarto-float quarto-subfloat-fig figure">
-<figcaption class="quarto-float-caption-top quarto-subfloat-caption quarto-subfloat-fig" id="fig-dag_example1-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<figcaption class="quarto-float-caption-top quarto-subfloat-caption quarto-subfloat-fig" id="fig-sdag_example1-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 (a) Simplied DAG
 </figcaption>
-<div aria-describedby="fig-dag_example1-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<a href="images/figures/dag_example1.png" class="lightbox" data-gallery="fig-example" title="Figure&nbsp;2&nbsp;(a): Simplied DAG"><img src="images/figures/dag_example1.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:45.0%" data-ref-parent="fig-example"></a>
+<div aria-describedby="fig-sdag_example1-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<a href="images/figures/sdag_example1.png" class="lightbox" data-gallery="fig-example" title="Figure&nbsp;2&nbsp;(a): Simplied DAG"><img src="images/figures/sdag_example1.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:35.0%" data-ref-parent="fig-example"></a>
 </div>
 </figure>
 </div>
 </div>
-<div class="quarto-layout-cell-subref quarto-layout-cell" data-ref-parent="fig-example" style="flex-basis: 50.0%;justify-content: flex-start;">
-<div id="fig-dag_example2" class="quarto-float quarto-figure quarto-figure-center anchored" data-fig-align="center">
+<div class="quarto-layout-cell-subref quarto-layout-cell" data-ref-parent="fig-example" style="flex-basis: 33.3%;justify-content: flex-start;">
+<div id="fig-mdag_example1" class="quarto-float quarto-figure quarto-figure-center anchored" data-fig-align="center">
 <figure class="quarto-float quarto-subfloat-fig figure">
-<figcaption class="quarto-float-caption-top quarto-subfloat-caption quarto-subfloat-fig" id="fig-dag_example2-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<figcaption class="quarto-float-caption-top quarto-subfloat-caption quarto-subfloat-fig" id="fig-mdag_example1-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 (b) Magnified DAG
 </figcaption>
-<div aria-describedby="fig-dag_example2-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<a href="images/figures/dag_example2.png" class="lightbox" data-gallery="fig-example" title="Figure&nbsp;2&nbsp;(b): Magnified DAG"><img src="images/figures/dag_example2.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:85.0%" data-ref-parent="fig-example"></a>
+<div aria-describedby="fig-mdag_example1-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<a href="images/figures/mdag_example1.png" class="lightbox" data-gallery="fig-example" title="Figure&nbsp;2&nbsp;(b): Magnified DAG"><img src="images/figures/mdag_example1.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:65.0%" data-ref-parent="fig-example"></a>
+</div>
+</figure>
+</div>
+</div>
+<div class="quarto-layout-cell-subref quarto-layout-cell" data-ref-parent="fig-example" style="flex-basis: 33.3%;justify-content: flex-start;">
+<div id="fig-scm_example1" class="quarto-float quarto-figure quarto-figure-center anchored" data-fig-align="center">
+<figure class="quarto-float quarto-subfloat-fig figure">
+<figcaption class="quarto-float-caption-top quarto-subfloat-caption quarto-subfloat-fig" id="fig-scm_example1-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+(c) Collider or inmorality
+</figcaption>
+<div aria-describedby="fig-scm_example1-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<p><span class="math display">\[
+\begin{aligned}
+  X &amp; := f_{X}(e_{X}) \\
+  Z &amp; := f_{Z}(X,Y,e_{Z}) \\
+  Y &amp; := f_{Y}(e_{Y}) \\
+  e_{X} &amp; \perp\!\!\!\perp e_{Y} \\
+  e_{X} &amp; \perp\!\!\!\perp e_{Z} \\
+  e_{Z} &amp; \perp\!\!\!\perp e_{Y}
+\end{aligned}
+\]</span></p>
 </div>
 </figure>
 </div>
@@ -631,11 +823,12 @@ Figure&nbsp;2: DAGs for a plausible causal structure in a system.
 </section>
 <section id="sec-framework-flow" class="level2" data-number="2.3">
 <h2 data-number="2.3" class="anchored" data-anchor-id="sec-framework-flow"><span class="header-section-number">2.3</span> The flow of association and causation in graphs</h2>
+<!-- Although there are several benefits  -->
 <!-- 2. What does a DAG imply? -->
 <!-- Structural Causal Model (SCM) -->
 <!-- Causal models are mathematical models representing causal relationships within an individual system or population. They facilitate inferences about causal relationships from statistical data. They can teach us a good deal about the epistemology of causation, and about the relationship between causation and probability. They have also been applied to topics of interest to philosophers, such as the logic of counterfactuals, decision theory, and the analysis of actual causation. -->
 <!-- (Structural Causal Model (SCM)) A structural causal model is a tuple of the following sets: -->
-<!-- 1. A set ofendogenous variables 푉 2. A set ofexogenous variables 푈 3. A set of functions 푓, one to generate each endogenous variable as a function ofother variables Neal -->
+<!-- 1. A set of endogenous variables 푉 2. A set of exogenous variables 푈 3. A set of functions 푓, one to generate each endogenous variable as a function of other variables Neal -->
 <!-- \begin{aligned} -->
 <!--     Y & := \; f_{Y}( X,Z,e_{Y} ) \\ -->
 <!--     X & := \; f_{X}( e_{X} ) \\ -->
@@ -643,7 +836,7 @@ Figure&nbsp;2: DAGs for a plausible causal structure in a system.
 <!--     e_{X} & \dsep e_{Z} \\ -->
 <!--     e_{X} & \dsep e_{Y} \\ -->
 <!--     e_{Z} & \dsep e_{Y} -->
-<!-- \end{aligned}  -->
+<!-- \end{aligned} -->
 <!-- these are non-parametrical structural equations -->
 <!-- Causal mechanism as a result of markov and minimality assumption -->
 <!-- Modularity assumption also -->
@@ -654,7 +847,7 @@ Figure&nbsp;2: DAGs for a plausible causal structure in a system.
 Figure&nbsp;3: The flow of association and causation in graphs. Extracted from <span class="citation" data-cites="Neal_2020">Neal (<a href="#ref-Neal_2020" role="doc-biblioref">2020, 31</a>)</span>
 </figcaption>
 <div aria-describedby="fig-ACflow-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<a href="images/figures/ACflow.png" class="lightbox" data-gallery="quarto-lightbox-gallery-8" title="Figure&nbsp;3: The flow of association and causation in graphs. Extracted from @Neal_2020 [pp. 31]"><img src="images/figures/ACflow.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:100.0%"></a>
+<a href="images/figures/ACflow.png" class="lightbox" data-gallery="quarto-lightbox-gallery-13" title="Figure&nbsp;3: The flow of association and causation in graphs. Extracted from @Neal_2020 [pp. 31]"><img src="images/figures/ACflow.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:100.0%"></a>
 </div>
 </figure>
 </div>
@@ -687,7 +880,7 @@ Figure&nbsp;3: The flow of association and causation in graphs. Extracted from <
 Figure&nbsp;4: Identification-Estimation flowchart. Extracted from <span class="citation" data-cites="Neal_2020">Neal (<a href="#ref-Neal_2020" role="doc-biblioref">2020, 32</a>)</span>
 </figcaption>
 <div aria-describedby="fig-IEflow-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<a href="images/figures/IEflow.png" class="lightbox" data-gallery="quarto-lightbox-gallery-9" title="Figure&nbsp;4: Identification-Estimation flowchart. Extracted from @Neal_2020 [pp. 32]"><img src="images/figures/IEflow.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:40.0%"></a>
+<a href="images/figures/IEflow.png" class="lightbox" data-gallery="quarto-lightbox-gallery-14" title="Figure&nbsp;4: Identification-Estimation flowchart. Extracted from @Neal_2020 [pp. 32]"><img src="images/figures/IEflow.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:40.0%"></a>
 </div>
 </figure>
 </div>
@@ -706,7 +899,7 @@ Figure&nbsp;4: Identification-Estimation flowchart. Extracted from <span class="
 Figure&nbsp;5: DCJ causal diagram, simplified description
 </figcaption>
 <div aria-describedby="fig-SciModel_simp1-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<a href="images/figures/SciModel_simp1.png" class="lightbox" data-gallery="quarto-lightbox-gallery-10" title="Figure&nbsp;5: DCJ causal diagram, simplified description"><img src="images/figures/SciModel_simp1.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:80.0%"></a>
+<a href="images/figures/SciModel_simp1.png" class="lightbox" data-gallery="quarto-lightbox-gallery-15" title="Figure&nbsp;5: DCJ causal diagram, simplified description"><img src="images/figures/SciModel_simp1.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:80.0%"></a>
 </div>
 </figure>
 </div>
@@ -716,7 +909,7 @@ Figure&nbsp;5: DCJ causal diagram, simplified description
 Figure&nbsp;6: DCJ causal diagram, simplified mathematical description
 </figcaption>
 <div aria-describedby="fig-SciModel_simp2-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<a href="images/figures/SciModel_simp2.png" class="lightbox" data-gallery="quarto-lightbox-gallery-11" title="Figure&nbsp;6: DCJ causal diagram, simplified mathematical description"><img src="images/figures/SciModel_simp2.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:70.0%"></a>
+<a href="images/figures/SciModel_simp2.png" class="lightbox" data-gallery="quarto-lightbox-gallery-16" title="Figure&nbsp;6: DCJ causal diagram, simplified mathematical description"><img src="images/figures/SciModel_simp2.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:70.0%"></a>
 </div>
 </figure>
 </div>
@@ -726,7 +919,7 @@ Figure&nbsp;6: DCJ causal diagram, simplified mathematical description
 Figure&nbsp;7: DCJ causal diagram, population mathematical description
 </figcaption>
 <div aria-describedby="fig-SciModel_pop-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<a href="images/figures/SciModel_pop.png" class="lightbox" data-gallery="quarto-lightbox-gallery-12" title="Figure&nbsp;7: DCJ causal diagram, population mathematical description"><img src="images/figures/SciModel_pop.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:70.0%"></a>
+<a href="images/figures/SciModel_pop.png" class="lightbox" data-gallery="quarto-lightbox-gallery-17" title="Figure&nbsp;7: DCJ causal diagram, population mathematical description"><img src="images/figures/SciModel_pop.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:70.0%"></a>
 </div>
 </figure>
 </div>
@@ -737,7 +930,7 @@ Figure&nbsp;7: DCJ causal diagram, population mathematical description
 Figure&nbsp;8: DCJ causal diagram, sample with comparisons mathematical description
 </figcaption>
 <div aria-describedby="fig-SciModel_samp-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<a href="images/figures/SciModel_samp.png" class="lightbox" data-gallery="quarto-lightbox-gallery-13" title="Figure&nbsp;8: DCJ causal diagram, sample with comparisons mathematical description"><img src="images/figures/SciModel_samp.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:80.0%"></a>
+<a href="images/figures/SciModel_samp.png" class="lightbox" data-gallery="quarto-lightbox-gallery-18" title="Figure&nbsp;8: DCJ causal diagram, sample with comparisons mathematical description"><img src="images/figures/SciModel_samp.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:80.0%"></a>
 </div>
 </figure>
 </div>
@@ -877,6 +1070,9 @@ Bramley, T. 2015. <span>“Investigating the Reliability of Adaptive Comparative
 </div>
 <div id="ref-Bramley_et_al_2019" class="csl-entry" role="listitem">
 Bramley, T., and S. Vitello. 2019. <span>“The Effect of Adaptivity on the Reliability Coefficient in Adaptive Comparative Judgement.”</span> <em>Assessment in Education: Principles, Policy and Practice</em> 71 (9): 1–25. <a href="https://doi.org/10.1080/0969594X.2017.1418734">https://doi.org/10.1080/0969594X.2017.1418734</a>.
+</div>
+<div id="ref-Chow_2015" class="csl-entry" role="listitem">
+Chow, S. 2015. <span>“Many Meanings of <span>‘Heuristic’</span>.”</span> <em>The British Journal for the Philosophy of Science</em> 66 (4): 977–1016. <a href="https://doi.org/10.1093/bjps/axu028">https://doi.org/10.1093/bjps/axu028</a>.
 </div>
 <div id="ref-Cinelli_et_al_2020" class="csl-entry" role="listitem">
 Cinelli, C., A. Forney, and J. Pearl. 2020. <span>“A Crash Course in Good and Bad Controls.”</span> <em>SSRN</em>, September. <a href="https://doi.org/10.2139/ssrn.3689437">https://doi.org/10.2139/ssrn.3689437</a>.
@@ -1453,7 +1649,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 });
 </script>
 </div> <!-- /content -->
-<script>var lightboxQuarto = GLightbox({"selector":".lightbox","closeEffect":"zoom","openEffect":"zoom","descPosition":"bottom","loop":false});
+<script>var lightboxQuarto = GLightbox({"loop":false,"descPosition":"bottom","closeEffect":"zoom","selector":".lightbox","openEffect":"zoom"});
 (function() {
   let previousOnload = window.onload;
   window.onload = () => {
