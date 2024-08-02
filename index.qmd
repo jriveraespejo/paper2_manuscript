@@ -175,70 +175,178 @@ Counterfactuals represent scenarios *contrary to fact*, where alternative *poten
 Several approaches to causal inference and counterfactuals exist, but two are particularly prominent: the potential outcomes approach, also known as the Neyman-Rubin causal model [@Neyman_et_al_1923; @Rubin_1974], and the structural approach [@Pearl_2009; @Pearl_et_al_2016]. Both approaches employ rigorous mathematical notation to characterize causal inference, but they do so in different ways [@Neal_2020]. The potential outcomes approach relies on counterfactual notation, whereas the structural approach employs the do-operator and structural causal models [SCM, @Pearl_2009; @Pearl_et_al_2016]. Despite these differences, both notations can be expressed in terms of the other, and both approaches provide methods for using experimental and observational data to estimate causal effects [@Pearl_2010]. 
 
 <!-- 4. But which approach are we going to use? -->
-Nevertheless, the structural approach offers an additional key advantage over the potential outcomes approach: it enables the graphical representation of any system through directed acyclic graphs [DAG, @Gross_et_al_2018; @Neal_2020]. DAGs are heuristics that can effectively convey the assumed causal structure of a system. They do not represent detailed statistical models but allow researchers to deduce which statistical models can provide valid causal inferences, assuming the causal structure depicted in the DAG is accurate [@McElreath_2020].
+Nevertheless, the structural approach offers an additional key advantage over the potential outcomes approach: it enables the graphical representation of any system through directed acyclic graphs [DAG, @Gross_et_al_2018; @Neal_2020]. DAGs serve as heuristics, effectively conveying the assumed causal structure of a system. A heuristic is a strategy that simplifies information to make decisions more quickly, efficiently, and sometimes more accurately than complex methods [@Chow_2015]. Consequently, DAGs do not represent detailed statistical models but allow researchers to deduce which statistical models can provide valid causal inferences, assuming the causal structure depicted in the DAG is accurate [@McElreath_2020].
 
 <!-- A Directed Acyclic Graph (DAG) allows for the transparent depiction of a system’s complexity, revealing its underlying assumptions and the plausible mechanisms generating the system’s outcome, assuming the DAG is true.  -->
 
-## Directed acyclic graphs (DAG) {#sec-framework-dag}
+## DAGs and SCMs {#sec-framework-dag}
 
 <!-- 1. Graph theory and the use of graphs -->
-Graph theory is a branch of mathematics focused on the study of graphs. Graphs are mathematical structures modeling pairwise relations between objects. They can represent physical relations, such as electrical circuits and roadways, and less tangible structures, such as ecosystems and sociological relations. Graphs have proven useful in various fields, including computer science, operations research, and the natural and social sciences [@Gross_et_al_2018].
+Graph theory is a branch of mathematics focused on the study of graphs. Graphs are mathematical structures modeling pairwise relations between objects. They can represent physical relations, such as electrical circuits and roadways, and less tangible structures, such as ecosystems and sociological relations. Graphs have proven useful in various fields, including computer science, operations research, and the natural and social sciences [@Gross_et_al_2018]. 
 
-<!-- 2. How graphs are use in the structural approach? and what are DAGs? -->
-In statistics, one application incorporating concepts from graph theory is causal inference. Specifically, the structural approach to causal inference uses directed acyclic graphs (DAG) to provide a formal and graphical representation of the causal structure of a system [@Neal_2020]. In this context, a *graph* is a collection of nodes connected by edges, where nodes represent random variables. The term *directed* indicates that the edges of the graph extend from one node to another, with arrows showing the direction of causal influence. Moreover, the term *acyclic* indicates the causal influences do not form a loop, meaning the influences do not cycle back on themselves [@McElreath_2020].
+<!-- 2. What does the structural approach uses?, and what are DAGs? -->
+In statistics, one application incorporating concepts from graph theory is causal inference. Specifically, the structural approach to causal inference uses directed acyclic graphs (DAG) and its associated structural causal models (SCM) to provide a graphical and formal representation of the causal structure of a system [@Neal_2020]. In this context, a *graph* denotes a collection of nodes connected by edges, where nodes represent random variables. The term *directed* indicates that the edges of the graph extend from one node to another, with arrows showing the direction of causal influence. Moreover, the term *acyclic* indicates the causal influences do not form a loop, meaning the influences do not cycle back on themselves [@McElreath_2020].
 
-<!-- 3. How do we draw DAGs? and what are the building blocks of DAGs? -->
-One key advantage of DAGs is that, regardless of complexity, they can represent various causal structures using only five fundamental building blocks [@Neal_2020; @McElreath_2020; @Morgan_et_al_2014]. @fig-dags illustrates these blocks. @fig-dag_bb1 depicts two unconnected nodes, representing an scenario where variables $X_{1}$ and $X_{2}$ are not causally related. @fig-dag_bb2 shows two connected nodes, illustrating a scenario where a parent node $X_{1}$ exerts a causal influence on a child node $X_{2}$. Consequently, $X_{2}$ is considered a *descendant* of $X_{1}$. @fig-dag_bb3 depicts a *chain* (or *pipe*), where $X_{1}$ influences $X_{2}$, and $X_{2}$ influences $X_{3}$. In this configuration, $X_{1}$ is a parent node of $X_{2}$, and $X_{2}$ a parent node of $X_{3}$. Furthermore, the DAG shows that $X_{1}$ is an *ancestor* of $X_{3}$ and that the relationship between these variables is entirely *mediated* by $X_{2}$. @fig-dag_bb4 illustrates a *fork*, where variables $X_{1}$ and $X_{3}$ are both influenced by $X_{2}$. In this scenario $X_{2}$ is a parent node of both $X_{1}$ and $X_{3}$. Finally, @fig-dag_bb5 depicts a *collider*, also known as *inmorality*, where variables $X_{1}$ and $X_{3}$ are concurrent causes of $X_{2}$. In this configuration, $X_{1}$ and $X_{3}$ are not causally related to each other but both influence $X_{2}$. 
+<!-- 3. The first advantage of DAGs is that you need only five building blocks -->
+<!-- 3.1 how DAG can be depicted? Simplified? -->
+One key advantage of DAGs is that they can represent various causal structures using only five fundamental building blocks, regardless of complexity. The left panels of @fig-dags_scms illustrates the *simplified* graphs of these block. In these graphs, the variables of interest or *endogenous* variables, $V=\{X,Z,Y\}$, are depicted as solid black circles, indicating that they are observed variables. The arrows in the graph reflect the expected direction of causal influences among the variables. 
 
-::: {#fig-dags layout="[[1,1],[1,1,1]]"}
+<!-- 3.2 how DAG can be depicted? Magnified? -->
+In contrast, the middle panels of @fig-dags_scms depicts the *magnified* graphs of these building blocks. These graph include, in addition to the endogenous variables, the *exogenous* variables $E=\{e_{X},e_{Z},e_{Y}\}$. These exogenous variables, commonly referred to as *disturbances* or *errors*, represent factors not explicitly modeled. Moreover, they are depicted as open circles, indicating their unobserved nature. These exogenous variables are often omitted for simplicity, resulting in the simplified DAGs shown in the left panels. However, including them in the graph can be advantageous in certain scenarios, as they can help to highlight potential issues related to conditioning and confounding [@Cinelli_et_al_2020], concepts introduced in the next section.
 
-![Two unconnected nodes](images/figures/dag_bb1.png){#fig-dag_bb1 fig-align="center" width=30%}
-
-![Two connected nodes or descendant](images/figures/dag_bb2.png){#fig-dag_bb2 fig-align="center" width=30%}
-
-![Chain or pipe](images/figures/dag_bb3.png){#fig-dag_bb3 fig-align="center" width=75%}
-
-![Fork](images/figures/dag_bb4.png){#fig-dag_bb4 fig-align="center" width=75%}
-
-![Collider or inmorality](images/figures/dag_bb5.png){#fig-dag_bb5 fig-align="center" width=75%}
-
-DAG's fundamental building blocks.
-:::
-
-<!-- 4. A motivating example -->
-Given the heuristic nature of DAGs, a motivating example can help illustrate the use of the five fundamental building blocks to construct a system's causal structure. This example can also help to clarify some additional conventions for drawing DAGs.
-
-Consider a research problem where the causal effect of a variable $T$ on an outcome $Y$ needs to be investigated. Additionally, the problem suggests that a variable $X$ potentially influences both $T$ and $Y$. Such scenarios are not hard to imagine. For instance, $T$ might represent different treatments that could affect the recovery from cancer $Y$, while $X$ could denote the patient's age. Similarly, in the context of a DCJ study like the one described by @Boonen_et_al_2020, $T$ could represent the duration of a child's cochlear implant use, which might influence the child's overall speech quality $Y$, with $X$ indicating the child's hearing status. Note that these descriptions do not specify the type of data or the functional forms of the variables, highlighting the heuristic nature of DAGs. [(not a bad example, but I prefer one using writing skills)]{style="color:blue;"}
-
-<!-- 5. DAG for the motivating example -->
-@fig-example presents two graphs illustrating the plausible causal structure of the motivating example. @fig-dag_example1 shows the *simplified* DAG. In this graph, the variables of interest or *endogenous* variables $V=\{T,X,Y\}$ are depicted as solid black circles, indicating that they are observed variables. The arrows in the graph reflect the expected direction of causal influences among the variables. In contrast, @fig-dag_example2 depicts the *magnified* version of the DAG. This graph includes, in addition to the endogenous variables, the *exogenous* variables $E=\{e_{T},e_{X},e_{Y}\}$. These exogenous variables are commonly referred to as *disturbances* or *errors*, because they represent factors not explicitly modeled. They are depicted as open circles, indicating their unobserved nature. These exogenous variables are often omitted for simplicity, resulting in the simplified DAG in @fig-dag_example1. However, including them in the graph can be advantageous in certain scenarios, as they can help to highlight potential issues related to conditioning and confounding [@Cinelli_et_al_2020]. These concepts are introduced in the next section.
-
-<!-- 6. But where are the building blocks? -->
 <!-- commands for d-separation -->
 \newcommand{\dsep}{\perp\!\!\!\perp}
 \newcommand{\ndsep}{\not\!\perp\!\!\!\perp}
 
-Furthermore, a detailed examination of both figures reveals the presence of at least four of the five fundamental building blocks. @fig-dag_example1 displays multiple descendants, evident in pairwise relations such as $X \rightarrow T$, $X \rightarrow Y$, and $T \rightarrow Y$. It also illustrates a fork with $X \rightarrow \{T,Y\}$. Similarly, @fig-dag_example2 features multiple two-unconnected nodes, evident in the pairwise relations $\{e_{T} \dsep e_{X}\}$, $\{e_{T} \dsep e_{Y}\}$, and $\{e_{X} \dsep e_{Y}\}$, as well as colliders such as $\{X,e_{T}\} \rightarrow T$ and $\{X,T,e_{Y}\} \rightarrow Y$. The symbol $\dsep$ denotes a concept know as *d-separation*, which roughly implies the independence of the variables. This concept is introduced in the next section.
 
-::: {#fig-example layout-ncol=2}
+::: {#fig-dags_scms layout="[ [1,1,1],[1,1,1],[1,1,1],[1,1,1],[1,1,1] ]"}
 
-![Simplied DAG](images/figures/dag_example1.png){#fig-dag_example1 fig-align="center" width=45%}
+![Two unconnected nodes](images/figures/sdag_bb1.png){#fig-sdag_bb1 fig-align="center" width=35%}
 
-![Magnified DAG](images/figures/dag_example2.png){#fig-dag_example2 fig-align="center" width=85%}
+![Two unconnected nodes](images/figures/mdag_bb1.png){#fig-mdag_bb1 fig-align="center" width=80%}
+
+::: {#fig-scm_bb1 fig-align="center"}
+$$
+\begin{aligned}
+  X & := f_{X}(e_{X}) \\
+  Y & := f_{Y}(e_{Y}) \\
+  e_{X} & \dsep e_{Y}
+\end{aligned}
+$$
+
+Two unconnected nodes
+:::
+
+![Two connected nodes or descendant](images/figures/sdag_bb2.png){#fig-sdag_bb2 fig-align="center" width=35%}
+
+![Two connected nodes or descendant](images/figures/mdag_bb2.png){#fig-mdag_bb2 fig-align="center" width=80%}
+
+::: {#fig-scm_bb2 fig-align="center"}
+$$
+\begin{aligned}
+  X & := f_{X}(e_{X}) \\
+  Y & := f_{Y}(X,e_{Y}) \\
+  e_{X} & \dsep e_{Y}
+\end{aligned}
+$$
+
+Two connected nodes or descendant
+:::
+
+![Chain or pipe](images/figures/sdag_bb3.png){#fig-sdag_bb3 fig-align="center" width=60%}
+
+![Chain or pipe](images/figures/mdag_bb3.png){#fig-mdag_bb3 fig-align="center" width=100%}
+
+::: {#fig-scm_bb3 fig-align="center"}
+$$
+\begin{aligned}
+  X & := f_{X}(e_{X}) \\
+  Z & := f_{Z}(X,e_{Z}) \\
+  Y & := f_{Y}(Z,e_{Y}) \\
+  e_{X} & \dsep e_{Y} \\
+  e_{X} & \dsep e_{Z} \\
+  e_{Z} & \dsep e_{Y}
+\end{aligned}
+$$
+
+Chain or pipe
+:::
+
+![Fork](images/figures/sdag_bb4.png){#fig-sdag_bb4 fig-align="center" width=60%}
+
+![Fork](images/figures/mdag_bb4.png){#fig-mdag_bb4 fig-align="center" width=100%}
+
+::: {#fig-scm_bb4 fig-align="center"}
+$$
+\begin{aligned}
+  X & := f_{X}(Z,e_{X}) \\
+  Z & := f_{Z}(e_{Z}) \\
+  Y & := f_{Y}(Z,e_{Y}) \\
+  e_{X} & \dsep e_{Y} \\
+  e_{X} & \dsep e_{Z} \\
+  e_{Z} & \dsep e_{Y}
+\end{aligned}
+$$
+
+Fork
+:::
+
+![Collider or inmorality](images/figures/sdag_bb5.png){#fig-sdag_bb5 fig-align="center" width=60%}
+
+![Collider or inmorality](images/figures/mdag_bb5.png){#fig-mdag_bb5 fig-align="center" width=100%}
+
+::: {#fig-scm_bb5 fig-align="center"}
+$$
+\begin{aligned}
+  X & := f_{X}(e_{X}) \\
+  Z & := f_{Z}(X,Y,e_{Z}) \\
+  Y & := f_{Y}(e_{Y}) \\
+  e_{X} & \dsep e_{Y} \\
+  e_{X} & \dsep e_{Z} \\
+  e_{Z} & \dsep e_{Y}
+\end{aligned}
+$$
+
+Collider or inmorality
+:::
+
+The five fundamental building blocks of DAGs with corresponding SCMs. **Note:** left column shows simplified DAGS, middle column show magnified DAGs, and right column shows the corresponding SCMs.
+:::
+
+<!-- 4. But what does the building blocks mean? -->
+A careful examination of the left and middle panels of @fig-dags_scms reveal what do the building blocks assume. Figures [-@fig-sdag_bb1] and [-@fig-mdag_bb1] depict two unconnected nodes, representing an scenario where variables $X$ and $Y$ are not causally related. Figures [-@fig-sdag_bb2] and [-@fig-mdag_bb2] show two connected nodes, illustrating a scenario where a parent node $X$ exerts a causal influence on a child node $Y$. Consequently, $Y$ is considered a *descendant* of $X$. Figures [-@fig-sdag_bb3] and [-@fig-mdag_bb3] depict a *chain* (or *pipe*), where $X$ influences $Z$, and $Z$ influences $Y$. In this configuration, $X$ is a parent node of $Z$, and $Z$ a parent node of $Y$. Furthermore, the DAG shows that $X$ is an *ancestor* of $Y$ and that the relationship between these variables is entirely *mediated* by $Z$. Figures [-@fig-sdag_bb4] and [-@fig-mdag_bb4] illustrate a *fork*, where variables $X$ and $Y$ are both influenced by $Z$. In this scenario $Z$ is a parent node of both $X$ and $Y$. Finally, figures [-@fig-sdag_bb5] and [-@fig-mdag_bb5] depict a *collider*, also known as *inmorality*, where variables $X$ and $Y$ are concurrent causes of $Z$. In this configuration, $X$ and $Y$ are not causally related to each other but both influence $Z$. 
+
+
+
+<!-- 4. The second advantage of DAGs is that there is no need for functional form -->
+<!-- The second key advantage of DAGs is their ability to represent causal relations in a nonparametric and fully interactive manner. This means that feasible causal analysis strategies usually do not require specifying the type of data or the nature of the functional dependence among variables. This generality allows modeling causality without assuming a specific functional form [@Morgan_et_al_2014]. -->
+
+
+
+<!-- 5. A motivating example -->
+Given the heuristic nature of DAGs, a motivating example can help illustrate the use of the five fundamental building blocks to construct a system's causal structure. This example can also help to clarify some additional conventions for drawing DAGs.
+
+Consider a research problem where the causal effect of a variable $T$ on an outcome $Y$ needs to be investigated. Additionally, the problem suggests that a variable $X$ potentially influences both $T$ and $Y$. Such scenarios are not hard to imagine. For instance, $T$ might represent different treatments that could affect the recovery from cancer $Y$, while $X$ could denote the patient's age. Similarly, in the context of a DCJ study like the one described by @Boonen_et_al_2020, $T$ could represent the duration of a child's cochlear implant use, which might influence the child's overall speech quality $Y$, with $X$ indicating the child's hearing status. [(not a bad example, but I prefer one using writing skills)]{style="color:blue;"}
+
+<!-- 6. DAG for the motivating example -->
+@fig-example presents two graphs illustrating the plausible causal structure of the motivating example. @fig-sdag_example1 shows the *simplified* graph, while @fig-mdag_example1 depicts the *magnified* graph of the DAG. A detailed examination of both figures reveals the presence of at least four of the five fundamental building blocks. @fig-sdag_example1 displays multiple descendants, evident in pairwise relations such as $X \rightarrow T$, $X \rightarrow Y$, and $T \rightarrow Y$. It also illustrates a fork with $X \rightarrow \{T,Y\}$. Similarly, @fig-mdag_example1 features multiple two-unconnected nodes, evident in the pairwise relations $\{e_{T} \dsep e_{X}\}$, $\{e_{T} \dsep e_{Y}\}$, and $\{e_{X} \dsep e_{Y}\}$, as well as colliders such as $\{X,e_{T}\} \rightarrow T$ and $\{X,T,e_{Y}\} \rightarrow Y$. The symbol $\dsep$ denotes a concept know as *d-separation*, which roughly implies the independence of the variables. This concept is introduced in the next section.
+
+::: {#fig-example layout="[ [1,1,1],[1,1,1],[1,1,1] ]"}
+
+![Simplied DAG](images/figures/sdag_example1.png){#fig-sdag_example1 fig-align="center" width=35%}
+
+![Magnified DAG](images/figures/mdag_example1.png){#fig-mdag_example1 fig-align="center" width=65%}
+
+::: {#fig-scm_example1 fig-align="center"}
+$$
+\begin{aligned}
+  X & := f_{X}(e_{X}) \\
+  Z & := f_{Z}(X,Y,e_{Z}) \\
+  Y & := f_{Y}(e_{Y}) \\
+  e_{X} & \dsep e_{Y} \\
+  e_{X} & \dsep e_{Z} \\
+  e_{Z} & \dsep e_{Y}
+\end{aligned}
+$$
+
+Collider or inmorality
+:::
 
 DAGs for a plausible causal structure in a system.
 :::
 
 
+
 ## The flow of association and causation in graphs {#sec-framework-flow}
 
+<!-- Although there are several benefits  -->
 
 <!-- 2. What does a DAG imply? -->
 <!-- Structural Causal Model (SCM) -->
 <!-- Causal models are mathematical models representing causal relationships within an individual system or population. They facilitate inferences about causal relationships from statistical data. They can teach us a good deal about the epistemology of causation, and about the relationship between causation and probability. They have also been applied to topics of interest to philosophers, such as the logic of counterfactuals, decision theory, and the analysis of actual causation. -->
 
 <!-- (Structural Causal Model (SCM)) A structural causal model is a tuple of the following sets: -->
-<!-- 1. A set ofendogenous variables 푉 2. A set ofexogenous variables 푈 3. A set of functions 푓, one to generate each endogenous variable as a function ofother variables Neal -->
+<!-- 1. A set of endogenous variables 푉 2. A set of exogenous variables 푈 3. A set of functions 푓, one to generate each endogenous variable as a function of other variables Neal -->
 
 <!-- \begin{aligned} -->
 <!--     Y & := \; f_{Y}( X,Z,e_{Y} ) \\ -->
@@ -247,7 +355,7 @@ DAGs for a plausible causal structure in a system.
 <!--     e_{X} & \dsep e_{Z} \\ -->
 <!--     e_{X} & \dsep e_{Y} \\ -->
 <!--     e_{Z} & \dsep e_{Y} -->
-<!-- \end{aligned}  -->
+<!-- \end{aligned} -->
 
 <!-- these are non-parametrical structural equations -->
 
