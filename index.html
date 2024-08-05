@@ -10,7 +10,7 @@
 <meta name="author" content="Tine van van Daal">
 <meta name="author" content="Sven De De Maeyer">
 <meta name="author" content="Steven Gillis">
-<meta name="dcterms.date" content="2024-08-02">
+<meta name="dcterms.date" content="2024-08-05">
 <meta name="keywords" content="causal inference, probability, Thurstone, comparative judgement, directed acyclic graph, structural causal models, statistical modeling">
 
 <title>Causes and effects in Dichotomous Comparative Judgments: an information-theoretical system of plausible mechanism</title>
@@ -107,10 +107,10 @@ window.Quarto = {
 <meta name="citation_author" content="Tine van van Daal">
 <meta name="citation_author" content="Sven De De Maeyer">
 <meta name="citation_author" content="Steven Gillis">
-<meta name="citation_publication_date" content="2024-08-02">
-<meta name="citation_cover_date" content="2024-08-02">
+<meta name="citation_publication_date" content="2024-08-05">
+<meta name="citation_cover_date" content="2024-08-05">
 <meta name="citation_year" content="2024">
-<meta name="citation_online_date" content="2024-08-02">
+<meta name="citation_online_date" content="2024-08-05">
 <meta name="citation_language" content="en">
 <meta name="citation_reference" content="citation_title=Correlation and causation;,citation_author=S. Wright;,citation_publication_date=1927;,citation_cover_date=1927;,citation_year=1927;,citation_fulltext_html_url=https://books.google.co.ao/books/about/Journal_of_Agricultural_Research.html?hl=pt-PT&amp;amp;amp;id=lNNdIV_qpwIC;,citation_issue=7;,citation_volume=20;,citation_journal_title=Correlation and causation;">
 <meta name="citation_reference" content="citation_title=On the application of probability theory to agricultural experiments. Essay on principles. Section 9;,citation_author=J. Neyman;,citation_publication_date=1923;,citation_cover_date=1923;,citation_year=1923;,citation_fulltext_html_url=http://www.jstor.org/stable/2245382;,citation_issue=4;,citation_volume=5;,citation_journal_title=Statistical Science;,citation_publisher=Institute of Mathematical Statistics;">
@@ -403,7 +403,7 @@ window.Quarto = {
                 <div>
             <div class="quarto-title-meta-heading">Published</div>
             <div class="quarto-title-meta-contents">
-              <p class="date">August 2, 2024</p>
+              <p class="date">August 5, 2024</p>
             </div>
           </div>
           
@@ -510,17 +510,19 @@ window.Quarto = {
 <!-- 1. Graph theory and the use of graphs -->
 <p>Graph theory is a branch of mathematics focused on the study of graphs. Graphs are mathematical structures modeling pairwise relations between objects. They can represent physical relations, such as electrical circuits and roadways, and less tangible structures, such as ecosystems and sociological relations. Graphs have proven useful in various fields, including computer science, operations research, and the natural and social sciences <span class="citation" data-cites="Gross_et_al_2018">(<a href="#ref-Gross_et_al_2018" role="doc-biblioref">Gross, Yellen, and Anderson 2018</a>)</span>.</p>
 <!-- 2. What does the structural approach uses?, and what are DAGs? -->
-<p>In statistics, one application incorporating concepts from graph theory is causal inference. Specifically, the structural approach to causal inference uses directed acyclic graphs (DAG) and its associated structural causal models (SCM) to provide a graphical and formal representation of the causal structure of a system <span class="citation" data-cites="Neal_2020">(<a href="#ref-Neal_2020" role="doc-biblioref">Neal 2020</a>)</span>. In this context, a <em>graph</em> denotes a collection of nodes connected by edges, where nodes represent random variables. The term <em>directed</em> indicates that the edges of the graph extend from one node to another, with arrows showing the direction of causal influence. Moreover, the term <em>acyclic</em> indicates the causal influences do not form a loop, meaning the influences do not cycle back on themselves <span class="citation" data-cites="McElreath_2020">(<a href="#ref-McElreath_2020" role="doc-biblioref">McElreath 2020</a>)</span>.</p>
-<!-- 3. The first advantage of DAGs is that you need only five building blocks -->
-<!-- 3.1 how DAG can be depicted? Simplified? -->
-<p>One key advantage of DAGs is that they can represent various causal structures using only five fundamental building blocks, regardless of complexity. The left panels of <a href="#fig-dags_scms" class="quarto-xref">Figure&nbsp;1</a> illustrates the <em>simplified</em> graphs of these block. In these graphs, the variables of interest or <em>endogenous</em> variables, <span class="math inline">\(V=\{X,Z,Y\}\)</span>, are depicted as solid black circles, indicating that they are observed variables. The arrows in the graph reflect the expected direction of causal influences among the variables.</p>
-<!-- 3.2 how DAG can be depicted? Magnified? -->
-<p>In contrast, the middle panels of <a href="#fig-dags_scms" class="quarto-xref">Figure&nbsp;1</a> depicts the <em>magnified</em> graphs of these building blocks. These graph include, in addition to the endogenous variables, the <em>exogenous</em> variables <span class="math inline">\(E=\{e_{X},e_{Z},e_{Y}\}\)</span>. These exogenous variables, commonly referred to as <em>disturbances</em> or <em>errors</em>, represent factors not explicitly modeled. Moreover, they are depicted as open circles, indicating their unobserved nature. These exogenous variables are often omitted for simplicity, resulting in the simplified DAGs shown in the left panels. However, including them in the graph can be advantageous in certain scenarios, as they can help to highlight potential issues related to conditioning and confounding <span class="citation" data-cites="Cinelli_et_al_2020">(<a href="#ref-Cinelli_et_al_2020" role="doc-biblioref">Cinelli, Forney, and Pearl 2020</a>)</span>, concepts introduced in the next section.</p>
+<p>In statistics, one application incorporating concepts from graph theory is causal inference. Specifically, the structural approach to causal inference uses directed acyclic graphs (DAG), and their associated structural causal models (SCM), to provide a graphical and formal representation of the causal structure of a system <span class="citation" data-cites="Neal_2020">(<a href="#ref-Neal_2020" role="doc-biblioref">Neal 2020</a>)</span>. In this context, a <em>graph</em> denotes a collection of nodes connected by edges, where nodes represent random variables. The term <em>directed</em> indicates the edges of the graph extend from one node to another, with arrows showing the direction of causal influence. Moreover, the term <em>acyclic</em> indicates the causal influences do not form a loop, meaning the influences do not cycle back on themselves <span class="citation" data-cites="McElreath_2020">(<a href="#ref-McElreath_2020" role="doc-biblioref">McElreath 2020</a>)</span>.</p>
+<!-- 3. how DAGs can be depicted? -->
+<!-- 3.1 the simplified DAG -->
+<p>Regardless of complexity, DAGs can represent various causal structures using only five fundamental building blocks <span class="citation" data-cites="Neal_2020 McElreath_2020">(<a href="#ref-Neal_2020" role="doc-biblioref">Neal 2020</a>; <a href="#ref-McElreath_2020" role="doc-biblioref">McElreath 2020</a>)</span>. The left panels of <a href="#fig-dags_scms" class="quarto-xref">Figure&nbsp;1</a> illustrate these building blocks using the <em>standard</em> representation <span class="citation" data-cites="Morgan_et_al_2014">(<a href="#ref-Morgan_et_al_2014" role="doc-biblioref">Morgan and Winship 2014</a>)</span>. In these graphs, the variables of interest, or <em>endogenous</em> variables <span class="math inline">\(V=\{X,Z,Y\}\)</span>, are depicted as solid black circles to signify that they are observed random variables. The arrows in the graphs reflect the expected direction of causal influences among these variables.</p>
+<!-- 3.2 the magnified DAG -->
+<p>In contrast, the middle panels of <a href="#fig-dags_scms" class="quarto-xref">Figure&nbsp;1</a> present the building blocks using the <em>magnified</em> representation. These graphs incorporate <em>exogenous</em> variables <span class="math inline">\(E=\{e_{X},e_{Z},e_{Y}\}\)</span>, depicted as open circles to signify their unobserved nature. Exogenous variables represent <em>errors</em> or <em>disturbances</em> arising from omitted factors that the investigator chooses not to model explicitly <span class="citation" data-cites="Pearl_2009">(<a href="#ref-Pearl_2009" role="doc-biblioref">Pearl 2009, 27, 68</a>)</span>. Thus, they can be viewed as the ‘idiosyncratic’ causes of each variable. Although these variables are often omitted for simplicity, as illustrated in the left panels, including them in the graphs can be beneficial, as their presence can reveal potential issues related to conditioning and confounding <span class="citation" data-cites="Cinelli_et_al_2020">(<a href="#ref-Cinelli_et_al_2020" role="doc-biblioref">Cinelli, Forney, and Pearl 2020</a>)</span>, concepts explored in the next section.</p>
+<!-- 3.3 the SCM -->
+<!-- Lastly, the right panels of @fig-dags_scms present the building blocks using the SCM representation. SCMs are  -->
 <!-- commands for d-separation -->
 <div id="fig-dags_scms" class="quarto-layout-panel">
 <figure class="quarto-float quarto-float-fig figure">
 <figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-fig" id="fig-dags_scms-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Figure&nbsp;1: The five fundamental building blocks of DAGs with corresponding SCMs. <strong>Note:</strong> left column shows simplified DAGS, middle column show magnified DAGs, and right column shows the corresponding SCMs.
+Figure&nbsp;1: The five fundamental building blocks of DAGs with corresponding SCMs. <strong>Note:</strong> left panels show the standard representation of DAGs, middle panels show the magnified representation of DAGs, and the right panels show their corresponding SCMs.
 </figcaption>
 <div aria-describedby="fig-dags_scms-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <div class="quarto-layout-row">
@@ -755,10 +757,10 @@ Figure&nbsp;1: The five fundamental building blocks of DAGs with corresponding S
 </div>
 </figure>
 </div>
-<!-- 4. But what does the building blocks mean? -->
-<p>A careful examination of the left and middle panels of <a href="#fig-dags_scms" class="quarto-xref">Figure&nbsp;1</a> reveal what do the building blocks assume. Figures <a href="#fig-sdag_bb1" class="quarto-xref">1 (a)</a> and <a href="#fig-mdag_bb1" class="quarto-xref">1 (b)</a> depict two unconnected nodes, representing an scenario where variables <span class="math inline">\(X\)</span> and <span class="math inline">\(Y\)</span> are not causally related. Figures <a href="#fig-sdag_bb2" class="quarto-xref">1 (d)</a> and <a href="#fig-mdag_bb2" class="quarto-xref">1 (e)</a> show two connected nodes, illustrating a scenario where a parent node <span class="math inline">\(X\)</span> exerts a causal influence on a child node <span class="math inline">\(Y\)</span>. Consequently, <span class="math inline">\(Y\)</span> is considered a <em>descendant</em> of <span class="math inline">\(X\)</span>. Figures <a href="#fig-sdag_bb3" class="quarto-xref">1 (g)</a> and <a href="#fig-mdag_bb3" class="quarto-xref">1 (h)</a> depict a <em>chain</em> (or <em>pipe</em>), where <span class="math inline">\(X\)</span> influences <span class="math inline">\(Z\)</span>, and <span class="math inline">\(Z\)</span> influences <span class="math inline">\(Y\)</span>. In this configuration, <span class="math inline">\(X\)</span> is a parent node of <span class="math inline">\(Z\)</span>, and <span class="math inline">\(Z\)</span> a parent node of <span class="math inline">\(Y\)</span>. Furthermore, the DAG shows that <span class="math inline">\(X\)</span> is an <em>ancestor</em> of <span class="math inline">\(Y\)</span> and that the relationship between these variables is entirely <em>mediated</em> by <span class="math inline">\(Z\)</span>. Figures <a href="#fig-sdag_bb4" class="quarto-xref">1 (j)</a> and <a href="#fig-mdag_bb4" class="quarto-xref">1 (k)</a> illustrate a <em>fork</em>, where variables <span class="math inline">\(X\)</span> and <span class="math inline">\(Y\)</span> are both influenced by <span class="math inline">\(Z\)</span>. In this scenario <span class="math inline">\(Z\)</span> is a parent node of both <span class="math inline">\(X\)</span> and <span class="math inline">\(Y\)</span>. Finally, figures <a href="#fig-sdag_bb5" class="quarto-xref">1 (m)</a> and <a href="#fig-mdag_bb5" class="quarto-xref">1 (n)</a> depict a <em>collider</em>, also known as <em>inmorality</em>, where variables <span class="math inline">\(X\)</span> and <span class="math inline">\(Y\)</span> are concurrent causes of <span class="math inline">\(Z\)</span>. In this configuration, <span class="math inline">\(X\)</span> and <span class="math inline">\(Y\)</span> are not causally related to each other but both influence <span class="math inline">\(Z\)</span>.</p>
-<!-- 4. The second advantage of DAGs is that there is no need for functional form -->
-<!-- The second key advantage of DAGs is their ability to represent causal relations in a nonparametric and fully interactive manner. This means that feasible causal analysis strategies usually do not require specifying the type of data or the nature of the functional dependence among variables. This generality allows modeling causality without assuming a specific functional form [@Morgan_et_al_2014]. -->
+<!-- 4. What are the advantages of DAGs? -->
+<!-- DAGs can represent causal relations in a nonparametric and fully interactive manner. This means that feasible causal analysis strategies usually do not require specifying the type of data or the nature of the functional dependence among variables. This generality allows for modeling causality without assuming a specific functional form [@Morgan_et_al_2014].  -->
+<!-- 5. But what does the building blocks mean? -->
+<p>A careful examination of the left and middle panels of <a href="#fig-dags_scms" class="quarto-xref">Figure&nbsp;1</a> reveals the assumption inherent in these building blocks. Figures <a href="#fig-sdag_bb1" class="quarto-xref">1 (a)</a> and <a href="#fig-mdag_bb1" class="quarto-xref">1 (b)</a> depict two unconnected nodes, representing a scenario where variables <span class="math inline">\(X\)</span> and <span class="math inline">\(Y\)</span> are not causally related. Figures <a href="#fig-sdag_bb2" class="quarto-xref">1 (d)</a> and <a href="#fig-mdag_bb2" class="quarto-xref">1 (e)</a> show two connected nodes, illustrating a scenario where a parent node <span class="math inline">\(X\)</span> exerts a causal influence on a child node <span class="math inline">\(Y\)</span>. Consequently, <span class="math inline">\(Y\)</span> is considered a <em>descendant</em> of <span class="math inline">\(X\)</span>. Figures <a href="#fig-sdag_bb3" class="quarto-xref">1 (g)</a> and <a href="#fig-mdag_bb3" class="quarto-xref">1 (h)</a> depict a <em>chain</em> (or <em>pipe</em>), where <span class="math inline">\(X\)</span> influences <span class="math inline">\(Z\)</span>, and <span class="math inline">\(Z\)</span> influences <span class="math inline">\(Y\)</span>. In this configuration, <span class="math inline">\(X\)</span> is a parent node of <span class="math inline">\(Z\)</span>, and <span class="math inline">\(Z\)</span> is a parent node of <span class="math inline">\(Y\)</span>. Furthermore, the DAG shows that <span class="math inline">\(X\)</span> is an <em>ancestor</em> of <span class="math inline">\(Y\)</span> and that <span class="math inline">\(Z\)</span> completely <em>mediates</em> the relationship between these variables. Figures <a href="#fig-sdag_bb4" class="quarto-xref">1 (j)</a> and <a href="#fig-mdag_bb4" class="quarto-xref">1 (k)</a> illustrate a <em>fork</em>, where variables <span class="math inline">\(X\)</span> and <span class="math inline">\(Y\)</span> are both influenced by <span class="math inline">\(Z\)</span>. In this scenario, <span class="math inline">\(Z\)</span> is a parent node of <span class="math inline">\(X\)</span> and <span class="math inline">\(Y\)</span>. Finally, Figures <a href="#fig-sdag_bb5" class="quarto-xref">1 (m)</a> and <a href="#fig-mdag_bb5" class="quarto-xref">1 (n)</a> depict a <em>collider</em>, also known as <em>inmorality</em>, where variables <span class="math inline">\(X\)</span> and <span class="math inline">\(Y\)</span> are concurrent causes of <span class="math inline">\(Z\)</span>. In this configuration, <span class="math inline">\(X\)</span> and <span class="math inline">\(Y\)</span> are not causally related to each other but both influence <span class="math inline">\(Z\)</span>.</p>
 <!-- 5. A motivating example -->
 <p>Given the heuristic nature of DAGs, a motivating example can help illustrate the use of the five fundamental building blocks to construct a system’s causal structure. This example can also help to clarify some additional conventions for drawing DAGs.</p>
 <p>Consider a research problem where the causal effect of a variable <span class="math inline">\(T\)</span> on an outcome <span class="math inline">\(Y\)</span> needs to be investigated. Additionally, the problem suggests that a variable <span class="math inline">\(X\)</span> potentially influences both <span class="math inline">\(T\)</span> and <span class="math inline">\(Y\)</span>. Such scenarios are not hard to imagine. For instance, <span class="math inline">\(T\)</span> might represent different treatments that could affect the recovery from cancer <span class="math inline">\(Y\)</span>, while <span class="math inline">\(X\)</span> could denote the patient’s age. Similarly, in the context of a DCJ study like the one described by <span class="citation" data-cites="Boonen_et_al_2020">Boonen, Kloots, and Gillis (<a href="#ref-Boonen_et_al_2020" role="doc-biblioref">2020</a>)</span>, <span class="math inline">\(T\)</span> could represent the duration of a child’s cochlear implant use, which might influence the child’s overall speech quality <span class="math inline">\(Y\)</span>, with <span class="math inline">\(X\)</span> indicating the child’s hearing status. <span style="color:blue;">(not a bad example, but I prefer one using writing skills)</span></p>
@@ -1196,7 +1198,7 @@ Verhavert, S., R. Bouwer, V Donche, and S. De Maeyer. 2019. <span>“A Meta-Anal
   title = {Causes and Effects in {Dichotomous} {Comparative}
     {Judgments:} An Information-Theoretical System of Plausible
     Mechanism},
-  date = {2024-08-02},
+  date = {2024-08-05},
   langid = {en},
   abstract = {Dichotomous Comparative Judgment (DCJ) requires judges to
     compare pairs of stimuli to determine which one exhibits a higher
@@ -1225,7 +1227,7 @@ Verhavert, S., R. Bouwer, V Donche, and S. De Maeyer. 2019. <span>“A Meta-Anal
 Rivera Espejo, Jose Manuel, Tine van van Daal, Sven De De Maeyer, and
 Steven Gillis. 2024. <span>“Causes and Effects in Dichotomous
 Comparative Judgments: An Information-Theoretical System of Plausible
-Mechanism.”</span> August 2, 2024.
+Mechanism.”</span> August 5, 2024.
 </div></div></section></div></main>
 <!-- /main column -->
 <script id="quarto-html-after-body" type="application/javascript">
@@ -1649,7 +1651,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 });
 </script>
 </div> <!-- /content -->
-<script>var lightboxQuarto = GLightbox({"loop":false,"descPosition":"bottom","closeEffect":"zoom","selector":".lightbox","openEffect":"zoom"});
+<script>var lightboxQuarto = GLightbox({"loop":false,"selector":".lightbox","descPosition":"bottom","openEffect":"zoom","closeEffect":"zoom"});
 (function() {
   let previousOnload = window.onload;
   window.onload = () => {

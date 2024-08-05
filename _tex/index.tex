@@ -376,38 +376,39 @@ social sciences \citep{Gross_et_al_2018}.
 
 In statistics, one application incorporating concepts from graph theory
 is causal inference. Specifically, the structural approach to causal
-inference uses directed acyclic graphs (DAG) and its associated
-structural causal models (SCM) to provide a graphical and formal
+inference uses directed acyclic graphs (DAG), and their associated
+structural causal models (SCM), to provide a graphical and formal
 representation of the causal structure of a system \citep{Neal_2020}. In
 this context, a \emph{graph} denotes a collection of nodes connected by
 edges, where nodes represent random variables. The term \emph{directed}
-indicates that the edges of the graph extend from one node to another,
-with arrows showing the direction of causal influence. Moreover, the
-term \emph{acyclic} indicates the causal influences do not form a loop,
+indicates the edges of the graph extend from one node to another, with
+arrows showing the direction of causal influence. Moreover, the term
+\emph{acyclic} indicates the causal influences do not form a loop,
 meaning the influences do not cycle back on themselves
 \citep{McElreath_2020}.
 
-One key advantage of DAGs is that they can represent various causal
-structures using only five fundamental building blocks, regardless of
-complexity. The left panels of Figure~\ref{fig-dags_scms} illustrates
-the \emph{simplified} graphs of these block. In these graphs, the
-variables of interest or \emph{endogenous} variables, \(V=\{X,Z,Y\}\),
-are depicted as solid black circles, indicating that they are observed
-variables. The arrows in the graph reflect the expected direction of
-causal influences among the variables.
+Regardless of complexity, DAGs can represent various causal structures
+using only five fundamental building blocks
+\citep{Neal_2020, McElreath_2020}. The left panels of
+Figure~\ref{fig-dags_scms} illustrate these building blocks using the
+\emph{standard} representation \citep{Morgan_et_al_2014}. In these
+graphs, the variables of interest, or \emph{endogenous} variables
+\(V=\{X,Z,Y\}\), are depicted as solid black circles to signify that
+they are observed random variables. The arrows in the graphs reflect the
+expected direction of causal influences among these variables.
 
-In contrast, the middle panels of Figure~\ref{fig-dags_scms} depicts the
-\emph{magnified} graphs of these building blocks. These graph include,
-in addition to the endogenous variables, the \emph{exogenous} variables
-\(E=\{e_{X},e_{Z},e_{Y}\}\). These exogenous variables, commonly
-referred to as \emph{disturbances} or \emph{errors}, represent factors
-not explicitly modeled. Moreover, they are depicted as open circles,
-indicating their unobserved nature. These exogenous variables are often
-omitted for simplicity, resulting in the simplified DAGs shown in the
-left panels. However, including them in the graph can be advantageous in
-certain scenarios, as they can help to highlight potential issues
-related to conditioning and confounding \citep{Cinelli_et_al_2020},
-concepts introduced in the next section.
+In contrast, the middle panels of Figure~\ref{fig-dags_scms} present the
+building blocks using the \emph{magnified} representation. These graphs
+incorporate \emph{exogenous} variables \(E=\{e_{X},e_{Z},e_{Y}\}\),
+depicted as open circles to signify their unobserved nature. Exogenous
+variables represent \emph{errors} or \emph{disturbances} arising from
+omitted factors that the investigator chooses not to model explicitly
+\citep[27,68]{Pearl_2009}. Thus, they can be viewed as the
+`idiosyncratic' causes of each variable. Although these variables are
+often omitted for simplicity, as illustrated in the left panels,
+including them in the graphs can be beneficial, as their presence can
+reveal potential issues related to conditioning and confounding
+\citep{Cinelli_et_al_2020}, concepts explored in the next section.
 
 \newcommand{\dsep}{\perp\!\!\!\perp}
 \newcommand{\ndsep}{\not\!\perp\!\!\!\perp}
@@ -634,29 +635,30 @@ concepts introduced in the next section.
 \end{minipage}%
 
 \caption{\label{fig-dags_scms}The five fundamental building blocks of
-DAGs with corresponding SCMs. \textbf{Note:} left column shows
-simplified DAGS, middle column show magnified DAGs, and right column
-shows the corresponding SCMs.}
+DAGs with corresponding SCMs. \textbf{Note:} left panels show the
+standard representation of DAGs, middle panels show the magnified
+representation of DAGs, and the right panels show their corresponding
+SCMs.}
 
 \end{figure}%
 
 A careful examination of the left and middle panels of
-Figure~\ref{fig-dags_scms} reveal what do the building blocks assume.
-Figures \ref{fig-sdag_bb1} and \ref{fig-mdag_bb1} depict two unconnected
-nodes, representing an scenario where variables \(X\) and \(Y\) are not
-causally related. Figures \ref{fig-sdag_bb2} and \ref{fig-mdag_bb2} show
-two connected nodes, illustrating a scenario where a parent node \(X\)
-exerts a causal influence on a child node \(Y\). Consequently, \(Y\) is
-considered a \emph{descendant} of \(X\). Figures \ref{fig-sdag_bb3} and
-\ref{fig-mdag_bb3} depict a \emph{chain} (or \emph{pipe}), where \(X\)
-influences \(Z\), and \(Z\) influences \(Y\). In this configuration,
-\(X\) is a parent node of \(Z\), and \(Z\) a parent node of \(Y\).
-Furthermore, the DAG shows that \(X\) is an \emph{ancestor} of \(Y\) and
-that the relationship between these variables is entirely
-\emph{mediated} by \(Z\). Figures \ref{fig-sdag_bb4} and
+Figure~\ref{fig-dags_scms} reveals the assumption inherent in these
+building blocks. Figures \ref{fig-sdag_bb1} and \ref{fig-mdag_bb1}
+depict two unconnected nodes, representing a scenario where variables
+\(X\) and \(Y\) are not causally related. Figures \ref{fig-sdag_bb2} and
+\ref{fig-mdag_bb2} show two connected nodes, illustrating a scenario
+where a parent node \(X\) exerts a causal influence on a child node
+\(Y\). Consequently, \(Y\) is considered a \emph{descendant} of \(X\).
+Figures \ref{fig-sdag_bb3} and \ref{fig-mdag_bb3} depict a \emph{chain}
+(or \emph{pipe}), where \(X\) influences \(Z\), and \(Z\) influences
+\(Y\). In this configuration, \(X\) is a parent node of \(Z\), and \(Z\)
+is a parent node of \(Y\). Furthermore, the DAG shows that \(X\) is an
+\emph{ancestor} of \(Y\) and that \(Z\) completely \emph{mediates} the
+relationship between these variables. Figures \ref{fig-sdag_bb4} and
 \ref{fig-mdag_bb4} illustrate a \emph{fork}, where variables \(X\) and
-\(Y\) are both influenced by \(Z\). In this scenario \(Z\) is a parent
-node of both \(X\) and \(Y\). Finally, figures \ref{fig-sdag_bb5} and
+\(Y\) are both influenced by \(Z\). In this scenario, \(Z\) is a parent
+node of \(X\) and \(Y\). Finally, Figures \ref{fig-sdag_bb5} and
 \ref{fig-mdag_bb5} depict a \emph{collider}, also known as
 \emph{inmorality}, where variables \(X\) and \(Y\) are concurrent causes
 of \(Z\). In this configuration, \(X\) and \(Y\) are not causally

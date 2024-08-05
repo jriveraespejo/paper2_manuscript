@@ -199,10 +199,10 @@ sciences</institution>
 <corresp id="cor-1">JoseManuel.RiveraEspejo@uantwerpen.be</corresp>
 </author-notes>
 
-<pub-date date-type="pub" publication-format="electronic" iso-8601-date="2024-08-02">
+<pub-date date-type="pub" publication-format="electronic" iso-8601-date="2024-08-05">
 <year>2024</year>
 <month>8</month>
-<day>2</day>
+<day>5</day>
 </pub-date>
 
 
@@ -520,55 +520,63 @@ the University of Antwerp (BOF).</funding-statement>
     Yellen, and Anderson 2018</xref>).</p>
     <p>In statistics, one application incorporating concepts from graph
     theory is causal inference. Specifically, the structural approach to
-    causal inference uses directed acyclic graphs (DAG) and its
-    associated structural causal models (SCM) to provide a graphical and
-    formal representation of the causal structure of a system
+    causal inference uses directed acyclic graphs (DAG), and their
+    associated structural causal models (SCM), to provide a graphical
+    and formal representation of the causal structure of a system
     (<xref alt="Neal 2020" rid="ref-Neal_2020" ref-type="bibr">Neal
     2020</xref>). In this context, a <italic>graph</italic> denotes a
     collection of nodes connected by edges, where nodes represent random
-    variables. The term <italic>directed</italic> indicates that the
-    edges of the graph extend from one node to another, with arrows
-    showing the direction of causal influence. Moreover, the term
+    variables. The term <italic>directed</italic> indicates the edges of
+    the graph extend from one node to another, with arrows showing the
+    direction of causal influence. Moreover, the term
     <italic>acyclic</italic> indicates the causal influences do not form
     a loop, meaning the influences do not cycle back on themselves
     (<xref alt="McElreath 2020" rid="ref-McElreath_2020" ref-type="bibr">McElreath
     2020</xref>).</p>
-    <p>One key advantage of DAGs is that they can represent various
-    causal structures using only five fundamental building blocks,
-    regardless of complexity. The left panels of
-    <xref alt="Figure 1" rid="fig-dags_scms">Figure 1</xref> illustrates
-    the <italic>simplified</italic> graphs of these block. In these
-    graphs, the variables of interest or <italic>endogenous</italic>
-    variables, <inline-formula><alternatives>
+    <p>Regardless of complexity, DAGs can represent various causal
+    structures using only five fundamental building blocks
+    (<xref alt="Neal 2020" rid="ref-Neal_2020" ref-type="bibr">Neal
+    2020</xref>;
+    <xref alt="McElreath 2020" rid="ref-McElreath_2020" ref-type="bibr">McElreath
+    2020</xref>). The left panels of
+    <xref alt="Figure 1" rid="fig-dags_scms">Figure 1</xref> illustrate
+    these building blocks using the <italic>standard</italic>
+    representation
+    (<xref alt="Morgan and Winship 2014" rid="ref-Morgan_et_al_2014" ref-type="bibr">Morgan
+    and Winship 2014</xref>). In these graphs, the variables of
+    interest, or <italic>endogenous</italic> variables
+    <inline-formula><alternatives>
     <tex-math><![CDATA[V=\{X,Z,Y\}]]></tex-math>
     <mml:math display="inline" xmlns:mml="http://www.w3.org/1998/Math/MathML"><mml:mrow><mml:mi>V</mml:mi><mml:mo>=</mml:mo><mml:mo stretchy="false" form="prefix">{</mml:mo><mml:mi>X</mml:mi><mml:mo>,</mml:mo><mml:mi>Z</mml:mi><mml:mo>,</mml:mo><mml:mi>Y</mml:mi><mml:mo stretchy="false" form="postfix">}</mml:mo></mml:mrow></mml:math></alternatives></inline-formula>,
-    are depicted as solid black circles, indicating that they are
-    observed variables. The arrows in the graph reflect the expected
-    direction of causal influences among the variables.</p>
+    are depicted as solid black circles to signify that they are
+    observed random variables. The arrows in the graphs reflect the
+    expected direction of causal influences among these variables.</p>
     <p>In contrast, the middle panels of
-    <xref alt="Figure 1" rid="fig-dags_scms">Figure 1</xref> depicts the
-    <italic>magnified</italic> graphs of these building blocks. These
-    graph include, in addition to the endogenous variables, the
-    <italic>exogenous</italic> variables <inline-formula><alternatives>
+    <xref alt="Figure 1" rid="fig-dags_scms">Figure 1</xref> present the
+    building blocks using the <italic>magnified</italic> representation.
+    These graphs incorporate <italic>exogenous</italic> variables
+    <inline-formula><alternatives>
     <tex-math><![CDATA[E=\{e_{X},e_{Z},e_{Y}\}]]></tex-math>
-    <mml:math display="inline" xmlns:mml="http://www.w3.org/1998/Math/MathML"><mml:mrow><mml:mi>E</mml:mi><mml:mo>=</mml:mo><mml:mo stretchy="false" form="prefix">{</mml:mo><mml:msub><mml:mi>e</mml:mi><mml:mi>X</mml:mi></mml:msub><mml:mo>,</mml:mo><mml:msub><mml:mi>e</mml:mi><mml:mi>Z</mml:mi></mml:msub><mml:mo>,</mml:mo><mml:msub><mml:mi>e</mml:mi><mml:mi>Y</mml:mi></mml:msub><mml:mo stretchy="false" form="postfix">}</mml:mo></mml:mrow></mml:math></alternatives></inline-formula>.
-    These exogenous variables, commonly referred to as
-    <italic>disturbances</italic> or <italic>errors</italic>, represent
-    factors not explicitly modeled. Moreover, they are depicted as open
-    circles, indicating their unobserved nature. These exogenous
-    variables are often omitted for simplicity, resulting in the
-    simplified DAGs shown in the left panels. However, including them in
-    the graph can be advantageous in certain scenarios, as they can help
-    to highlight potential issues related to conditioning and
-    confounding
+    <mml:math display="inline" xmlns:mml="http://www.w3.org/1998/Math/MathML"><mml:mrow><mml:mi>E</mml:mi><mml:mo>=</mml:mo><mml:mo stretchy="false" form="prefix">{</mml:mo><mml:msub><mml:mi>e</mml:mi><mml:mi>X</mml:mi></mml:msub><mml:mo>,</mml:mo><mml:msub><mml:mi>e</mml:mi><mml:mi>Z</mml:mi></mml:msub><mml:mo>,</mml:mo><mml:msub><mml:mi>e</mml:mi><mml:mi>Y</mml:mi></mml:msub><mml:mo stretchy="false" form="postfix">}</mml:mo></mml:mrow></mml:math></alternatives></inline-formula>,
+    depicted as open circles to signify their unobserved nature.
+    Exogenous variables represent <italic>errors</italic> or
+    <italic>disturbances</italic> arising from omitted factors that the
+    investigator chooses not to model explicitly
+    (<xref alt="Pearl 2009, 27, 68" rid="ref-Pearl_2009" ref-type="bibr">Pearl
+    2009, 27, 68</xref>). Thus, they can be viewed as the
+    ‘idiosyncratic’ causes of each variable. Although these variables
+    are often omitted for simplicity, as illustrated in the left panels,
+    including them in the graphs can be beneficial, as their presence
+    can reveal potential issues related to conditioning and confounding
     (<xref alt="Cinelli, Forney, and Pearl 2020" rid="ref-Cinelli_et_al_2020" ref-type="bibr">Cinelli,
-    Forney, and Pearl 2020</xref>), concepts introduced in the next
+    Forney, and Pearl 2020</xref>), concepts explored in the next
     section.</p>
     <fig id="fig-dags_scms">
       <caption><p>Figure 1: The five fundamental building blocks of DAGs
-      with corresponding SCMs. <bold>Note:</bold> left column shows
-      simplified DAGS, middle column show magnified DAGs, and right
-      column shows the corresponding SCMs.</p></caption>
+      with corresponding SCMs. <bold>Note:</bold> left panels show the
+      standard representation of DAGs, middle panels show the magnified
+      representation of DAGs, and the right panels show their
+      corresponding SCMs.</p></caption>
       <table-wrap>
         <table>
           <colgroup>
@@ -808,11 +816,11 @@ the University of Antwerp (BOF).</funding-statement>
       </table-wrap>
     </fig>
     <p>A careful examination of the left and middle panels of
-    <xref alt="Figure 1" rid="fig-dags_scms">Figure 1</xref> reveal what
-    do the building blocks assume. Figures
+    <xref alt="Figure 1" rid="fig-dags_scms">Figure 1</xref> reveals the
+    assumption inherent in these building blocks. Figures
     <xref alt="1 (a)" rid="fig-sdag_bb1">1 (a)</xref> and
     <xref alt="1 (b)" rid="fig-mdag_bb1">1 (b)</xref> depict two
-    unconnected nodes, representing an scenario where variables
+    unconnected nodes, representing a scenario where variables
     <inline-formula><alternatives>
     <tex-math><![CDATA[X]]></tex-math>
     <mml:math display="inline" xmlns:mml="http://www.w3.org/1998/Math/MathML"><mml:mi>X</mml:mi></mml:math></alternatives></inline-formula>
@@ -861,7 +869,7 @@ the University of Antwerp (BOF).</funding-statement>
     and <inline-formula><alternatives>
     <tex-math><![CDATA[Z]]></tex-math>
     <mml:math display="inline" xmlns:mml="http://www.w3.org/1998/Math/MathML"><mml:mi>Z</mml:mi></mml:math></alternatives></inline-formula>
-    a parent node of <inline-formula><alternatives>
+    is a parent node of <inline-formula><alternatives>
     <tex-math><![CDATA[Y]]></tex-math>
     <mml:math display="inline" xmlns:mml="http://www.w3.org/1998/Math/MathML"><mml:mi>Y</mml:mi></mml:math></alternatives></inline-formula>.
     Furthermore, the DAG shows that <inline-formula><alternatives>
@@ -870,12 +878,12 @@ the University of Antwerp (BOF).</funding-statement>
     is an <italic>ancestor</italic> of <inline-formula><alternatives>
     <tex-math><![CDATA[Y]]></tex-math>
     <mml:math display="inline" xmlns:mml="http://www.w3.org/1998/Math/MathML"><mml:mi>Y</mml:mi></mml:math></alternatives></inline-formula>
-    and that the relationship between these variables is entirely
-    <italic>mediated</italic> by <inline-formula><alternatives>
+    and that <inline-formula><alternatives>
     <tex-math><![CDATA[Z]]></tex-math>
-    <mml:math display="inline" xmlns:mml="http://www.w3.org/1998/Math/MathML"><mml:mi>Z</mml:mi></mml:math></alternatives></inline-formula>.
-    Figures <xref alt="1 (j)" rid="fig-sdag_bb4">1 (j)</xref> and
-    <xref alt="1 (k)" rid="fig-mdag_bb4">1 (k)</xref> illustrate a
+    <mml:math display="inline" xmlns:mml="http://www.w3.org/1998/Math/MathML"><mml:mi>Z</mml:mi></mml:math></alternatives></inline-formula>
+    completely <italic>mediates</italic> the relationship between these
+    variables. Figures <xref alt="1 (j)" rid="fig-sdag_bb4">1 (j)</xref>
+    and <xref alt="1 (k)" rid="fig-mdag_bb4">1 (k)</xref> illustrate a
     <italic>fork</italic>, where variables
     <inline-formula><alternatives>
     <tex-math><![CDATA[X]]></tex-math>
@@ -886,16 +894,16 @@ the University of Antwerp (BOF).</funding-statement>
     are both influenced by <inline-formula><alternatives>
     <tex-math><![CDATA[Z]]></tex-math>
     <mml:math display="inline" xmlns:mml="http://www.w3.org/1998/Math/MathML"><mml:mi>Z</mml:mi></mml:math></alternatives></inline-formula>.
-    In this scenario <inline-formula><alternatives>
+    In this scenario, <inline-formula><alternatives>
     <tex-math><![CDATA[Z]]></tex-math>
     <mml:math display="inline" xmlns:mml="http://www.w3.org/1998/Math/MathML"><mml:mi>Z</mml:mi></mml:math></alternatives></inline-formula>
-    is a parent node of both <inline-formula><alternatives>
+    is a parent node of <inline-formula><alternatives>
     <tex-math><![CDATA[X]]></tex-math>
     <mml:math display="inline" xmlns:mml="http://www.w3.org/1998/Math/MathML"><mml:mi>X</mml:mi></mml:math></alternatives></inline-formula>
     and <inline-formula><alternatives>
     <tex-math><![CDATA[Y]]></tex-math>
     <mml:math display="inline" xmlns:mml="http://www.w3.org/1998/Math/MathML"><mml:mi>Y</mml:mi></mml:math></alternatives></inline-formula>.
-    Finally, figures <xref alt="1 (m)" rid="fig-sdag_bb5">1 (m)</xref>
+    Finally, Figures <xref alt="1 (m)" rid="fig-sdag_bb5">1 (m)</xref>
     and <xref alt="1 (n)" rid="fig-mdag_bb5">1 (n)</xref> depict a
     <italic>collider</italic>, also known as
     <italic>inmorality</italic>, where variables
