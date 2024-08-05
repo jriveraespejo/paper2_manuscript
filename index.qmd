@@ -185,14 +185,18 @@ Nevertheless, the structural approach offers an additional key advantage over th
 Graph theory is a branch of mathematics focused on the study of graphs. Graphs are mathematical structures modeling pairwise relations between objects. They can represent physical relations, such as electrical circuits and roadways, and less tangible structures, such as ecosystems and sociological relations. Graphs have proven useful in various fields, including computer science, operations research, and the natural and social sciences [@Gross_et_al_2018]. 
 
 <!-- 2. What does the structural approach uses?, and what are DAGs? -->
-In statistics, one application incorporating concepts from graph theory is causal inference. Specifically, the structural approach to causal inference uses directed acyclic graphs (DAG) and its associated structural causal models (SCM) to provide a graphical and formal representation of the causal structure of a system [@Neal_2020]. In this context, a *graph* denotes a collection of nodes connected by edges, where nodes represent random variables. The term *directed* indicates that the edges of the graph extend from one node to another, with arrows showing the direction of causal influence. Moreover, the term *acyclic* indicates the causal influences do not form a loop, meaning the influences do not cycle back on themselves [@McElreath_2020].
+In statistics, one application incorporating concepts from graph theory is causal inference. Specifically, the structural approach to causal inference uses directed acyclic graphs (DAG), and their associated structural causal models (SCM), to provide a graphical and formal representation of the causal structure of a system [@Neal_2020]. In this context, a *graph* denotes a collection of nodes connected by edges, where nodes represent random variables. The term *directed* indicates the edges of the graph extend from one node to another, with arrows showing the direction of causal influence. Moreover, the term *acyclic* indicates the causal influences do not form a loop, meaning the influences do not cycle back on themselves [@McElreath_2020].
 
-<!-- 3. The first advantage of DAGs is that you need only five building blocks -->
-<!-- 3.1 how DAG can be depicted? Simplified? -->
-One key advantage of DAGs is that they can represent various causal structures using only five fundamental building blocks, regardless of complexity. The left panels of @fig-dags_scms illustrates the *simplified* graphs of these block. In these graphs, the variables of interest or *endogenous* variables, $V=\{X,Z,Y\}$, are depicted as solid black circles, indicating that they are observed variables. The arrows in the graph reflect the expected direction of causal influences among the variables. 
+<!-- 3. how DAGs can be depicted? -->
+<!-- 3.1 the simplified DAG -->
+Regardless of complexity, DAGs can represent various causal structures using only five fundamental building blocks [@Neal_2020; @McElreath_2020]. The left panels of @fig-dags_scms illustrate these building blocks using the *standard* representation [@Morgan_et_al_2014]. In these graphs, the variables of interest, or *endogenous* variables $V=\{X,Z,Y\}$, are depicted as solid black circles to signify that they are observed random variables. The arrows in the graphs reflect the expected direction of causal influences among these variables.
 
-<!-- 3.2 how DAG can be depicted? Magnified? -->
-In contrast, the middle panels of @fig-dags_scms depicts the *magnified* graphs of these building blocks. These graph include, in addition to the endogenous variables, the *exogenous* variables $E=\{e_{X},e_{Z},e_{Y}\}$. These exogenous variables, commonly referred to as *disturbances* or *errors*, represent factors not explicitly modeled. Moreover, they are depicted as open circles, indicating their unobserved nature. These exogenous variables are often omitted for simplicity, resulting in the simplified DAGs shown in the left panels. However, including them in the graph can be advantageous in certain scenarios, as they can help to highlight potential issues related to conditioning and confounding [@Cinelli_et_al_2020], concepts introduced in the next section.
+<!-- 3.2 the magnified DAG -->
+In contrast, the middle panels of @fig-dags_scms present the building blocks using the *magnified* representation. These graphs incorporate *exogenous* variables $E=\{e_{X},e_{Z},e_{Y}\}$, depicted as open circles to signify their unobserved nature. Exogenous variables represent *errors* or *disturbances* arising from omitted factors that the investigator chooses not to model explicitly [@Pearl_2009, pp. 27,68]. Thus, they can be viewed as the 'idiosyncratic' causes of each variable. Although these variables are often omitted for simplicity, as illustrated in the left panels, including them in the graphs can be beneficial, as their presence can reveal potential issues related to conditioning and confounding [@Cinelli_et_al_2020], concepts explored in the next section.
+
+<!-- 3.3 the SCM -->
+<!-- Lastly, the right panels of @fig-dags_scms present the building blocks using the SCM representation. SCMs are  -->
+
 
 <!-- commands for d-separation -->
 \newcommand{\dsep}{\perp\!\!\!\perp}
@@ -290,17 +294,15 @@ $$
 Collider or inmorality
 :::
 
-The five fundamental building blocks of DAGs with corresponding SCMs. **Note:** left column shows simplified DAGS, middle column show magnified DAGs, and right column shows the corresponding SCMs.
+The five fundamental building blocks of DAGs with corresponding SCMs. **Note:** left panels show the standard representation of DAGs, middle panels show the magnified representation of DAGs, and the right panels show their corresponding SCMs.
 :::
 
-<!-- 4. But what does the building blocks mean? -->
-A careful examination of the left and middle panels of @fig-dags_scms reveal what do the building blocks assume. Figures [-@fig-sdag_bb1] and [-@fig-mdag_bb1] depict two unconnected nodes, representing an scenario where variables $X$ and $Y$ are not causally related. Figures [-@fig-sdag_bb2] and [-@fig-mdag_bb2] show two connected nodes, illustrating a scenario where a parent node $X$ exerts a causal influence on a child node $Y$. Consequently, $Y$ is considered a *descendant* of $X$. Figures [-@fig-sdag_bb3] and [-@fig-mdag_bb3] depict a *chain* (or *pipe*), where $X$ influences $Z$, and $Z$ influences $Y$. In this configuration, $X$ is a parent node of $Z$, and $Z$ a parent node of $Y$. Furthermore, the DAG shows that $X$ is an *ancestor* of $Y$ and that the relationship between these variables is entirely *mediated* by $Z$. Figures [-@fig-sdag_bb4] and [-@fig-mdag_bb4] illustrate a *fork*, where variables $X$ and $Y$ are both influenced by $Z$. In this scenario $Z$ is a parent node of both $X$ and $Y$. Finally, figures [-@fig-sdag_bb5] and [-@fig-mdag_bb5] depict a *collider*, also known as *inmorality*, where variables $X$ and $Y$ are concurrent causes of $Z$. In this configuration, $X$ and $Y$ are not causally related to each other but both influence $Z$. 
+<!-- 4. What are the advantages of DAGs? -->
+<!-- DAGs can represent causal relations in a nonparametric and fully interactive manner. This means that feasible causal analysis strategies usually do not require specifying the type of data or the nature of the functional dependence among variables. This generality allows for modeling causality without assuming a specific functional form [@Morgan_et_al_2014].  -->
 
 
-
-<!-- 4. The second advantage of DAGs is that there is no need for functional form -->
-<!-- The second key advantage of DAGs is their ability to represent causal relations in a nonparametric and fully interactive manner. This means that feasible causal analysis strategies usually do not require specifying the type of data or the nature of the functional dependence among variables. This generality allows modeling causality without assuming a specific functional form [@Morgan_et_al_2014]. -->
-
+<!-- 5. But what does the building blocks mean? -->
+A careful examination of the left and middle panels of @fig-dags_scms reveals the assumption inherent in these building blocks. Figures [-@fig-sdag_bb1] and [-@fig-mdag_bb1] depict two unconnected nodes, representing a scenario where variables $X$ and $Y$ are not causally related. Figures [-@fig-sdag_bb2] and [-@fig-mdag_bb2] show two connected nodes, illustrating a scenario where a parent node $X$ exerts a causal influence on a child node $Y$. Consequently, $Y$ is considered a *descendant* of $X$. Figures [-@fig-sdag_bb3] and [-@fig-mdag_bb3] depict a *chain* (or *pipe*), where $X$ influences $Z$, and $Z$ influences $Y$. In this configuration, $X$ is a parent node of $Z$, and $Z$ is a parent node of $Y$. Furthermore, the DAG shows that $X$ is an *ancestor* of $Y$ and that $Z$ completely *mediates* the relationship between these variables. Figures [-@fig-sdag_bb4] and [-@fig-mdag_bb4] illustrate a *fork*, where variables $X$ and $Y$ are both influenced by $Z$. In this scenario, $Z$ is a parent node of $X$ and $Y$. Finally, Figures [-@fig-sdag_bb5] and [-@fig-mdag_bb5] depict a *collider*, also known as *inmorality*, where variables $X$ and $Y$ are concurrent causes of $Z$. In this configuration, $X$ and $Y$ are not causally related to each other but both influence $Z$. 
 
 
 <!-- 5. A motivating example -->
