@@ -488,7 +488,7 @@ the University of Antwerp (BOF).</funding-statement>
     data to estimate causal effects
     (<xref alt="Pearl 2010" rid="ref-Pearl_2010" ref-type="bibr">Pearl
     2010</xref>).</p>
-    <p>Nevertheless, the structural approach offers an additional key
+    <p>However, the structural approach offers an additional key
     advantage over the potential outcomes approach: it enables the
     graphical representation of any system through directed acyclic
     graphs (DAG,
@@ -503,7 +503,7 @@ the University of Antwerp (BOF).</funding-statement>
     2015</xref>). Consequently, DAGs do not represent detailed
     statistical models but allow researchers to deduce which statistical
     models can provide valid causal inferences, assuming the causal
-    structure depicted in the DAG is accurate
+    structure depicted in the DAGs are accurate
     (<xref alt="McElreath 2020" rid="ref-McElreath_2020" ref-type="bibr">McElreath
     2020</xref>).</p>
   </sec>
@@ -534,8 +534,8 @@ the University of Antwerp (BOF).</funding-statement>
     (<xref alt="McElreath 2020" rid="ref-McElreath_2020" ref-type="bibr">McElreath
     2020</xref>).</p>
     <p>DAGs offer two key advantages for modeling causality. Firstly,
-    they represent causal relations in a nonparametric and fully
-    interactive manner. This generality implies that feasible causal
+    DAGs represent causal relations in a nonparametric and fully
+    interactive manner. This feature implies that feasible causal
     analysis strategies usually do not require specifying the type of
     data or the nature of the functional dependence among variables
     (<xref alt="Morgan and Winship 2014" rid="ref-Morgan_et_al_2014" ref-type="bibr">Morgan
@@ -587,26 +587,26 @@ the University of Antwerp (BOF).</funding-statement>
     <xref alt="Figure 1" rid="fig-dags_scms">Figure 1</xref>.</p>
     <p>Lastly, the right panels of
     <xref alt="Figure 1" rid="fig-dags_scms">Figure 1</xref> depict the
-    SCM representation of the five fundamental building blocks. SCMs are
-    formal mathematical models that represent causal relationships
-    within a system or population
+    SCM form of the five fundamental building blocks. SCMs are formal
+    mathematical models that represent causal relationships within a
+    system or population
     (<xref alt="Hitchcock 2024" rid="ref-Hitchcock_2024" ref-type="bibr">Hitchcock
-    2024</xref>). An SCM is defined by the set of endogenous variables
+    2024</xref>). An SCM is defined by a set of endogenous variables
     <inline-formula><alternatives>
     <tex-math><![CDATA[V]]></tex-math>
     <mml:math display="inline" xmlns:mml="http://www.w3.org/1998/Math/MathML"><mml:mi>V</mml:mi></mml:math></alternatives></inline-formula>,
-    the set of exogenous variables <inline-formula><alternatives>
+    a set of exogenous variables <inline-formula><alternatives>
     <tex-math><![CDATA[E]]></tex-math>
     <mml:math display="inline" xmlns:mml="http://www.w3.org/1998/Math/MathML"><mml:mi>E</mml:mi></mml:math></alternatives></inline-formula>,
-    and the set of functions <inline-formula><alternatives>
+    and a set of functions <inline-formula><alternatives>
     <tex-math><![CDATA[F=\{f_{X},f_{Z},f_{Y}\}]]></tex-math>
     <mml:math display="inline" xmlns:mml="http://www.w3.org/1998/Math/MathML"><mml:mrow><mml:mi>F</mml:mi><mml:mo>=</mml:mo><mml:mo stretchy="false" form="prefix">{</mml:mo><mml:msub><mml:mi>f</mml:mi><mml:mi>X</mml:mi></mml:msub><mml:mo>,</mml:mo><mml:msub><mml:mi>f</mml:mi><mml:mi>Z</mml:mi></mml:msub><mml:mo>,</mml:mo><mml:msub><mml:mi>f</mml:mi><mml:mi>Y</mml:mi></mml:msub><mml:mo stretchy="false" form="postfix">}</mml:mo></mml:mrow></mml:math></alternatives></inline-formula>
     (<xref alt="Pearl 2009" rid="ref-Pearl_2009" ref-type="bibr">Pearl
     2009</xref>;
     <xref alt="Neal 2020" rid="ref-Neal_2020" ref-type="bibr">Neal
     2020</xref>). These functions, referred to as structural equations,
-    specify each endogenous variable as a nonparametric function of
-    other variables. Moreover, SCMs use the symbol
+    specify each endogenous variable as nonparametric functions of other
+    variables. Moreover, SCMs use the symbol
     ‘<inline-formula><alternatives>
     <tex-math><![CDATA[:=]]></tex-math>
     <mml:math display="inline" xmlns:mml="http://www.w3.org/1998/Math/MathML"><mml:mo>:=</mml:mo></mml:math></alternatives></inline-formula>’
@@ -978,7 +978,7 @@ the University of Antwerp (BOF).</funding-statement>
     <tex-math><![CDATA[Z]]></tex-math>
     <mml:math display="inline" xmlns:mml="http://www.w3.org/1998/Math/MathML"><mml:mi>Z</mml:mi></mml:math></alternatives></inline-formula>.
     Additionally, in all SCMs, the errors are assumed to be mutually
-    independent of each other and from all other variables in the graph,
+    independent of each other and of all other variables in the graph,
     as evidenced by the pairwise relations
     <inline-formula><alternatives>
     <tex-math><![CDATA[e_{X} \perp\!\!\!\perp e_{Y}]]></tex-math>
@@ -989,7 +989,7 @@ the University of Antwerp (BOF).</funding-statement>
     and <inline-formula><alternatives>
     <tex-math><![CDATA[e_{Z} \perp\!\!\!\perp e_{Y}]]></tex-math>
     <mml:math display="inline" xmlns:mml="http://www.w3.org/1998/Math/MathML"><mml:mrow><mml:msub><mml:mi>e</mml:mi><mml:mi>Z</mml:mi></mml:msub><mml:mo>⊥</mml:mo><mml:mspace width="-0.167em"></mml:mspace><mml:mspace width="-0.167em"></mml:mspace><mml:mspace width="-0.167em"></mml:mspace><mml:mo>⊥</mml:mo><mml:msub><mml:mi>e</mml:mi><mml:mi>Y</mml:mi></mml:msub></mml:mrow></mml:math></alternatives></inline-formula>.</p>
-    <p>Given the heuristic nature of DAGs, a motivating example can
+    <p>Given the heuristic nature of DAGs, a motivating example can help
     clarify how to use the five fundamental building blocks to construct
     the causal structure of a system. Consider a research problem where
     the causal effect of a variable <inline-formula><alternatives>
@@ -1064,11 +1064,11 @@ the University of Antwerp (BOF).</funding-statement>
     and <inline-formula><alternatives>
     <tex-math><![CDATA[e_{X} \perp\!\!\!\perp e_{Y}]]></tex-math>
     <mml:math display="inline" xmlns:mml="http://www.w3.org/1998/Math/MathML"><mml:mrow><mml:msub><mml:mi>e</mml:mi><mml:mi>X</mml:mi></mml:msub><mml:mo>⊥</mml:mo><mml:mspace width="-0.167em"></mml:mspace><mml:mspace width="-0.167em"></mml:mspace><mml:mspace width="-0.167em"></mml:mspace><mml:mo>⊥</mml:mo><mml:msub><mml:mi>e</mml:mi><mml:mi>Y</mml:mi></mml:msub></mml:mrow></mml:math></alternatives></inline-formula>.
-    Finally, the figures illustrate a fork with
+    Finally, the figures illustrate the fork
     <inline-formula><alternatives>
     <tex-math><![CDATA[X \rightarrow \{T,Y\}]]></tex-math>
     <mml:math display="inline" xmlns:mml="http://www.w3.org/1998/Math/MathML"><mml:mrow><mml:mi>X</mml:mi><mml:mo>→</mml:mo><mml:mo stretchy="false" form="prefix">{</mml:mo><mml:mi>T</mml:mi><mml:mo>,</mml:mo><mml:mi>Y</mml:mi><mml:mo stretchy="false" form="postfix">}</mml:mo></mml:mrow></mml:math></alternatives></inline-formula>,
-    as well as colliders such as <inline-formula><alternatives>
+    and two colliders with <inline-formula><alternatives>
     <tex-math><![CDATA[\{X,e_{T}\} \rightarrow T]]></tex-math>
     <mml:math display="inline" xmlns:mml="http://www.w3.org/1998/Math/MathML"><mml:mrow><mml:mo stretchy="false" form="prefix">{</mml:mo><mml:mi>X</mml:mi><mml:mo>,</mml:mo><mml:msub><mml:mi>e</mml:mi><mml:mi>T</mml:mi></mml:msub><mml:mo stretchy="false" form="postfix">}</mml:mo><mml:mo>→</mml:mo><mml:mi>T</mml:mi></mml:mrow></mml:math></alternatives></inline-formula>
     and <inline-formula><alternatives>

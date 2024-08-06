@@ -352,9 +352,9 @@ both notations can be expressed in terms of the other, and both
 approaches provide methods for using experimental and observational data
 to estimate causal effects \citep{Pearl_2010}.
 
-Nevertheless, the structural approach offers an additional key advantage
-over the potential outcomes approach: it enables the graphical
-representation of any system through directed acyclic graphs
+However, the structural approach offers an additional key advantage over
+the potential outcomes approach: it enables the graphical representation
+of any system through directed acyclic graphs
 \citep[DAG,][]{Gross_et_al_2018, Neal_2020}. DAGs serve as heuristics,
 effectively conveying the assumed causal structure of a system. A
 heuristic is a strategy that simplifies information to make decisions
@@ -362,7 +362,7 @@ more quickly, efficiently, and sometimes more accurately than complex
 methods \citep{Chow_2015}. Consequently, DAGs do not represent detailed
 statistical models but allow researchers to deduce which statistical
 models can provide valid causal inferences, assuming the causal
-structure depicted in the DAG is accurate \citep{McElreath_2020}.
+structure depicted in the DAGs are accurate \citep{McElreath_2020}.
 
 \subsection{DAGs and SCMs}\label{sec-framework-dag}
 
@@ -386,9 +386,9 @@ Moreover, the term \emph{acyclic} indicates the causal influences do not
 form a loop, meaning the influences do not cycle back on themselves
 \citep{McElreath_2020}.
 
-DAGs offer two key advantages for modeling causality. Firstly, they
+DAGs offer two key advantages for modeling causality. Firstly, DAGs
 represent causal relations in a nonparametric and fully interactive
-manner. This generality implies that feasible causal analysis strategies
+manner. This feature implies that feasible causal analysis strategies
 usually do not require specifying the type of data or the nature of the
 functional dependence among variables \citep{Morgan_et_al_2014}.
 Secondly, regardless of complexity, DAGs can represent various causal
@@ -424,19 +424,19 @@ middle panels of Figure~\ref{fig-dags_scms}.
 \newcommand{\ndsep}{\not\!\perp\!\!\!\perp}
 
 Lastly, the right panels of Figure~\ref{fig-dags_scms} depict the SCM
-representation of the five fundamental building blocks. SCMs are formal
+form of the five fundamental building blocks. SCMs are formal
 mathematical models that represent causal relationships within a system
-or population \citep{Hitchcock_2024}. An SCM is defined by the set of
-endogenous variables \(V\), the set of exogenous variables \(E\), and
-the set of functions \(F=\{f_{X},f_{Z},f_{Y}\}\)
+or population \citep{Hitchcock_2024}. An SCM is defined by a set of
+endogenous variables \(V\), a set of exogenous variables \(E\), and a
+set of functions \(F=\{f_{X},f_{Z},f_{Y}\}\)
 \citep{Pearl_2009, Neal_2020}. These functions, referred to as
-structural equations, specify each endogenous variable as a
-nonparametric function of other variables. Moreover, SCMs use the symbol
-`\(:=\)' to indicate the variables' asymmetrical causal dependence and
-the symbol `\(\perp\!\!\!\perp\)' to represent \emph{d-separation},
-which roughly equates to the concept of variable independence. The
-concepts of d-separation and causal (in)dependence are explored in the
-following section.
+structural equations, specify each endogenous variable as nonparametric
+functions of other variables. Moreover, SCMs use the symbol `\(:=\)' to
+indicate the variables' asymmetrical causal dependence and the symbol
+`\(\perp\!\!\!\perp\)' to represent \emph{d-separation}, which roughly
+equates to the concept of variable independence. The concepts of
+d-separation and causal (in)dependence are explored in the following
+section.
 
 \begin{figure}
 
@@ -689,25 +689,25 @@ where variables \(X\) and \(Y\) are both influenced by \(Z\). Here,
 and \(Y\) are concurrent causes of \(Z\). In this configuration, \(X\)
 and \(Y\) are not causally related to each other but both influence
 \(Z\). Additionally, in all SCMs, the errors are assumed to be mutually
-independent of each other and from all other variables in the graph, as
+independent of each other and of all other variables in the graph, as
 evidenced by the pairwise relations \(e_{X} \perp\!\!\!\perp e_{Y}\),
 \(e_{X} \perp\!\!\!\perp e_{Z}\), and \(e_{Z} \perp\!\!\!\perp e_{Y}\).
 
-Given the heuristic nature of DAGs, a motivating example can clarify how
-to use the five fundamental building blocks to construct the causal
-structure of a system. Consider a research problem where the causal
-effect of a variable \(T\) on an outcome \(Y\) needs investigation. The
-problem suggests that a variable \(X\) potentially influences both \(T\)
-and \(Y\). Beyond these relationships, the problem does not specify any
-further variables of interest. Such scenarios are not hard to imagine.
-For instance, \(T\) might represent different treatments that could
-affect the recovery from cancer \(Y\), while \(X\) could denote the
-patient's age. Similarly, in the context of a DCJ study like the one
-described by \citet{Boonen_et_al_2020}, \(T\) could represent the
-duration of a child's cochlear implant use, which might influence the
-child's overall speech quality \(Y\), with \(X\) indicating the child's
-hearing status. {(not a bad example, but I prefer one using writing
-skills)}
+Given the heuristic nature of DAGs, a motivating example can help
+clarify how to use the five fundamental building blocks to construct the
+causal structure of a system. Consider a research problem where the
+causal effect of a variable \(T\) on an outcome \(Y\) needs
+investigation. The problem suggests that a variable \(X\) potentially
+influences both \(T\) and \(Y\). Beyond these relationships, the problem
+does not specify any further variables of interest. Such scenarios are
+not hard to imagine. For instance, \(T\) might represent different
+treatments that could affect the recovery from cancer \(Y\), while \(X\)
+could denote the patient's age. Similarly, in the context of a DCJ study
+like the one described by \citet{Boonen_et_al_2020}, \(T\) could
+represent the duration of a child's cochlear implant use, which might
+influence the child's overall speech quality \(Y\), with \(X\)
+indicating the child's hearing status. {(not a bad example, but I prefer
+one using writing skills)}
 
 Figure~\ref{fig-example} illustrates the plausible causal structure of
 the motivating example. A detailed examination of Figures
@@ -718,8 +718,8 @@ as indicated by pairwise relations such as \(X \rightarrow T\),
 \(X \rightarrow Y\), and \(T \rightarrow Y\). Additionally, the figures
 features multiple pairs of unconnected nodes, evident from the relations
 \(e_{T} \perp\!\!\!\perp e_{X}\), \(e_{T} \perp\!\!\!\perp e_{Y}\), and
-\(e_{X} \perp\!\!\!\perp e_{Y}\). Finally, the figures illustrate a fork
-with \(X \rightarrow \{T,Y\}\), as well as colliders such as
+\(e_{X} \perp\!\!\!\perp e_{Y}\). Finally, the figures illustrate the
+fork \(X \rightarrow \{T,Y\}\), and two colliders with
 \(\{X,e_{T}\} \rightarrow T\) and \(\{X,T,e_{Y}\} \rightarrow Y\).
 
 \begin{figure}
