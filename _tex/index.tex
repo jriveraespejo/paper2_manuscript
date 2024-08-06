@@ -376,57 +376,70 @@ social sciences \citep{Gross_et_al_2018}.
 
 In statistics, one application incorporating concepts from graph theory
 is causal inference. Specifically, the structural approach to causal
-inference uses directed acyclic graphs (DAG), and their associated
-structural causal models (SCM), to provide a graphical and formal
-representation of the causal structure of a system \citep{Neal_2020}. In
-this context, a \emph{graph} denotes a collection of nodes connected by
-edges, where nodes represent random variables. The term \emph{directed}
-indicates the edges of the graph extend from one node to another, with
-arrows showing the direction of causal influence. Moreover, the term
-\emph{acyclic} indicates the causal influences do not form a loop,
-meaning the influences do not cycle back on themselves
+inference uses directed acyclic graphs (DAG) to provide a graphical and
+formal representation of the causal structure of a system
+\citep{Neal_2020}. In this context, a \emph{graph} denotes a collection
+of nodes connected by edges, where nodes represent random variables. The
+term \emph{directed} indicates the edges of the graph extend from one
+node to another, with arrows showing the direction of causal influence.
+Moreover, the term \emph{acyclic} indicates the causal influences do not
+form a loop, meaning the influences do not cycle back on themselves
 \citep{McElreath_2020}.
 
-Regardless of complexity, DAGs can represent various causal structures
-using only five fundamental building blocks
-\citep{Neal_2020, McElreath_2020}. The left panels of
-Figure~\ref{fig-dags_scms} illustrate these building blocks using the
-\emph{standard} representation \citep{Morgan_et_al_2014}. In these
-graphs, the variables of interest, or \emph{endogenous} variables
-\(V=\{X,Z,Y\}\), are depicted as solid black circles to signify that
-they are observed random variables. The arrows in the graphs reflect the
+DAGs offer two key advantages for modeling causality. Firstly, they
+represent causal relations in a nonparametric and fully interactive
+manner. This generality implies that feasible causal analysis strategies
+usually do not require specifying the type of data or the nature of the
+functional dependence among variables \citep{Morgan_et_al_2014}.
+Secondly, regardless of complexity, DAGs can represent various causal
+structures using only five fundamental building blocks
+\citep{Neal_2020, McElreath_2020}. These building blocks can be depicted
+in three ways: the magnified representation, the standard
+representation, and the structural causal model form
+\citep[SCM,][]{Morgan_et_al_2014}.
+
+The left panels of Figure~\ref{fig-dags_scms} illustrate the
+\emph{magnified} representation. These graphs depict the
+\emph{endogenous} variables \(V=\{X,Z,Y\}\) alongside the
+\emph{exogenous} variables \(E=\{e_{X},e_{Z},e_{Y}\}\). Endogenous
+variables are those whose causal mechanisms the investigator chooses to
+model \citep{Neal_2020}. In contrast, exogenous variables represent
+\emph{errors} or \emph{disturbances} arising from omitted factors that
+the investigator chooses not to model explicitly
+\citep[27,68]{Pearl_2009}. The graphs show endogenous variables as solid
+black circles to signify that they are observed random variables, while
+endogenous variables are depicted as open circles to signify their
+unobserved (latent) nature. Lastly, the arrows in the graphs reflect the
 expected direction of causal influences among these variables.
 
-In contrast, the middle panels of Figure~\ref{fig-dags_scms} present the
-building blocks using the \emph{magnified} representation. These graphs
-incorporate \emph{exogenous} variables \(E=\{e_{X},e_{Z},e_{Y}\}\),
-depicted as open circles to signify their unobserved nature. Exogenous
-variables represent \emph{errors} or \emph{disturbances} arising from
-omitted factors that the investigator chooses not to model explicitly
-\citep[27,68]{Pearl_2009}. Thus, they can be viewed as the
-`idiosyncratic' causes of each variable. Although these variables are
-often omitted for simplicity, as illustrated in the left panels,
-including them in the graphs can be beneficial, as their presence can
-reveal potential issues related to conditioning and confounding
-\citep{Cinelli_et_al_2020}, concepts explored in the next section.
+Often, the DAGs omit the exogenous variables for simplicity, resulting
+in the \emph{standard} representation. However, including exogenous
+variables in a graph can be beneficial in some scenarios, as their
+presence can reveal potential issues related to conditioning and
+confounding \citep{Cinelli_et_al_2020}, concepts explored in the
+following section. The standard representation is illustrated in the
+middle panels of Figure~\ref{fig-dags_scms}.
 
 \newcommand{\dsep}{\perp\!\!\!\perp}
 \newcommand{\ndsep}{\not\!\perp\!\!\!\perp}
 
+Lastly, the right panels of Figure~\ref{fig-dags_scms} depict the SCM
+representation of the five fundamental building blocks. SCMs are formal
+mathematical models that represent causal relationships within a system
+or population \citep{Hitchcock_2024}. An SCM is defined by the set of
+endogenous variables \(V\), the set of exogenous variables \(E\), and
+the set of functions \(F=\{f_{X},f_{Z},f_{Y}\}\)
+\citep{Pearl_2009, Neal_2020}. These functions, referred to as
+structural equations, specify each endogenous variable as a
+nonparametric function of other variables. Moreover, SCMs use the symbol
+`\(:=\)' to indicate the variables' asymmetrical causal dependence and
+the symbol `\(\perp\!\!\!\perp\)' to represent \emph{d-separation},
+which roughly equates to the concept of variable independence. The
+concepts of d-separation and causal (in)dependence are explored in the
+following section.
+
 \begin{figure}
 
-\begin{minipage}{0.33\linewidth}
-
-\centering{
-
-\includegraphics[width=0.35\textwidth,height=\textheight]{images/figures/sdag_bb1.png}
-
-}
-
-\subcaption{\label{fig-sdag_bb1}Two unconnected nodes}
-
-\end{minipage}%
-%
 \begin{minipage}{0.33\linewidth}
 
 \centering{
@@ -436,6 +449,18 @@ reveal potential issues related to conditioning and confounding
 }
 
 \subcaption{\label{fig-mdag_bb1}Two unconnected nodes}
+
+\end{minipage}%
+%
+\begin{minipage}{0.33\linewidth}
+
+\centering{
+
+\includegraphics[width=0.35\textwidth,height=\textheight]{images/figures/sdag_bb1.png}
+
+}
+
+\subcaption{\label{fig-sdag_bb1}Two unconnected nodes}
 
 \end{minipage}%
 %
@@ -461,11 +486,11 @@ reveal potential issues related to conditioning and confounding
 
 \centering{
 
-\includegraphics[width=0.35\textwidth,height=\textheight]{images/figures/sdag_bb2.png}
+\includegraphics[width=0.8\textwidth,height=\textheight]{images/figures/mdag_bb2.png}
 
 }
 
-\subcaption{\label{fig-sdag_bb2}Two connected nodes or descendant}
+\subcaption{\label{fig-mdag_bb2}Two connected nodes or descendant}
 
 \end{minipage}%
 %
@@ -473,11 +498,11 @@ reveal potential issues related to conditioning and confounding
 
 \centering{
 
-\includegraphics[width=0.8\textwidth,height=\textheight]{images/figures/mdag_bb2.png}
+\includegraphics[width=0.35\textwidth,height=\textheight]{images/figures/sdag_bb2.png}
 
 }
 
-\subcaption{\label{fig-mdag_bb2}Two connected nodes or descendant}
+\subcaption{\label{fig-sdag_bb2}Two connected nodes or descendant}
 
 \end{minipage}%
 %
@@ -503,11 +528,11 @@ reveal potential issues related to conditioning and confounding
 
 \centering{
 
-\includegraphics[width=0.6\textwidth,height=\textheight]{images/figures/sdag_bb3.png}
+\includegraphics[width=1\textwidth,height=\textheight]{images/figures/mdag_bb3.png}
 
 }
 
-\subcaption{\label{fig-sdag_bb3}Chain or pipe}
+\subcaption{\label{fig-mdag_bb3}Chain or pipe}
 
 \end{minipage}%
 %
@@ -515,11 +540,11 @@ reveal potential issues related to conditioning and confounding
 
 \centering{
 
-\includegraphics[width=1\textwidth,height=\textheight]{images/figures/mdag_bb3.png}
+\includegraphics[width=0.55\textwidth,height=\textheight]{images/figures/sdag_bb3.png}
 
 }
 
-\subcaption{\label{fig-mdag_bb3}Chain or pipe}
+\subcaption{\label{fig-sdag_bb3}Chain or pipe}
 
 \end{minipage}%
 %
@@ -548,11 +573,11 @@ reveal potential issues related to conditioning and confounding
 
 \centering{
 
-\includegraphics[width=0.6\textwidth,height=\textheight]{images/figures/sdag_bb4.png}
+\includegraphics[width=1\textwidth,height=\textheight]{images/figures/mdag_bb4.png}
 
 }
 
-\subcaption{\label{fig-sdag_bb4}Fork}
+\subcaption{\label{fig-mdag_bb4}Fork}
 
 \end{minipage}%
 %
@@ -560,11 +585,11 @@ reveal potential issues related to conditioning and confounding
 
 \centering{
 
-\includegraphics[width=1\textwidth,height=\textheight]{images/figures/mdag_bb4.png}
+\includegraphics[width=0.55\textwidth,height=\textheight]{images/figures/sdag_bb4.png}
 
 }
 
-\subcaption{\label{fig-mdag_bb4}Fork}
+\subcaption{\label{fig-sdag_bb4}Fork}
 
 \end{minipage}%
 %
@@ -593,11 +618,11 @@ reveal potential issues related to conditioning and confounding
 
 \centering{
 
-\includegraphics[width=0.6\textwidth,height=\textheight]{images/figures/sdag_bb5.png}
+\includegraphics[width=1\textwidth,height=\textheight]{images/figures/mdag_bb5.png}
 
 }
 
-\subcaption{\label{fig-sdag_bb5}Collider or inmorality}
+\subcaption{\label{fig-mdag_bb5}Collider or inmorality}
 
 \end{minipage}%
 %
@@ -605,11 +630,11 @@ reveal potential issues related to conditioning and confounding
 
 \centering{
 
-\includegraphics[width=1\textwidth,height=\textheight]{images/figures/mdag_bb5.png}
+\includegraphics[width=0.55\textwidth,height=\textheight]{images/figures/sdag_bb5.png}
 
 }
 
-\subcaption{\label{fig-mdag_bb5}Collider or inmorality}
+\subcaption{\label{fig-sdag_bb5}Collider or inmorality}
 
 \end{minipage}%
 %
@@ -635,70 +660,67 @@ reveal potential issues related to conditioning and confounding
 \end{minipage}%
 
 \caption{\label{fig-dags_scms}The five fundamental building blocks of
-DAGs with corresponding SCMs. \textbf{Note:} left panels show the
-standard representation of DAGs, middle panels show the magnified
-representation of DAGs, and the right panels show their corresponding
-SCMs.}
+DAGs. \textbf{Note:} left panels show the magnified representation,
+middle panels show the standard representation, and the right panels
+show their corresponding SCM form.}
 
 \end{figure}%
 
-A careful examination of the left and middle panels of
-Figure~\ref{fig-dags_scms} reveals the assumption inherent in these
-building blocks. Figures \ref{fig-sdag_bb1} and \ref{fig-mdag_bb1}
-depict two unconnected nodes, representing a scenario where variables
-\(X\) and \(Y\) are not causally related. Figures \ref{fig-sdag_bb2} and
-\ref{fig-mdag_bb2} show two connected nodes, illustrating a scenario
-where a parent node \(X\) exerts a causal influence on a child node
-\(Y\). Consequently, \(Y\) is considered a \emph{descendant} of \(X\).
-Figures \ref{fig-sdag_bb3} and \ref{fig-mdag_bb3} depict a \emph{chain}
-(or \emph{pipe}), where \(X\) influences \(Z\), and \(Z\) influences
-\(Y\). In this configuration, \(X\) is a parent node of \(Z\), and \(Z\)
-is a parent node of \(Y\). Furthermore, the DAG shows that \(X\) is an
-\emph{ancestor} of \(Y\) and that \(Z\) completely \emph{mediates} the
-relationship between these variables. Figures \ref{fig-sdag_bb4} and
-\ref{fig-mdag_bb4} illustrate a \emph{fork}, where variables \(X\) and
-\(Y\) are both influenced by \(Z\). In this scenario, \(Z\) is a parent
-node of \(X\) and \(Y\). Finally, Figures \ref{fig-sdag_bb5} and
-\ref{fig-mdag_bb5} depict a \emph{collider}, also known as
-\emph{inmorality}, where variables \(X\) and \(Y\) are concurrent causes
-of \(Z\). In this configuration, \(X\) and \(Y\) are not causally
-related to each other but both influence \(Z\).
+A careful examination of Figure~\ref{fig-dags_scms} highlights the
+assumptions underlying these building blocks. Figures
+\ref{fig-mdag_bb1}, \ref{fig-sdag_bb1}, and SCM \ref{fig-scm_bb1} depict
+two unconnected nodes, representing a scenario where variables \(X\) and
+\(Y\) are not causally related. Figures \ref{fig-mdag_bb2},
+\ref{fig-sdag_bb2}, and SCM \ref{fig-scm_bb2} illustrate two connected
+nodes, showing a scenario where a \emph{parent} node \(X\) exerts a
+causal influence on a \emph{child} node \(Y\). Consequently, \(Y\) is
+considered a \emph{descendant} of \(X\). Figures \ref{fig-mdag_bb3},
+\ref{fig-sdag_bb3}, and SCM \ref{fig-scm_bb3} depict a \emph{chain} or
+\emph{pipe}, where \(X\) influences \(Z\), and \(Z\) influences \(Y\).
+In this configuration, \(X\) is a parent node of \(Z\), and \(Z\) is a
+parent node of \(Y\). Furthermore, the DAGs show that \(X\) is an
+\emph{ancestor} of \(Y\) and that \(Z\) fully \emph{mediates} the
+relationship between these variables. Figures \ref{fig-mdag_bb4},
+\ref{fig-sdag_bb4}, and SCM \ref{fig-scm_bb4} illustrate a \emph{fork},
+where variables \(X\) and \(Y\) are both influenced by \(Z\). Here,
+\(Z\) is a parent node of \(X\) and \(Y\). Finally, Figures
+\ref{fig-mdag_bb5}, \ref{fig-sdag_bb5}, SCM \ref{fig-scm_bb5} depict a
+\emph{collider}, also known as \emph{inmorality}, where variables \(X\)
+and \(Y\) are concurrent causes of \(Z\). In this configuration, \(X\)
+and \(Y\) are not causally related to each other but both influence
+\(Z\). Additionally, in all SCMs, the errors are assumed to be mutually
+independent of each other and from all other variables in the graph, as
+evidenced by the pairwise relations \(e_{X} \perp\!\!\!\perp e_{Y}\),
+\(e_{X} \perp\!\!\!\perp e_{Z}\), and \(e_{Z} \perp\!\!\!\perp e_{Y}\).
 
-Given the heuristic nature of DAGs, a motivating example can help
-illustrate the use of the five fundamental building blocks to construct
-a system's causal structure. This example can also help to clarify some
-additional conventions for drawing DAGs.
+Given the heuristic nature of DAGs, a motivating example can clarify how
+to use the five fundamental building blocks to construct the causal
+structure of a system. Consider a research problem where the causal
+effect of a variable \(T\) on an outcome \(Y\) needs investigation. The
+problem suggests that a variable \(X\) potentially influences both \(T\)
+and \(Y\). Beyond these relationships, the problem does not specify any
+further variables of interest. Such scenarios are not hard to imagine.
+For instance, \(T\) might represent different treatments that could
+affect the recovery from cancer \(Y\), while \(X\) could denote the
+patient's age. Similarly, in the context of a DCJ study like the one
+described by \citet{Boonen_et_al_2020}, \(T\) could represent the
+duration of a child's cochlear implant use, which might influence the
+child's overall speech quality \(Y\), with \(X\) indicating the child's
+hearing status. {(not a bad example, but I prefer one using writing
+skills)}
 
-Consider a research problem where the causal effect of a variable \(T\)
-on an outcome \(Y\) needs to be investigated. Additionally, the problem
-suggests that a variable \(X\) potentially influences both \(T\) and
-\(Y\). Such scenarios are not hard to imagine. For instance, \(T\) might
-represent different treatments that could affect the recovery from
-cancer \(Y\), while \(X\) could denote the patient's age. Similarly, in
-the context of a DCJ study like the one described by
-\citet{Boonen_et_al_2020}, \(T\) could represent the duration of a
-child's cochlear implant use, which might influence the child's overall
-speech quality \(Y\), with \(X\) indicating the child's hearing status.
-{(not a bad example, but I prefer one using writing skills)}
-
-Figure~\ref{fig-example} presents two graphs illustrating the plausible
-causal structure of the motivating example.
-Figure~\ref{fig-sdag_example1} shows the \emph{simplified} graph, while
-Figure~\ref{fig-mdag_example1} depicts the \emph{magnified} graph of the
-DAG. A detailed examination of both figures reveals the presence of at
-least four of the five fundamental building blocks.
-Figure~\ref{fig-sdag_example1} displays multiple descendants, evident in
-pairwise relations such as \(X \rightarrow T\), \(X \rightarrow Y\), and
-\(T \rightarrow Y\). It also illustrates a fork with
-\(X \rightarrow \{T,Y\}\). Similarly, Figure~\ref{fig-mdag_example1}
-features multiple two-unconnected nodes, evident in the pairwise
-relations \(\{e_{T} \perp\!\!\!\perp e_{X}\}\),
-\(\{e_{T} \perp\!\!\!\perp e_{Y}\}\), and
-\(\{e_{X} \perp\!\!\!\perp e_{Y}\}\), as well as colliders such as
-\(\{X,e_{T}\} \rightarrow T\) and \(\{X,T,e_{Y}\} \rightarrow Y\). The
-symbol \(\perp\!\!\!\perp\) denotes a concept know as
-\emph{d-separation}, which roughly implies the independence of the
-variables. This concept is introduced in the next section.
+Figure~\ref{fig-example} illustrates the plausible causal structure of
+the motivating example. A detailed examination of Figures
+\ref{fig-mdag_example1}, \ref{fig-sdag_example1}, and SCM
+\ref{fig-scm_example1} reveals the presence of at least four of the five
+fundamental building blocks. The figures display multiple descendants,
+as indicated by pairwise relations such as \(X \rightarrow T\),
+\(X \rightarrow Y\), and \(T \rightarrow Y\). Additionally, the figures
+features multiple pairs of unconnected nodes, evident from the relations
+\(e_{T} \perp\!\!\!\perp e_{X}\), \(e_{T} \perp\!\!\!\perp e_{Y}\), and
+\(e_{X} \perp\!\!\!\perp e_{Y}\). Finally, the figures illustrate a fork
+with \(X \rightarrow \{T,Y\}\), as well as colliders such as
+\(\{X,e_{T}\} \rightarrow T\) and \(\{X,T,e_{Y}\} \rightarrow Y\).
 
 \begin{figure}
 
@@ -706,11 +728,11 @@ variables. This concept is introduced in the next section.
 
 \centering{
 
-\includegraphics[width=0.35\textwidth,height=\textheight]{images/figures/sdag_example1.png}
+\includegraphics[width=1\textwidth,height=\textheight]{images/figures/mdag_example1.png}
 
 }
 
-\subcaption{\label{fig-sdag_example1}Simplied DAG}
+\subcaption{\label{fig-mdag_example1}Magnified representation}
 
 \end{minipage}%
 %
@@ -718,11 +740,11 @@ variables. This concept is introduced in the next section.
 
 \centering{
 
-\includegraphics[width=0.65\textwidth,height=\textheight]{images/figures/mdag_example1.png}
+\includegraphics[width=0.55\textwidth,height=\textheight]{images/figures/sdag_example1.png}
 
 }
 
-\subcaption{\label{fig-mdag_example1}Magnified DAG}
+\subcaption{\label{fig-sdag_example1}Standard representation}
 
 \end{minipage}%
 %
@@ -733,17 +755,17 @@ variables. This concept is introduced in the next section.
 \[
 \begin{aligned}
   X & := f_{X}(e_{X}) \\
-  Z & := f_{Z}(X,Y,e_{Z}) \\
-  Y & := f_{Y}(e_{Y}) \\
-  e_{X} & \perp\!\!\!\perp e_{Y} \\
-  e_{X} & \perp\!\!\!\perp e_{Z} \\
-  e_{Z} & \perp\!\!\!\perp e_{Y}
+  T & := f_{Z}(X,e_{T}) \\
+  Y & := f_{Y}(T,X,e_{Y}) \\
+  e_{T} & \perp\!\!\!\perp e_{X} \\
+  e_{T} & \perp\!\!\!\perp e_{Y} \\
+  e_{X} & \perp\!\!\!\perp e_{Y}
 \end{aligned}
 \]
 
 }
 
-\subcaption{\label{fig-scm_example1}Collider or inmorality}
+\subcaption{\label{fig-scm_example1}Structural causal model}
 
 \end{minipage}%
 

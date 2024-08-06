@@ -199,10 +199,10 @@ sciences</institution>
 <corresp id="cor-1">JoseManuel.RiveraEspejo@uantwerpen.be</corresp>
 </author-notes>
 
-<pub-date date-type="pub" publication-format="electronic" iso-8601-date="2024-08-05">
+<pub-date date-type="pub" publication-format="electronic" iso-8601-date="2024-08-06">
 <year>2024</year>
 <month>8</month>
-<day>5</day>
+<day>6</day>
 </pub-date>
 
 
@@ -520,9 +520,9 @@ the University of Antwerp (BOF).</funding-statement>
     Yellen, and Anderson 2018</xref>).</p>
     <p>In statistics, one application incorporating concepts from graph
     theory is causal inference. Specifically, the structural approach to
-    causal inference uses directed acyclic graphs (DAG), and their
-    associated structural causal models (SCM), to provide a graphical
-    and formal representation of the causal structure of a system
+    causal inference uses directed acyclic graphs (DAG) to provide a
+    graphical and formal representation of the causal structure of a
+    system
     (<xref alt="Neal 2020" rid="ref-Neal_2020" ref-type="bibr">Neal
     2020</xref>). In this context, a <italic>graph</italic> denotes a
     collection of nodes connected by edges, where nodes represent random
@@ -533,50 +533,96 @@ the University of Antwerp (BOF).</funding-statement>
     a loop, meaning the influences do not cycle back on themselves
     (<xref alt="McElreath 2020" rid="ref-McElreath_2020" ref-type="bibr">McElreath
     2020</xref>).</p>
-    <p>Regardless of complexity, DAGs can represent various causal
-    structures using only five fundamental building blocks
+    <p>DAGs offer two key advantages for modeling causality. Firstly,
+    they represent causal relations in a nonparametric and fully
+    interactive manner. This generality implies that feasible causal
+    analysis strategies usually do not require specifying the type of
+    data or the nature of the functional dependence among variables
+    (<xref alt="Morgan and Winship 2014" rid="ref-Morgan_et_al_2014" ref-type="bibr">Morgan
+    and Winship 2014</xref>). Secondly, regardless of complexity, DAGs
+    can represent various causal structures using only five fundamental
+    building blocks
     (<xref alt="Neal 2020" rid="ref-Neal_2020" ref-type="bibr">Neal
     2020</xref>;
     <xref alt="McElreath 2020" rid="ref-McElreath_2020" ref-type="bibr">McElreath
-    2020</xref>). The left panels of
+    2020</xref>). These building blocks can be depicted in three ways:
+    the magnified representation, the standard representation, and the
+    structural causal model form (SCM,
+    <xref alt="Morgan and Winship 2014" rid="ref-Morgan_et_al_2014" ref-type="bibr">Morgan
+    and Winship 2014</xref>).</p>
+    <p>The left panels of
     <xref alt="Figure 1" rid="fig-dags_scms">Figure 1</xref> illustrate
-    these building blocks using the <italic>standard</italic>
-    representation
-    (<xref alt="Morgan and Winship 2014" rid="ref-Morgan_et_al_2014" ref-type="bibr">Morgan
-    and Winship 2014</xref>). In these graphs, the variables of
-    interest, or <italic>endogenous</italic> variables
+    the <italic>magnified</italic> representation. These graphs depict
+    the <italic>endogenous</italic> variables
     <inline-formula><alternatives>
     <tex-math><![CDATA[V=\{X,Z,Y\}]]></tex-math>
-    <mml:math display="inline" xmlns:mml="http://www.w3.org/1998/Math/MathML"><mml:mrow><mml:mi>V</mml:mi><mml:mo>=</mml:mo><mml:mo stretchy="false" form="prefix">{</mml:mo><mml:mi>X</mml:mi><mml:mo>,</mml:mo><mml:mi>Z</mml:mi><mml:mo>,</mml:mo><mml:mi>Y</mml:mi><mml:mo stretchy="false" form="postfix">}</mml:mo></mml:mrow></mml:math></alternatives></inline-formula>,
-    are depicted as solid black circles to signify that they are
-    observed random variables. The arrows in the graphs reflect the
-    expected direction of causal influences among these variables.</p>
-    <p>In contrast, the middle panels of
-    <xref alt="Figure 1" rid="fig-dags_scms">Figure 1</xref> present the
-    building blocks using the <italic>magnified</italic> representation.
-    These graphs incorporate <italic>exogenous</italic> variables
+    <mml:math display="inline" xmlns:mml="http://www.w3.org/1998/Math/MathML"><mml:mrow><mml:mi>V</mml:mi><mml:mo>=</mml:mo><mml:mo stretchy="false" form="prefix">{</mml:mo><mml:mi>X</mml:mi><mml:mo>,</mml:mo><mml:mi>Z</mml:mi><mml:mo>,</mml:mo><mml:mi>Y</mml:mi><mml:mo stretchy="false" form="postfix">}</mml:mo></mml:mrow></mml:math></alternatives></inline-formula>
+    alongside the <italic>exogenous</italic> variables
     <inline-formula><alternatives>
     <tex-math><![CDATA[E=\{e_{X},e_{Z},e_{Y}\}]]></tex-math>
-    <mml:math display="inline" xmlns:mml="http://www.w3.org/1998/Math/MathML"><mml:mrow><mml:mi>E</mml:mi><mml:mo>=</mml:mo><mml:mo stretchy="false" form="prefix">{</mml:mo><mml:msub><mml:mi>e</mml:mi><mml:mi>X</mml:mi></mml:msub><mml:mo>,</mml:mo><mml:msub><mml:mi>e</mml:mi><mml:mi>Z</mml:mi></mml:msub><mml:mo>,</mml:mo><mml:msub><mml:mi>e</mml:mi><mml:mi>Y</mml:mi></mml:msub><mml:mo stretchy="false" form="postfix">}</mml:mo></mml:mrow></mml:math></alternatives></inline-formula>,
-    depicted as open circles to signify their unobserved nature.
-    Exogenous variables represent <italic>errors</italic> or
-    <italic>disturbances</italic> arising from omitted factors that the
-    investigator chooses not to model explicitly
+    <mml:math display="inline" xmlns:mml="http://www.w3.org/1998/Math/MathML"><mml:mrow><mml:mi>E</mml:mi><mml:mo>=</mml:mo><mml:mo stretchy="false" form="prefix">{</mml:mo><mml:msub><mml:mi>e</mml:mi><mml:mi>X</mml:mi></mml:msub><mml:mo>,</mml:mo><mml:msub><mml:mi>e</mml:mi><mml:mi>Z</mml:mi></mml:msub><mml:mo>,</mml:mo><mml:msub><mml:mi>e</mml:mi><mml:mi>Y</mml:mi></mml:msub><mml:mo stretchy="false" form="postfix">}</mml:mo></mml:mrow></mml:math></alternatives></inline-formula>.
+    Endogenous variables are those whose causal mechanisms the
+    investigator chooses to model
+    (<xref alt="Neal 2020" rid="ref-Neal_2020" ref-type="bibr">Neal
+    2020</xref>). In contrast, exogenous variables represent
+    <italic>errors</italic> or <italic>disturbances</italic> arising
+    from omitted factors that the investigator chooses not to model
+    explicitly
     (<xref alt="Pearl 2009, 27, 68" rid="ref-Pearl_2009" ref-type="bibr">Pearl
-    2009, 27, 68</xref>). Thus, they can be viewed as the
-    ‘idiosyncratic’ causes of each variable. Although these variables
-    are often omitted for simplicity, as illustrated in the left panels,
-    including them in the graphs can be beneficial, as their presence
-    can reveal potential issues related to conditioning and confounding
+    2009, 27, 68</xref>). The graphs show endogenous variables as solid
+    black circles to signify that they are observed random variables,
+    while endogenous variables are depicted as open circles to signify
+    their unobserved (latent) nature. Lastly, the arrows in the graphs
+    reflect the expected direction of causal influences among these
+    variables.</p>
+    <p>Often, the DAGs omit the exogenous variables for simplicity,
+    resulting in the <italic>standard</italic> representation. However,
+    including exogenous variables in a graph can be beneficial in some
+    scenarios, as their presence can reveal potential issues related to
+    conditioning and confounding
     (<xref alt="Cinelli, Forney, and Pearl 2020" rid="ref-Cinelli_et_al_2020" ref-type="bibr">Cinelli,
-    Forney, and Pearl 2020</xref>), concepts explored in the next
-    section.</p>
+    Forney, and Pearl 2020</xref>), concepts explored in the following
+    section. The standard representation is illustrated in the middle
+    panels of
+    <xref alt="Figure 1" rid="fig-dags_scms">Figure 1</xref>.</p>
+    <p>Lastly, the right panels of
+    <xref alt="Figure 1" rid="fig-dags_scms">Figure 1</xref> depict the
+    SCM representation of the five fundamental building blocks. SCMs are
+    formal mathematical models that represent causal relationships
+    within a system or population
+    (<xref alt="Hitchcock 2024" rid="ref-Hitchcock_2024" ref-type="bibr">Hitchcock
+    2024</xref>). An SCM is defined by the set of endogenous variables
+    <inline-formula><alternatives>
+    <tex-math><![CDATA[V]]></tex-math>
+    <mml:math display="inline" xmlns:mml="http://www.w3.org/1998/Math/MathML"><mml:mi>V</mml:mi></mml:math></alternatives></inline-formula>,
+    the set of exogenous variables <inline-formula><alternatives>
+    <tex-math><![CDATA[E]]></tex-math>
+    <mml:math display="inline" xmlns:mml="http://www.w3.org/1998/Math/MathML"><mml:mi>E</mml:mi></mml:math></alternatives></inline-formula>,
+    and the set of functions <inline-formula><alternatives>
+    <tex-math><![CDATA[F=\{f_{X},f_{Z},f_{Y}\}]]></tex-math>
+    <mml:math display="inline" xmlns:mml="http://www.w3.org/1998/Math/MathML"><mml:mrow><mml:mi>F</mml:mi><mml:mo>=</mml:mo><mml:mo stretchy="false" form="prefix">{</mml:mo><mml:msub><mml:mi>f</mml:mi><mml:mi>X</mml:mi></mml:msub><mml:mo>,</mml:mo><mml:msub><mml:mi>f</mml:mi><mml:mi>Z</mml:mi></mml:msub><mml:mo>,</mml:mo><mml:msub><mml:mi>f</mml:mi><mml:mi>Y</mml:mi></mml:msub><mml:mo stretchy="false" form="postfix">}</mml:mo></mml:mrow></mml:math></alternatives></inline-formula>
+    (<xref alt="Pearl 2009" rid="ref-Pearl_2009" ref-type="bibr">Pearl
+    2009</xref>;
+    <xref alt="Neal 2020" rid="ref-Neal_2020" ref-type="bibr">Neal
+    2020</xref>). These functions, referred to as structural equations,
+    specify each endogenous variable as a nonparametric function of
+    other variables. Moreover, SCMs use the symbol
+    ‘<inline-formula><alternatives>
+    <tex-math><![CDATA[:=]]></tex-math>
+    <mml:math display="inline" xmlns:mml="http://www.w3.org/1998/Math/MathML"><mml:mo>:=</mml:mo></mml:math></alternatives></inline-formula>’
+    to indicate the variables’ asymmetrical causal dependence and the
+    symbol ‘<inline-formula><alternatives>
+    <tex-math><![CDATA[\perp\!\!\!\perp]]></tex-math>
+    <mml:math display="inline" xmlns:mml="http://www.w3.org/1998/Math/MathML"><mml:mrow><mml:mo>⊥</mml:mo><mml:mspace width="-0.167em"></mml:mspace><mml:mspace width="-0.167em"></mml:mspace><mml:mspace width="-0.167em"></mml:mspace><mml:mo>⊥</mml:mo></mml:mrow></mml:math></alternatives></inline-formula>’
+    to represent <italic>d-separation</italic>, which roughly equates to
+    the concept of variable independence. The concepts of d-separation
+    and causal (in)dependence are explored in the following section.</p>
     <fig id="fig-dags_scms">
-      <caption><p>Figure 1: The five fundamental building blocks of DAGs
-      with corresponding SCMs. <bold>Note:</bold> left panels show the
-      standard representation of DAGs, middle panels show the magnified
-      representation of DAGs, and the right panels show their
-      corresponding SCMs.</p></caption>
+      <caption><p>Figure 1: The five fundamental building blocks of
+      DAGs. <bold>Note:</bold> left panels show the magnified
+      representation, middle panels show the standard representation,
+      and the right panels show their corresponding SCM
+      form.</p></caption>
       <table-wrap>
         <table>
           <colgroup>
@@ -588,17 +634,17 @@ the University of Antwerp (BOF).</funding-statement>
             <tr>
               <td align="left"><p specific-use="wrapper">
                 <boxed-text>
-                  <fig id="fig-sdag_bb1">
+                  <fig id="fig-mdag_bb1">
                     <caption><p>(a) Two unconnected nodes</p></caption>
-                    <graphic mimetype="image" mime-subtype="png" xlink:href="images/figures/sdag_bb1.png" />
+                    <graphic mimetype="image" mime-subtype="png" xlink:href="images/figures/mdag_bb1.png" />
                   </fig>
                 </boxed-text>
               </p></td>
               <td align="left"><p specific-use="wrapper">
                 <boxed-text>
-                  <fig id="fig-mdag_bb1">
+                  <fig id="fig-sdag_bb1">
                     <caption><p>(b) Two unconnected nodes</p></caption>
-                    <graphic mimetype="image" mime-subtype="png" xlink:href="images/figures/mdag_bb1.png" />
+                    <graphic mimetype="image" mime-subtype="png" xlink:href="images/figures/sdag_bb1.png" />
                   </fig>
                 </boxed-text>
               </p></td>
@@ -633,19 +679,19 @@ the University of Antwerp (BOF).</funding-statement>
             <tr>
               <td align="left"><p specific-use="wrapper">
                 <boxed-text>
-                  <fig id="fig-sdag_bb2">
+                  <fig id="fig-mdag_bb2">
                     <caption><p>(d) Two connected nodes or
                     descendant</p></caption>
-                    <graphic mimetype="image" mime-subtype="png" xlink:href="images/figures/sdag_bb2.png" />
+                    <graphic mimetype="image" mime-subtype="png" xlink:href="images/figures/mdag_bb2.png" />
                   </fig>
                 </boxed-text>
               </p></td>
               <td align="left"><p specific-use="wrapper">
                 <boxed-text>
-                  <fig id="fig-mdag_bb2">
+                  <fig id="fig-sdag_bb2">
                     <caption><p>(e) Two connected nodes or
                     descendant</p></caption>
-                    <graphic mimetype="image" mime-subtype="png" xlink:href="images/figures/mdag_bb2.png" />
+                    <graphic mimetype="image" mime-subtype="png" xlink:href="images/figures/sdag_bb2.png" />
                   </fig>
                 </boxed-text>
               </p></td>
@@ -681,17 +727,17 @@ the University of Antwerp (BOF).</funding-statement>
             <tr>
               <td align="left"><p specific-use="wrapper">
                 <boxed-text>
-                  <fig id="fig-sdag_bb3">
+                  <fig id="fig-mdag_bb3">
                     <caption><p>(g) Chain or pipe</p></caption>
-                    <graphic mimetype="image" mime-subtype="png" xlink:href="images/figures/sdag_bb3.png" />
+                    <graphic mimetype="image" mime-subtype="png" xlink:href="images/figures/mdag_bb3.png" />
                   </fig>
                 </boxed-text>
               </p></td>
               <td align="left"><p specific-use="wrapper">
                 <boxed-text>
-                  <fig id="fig-mdag_bb3">
+                  <fig id="fig-sdag_bb3">
                     <caption><p>(h) Chain or pipe</p></caption>
-                    <graphic mimetype="image" mime-subtype="png" xlink:href="images/figures/mdag_bb3.png" />
+                    <graphic mimetype="image" mime-subtype="png" xlink:href="images/figures/sdag_bb3.png" />
                   </fig>
                 </boxed-text>
               </p></td>
@@ -729,17 +775,17 @@ the University of Antwerp (BOF).</funding-statement>
             <tr>
               <td align="left"><p specific-use="wrapper">
                 <boxed-text>
-                  <fig id="fig-sdag_bb4">
+                  <fig id="fig-mdag_bb4">
                     <caption><p>(j) Fork</p></caption>
-                    <graphic mimetype="image" mime-subtype="png" xlink:href="images/figures/sdag_bb4.png" />
+                    <graphic mimetype="image" mime-subtype="png" xlink:href="images/figures/mdag_bb4.png" />
                   </fig>
                 </boxed-text>
               </p></td>
               <td align="left"><p specific-use="wrapper">
                 <boxed-text>
-                  <fig id="fig-mdag_bb4">
+                  <fig id="fig-sdag_bb4">
                     <caption><p>(k) Fork</p></caption>
-                    <graphic mimetype="image" mime-subtype="png" xlink:href="images/figures/mdag_bb4.png" />
+                    <graphic mimetype="image" mime-subtype="png" xlink:href="images/figures/sdag_bb4.png" />
                   </fig>
                 </boxed-text>
               </p></td>
@@ -777,17 +823,17 @@ the University of Antwerp (BOF).</funding-statement>
             <tr>
               <td align="left"><p specific-use="wrapper">
                 <boxed-text>
-                  <fig id="fig-sdag_bb5">
+                  <fig id="fig-mdag_bb5">
                     <caption><p>(m) Collider or inmorality</p></caption>
-                    <graphic mimetype="image" mime-subtype="png" xlink:href="images/figures/sdag_bb5.png" />
+                    <graphic mimetype="image" mime-subtype="png" xlink:href="images/figures/mdag_bb5.png" />
                   </fig>
                 </boxed-text>
               </p></td>
               <td align="left"><p specific-use="wrapper">
                 <boxed-text>
-                  <fig id="fig-mdag_bb5">
+                  <fig id="fig-sdag_bb5">
                     <caption><p>(n) Collider or inmorality</p></caption>
-                    <graphic mimetype="image" mime-subtype="png" xlink:href="images/figures/mdag_bb5.png" />
+                    <graphic mimetype="image" mime-subtype="png" xlink:href="images/figures/sdag_bb5.png" />
                   </fig>
                 </boxed-text>
               </p></td>
@@ -815,11 +861,12 @@ the University of Antwerp (BOF).</funding-statement>
         </table>
       </table-wrap>
     </fig>
-    <p>A careful examination of the left and middle panels of
-    <xref alt="Figure 1" rid="fig-dags_scms">Figure 1</xref> reveals the
-    assumption inherent in these building blocks. Figures
-    <xref alt="1 (a)" rid="fig-sdag_bb1">1 (a)</xref> and
-    <xref alt="1 (b)" rid="fig-mdag_bb1">1 (b)</xref> depict two
+    <p>A careful examination of
+    <xref alt="Figure 1" rid="fig-dags_scms">Figure 1</xref> highlights
+    the assumptions underlying these building blocks. Figures
+    <xref alt="1 (a)" rid="fig-mdag_bb1">1 (a)</xref>,
+    <xref alt="1 (b)" rid="fig-sdag_bb1">1 (b)</xref>, and SCM
+    <xref alt="1 (c)" rid="fig-scm_bb1">1 (c)</xref> depict two
     unconnected nodes, representing a scenario where variables
     <inline-formula><alternatives>
     <tex-math><![CDATA[X]]></tex-math>
@@ -828,13 +875,14 @@ the University of Antwerp (BOF).</funding-statement>
     <tex-math><![CDATA[Y]]></tex-math>
     <mml:math display="inline" xmlns:mml="http://www.w3.org/1998/Math/MathML"><mml:mi>Y</mml:mi></mml:math></alternatives></inline-formula>
     are not causally related. Figures
-    <xref alt="1 (d)" rid="fig-sdag_bb2">1 (d)</xref> and
-    <xref alt="1 (e)" rid="fig-mdag_bb2">1 (e)</xref> show two connected
-    nodes, illustrating a scenario where a parent node
-    <inline-formula><alternatives>
+    <xref alt="1 (d)" rid="fig-mdag_bb2">1 (d)</xref>,
+    <xref alt="1 (e)" rid="fig-sdag_bb2">1 (e)</xref>, and SCM
+    <xref alt="1 (f)" rid="fig-scm_bb2">1 (f)</xref> illustrate two
+    connected nodes, showing a scenario where a <italic>parent</italic>
+    node <inline-formula><alternatives>
     <tex-math><![CDATA[X]]></tex-math>
     <mml:math display="inline" xmlns:mml="http://www.w3.org/1998/Math/MathML"><mml:mi>X</mml:mi></mml:math></alternatives></inline-formula>
-    exerts a causal influence on a child node
+    exerts a causal influence on a <italic>child</italic> node
     <inline-formula><alternatives>
     <tex-math><![CDATA[Y]]></tex-math>
     <mml:math display="inline" xmlns:mml="http://www.w3.org/1998/Math/MathML"><mml:mi>Y</mml:mi></mml:math></alternatives></inline-formula>.
@@ -845,9 +893,10 @@ the University of Antwerp (BOF).</funding-statement>
     <inline-formula><alternatives>
     <tex-math><![CDATA[X]]></tex-math>
     <mml:math display="inline" xmlns:mml="http://www.w3.org/1998/Math/MathML"><mml:mi>X</mml:mi></mml:math></alternatives></inline-formula>.
-    Figures <xref alt="1 (g)" rid="fig-sdag_bb3">1 (g)</xref> and
-    <xref alt="1 (h)" rid="fig-mdag_bb3">1 (h)</xref> depict a
-    <italic>chain</italic> (or <italic>pipe</italic>), where
+    Figures <xref alt="1 (g)" rid="fig-mdag_bb3">1 (g)</xref>,
+    <xref alt="1 (h)" rid="fig-sdag_bb3">1 (h)</xref>, and SCM
+    <xref alt="1 (i)" rid="fig-scm_bb3">1 (i)</xref> depict a
+    <italic>chain</italic> or <italic>pipe</italic>, where
     <inline-formula><alternatives>
     <tex-math><![CDATA[X]]></tex-math>
     <mml:math display="inline" xmlns:mml="http://www.w3.org/1998/Math/MathML"><mml:mi>X</mml:mi></mml:math></alternatives></inline-formula>
@@ -872,7 +921,7 @@ the University of Antwerp (BOF).</funding-statement>
     is a parent node of <inline-formula><alternatives>
     <tex-math><![CDATA[Y]]></tex-math>
     <mml:math display="inline" xmlns:mml="http://www.w3.org/1998/Math/MathML"><mml:mi>Y</mml:mi></mml:math></alternatives></inline-formula>.
-    Furthermore, the DAG shows that <inline-formula><alternatives>
+    Furthermore, the DAGs show that <inline-formula><alternatives>
     <tex-math><![CDATA[X]]></tex-math>
     <mml:math display="inline" xmlns:mml="http://www.w3.org/1998/Math/MathML"><mml:mi>X</mml:mi></mml:math></alternatives></inline-formula>
     is an <italic>ancestor</italic> of <inline-formula><alternatives>
@@ -881,9 +930,10 @@ the University of Antwerp (BOF).</funding-statement>
     and that <inline-formula><alternatives>
     <tex-math><![CDATA[Z]]></tex-math>
     <mml:math display="inline" xmlns:mml="http://www.w3.org/1998/Math/MathML"><mml:mi>Z</mml:mi></mml:math></alternatives></inline-formula>
-    completely <italic>mediates</italic> the relationship between these
-    variables. Figures <xref alt="1 (j)" rid="fig-sdag_bb4">1 (j)</xref>
-    and <xref alt="1 (k)" rid="fig-mdag_bb4">1 (k)</xref> illustrate a
+    fully <italic>mediates</italic> the relationship between these
+    variables. Figures <xref alt="1 (j)" rid="fig-mdag_bb4">1
+    (j)</xref>, <xref alt="1 (k)" rid="fig-sdag_bb4">1 (k)</xref>, and
+    SCM <xref alt="1 (l)" rid="fig-scm_bb4">1 (l)</xref> illustrate a
     <italic>fork</italic>, where variables
     <inline-formula><alternatives>
     <tex-math><![CDATA[X]]></tex-math>
@@ -894,7 +944,7 @@ the University of Antwerp (BOF).</funding-statement>
     are both influenced by <inline-formula><alternatives>
     <tex-math><![CDATA[Z]]></tex-math>
     <mml:math display="inline" xmlns:mml="http://www.w3.org/1998/Math/MathML"><mml:mi>Z</mml:mi></mml:math></alternatives></inline-formula>.
-    In this scenario, <inline-formula><alternatives>
+    Here, <inline-formula><alternatives>
     <tex-math><![CDATA[Z]]></tex-math>
     <mml:math display="inline" xmlns:mml="http://www.w3.org/1998/Math/MathML"><mml:mi>Z</mml:mi></mml:math></alternatives></inline-formula>
     is a parent node of <inline-formula><alternatives>
@@ -903,8 +953,9 @@ the University of Antwerp (BOF).</funding-statement>
     and <inline-formula><alternatives>
     <tex-math><![CDATA[Y]]></tex-math>
     <mml:math display="inline" xmlns:mml="http://www.w3.org/1998/Math/MathML"><mml:mi>Y</mml:mi></mml:math></alternatives></inline-formula>.
-    Finally, Figures <xref alt="1 (m)" rid="fig-sdag_bb5">1 (m)</xref>
-    and <xref alt="1 (n)" rid="fig-mdag_bb5">1 (n)</xref> depict a
+    Finally, Figures <xref alt="1 (m)" rid="fig-mdag_bb5">1 (m)</xref>,
+    <xref alt="1 (n)" rid="fig-sdag_bb5">1 (n)</xref>, SCM
+    <xref alt="1 (o)" rid="fig-scm_bb5">1 (o)</xref> depict a
     <italic>collider</italic>, also known as
     <italic>inmorality</italic>, where variables
     <inline-formula><alternatives>
@@ -925,20 +976,30 @@ the University of Antwerp (BOF).</funding-statement>
     are not causally related to each other but both influence
     <inline-formula><alternatives>
     <tex-math><![CDATA[Z]]></tex-math>
-    <mml:math display="inline" xmlns:mml="http://www.w3.org/1998/Math/MathML"><mml:mi>Z</mml:mi></mml:math></alternatives></inline-formula>.</p>
-    <p>Given the heuristic nature of DAGs, a motivating example can help
-    illustrate the use of the five fundamental building blocks to
-    construct a system’s causal structure. This example can also help to
-    clarify some additional conventions for drawing DAGs.</p>
-    <p>Consider a research problem where the causal effect of a variable
+    <mml:math display="inline" xmlns:mml="http://www.w3.org/1998/Math/MathML"><mml:mi>Z</mml:mi></mml:math></alternatives></inline-formula>.
+    Additionally, in all SCMs, the errors are assumed to be mutually
+    independent of each other and from all other variables in the graph,
+    as evidenced by the pairwise relations
     <inline-formula><alternatives>
+    <tex-math><![CDATA[e_{X} \perp\!\!\!\perp e_{Y}]]></tex-math>
+    <mml:math display="inline" xmlns:mml="http://www.w3.org/1998/Math/MathML"><mml:mrow><mml:msub><mml:mi>e</mml:mi><mml:mi>X</mml:mi></mml:msub><mml:mo>⊥</mml:mo><mml:mspace width="-0.167em"></mml:mspace><mml:mspace width="-0.167em"></mml:mspace><mml:mspace width="-0.167em"></mml:mspace><mml:mo>⊥</mml:mo><mml:msub><mml:mi>e</mml:mi><mml:mi>Y</mml:mi></mml:msub></mml:mrow></mml:math></alternatives></inline-formula>,
+    <inline-formula><alternatives>
+    <tex-math><![CDATA[e_{X} \perp\!\!\!\perp e_{Z}]]></tex-math>
+    <mml:math display="inline" xmlns:mml="http://www.w3.org/1998/Math/MathML"><mml:mrow><mml:msub><mml:mi>e</mml:mi><mml:mi>X</mml:mi></mml:msub><mml:mo>⊥</mml:mo><mml:mspace width="-0.167em"></mml:mspace><mml:mspace width="-0.167em"></mml:mspace><mml:mspace width="-0.167em"></mml:mspace><mml:mo>⊥</mml:mo><mml:msub><mml:mi>e</mml:mi><mml:mi>Z</mml:mi></mml:msub></mml:mrow></mml:math></alternatives></inline-formula>,
+    and <inline-formula><alternatives>
+    <tex-math><![CDATA[e_{Z} \perp\!\!\!\perp e_{Y}]]></tex-math>
+    <mml:math display="inline" xmlns:mml="http://www.w3.org/1998/Math/MathML"><mml:mrow><mml:msub><mml:mi>e</mml:mi><mml:mi>Z</mml:mi></mml:msub><mml:mo>⊥</mml:mo><mml:mspace width="-0.167em"></mml:mspace><mml:mspace width="-0.167em"></mml:mspace><mml:mspace width="-0.167em"></mml:mspace><mml:mo>⊥</mml:mo><mml:msub><mml:mi>e</mml:mi><mml:mi>Y</mml:mi></mml:msub></mml:mrow></mml:math></alternatives></inline-formula>.</p>
+    <p>Given the heuristic nature of DAGs, a motivating example can
+    clarify how to use the five fundamental building blocks to construct
+    the causal structure of a system. Consider a research problem where
+    the causal effect of a variable <inline-formula><alternatives>
     <tex-math><![CDATA[T]]></tex-math>
     <mml:math display="inline" xmlns:mml="http://www.w3.org/1998/Math/MathML"><mml:mi>T</mml:mi></mml:math></alternatives></inline-formula>
     on an outcome <inline-formula><alternatives>
     <tex-math><![CDATA[Y]]></tex-math>
     <mml:math display="inline" xmlns:mml="http://www.w3.org/1998/Math/MathML"><mml:mi>Y</mml:mi></mml:math></alternatives></inline-formula>
-    needs to be investigated. Additionally, the problem suggests that a
-    variable <inline-formula><alternatives>
+    needs investigation. The problem suggests that a variable
+    <inline-formula><alternatives>
     <tex-math><![CDATA[X]]></tex-math>
     <mml:math display="inline" xmlns:mml="http://www.w3.org/1998/Math/MathML"><mml:mi>X</mml:mi></mml:math></alternatives></inline-formula>
     potentially influences both <inline-formula><alternatives>
@@ -947,8 +1008,9 @@ the University of Antwerp (BOF).</funding-statement>
     and <inline-formula><alternatives>
     <tex-math><![CDATA[Y]]></tex-math>
     <mml:math display="inline" xmlns:mml="http://www.w3.org/1998/Math/MathML"><mml:mi>Y</mml:mi></mml:math></alternatives></inline-formula>.
-    Such scenarios are not hard to imagine. For instance,
-    <inline-formula><alternatives>
+    Beyond these relationships, the problem does not specify any further
+    variables of interest. Such scenarios are not hard to imagine. For
+    instance, <inline-formula><alternatives>
     <tex-math><![CDATA[T]]></tex-math>
     <mml:math display="inline" xmlns:mml="http://www.w3.org/1998/Math/MathML"><mml:mi>T</mml:mi></mml:math></alternatives></inline-formula>
     might represent different treatments that could affect the recovery
@@ -975,18 +1037,15 @@ the University of Antwerp (BOF).</funding-statement>
     indicating the child’s hearing status.
     <styled-content style="color:blue;">(not a bad example, but I prefer
     one using writing skills)</styled-content></p>
-    <p><xref alt="Figure 2" rid="fig-example">Figure 2</xref> presents
-    two graphs illustrating the plausible causal structure of the
-    motivating example.
-    <xref alt="Figure 2 (a)" rid="fig-sdag_example1">Figure 2 (a)</xref>
-    shows the <italic>simplified</italic> graph, while
-    <xref alt="Figure 2 (b)" rid="fig-mdag_example1">Figure 2 (b)</xref>
-    depicts the <italic>magnified</italic> graph of the DAG. A detailed
-    examination of both figures reveals the presence of at least four of
-    the five fundamental building blocks.
-    <xref alt="Figure 2 (a)" rid="fig-sdag_example1">Figure 2 (a)</xref>
-    displays multiple descendants, evident in pairwise relations such as
-    <inline-formula><alternatives>
+    <p><xref alt="Figure 2" rid="fig-example">Figure 2</xref>
+    illustrates the plausible causal structure of the motivating
+    example. A detailed examination of Figures
+    <xref alt="2 (a)" rid="fig-mdag_example1">2 (a)</xref>,
+    <xref alt="2 (b)" rid="fig-sdag_example1">2 (b)</xref>, and SCM
+    <xref alt="2 (c)" rid="fig-scm_example1">2 (c)</xref> reveals the
+    presence of at least four of the five fundamental building blocks.
+    The figures display multiple descendants, as indicated by pairwise
+    relations such as <inline-formula><alternatives>
     <tex-math><![CDATA[X \rightarrow T]]></tex-math>
     <mml:math display="inline" xmlns:mml="http://www.w3.org/1998/Math/MathML"><mml:mrow><mml:mi>X</mml:mi><mml:mo>→</mml:mo><mml:mi>T</mml:mi></mml:mrow></mml:math></alternatives></inline-formula>,
     <inline-formula><alternatives>
@@ -995,32 +1054,26 @@ the University of Antwerp (BOF).</funding-statement>
     and <inline-formula><alternatives>
     <tex-math><![CDATA[T \rightarrow Y]]></tex-math>
     <mml:math display="inline" xmlns:mml="http://www.w3.org/1998/Math/MathML"><mml:mrow><mml:mi>T</mml:mi><mml:mo>→</mml:mo><mml:mi>Y</mml:mi></mml:mrow></mml:math></alternatives></inline-formula>.
-    It also illustrates a fork with <inline-formula><alternatives>
-    <tex-math><![CDATA[X \rightarrow \{T,Y\}]]></tex-math>
-    <mml:math display="inline" xmlns:mml="http://www.w3.org/1998/Math/MathML"><mml:mrow><mml:mi>X</mml:mi><mml:mo>→</mml:mo><mml:mo stretchy="false" form="prefix">{</mml:mo><mml:mi>T</mml:mi><mml:mo>,</mml:mo><mml:mi>Y</mml:mi><mml:mo stretchy="false" form="postfix">}</mml:mo></mml:mrow></mml:math></alternatives></inline-formula>.
-    Similarly, <xref alt="Figure 2 (b)" rid="fig-mdag_example1">Figure 2
-    (b)</xref> features multiple two-unconnected nodes, evident in the
-    pairwise relations <inline-formula><alternatives>
-    <tex-math><![CDATA[\{e_{T} \perp\!\!\!\perp e_{X}\}]]></tex-math>
-    <mml:math display="inline" xmlns:mml="http://www.w3.org/1998/Math/MathML"><mml:mrow><mml:mo stretchy="false" form="prefix">{</mml:mo><mml:msub><mml:mi>e</mml:mi><mml:mi>T</mml:mi></mml:msub><mml:mo>⊥</mml:mo><mml:mspace width="-0.167em"></mml:mspace><mml:mspace width="-0.167em"></mml:mspace><mml:mspace width="-0.167em"></mml:mspace><mml:mo>⊥</mml:mo><mml:msub><mml:mi>e</mml:mi><mml:mi>X</mml:mi></mml:msub><mml:mo stretchy="false" form="postfix">}</mml:mo></mml:mrow></mml:math></alternatives></inline-formula>,
+    Additionally, the figures features multiple pairs of unconnected
+    nodes, evident from the relations <inline-formula><alternatives>
+    <tex-math><![CDATA[e_{T} \perp\!\!\!\perp e_{X}]]></tex-math>
+    <mml:math display="inline" xmlns:mml="http://www.w3.org/1998/Math/MathML"><mml:mrow><mml:msub><mml:mi>e</mml:mi><mml:mi>T</mml:mi></mml:msub><mml:mo>⊥</mml:mo><mml:mspace width="-0.167em"></mml:mspace><mml:mspace width="-0.167em"></mml:mspace><mml:mspace width="-0.167em"></mml:mspace><mml:mo>⊥</mml:mo><mml:msub><mml:mi>e</mml:mi><mml:mi>X</mml:mi></mml:msub></mml:mrow></mml:math></alternatives></inline-formula>,
     <inline-formula><alternatives>
-    <tex-math><![CDATA[\{e_{T} \perp\!\!\!\perp e_{Y}\}]]></tex-math>
-    <mml:math display="inline" xmlns:mml="http://www.w3.org/1998/Math/MathML"><mml:mrow><mml:mo stretchy="false" form="prefix">{</mml:mo><mml:msub><mml:mi>e</mml:mi><mml:mi>T</mml:mi></mml:msub><mml:mo>⊥</mml:mo><mml:mspace width="-0.167em"></mml:mspace><mml:mspace width="-0.167em"></mml:mspace><mml:mspace width="-0.167em"></mml:mspace><mml:mo>⊥</mml:mo><mml:msub><mml:mi>e</mml:mi><mml:mi>Y</mml:mi></mml:msub><mml:mo stretchy="false" form="postfix">}</mml:mo></mml:mrow></mml:math></alternatives></inline-formula>,
+    <tex-math><![CDATA[e_{T} \perp\!\!\!\perp e_{Y}]]></tex-math>
+    <mml:math display="inline" xmlns:mml="http://www.w3.org/1998/Math/MathML"><mml:mrow><mml:msub><mml:mi>e</mml:mi><mml:mi>T</mml:mi></mml:msub><mml:mo>⊥</mml:mo><mml:mspace width="-0.167em"></mml:mspace><mml:mspace width="-0.167em"></mml:mspace><mml:mspace width="-0.167em"></mml:mspace><mml:mo>⊥</mml:mo><mml:msub><mml:mi>e</mml:mi><mml:mi>Y</mml:mi></mml:msub></mml:mrow></mml:math></alternatives></inline-formula>,
     and <inline-formula><alternatives>
-    <tex-math><![CDATA[\{e_{X} \perp\!\!\!\perp e_{Y}\}]]></tex-math>
-    <mml:math display="inline" xmlns:mml="http://www.w3.org/1998/Math/MathML"><mml:mrow><mml:mo stretchy="false" form="prefix">{</mml:mo><mml:msub><mml:mi>e</mml:mi><mml:mi>X</mml:mi></mml:msub><mml:mo>⊥</mml:mo><mml:mspace width="-0.167em"></mml:mspace><mml:mspace width="-0.167em"></mml:mspace><mml:mspace width="-0.167em"></mml:mspace><mml:mo>⊥</mml:mo><mml:msub><mml:mi>e</mml:mi><mml:mi>Y</mml:mi></mml:msub><mml:mo stretchy="false" form="postfix">}</mml:mo></mml:mrow></mml:math></alternatives></inline-formula>,
+    <tex-math><![CDATA[e_{X} \perp\!\!\!\perp e_{Y}]]></tex-math>
+    <mml:math display="inline" xmlns:mml="http://www.w3.org/1998/Math/MathML"><mml:mrow><mml:msub><mml:mi>e</mml:mi><mml:mi>X</mml:mi></mml:msub><mml:mo>⊥</mml:mo><mml:mspace width="-0.167em"></mml:mspace><mml:mspace width="-0.167em"></mml:mspace><mml:mspace width="-0.167em"></mml:mspace><mml:mo>⊥</mml:mo><mml:msub><mml:mi>e</mml:mi><mml:mi>Y</mml:mi></mml:msub></mml:mrow></mml:math></alternatives></inline-formula>.
+    Finally, the figures illustrate a fork with
+    <inline-formula><alternatives>
+    <tex-math><![CDATA[X \rightarrow \{T,Y\}]]></tex-math>
+    <mml:math display="inline" xmlns:mml="http://www.w3.org/1998/Math/MathML"><mml:mrow><mml:mi>X</mml:mi><mml:mo>→</mml:mo><mml:mo stretchy="false" form="prefix">{</mml:mo><mml:mi>T</mml:mi><mml:mo>,</mml:mo><mml:mi>Y</mml:mi><mml:mo stretchy="false" form="postfix">}</mml:mo></mml:mrow></mml:math></alternatives></inline-formula>,
     as well as colliders such as <inline-formula><alternatives>
     <tex-math><![CDATA[\{X,e_{T}\} \rightarrow T]]></tex-math>
     <mml:math display="inline" xmlns:mml="http://www.w3.org/1998/Math/MathML"><mml:mrow><mml:mo stretchy="false" form="prefix">{</mml:mo><mml:mi>X</mml:mi><mml:mo>,</mml:mo><mml:msub><mml:mi>e</mml:mi><mml:mi>T</mml:mi></mml:msub><mml:mo stretchy="false" form="postfix">}</mml:mo><mml:mo>→</mml:mo><mml:mi>T</mml:mi></mml:mrow></mml:math></alternatives></inline-formula>
     and <inline-formula><alternatives>
     <tex-math><![CDATA[\{X,T,e_{Y}\} \rightarrow Y]]></tex-math>
-    <mml:math display="inline" xmlns:mml="http://www.w3.org/1998/Math/MathML"><mml:mrow><mml:mo stretchy="false" form="prefix">{</mml:mo><mml:mi>X</mml:mi><mml:mo>,</mml:mo><mml:mi>T</mml:mi><mml:mo>,</mml:mo><mml:msub><mml:mi>e</mml:mi><mml:mi>Y</mml:mi></mml:msub><mml:mo stretchy="false" form="postfix">}</mml:mo><mml:mo>→</mml:mo><mml:mi>Y</mml:mi></mml:mrow></mml:math></alternatives></inline-formula>.
-    The symbol <inline-formula><alternatives>
-    <tex-math><![CDATA[\perp\!\!\!\perp]]></tex-math>
-    <mml:math display="inline" xmlns:mml="http://www.w3.org/1998/Math/MathML"><mml:mrow><mml:mo>⊥</mml:mo><mml:mspace width="-0.167em"></mml:mspace><mml:mspace width="-0.167em"></mml:mspace><mml:mspace width="-0.167em"></mml:mspace><mml:mo>⊥</mml:mo></mml:mrow></mml:math></alternatives></inline-formula>
-    denotes a concept know as <italic>d-separation</italic>, which
-    roughly implies the independence of the variables. This concept is
-    introduced in the next section.</p>
+    <mml:math display="inline" xmlns:mml="http://www.w3.org/1998/Math/MathML"><mml:mrow><mml:mo stretchy="false" form="prefix">{</mml:mo><mml:mi>X</mml:mi><mml:mo>,</mml:mo><mml:mi>T</mml:mi><mml:mo>,</mml:mo><mml:msub><mml:mi>e</mml:mi><mml:mi>Y</mml:mi></mml:msub><mml:mo stretchy="false" form="postfix">}</mml:mo><mml:mo>→</mml:mo><mml:mi>Y</mml:mi></mml:mrow></mml:math></alternatives></inline-formula>.</p>
     <fig id="fig-example">
       <caption><p>Figure 2: DAGs for a plausible causal structure in a
       system.</p></caption>
@@ -1035,36 +1088,39 @@ the University of Antwerp (BOF).</funding-statement>
             <tr>
               <td align="left"><p specific-use="wrapper">
                 <boxed-text>
-                  <fig id="fig-sdag_example1">
-                    <caption><p>(a) Simplied DAG</p></caption>
-                    <graphic mimetype="image" mime-subtype="png" xlink:href="images/figures/sdag_example1.png" />
-                  </fig>
-                </boxed-text>
-              </p></td>
-              <td align="left"><p specific-use="wrapper">
-                <boxed-text>
                   <fig id="fig-mdag_example1">
-                    <caption><p>(b) Magnified DAG</p></caption>
+                    <caption><p>(a) Magnified
+                    representation</p></caption>
                     <graphic mimetype="image" mime-subtype="png" xlink:href="images/figures/mdag_example1.png" />
                   </fig>
                 </boxed-text>
               </p></td>
               <td align="left"><p specific-use="wrapper">
                 <boxed-text>
+                  <fig id="fig-sdag_example1">
+                    <caption><p>(b) Standard
+                    representation</p></caption>
+                    <graphic mimetype="image" mime-subtype="png" xlink:href="images/figures/sdag_example1.png" />
+                  </fig>
+                </boxed-text>
+              </p></td>
+              <td align="left"><p specific-use="wrapper">
+                <boxed-text>
                   <fig id="fig-scm_example1">
-                    <caption><p>(c) Collider or inmorality</p></caption>
+                    <caption><p>(c) Structural causal
+                    model</p></caption>
                     <p><disp-formula><alternatives>
                     <tex-math><![CDATA[
                     \begin{aligned}
                       X & := f_{X}(e_{X}) \\
-                      Z & := f_{Z}(X,Y,e_{Z}) \\
-                      Y & := f_{Y}(e_{Y}) \\
-                      e_{X} & \perp\!\!\!\perp e_{Y} \\
-                      e_{X} & \perp\!\!\!\perp e_{Z} \\
-                      e_{Z} & \perp\!\!\!\perp e_{Y}
+                      T & := f_{Z}(X,e_{T}) \\
+                      Y & := f_{Y}(T,X,e_{Y}) \\
+                      e_{T} & \perp\!\!\!\perp e_{X} \\
+                      e_{T} & \perp\!\!\!\perp e_{Y} \\
+                      e_{X} & \perp\!\!\!\perp e_{Y}
                     \end{aligned}
                     ]]></tex-math>
-                    <mml:math display="block" xmlns:mml="http://www.w3.org/1998/Math/MathML"><mml:mtable><mml:mtr><mml:mtd columnalign="right" style="text-align: right"><mml:mi>X</mml:mi></mml:mtd><mml:mtd columnalign="left" style="text-align: left"><mml:mo>:=</mml:mo><mml:msub><mml:mi>f</mml:mi><mml:mi>X</mml:mi></mml:msub><mml:mrow><mml:mo stretchy="true" form="prefix">(</mml:mo><mml:msub><mml:mi>e</mml:mi><mml:mi>X</mml:mi></mml:msub><mml:mo stretchy="true" form="postfix">)</mml:mo></mml:mrow></mml:mtd></mml:mtr><mml:mtr><mml:mtd columnalign="right" style="text-align: right"><mml:mi>Z</mml:mi></mml:mtd><mml:mtd columnalign="left" style="text-align: left"><mml:mo>:=</mml:mo><mml:msub><mml:mi>f</mml:mi><mml:mi>Z</mml:mi></mml:msub><mml:mrow><mml:mo stretchy="true" form="prefix">(</mml:mo><mml:mi>X</mml:mi><mml:mo>,</mml:mo><mml:mi>Y</mml:mi><mml:mo>,</mml:mo><mml:msub><mml:mi>e</mml:mi><mml:mi>Z</mml:mi></mml:msub><mml:mo stretchy="true" form="postfix">)</mml:mo></mml:mrow></mml:mtd></mml:mtr><mml:mtr><mml:mtd columnalign="right" style="text-align: right"><mml:mi>Y</mml:mi></mml:mtd><mml:mtd columnalign="left" style="text-align: left"><mml:mo>:=</mml:mo><mml:msub><mml:mi>f</mml:mi><mml:mi>Y</mml:mi></mml:msub><mml:mrow><mml:mo stretchy="true" form="prefix">(</mml:mo><mml:msub><mml:mi>e</mml:mi><mml:mi>Y</mml:mi></mml:msub><mml:mo stretchy="true" form="postfix">)</mml:mo></mml:mrow></mml:mtd></mml:mtr><mml:mtr><mml:mtd columnalign="right" style="text-align: right"><mml:msub><mml:mi>e</mml:mi><mml:mi>X</mml:mi></mml:msub></mml:mtd><mml:mtd columnalign="left" style="text-align: left"><mml:mo>⊥</mml:mo><mml:mspace width="-0.167em"></mml:mspace><mml:mspace width="-0.167em"></mml:mspace><mml:mspace width="-0.167em"></mml:mspace><mml:mo>⊥</mml:mo><mml:msub><mml:mi>e</mml:mi><mml:mi>Y</mml:mi></mml:msub></mml:mtd></mml:mtr><mml:mtr><mml:mtd columnalign="right" style="text-align: right"><mml:msub><mml:mi>e</mml:mi><mml:mi>X</mml:mi></mml:msub></mml:mtd><mml:mtd columnalign="left" style="text-align: left"><mml:mo>⊥</mml:mo><mml:mspace width="-0.167em"></mml:mspace><mml:mspace width="-0.167em"></mml:mspace><mml:mspace width="-0.167em"></mml:mspace><mml:mo>⊥</mml:mo><mml:msub><mml:mi>e</mml:mi><mml:mi>Z</mml:mi></mml:msub></mml:mtd></mml:mtr><mml:mtr><mml:mtd columnalign="right" style="text-align: right"><mml:msub><mml:mi>e</mml:mi><mml:mi>Z</mml:mi></mml:msub></mml:mtd><mml:mtd columnalign="left" style="text-align: left"><mml:mo>⊥</mml:mo><mml:mspace width="-0.167em"></mml:mspace><mml:mspace width="-0.167em"></mml:mspace><mml:mspace width="-0.167em"></mml:mspace><mml:mo>⊥</mml:mo><mml:msub><mml:mi>e</mml:mi><mml:mi>Y</mml:mi></mml:msub></mml:mtd></mml:mtr></mml:mtable></mml:math></alternatives></disp-formula></p>
+                    <mml:math display="block" xmlns:mml="http://www.w3.org/1998/Math/MathML"><mml:mtable><mml:mtr><mml:mtd columnalign="right" style="text-align: right"><mml:mi>X</mml:mi></mml:mtd><mml:mtd columnalign="left" style="text-align: left"><mml:mo>:=</mml:mo><mml:msub><mml:mi>f</mml:mi><mml:mi>X</mml:mi></mml:msub><mml:mrow><mml:mo stretchy="true" form="prefix">(</mml:mo><mml:msub><mml:mi>e</mml:mi><mml:mi>X</mml:mi></mml:msub><mml:mo stretchy="true" form="postfix">)</mml:mo></mml:mrow></mml:mtd></mml:mtr><mml:mtr><mml:mtd columnalign="right" style="text-align: right"><mml:mi>T</mml:mi></mml:mtd><mml:mtd columnalign="left" style="text-align: left"><mml:mo>:=</mml:mo><mml:msub><mml:mi>f</mml:mi><mml:mi>Z</mml:mi></mml:msub><mml:mrow><mml:mo stretchy="true" form="prefix">(</mml:mo><mml:mi>X</mml:mi><mml:mo>,</mml:mo><mml:msub><mml:mi>e</mml:mi><mml:mi>T</mml:mi></mml:msub><mml:mo stretchy="true" form="postfix">)</mml:mo></mml:mrow></mml:mtd></mml:mtr><mml:mtr><mml:mtd columnalign="right" style="text-align: right"><mml:mi>Y</mml:mi></mml:mtd><mml:mtd columnalign="left" style="text-align: left"><mml:mo>:=</mml:mo><mml:msub><mml:mi>f</mml:mi><mml:mi>Y</mml:mi></mml:msub><mml:mrow><mml:mo stretchy="true" form="prefix">(</mml:mo><mml:mi>T</mml:mi><mml:mo>,</mml:mo><mml:mi>X</mml:mi><mml:mo>,</mml:mo><mml:msub><mml:mi>e</mml:mi><mml:mi>Y</mml:mi></mml:msub><mml:mo stretchy="true" form="postfix">)</mml:mo></mml:mrow></mml:mtd></mml:mtr><mml:mtr><mml:mtd columnalign="right" style="text-align: right"><mml:msub><mml:mi>e</mml:mi><mml:mi>T</mml:mi></mml:msub></mml:mtd><mml:mtd columnalign="left" style="text-align: left"><mml:mo>⊥</mml:mo><mml:mspace width="-0.167em"></mml:mspace><mml:mspace width="-0.167em"></mml:mspace><mml:mspace width="-0.167em"></mml:mspace><mml:mo>⊥</mml:mo><mml:msub><mml:mi>e</mml:mi><mml:mi>X</mml:mi></mml:msub></mml:mtd></mml:mtr><mml:mtr><mml:mtd columnalign="right" style="text-align: right"><mml:msub><mml:mi>e</mml:mi><mml:mi>T</mml:mi></mml:msub></mml:mtd><mml:mtd columnalign="left" style="text-align: left"><mml:mo>⊥</mml:mo><mml:mspace width="-0.167em"></mml:mspace><mml:mspace width="-0.167em"></mml:mspace><mml:mspace width="-0.167em"></mml:mspace><mml:mo>⊥</mml:mo><mml:msub><mml:mi>e</mml:mi><mml:mi>Y</mml:mi></mml:msub></mml:mtd></mml:mtr><mml:mtr><mml:mtd columnalign="right" style="text-align: right"><mml:msub><mml:mi>e</mml:mi><mml:mi>X</mml:mi></mml:msub></mml:mtd><mml:mtd columnalign="left" style="text-align: left"><mml:mo>⊥</mml:mo><mml:mspace width="-0.167em"></mml:mspace><mml:mspace width="-0.167em"></mml:mspace><mml:mspace width="-0.167em"></mml:mspace><mml:mo>⊥</mml:mo><mml:msub><mml:mi>e</mml:mi><mml:mi>Y</mml:mi></mml:msub></mml:mtd></mml:mtr></mml:mtable></mml:math></alternatives></disp-formula></p>
                   </fig>
                 </boxed-text>
               </p></td>
@@ -1828,6 +1884,23 @@ the University of Antwerp (BOF).</funding-statement>
           <pub-id pub-id-type="doi">10.1007/978-3-030-52229-2_18</pub-id>
           <fpage>331</fpage>
           <lpage>349</lpage>
+        </element-citation>
+      </ref>
+      <ref id="ref-Hitchcock_2024">
+        <element-citation publication-type="chapter">
+          <person-group person-group-type="author">
+            <name><surname>Hitchcock</surname><given-names>C.</given-names></name>
+          </person-group>
+          <article-title>Causal Models</article-title>
+          <source>The Stanford encyclopedia of philosophy</source>
+          <person-group person-group-type="editor">
+            <name><surname>Zalta</surname><given-names>Edward N.</given-names></name>
+            <name><surname>Nodelman</surname><given-names>Uri</given-names></name>
+          </person-group>
+          <publisher-name>Metaphysics Research Lab, Stanford University</publisher-name>
+          <year iso-8601-date="2024">2024</year>
+          <edition>Summer 2024</edition>
+          <uri>https://plato.stanford.edu/archives/spr2023/entries/causal-models/</uri>
         </element-citation>
       </ref>
       <ref id="ref-Bramley_2015">
