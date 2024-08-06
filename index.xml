@@ -545,9 +545,14 @@ the University of Antwerp (BOF).</funding-statement>
     (<xref alt="Neal 2020" rid="ref-Neal_2020" ref-type="bibr">Neal
     2020</xref>;
     <xref alt="McElreath 2020" rid="ref-McElreath_2020" ref-type="bibr">McElreath
-    2020</xref>). These building blocks can be depicted in three ways:
-    the magnified representation, the standard representation, and the
-    structural causal model form (SCM,
+    2020</xref>). This further implies that to understand the causal
+    assumptions of a complex system, one can decompose a structure into
+    these basic building blocks and analyze the causal assumptions
+    associated with each block individually
+    (<xref alt="McElreath 2020" rid="ref-McElreath_2020" ref-type="bibr">McElreath
+    2020</xref>). Importantly, these building blocks can be represented
+    in three ways: the magnified representation, the standard
+    representation, and the structural causal model form (SCM,
     <xref alt="Morgan and Winship 2014" rid="ref-Morgan_et_al_2014" ref-type="bibr">Morgan
     and Winship 2014</xref>).</p>
     <p>The left panels of
