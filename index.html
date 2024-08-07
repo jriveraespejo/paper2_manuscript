@@ -10,7 +10,7 @@
 <meta name="author" content="Tine van van Daal">
 <meta name="author" content="Sven De De Maeyer">
 <meta name="author" content="Steven Gillis">
-<meta name="dcterms.date" content="2024-08-06">
+<meta name="dcterms.date" content="2024-08-07">
 <meta name="keywords" content="causal inference, probability, Thurstone, comparative judgement, directed acyclic graph, structural causal models, statistical modeling">
 
 <title>Causes and effects in Dichotomous Comparative Judgments: an information-theoretical system of plausible mechanism</title>
@@ -107,10 +107,10 @@ window.Quarto = {
 <meta name="citation_author" content="Tine van van Daal">
 <meta name="citation_author" content="Sven De De Maeyer">
 <meta name="citation_author" content="Steven Gillis">
-<meta name="citation_publication_date" content="2024-08-06">
-<meta name="citation_cover_date" content="2024-08-06">
+<meta name="citation_publication_date" content="2024-08-07">
+<meta name="citation_cover_date" content="2024-08-07">
 <meta name="citation_year" content="2024">
-<meta name="citation_online_date" content="2024-08-06">
+<meta name="citation_online_date" content="2024-08-07">
 <meta name="citation_language" content="en">
 <meta name="citation_reference" content="citation_title=Correlation and causation;,citation_author=S. Wright;,citation_publication_date=1927;,citation_cover_date=1927;,citation_year=1927;,citation_fulltext_html_url=https://books.google.co.ao/books/about/Journal_of_Agricultural_Research.html?hl=pt-PT&amp;amp;amp;id=lNNdIV_qpwIC;,citation_issue=7;,citation_volume=20;,citation_journal_title=Correlation and causation;">
 <meta name="citation_reference" content="citation_title=On the application of probability theory to agricultural experiments. Essay on principles. Section 9;,citation_author=J. Neyman;,citation_publication_date=1923;,citation_cover_date=1923;,citation_year=1923;,citation_fulltext_html_url=http://www.jstor.org/stable/2245382;,citation_issue=4;,citation_volume=5;,citation_journal_title=Statistical Science;,citation_publisher=Institute of Mathematical Statistics;">
@@ -403,7 +403,7 @@ window.Quarto = {
                 <div>
             <div class="quarto-title-meta-heading">Published</div>
             <div class="quarto-title-meta-contents">
-              <p class="date">August 6, 2024</p>
+              <p class="date">August 7, 2024</p>
             </div>
           </div>
           
@@ -442,7 +442,7 @@ window.Quarto = {
   <li><a href="#sec-framework-structural" id="toc-sec-framework-structural" class="nav-link" data-scroll-target="#sec-framework-structural"><span class="header-section-number">2.1</span> The structural approach to causal inference</a></li>
   <li><a href="#sec-framework-dag" id="toc-sec-framework-dag" class="nav-link" data-scroll-target="#sec-framework-dag"><span class="header-section-number">2.2</span> DAGs and SCMs</a></li>
   <li><a href="#sec-framework-flow" id="toc-sec-framework-flow" class="nav-link" data-scroll-target="#sec-framework-flow"><span class="header-section-number">2.3</span> The flow of association and causation in graphs</a></li>
-  <li><a href="#sec-background-where" id="toc-sec-background-where" class="nav-link" data-scroll-target="#sec-background-where"><span class="header-section-number">2.4</span> But where does it all fit?</a></li>
+  <li><a href="#sec-framework-example" id="toc-sec-framework-example" class="nav-link" data-scroll-target="#sec-framework-example"><span class="header-section-number">2.4</span> A motivating example</a></li>
   </ul></li>
   <li><a href="#sec-theory" id="toc-sec-theory" class="nav-link" data-scroll-target="#sec-theory"><span class="header-section-number">3</span> Theory</a>
   <ul class="collapse">
@@ -502,7 +502,7 @@ window.Quarto = {
 <!-- 3. How do we apply causal inference and counterfactuals? -->
 <p>Several approaches to causal inference and counterfactuals exist, but two are particularly prominent: the potential outcomes approach, also known as the Neyman-Rubin causal model <span class="citation" data-cites="Neyman_et_al_1923 Rubin_1974">(<a href="#ref-Neyman_et_al_1923" role="doc-biblioref">Neyman 1923</a>; <a href="#ref-Rubin_1974" role="doc-biblioref">Rubin 1974</a>)</span>, and the structural approach <span class="citation" data-cites="Pearl_2009 Pearl_et_al_2016">(<a href="#ref-Pearl_2009" role="doc-biblioref">Pearl 2009</a>; <a href="#ref-Pearl_et_al_2016" role="doc-biblioref">Pearl, Glymour, and Jewell 2016</a>)</span>. Both approaches employ rigorous mathematical notation to characterize causal inference, but they do so in different ways <span class="citation" data-cites="Neal_2020">(<a href="#ref-Neal_2020" role="doc-biblioref">Neal 2020</a>)</span>. The potential outcomes approach relies on counterfactual notation, whereas the structural approach employs the do-operator and structural causal models <span class="citation" data-cites="Pearl_2009 Pearl_et_al_2016">(SCM, <a href="#ref-Pearl_2009" role="doc-biblioref">Pearl 2009</a>; <a href="#ref-Pearl_et_al_2016" role="doc-biblioref">Pearl, Glymour, and Jewell 2016</a>)</span>. Despite these differences, both notations can be expressed in terms of the other, and both approaches provide methods for using experimental and observational data to estimate causal effects <span class="citation" data-cites="Pearl_2010">(<a href="#ref-Pearl_2010" role="doc-biblioref">Pearl 2010</a>)</span>.</p>
 <!-- 4. But which approach are we going to use? -->
-<p>However, the structural approach offers an additional key advantage over the potential outcomes approach: it enables the graphical representation of any system through directed acyclic graphs <span class="citation" data-cites="Gross_et_al_2018 Neal_2020">(DAG, <a href="#ref-Gross_et_al_2018" role="doc-biblioref">Gross, Yellen, and Anderson 2018</a>; <a href="#ref-Neal_2020" role="doc-biblioref">Neal 2020</a>)</span>. DAGs serve as heuristics, effectively conveying the assumed causal structure of a system. A heuristic is a strategy that simplifies information to make decisions more quickly, efficiently, and sometimes more accurately than complex methods <span class="citation" data-cites="Chow_2015">(<a href="#ref-Chow_2015" role="doc-biblioref">Chow 2015</a>)</span>. Consequently, DAGs do not represent detailed statistical models but allow researchers to deduce which statistical models can provide valid causal inferences, assuming the causal structure depicted in the DAGs are accurate <span class="citation" data-cites="McElreath_2020">(<a href="#ref-McElreath_2020" role="doc-biblioref">McElreath 2020</a>)</span>.</p>
+<p>However, the structural approach offers an additional key advantage over the potential outcomes approach: it enables the graphical representation of any system through directed acyclic graphs <span class="citation" data-cites="Gross_et_al_2018 Neal_2020">(DAG, <a href="#ref-Gross_et_al_2018" role="doc-biblioref">Gross, Yellen, and Anderson 2018</a>; <a href="#ref-Neal_2020" role="doc-biblioref">Neal 2020</a>)</span>. DAGs serve as heuristics, effectively conveying the assumed causal structure of a system <span class="citation" data-cites="Pearl_et_al_2016">(<a href="#ref-Pearl_et_al_2016" role="doc-biblioref">Pearl, Glymour, and Jewell 2016</a>)</span>. A heuristic is a strategy that simplifies information to make decisions more quickly, efficiently, and sometimes more accurately than complex methods <span class="citation" data-cites="Chow_2015">(<a href="#ref-Chow_2015" role="doc-biblioref">Chow 2015</a>)</span>. Consequently, DAGs do not represent detailed statistical models but allow researchers to deduce which statistical models can provide valid causal inferences, assuming the causal structure depicted in the DAGs are accurate <span class="citation" data-cites="McElreath_2020">(<a href="#ref-McElreath_2020" role="doc-biblioref">McElreath 2020</a>)</span>.</p>
 <!-- A Directed Acyclic Graph (DAG) allows for the transparent depiction of a system’s complexity, revealing its underlying assumptions and the plausible mechanisms generating the system’s outcome, assuming the DAG is true.  -->
 </section>
 <section id="sec-framework-dag" class="level2" data-number="2.2">
@@ -510,17 +510,10 @@ window.Quarto = {
 <!-- 1. Graph theory and the use of graphs -->
 <p>Graph theory is a branch of mathematics focused on the study of graphs. Graphs are mathematical structures modeling pairwise relations between objects. They can represent physical relations, such as electrical circuits and roadways, and less tangible structures, such as ecosystems and sociological relations. Graphs have proven useful in various fields, including computer science, operations research, and the natural and social sciences <span class="citation" data-cites="Gross_et_al_2018">(<a href="#ref-Gross_et_al_2018" role="doc-biblioref">Gross, Yellen, and Anderson 2018</a>)</span>.</p>
 <!-- 2. What does the structural approach uses?, and what are DAGs? -->
-<p>In statistics, one application incorporating concepts from graph theory is causal inference. Specifically, the structural approach to causal inference uses directed acyclic graphs (DAG) to provide a graphical and formal representation of the causal structure of a system <span class="citation" data-cites="Neal_2020">(<a href="#ref-Neal_2020" role="doc-biblioref">Neal 2020</a>)</span>. In this context, a <em>graph</em> denotes a collection of nodes connected by edges, where nodes represent random variables. The term <em>directed</em> indicates the edges of the graph extend from one node to another, with arrows showing the direction of causal influence. Moreover, the term <em>acyclic</em> indicates the causal influences do not form a loop, meaning the influences do not cycle back on themselves <span class="citation" data-cites="McElreath_2020">(<a href="#ref-McElreath_2020" role="doc-biblioref">McElreath 2020</a>)</span>.</p>
+<p>In statistics, one application incorporating concepts from graph theory is causal inference. Specifically, the structural approach to causal inference uses directed acyclic graphs (DAG) to provide a graphical and formal representation of the causal structure of a system <span class="citation" data-cites="Neal_2020">(<a href="#ref-Neal_2020" role="doc-biblioref">Neal 2020</a>)</span>. In this context, a <em>graph</em> denotes a collection of nodes connected by edges, where nodes represent random variables. The term <em>directed</em> indicates the edges of the graph extend from one node to another, with arrows showing the direction of causal influence. Moreover, the term <em>acyclic</em> indicates the causal influences do not form a loop, meaning the influences do not cycle back on themselves <span class="citation" data-cites="McElreath_2020">(<a href="#ref-McElreath_2020" role="doc-biblioref">McElreath 2020</a>)</span>. Several examples of DAGs can be found in <a href="#fig-dags_scms" class="quarto-xref">Figure&nbsp;1</a>.</p>
 <!-- 3. What are the advantages of DAGs? -->
-<p>DAGs offer two key advantages for modeling causality. Firstly, DAGs represent causal relations in a nonparametric and fully interactive manner. This feature implies that feasible causal analysis strategies usually do not require specifying the type of data or the nature of the functional dependence among variables <span class="citation" data-cites="Morgan_et_al_2014">(<a href="#ref-Morgan_et_al_2014" role="doc-biblioref">Morgan and Winship 2014</a>)</span>. Secondly, regardless of complexity, DAGs can represent various causal structures using only five fundamental building blocks <span class="citation" data-cites="Neal_2020 McElreath_2020">(<a href="#ref-Neal_2020" role="doc-biblioref">Neal 2020</a>; <a href="#ref-McElreath_2020" role="doc-biblioref">McElreath 2020</a>)</span>. This further implies that to understand the causal assumptions of a complex system, one can decompose a structure into these basic building blocks and analyze the causal assumptions associated with each block individually <span class="citation" data-cites="McElreath_2020">(<a href="#ref-McElreath_2020" role="doc-biblioref">McElreath 2020</a>)</span>. Importantly, these building blocks can be represented in three ways: the magnified representation, the standard representation, and the structural causal model form <span class="citation" data-cites="Morgan_et_al_2014">(SCM, <a href="#ref-Morgan_et_al_2014" role="doc-biblioref">Morgan and Winship 2014</a>)</span>.</p>
-<!-- 3. how DAGs are depicted? -->
-<!-- 3.1 the magnified DAG -->
-<p>The left panels of <a href="#fig-dags_scms" class="quarto-xref">Figure&nbsp;1</a> illustrate the <em>magnified</em> representation. These graphs depict the <em>endogenous</em> variables <span class="math inline">\(V=\{X,Z,Y\}\)</span> alongside the <em>exogenous</em> variables <span class="math inline">\(E=\{e_{X},e_{Z},e_{Y}\}\)</span>. Endogenous variables are those whose causal mechanisms the investigator chooses to model <span class="citation" data-cites="Neal_2020">(<a href="#ref-Neal_2020" role="doc-biblioref">Neal 2020</a>)</span>. In contrast, exogenous variables represent <em>errors</em> or <em>disturbances</em> arising from omitted factors that the investigator chooses not to model explicitly <span class="citation" data-cites="Pearl_2009">(<a href="#ref-Pearl_2009" role="doc-biblioref">Pearl 2009, 27, 68</a>)</span>. The graphs show endogenous variables as solid black circles to signify that they are observed random variables, while endogenous variables are depicted as open circles to signify their unobserved (latent) nature. Lastly, the arrows in the graphs reflect the expected direction of causal influences among these variables.</p>
-<!-- 3.2 the simplified DAG -->
-<p>Often, the DAGs omit the exogenous variables for simplicity, resulting in the <em>standard</em> representation. However, including exogenous variables in a graph can be beneficial in some scenarios, as their presence can reveal potential issues related to conditioning and confounding <span class="citation" data-cites="Cinelli_et_al_2020">(<a href="#ref-Cinelli_et_al_2020" role="doc-biblioref">Cinelli, Forney, and Pearl 2020</a>)</span>, concepts explored in the following section. The standard representation is illustrated in the middle panels of <a href="#fig-dags_scms" class="quarto-xref">Figure&nbsp;1</a>.</p>
+<p>DAGs offer two key advantages for modeling causal structures. Firstly, they represent causal relations in a nonparametric and fully interactive manner. This feature allows for feasible causal analysis strategies without needing the specification of the type of data or the nature of the functional dependence among variables <span class="citation" data-cites="Morgan_et_al_2014">(<a href="#ref-Morgan_et_al_2014" role="doc-biblioref">Morgan and Winship 2014</a>)</span>. Secondly, regardless of complexity, DAGs can represent various causal structures using only five fundamental building blocks <span class="citation" data-cites="Neal_2020 McElreath_2020">(<a href="#ref-Neal_2020" role="doc-biblioref">Neal 2020</a>; <a href="#ref-McElreath_2020" role="doc-biblioref">McElreath 2020</a>)</span>. This feature enables the decomposition of complex structures into basic building blocks, facilitating the analysis of these structures by focusing on the causal assumptions associated with each building block individually <span class="citation" data-cites="McElreath_2020">(<a href="#ref-McElreath_2020" role="doc-biblioref">McElreath 2020</a>)</span>. These building blocks can be represented in three ways: the magnified representation, the standard representation, and the structural causal model form <span class="citation" data-cites="Morgan_et_al_2014">(SCM, <a href="#ref-Morgan_et_al_2014" role="doc-biblioref">Morgan and Winship 2014</a>)</span>.</p>
 <!-- commands for d-separation -->
-<!-- 3.3 the SCM -->
-<p>Lastly, the right panels of <a href="#fig-dags_scms" class="quarto-xref">Figure&nbsp;1</a> depict the SCM form of the five fundamental building blocks. SCMs are formal mathematical models that represent causal relationships within a system or population <span class="citation" data-cites="Hitchcock_2024">(<a href="#ref-Hitchcock_2024" role="doc-biblioref">Hitchcock 2024</a>)</span>. An SCM is defined by a set of endogenous variables <span class="math inline">\(V\)</span>, a set of exogenous variables <span class="math inline">\(E\)</span>, and a set of functions <span class="math inline">\(F=\{f_{X},f_{Z},f_{Y}\}\)</span> <span class="citation" data-cites="Pearl_2009 Neal_2020">(<a href="#ref-Pearl_2009" role="doc-biblioref">Pearl 2009</a>; <a href="#ref-Neal_2020" role="doc-biblioref">Neal 2020</a>)</span>. These functions, referred to as structural equations, specify each endogenous variable as nonparametric functions of other variables. Moreover, SCMs use the symbol ‘<span class="math inline">\(:=\)</span>’ to indicate the variables’ asymmetrical causal dependence and the symbol ‘<span class="math inline">\(\perp\!\!\!\perp\)</span>’ to represent <em>d-separation</em>, which roughly equates to the concept of variable independence. The concepts of d-separation and causal (in)dependence are explored in the following section.</p>
 <div id="fig-dags_scms" class="quarto-layout-panel">
 <figure class="quarto-float quarto-float-fig figure">
 <figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-fig" id="fig-dags_scms-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
@@ -759,16 +752,83 @@ Figure&nbsp;1: The five fundamental building blocks of DAGs. <strong>Note:</stro
 </div>
 </figure>
 </div>
+<!-- 3. how DAGs are depicted? -->
+<!-- 3.1 the magnified DAG -->
+<p>The left panels of <a href="#fig-dags_scms" class="quarto-xref">Figure&nbsp;1</a> illustrate the <em>magnified</em> representation. These graphs depict the <em>endogenous</em> variables <span class="math inline">\(V=\{X,Z,Y\}\)</span> alongside the <em>exogenous</em> variables <span class="math inline">\(E=\{e_{X},e_{Z},e_{Y}\}\)</span>. Endogenous variables are those whose causal mechanisms the investigator chooses to model <span class="citation" data-cites="Neal_2020">(<a href="#ref-Neal_2020" role="doc-biblioref">Neal 2020</a>)</span>. In contrast, exogenous variables represent <em>errors</em> or <em>disturbances</em> arising from omitted factors that the investigator chooses not to model explicitly <span class="citation" data-cites="Pearl_2009">(<a href="#ref-Pearl_2009" role="doc-biblioref">Pearl 2009, 27, 68</a>)</span>. The graphs show endogenous variables as solid black circles to signify that they are observed random variables, while endogenous variables are depicted as open circles to signify their unobserved (latent) nature. Lastly, the arrows in the graphs reflect the expected direction of causal influences among these variables.</p>
+<!-- 3.2 the simplified DAG -->
+<p>Often, DAGs omit the exogenous variables for simplicity, resulting in the <em>standard</em> representation. However, including exogenous variables in a graph can be beneficial in some scenarios, as their presence can reveal potential issues related to conditioning and confounding <span class="citation" data-cites="Cinelli_et_al_2020">(<a href="#ref-Cinelli_et_al_2020" role="doc-biblioref">Cinelli, Forney, and Pearl 2020</a>)</span>, concepts explored in the following section. The standard representation is illustrated in the middle panels of <a href="#fig-dags_scms" class="quarto-xref">Figure&nbsp;1</a>.</p>
+<!-- 3.3 the SCM -->
+<p>Lastly, the right panels of <a href="#fig-dags_scms" class="quarto-xref">Figure&nbsp;1</a> depict the SCM form of the fundamental building blocks. SCMs are formal mathematical models defined by a set of endogenous variables <span class="math inline">\(V\)</span>, a set of exogenous variables <span class="math inline">\(E\)</span>, and a set of functions <span class="math inline">\(F=\{f_{X},f_{Z},f_{Y}\}\)</span> <span class="citation" data-cites="Pearl_2009 Neal_2020">(<a href="#ref-Pearl_2009" role="doc-biblioref">Pearl 2009</a>; <a href="#ref-Neal_2020" role="doc-biblioref">Neal 2020</a>)</span>. These functions, referred to as structural equations, specify each endogenous variable as nonparametric functions of other variables. Moreover, SCMs use the symbol ‘<span class="math inline">\(:=\)</span>’ to indicate the variables’ asymmetrical causal dependence and the symbol ‘<span class="math inline">\(\perp\!\!\!\perp\)</span>’ to represent <em>d-separation</em>, which roughly equates to the concept of variable independence. The concepts of d-separation and causal (in)dependence are explored in the following section.</p>
 <!-- 4. But what does the building blocks mean? -->
-<p>A careful examination of <a href="#fig-dags_scms" class="quarto-xref">Figure&nbsp;1</a> highlights the assumptions underlying these building blocks. Figures <a href="#fig-mdag_bb1" class="quarto-xref">1 (a)</a>, <a href="#fig-sdag_bb1" class="quarto-xref">1 (b)</a>, and SCM <a href="#fig-scm_bb1" class="quarto-xref">1 (c)</a> depict two unconnected nodes, representing a scenario where variables <span class="math inline">\(X\)</span> and <span class="math inline">\(Y\)</span> are not causally related. Figures <a href="#fig-mdag_bb2" class="quarto-xref">1 (d)</a>, <a href="#fig-sdag_bb2" class="quarto-xref">1 (e)</a>, and SCM <a href="#fig-scm_bb2" class="quarto-xref">1 (f)</a> illustrate two connected nodes, showing a scenario where a <em>parent</em> node <span class="math inline">\(X\)</span> exerts a causal influence on a <em>child</em> node <span class="math inline">\(Y\)</span>. Consequently, <span class="math inline">\(Y\)</span> is considered a <em>descendant</em> of <span class="math inline">\(X\)</span>. Figures <a href="#fig-mdag_bb3" class="quarto-xref">1 (g)</a>, <a href="#fig-sdag_bb3" class="quarto-xref">1 (h)</a>, and SCM <a href="#fig-scm_bb3" class="quarto-xref">1 (i)</a> depict a <em>chain</em> or <em>pipe</em>, where <span class="math inline">\(X\)</span> influences <span class="math inline">\(Z\)</span>, and <span class="math inline">\(Z\)</span> influences <span class="math inline">\(Y\)</span>. In this configuration, <span class="math inline">\(X\)</span> is a parent node of <span class="math inline">\(Z\)</span>, and <span class="math inline">\(Z\)</span> is a parent node of <span class="math inline">\(Y\)</span>. Furthermore, the DAGs show that <span class="math inline">\(X\)</span> is an <em>ancestor</em> of <span class="math inline">\(Y\)</span> and that <span class="math inline">\(Z\)</span> fully <em>mediates</em> the relationship between these variables. Figures <a href="#fig-mdag_bb4" class="quarto-xref">1 (j)</a>, <a href="#fig-sdag_bb4" class="quarto-xref">1 (k)</a>, and SCM <a href="#fig-scm_bb4" class="quarto-xref">1 (l)</a> illustrate a <em>fork</em>, where variables <span class="math inline">\(X\)</span> and <span class="math inline">\(Y\)</span> are both influenced by <span class="math inline">\(Z\)</span>. Here, <span class="math inline">\(Z\)</span> is a parent node of <span class="math inline">\(X\)</span> and <span class="math inline">\(Y\)</span>. Finally, Figures <a href="#fig-mdag_bb5" class="quarto-xref">1 (m)</a>, <a href="#fig-sdag_bb5" class="quarto-xref">1 (n)</a>, SCM <a href="#fig-scm_bb5" class="quarto-xref">1 (o)</a> depict a <em>collider</em>, also known as <em>inmorality</em>, where variables <span class="math inline">\(X\)</span> and <span class="math inline">\(Y\)</span> are concurrent causes of <span class="math inline">\(Z\)</span>. In this configuration, <span class="math inline">\(X\)</span> and <span class="math inline">\(Y\)</span> are not causally related to each other but both influence <span class="math inline">\(Z\)</span>. Additionally, in all SCMs, the errors are assumed to be mutually independent of each other and of all other variables in the graph, as evidenced by the pairwise relations <span class="math inline">\(e_{X} \perp\!\!\!\perp e_{Y}\)</span>, <span class="math inline">\(e_{X} \perp\!\!\!\perp e_{Z}\)</span>, and <span class="math inline">\(e_{Z} \perp\!\!\!\perp e_{Y}\)</span>.</p>
-<!-- 5. A motivating example -->
+<p>A careful examination of <a href="#fig-dags_scms" class="quarto-xref">Figure&nbsp;1</a> highlights the assumptions underlying these building blocks. Figures <a href="#fig-mdag_bb1" class="quarto-xref">1 (a)</a>, <a href="#fig-sdag_bb1" class="quarto-xref">1 (b)</a>, and SCM <a href="#fig-scm_bb1" class="quarto-xref">1 (c)</a> depict two unconnected nodes, representing a scenario where variables <span class="math inline">\(X\)</span> and <span class="math inline">\(Y\)</span> are not causally related. Figures <a href="#fig-mdag_bb2" class="quarto-xref">1 (d)</a>, <a href="#fig-sdag_bb2" class="quarto-xref">1 (e)</a>, and SCM <a href="#fig-scm_bb2" class="quarto-xref">1 (f)</a> illustrate two connected nodes, showing a scenario where a <em>parent</em> node <span class="math inline">\(X\)</span> exerts a causal influence on a <em>child</em> node <span class="math inline">\(Y\)</span>. Consequently, <span class="math inline">\(Y\)</span> is considered a <em>descendant</em> of <span class="math inline">\(X\)</span>. Figures <a href="#fig-mdag_bb3" class="quarto-xref">1 (g)</a>, <a href="#fig-sdag_bb3" class="quarto-xref">1 (h)</a>, and SCM <a href="#fig-scm_bb3" class="quarto-xref">1 (i)</a> depict a <em>chain</em> or <em>pipe</em>, where <span class="math inline">\(X\)</span> influences <span class="math inline">\(Z\)</span>, and <span class="math inline">\(Z\)</span> influences <span class="math inline">\(Y\)</span>. In this configuration, <span class="math inline">\(X\)</span> is a parent node of <span class="math inline">\(Z\)</span>, and <span class="math inline">\(Z\)</span> is a parent node of <span class="math inline">\(Y\)</span>. This creates a <em>directed path</em> between <span class="math inline">\(X\)</span> and <span class="math inline">\(Y\)</span>. Consequently, <span class="math inline">\(X\)</span> is an <em>ancestor</em> of <span class="math inline">\(Y\)</span>, and <span class="math inline">\(Z\)</span> fully <em>mediates</em> the relationship between the two. Figures <a href="#fig-mdag_bb4" class="quarto-xref">1 (j)</a>, <a href="#fig-sdag_bb4" class="quarto-xref">1 (k)</a>, and SCM <a href="#fig-scm_bb4" class="quarto-xref">1 (l)</a> illustrate a <em>fork</em>, where variables <span class="math inline">\(X\)</span> and <span class="math inline">\(Y\)</span> are both influenced by <span class="math inline">\(Z\)</span>. Here, <span class="math inline">\(Z\)</span> is a parent node of <span class="math inline">\(X\)</span> and <span class="math inline">\(Y\)</span>. Finally, Figures <a href="#fig-mdag_bb5" class="quarto-xref">1 (m)</a>, <a href="#fig-sdag_bb5" class="quarto-xref">1 (n)</a>, SCM <a href="#fig-scm_bb5" class="quarto-xref">1 (o)</a> depict a <em>collider</em>, also known as <em>inmorality</em>, where variables <span class="math inline">\(X\)</span> and <span class="math inline">\(Y\)</span> are concurrent causes of <span class="math inline">\(Z\)</span>. In this configuration, <span class="math inline">\(X\)</span> and <span class="math inline">\(Y\)</span> are not causally related to each other but both influence <span class="math inline">\(Z\)</span>. Additionally, in all SCMs, the errors are assumed to be mutually independent of each other and of all other variables in the graph, as evidenced by the pairwise relations <span class="math inline">\(e_{X} \perp\!\!\!\perp e_{Y}\)</span>, <span class="math inline">\(e_{X} \perp\!\!\!\perp e_{Z}\)</span>, and <span class="math inline">\(e_{Z} \perp\!\!\!\perp e_{Y}\)</span>.</p>
+</section>
+<section id="sec-framework-flow" class="level2" data-number="2.3">
+<h2 data-number="2.3" class="anchored" data-anchor-id="sec-framework-flow"><span class="header-section-number">2.3</span> The flow of association and causation in graphs</h2>
+<!-- 1. What has been said about DAGs and SCMs -->
+<!-- So far, the explanation of DAGs and SCMs has been fairly concise, sufficient to emphasize their effectiveness in encoding causal structures. However, nothing has been said about the assumptions required to use DAGs and SCMs as encoders of causal assumptions. This is important because, while encoding causal structures with DAGs can be an intriguing exercise in itself, the primary goal of an investigator is to address a research problem. -->
+<!-- This study uses the Identification-Estimation flowchart [@McElreath_2020; @Neal_2020]. The flowchart illustrates the process of moving from a target (causal) *estimand* to a corresponding *estimate*, through identification and estimation (@fig-IEflowchart).  -->
+<!-- Before tackling the main objective of this study, however, it is important to understand how researchers can move from causal estimands to statistical estimates. Causal estimands, also known as targets of inference, are the quantities that the researcher wants to estimate. Usually, these quantities are articulated through different research questions and they are depicted using the language of the Potential Outcomes framework, Neyman-Rubin causal framework [@Neyman_et_al_1990; @Rubin_1974] mathematical expectation, e.g., $E[Y_{i}(1) - Y_{i}(0)]$ indicating that a researcher is interested in estimating the *average treatment effect* (ATE) -->
+<!-- Specifically, the investigator must define tthe different targets of inference (i.e., the *estimands*), which form the basis for evaluating the reliability of the DCJ method. The targets  Subsequently, the research constructs a *scientific model* for the DCJ procedure, elucidating the causal assumptions and mechanisms underlying the system, aiding in drawing inferences about causal relationships from DCJ data. Next, the study translates the scientific model into a probabilistic statistical model (i.e., an *estimator*) to derive a *statistical estimand* for the various inference targets. Bayesian statistical methods offer an intuitive approach for the task. Finally, employing multiple simulated datasets for different combinations of the relevant assessment factors, the study generates multiple *estimates* or approximations for the statistical estimands. Notably, the statistical estimands in simulated data are known, enabling the study to assess the reliability of DCJ by evaluating the *proximity* of these estimands to the generated estimates, resembling a power analysis. -->
+<!-- translate the encoded causal information into a probabilistic statistical model. Then, using this model along with data, the investigator must produce an estimate that addresses the research problem of interest. This procedure is illustrated in the Identification-Estimation flowchart presented in @fig-IEflow. -->
+<!-- In this context, identification refers to the process of moving from a (causal) *estimand* to an equivalent *statistical estimand*, and estimation refers to the process of moving from a *statistical estimand* to an *estimate*. -->
+<div id="fig-IEflow" class="quarto-float quarto-figure quarto-figure-center anchored" data-fig-align="center">
+<figure class="quarto-float quarto-float-fig figure">
+<figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-fig" id="fig-IEflow-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;2: Identification-Estimation flowchart. Extracted from <span class="citation" data-cites="Neal_2020">Neal (<a href="#ref-Neal_2020" role="doc-biblioref">2020, 32</a>)</span>
+</figcaption>
+<div aria-describedby="fig-IEflow-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<a href="images/figures/IEflow.png" class="lightbox" data-gallery="quarto-lightbox-gallery-11" title="Figure&nbsp;2: Identification-Estimation flowchart. Extracted from @Neal_2020 [pp. 32]"><img src="images/figures/IEflow.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:40.0%"></a>
+</div>
+</figure>
+</div>
+<!-- 2. What is the local markov assumption? and where does it lead? -->
+<!-- 2.1 Bayesian network factorization -->
+<!-- 3. What is the causal edges assumption? and where does it lead? -->
+<!-- 4. Combined they are known as the minimality assumption? -->
+<!-- 5. Now, what are those mysterious functions?, and how do they become statistical quantities? -->
+<!-- 1. But what are the assumption that allow us to treat DAGs as causal structures -->
+<div id="fig-ACflow" class="quarto-float quarto-figure quarto-figure-center anchored" data-fig-align="center">
+<figure class="quarto-float quarto-float-fig figure">
+<figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-fig" id="fig-ACflow-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;3: The flow of association and causation in graphs. Extracted from <span class="citation" data-cites="Neal_2020">Neal (<a href="#ref-Neal_2020" role="doc-biblioref">2020, 31</a>)</span>
+</figcaption>
+<div aria-describedby="fig-ACflow-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<a href="images/figures/ACflow.png" class="lightbox" data-gallery="quarto-lightbox-gallery-12" title="Figure&nbsp;3: The flow of association and causation in graphs. Extracted from @Neal_2020 [pp. 31]"><img src="images/figures/ACflow.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:90.0%"></a>
+</div>
+</figure>
+</div>
+<!-- Another advantage of graphical models is that they allow us to express joint distributions very efficiently. -->
+<!-- Second, in a fully specified SCM, we can represent the joint distributions of n variables -->
+<!-- with greater efficiency: We need only to specify the n functions that govern the relationships between the variables, and then from the probabilities of the error terms, we can discover all the probabilities that govern the joint distribution. -->
+<!-- 6. What is the modularity assumption? and where does it lead? -->
+<!-- 6.1 the Truncated factorization -->
+<!-- 6.2 The law of counterfactuals -->
+<!-- 7. Causal mechanism -->
+<!-- 7.3 the backdoor criterion (do you need it?) -->
+<!-- 5. d-separation -->
+<!-- 5.1 Blocked path definition-->
+<!-- 6. putting it all together -->
+<!-- 6.1. Revising the building block: dependence and independence -->
+<!-- Ultimately, DAGs play the important role of identifying which variables should be controlled for to be able to estimate causal effects. -->
+<!-- Mention convenient R package daggitty to draw dags and extract the causal assumption inherent in a graph -->
+<!-- After detailing how to build graphs and what they imply, Include steps to draw dags using a motivating example -->
+<!-- point out that the disturbances are usually stochastic in nature -->
+<!-- Causal mechanism as a result of markov and minimality assumption -->
+<!-- Modularity assumption also -->
+<!-- The previous chapter gives graphical intuition for causal models, but it doesn’t explain how to identify causal quantities and formalize causal models. Neal -->
+<!-- 4. But how do we move from targets of inference to estimates -->
+<!-- But how can we move from heuristics and vague mathematic notation, to probabilistic causal analysis. -->
+<!-- Ardmed with dags and scm, and theit probabilité implication, we can now expand on thé motivating example provided in section xx -->
+</section>
+<section id="sec-framework-example" class="level2" data-number="2.4">
+<h2 data-number="2.4" class="anchored" data-anchor-id="sec-framework-example"><span class="header-section-number">2.4</span> A motivating example</h2>
 <p>Given the heuristic nature of DAGs, a motivating example can help clarify how to use the five fundamental building blocks to construct the causal structure of a system. Consider a research problem where the causal effect of a variable <span class="math inline">\(T\)</span> on an outcome <span class="math inline">\(Y\)</span> needs investigation. The problem suggests that a variable <span class="math inline">\(X\)</span> potentially influences both <span class="math inline">\(T\)</span> and <span class="math inline">\(Y\)</span>. Beyond these relationships, the problem does not specify any further variables of interest. Such scenarios are not hard to imagine. For instance, <span class="math inline">\(T\)</span> might represent different treatments that could affect the recovery from cancer <span class="math inline">\(Y\)</span>, while <span class="math inline">\(X\)</span> could denote the patient’s age. Similarly, in the context of a DCJ study like the one described by <span class="citation" data-cites="Boonen_et_al_2020">Boonen, Kloots, and Gillis (<a href="#ref-Boonen_et_al_2020" role="doc-biblioref">2020</a>)</span>, <span class="math inline">\(T\)</span> could represent the duration of a child’s cochlear implant use, which might influence the child’s overall speech quality <span class="math inline">\(Y\)</span>, with <span class="math inline">\(X\)</span> indicating the child’s hearing status. <span style="color:blue;">(not a bad example, but I prefer one using writing skills)</span></p>
 <!-- 6. DAG for the motivating example -->
-<p><a href="#fig-example" class="quarto-xref">Figure&nbsp;2</a> illustrates the plausible causal structure of the motivating example. A detailed examination of Figures <a href="#fig-mdag_example1" class="quarto-xref">2 (a)</a>, <a href="#fig-sdag_example1" class="quarto-xref">2 (b)</a>, and SCM <a href="#fig-scm_example1" class="quarto-xref">2 (c)</a> reveals the presence of at least four of the five fundamental building blocks. The figures display multiple descendants, as indicated by pairwise relations such as <span class="math inline">\(X \rightarrow T\)</span>, <span class="math inline">\(X \rightarrow Y\)</span>, and <span class="math inline">\(T \rightarrow Y\)</span>. Additionally, the figures features multiple pairs of unconnected nodes, evident from the relations <span class="math inline">\(e_{T} \perp\!\!\!\perp e_{X}\)</span>, <span class="math inline">\(e_{T} \perp\!\!\!\perp e_{Y}\)</span>, and <span class="math inline">\(e_{X} \perp\!\!\!\perp e_{Y}\)</span>. Finally, the figures illustrate the fork <span class="math inline">\(X \rightarrow \{T,Y\}\)</span>, and two colliders with <span class="math inline">\(\{X,e_{T}\} \rightarrow T\)</span> and <span class="math inline">\(\{X,T,e_{Y}\} \rightarrow Y\)</span>.</p>
+<p><a href="#fig-example" class="quarto-xref">Figure&nbsp;4</a> illustrates the plausible causal structure of the motivating example. A detailed examination of Figures <a href="#fig-mdag_example1" class="quarto-xref">4 (a)</a>, <a href="#fig-sdag_example1" class="quarto-xref">4 (b)</a>, and SCM <a href="#fig-scm_example1" class="quarto-xref">4 (c)</a> reveals the presence of at least four of the five fundamental building blocks. The figures display multiple descendants, as indicated by pairwise relations such as <span class="math inline">\(X \rightarrow T\)</span>, <span class="math inline">\(X \rightarrow Y\)</span>, and <span class="math inline">\(T \rightarrow Y\)</span>. Additionally, the figures features multiple pairs of unconnected nodes, evident from the relations <span class="math inline">\(e_{T} \perp\!\!\!\perp e_{X}\)</span>, <span class="math inline">\(e_{T} \perp\!\!\!\perp e_{Y}\)</span>, and <span class="math inline">\(e_{X} \perp\!\!\!\perp e_{Y}\)</span>. Finally, the figures illustrate the fork <span class="math inline">\(X \rightarrow \{T,Y\}\)</span>, and two colliders with <span class="math inline">\(\{X,e_{T}\} \rightarrow T\)</span> and <span class="math inline">\(\{X,T,e_{Y}\} \rightarrow Y\)</span>.</p>
 <div id="fig-example" class="quarto-layout-panel">
 <figure class="quarto-float quarto-float-fig figure">
 <figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-fig" id="fig-example-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Figure&nbsp;2: DAGs for a plausible causal structure in a system.
+Figure&nbsp;4: DAGs for a plausible causal structure in a system.
 </figcaption>
 <div aria-describedby="fig-example-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <div class="quarto-layout-row">
@@ -779,7 +839,7 @@ Figure&nbsp;2: DAGs for a plausible causal structure in a system.
 (a) Magnified representation
 </figcaption>
 <div aria-describedby="fig-mdag_example1-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<a href="images/figures/mdag_example1.png" class="lightbox" data-gallery="fig-example" title="Figure&nbsp;2&nbsp;(a): Magnified representation"><img src="images/figures/mdag_example1.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:100.0%" data-ref-parent="fig-example"></a>
+<a href="images/figures/mdag_example1.png" class="lightbox" data-gallery="fig-example" title="Figure&nbsp;4&nbsp;(a): Magnified representation"><img src="images/figures/mdag_example1.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:100.0%" data-ref-parent="fig-example"></a>
 </div>
 </figure>
 </div>
@@ -791,7 +851,7 @@ Figure&nbsp;2: DAGs for a plausible causal structure in a system.
 (b) Standard representation
 </figcaption>
 <div aria-describedby="fig-sdag_example1-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<a href="images/figures/sdag_example1.png" class="lightbox" data-gallery="fig-example" title="Figure&nbsp;2&nbsp;(b): Standard representation"><img src="images/figures/sdag_example1.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:55.0%" data-ref-parent="fig-example"></a>
+<a href="images/figures/sdag_example1.png" class="lightbox" data-gallery="fig-example" title="Figure&nbsp;4&nbsp;(b): Standard representation"><img src="images/figures/sdag_example1.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:55.0%" data-ref-parent="fig-example"></a>
 </div>
 </figure>
 </div>
@@ -821,61 +881,6 @@ Figure&nbsp;2: DAGs for a plausible causal structure in a system.
 </div>
 </figure>
 </div>
-</section>
-<section id="sec-framework-flow" class="level2" data-number="2.3">
-<h2 data-number="2.3" class="anchored" data-anchor-id="sec-framework-flow"><span class="header-section-number">2.3</span> The flow of association and causation in graphs</h2>
-<!-- 1. But what are the assumption that allow us to treat DAGs as causal structures -->
-<div id="fig-ACflow" class="quarto-float quarto-figure quarto-figure-center anchored" data-fig-align="center">
-<figure class="quarto-float quarto-float-fig figure">
-<figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-fig" id="fig-ACflow-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Figure&nbsp;3: The flow of association and causation in graphs. Extracted from <span class="citation" data-cites="Neal_2020">Neal (<a href="#ref-Neal_2020" role="doc-biblioref">2020, 31</a>)</span>
-</figcaption>
-<div aria-describedby="fig-ACflow-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<a href="images/figures/ACflow.png" class="lightbox" data-gallery="quarto-lightbox-gallery-13" title="Figure&nbsp;3: The flow of association and causation in graphs. Extracted from @Neal_2020 [pp. 31]"><img src="images/figures/ACflow.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:100.0%"></a>
-</div>
-</figure>
-</div>
-<!-- 2. What is the local markov assumption? and where does it lead? -->
-<!-- 2.1 Bayesian network factorization -->
-<!-- 3. What is the causal edges assumption? and where does it lead? -->
-<!-- 4. Combined they are known as the minimality assumption? -->
-<!-- 5. Now, what are those mysterious functions?, and how do they become statistical quantities? -->
-<!-- 6. What is the modularity assumption? and where does it lead? -->
-<!-- 6.1 the Truncated factorization -->
-<!-- 6.2 The law of counterfactuals -->
-<!-- 7. Causal mechanism -->
-<!-- 7.3 the backdoor criterion (do you need it?) -->
-<!-- 5. d-separation -->
-<!-- 5.1 Blocked path definition-->
-<!-- 6. putting it all together -->
-<!-- 6.1. Revising the building block: dependence and independence -->
-<!-- Ultimately, DAGs play the important role of identifying which variables should be controlled for to be able to estimate causal effects. -->
-<!-- Mention convenient R package daggitty to draw dags and extract the causal assumption inherent in a graph -->
-<!-- After detailing how to build graphs and what they imply, Include steps to draw dags using a motivating example -->
-<!-- point out that the disturbances are usually stochastic in nature -->
-<!-- Causal mechanism as a result of markov and minimality assumption -->
-<!-- Modularity assumption also -->
-</section>
-<section id="sec-background-where" class="level2" data-number="2.4">
-<h2 data-number="2.4" class="anchored" data-anchor-id="sec-background-where"><span class="header-section-number">2.4</span> But where does it all fit?</h2>
-<!-- The previous chapter gives graphical intuition for causal models, but it doesn’t explain how to identify causal quantities and formalize causal models. Neal -->
-<!-- 4. But how do we move from targets of inference to estimates -->
-<!-- But how can we move from heuristics and vague mathematic notation, to probabilistic causal analysis. -->
-<!-- Before tackling the main objective of this study, however, it is important to understand how researchers can move from causal estimands to statistical estimates. Causal estimands, also known as targets of inference, are the quantities that the researcher wants to estimate. Usually, these quantities are articulated through different research questions and they are depicted using the language of the Potential Outcomes framework, Neyman-Rubin causal framework [@Neyman_et_al_1990; @Rubin_1974] mathematical expectation, e.g., $E[Y_{i}(1) - Y_{i}(0)]$ indicating that a researcher is interested in estimating the *average treatment effect* (ATE) -->
-<!-- This study uses the Identification-Estimation flowchart [@McElreath_2020; @Neal_2020]. The flowchart illustrates the process of moving from a target (causal) *estimand* to a corresponding *estimate*, through identification and estimation (@fig-IEflowchart).  -->
-<!-- Initially, it defines the different targets of inference (i.e., the *estimands*), which form the basis for evaluating the reliability of the DCJ method. The targets  Subsequently, the research constructs a *scientific model* for the DCJ procedure, elucidating the causal assumptions and mechanisms underlying the system, aiding in drawing inferences about causal relationships from DCJ data. Next, the study translates the scientific model into a probabilistic statistical model (i.e., an *estimator*) to derive a *statistical estimand* for the various inference targets. Bayesian statistical methods offer an intuitive approach for the task. Finally, employing multiple simulated datasets for different combinations of the relevant assessment factors, the study generates multiple *estimates* or approximations for the statistical estimands. Notably, the statistical estimands in simulated data are known, enabling the study to assess the reliability of DCJ by evaluating the *proximity* of these estimands to the generated estimates, resembling a power analysis. -->
-<!-- In this context, identification refers to the process of moving from a (causal) *estimand* to an equivalent *statistical estimand*, and estimation refers to the process of moving from a *statistical estimand* to an *estimate*. -->
-<div id="fig-IEflow" class="quarto-float quarto-figure quarto-figure-center anchored" data-fig-align="center">
-<figure class="quarto-float quarto-float-fig figure">
-<figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-fig" id="fig-IEflow-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Figure&nbsp;4: Identification-Estimation flowchart. Extracted from <span class="citation" data-cites="Neal_2020">Neal (<a href="#ref-Neal_2020" role="doc-biblioref">2020, 32</a>)</span>
-</figcaption>
-<div aria-describedby="fig-IEflow-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<a href="images/figures/IEflow.png" class="lightbox" data-gallery="quarto-lightbox-gallery-14" title="Figure&nbsp;4: Identification-Estimation flowchart. Extracted from @Neal_2020 [pp. 32]"><img src="images/figures/IEflow.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:40.0%"></a>
-</div>
-</figure>
-</div>
-<!-- Ardmed with dags and scm, and theit probabilité implication, we can now expand on thé motivating example provided in section xx -->
 </section>
 </section>
 <section id="sec-theory" class="level1" data-number="3">
@@ -1085,9 +1090,6 @@ Gross, J., J. Yellen, and M. Anderson. 2018. <em>Graph Theory and Its Applicatio
 <div id="ref-Hernan_et_al_2020" class="csl-entry" role="listitem">
 Hernán, M., and J. Robins. 2020. <em>Causal Inference: What If</em>. 1st ed. Chapman; Hall/CRC. <a href="https://www.hsph.harvard.edu/miguel-hernan/causal-inference-book">https://www.hsph.harvard.edu/miguel-hernan/causal-inference-book</a>.
 </div>
-<div id="ref-Hitchcock_2024" class="csl-entry" role="listitem">
-Hitchcock, C. 2024. <span>“<span>Causal Models</span>.”</span> In <em>The <span>Stanford</span> Encyclopedia of Philosophy</em>, edited by Edward N. Zalta and Uri Nodelman, <span>S</span>ummer 2024. Metaphysics Research Lab, Stanford University. <a href="https://plato.stanford.edu/archives/spr2023/entries/causal-models/">https://plato.stanford.edu/archives/spr2023/entries/causal-models/</a>.
-</div>
 <div id="ref-Jones_2015" class="csl-entry" role="listitem">
 Jones, I. 2015. <span>“The Problem of Assessing Problem Solving: Can Comparative Judgement Help?”</span> <em>Educational Studies in Mathematics</em> 89 (3): 337–55. <a href="https://doi.org/10.1007/s10649-015-9607-1">https://doi.org/10.1007/s10649-015-9607-1</a>.
 </div>
@@ -1192,7 +1194,7 @@ Verhavert, S., R. Bouwer, V Donche, and S. De Maeyer. 2019. <span>“A Meta-Anal
   title = {Causes and Effects in {Dichotomous} {Comparative}
     {Judgments:} An Information-Theoretical System of Plausible
     Mechanism},
-  date = {2024-08-06},
+  date = {2024-08-07},
   langid = {en},
   abstract = {Dichotomous Comparative Judgment (DCJ) requires judges to
     compare pairs of stimuli to determine which one exhibits a higher
@@ -1221,7 +1223,7 @@ Verhavert, S., R. Bouwer, V Donche, and S. De Maeyer. 2019. <span>“A Meta-Anal
 Rivera Espejo, Jose Manuel, Tine van van Daal, Sven De De Maeyer, and
 Steven Gillis. 2024. <span>“Causes and Effects in Dichotomous
 Comparative Judgments: An Information-Theoretical System of Plausible
-Mechanism.”</span> August 6, 2024.
+Mechanism.”</span> August 7, 2024.
 </div></div></section></div></main>
 <!-- /main column -->
 <script id="quarto-html-after-body" type="application/javascript">
@@ -1645,7 +1647,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 });
 </script>
 </div> <!-- /content -->
-<script>var lightboxQuarto = GLightbox({"openEffect":"zoom","descPosition":"bottom","closeEffect":"zoom","loop":false,"selector":".lightbox"});
+<script>var lightboxQuarto = GLightbox({"selector":".lightbox","openEffect":"zoom","closeEffect":"zoom","descPosition":"bottom","loop":false});
 (function() {
   let previousOnload = window.onload;
   window.onload = () => {

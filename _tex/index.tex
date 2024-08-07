@@ -356,13 +356,14 @@ However, the structural approach offers an additional key advantage over
 the potential outcomes approach: it enables the graphical representation
 of any system through directed acyclic graphs
 \citep[DAG,][]{Gross_et_al_2018, Neal_2020}. DAGs serve as heuristics,
-effectively conveying the assumed causal structure of a system. A
-heuristic is a strategy that simplifies information to make decisions
-more quickly, efficiently, and sometimes more accurately than complex
-methods \citep{Chow_2015}. Consequently, DAGs do not represent detailed
-statistical models but allow researchers to deduce which statistical
-models can provide valid causal inferences, assuming the causal
-structure depicted in the DAGs are accurate \citep{McElreath_2020}.
+effectively conveying the assumed causal structure of a system
+\citep{Pearl_et_al_2016}. A heuristic is a strategy that simplifies
+information to make decisions more quickly, efficiently, and sometimes
+more accurately than complex methods \citep{Chow_2015}. Consequently,
+DAGs do not represent detailed statistical models but allow researchers
+to deduce which statistical models can provide valid causal inferences,
+assuming the causal structure depicted in the DAGs are accurate
+\citep{McElreath_2020}.
 
 \subsection{DAGs and SCMs}\label{sec-framework-dag}
 
@@ -384,63 +385,26 @@ term \emph{directed} indicates the edges of the graph extend from one
 node to another, with arrows showing the direction of causal influence.
 Moreover, the term \emph{acyclic} indicates the causal influences do not
 form a loop, meaning the influences do not cycle back on themselves
-\citep{McElreath_2020}.
+\citep{McElreath_2020}. Several examples of DAGs can be found in
+Figure~\ref{fig-dags_scms}.
 
-DAGs offer two key advantages for modeling causality. Firstly, DAGs
-represent causal relations in a nonparametric and fully interactive
-manner. This feature implies that feasible causal analysis strategies
-usually do not require specifying the type of data or the nature of the
-functional dependence among variables \citep{Morgan_et_al_2014}.
+DAGs offer two key advantages for modeling causal structures. Firstly,
+they represent causal relations in a nonparametric and fully interactive
+manner. This feature allows for feasible causal analysis strategies
+without needing the specification of the type of data or the nature of
+the functional dependence among variables \citep{Morgan_et_al_2014}.
 Secondly, regardless of complexity, DAGs can represent various causal
 structures using only five fundamental building blocks
-\citep{Neal_2020, McElreath_2020}. This further implies that to
-understand the causal assumptions of a complex system, one can decompose
-a structure into these basic building blocks and analyze the causal
-assumptions associated with each block individually
-\citep{McElreath_2020}. Importantly, these building blocks can be
-represented in three ways: the magnified representation, the standard
-representation, and the structural causal model form
-\citep[SCM,][]{Morgan_et_al_2014}.
-
-The left panels of Figure~\ref{fig-dags_scms} illustrate the
-\emph{magnified} representation. These graphs depict the
-\emph{endogenous} variables \(V=\{X,Z,Y\}\) alongside the
-\emph{exogenous} variables \(E=\{e_{X},e_{Z},e_{Y}\}\). Endogenous
-variables are those whose causal mechanisms the investigator chooses to
-model \citep{Neal_2020}. In contrast, exogenous variables represent
-\emph{errors} or \emph{disturbances} arising from omitted factors that
-the investigator chooses not to model explicitly
-\citep[27,68]{Pearl_2009}. The graphs show endogenous variables as solid
-black circles to signify that they are observed random variables, while
-endogenous variables are depicted as open circles to signify their
-unobserved (latent) nature. Lastly, the arrows in the graphs reflect the
-expected direction of causal influences among these variables.
-
-Often, the DAGs omit the exogenous variables for simplicity, resulting
-in the \emph{standard} representation. However, including exogenous
-variables in a graph can be beneficial in some scenarios, as their
-presence can reveal potential issues related to conditioning and
-confounding \citep{Cinelli_et_al_2020}, concepts explored in the
-following section. The standard representation is illustrated in the
-middle panels of Figure~\ref{fig-dags_scms}.
+\citep{Neal_2020, McElreath_2020}. This feature enables the
+decomposition of complex structures into basic building blocks,
+facilitating the analysis of these structures by focusing on the causal
+assumptions associated with each building block individually
+\citep{McElreath_2020}. These building blocks can be represented in
+three ways: the magnified representation, the standard representation,
+and the structural causal model form \citep[SCM,][]{Morgan_et_al_2014}.
 
 \newcommand{\dsep}{\perp\!\!\!\perp}
 \newcommand{\ndsep}{\not\!\perp\!\!\!\perp}
-
-Lastly, the right panels of Figure~\ref{fig-dags_scms} depict the SCM
-form of the five fundamental building blocks. SCMs are formal
-mathematical models that represent causal relationships within a system
-or population \citep{Hitchcock_2024}. An SCM is defined by a set of
-endogenous variables \(V\), a set of exogenous variables \(E\), and a
-set of functions \(F=\{f_{X},f_{Z},f_{Y}\}\)
-\citep{Pearl_2009, Neal_2020}. These functions, referred to as
-structural equations, specify each endogenous variable as nonparametric
-functions of other variables. Moreover, SCMs use the symbol `\(:=\)' to
-indicate the variables' asymmetrical causal dependence and the symbol
-`\(\perp\!\!\!\perp\)' to represent \emph{d-separation}, which roughly
-equates to the concept of variable independence. The concepts of
-d-separation and causal (in)dependence are explored in the following
-section.
 
 \begin{figure}
 
@@ -670,6 +634,41 @@ show their corresponding SCM form.}
 
 \end{figure}%
 
+The left panels of Figure~\ref{fig-dags_scms} illustrate the
+\emph{magnified} representation. These graphs depict the
+\emph{endogenous} variables \(V=\{X,Z,Y\}\) alongside the
+\emph{exogenous} variables \(E=\{e_{X},e_{Z},e_{Y}\}\). Endogenous
+variables are those whose causal mechanisms the investigator chooses to
+model \citep{Neal_2020}. In contrast, exogenous variables represent
+\emph{errors} or \emph{disturbances} arising from omitted factors that
+the investigator chooses not to model explicitly
+\citep[27,68]{Pearl_2009}. The graphs show endogenous variables as solid
+black circles to signify that they are observed random variables, while
+endogenous variables are depicted as open circles to signify their
+unobserved (latent) nature. Lastly, the arrows in the graphs reflect the
+expected direction of causal influences among these variables.
+
+Often, DAGs omit the exogenous variables for simplicity, resulting in
+the \emph{standard} representation. However, including exogenous
+variables in a graph can be beneficial in some scenarios, as their
+presence can reveal potential issues related to conditioning and
+confounding \citep{Cinelli_et_al_2020}, concepts explored in the
+following section. The standard representation is illustrated in the
+middle panels of Figure~\ref{fig-dags_scms}.
+
+Lastly, the right panels of Figure~\ref{fig-dags_scms} depict the SCM
+form of the fundamental building blocks. SCMs are formal mathematical
+models defined by a set of endogenous variables \(V\), a set of
+exogenous variables \(E\), and a set of functions
+\(F=\{f_{X},f_{Z},f_{Y}\}\) \citep{Pearl_2009, Neal_2020}. These
+functions, referred to as structural equations, specify each endogenous
+variable as nonparametric functions of other variables. Moreover, SCMs
+use the symbol `\(:=\)' to indicate the variables' asymmetrical causal
+dependence and the symbol `\(\perp\!\!\!\perp\)' to represent
+\emph{d-separation}, which roughly equates to the concept of variable
+independence. The concepts of d-separation and causal (in)dependence are
+explored in the following section.
+
 A careful examination of Figure~\ref{fig-dags_scms} highlights the
 assumptions underlying these building blocks. Figures
 \ref{fig-mdag_bb1}, \ref{fig-sdag_bb1}, and SCM \ref{fig-scm_bb1} depict
@@ -682,20 +681,52 @@ considered a \emph{descendant} of \(X\). Figures \ref{fig-mdag_bb3},
 \ref{fig-sdag_bb3}, and SCM \ref{fig-scm_bb3} depict a \emph{chain} or
 \emph{pipe}, where \(X\) influences \(Z\), and \(Z\) influences \(Y\).
 In this configuration, \(X\) is a parent node of \(Z\), and \(Z\) is a
-parent node of \(Y\). Furthermore, the DAGs show that \(X\) is an
-\emph{ancestor} of \(Y\) and that \(Z\) fully \emph{mediates} the
-relationship between these variables. Figures \ref{fig-mdag_bb4},
-\ref{fig-sdag_bb4}, and SCM \ref{fig-scm_bb4} illustrate a \emph{fork},
-where variables \(X\) and \(Y\) are both influenced by \(Z\). Here,
-\(Z\) is a parent node of \(X\) and \(Y\). Finally, Figures
-\ref{fig-mdag_bb5}, \ref{fig-sdag_bb5}, SCM \ref{fig-scm_bb5} depict a
-\emph{collider}, also known as \emph{inmorality}, where variables \(X\)
-and \(Y\) are concurrent causes of \(Z\). In this configuration, \(X\)
-and \(Y\) are not causally related to each other but both influence
-\(Z\). Additionally, in all SCMs, the errors are assumed to be mutually
-independent of each other and of all other variables in the graph, as
-evidenced by the pairwise relations \(e_{X} \perp\!\!\!\perp e_{Y}\),
+parent node of \(Y\). This creates a \emph{directed path} between \(X\)
+and \(Y\). Consequently, \(X\) is an \emph{ancestor} of \(Y\), and \(Z\)
+fully \emph{mediates} the relationship between the two. Figures
+\ref{fig-mdag_bb4}, \ref{fig-sdag_bb4}, and SCM \ref{fig-scm_bb4}
+illustrate a \emph{fork}, where variables \(X\) and \(Y\) are both
+influenced by \(Z\). Here, \(Z\) is a parent node of \(X\) and \(Y\).
+Finally, Figures \ref{fig-mdag_bb5}, \ref{fig-sdag_bb5}, SCM
+\ref{fig-scm_bb5} depict a \emph{collider}, also known as
+\emph{inmorality}, where variables \(X\) and \(Y\) are concurrent causes
+of \(Z\). In this configuration, \(X\) and \(Y\) are not causally
+related to each other but both influence \(Z\). Additionally, in all
+SCMs, the errors are assumed to be mutually independent of each other
+and of all other variables in the graph, as evidenced by the pairwise
+relations \(e_{X} \perp\!\!\!\perp e_{Y}\),
 \(e_{X} \perp\!\!\!\perp e_{Z}\), and \(e_{Z} \perp\!\!\!\perp e_{Y}\).
+
+\subsection{The flow of association and causation in
+graphs}\label{sec-framework-flow}
+
+\begin{figure}
+
+\centering{
+
+\includegraphics[width=0.4\textwidth,height=\textheight]{images/figures/IEflow.png}
+
+}
+
+\caption{\label{fig-IEflow}Identification-Estimation flowchart.
+Extracted from \citet[32]{Neal_2020}}
+
+\end{figure}%
+
+\begin{figure}
+
+\centering{
+
+\includegraphics[width=0.9\textwidth,height=\textheight]{images/figures/ACflow.png}
+
+}
+
+\caption{\label{fig-ACflow}The flow of association and causation in
+graphs. Extracted from \citet[31]{Neal_2020}}
+
+\end{figure}%
+
+\subsection{A motivating example}\label{sec-framework-example}
 
 Given the heuristic nature of DAGs, a motivating example can help
 clarify how to use the five fundamental building blocks to construct the
@@ -775,37 +806,6 @@ fork \(X \rightarrow \{T,Y\}\), and two colliders with
 
 \caption{\label{fig-example}DAGs for a plausible causal structure in a
 system.}
-
-\end{figure}%
-
-\subsection{The flow of association and causation in
-graphs}\label{sec-framework-flow}
-
-\begin{figure}
-
-\centering{
-
-\includegraphics[width=1\textwidth,height=\textheight]{images/figures/ACflow.png}
-
-}
-
-\caption{\label{fig-ACflow}The flow of association and causation in
-graphs. Extracted from \citet[31]{Neal_2020}}
-
-\end{figure}%
-
-\subsection{But where does it all fit?}\label{sec-background-where}
-
-\begin{figure}
-
-\centering{
-
-\includegraphics[width=0.4\textwidth,height=\textheight]{images/figures/IEflow.png}
-
-}
-
-\caption{\label{fig-IEflow}Identification-Estimation flowchart.
-Extracted from \citet[32]{Neal_2020}}
 
 \end{figure}%
 

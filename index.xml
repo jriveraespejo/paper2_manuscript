@@ -199,10 +199,10 @@ sciences</institution>
 <corresp id="cor-1">JoseManuel.RiveraEspejo@uantwerpen.be</corresp>
 </author-notes>
 
-<pub-date date-type="pub" publication-format="electronic" iso-8601-date="2024-08-06">
+<pub-date date-type="pub" publication-format="electronic" iso-8601-date="2024-08-07">
 <year>2024</year>
 <month>8</month>
-<day>6</day>
+<day>7</day>
 </pub-date>
 
 
@@ -496,7 +496,9 @@ the University of Antwerp (BOF).</funding-statement>
     Yellen, and Anderson 2018</xref>;
     <xref alt="Neal 2020" rid="ref-Neal_2020" ref-type="bibr">Neal
     2020</xref>). DAGs serve as heuristics, effectively conveying the
-    assumed causal structure of a system. A heuristic is a strategy that
+    assumed causal structure of a system
+    (<xref alt="Pearl, Glymour, and Jewell 2016" rid="ref-Pearl_et_al_2016" ref-type="bibr">Pearl,
+    Glymour, and Jewell 2016</xref>). A heuristic is a strategy that
     simplifies information to make decisions more quickly, efficiently,
     and sometimes more accurately than complex methods
     (<xref alt="Chow 2015" rid="ref-Chow_2015" ref-type="bibr">Chow
@@ -532,11 +534,12 @@ the University of Antwerp (BOF).</funding-statement>
     <italic>acyclic</italic> indicates the causal influences do not form
     a loop, meaning the influences do not cycle back on themselves
     (<xref alt="McElreath 2020" rid="ref-McElreath_2020" ref-type="bibr">McElreath
-    2020</xref>).</p>
-    <p>DAGs offer two key advantages for modeling causality. Firstly,
-    DAGs represent causal relations in a nonparametric and fully
-    interactive manner. This feature implies that feasible causal
-    analysis strategies usually do not require specifying the type of
+    2020</xref>). Several examples of DAGs can be found in
+    <xref alt="Figure 1" rid="fig-dags_scms">Figure 1</xref>.</p>
+    <p>DAGs offer two key advantages for modeling causal structures.
+    Firstly, they represent causal relations in a nonparametric and
+    fully interactive manner. This feature allows for feasible causal
+    analysis strategies without needing the specification of the type of
     data or the nature of the functional dependence among variables
     (<xref alt="Morgan and Winship 2014" rid="ref-Morgan_et_al_2014" ref-type="bibr">Morgan
     and Winship 2014</xref>). Secondly, regardless of complexity, DAGs
@@ -545,83 +548,16 @@ the University of Antwerp (BOF).</funding-statement>
     (<xref alt="Neal 2020" rid="ref-Neal_2020" ref-type="bibr">Neal
     2020</xref>;
     <xref alt="McElreath 2020" rid="ref-McElreath_2020" ref-type="bibr">McElreath
-    2020</xref>). This further implies that to understand the causal
-    assumptions of a complex system, one can decompose a structure into
-    these basic building blocks and analyze the causal assumptions
-    associated with each block individually
+    2020</xref>). This feature enables the decomposition of complex
+    structures into basic building blocks, facilitating the analysis of
+    these structures by focusing on the causal assumptions associated
+    with each building block individually
     (<xref alt="McElreath 2020" rid="ref-McElreath_2020" ref-type="bibr">McElreath
-    2020</xref>). Importantly, these building blocks can be represented
-    in three ways: the magnified representation, the standard
-    representation, and the structural causal model form (SCM,
+    2020</xref>). These building blocks can be represented in three
+    ways: the magnified representation, the standard representation, and
+    the structural causal model form (SCM,
     <xref alt="Morgan and Winship 2014" rid="ref-Morgan_et_al_2014" ref-type="bibr">Morgan
     and Winship 2014</xref>).</p>
-    <p>The left panels of
-    <xref alt="Figure 1" rid="fig-dags_scms">Figure 1</xref> illustrate
-    the <italic>magnified</italic> representation. These graphs depict
-    the <italic>endogenous</italic> variables
-    <inline-formula><alternatives>
-    <tex-math><![CDATA[V=\{X,Z,Y\}]]></tex-math>
-    <mml:math display="inline" xmlns:mml="http://www.w3.org/1998/Math/MathML"><mml:mrow><mml:mi>V</mml:mi><mml:mo>=</mml:mo><mml:mo stretchy="false" form="prefix">{</mml:mo><mml:mi>X</mml:mi><mml:mo>,</mml:mo><mml:mi>Z</mml:mi><mml:mo>,</mml:mo><mml:mi>Y</mml:mi><mml:mo stretchy="false" form="postfix">}</mml:mo></mml:mrow></mml:math></alternatives></inline-formula>
-    alongside the <italic>exogenous</italic> variables
-    <inline-formula><alternatives>
-    <tex-math><![CDATA[E=\{e_{X},e_{Z},e_{Y}\}]]></tex-math>
-    <mml:math display="inline" xmlns:mml="http://www.w3.org/1998/Math/MathML"><mml:mrow><mml:mi>E</mml:mi><mml:mo>=</mml:mo><mml:mo stretchy="false" form="prefix">{</mml:mo><mml:msub><mml:mi>e</mml:mi><mml:mi>X</mml:mi></mml:msub><mml:mo>,</mml:mo><mml:msub><mml:mi>e</mml:mi><mml:mi>Z</mml:mi></mml:msub><mml:mo>,</mml:mo><mml:msub><mml:mi>e</mml:mi><mml:mi>Y</mml:mi></mml:msub><mml:mo stretchy="false" form="postfix">}</mml:mo></mml:mrow></mml:math></alternatives></inline-formula>.
-    Endogenous variables are those whose causal mechanisms the
-    investigator chooses to model
-    (<xref alt="Neal 2020" rid="ref-Neal_2020" ref-type="bibr">Neal
-    2020</xref>). In contrast, exogenous variables represent
-    <italic>errors</italic> or <italic>disturbances</italic> arising
-    from omitted factors that the investigator chooses not to model
-    explicitly
-    (<xref alt="Pearl 2009, 27, 68" rid="ref-Pearl_2009" ref-type="bibr">Pearl
-    2009, 27, 68</xref>). The graphs show endogenous variables as solid
-    black circles to signify that they are observed random variables,
-    while endogenous variables are depicted as open circles to signify
-    their unobserved (latent) nature. Lastly, the arrows in the graphs
-    reflect the expected direction of causal influences among these
-    variables.</p>
-    <p>Often, the DAGs omit the exogenous variables for simplicity,
-    resulting in the <italic>standard</italic> representation. However,
-    including exogenous variables in a graph can be beneficial in some
-    scenarios, as their presence can reveal potential issues related to
-    conditioning and confounding
-    (<xref alt="Cinelli, Forney, and Pearl 2020" rid="ref-Cinelli_et_al_2020" ref-type="bibr">Cinelli,
-    Forney, and Pearl 2020</xref>), concepts explored in the following
-    section. The standard representation is illustrated in the middle
-    panels of
-    <xref alt="Figure 1" rid="fig-dags_scms">Figure 1</xref>.</p>
-    <p>Lastly, the right panels of
-    <xref alt="Figure 1" rid="fig-dags_scms">Figure 1</xref> depict the
-    SCM form of the five fundamental building blocks. SCMs are formal
-    mathematical models that represent causal relationships within a
-    system or population
-    (<xref alt="Hitchcock 2024" rid="ref-Hitchcock_2024" ref-type="bibr">Hitchcock
-    2024</xref>). An SCM is defined by a set of endogenous variables
-    <inline-formula><alternatives>
-    <tex-math><![CDATA[V]]></tex-math>
-    <mml:math display="inline" xmlns:mml="http://www.w3.org/1998/Math/MathML"><mml:mi>V</mml:mi></mml:math></alternatives></inline-formula>,
-    a set of exogenous variables <inline-formula><alternatives>
-    <tex-math><![CDATA[E]]></tex-math>
-    <mml:math display="inline" xmlns:mml="http://www.w3.org/1998/Math/MathML"><mml:mi>E</mml:mi></mml:math></alternatives></inline-formula>,
-    and a set of functions <inline-formula><alternatives>
-    <tex-math><![CDATA[F=\{f_{X},f_{Z},f_{Y}\}]]></tex-math>
-    <mml:math display="inline" xmlns:mml="http://www.w3.org/1998/Math/MathML"><mml:mrow><mml:mi>F</mml:mi><mml:mo>=</mml:mo><mml:mo stretchy="false" form="prefix">{</mml:mo><mml:msub><mml:mi>f</mml:mi><mml:mi>X</mml:mi></mml:msub><mml:mo>,</mml:mo><mml:msub><mml:mi>f</mml:mi><mml:mi>Z</mml:mi></mml:msub><mml:mo>,</mml:mo><mml:msub><mml:mi>f</mml:mi><mml:mi>Y</mml:mi></mml:msub><mml:mo stretchy="false" form="postfix">}</mml:mo></mml:mrow></mml:math></alternatives></inline-formula>
-    (<xref alt="Pearl 2009" rid="ref-Pearl_2009" ref-type="bibr">Pearl
-    2009</xref>;
-    <xref alt="Neal 2020" rid="ref-Neal_2020" ref-type="bibr">Neal
-    2020</xref>). These functions, referred to as structural equations,
-    specify each endogenous variable as nonparametric functions of other
-    variables. Moreover, SCMs use the symbol
-    ‘<inline-formula><alternatives>
-    <tex-math><![CDATA[:=]]></tex-math>
-    <mml:math display="inline" xmlns:mml="http://www.w3.org/1998/Math/MathML"><mml:mo>:=</mml:mo></mml:math></alternatives></inline-formula>’
-    to indicate the variables’ asymmetrical causal dependence and the
-    symbol ‘<inline-formula><alternatives>
-    <tex-math><![CDATA[\perp\!\!\!\perp]]></tex-math>
-    <mml:math display="inline" xmlns:mml="http://www.w3.org/1998/Math/MathML"><mml:mrow><mml:mo>⊥</mml:mo><mml:mspace width="-0.167em"></mml:mspace><mml:mspace width="-0.167em"></mml:mspace><mml:mspace width="-0.167em"></mml:mspace><mml:mo>⊥</mml:mo></mml:mrow></mml:math></alternatives></inline-formula>’
-    to represent <italic>d-separation</italic>, which roughly equates to
-    the concept of variable independence. The concepts of d-separation
-    and causal (in)dependence are explored in the following section.</p>
     <fig id="fig-dags_scms">
       <caption><p>Figure 1: The five fundamental building blocks of
       DAGs. <bold>Note:</bold> left panels show the magnified
@@ -866,6 +802,70 @@ the University of Antwerp (BOF).</funding-statement>
         </table>
       </table-wrap>
     </fig>
+    <p>The left panels of
+    <xref alt="Figure 1" rid="fig-dags_scms">Figure 1</xref> illustrate
+    the <italic>magnified</italic> representation. These graphs depict
+    the <italic>endogenous</italic> variables
+    <inline-formula><alternatives>
+    <tex-math><![CDATA[V=\{X,Z,Y\}]]></tex-math>
+    <mml:math display="inline" xmlns:mml="http://www.w3.org/1998/Math/MathML"><mml:mrow><mml:mi>V</mml:mi><mml:mo>=</mml:mo><mml:mo stretchy="false" form="prefix">{</mml:mo><mml:mi>X</mml:mi><mml:mo>,</mml:mo><mml:mi>Z</mml:mi><mml:mo>,</mml:mo><mml:mi>Y</mml:mi><mml:mo stretchy="false" form="postfix">}</mml:mo></mml:mrow></mml:math></alternatives></inline-formula>
+    alongside the <italic>exogenous</italic> variables
+    <inline-formula><alternatives>
+    <tex-math><![CDATA[E=\{e_{X},e_{Z},e_{Y}\}]]></tex-math>
+    <mml:math display="inline" xmlns:mml="http://www.w3.org/1998/Math/MathML"><mml:mrow><mml:mi>E</mml:mi><mml:mo>=</mml:mo><mml:mo stretchy="false" form="prefix">{</mml:mo><mml:msub><mml:mi>e</mml:mi><mml:mi>X</mml:mi></mml:msub><mml:mo>,</mml:mo><mml:msub><mml:mi>e</mml:mi><mml:mi>Z</mml:mi></mml:msub><mml:mo>,</mml:mo><mml:msub><mml:mi>e</mml:mi><mml:mi>Y</mml:mi></mml:msub><mml:mo stretchy="false" form="postfix">}</mml:mo></mml:mrow></mml:math></alternatives></inline-formula>.
+    Endogenous variables are those whose causal mechanisms the
+    investigator chooses to model
+    (<xref alt="Neal 2020" rid="ref-Neal_2020" ref-type="bibr">Neal
+    2020</xref>). In contrast, exogenous variables represent
+    <italic>errors</italic> or <italic>disturbances</italic> arising
+    from omitted factors that the investigator chooses not to model
+    explicitly
+    (<xref alt="Pearl 2009, 27, 68" rid="ref-Pearl_2009" ref-type="bibr">Pearl
+    2009, 27, 68</xref>). The graphs show endogenous variables as solid
+    black circles to signify that they are observed random variables,
+    while endogenous variables are depicted as open circles to signify
+    their unobserved (latent) nature. Lastly, the arrows in the graphs
+    reflect the expected direction of causal influences among these
+    variables.</p>
+    <p>Often, DAGs omit the exogenous variables for simplicity,
+    resulting in the <italic>standard</italic> representation. However,
+    including exogenous variables in a graph can be beneficial in some
+    scenarios, as their presence can reveal potential issues related to
+    conditioning and confounding
+    (<xref alt="Cinelli, Forney, and Pearl 2020" rid="ref-Cinelli_et_al_2020" ref-type="bibr">Cinelli,
+    Forney, and Pearl 2020</xref>), concepts explored in the following
+    section. The standard representation is illustrated in the middle
+    panels of
+    <xref alt="Figure 1" rid="fig-dags_scms">Figure 1</xref>.</p>
+    <p>Lastly, the right panels of
+    <xref alt="Figure 1" rid="fig-dags_scms">Figure 1</xref> depict the
+    SCM form of the fundamental building blocks. SCMs are formal
+    mathematical models defined by a set of endogenous variables
+    <inline-formula><alternatives>
+    <tex-math><![CDATA[V]]></tex-math>
+    <mml:math display="inline" xmlns:mml="http://www.w3.org/1998/Math/MathML"><mml:mi>V</mml:mi></mml:math></alternatives></inline-formula>,
+    a set of exogenous variables <inline-formula><alternatives>
+    <tex-math><![CDATA[E]]></tex-math>
+    <mml:math display="inline" xmlns:mml="http://www.w3.org/1998/Math/MathML"><mml:mi>E</mml:mi></mml:math></alternatives></inline-formula>,
+    and a set of functions <inline-formula><alternatives>
+    <tex-math><![CDATA[F=\{f_{X},f_{Z},f_{Y}\}]]></tex-math>
+    <mml:math display="inline" xmlns:mml="http://www.w3.org/1998/Math/MathML"><mml:mrow><mml:mi>F</mml:mi><mml:mo>=</mml:mo><mml:mo stretchy="false" form="prefix">{</mml:mo><mml:msub><mml:mi>f</mml:mi><mml:mi>X</mml:mi></mml:msub><mml:mo>,</mml:mo><mml:msub><mml:mi>f</mml:mi><mml:mi>Z</mml:mi></mml:msub><mml:mo>,</mml:mo><mml:msub><mml:mi>f</mml:mi><mml:mi>Y</mml:mi></mml:msub><mml:mo stretchy="false" form="postfix">}</mml:mo></mml:mrow></mml:math></alternatives></inline-formula>
+    (<xref alt="Pearl 2009" rid="ref-Pearl_2009" ref-type="bibr">Pearl
+    2009</xref>;
+    <xref alt="Neal 2020" rid="ref-Neal_2020" ref-type="bibr">Neal
+    2020</xref>). These functions, referred to as structural equations,
+    specify each endogenous variable as nonparametric functions of other
+    variables. Moreover, SCMs use the symbol
+    ‘<inline-formula><alternatives>
+    <tex-math><![CDATA[:=]]></tex-math>
+    <mml:math display="inline" xmlns:mml="http://www.w3.org/1998/Math/MathML"><mml:mo>:=</mml:mo></mml:math></alternatives></inline-formula>’
+    to indicate the variables’ asymmetrical causal dependence and the
+    symbol ‘<inline-formula><alternatives>
+    <tex-math><![CDATA[\perp\!\!\!\perp]]></tex-math>
+    <mml:math display="inline" xmlns:mml="http://www.w3.org/1998/Math/MathML"><mml:mrow><mml:mo>⊥</mml:mo><mml:mspace width="-0.167em"></mml:mspace><mml:mspace width="-0.167em"></mml:mspace><mml:mspace width="-0.167em"></mml:mspace><mml:mo>⊥</mml:mo></mml:mrow></mml:math></alternatives></inline-formula>’
+    to represent <italic>d-separation</italic>, which roughly equates to
+    the concept of variable independence. The concepts of d-separation
+    and causal (in)dependence are explored in the following section.</p>
     <p>A careful examination of
     <xref alt="Figure 1" rid="fig-dags_scms">Figure 1</xref> highlights
     the assumptions underlying these building blocks. Figures
@@ -926,19 +926,26 @@ the University of Antwerp (BOF).</funding-statement>
     is a parent node of <inline-formula><alternatives>
     <tex-math><![CDATA[Y]]></tex-math>
     <mml:math display="inline" xmlns:mml="http://www.w3.org/1998/Math/MathML"><mml:mi>Y</mml:mi></mml:math></alternatives></inline-formula>.
-    Furthermore, the DAGs show that <inline-formula><alternatives>
+    This creates a <italic>directed path</italic> between
+    <inline-formula><alternatives>
+    <tex-math><![CDATA[X]]></tex-math>
+    <mml:math display="inline" xmlns:mml="http://www.w3.org/1998/Math/MathML"><mml:mi>X</mml:mi></mml:math></alternatives></inline-formula>
+    and <inline-formula><alternatives>
+    <tex-math><![CDATA[Y]]></tex-math>
+    <mml:math display="inline" xmlns:mml="http://www.w3.org/1998/Math/MathML"><mml:mi>Y</mml:mi></mml:math></alternatives></inline-formula>.
+    Consequently, <inline-formula><alternatives>
     <tex-math><![CDATA[X]]></tex-math>
     <mml:math display="inline" xmlns:mml="http://www.w3.org/1998/Math/MathML"><mml:mi>X</mml:mi></mml:math></alternatives></inline-formula>
     is an <italic>ancestor</italic> of <inline-formula><alternatives>
     <tex-math><![CDATA[Y]]></tex-math>
-    <mml:math display="inline" xmlns:mml="http://www.w3.org/1998/Math/MathML"><mml:mi>Y</mml:mi></mml:math></alternatives></inline-formula>
-    and that <inline-formula><alternatives>
+    <mml:math display="inline" xmlns:mml="http://www.w3.org/1998/Math/MathML"><mml:mi>Y</mml:mi></mml:math></alternatives></inline-formula>,
+    and <inline-formula><alternatives>
     <tex-math><![CDATA[Z]]></tex-math>
     <mml:math display="inline" xmlns:mml="http://www.w3.org/1998/Math/MathML"><mml:mi>Z</mml:mi></mml:math></alternatives></inline-formula>
-    fully <italic>mediates</italic> the relationship between these
-    variables. Figures <xref alt="1 (j)" rid="fig-mdag_bb4">1
-    (j)</xref>, <xref alt="1 (k)" rid="fig-sdag_bb4">1 (k)</xref>, and
-    SCM <xref alt="1 (l)" rid="fig-scm_bb4">1 (l)</xref> illustrate a
+    fully <italic>mediates</italic> the relationship between the two.
+    Figures <xref alt="1 (j)" rid="fig-mdag_bb4">1 (j)</xref>,
+    <xref alt="1 (k)" rid="fig-sdag_bb4">1 (k)</xref>, and SCM
+    <xref alt="1 (l)" rid="fig-scm_bb4">1 (l)</xref> illustrate a
     <italic>fork</italic>, where variables
     <inline-formula><alternatives>
     <tex-math><![CDATA[X]]></tex-math>
@@ -994,6 +1001,26 @@ the University of Antwerp (BOF).</funding-statement>
     and <inline-formula><alternatives>
     <tex-math><![CDATA[e_{Z} \perp\!\!\!\perp e_{Y}]]></tex-math>
     <mml:math display="inline" xmlns:mml="http://www.w3.org/1998/Math/MathML"><mml:mrow><mml:msub><mml:mi>e</mml:mi><mml:mi>Z</mml:mi></mml:msub><mml:mo>⊥</mml:mo><mml:mspace width="-0.167em"></mml:mspace><mml:mspace width="-0.167em"></mml:mspace><mml:mspace width="-0.167em"></mml:mspace><mml:mo>⊥</mml:mo><mml:msub><mml:mi>e</mml:mi><mml:mi>Y</mml:mi></mml:msub></mml:mrow></mml:math></alternatives></inline-formula>.</p>
+  </sec>
+  <sec id="sec-framework-flow">
+    <title>The flow of association and causation in graphs</title>
+    <fig id="fig-IEflow">
+      <caption><p>Figure 2: Identification-Estimation flowchart.
+      Extracted from Neal
+      (<xref alt="2020, 32" rid="ref-Neal_2020" ref-type="bibr">2020,
+      32</xref>)</p></caption>
+      <graphic mimetype="image" mime-subtype="png" xlink:href="images/figures/IEflow.png" />
+    </fig>
+    <fig id="fig-ACflow">
+      <caption><p>Figure 3: The flow of association and causation in
+      graphs. Extracted from Neal
+      (<xref alt="2020, 31" rid="ref-Neal_2020" ref-type="bibr">2020,
+      31</xref>)</p></caption>
+      <graphic mimetype="image" mime-subtype="png" xlink:href="images/figures/ACflow.png" />
+    </fig>
+  </sec>
+  <sec id="sec-framework-example">
+    <title>A motivating example</title>
     <p>Given the heuristic nature of DAGs, a motivating example can help
     clarify how to use the five fundamental building blocks to construct
     the causal structure of a system. Consider a research problem where
@@ -1042,12 +1069,12 @@ the University of Antwerp (BOF).</funding-statement>
     indicating the child’s hearing status.
     <styled-content style="color:blue;">(not a bad example, but I prefer
     one using writing skills)</styled-content></p>
-    <p><xref alt="Figure 2" rid="fig-example">Figure 2</xref>
+    <p><xref alt="Figure 4" rid="fig-example">Figure 4</xref>
     illustrates the plausible causal structure of the motivating
     example. A detailed examination of Figures
-    <xref alt="2 (a)" rid="fig-mdag_example1">2 (a)</xref>,
-    <xref alt="2 (b)" rid="fig-sdag_example1">2 (b)</xref>, and SCM
-    <xref alt="2 (c)" rid="fig-scm_example1">2 (c)</xref> reveals the
+    <xref alt="4 (a)" rid="fig-mdag_example1">4 (a)</xref>,
+    <xref alt="4 (b)" rid="fig-sdag_example1">4 (b)</xref>, and SCM
+    <xref alt="4 (c)" rid="fig-scm_example1">4 (c)</xref> reveals the
     presence of at least four of the five fundamental building blocks.
     The figures display multiple descendants, as indicated by pairwise
     relations such as <inline-formula><alternatives>
@@ -1080,7 +1107,7 @@ the University of Antwerp (BOF).</funding-statement>
     <tex-math><![CDATA[\{X,T,e_{Y}\} \rightarrow Y]]></tex-math>
     <mml:math display="inline" xmlns:mml="http://www.w3.org/1998/Math/MathML"><mml:mrow><mml:mo stretchy="false" form="prefix">{</mml:mo><mml:mi>X</mml:mi><mml:mo>,</mml:mo><mml:mi>T</mml:mi><mml:mo>,</mml:mo><mml:msub><mml:mi>e</mml:mi><mml:mi>Y</mml:mi></mml:msub><mml:mo stretchy="false" form="postfix">}</mml:mo><mml:mo>→</mml:mo><mml:mi>Y</mml:mi></mml:mrow></mml:math></alternatives></inline-formula>.</p>
     <fig id="fig-example">
-      <caption><p>Figure 2: DAGs for a plausible causal structure in a
+      <caption><p>Figure 4: DAGs for a plausible causal structure in a
       system.</p></caption>
       <table-wrap>
         <table>
@@ -1133,26 +1160,6 @@ the University of Antwerp (BOF).</funding-statement>
           </tbody>
         </table>
       </table-wrap>
-    </fig>
-  </sec>
-  <sec id="sec-framework-flow">
-    <title>The flow of association and causation in graphs</title>
-    <fig id="fig-ACflow">
-      <caption><p>Figure 3: The flow of association and causation in
-      graphs. Extracted from Neal
-      (<xref alt="2020, 31" rid="ref-Neal_2020" ref-type="bibr">2020,
-      31</xref>)</p></caption>
-      <graphic mimetype="image" mime-subtype="png" xlink:href="images/figures/ACflow.png" />
-    </fig>
-  </sec>
-  <sec id="sec-background-where">
-    <title>But where does it all fit?</title>
-    <fig id="fig-IEflow">
-      <caption><p>Figure 4: Identification-Estimation flowchart.
-      Extracted from Neal
-      (<xref alt="2020, 32" rid="ref-Neal_2020" ref-type="bibr">2020,
-      32</xref>)</p></caption>
-      <graphic mimetype="image" mime-subtype="png" xlink:href="images/figures/IEflow.png" />
     </fig>
   </sec>
 </sec>
@@ -1889,23 +1896,6 @@ the University of Antwerp (BOF).</funding-statement>
           <pub-id pub-id-type="doi">10.1007/978-3-030-52229-2_18</pub-id>
           <fpage>331</fpage>
           <lpage>349</lpage>
-        </element-citation>
-      </ref>
-      <ref id="ref-Hitchcock_2024">
-        <element-citation publication-type="chapter">
-          <person-group person-group-type="author">
-            <name><surname>Hitchcock</surname><given-names>C.</given-names></name>
-          </person-group>
-          <article-title>Causal Models</article-title>
-          <source>The Stanford encyclopedia of philosophy</source>
-          <person-group person-group-type="editor">
-            <name><surname>Zalta</surname><given-names>Edward N.</given-names></name>
-            <name><surname>Nodelman</surname><given-names>Uri</given-names></name>
-          </person-group>
-          <publisher-name>Metaphysics Research Lab, Stanford University</publisher-name>
-          <year iso-8601-date="2024">2024</year>
-          <edition>Summer 2024</edition>
-          <uri>https://plato.stanford.edu/archives/spr2023/entries/causal-models/</uri>
         </element-citation>
       </ref>
       <ref id="ref-Bramley_2015">
