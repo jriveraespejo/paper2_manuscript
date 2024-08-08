@@ -163,9 +163,37 @@ Ultimately, this study provides a robust causal and probabilistic foundation for
 
 This section introduces fundamental concepts in causal inference, such as directed acyclic graphs (DAGs), structural causal models (SCMs), and the flow of association and causation in graphs. The section is not a comprehensive description of causal inference methods. Readers interested in deeper exploration should consult introductory papers like @Pearl_2010, @Rohrer_2018, @Pearl_2019, and @Cinelli_et_al_2020. They may also find introductory books such as @Pearl_et_al_2018, @Neal_2020 and @McElreath_2020 useful. For more advanced study, seminal intermediate papers like @Neyman_et_al_1923, @Rubin_1974, @Spirtes_et_al_1991, and @Sekhon_2009, as well as books such as @Pearl_2009, @Morgan_et_al_2014 and @Hernan_et_al_2020 are recommended.
 
+
+## The empirical research endeavor {#sec-framework-empirical}
+
+<!-- 1. What is the purpose of the research endeavor? -->
+The goal of an investigator is to generate new knowledge or deepen the understanding of specific topics or issues. Investigators accomplish this by addressing research problems. Research problems fall into two categories: empirical and non-empirical research. The first tackles real-world challenges, relying on evidence gathered through observation and experimentation. The latter focuses on conceptual inquiries that enhance understanding complex concepts, theories, and phenomena.
+
+<!-- 2. How to approach a research problem?  -->
+<!-- 2.1 the role of a research question -->
+Addressing research problems requires formulating well-defined research questions that provide focus, clarity, and structure to a study. In empirical research, these questions are often framed as *targets of inference* or *estimands*, representing the quantities the investigator aims to estimate. For instance, an investigator might want to examine how the duration of cochlear implant use affects the average overall speech quality of a child.
+
+<!-- 2.2 what else do you need? -->
+Furthermore, in empirical research, investigators must design appropriate methodologies, collect data, and ensure a systematic and coherent analysis of the results. To achieve this, they must accurately identify the factors influencing an outcome and correctly attribute the effects to each factor. Consequently, understanding how an investigator transitions from a target of inference to generating statistical estimates is crucial.
+
+<!-- 3. So, how do we move from targets of inference to estimates -->
+@fig-IEflow shows the Identification-Estimation flowchart [@McElreath_2020; @Neal_2020], which illustrates the mechanism for transitioning from a estimand to a corresponding *statistical estimate*, through identification and estimation. 
+
+<!-- Specifically, the figure an investigator must define the different targets of inference (i.e., the *estimands*), which form the basis for evaluating the reliability of the DCJ method. The targets  Subsequently, the research constructs a *scientific model* for the DCJ procedure, elucidating the causal assumptions and mechanisms underlying the system, aiding in drawing inferences about causal relationships from DCJ data. Next, the study translates the scientific model into a probabilistic statistical model (i.e., an *estimator*) to derive a *statistical estimand* for the various inference targets. Bayesian statistical methods offer an intuitive approach for the task. Finally, employing multiple simulated datasets for different combinations of the relevant assessment factors, the study generates multiple *estimates* or approximations for the statistical estimands. Notably, the statistical estimands in simulated data are known, enabling the study to assess the reliability of DCJ by evaluating the *proximity* of these estimands to the generated estimates, resembling a power analysis. -->
+
+<!-- translate the encoded causal information into a probabilistic statistical model. Then, using this model along with data, the investigator must produce an estimate that addresses the research problem of interest. This procedure is illustrated in the Identification-Estimation flowchart presented in @fig-IEflow. -->
+
+<!-- In this context, identification refers to the process of moving from a (causal) *estimand* to an equivalent *statistical estimand*, and estimation refers to the process of moving from a *statistical estimand* to an *estimate*. -->
+
+
+![ Identification-Estimation flowchart. Extracted from @Neal_2020 [pp. 32] ](images/figures/IEflow.png){#fig-IEflow fig-align="center" width=40%}
+
+
 ## The structural approach to causal inference {#sec-framework-structural}
 
 <!-- 1. What is causal inference? -->
+<!-- Causal inference is essential to the empirical research endeavor, as often, investigators want to make causal claims, rather than merely associational claims.  -->
+
 In statistics, *causal inference* refers to the process of identifying the causes of a phenomenon and estimating their effects using data [@Shaughnessy_et_al_2010; @Neal_2020]. Unlike classical statistical modeling, which focuses solely on summarizing data and inferring associations, causal inference provides a coherent mathematical notation for analyzing causes and counterfactuals [@Pearl_2009]. 
 
 <!-- 2. what are counterfactuals? -->
@@ -177,7 +205,6 @@ Several approaches to causal inference and counterfactuals exist, but two are pa
 <!-- 4. But which approach are we going to use? -->
 However, the structural approach offers an additional key advantage over the potential outcomes approach: it enables the graphical representation of any system through directed acyclic graphs [DAG, @Gross_et_al_2018; @Neal_2020]. DAGs serve as heuristics, effectively conveying the assumed causal structure of a system [@Pearl_et_al_2016]. A heuristic is a strategy that simplifies information to make decisions more quickly, efficiently, and sometimes more accurately than complex methods [@Chow_2015]. Consequently, DAGs do not represent detailed statistical models but allow researchers to deduce which statistical models can provide valid causal inferences, assuming the causal structure depicted in the DAGs are accurate [@McElreath_2020].
 
-<!-- A Directed Acyclic Graph (DAG) allows for the transparent depiction of a system’s complexity, revealing its underlying assumptions and the plausible mechanisms generating the system’s outcome, assuming the DAG is true.  -->
 
 ## DAGs and SCMs {#sec-framework-dag}
 
@@ -185,7 +212,7 @@ However, the structural approach offers an additional key advantage over the pot
 Graph theory is a branch of mathematics focused on the study of graphs. Graphs are mathematical structures modeling pairwise relations between objects. They can represent physical relations, such as electrical circuits and roadways, and less tangible structures, such as ecosystems and sociological relations. Graphs have proven useful in various fields, including computer science, operations research, and the natural and social sciences [@Gross_et_al_2018]. 
 
 <!-- 2. What does the structural approach uses?, and what are DAGs? -->
-In statistics, one application incorporating concepts from graph theory is causal inference. Specifically, the structural approach to causal inference uses directed acyclic graphs (DAG) to provide a graphical and formal representation of the causal structure of a system [@Neal_2020]. In this context, a *graph* denotes a collection of nodes connected by edges, where nodes represent random variables. The term *directed* indicates the edges of the graph extend from one node to another, with arrows showing the direction of causal influence. Moreover, the term *acyclic* indicates the causal influences do not form a loop, meaning the influences do not cycle back on themselves [@McElreath_2020]. Several examples of DAGs can be found in @fig-dags_scms.
+In statistics, one application incorporating concepts from graph theory is causal inference. Specifically, the structural approach to causal inference uses directed acyclic graphs (DAG) to provide a graphical and formal representation of the causal structure of a system [@Neal_2020]. In this context, a *graph* denotes a collection of nodes connected by edges, where nodes represent random variables. The term *directed* indicates the edges of the graph extend from one node to another, with arrows showing the direction of causal influence. Moreover, the term *acyclic* indicates the causal influences do not form a loop, meaning the influences do not cycle back on themselves [@McElreath_2020]. 
 
 <!-- 3. What are the advantages of DAGs? -->
 DAGs offer two key advantages for modeling causal structures. Firstly, they represent causal relations in a nonparametric and fully interactive manner. This feature allows for feasible causal analysis strategies without needing the specification of the type of data or the nature of the functional dependence among variables [@Morgan_et_al_2014]. Secondly, regardless of complexity, DAGs can represent various causal structures using only five fundamental building blocks [@Neal_2020; @McElreath_2020]. This feature enables the decomposition of complex structures into basic building blocks, facilitating the analysis of these structures by focusing on the causal assumptions associated with each building block individually [@McElreath_2020]. These building blocks can be represented in three ways: the magnified representation, the standard representation, and the structural causal model form [SCM, @Morgan_et_al_2014].
@@ -296,10 +323,10 @@ The five fundamental building blocks of DAGs. **Note:** left panels show the mag
 The left panels of @fig-dags_scms illustrate the *magnified* representation. These graphs depict the *endogenous* variables $V=\{X,Z,Y\}$ alongside the *exogenous* variables $E=\{e_{X},e_{Z},e_{Y}\}$. Endogenous variables are those whose causal mechanisms the investigator chooses to model [@Neal_2020]. In contrast, exogenous variables represent *errors* or *disturbances* arising from omitted factors that the investigator chooses not to model explicitly [@Pearl_2009, pp. 27,68]. The graphs show endogenous variables as solid black circles to signify that they are observed random variables, while endogenous variables are depicted as open circles to signify their unobserved (latent) nature. Lastly, the arrows in the graphs reflect the expected direction of causal influences among these variables.
 
 <!-- 3.2 the simplified DAG -->
-Often, DAGs omit the exogenous variables for simplicity, resulting in the *standard* representation. However, including exogenous variables in a graph can be beneficial in some scenarios, as their presence can reveal potential issues related to conditioning and confounding [@Cinelli_et_al_2020], concepts explored in the following section. The standard representation is illustrated in the middle panels of @fig-dags_scms.
+Often, DAGs omit the exogenous variables for simplicity, resulting in the *standard* representation. However, including exogenous variables in a graph can be beneficial in some scenarios, as their presence can reveal potential issues related to conditioning and confounding [@Cinelli_et_al_2020], concepts explored in @sec-framework-flow. The standard representation is illustrated in the middle panels of @fig-dags_scms.
 
 <!-- 3.3 the SCM -->
-Lastly, the right panels of @fig-dags_scms depict the SCM form of the fundamental building blocks. SCMs are formal mathematical models defined by a set of endogenous variables $V$, a set of exogenous variables $E$, and a set of functions $F=\{f_{X},f_{Z},f_{Y}\}$ [@Pearl_2009; @Neal_2020]. These functions, referred to as structural equations, specify each endogenous variable as nonparametric functions of other variables. Moreover, SCMs use the symbol '$:=$' to indicate the variables' asymmetrical causal dependence and the symbol '$\dsep$' to represent *d-separation*, which roughly equates to the concept of variable independence. The concepts of d-separation and causal (in)dependence are explored in the following section.
+Lastly, the right panels of @fig-dags_scms depict the SCM form of the fundamental building blocks. SCMs are formal mathematical models defined by a set of endogenous variables $V$, a set of exogenous variables $E$, and a set of functions $F=\{f_{X},f_{Z},f_{Y}\}$ [@Pearl_2009; @Neal_2020]. These functions, referred to as structural equations, specify each endogenous variable as nonparametric functions of other variables. Moreover, SCMs use the symbol '$:=$' to indicate the variables' asymmetrical causal dependence and the symbol '$\dsep$' to represent *d-separation*, which roughly equates to the concept of variable independence. The concepts of d-separation and causal (in)dependence are explored in @sec-framework-flow.
 
 <!-- 4. But what does the building blocks mean? -->
 A careful examination of @fig-dags_scms highlights the assumptions underlying these building blocks. Figures [-@fig-mdag_bb1], [-@fig-sdag_bb1], and SCM [-@fig-scm_bb1] depict two unconnected nodes, representing a scenario where variables $X$ and $Y$ are not causally related. Figures [-@fig-mdag_bb2], [-@fig-sdag_bb2], and SCM [-@fig-scm_bb2] illustrate two connected nodes, showing a scenario where a *parent* node $X$ exerts a causal influence on a *child* node $Y$. Consequently, $Y$ is considered a *descendant* of $X$. Figures [-@fig-mdag_bb3], [-@fig-sdag_bb3], and SCM [-@fig-scm_bb3] depict a *chain* or *pipe*, where $X$ influences $Z$, and $Z$ influences $Y$. In this configuration, $X$ is a parent node of $Z$, and $Z$ is a parent node of $Y$. This creates a *directed path* between $X$ and $Y$. Consequently, $X$ is an *ancestor* of $Y$, and $Z$ fully *mediates* the relationship between the two. Figures [-@fig-mdag_bb4], [-@fig-sdag_bb4], and SCM [-@fig-scm_bb4] illustrate a *fork*, where variables $X$ and $Y$ are both influenced by $Z$. Here, $Z$ is a parent node of $X$ and $Y$. Finally, Figures [-@fig-mdag_bb5], [-@fig-sdag_bb5], SCM [-@fig-scm_bb5] depict a *collider*, also known as *inmorality*, where variables $X$ and $Y$ are concurrent causes of $Z$. In this configuration, $X$ and $Y$ are not causally related to each other but both influence $Z$. Additionally, in all SCMs, the errors are assumed to be mutually independent of each other and of all other variables in the graph, as evidenced by the pairwise relations $e_{X} \dsep e_{Y}$, $e_{X} \dsep e_{Z}$, and $e_{Z} \dsep e_{Y}$.
@@ -307,23 +334,17 @@ A careful examination of @fig-dags_scms highlights the assumptions underlying th
 
 ## The flow of association and causation in graphs {#sec-framework-flow}
 
-<!-- 1. What has been said about DAGs and SCMs -->
-<!-- So far, the explanation of DAGs and SCMs has been fairly concise, sufficient to emphasize their effectiveness in encoding causal structures. However, nothing has been said about the assumptions required to use DAGs and SCMs as encoders of causal assumptions. This is important because, while encoding causal structures with DAGs can be an intriguing exercise in itself, the primary goal of an investigator is to address a research problem. -->
+<!-- 1. What has been said about DAGs? -->
+<!-- The previous section gives a concise graphical intuition for DAGs, sufficient to emphasize their effectiveness in encoding causal structures. However, so far, nothing has been said about how to identify causal quantities or how to formalize DAGs into probabilistic statistical models.  -->
 
-<!-- This study uses the Identification-Estimation flowchart [@McElreath_2020; @Neal_2020]. The flowchart illustrates the process of moving from a target (causal) *estimand* to a corresponding *estimate*, through identification and estimation (@fig-IEflowchart).  -->
+<!-- “identification” in this book, we are referring to the process -->
+<!-- of moving from a causal estimand to an equivalent statistical estimand. -->
+<!-- When we say “estimation,” we are referring to the process of moving from -->
+<!-- a statistical estimand to an estimate. Neal -->
 
-<!-- Before tackling the main objective of this study, however, it is important to understand how researchers can move from causal estimands to statistical estimates. Causal estimands, also known as targets of inference, are the quantities that the researcher wants to estimate. Usually, these quantities are articulated through different research questions and they are depicted using the language of the Potential Outcomes framework, Neyman-Rubin causal framework [@Neyman_et_al_1990; @Rubin_1974] mathematical expectation, e.g., $E[Y_{i}(1) - Y_{i}(0)]$ indicating that a researcher is interested in estimating the *average treatment effect* (ATE) -->
+<!-- The previous section gives a concise graphical intuition for DAGs, sufficient to emphasize their effectiveness in encoding causal structures. However, it doesn’t explain how to identify causal quantities and formalize causal models. Neal -->
 
-
-<!-- Specifically, the investigator must define tthe different targets of inference (i.e., the *estimands*), which form the basis for evaluating the reliability of the DCJ method. The targets  Subsequently, the research constructs a *scientific model* for the DCJ procedure, elucidating the causal assumptions and mechanisms underlying the system, aiding in drawing inferences about causal relationships from DCJ data. Next, the study translates the scientific model into a probabilistic statistical model (i.e., an *estimator*) to derive a *statistical estimand* for the various inference targets. Bayesian statistical methods offer an intuitive approach for the task. Finally, employing multiple simulated datasets for different combinations of the relevant assessment factors, the study generates multiple *estimates* or approximations for the statistical estimands. Notably, the statistical estimands in simulated data are known, enabling the study to assess the reliability of DCJ by evaluating the *proximity* of these estimands to the generated estimates, resembling a power analysis. -->
-
-<!-- translate the encoded causal information into a probabilistic statistical model. Then, using this model along with data, the investigator must produce an estimate that addresses the research problem of interest. This procedure is illustrated in the Identification-Estimation flowchart presented in @fig-IEflow. -->
-
-<!-- In this context, identification refers to the process of moving from a (causal) *estimand* to an equivalent *statistical estimand*, and estimation refers to the process of moving from a *statistical estimand* to an *estimate*. -->
-
-
-![ Identification-Estimation flowchart. Extracted from @Neal_2020 [pp. 32] ](images/figures/IEflow.png){#fig-IEflow fig-align="center" width=40%}
-
+<!-- However, the requirements to use DAGs as encoders of causal assumptions and how these can transform into probabilistic statistical models have not yet been discussed. -->
 
 <!-- 2. What is the local markov assumption? and where does it lead? -->
 <!-- 2.1 Bayesian network factorization -->
@@ -375,8 +396,6 @@ A careful examination of @fig-dags_scms highlights the assumptions underlying th
 <!-- Modularity assumption also -->
 
 
-<!-- The previous chapter gives graphical intuition for causal models, but it doesn’t explain how to identify causal quantities and formalize causal models. Neal -->
-
 <!-- 4. But how do we move from targets of inference to estimates -->
 <!-- But how can we move from heuristics and vague mathematic notation, to probabilistic causal analysis. -->
 
@@ -385,38 +404,37 @@ A careful examination of @fig-dags_scms highlights the assumptions underlying th
 <!-- Ardmed with dags and scm, and theit probabilité implication, we can now expand on thé motivating example provided in section xx -->
 
 
-
 ## A motivating example {#sec-framework-example}
 
-Given the heuristic nature of DAGs, a motivating example can help clarify how to use the five fundamental building blocks to construct the causal structure of a system. Consider a research problem where the causal effect of a variable $T$ on an outcome $Y$ needs investigation. The problem suggests that a variable $X$ potentially influences both $T$ and $Y$. Beyond these relationships, the problem does not specify any further variables of interest. Such scenarios are not hard to imagine. For instance, $T$ might represent different treatments that could affect the recovery from cancer $Y$, while $X$ could denote the patient's age. Similarly, in the context of a DCJ study like the one described by @Boonen_et_al_2020, $T$ could represent the duration of a child's cochlear implant use, which might influence the child's overall speech quality $Y$, with $X$ indicating the child's hearing status. [(not a bad example, but I prefer one using writing skills)]{style="color:blue;"}
+<!-- Given the heuristic nature of DAGs, a motivating example can help clarify how to use the five fundamental building blocks to construct the causal structure of a system. Consider a research problem where the causal effect of a variable $T$ on an outcome $Y$ needs investigation. The problem suggests that a variable $X$ potentially influences both $T$ and $Y$. Beyond these relationships, the problem does not specify any further variables of interest. Such scenarios are not hard to imagine. For instance, $T$ might represent different treatments that could affect the recovery from cancer $Y$, while $X$ could denote the patient's age. Similarly, in the context of a DCJ study like the one described by @Boonen_et_al_2020, $T$ could represent the duration of a child's cochlear implant use, which might influence the child's overall speech quality $Y$, with $X$ indicating the child's hearing status. [(not a bad example, but I prefer one using writing skills)]{style="color:blue;"} -->
 
 <!-- 6. DAG for the motivating example -->
-@fig-example illustrates the plausible causal structure of the motivating example. A detailed examination of Figures [-@fig-mdag_example1], [-@fig-sdag_example1], and SCM [-@fig-scm_example1] reveals the presence of at least four of the five fundamental building blocks. The figures display multiple descendants, as indicated by pairwise relations such as $X \rightarrow T$, $X \rightarrow Y$, and $T \rightarrow Y$. Additionally, the figures features multiple pairs of unconnected nodes, evident from the relations $e_{T} \dsep e_{X}$, $e_{T} \dsep e_{Y}$, and $e_{X} \dsep e_{Y}$. Finally, the figures illustrate the fork $X \rightarrow \{T,Y\}$, and two colliders with $\{X,e_{T}\} \rightarrow T$ and $\{X,T,e_{Y}\} \rightarrow Y$.
+<!-- @fig-example illustrates the plausible causal structure of the motivating example. A detailed examination of Figures [-@fig-mdag_example1], [-@fig-sdag_example1], and SCM [-@fig-scm_example1] reveals the presence of at least four of the five fundamental building blocks. The figures display multiple descendants, as indicated by pairwise relations such as $X \rightarrow T$, $X \rightarrow Y$, and $T \rightarrow Y$. Additionally, the figures features multiple pairs of unconnected nodes, evident from the relations $e_{T} \dsep e_{X}$, $e_{T} \dsep e_{Y}$, and $e_{X} \dsep e_{Y}$. Finally, the figures illustrate the fork $X \rightarrow \{T,Y\}$, and two colliders with $\{X,e_{T}\} \rightarrow T$ and $\{X,T,e_{Y}\} \rightarrow Y$. -->
 
 
-::: {#fig-example layout="[ [1,1,1],[1,1,1],[1,1,1] ]"}
+<!-- ::: {#fig-example layout="[ [1,1,1],[1,1,1],[1,1,1] ]"} -->
 
-![Magnified representation](images/figures/mdag_example1.png){#fig-mdag_example1 fig-align="center" width=100%}
+<!-- ![Magnified representation](images/figures/mdag_example1.png){#fig-mdag_example1 fig-align="center" width=100%} -->
 
-![Standard representation](images/figures/sdag_example1.png){#fig-sdag_example1 fig-align="center" width=55%}
+<!-- ![Standard representation](images/figures/sdag_example1.png){#fig-sdag_example1 fig-align="center" width=55%} -->
 
-::: {#fig-scm_example1 fig-align="center"}
-$$
-\begin{aligned}
-  X & := f_{X}(e_{X}) \\
-  T & := f_{Z}(X,e_{T}) \\
-  Y & := f_{Y}(T,X,e_{Y}) \\
-  e_{T} & \dsep e_{X} \\
-  e_{T} & \dsep e_{Y} \\
-  e_{X} & \dsep e_{Y}
-\end{aligned}
-$$
+<!-- ::: {#fig-scm_example1 fig-align="center"} -->
+<!-- $$ -->
+<!-- \begin{aligned} -->
+<!--   X & := f_{X}(e_{X}) \\ -->
+<!--   T & := f_{Z}(X,e_{T}) \\ -->
+<!--   Y & := f_{Y}(T,X,e_{Y}) \\ -->
+<!--   e_{T} & \dsep e_{X} \\ -->
+<!--   e_{T} & \dsep e_{Y} \\ -->
+<!--   e_{X} & \dsep e_{Y} -->
+<!-- \end{aligned} -->
+<!-- $$ -->
 
-Structural causal model
-:::
+<!-- Structural causal model -->
+<!-- ::: -->
 
-DAGs for a plausible causal structure in a system.
-:::
+<!-- DAGs for a plausible causal structure in a system. -->
+<!-- ::: -->
 
 
 # Theory {#sec-theory}
@@ -428,8 +446,6 @@ DAGs for a plausible causal structure in a system.
 
 <!-- From Lawson (2015), another way to see DCJ experiments I'd that you are grouping heterogeneous experimental units (objects) into homogeneous ones (subjects), which are your "blocks" -->
 
-<!-- one must be able to assume that these structural error terms are -->
-<!-- mutually independent of each other and of all of the other variables in the graph, Morgan -->
 
 
 ![ DCJ causal diagram, simplified description ](images/figures/SciModel_simp1.png){#fig-SciModel_simp1 fig-align="center" width=80%}
@@ -444,8 +460,6 @@ DAGs for a plausible causal structure in a system.
 ![ DCJ causal diagram, sample with comparisons mathematical description ](images/figures/SciModel_samp.png){#fig-SciModel_samp fig-align="center" width=80%}
 
 <!-- Assuming certain values are decided in the experimental design (proportions, sample size, etc) you can reduce the graph -->
-
-
 
 <!-- It is more likely that we can decide the characteristics of the objects we want to include in the study (independent variables), ensuring groups that are more balanced. However, in the case of subjects sometimes the independent variables cannot be assigned (e.g., hearing status) -->
 
