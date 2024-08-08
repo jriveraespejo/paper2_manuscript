@@ -313,6 +313,51 @@ intermediate papers like \citet{Neyman_et_al_1923}, \citet{Rubin_1974},
 such as \citet{Pearl_2009}, \citet{Morgan_et_al_2014} and
 \citet{Hernan_et_al_2020} are recommended.
 
+\subsection{The empirical research
+endeavor}\label{sec-framework-empirical}
+
+The goal of an investigator is to generate new knowledge or deepen the
+understanding of specific topics or issues. Investigators accomplish
+this by addressing research problems. Research problems fall into two
+categories: empirical and non-empirical research. The first tackles
+real-world challenges, relying on evidence gathered through observation
+and experimentation. The latter focuses on conceptual inquiries that
+enhance understanding complex concepts, theories, and phenomena.
+
+Addressing research problems requires formulating well-defined research
+questions that provide focus, clarity, and structure to a study. In
+empirical research, these questions are often framed as \emph{targets of
+inference} or \emph{estimands}, representing the quantities the
+investigator aims to estimate. For instance, an investigator might want
+to examine how the duration of cochlear implant use affects the average
+overall speech quality of a child.
+
+Furthermore, in empirical research, investigators must design
+appropriate methodologies, collect data, and ensure a systematic and
+coherent analysis of the results. To achieve this, they must accurately
+identify the factors influencing an outcome and correctly attribute the
+effects to each factor. Consequently, understanding how an investigator
+transitions from a target of inference to generating statistical
+estimates is crucial.
+
+Figure~\ref{fig-IEflow} shows the Identification-Estimation flowchart
+\citep{McElreath_2020, Neal_2020}, which illustrates the mechanism for
+transitioning from a estimand to a corresponding \emph{statistical
+estimate}, through identification and estimation.
+
+\begin{figure}
+
+\centering{
+
+\includegraphics[width=0.4\textwidth,height=\textheight]{images/figures/IEflow.png}
+
+}
+
+\caption{\label{fig-IEflow}Identification-Estimation flowchart.
+Extracted from \citet[32]{Neal_2020}}
+
+\end{figure}%
+
 \subsection{The structural approach to causal
 inference}\label{sec-framework-structural}
 
@@ -385,8 +430,7 @@ term \emph{directed} indicates the edges of the graph extend from one
 node to another, with arrows showing the direction of causal influence.
 Moreover, the term \emph{acyclic} indicates the causal influences do not
 form a loop, meaning the influences do not cycle back on themselves
-\citep{McElreath_2020}. Several examples of DAGs can be found in
-Figure~\ref{fig-dags_scms}.
+\citep{McElreath_2020}.
 
 DAGs offer two key advantages for modeling causal structures. Firstly,
 they represent causal relations in a nonparametric and fully interactive
@@ -652,9 +696,9 @@ Often, DAGs omit the exogenous variables for simplicity, resulting in
 the \emph{standard} representation. However, including exogenous
 variables in a graph can be beneficial in some scenarios, as their
 presence can reveal potential issues related to conditioning and
-confounding \citep{Cinelli_et_al_2020}, concepts explored in the
-following section. The standard representation is illustrated in the
-middle panels of Figure~\ref{fig-dags_scms}.
+confounding \citep{Cinelli_et_al_2020}, concepts explored in
+Section~\ref{sec-framework-flow}. The standard representation is
+illustrated in the middle panels of Figure~\ref{fig-dags_scms}.
 
 Lastly, the right panels of Figure~\ref{fig-dags_scms} depict the SCM
 form of the fundamental building blocks. SCMs are formal mathematical
@@ -667,7 +711,7 @@ use the symbol `\(:=\)' to indicate the variables' asymmetrical causal
 dependence and the symbol `\(\perp\!\!\!\perp\)' to represent
 \emph{d-separation}, which roughly equates to the concept of variable
 independence. The concepts of d-separation and causal (in)dependence are
-explored in the following section.
+explored in Section~\ref{sec-framework-flow}.
 
 A careful examination of Figure~\ref{fig-dags_scms} highlights the
 assumptions underlying these building blocks. Figures
@@ -704,19 +748,6 @@ graphs}\label{sec-framework-flow}
 
 \centering{
 
-\includegraphics[width=0.4\textwidth,height=\textheight]{images/figures/IEflow.png}
-
-}
-
-\caption{\label{fig-IEflow}Identification-Estimation flowchart.
-Extracted from \citet[32]{Neal_2020}}
-
-\end{figure}%
-
-\begin{figure}
-
-\centering{
-
 \includegraphics[width=0.9\textwidth,height=\textheight]{images/figures/ACflow.png}
 
 }
@@ -727,87 +758,6 @@ graphs. Extracted from \citet[31]{Neal_2020}}
 \end{figure}%
 
 \subsection{A motivating example}\label{sec-framework-example}
-
-Given the heuristic nature of DAGs, a motivating example can help
-clarify how to use the five fundamental building blocks to construct the
-causal structure of a system. Consider a research problem where the
-causal effect of a variable \(T\) on an outcome \(Y\) needs
-investigation. The problem suggests that a variable \(X\) potentially
-influences both \(T\) and \(Y\). Beyond these relationships, the problem
-does not specify any further variables of interest. Such scenarios are
-not hard to imagine. For instance, \(T\) might represent different
-treatments that could affect the recovery from cancer \(Y\), while \(X\)
-could denote the patient's age. Similarly, in the context of a DCJ study
-like the one described by \citet{Boonen_et_al_2020}, \(T\) could
-represent the duration of a child's cochlear implant use, which might
-influence the child's overall speech quality \(Y\), with \(X\)
-indicating the child's hearing status. {(not a bad example, but I prefer
-one using writing skills)}
-
-Figure~\ref{fig-example} illustrates the plausible causal structure of
-the motivating example. A detailed examination of Figures
-\ref{fig-mdag_example1}, \ref{fig-sdag_example1}, and SCM
-\ref{fig-scm_example1} reveals the presence of at least four of the five
-fundamental building blocks. The figures display multiple descendants,
-as indicated by pairwise relations such as \(X \rightarrow T\),
-\(X \rightarrow Y\), and \(T \rightarrow Y\). Additionally, the figures
-features multiple pairs of unconnected nodes, evident from the relations
-\(e_{T} \perp\!\!\!\perp e_{X}\), \(e_{T} \perp\!\!\!\perp e_{Y}\), and
-\(e_{X} \perp\!\!\!\perp e_{Y}\). Finally, the figures illustrate the
-fork \(X \rightarrow \{T,Y\}\), and two colliders with
-\(\{X,e_{T}\} \rightarrow T\) and \(\{X,T,e_{Y}\} \rightarrow Y\).
-
-\begin{figure}
-
-\begin{minipage}{0.33\linewidth}
-
-\centering{
-
-\includegraphics[width=1\textwidth,height=\textheight]{images/figures/mdag_example1.png}
-
-}
-
-\subcaption{\label{fig-mdag_example1}Magnified representation}
-
-\end{minipage}%
-%
-\begin{minipage}{0.33\linewidth}
-
-\centering{
-
-\includegraphics[width=0.55\textwidth,height=\textheight]{images/figures/sdag_example1.png}
-
-}
-
-\subcaption{\label{fig-sdag_example1}Standard representation}
-
-\end{minipage}%
-%
-\begin{minipage}{0.33\linewidth}
-
-\centering{
-
-\[
-\begin{aligned}
-  X & := f_{X}(e_{X}) \\
-  T & := f_{Z}(X,e_{T}) \\
-  Y & := f_{Y}(T,X,e_{Y}) \\
-  e_{T} & \perp\!\!\!\perp e_{X} \\
-  e_{T} & \perp\!\!\!\perp e_{Y} \\
-  e_{X} & \perp\!\!\!\perp e_{Y}
-\end{aligned}
-\]
-
-}
-
-\subcaption{\label{fig-scm_example1}Structural causal model}
-
-\end{minipage}%
-
-\caption{\label{fig-example}DAGs for a plausible causal structure in a
-system.}
-
-\end{figure}%
 
 \section{Theory}\label{sec-theory}
 
