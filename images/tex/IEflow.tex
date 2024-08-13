@@ -7,19 +7,19 @@
 
 \begin{tikzpicture}
     % nodes
-    \node at (0,2) [rectangle,draw]  {(Causal) Estimand};
-    \node at (3.5,2) [rectangle,draw,fill={black!15}] {Scientific Model};
-    \node at (0,0) [rectangle,draw,fill={black!15}] {Statistical Estimand};
-    \node at (3.5,0) [rectangle,draw] {Data};
+    \node at (0,2) [rectangle,draw]  {Estimand};
+    \node at (3,2) [rectangle,draw] {Scientific Model}; %,fill={black!15}
+    \node at (0,0) [rectangle,draw] {Estimator}; %,fill={black!15}
+    \node at (3,0) [rectangle,draw] {Data};
     \node at (0,-2) [rectangle,draw] {Estimate};
-    \node at (1.2,1.5) {Identification};
-    \node at (1,-0.5) {Estimation};
+    \node at (1.1,1.5) {Identification};
+    \node at (0.9,-0.5) {Estimation};
         
 	% paths
-    \draw[-{latex}](0,1.7) to (0,0.25); % CE -> SE
-    \draw[-{latex}](3.5,1.75) to (0.3,0.26); % SM -> SE
-    \draw[-{latex}](0,-0.25) to (0,-1.75); % SE -> E
-    \draw[-{latex}](3.5,-0.25) to (0.3,-1.74); % D -> E
+    \draw[-{latex}](0,1.75) to (0,0.25); % Estimand -> Estimator 
+    \draw[-{latex}](3,1.75) to (0.3,0.26); % SciModel -> Estimator
+    \draw[-{latex}](0,-0.25) to (0,-1.75); % Estimator -> Estimate
+    \draw[-{latex}](3,-0.25) to (0.3,-1.74); % Data -> Estimate
     
 \end{tikzpicture}
 
