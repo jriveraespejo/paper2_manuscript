@@ -199,10 +199,10 @@ sciences</institution>
 <corresp id="cor-1">JoseManuel.RiveraEspejo@uantwerpen.be</corresp>
 </author-notes>
 
-<pub-date date-type="pub" publication-format="electronic" iso-8601-date="2024-08-08">
+<pub-date date-type="pub" publication-format="electronic" iso-8601-date="2024-08-13">
 <year>2024</year>
 <month>8</month>
-<day>8</day>
+<day>13</day>
 </pub-date>
 
 
@@ -353,10 +353,10 @@ the University of Antwerp (BOF).</funding-statement>
   stimuli represent sub-units of higher-levels units, factors such as
   the number and characteristics of these units, along with their
   <italic>proximity</italic> in terms of the assessed trait, can
-  significantly influence the outcome. For instance, van Daal et al.
-  (<xref alt="2019" rid="ref-vanDaal_et_al_2016" ref-type="bibr">2019</xref>)
-  assessed academic writing skills of university students (units) using
-  multiple argumentative essays (sub-units).</p>
+  significantly influence the outcome. For example, in van Daal et al.
+  (<xref alt="2019" rid="ref-vanDaal_et_al_2016" ref-type="bibr">2019</xref>),
+  the authors assessed the academic writing skills of university
+  students (units) using multiple argumentative essays (sub-units).</p>
   <p>Although several studies have examined the individual impact of
   these factors on the method’s reliability
   (<xref alt="Bramley 2015" rid="ref-Bramley_2015" ref-type="bibr">Bramley
@@ -378,12 +378,13 @@ the University of Antwerp (BOF).</funding-statement>
   provided a transparent depiction of the DCJ system and the mechanisms
   generating the DCJ outcome. This study aims to fill this gap by
   representing DCJ within the framework of causal inference.
-  Specifically, utilizing the structural approach, the study develops a
-  scientific model to clarify plausible causal assumptions and
-  mechanisms inherent in the DCJ system. The study then translates the
-  scientific model into a probabilistic statistical model. This model
-  aims to produce statistical estimates to draw inferences about
-  plausible causal relationships within the DCJ system.</p>
+  Specifically, utilizing the structural approach to causal inference,
+  the study develops a scientific model to clarify plausible causal
+  assumptions and mechanisms inherent in the DCJ system. The study then
+  translates the scientific model into a probabilistic statistical
+  model. This model aims to produce statistical estimates to draw
+  inferences about plausible causal relationships within the DCJ
+  system.</p>
   <p>Ultimately, this study provides a robust causal and probabilistic
   foundation for the statistical analysis of DCJ data, building upon
   Thurstone’s law of comparative judgment
@@ -421,134 +422,105 @@ the University of Antwerp (BOF).</funding-statement>
   (<xref alt="1991" rid="ref-Spirtes_et_al_1991" ref-type="bibr">1991</xref>),
   and Sekhon
   (<xref alt="2009" rid="ref-Sekhon_2009" ref-type="bibr">2009</xref>),
-  as well as books such as Pearl
+  as well as books like Pearl
   (<xref alt="2009" rid="ref-Pearl_2009" ref-type="bibr">2009</xref>),
   Morgan and Winship
   (<xref alt="2014" rid="ref-Morgan_et_al_2014" ref-type="bibr">2014</xref>)
   and Hernán and Robins
   (<xref alt="2020" rid="ref-Hernan_et_al_2020" ref-type="bibr">2020</xref>)
   are recommended.</p>
-  <sec id="sec-framework-empirical">
-    <title>The empirical research endeavor</title>
-    <p>The goal of an investigator is to generate new knowledge or
-    deepen the understanding of specific topics or issues. Investigators
-    accomplish this by addressing research problems. Research problems
-    fall into two categories: empirical and non-empirical research. The
-    first tackles real-world challenges, relying on evidence gathered
-    through observation and experimentation. The latter focuses on
-    conceptual inquiries that enhance understanding complex concepts,
-    theories, and phenomena.</p>
-    <p>Addressing research problems requires formulating well-defined
-    research questions that provide focus, clarity, and structure to a
-    study. In empirical research, these questions are often framed as
-    <italic>targets of inference</italic> or <italic>estimands</italic>,
-    representing the quantities the investigator aims to estimate. For
-    instance, an investigator might want to examine how the duration of
-    cochlear implant use affects the average overall speech quality of a
-    child.</p>
-    <p>Furthermore, in empirical research, investigators must design
-    appropriate methodologies, collect data, and ensure a systematic and
-    coherent analysis of the results. To achieve this, they must
-    accurately identify the factors influencing an outcome and correctly
-    attribute the effects to each factor. Consequently, understanding
-    how an investigator transitions from a target of inference to
-    generating statistical estimates is crucial.</p>
-    <p><xref alt="Figure 1" rid="fig-IEflow">Figure 1</xref> shows the
+  <sec id="sec-framework-structural">
+    <title>The structural approach to causal inference</title>
+    <p>Empirical research addresses real-world challenges by relying on
+    evidence gathered through observation and experimentation. In this
+    context, researchers typically frame their research questions as
+    <italic>estimands</italic> or <italic>targets of inference</italic>.
+    These estimands represent the specific quantities the study aims to
+    determine
+    (<xref alt="Everitt and Skrondal 2010" rid="ref-Everitt_et_al_2010" ref-type="bibr">Everitt
+    and Skrondal 2010</xref>). For instance, a study might seek to
+    answer the question, “To what extent do daily practice hours
+    (<inline-formula><alternatives>
+    <tex-math><![CDATA[X]]></tex-math>
+    <mml:math display="inline" xmlns:mml="http://www.w3.org/1998/Math/MathML"><mml:mi>X</mml:mi></mml:math></alternatives></inline-formula>)
+    influence students’ ability to produce high-quality written texts
+    (<inline-formula><alternatives>
+    <tex-math><![CDATA[Y]]></tex-math>
+    <mml:math display="inline" xmlns:mml="http://www.w3.org/1998/Math/MathML"><mml:mi>Y</mml:mi></mml:math></alternatives></inline-formula>)?”.
+    To investigate this, the study randomly assigns students to two
+    groups with different levels of daily practice, low
+    <inline-formula><alternatives>
+    <tex-math><![CDATA[(X=1)]]></tex-math>
+    <mml:math display="inline" xmlns:mml="http://www.w3.org/1998/Math/MathML"><mml:mrow><mml:mo stretchy="true" form="prefix">(</mml:mo><mml:mi>X</mml:mi><mml:mo>=</mml:mo><mml:mn>1</mml:mn><mml:mo stretchy="true" form="postfix">)</mml:mo></mml:mrow></mml:math></alternatives></inline-formula>
+    and medium <inline-formula><alternatives>
+    <tex-math><![CDATA[(X=2)]]></tex-math>
+    <mml:math display="inline" xmlns:mml="http://www.w3.org/1998/Math/MathML"><mml:mrow><mml:mo stretchy="true" form="prefix">(</mml:mo><mml:mi>X</mml:mi><mml:mo>=</mml:mo><mml:mn>2</mml:mn><mml:mo stretchy="true" form="postfix">)</mml:mo></mml:mrow></mml:math></alternatives></inline-formula>.
+    The quality of the written texts is evaluated using pairwise
+    comparisons, resulting in a dichotomous outcome
+    <inline-formula><alternatives>
+    <tex-math><![CDATA[(Y=\{0,1\})]]></tex-math>
+    <mml:math display="inline" xmlns:mml="http://www.w3.org/1998/Math/MathML"><mml:mrow><mml:mo stretchy="true" form="prefix">(</mml:mo><mml:mi>Y</mml:mi><mml:mo>=</mml:mo><mml:mo stretchy="false" form="prefix">{</mml:mo><mml:mn>0</mml:mn><mml:mo>,</mml:mo><mml:mn>1</mml:mn><mml:mo stretchy="false" form="postfix">}</mml:mo><mml:mo stretchy="true" form="postfix">)</mml:mo></mml:mrow></mml:math></alternatives></inline-formula>.
+    The research question is then framed as the estimand, “<italic>On
+    average</italic>, which group of students produces higher-quality
+    written texts?” This estimand is mathematically expressed as
+    <inline-formula><alternatives>
+    <tex-math><![CDATA[E[Y|X=1] - E[Y|X=2]]]></tex-math>
+    <mml:math display="inline" xmlns:mml="http://www.w3.org/1998/Math/MathML"><mml:mrow><mml:mi>E</mml:mi><mml:mrow><mml:mo stretchy="true" form="prefix">[</mml:mo><mml:mi>Y</mml:mi><mml:mo stretchy="false" form="prefix">|</mml:mo><mml:mi>X</mml:mi><mml:mo>=</mml:mo><mml:mn>1</mml:mn><mml:mo stretchy="true" form="postfix">]</mml:mo></mml:mrow><mml:mo>−</mml:mo><mml:mi>E</mml:mi><mml:mrow><mml:mo stretchy="true" form="prefix">[</mml:mo><mml:mi>Y</mml:mi><mml:mo stretchy="false" form="prefix">|</mml:mo><mml:mi>X</mml:mi><mml:mo>=</mml:mo><mml:mn>2</mml:mn><mml:mo stretchy="true" form="postfix">]</mml:mo></mml:mrow></mml:mrow></mml:math></alternatives></inline-formula>,
+    where <inline-formula><alternatives>
+    <tex-math><![CDATA[E[\cdot]]]></tex-math>
+    <mml:math display="inline" xmlns:mml="http://www.w3.org/1998/Math/MathML"><mml:mrow><mml:mi>E</mml:mi><mml:mrow><mml:mo stretchy="true" form="prefix">[</mml:mo><mml:mi>⋅</mml:mi><mml:mo stretchy="true" form="postfix">]</mml:mo></mml:mrow></mml:mrow></mml:math></alternatives></inline-formula>
+    represents the expected value.</p>
+    <p>Researchers then proceed to identify the estimands.
+    <italic>Identification</italic> is the process of accurately
+    computing an estimand using an estimator. An
+    <italic>estimator</italic> is a method or function that transforms
+    data into an estimate
+    (<xref alt="Neal 2020" rid="ref-Neal_2020" ref-type="bibr">Neal
+    2020</xref>). <italic>Estimates</italic> are numerical values that
+    approximate the estimand and are derived through
+    <italic>estimation</italic>, which is the process that integrates
+    data with an estimator
+    (<xref alt="Everitt and Skrondal 2010" rid="ref-Everitt_et_al_2010" ref-type="bibr">Everitt
+    and Skrondal 2010</xref>). While various methods can approximate an
+    estimand, researchers prioritize estimators with desirable
+    properties that ensure accurate estimates. For example, Fisher’s
+    exact test
+    (<xref alt="Fisher 1922" rid="ref-Fisher_1922" ref-type="bibr">Fisher
+    1922</xref>) is an estimator with desirable properties for comparing
+    <inline-formula><alternatives>
+    <tex-math><![CDATA[2\times2]]></tex-math>
+    <mml:math display="inline" xmlns:mml="http://www.w3.org/1998/Math/MathML"><mml:mrow><mml:mn>2</mml:mn><mml:mo>×</mml:mo><mml:mn>2</mml:mn></mml:mrow></mml:math></alternatives></inline-formula>
+    tables. The test provides accurate estimates for comparing
+    proportions when its assumptions are satisfied.
+    <xref alt="Figure 1" rid="fig-IEflow">Figure 1</xref>, known as the
     Identification-Estimation flowchart
     (<xref alt="McElreath 2020" rid="ref-McElreath_2020" ref-type="bibr">McElreath
     2020</xref>;
     <xref alt="Neal 2020" rid="ref-Neal_2020" ref-type="bibr">Neal
-    2020</xref>), which illustrates the mechanism for transitioning from
-    a estimand to a corresponding <italic>statistical estimate</italic>,
-    through identification and estimation.</p>
+    2020</xref>), illustrates the aforementioned process of
+    transitioning from estimands to estimates.</p>
     <fig id="fig-IEflow">
       <caption><p>Figure 1: Identification-Estimation flowchart.
-      Extracted from Neal
+      Extracted and slightly modified from Neal
       (<xref alt="2020, 32" rid="ref-Neal_2020" ref-type="bibr">2020,
       32</xref>)</p></caption>
       <graphic mimetype="image" mime-subtype="png" xlink:href="images/figures/IEflow.png" />
     </fig>
-  </sec>
-  <sec id="sec-framework-structural">
-    <title>The structural approach to causal inference</title>
-    <p>In statistics, <italic>causal inference</italic> refers to the
-    process of identifying the causes of a phenomenon and estimating
-    their effects using data
-    (<xref alt="Shaughnessy, Zechmeister, and Zechmeister 2010" rid="ref-Shaughnessy_et_al_2010" ref-type="bibr">Shaughnessy,
-    Zechmeister, and Zechmeister 2010</xref>;
-    <xref alt="Neal 2020" rid="ref-Neal_2020" ref-type="bibr">Neal
-    2020</xref>). Unlike classical statistical modeling, which focuses
-    solely on summarizing data and inferring associations, causal
-    inference provides a coherent mathematical notation for analyzing
-    causes and counterfactuals
-    (<xref alt="Pearl 2009" rid="ref-Pearl_2009" ref-type="bibr">Pearl
-    2009</xref>).</p>
-    <p>Counterfactuals represent scenarios <italic>contrary to
-    fact</italic>, where alternative <italic>potential</italic> outcomes
-    resulting from a cause are neither observed nor observable
+    <p>However, many studies aim to establish causal relationships
+    rather than merely infer associations. In the earlier example, the
+    estimates obtained using Fisher’s exact test can be interpreted as
+    causal because the data were collected through a randomized
+    experiment. In randomized experiments, the researcher fully controls
+    the treatment assignment mechanism, such as assigning students to
+    different groups. This control allows causal estimates to be derived
+    from associational estimates, such as those provided by the Fisher
+    statistic, since randomization effectively eliminates confounding
     (<xref alt="Neal 2020" rid="ref-Neal_2020" ref-type="bibr">Neal
-    2020</xref>;
-    <xref alt="Counterfactual 2024" rid="ref-Counterfactual_2024" ref-type="bibr">Counterfactual
-    2024</xref>). According to Pearl and Mackenzie
-    (<xref alt="2018" rid="ref-Pearl_et_al_2018" ref-type="bibr">2018</xref>),
-    counterfactuals are the foundation of causal inference and occupy
-    the highest level of cognitive abstraction in the ladder of
-    causation, followed by intervention and association. Nevertheless,
-    despite their abstract nature, counterfactuals enable the
-    development of a <italic>theory of the world</italic> that explains
-    why specific causes have specific effects and what occurs in their
-    absence
-    (<xref alt="Pearl and Mackenzie 2018" rid="ref-Pearl_et_al_2018" ref-type="bibr">Pearl
-    and Mackenzie 2018</xref>). They achieve this by translating causal
-    statements into counterfactual statements, that is, statements about
-    “what would have happened in the world under different
-    circumstances.”</p>
-    <p>Several approaches to causal inference and counterfactuals exist,
-    but two are particularly prominent: the potential outcomes approach,
-    also known as the Neyman-Rubin causal model
-    (<xref alt="Neyman 1923" rid="ref-Neyman_et_al_1923" ref-type="bibr">Neyman
-    1923</xref>;
-    <xref alt="Rubin 1974" rid="ref-Rubin_1974" ref-type="bibr">Rubin
-    1974</xref>), and the structural approach
-    (<xref alt="Pearl 2009" rid="ref-Pearl_2009" ref-type="bibr">Pearl
-    2009</xref>;
-    <xref alt="Pearl, Glymour, and Jewell 2016" rid="ref-Pearl_et_al_2016" ref-type="bibr">Pearl,
-    Glymour, and Jewell 2016</xref>). Both approaches employ rigorous
-    mathematical notation to characterize causal inference, but they do
-    so in different ways
-    (<xref alt="Neal 2020" rid="ref-Neal_2020" ref-type="bibr">Neal
-    2020</xref>). The potential outcomes approach relies on
-    counterfactual notation, whereas the structural approach employs the
-    do-operator and structural causal models (SCM,
-    <xref alt="Pearl 2009" rid="ref-Pearl_2009" ref-type="bibr">Pearl
-    2009</xref>;
-    <xref alt="Pearl, Glymour, and Jewell 2016" rid="ref-Pearl_et_al_2016" ref-type="bibr">Pearl,
-    Glymour, and Jewell 2016</xref>). Despite these differences, both
-    notations can be expressed in terms of the other, and both
-    approaches provide methods for using experimental and observational
-    data to estimate causal effects
-    (<xref alt="Pearl 2010" rid="ref-Pearl_2010" ref-type="bibr">Pearl
-    2010</xref>).</p>
-    <p>However, the structural approach offers an additional key
-    advantage over the potential outcomes approach: it enables the
-    graphical representation of any system through directed acyclic
-    graphs (DAG,
-    <xref alt="Gross, Yellen, and Anderson 2018" rid="ref-Gross_et_al_2018" ref-type="bibr">Gross,
-    Yellen, and Anderson 2018</xref>;
-    <xref alt="Neal 2020" rid="ref-Neal_2020" ref-type="bibr">Neal
-    2020</xref>). DAGs serve as heuristics, effectively conveying the
-    assumed causal structure of a system
-    (<xref alt="Pearl, Glymour, and Jewell 2016" rid="ref-Pearl_et_al_2016" ref-type="bibr">Pearl,
-    Glymour, and Jewell 2016</xref>). A heuristic is a strategy that
-    simplifies information to make decisions more quickly, efficiently,
-    and sometimes more accurately than complex methods
-    (<xref alt="Chow 2015" rid="ref-Chow_2015" ref-type="bibr">Chow
-    2015</xref>). Consequently, DAGs do not represent detailed
-    statistical models but allow researchers to deduce which statistical
-    models can provide valid causal inferences, assuming the causal
-    structure depicted in the DAGs are accurate
-    (<xref alt="McElreath 2020" rid="ref-McElreath_2020" ref-type="bibr">McElreath
-    2020</xref>).</p>
+    2020</xref>). <italic>Confounding</italic> occurs when an external
+    variable influences both the outcome and the variable of interest,
+    leading to spurious association
+    (<xref alt="Everitt and Skrondal 2010" rid="ref-Everitt_et_al_2010" ref-type="bibr">Everitt
+    and Skrondal 2010</xref>).</p>
   </sec>
   <sec id="sec-framework-dag">
     <title>DAGs and SCMs</title>
@@ -874,7 +846,7 @@ the University of Antwerp (BOF).</funding-statement>
     conditioning and confounding
     (<xref alt="Cinelli, Forney, and Pearl 2020" rid="ref-Cinelli_et_al_2020" ref-type="bibr">Cinelli,
     Forney, and Pearl 2020</xref>), concepts explored in
-    <xref alt="Section 2.4" rid="sec-framework-flow">Section 2.4</xref>.
+    <xref alt="Section 2.3" rid="sec-framework-flow">Section 2.3</xref>.
     The standard representation is illustrated in the middle panels of
     <xref alt="Figure 2" rid="fig-dags_scms">Figure 2</xref>.</p>
     <p>Lastly, the right panels of
@@ -906,7 +878,7 @@ the University of Antwerp (BOF).</funding-statement>
     to represent <italic>d-separation</italic>, which roughly equates to
     the concept of variable independence. The concepts of d-separation
     and causal (in)dependence are explored in
-    <xref alt="Section 2.4" rid="sec-framework-flow">Section 2.4</xref>.</p>
+    <xref alt="Section 2.3" rid="sec-framework-flow">Section 2.3</xref>.</p>
     <p>A careful examination of
     <xref alt="Figure 2" rid="fig-dags_scms">Figure 2</xref> highlights
     the assumptions underlying these building blocks. Figures
@@ -1047,7 +1019,7 @@ the University of Antwerp (BOF).</funding-statement>
     <title>The flow of association and causation in graphs</title>
     <fig id="fig-ACflow">
       <caption><p>Figure 3: The flow of association and causation in
-      graphs. Extracted from Neal
+      graphs. Extracted and slightly modified from Neal
       (<xref alt="2020, 31" rid="ref-Neal_2020" ref-type="bibr">2020,
       31</xref>)</p></caption>
       <graphic mimetype="image" mime-subtype="png" xlink:href="images/figures/ACflow.png" />
@@ -1154,6 +1126,23 @@ the University of Antwerp (BOF).</funding-statement>
   <sec id="references">
     <title>References</title>
     <ref-list>
+      <ref id="ref-Fisher_1922">
+        <element-citation publication-type="article-journal">
+          <person-group person-group-type="author">
+            <name><surname>Fisher</surname><given-names>R.</given-names></name>
+          </person-group>
+          <article-title>On the interpretation of χ2 from contingency tables, and the calculation of p</article-title>
+          <source>Journal of the Royal Statistical Society</source>
+          <publisher-name>[Wiley, Royal Statistical Society]</publisher-name>
+          <year iso-8601-date="1922">1922</year>
+          <volume>85</volume>
+          <issue>1</issue>
+          <uri>http://www.jstor.org/stable/2340521</uri>
+          <pub-id pub-id-type="doi">10.2307/2340521</pub-id>
+          <fpage>87</fpage>
+          <lpage>94</lpage>
+        </element-citation>
+      </ref>
       <ref id="ref-Neyman_et_al_1923">
         <element-citation publication-type="article-journal">
           <person-group person-group-type="author">
@@ -1611,18 +1600,17 @@ the University of Antwerp (BOF).</funding-statement>
           <pub-id pub-id-type="doi"></pub-id>
         </element-citation>
       </ref>
-      <ref id="ref-Shaughnessy_et_al_2010">
+      <ref id="ref-Everitt_et_al_2010">
         <element-citation publication-type="book">
           <person-group person-group-type="author">
-            <name><surname>Shaughnessy</surname><given-names>J.</given-names></name>
-            <name><surname>Zechmeister</surname><given-names>E.</given-names></name>
-            <name><surname>Zechmeister</surname><given-names>J.</given-names></name>
+            <name><surname>Everitt</surname><given-names>B.</given-names></name>
+            <name><surname>Skrondal</surname><given-names>A.</given-names></name>
           </person-group>
-          <source>Research methods in psychology</source>
-          <publisher-name>McGraw-Hill</publisher-name>
+          <source>The cambridge dictionary of statistics</source>
+          <publisher-name>Cambridge University Press</publisher-name>
           <year iso-8601-date="2010">2010</year>
-          <isbn>9781462516797</isbn>
-          <uri>https://web.archive.org/web/20141015135541/http://www.mhhe.com/socscience/psychology/shaugh/ch01_concepts.html</uri>
+          <isbn>978-0521766999</isbn>
+          <uri></uri>
           <pub-id pub-id-type="doi"></pub-id>
         </element-citation>
       </ref>
@@ -1636,38 +1624,6 @@ the University of Antwerp (BOF).</funding-statement>
           <publisher-name>Cambridge University Press</publisher-name>
           <year iso-8601-date="2014">2014</year>
           <edition>2</edition>
-          <uri></uri>
-          <pub-id pub-id-type="doi"></pub-id>
-        </element-citation>
-      </ref>
-      <ref id="ref-Chow_2015">
-        <element-citation publication-type="article-journal">
-          <person-group person-group-type="author">
-            <name><surname>Chow</surname><given-names>S.</given-names></name>
-          </person-group>
-          <article-title>Many meanings of ‘heuristic’</article-title>
-          <source>The British Journal for the Philosophy of Science</source>
-          <year iso-8601-date="2015">2015</year>
-          <volume>66</volume>
-          <issue>4</issue>
-          <uri></uri>
-          <pub-id pub-id-type="doi">10.1093/bjps/axu028</pub-id>
-          <fpage>977</fpage>
-          <lpage>1016</lpage>
-        </element-citation>
-      </ref>
-      <ref id="ref-Pearl_et_al_2016">
-        <element-citation publication-type="book">
-          <person-group person-group-type="author">
-            <name><surname>Pearl</surname><given-names>J.</given-names></name>
-            <name><surname>Glymour</surname><given-names>M.</given-names></name>
-            <name><surname>Jewell</surname><given-names>N.</given-names></name>
-          </person-group>
-          <source>Causal inference in statistics: A primer</source>
-          <publisher-name>John Wiley &amp; Sons, Inc.</publisher-name>
-          <year iso-8601-date="2016">2016</year>
-          <edition></edition>
-          <isbn>978-1-119-18686-1</isbn>
           <uri></uri>
           <pub-id pub-id-type="doi"></pub-id>
         </element-citation>
@@ -1810,16 +1766,6 @@ the University of Antwerp (BOF).</funding-statement>
           <article-title>Introduction to causal inference from a machine learning perspective</article-title>
           <year iso-8601-date="2020">2020</year>
           <uri>https://www.bradyneal.com/Introduction_to_Causal_Inference-Dec17_2020-Neal.pdf</uri>
-        </element-citation>
-      </ref>
-      <ref id="ref-Counterfactual_2024">
-        <element-citation>
-          <person-group person-group-type="author">
-            <name><surname>Counterfactual</surname></name>
-          </person-group>
-          <article-title>Merriam-webster.com dictionary</article-title>
-          <year iso-8601-date="2024">2024</year>
-          <uri>https://www.merriam-webster.com/dictionary/hacker</uri>
         </element-citation>
       </ref>
     </ref-list>
