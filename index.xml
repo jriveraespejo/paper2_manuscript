@@ -603,12 +603,10 @@ the University of Antwerp (BOF).</funding-statement>
     <xref alt="Neal 2020" rid="ref-Neal_2020" ref-type="bibr">Neal
     2020</xref>). DAGs function as heuristics, effectively conveying the
     presumed causal structure of a system, referred to as a
-    <italic>scientific model</italic>
-    (<xref alt="McElreath 2020" rid="ref-McElreath_2020" ref-type="bibr">McElreath
-    2020</xref>). They do not represent detailed statistical models but
-    allow researchers to deduce which statistical models can provide
-    valid causal inferences, assuming the causal structure depicted in
-    the DAGs are accurate
+    <italic>scientific model</italic>. They do not represent detailed
+    statistical models but allow researchers to deduce which statistical
+    models can provide valid causal inferences, assuming the causal
+    structure depicted in the DAGs are accurate
     (<xref alt="McElreath 2020" rid="ref-McElreath_2020" ref-type="bibr">McElreath
     2020</xref>). The Identification-Estimation flowchart in
     <xref alt="Figure 1" rid="fig-IEflow">Figure 1</xref> visually
