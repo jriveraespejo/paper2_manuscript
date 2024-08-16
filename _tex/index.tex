@@ -300,14 +300,12 @@ analysts designing and implementing DCJ experiments.
 
 \section{Theoretical framework}\label{sec-framework}
 
-This section introduces fundamental concepts in causal inference, such
-as directed acyclic graphs (DAGs), structural causal models (SCMs), and
-the flow of association and causation in graphs. The section is not a
-comprehensive description of causal inference methods. Readers
-interested in deeper exploration should consult introductory papers like
-\citet{Pearl_2010}, \citet{Rohrer_2018}, \citet{Pearl_2019}, and
-\citet{Cinelli_et_al_2020}. They may also find introductory books such
-as \citet{Pearl_et_al_2018}, \citet{Neal_2020} and
+This section introduces fundamental concepts in causal inference but
+does not offer a comprehensive description of causal inference methods.
+Readers interested in deeper exploration should consult introductory
+papers like \citet{Pearl_2010}, \citet{Rohrer_2018}, \citet{Pearl_2019},
+and \citet{Cinelli_et_al_2020}. They may also find introductory books
+such as \citet{Pearl_et_al_2018}, \citet{Neal_2020} and
 \citet{McElreath_2020} useful. For more advanced study, seminal
 intermediate papers like \citet{Neyman_et_al_1923}, \citet{Rubin_1974},
 \citet{Spirtes_et_al_1991}, and \citet{Sekhon_2009}, as well as books
@@ -323,19 +321,20 @@ context, researchers typically frame their research questions as
 \emph{estimands} or \emph{targets of inference}. These estimands
 represent the specific quantities the study aims to determine
 \citep{Everitt_et_al_2010}. For instance, a study might examine the
-question, ``To what extent do different teaching methods (\(X\))
+question, ``To what extent do different teaching methods (\(T\))
 influence students' conceptual understanding of a topic (\(Y\))?'' To
 investigate this, the study could randomly assign students to two
-groups, each using a different teaching method \((X=\{1,2\})\).
+groups, each using a different teaching method \((T_{i}=\{1,2\})\).
 Students' conceptual understanding of the topic could be evaluated
 through pairwise comparisons, resulting in a dichotomous outcome
-\((Y=\{0,1\})\), indicating which student among those compared has a
+\((Y_{i}=\{0,1\})\), indicating which student among those compared has a
 higher level of understanding. The research question could be then
 framed as the estimand, ``\emph{On average}, is there a difference in
 conceptual understanding of the topic between the two groups of
-students?'' This estimand could be mathematically expressed as
-\(E[Y| X=1] - E[Y| X=2]\), where \(E[\cdot]\) denotes the expected
-value. An example of this approach is seen in \citet{Jones_et_al_2019}.
+students?'' This estimand could be mathematically expressed by the
+associational quantity \(E[Y_{i}| T_{i}=1] - E[Y_{i}| T_{i}=2]\), where
+\(E[\cdot]\) denotes the expected value. An example of this approach is
+seen in \citet{Jones_et_al_2019}.
 
 Researchers then proceed to identify the estimands.
 \emph{Identification} refers to the process of accurately computing an
@@ -349,24 +348,24 @@ desirable properties that ensure the accuracy of estimates. For
 instance, the BTL model \citep{Bradley_et_al_1952, Luce_1959} is an
 estimator known for its effectiveness in modeling pairwise comparisons,
 yielding accurate estimates for the target of inference discussed
-earlier, as long as its assumptions are met.
+earlier, as long as the assumptions of the model are met.
 
 However, many studies aim to understand the mechanisms underlying
 specific data types and also seek to establish causal relationships
 rather than merely infer associations. In the earlier example, the
-associational estimates obtained using the BTL model can be interpreted
-as causal, because the data were collected using a randomized
-experiment. Randomized experiments enable the causal interpretation of
-associational estimates by ensuring several key properties, including
-common support, no interference, and consistency
-\citep{Morgan_et_al_2014, Neal_2020}. The most crucial property,
-however, is that randomization effectively eliminates confounding.
-\emph{Confounding} occurs when an external variable influences both the
-outcome and the variable of interest, leading to spurious association
-\citep{Everitt_et_al_2010}. Randomization mitigates this issue by
-decoupling the intervention assignment mechanism, such as assigning
-students to different groups, from other variables and outcomes
-\citep{Morgan_et_al_2014, Neal_2020}.
+differences between groups obtained using the BTL model, referred to as
+the associational estimates, can be interpreted as causal because the
+data were collected through a randomized experiment. Randomized
+experiments enable the causal interpretation of associational estimates
+by ensuring several key properties, including common support, no
+interference, and consistency \citep{Morgan_et_al_2014, Neal_2020}. The
+most crucial property, however, is that randomization effectively
+eliminates confounding. \emph{Confounding} occurs when an external
+variable influences both the outcome and the variable of interest,
+leading to spurious associations \citep{Everitt_et_al_2010}.
+Randomization mitigates this issue by decoupling the intervention
+assignment mechanism, such as assigning students to different groups,
+from other variables and outcomes \citep{Morgan_et_al_2014, Neal_2020}.
 
 Experiments are widely regarded as the gold standard in evidence-based
 science \citep{Hariton_et_al_2018, Hansson_2014}, however, researchers
@@ -387,22 +386,23 @@ Consequently, the framework offers significant theoretical insights that
 enhance the design of observational and experimental studies
 \citep{McElreath_2020}.
 
-Although a detailed explanation of causes, and counterfactuals is beyond
-the scope of this document, it suffices to say that causal inference
+While a detailed explanation of causes and counterfactuals is beyond the
+scope of this document, it is important to note that causal inference
 addresses the \emph{fundamental problem of causality} through the use of
-counterfactuals \citep{Neal_2020}. The framework defines the
-\emph{individual causal effect} (ICE) as the difference between an
+counterfactuals \citep{Neal_2020}. The framework defines
+\emph{individual causal effects} (ICE) as the difference between an
 individual's observed and unobserved potential outcomes. These
-unobserved potential outcomes, termed \emph{counterfactuals}, represent
-hypothetical scenarios that are \emph{contrary to fact}, where
+unobserved potential outcomes, known as \emph{counterfactuals},
+represent hypothetical scenarios that are \emph{contrary to fact}, where
 alternative outcomes for an individual, resulting from a specific cause,
 are neither observed nor observable
 \citep{Neal_2020, Counterfactual_2024}. The framework then extends this
-estimand to groups by introducing the \emph{average causal effect}
-(ACE). The ACE reflects the difference between averages of observed
-potential outcomes and counterfactuals across groups. Finally, similar
-to an experiment, the framework identifies the ACE from associational
-estimates by ensuring the absence of confounding.
+estimand to \emph{average causal effects} (ACE), which captures the
+difference between sample averages of observed potential outcomes and
+counterfactuals. Finally, much like in an experiment, the framework
+identifies the ACE from associational estimates by conditioning for a
+\emph{sufficient adjustment set} of variables, ensuring the absence of
+confounding \citep{Morgan_et_al_2014}.
 
 Several approaches to causal inference and counterfactuals exist, but
 two are particularly prominent: the potential outcomes approach, also
@@ -775,6 +775,83 @@ and of all other variables in the graph, as evidenced by the pairwise
 relations \(e_{X} \perp\!\!\!\perp e_{Y}\),
 \(e_{X} \perp\!\!\!\perp e_{Z}\), and \(e_{Z} \perp\!\!\!\perp e_{Y}\).
 
+The motivating example in Section~\ref{sec-framework-structural} can
+further illustrate how to use the five fundamental building blocks to
+construct a system's causal structure. In this scenario, the
+investigator aims to determine whether, \emph{on average}, there is a
+difference in conceptual understanding of a topic \((Y_{i}=\{0,1\})\)
+between two groups of students \((T_{i}=\{1,2\})\), described by the
+estimand \(E[Y_{i}| T_{i}=1] - E[Y_{i}| T_{i}=2]\). However, unlike the
+previous case, an experiment cannot be conducted, and the problem
+suggests that the country to which a student belongs (\(X\)) may
+influence both \(T\) and \(Y\). Such scenarios are plausible, especially
+when the teaching methods depend on software or access to technology,
+which may be limited in certain countries {(maybe an example with more
+impact?)}. Figure~\ref{fig-example} illustrates the plausible causal
+structure of the motivating example. A detailed examination of Figures
+\ref{fig-mdag_example1}, \ref{fig-sdag_example1}, and SCM
+\ref{fig-scm_example1} reveals the presence of at least four of the five
+fundamental building blocks. The figures display multiple descendants,
+as indicated by pairwise relations such as \(X \rightarrow T\),
+\(X \rightarrow Y\), and \(T \rightarrow Y\). Additionally, the figures
+features multiple pairs of unconnected nodes, evident from the relations
+\(e_{T} \perp\!\!\!\perp e_{X}\), \(e_{T} \perp\!\!\!\perp e_{Y}\), and
+\(e_{X} \perp\!\!\!\perp e_{Y}\). Finally, the figures illustrate the
+fork \(X \rightarrow \{T,Y\}\), and two colliders with
+\(\{X,e_{T}\} \rightarrow T\) and \(\{X,T,e_{Y}\} \rightarrow Y\).
+
+\begin{figure}
+
+\begin{minipage}{0.33\linewidth}
+
+\centering{
+
+\includegraphics[width=1\textwidth,height=\textheight]{images/figures/mdag_example1.png}
+
+}
+
+\subcaption{\label{fig-mdag_example1}Magnified representation}
+
+\end{minipage}%
+%
+\begin{minipage}{0.33\linewidth}
+
+\centering{
+
+\includegraphics[width=0.55\textwidth,height=\textheight]{images/figures/sdag_example1.png}
+
+}
+
+\subcaption{\label{fig-sdag_example1}Standard representation}
+
+\end{minipage}%
+%
+\begin{minipage}{0.33\linewidth}
+
+\centering{
+
+\[
+\begin{aligned}
+  X & := f_{X}(e_{X}) \\
+  T & := f_{Z}(X,e_{T}) \\
+  Y & := f_{Y}(T,X,e_{Y}) \\
+  e_{T} & \perp\!\!\!\perp e_{X} \\
+  e_{T} & \perp\!\!\!\perp e_{Y} \\
+  e_{X} & \perp\!\!\!\perp e_{Y}
+\end{aligned}
+\]
+
+}
+
+\subcaption{\label{fig-scm_example1}Structural causal model}
+
+\end{minipage}%
+
+\caption{\label{fig-example}DAGs for a plausible causal structure in a
+system.}
+
+\end{figure}%
+
 \subsection{The flow of association and causation in
 graphs}\label{sec-framework-flow}
 
@@ -790,8 +867,6 @@ graphs}\label{sec-framework-flow}
 graphs. Extracted and slightly modified from \citet[31]{Neal_2020}}
 
 \end{figure}%
-
-\subsection{A motivating example}\label{sec-framework-example}
 
 \section{Theory}\label{sec-theory}
 

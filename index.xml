@@ -394,10 +394,8 @@ the University of Antwerp (BOF).</funding-statement>
 </sec>
 <sec id="sec-framework">
   <title>Theoretical framework</title>
-  <p>This section introduces fundamental concepts in causal inference,
-  such as directed acyclic graphs (DAGs), structural causal models
-  (SCMs), and the flow of association and causation in graphs. The
-  section is not a comprehensive description of causal inference
+  <p>This section introduces fundamental concepts in causal inference
+  but does not offer a comprehensive description of causal inference
   methods. Readers interested in deeper exploration should consult
   introductory papers like Pearl
   (<xref alt="2010" rid="ref-Pearl_2010" ref-type="bibr">2010</xref>),
@@ -441,8 +439,8 @@ the University of Antwerp (BOF).</funding-statement>
     and Skrondal 2010</xref>). For instance, a study might examine the
     question, “To what extent do different teaching methods
     (<inline-formula><alternatives>
-    <tex-math><![CDATA[X]]></tex-math>
-    <mml:math display="inline" xmlns:mml="http://www.w3.org/1998/Math/MathML"><mml:mi>X</mml:mi></mml:math></alternatives></inline-formula>)
+    <tex-math><![CDATA[T]]></tex-math>
+    <mml:math display="inline" xmlns:mml="http://www.w3.org/1998/Math/MathML"><mml:mi>T</mml:mi></mml:math></alternatives></inline-formula>)
     influence students’ conceptual understanding of a topic
     (<inline-formula><alternatives>
     <tex-math><![CDATA[Y]]></tex-math>
@@ -450,21 +448,21 @@ the University of Antwerp (BOF).</funding-statement>
     To investigate this, the study could randomly assign students to two
     groups, each using a different teaching method
     <inline-formula><alternatives>
-    <tex-math><![CDATA[(X=\{1,2\})]]></tex-math>
-    <mml:math display="inline" xmlns:mml="http://www.w3.org/1998/Math/MathML"><mml:mrow><mml:mo stretchy="true" form="prefix">(</mml:mo><mml:mi>X</mml:mi><mml:mo>=</mml:mo><mml:mo stretchy="false" form="prefix">{</mml:mo><mml:mn>1</mml:mn><mml:mo>,</mml:mo><mml:mn>2</mml:mn><mml:mo stretchy="false" form="postfix">}</mml:mo><mml:mo stretchy="true" form="postfix">)</mml:mo></mml:mrow></mml:math></alternatives></inline-formula>.
+    <tex-math><![CDATA[(T_{i}=\{1,2\})]]></tex-math>
+    <mml:math display="inline" xmlns:mml="http://www.w3.org/1998/Math/MathML"><mml:mrow><mml:mo stretchy="true" form="prefix">(</mml:mo><mml:msub><mml:mi>T</mml:mi><mml:mi>i</mml:mi></mml:msub><mml:mo>=</mml:mo><mml:mo stretchy="false" form="prefix">{</mml:mo><mml:mn>1</mml:mn><mml:mo>,</mml:mo><mml:mn>2</mml:mn><mml:mo stretchy="false" form="postfix">}</mml:mo><mml:mo stretchy="true" form="postfix">)</mml:mo></mml:mrow></mml:math></alternatives></inline-formula>.
     Students’ conceptual understanding of the topic could be evaluated
     through pairwise comparisons, resulting in a dichotomous outcome
     <inline-formula><alternatives>
-    <tex-math><![CDATA[(Y=\{0,1\})]]></tex-math>
-    <mml:math display="inline" xmlns:mml="http://www.w3.org/1998/Math/MathML"><mml:mrow><mml:mo stretchy="true" form="prefix">(</mml:mo><mml:mi>Y</mml:mi><mml:mo>=</mml:mo><mml:mo stretchy="false" form="prefix">{</mml:mo><mml:mn>0</mml:mn><mml:mo>,</mml:mo><mml:mn>1</mml:mn><mml:mo stretchy="false" form="postfix">}</mml:mo><mml:mo stretchy="true" form="postfix">)</mml:mo></mml:mrow></mml:math></alternatives></inline-formula>,
+    <tex-math><![CDATA[(Y_{i}=\{0,1\})]]></tex-math>
+    <mml:math display="inline" xmlns:mml="http://www.w3.org/1998/Math/MathML"><mml:mrow><mml:mo stretchy="true" form="prefix">(</mml:mo><mml:msub><mml:mi>Y</mml:mi><mml:mi>i</mml:mi></mml:msub><mml:mo>=</mml:mo><mml:mo stretchy="false" form="prefix">{</mml:mo><mml:mn>0</mml:mn><mml:mo>,</mml:mo><mml:mn>1</mml:mn><mml:mo stretchy="false" form="postfix">}</mml:mo><mml:mo stretchy="true" form="postfix">)</mml:mo></mml:mrow></mml:math></alternatives></inline-formula>,
     indicating which student among those compared has a higher level of
     understanding. The research question could be then framed as the
     estimand, “<italic>On average</italic>, is there a difference in
     conceptual understanding of the topic between the two groups of
-    students?” This estimand could be mathematically expressed as
-    <inline-formula><alternatives>
-    <tex-math><![CDATA[E[Y| X=1] - E[Y| X=2]]]></tex-math>
-    <mml:math display="inline" xmlns:mml="http://www.w3.org/1998/Math/MathML"><mml:mrow><mml:mi>E</mml:mi><mml:mrow><mml:mo stretchy="true" form="prefix">[</mml:mo><mml:mi>Y</mml:mi><mml:mo stretchy="false" form="prefix">|</mml:mo><mml:mi>X</mml:mi><mml:mo>=</mml:mo><mml:mn>1</mml:mn><mml:mo stretchy="true" form="postfix">]</mml:mo></mml:mrow><mml:mo>−</mml:mo><mml:mi>E</mml:mi><mml:mrow><mml:mo stretchy="true" form="prefix">[</mml:mo><mml:mi>Y</mml:mi><mml:mo stretchy="false" form="prefix">|</mml:mo><mml:mi>X</mml:mi><mml:mo>=</mml:mo><mml:mn>2</mml:mn><mml:mo stretchy="true" form="postfix">]</mml:mo></mml:mrow></mml:mrow></mml:math></alternatives></inline-formula>,
+    students?” This estimand could be mathematically expressed by the
+    associational quantity <inline-formula><alternatives>
+    <tex-math><![CDATA[E[Y_{i}| T_{i}=1] - E[Y_{i}| T_{i}=2]]]></tex-math>
+    <mml:math display="inline" xmlns:mml="http://www.w3.org/1998/Math/MathML"><mml:mrow><mml:mi>E</mml:mi><mml:mrow><mml:mo stretchy="true" form="prefix">[</mml:mo><mml:msub><mml:mi>Y</mml:mi><mml:mi>i</mml:mi></mml:msub><mml:mo stretchy="false" form="prefix">|</mml:mo><mml:msub><mml:mi>T</mml:mi><mml:mi>i</mml:mi></mml:msub><mml:mo>=</mml:mo><mml:mn>1</mml:mn><mml:mo stretchy="true" form="postfix">]</mml:mo></mml:mrow><mml:mo>−</mml:mo><mml:mi>E</mml:mi><mml:mrow><mml:mo stretchy="true" form="prefix">[</mml:mo><mml:msub><mml:mi>Y</mml:mi><mml:mi>i</mml:mi></mml:msub><mml:mo stretchy="false" form="prefix">|</mml:mo><mml:msub><mml:mi>T</mml:mi><mml:mi>i</mml:mi></mml:msub><mml:mo>=</mml:mo><mml:mn>2</mml:mn><mml:mo stretchy="true" form="postfix">]</mml:mo></mml:mrow></mml:mrow></mml:math></alternatives></inline-formula>,
     where <inline-formula><alternatives>
     <tex-math><![CDATA[E[\cdot]]]></tex-math>
     <mml:math display="inline" xmlns:mml="http://www.w3.org/1998/Math/MathML"><mml:mrow><mml:mi>E</mml:mi><mml:mrow><mml:mo stretchy="true" form="prefix">[</mml:mo><mml:mi>⋅</mml:mi><mml:mo stretchy="true" form="postfix">]</mml:mo></mml:mrow></mml:mrow></mml:math></alternatives></inline-formula>
@@ -491,16 +489,17 @@ the University of Antwerp (BOF).</funding-statement>
     <xref alt="Luce 1959" rid="ref-Luce_1959" ref-type="bibr">Luce
     1959</xref>) is an estimator known for its effectiveness in modeling
     pairwise comparisons, yielding accurate estimates for the target of
-    inference discussed earlier, as long as its assumptions are met.</p>
+    inference discussed earlier, as long as the assumptions of the model
+    are met.</p>
     <p>However, many studies aim to understand the mechanisms underlying
     specific data types and also seek to establish causal relationships
     rather than merely infer associations. In the earlier example, the
-    associational estimates obtained using the BTL model can be
-    interpreted as causal, because the data were collected using a
-    randomized experiment. Randomized experiments enable the causal
-    interpretation of associational estimates by ensuring several key
-    properties, including common support, no interference, and
-    consistency
+    differences between groups obtained using the BTL model, referred to
+    as the associational estimates, can be interpreted as causal because
+    the data were collected through a randomized experiment. Randomized
+    experiments enable the causal interpretation of associational
+    estimates by ensuring several key properties, including common
+    support, no interference, and consistency
     (<xref alt="Morgan and Winship 2014" rid="ref-Morgan_et_al_2014" ref-type="bibr">Morgan
     and Winship 2014</xref>;
     <xref alt="Neal 2020" rid="ref-Neal_2020" ref-type="bibr">Neal
@@ -508,7 +507,7 @@ the University of Antwerp (BOF).</funding-statement>
     randomization effectively eliminates confounding.
     <italic>Confounding</italic> occurs when an external variable
     influences both the outcome and the variable of interest, leading to
-    spurious association
+    spurious associations
     (<xref alt="Everitt and Skrondal 2010" rid="ref-Everitt_et_al_2010" ref-type="bibr">Everitt
     and Skrondal 2010</xref>). Randomization mitigates this issue by
     decoupling the intervention assignment mechanism, such as assigning
@@ -546,27 +545,30 @@ the University of Antwerp (BOF).</funding-statement>
     experimental studies
     (<xref alt="McElreath 2020" rid="ref-McElreath_2020" ref-type="bibr">McElreath
     2020</xref>).</p>
-    <p>Although a detailed explanation of causes, and counterfactuals is
-    beyond the scope of this document, it suffices to say that causal
-    inference addresses the <italic>fundamental problem of
+    <p>While a detailed explanation of causes and counterfactuals is
+    beyond the scope of this document, it is important to note that
+    causal inference addresses the <italic>fundamental problem of
     causality</italic> through the use of counterfactuals
     (<xref alt="Neal 2020" rid="ref-Neal_2020" ref-type="bibr">Neal
-    2020</xref>). The framework defines the <italic>individual causal
-    effect</italic> (ICE) as the difference between an individual’s
+    2020</xref>). The framework defines <italic>individual causal
+    effects</italic> (ICE) as the difference between an individual’s
     observed and unobserved potential outcomes. These unobserved
-    potential outcomes, termed <italic>counterfactuals</italic>,
+    potential outcomes, known as <italic>counterfactuals</italic>,
     represent hypothetical scenarios that are <italic>contrary to
     fact</italic>, where alternative outcomes for an individual,
     resulting from a specific cause, are neither observed nor observable
     (<xref alt="Neal 2020" rid="ref-Neal_2020" ref-type="bibr">Neal
     2020</xref>;
     <xref alt="Counterfactual 2024" rid="ref-Counterfactual_2024" ref-type="bibr">Counterfactual
-    2024</xref>). The framework then extends this estimand to groups by
-    introducing the <italic>average causal effect</italic> (ACE). The
-    ACE reflects the difference between averages of observed potential
-    outcomes and counterfactuals across groups. Finally, similar to an
-    experiment, the framework identifies the ACE from associational
-    estimates by ensuring the absence of confounding.</p>
+    2024</xref>). The framework then extends this estimand to
+    <italic>average causal effects</italic> (ACE), which captures the
+    difference between sample averages of observed potential outcomes
+    and counterfactuals. Finally, much like in an experiment, the
+    framework identifies the ACE from associational estimates by
+    conditioning for a <italic>sufficient adjustment set</italic> of
+    variables, ensuring the absence of confounding
+    (<xref alt="Morgan and Winship 2014" rid="ref-Morgan_et_al_2014" ref-type="bibr">Morgan
+    and Winship 2014</xref>).</p>
     <p>Several approaches to causal inference and counterfactuals exist,
     but two are particularly prominent: the potential outcomes approach,
     also known as the Neyman-Rubin causal model
@@ -1113,19 +1115,138 @@ the University of Antwerp (BOF).</funding-statement>
     and <inline-formula><alternatives>
     <tex-math><![CDATA[e_{Z} \perp\!\!\!\perp e_{Y}]]></tex-math>
     <mml:math display="inline" xmlns:mml="http://www.w3.org/1998/Math/MathML"><mml:mrow><mml:msub><mml:mi>e</mml:mi><mml:mi>Z</mml:mi></mml:msub><mml:mo>⊥</mml:mo><mml:mspace width="-0.167em"></mml:mspace><mml:mspace width="-0.167em"></mml:mspace><mml:mspace width="-0.167em"></mml:mspace><mml:mo>⊥</mml:mo><mml:msub><mml:mi>e</mml:mi><mml:mi>Y</mml:mi></mml:msub></mml:mrow></mml:math></alternatives></inline-formula>.</p>
+    <p>The motivating example in
+    <xref alt="Section 2.1" rid="sec-framework-structural">Section 2.1</xref>
+    can further illustrate how to use the five fundamental building
+    blocks to construct a system’s causal structure. In this scenario,
+    the investigator aims to determine whether, <italic>on
+    average</italic>, there is a difference in conceptual understanding
+    of a topic <inline-formula><alternatives>
+    <tex-math><![CDATA[(Y_{i}=\{0,1\})]]></tex-math>
+    <mml:math display="inline" xmlns:mml="http://www.w3.org/1998/Math/MathML"><mml:mrow><mml:mo stretchy="true" form="prefix">(</mml:mo><mml:msub><mml:mi>Y</mml:mi><mml:mi>i</mml:mi></mml:msub><mml:mo>=</mml:mo><mml:mo stretchy="false" form="prefix">{</mml:mo><mml:mn>0</mml:mn><mml:mo>,</mml:mo><mml:mn>1</mml:mn><mml:mo stretchy="false" form="postfix">}</mml:mo><mml:mo stretchy="true" form="postfix">)</mml:mo></mml:mrow></mml:math></alternatives></inline-formula>
+    between two groups of students <inline-formula><alternatives>
+    <tex-math><![CDATA[(T_{i}=\{1,2\})]]></tex-math>
+    <mml:math display="inline" xmlns:mml="http://www.w3.org/1998/Math/MathML"><mml:mrow><mml:mo stretchy="true" form="prefix">(</mml:mo><mml:msub><mml:mi>T</mml:mi><mml:mi>i</mml:mi></mml:msub><mml:mo>=</mml:mo><mml:mo stretchy="false" form="prefix">{</mml:mo><mml:mn>1</mml:mn><mml:mo>,</mml:mo><mml:mn>2</mml:mn><mml:mo stretchy="false" form="postfix">}</mml:mo><mml:mo stretchy="true" form="postfix">)</mml:mo></mml:mrow></mml:math></alternatives></inline-formula>,
+    described by the estimand <inline-formula><alternatives>
+    <tex-math><![CDATA[E[Y_{i}| T_{i}=1] - E[Y_{i}| T_{i}=2]]]></tex-math>
+    <mml:math display="inline" xmlns:mml="http://www.w3.org/1998/Math/MathML"><mml:mrow><mml:mi>E</mml:mi><mml:mrow><mml:mo stretchy="true" form="prefix">[</mml:mo><mml:msub><mml:mi>Y</mml:mi><mml:mi>i</mml:mi></mml:msub><mml:mo stretchy="false" form="prefix">|</mml:mo><mml:msub><mml:mi>T</mml:mi><mml:mi>i</mml:mi></mml:msub><mml:mo>=</mml:mo><mml:mn>1</mml:mn><mml:mo stretchy="true" form="postfix">]</mml:mo></mml:mrow><mml:mo>−</mml:mo><mml:mi>E</mml:mi><mml:mrow><mml:mo stretchy="true" form="prefix">[</mml:mo><mml:msub><mml:mi>Y</mml:mi><mml:mi>i</mml:mi></mml:msub><mml:mo stretchy="false" form="prefix">|</mml:mo><mml:msub><mml:mi>T</mml:mi><mml:mi>i</mml:mi></mml:msub><mml:mo>=</mml:mo><mml:mn>2</mml:mn><mml:mo stretchy="true" form="postfix">]</mml:mo></mml:mrow></mml:mrow></mml:math></alternatives></inline-formula>.
+    However, unlike the previous case, an experiment cannot be
+    conducted, and the problem suggests that the country to which a
+    student belongs (<inline-formula><alternatives>
+    <tex-math><![CDATA[X]]></tex-math>
+    <mml:math display="inline" xmlns:mml="http://www.w3.org/1998/Math/MathML"><mml:mi>X</mml:mi></mml:math></alternatives></inline-formula>)
+    may influence both <inline-formula><alternatives>
+    <tex-math><![CDATA[T]]></tex-math>
+    <mml:math display="inline" xmlns:mml="http://www.w3.org/1998/Math/MathML"><mml:mi>T</mml:mi></mml:math></alternatives></inline-formula>
+    and <inline-formula><alternatives>
+    <tex-math><![CDATA[Y]]></tex-math>
+    <mml:math display="inline" xmlns:mml="http://www.w3.org/1998/Math/MathML"><mml:mi>Y</mml:mi></mml:math></alternatives></inline-formula>.
+    Such scenarios are plausible, especially when the teaching methods
+    depend on software or access to technology, which may be limited in
+    certain countries <styled-content style="color:blue;">(maybe an
+    example with more impact?)</styled-content>.
+    <xref alt="Figure 3" rid="fig-example">Figure 3</xref> illustrates
+    the plausible causal structure of the motivating example. A detailed
+    examination of Figures <xref alt="3 (a)" rid="fig-mdag_example1">3
+    (a)</xref>, <xref alt="3 (b)" rid="fig-sdag_example1">3 (b)</xref>,
+    and SCM <xref alt="3 (c)" rid="fig-scm_example1">3 (c)</xref>
+    reveals the presence of at least four of the five fundamental
+    building blocks. The figures display multiple descendants, as
+    indicated by pairwise relations such as
+    <inline-formula><alternatives>
+    <tex-math><![CDATA[X \rightarrow T]]></tex-math>
+    <mml:math display="inline" xmlns:mml="http://www.w3.org/1998/Math/MathML"><mml:mrow><mml:mi>X</mml:mi><mml:mo>→</mml:mo><mml:mi>T</mml:mi></mml:mrow></mml:math></alternatives></inline-formula>,
+    <inline-formula><alternatives>
+    <tex-math><![CDATA[X \rightarrow Y]]></tex-math>
+    <mml:math display="inline" xmlns:mml="http://www.w3.org/1998/Math/MathML"><mml:mrow><mml:mi>X</mml:mi><mml:mo>→</mml:mo><mml:mi>Y</mml:mi></mml:mrow></mml:math></alternatives></inline-formula>,
+    and <inline-formula><alternatives>
+    <tex-math><![CDATA[T \rightarrow Y]]></tex-math>
+    <mml:math display="inline" xmlns:mml="http://www.w3.org/1998/Math/MathML"><mml:mrow><mml:mi>T</mml:mi><mml:mo>→</mml:mo><mml:mi>Y</mml:mi></mml:mrow></mml:math></alternatives></inline-formula>.
+    Additionally, the figures features multiple pairs of unconnected
+    nodes, evident from the relations <inline-formula><alternatives>
+    <tex-math><![CDATA[e_{T} \perp\!\!\!\perp e_{X}]]></tex-math>
+    <mml:math display="inline" xmlns:mml="http://www.w3.org/1998/Math/MathML"><mml:mrow><mml:msub><mml:mi>e</mml:mi><mml:mi>T</mml:mi></mml:msub><mml:mo>⊥</mml:mo><mml:mspace width="-0.167em"></mml:mspace><mml:mspace width="-0.167em"></mml:mspace><mml:mspace width="-0.167em"></mml:mspace><mml:mo>⊥</mml:mo><mml:msub><mml:mi>e</mml:mi><mml:mi>X</mml:mi></mml:msub></mml:mrow></mml:math></alternatives></inline-formula>,
+    <inline-formula><alternatives>
+    <tex-math><![CDATA[e_{T} \perp\!\!\!\perp e_{Y}]]></tex-math>
+    <mml:math display="inline" xmlns:mml="http://www.w3.org/1998/Math/MathML"><mml:mrow><mml:msub><mml:mi>e</mml:mi><mml:mi>T</mml:mi></mml:msub><mml:mo>⊥</mml:mo><mml:mspace width="-0.167em"></mml:mspace><mml:mspace width="-0.167em"></mml:mspace><mml:mspace width="-0.167em"></mml:mspace><mml:mo>⊥</mml:mo><mml:msub><mml:mi>e</mml:mi><mml:mi>Y</mml:mi></mml:msub></mml:mrow></mml:math></alternatives></inline-formula>,
+    and <inline-formula><alternatives>
+    <tex-math><![CDATA[e_{X} \perp\!\!\!\perp e_{Y}]]></tex-math>
+    <mml:math display="inline" xmlns:mml="http://www.w3.org/1998/Math/MathML"><mml:mrow><mml:msub><mml:mi>e</mml:mi><mml:mi>X</mml:mi></mml:msub><mml:mo>⊥</mml:mo><mml:mspace width="-0.167em"></mml:mspace><mml:mspace width="-0.167em"></mml:mspace><mml:mspace width="-0.167em"></mml:mspace><mml:mo>⊥</mml:mo><mml:msub><mml:mi>e</mml:mi><mml:mi>Y</mml:mi></mml:msub></mml:mrow></mml:math></alternatives></inline-formula>.
+    Finally, the figures illustrate the fork
+    <inline-formula><alternatives>
+    <tex-math><![CDATA[X \rightarrow \{T,Y\}]]></tex-math>
+    <mml:math display="inline" xmlns:mml="http://www.w3.org/1998/Math/MathML"><mml:mrow><mml:mi>X</mml:mi><mml:mo>→</mml:mo><mml:mo stretchy="false" form="prefix">{</mml:mo><mml:mi>T</mml:mi><mml:mo>,</mml:mo><mml:mi>Y</mml:mi><mml:mo stretchy="false" form="postfix">}</mml:mo></mml:mrow></mml:math></alternatives></inline-formula>,
+    and two colliders with <inline-formula><alternatives>
+    <tex-math><![CDATA[\{X,e_{T}\} \rightarrow T]]></tex-math>
+    <mml:math display="inline" xmlns:mml="http://www.w3.org/1998/Math/MathML"><mml:mrow><mml:mo stretchy="false" form="prefix">{</mml:mo><mml:mi>X</mml:mi><mml:mo>,</mml:mo><mml:msub><mml:mi>e</mml:mi><mml:mi>T</mml:mi></mml:msub><mml:mo stretchy="false" form="postfix">}</mml:mo><mml:mo>→</mml:mo><mml:mi>T</mml:mi></mml:mrow></mml:math></alternatives></inline-formula>
+    and <inline-formula><alternatives>
+    <tex-math><![CDATA[\{X,T,e_{Y}\} \rightarrow Y]]></tex-math>
+    <mml:math display="inline" xmlns:mml="http://www.w3.org/1998/Math/MathML"><mml:mrow><mml:mo stretchy="false" form="prefix">{</mml:mo><mml:mi>X</mml:mi><mml:mo>,</mml:mo><mml:mi>T</mml:mi><mml:mo>,</mml:mo><mml:msub><mml:mi>e</mml:mi><mml:mi>Y</mml:mi></mml:msub><mml:mo stretchy="false" form="postfix">}</mml:mo><mml:mo>→</mml:mo><mml:mi>Y</mml:mi></mml:mrow></mml:math></alternatives></inline-formula>.</p>
+    <fig id="fig-example">
+      <caption><p>Figure 3: DAGs for a plausible causal structure in a
+      system.</p></caption>
+      <table-wrap>
+        <table>
+          <colgroup>
+            <col width="33%" />
+            <col width="33%" />
+            <col width="33%" />
+          </colgroup>
+          <tbody>
+            <tr>
+              <td align="left"><p specific-use="wrapper">
+                <boxed-text>
+                  <fig id="fig-mdag_example1">
+                    <caption><p>(a) Magnified
+                    representation</p></caption>
+                    <graphic mimetype="image" mime-subtype="png" xlink:href="images/figures/mdag_example1.png" />
+                  </fig>
+                </boxed-text>
+              </p></td>
+              <td align="left"><p specific-use="wrapper">
+                <boxed-text>
+                  <fig id="fig-sdag_example1">
+                    <caption><p>(b) Standard
+                    representation</p></caption>
+                    <graphic mimetype="image" mime-subtype="png" xlink:href="images/figures/sdag_example1.png" />
+                  </fig>
+                </boxed-text>
+              </p></td>
+              <td align="left"><p specific-use="wrapper">
+                <boxed-text>
+                  <fig id="fig-scm_example1">
+                    <caption><p>(c) Structural causal
+                    model</p></caption>
+                    <p><disp-formula><alternatives>
+                    <tex-math><![CDATA[
+                    \begin{aligned}
+                      X & := f_{X}(e_{X}) \\
+                      T & := f_{Z}(X,e_{T}) \\
+                      Y & := f_{Y}(T,X,e_{Y}) \\
+                      e_{T} & \perp\!\!\!\perp e_{X} \\
+                      e_{T} & \perp\!\!\!\perp e_{Y} \\
+                      e_{X} & \perp\!\!\!\perp e_{Y}
+                    \end{aligned}
+                    ]]></tex-math>
+                    <mml:math display="block" xmlns:mml="http://www.w3.org/1998/Math/MathML"><mml:mtable><mml:mtr><mml:mtd columnalign="right" style="text-align: right"><mml:mi>X</mml:mi></mml:mtd><mml:mtd columnalign="left" style="text-align: left"><mml:mo>:=</mml:mo><mml:msub><mml:mi>f</mml:mi><mml:mi>X</mml:mi></mml:msub><mml:mrow><mml:mo stretchy="true" form="prefix">(</mml:mo><mml:msub><mml:mi>e</mml:mi><mml:mi>X</mml:mi></mml:msub><mml:mo stretchy="true" form="postfix">)</mml:mo></mml:mrow></mml:mtd></mml:mtr><mml:mtr><mml:mtd columnalign="right" style="text-align: right"><mml:mi>T</mml:mi></mml:mtd><mml:mtd columnalign="left" style="text-align: left"><mml:mo>:=</mml:mo><mml:msub><mml:mi>f</mml:mi><mml:mi>Z</mml:mi></mml:msub><mml:mrow><mml:mo stretchy="true" form="prefix">(</mml:mo><mml:mi>X</mml:mi><mml:mo>,</mml:mo><mml:msub><mml:mi>e</mml:mi><mml:mi>T</mml:mi></mml:msub><mml:mo stretchy="true" form="postfix">)</mml:mo></mml:mrow></mml:mtd></mml:mtr><mml:mtr><mml:mtd columnalign="right" style="text-align: right"><mml:mi>Y</mml:mi></mml:mtd><mml:mtd columnalign="left" style="text-align: left"><mml:mo>:=</mml:mo><mml:msub><mml:mi>f</mml:mi><mml:mi>Y</mml:mi></mml:msub><mml:mrow><mml:mo stretchy="true" form="prefix">(</mml:mo><mml:mi>T</mml:mi><mml:mo>,</mml:mo><mml:mi>X</mml:mi><mml:mo>,</mml:mo><mml:msub><mml:mi>e</mml:mi><mml:mi>Y</mml:mi></mml:msub><mml:mo stretchy="true" form="postfix">)</mml:mo></mml:mrow></mml:mtd></mml:mtr><mml:mtr><mml:mtd columnalign="right" style="text-align: right"><mml:msub><mml:mi>e</mml:mi><mml:mi>T</mml:mi></mml:msub></mml:mtd><mml:mtd columnalign="left" style="text-align: left"><mml:mo>⊥</mml:mo><mml:mspace width="-0.167em"></mml:mspace><mml:mspace width="-0.167em"></mml:mspace><mml:mspace width="-0.167em"></mml:mspace><mml:mo>⊥</mml:mo><mml:msub><mml:mi>e</mml:mi><mml:mi>X</mml:mi></mml:msub></mml:mtd></mml:mtr><mml:mtr><mml:mtd columnalign="right" style="text-align: right"><mml:msub><mml:mi>e</mml:mi><mml:mi>T</mml:mi></mml:msub></mml:mtd><mml:mtd columnalign="left" style="text-align: left"><mml:mo>⊥</mml:mo><mml:mspace width="-0.167em"></mml:mspace><mml:mspace width="-0.167em"></mml:mspace><mml:mspace width="-0.167em"></mml:mspace><mml:mo>⊥</mml:mo><mml:msub><mml:mi>e</mml:mi><mml:mi>Y</mml:mi></mml:msub></mml:mtd></mml:mtr><mml:mtr><mml:mtd columnalign="right" style="text-align: right"><mml:msub><mml:mi>e</mml:mi><mml:mi>X</mml:mi></mml:msub></mml:mtd><mml:mtd columnalign="left" style="text-align: left"><mml:mo>⊥</mml:mo><mml:mspace width="-0.167em"></mml:mspace><mml:mspace width="-0.167em"></mml:mspace><mml:mspace width="-0.167em"></mml:mspace><mml:mo>⊥</mml:mo><mml:msub><mml:mi>e</mml:mi><mml:mi>Y</mml:mi></mml:msub></mml:mtd></mml:mtr></mml:mtable></mml:math></alternatives></disp-formula></p>
+                  </fig>
+                </boxed-text>
+              </p></td>
+            </tr>
+          </tbody>
+        </table>
+      </table-wrap>
+    </fig>
   </sec>
   <sec id="sec-framework-flow">
     <title>The flow of association and causation in graphs</title>
     <fig id="fig-ACflow">
-      <caption><p>Figure 3: The flow of association and causation in
+      <caption><p>Figure 4: The flow of association and causation in
       graphs. Extracted and slightly modified from Neal
       (<xref alt="2020, 31" rid="ref-Neal_2020" ref-type="bibr">2020,
       31</xref>)</p></caption>
       <graphic mimetype="image" mime-subtype="png" xlink:href="images/figures/ACflow.png" />
     </fig>
-  </sec>
-  <sec id="sec-framework-example">
-    <title>A motivating example</title>
   </sec>
 </sec>
 <sec id="sec-theory">
@@ -1133,22 +1254,22 @@ the University of Antwerp (BOF).</funding-statement>
   <sec id="sec-theory-scientific">
     <title>A scientific model for the DCJ</title>
     <fig id="fig-SciModel_simp1">
-      <caption><p>Figure 4: DCJ causal diagram, simplified
+      <caption><p>Figure 5: DCJ causal diagram, simplified
       description</p></caption>
       <graphic mimetype="image" mime-subtype="png" xlink:href="images/figures/SciModel_simp1.png" />
     </fig>
     <fig id="fig-SciModel_simp2">
-      <caption><p>Figure 5: DCJ causal diagram, simplified mathematical
+      <caption><p>Figure 6: DCJ causal diagram, simplified mathematical
       description</p></caption>
       <graphic mimetype="image" mime-subtype="png" xlink:href="images/figures/SciModel_simp2.png" />
     </fig>
     <fig id="fig-SciModel_pop">
-      <caption><p>Figure 6: DCJ causal diagram, population mathematical
+      <caption><p>Figure 7: DCJ causal diagram, population mathematical
       description</p></caption>
       <graphic mimetype="image" mime-subtype="png" xlink:href="images/figures/SciModel_pop.png" />
     </fig>
     <fig id="fig-SciModel_samp">
-      <caption><p>Figure 7: DCJ causal diagram, sample with comparisons
+      <caption><p>Figure 8: DCJ causal diagram, sample with comparisons
       mathematical description</p></caption>
       <graphic mimetype="image" mime-subtype="png" xlink:href="images/figures/SciModel_samp.png" />
     </fig>
