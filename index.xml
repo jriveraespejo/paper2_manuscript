@@ -199,10 +199,10 @@ sciences</institution>
 <corresp id="cor-1">JoseManuel.RiveraEspejo@uantwerpen.be</corresp>
 </author-notes>
 
-<pub-date date-type="pub" publication-format="electronic" iso-8601-date="2024-08-14">
+<pub-date date-type="pub" publication-format="electronic" iso-8601-date="2024-08-16">
 <year>2024</year>
 <month>8</month>
-<day>14</day>
+<day>16</day>
 </pub-date>
 
 
@@ -443,25 +443,25 @@ the University of Antwerp (BOF).</funding-statement>
     (<inline-formula><alternatives>
     <tex-math><![CDATA[X]]></tex-math>
     <mml:math display="inline" xmlns:mml="http://www.w3.org/1998/Math/MathML"><mml:mi>X</mml:mi></mml:math></alternatives></inline-formula>)
-    influence students’ conceptual understanding of algebra
+    influence students’ conceptual understanding of a topic
     (<inline-formula><alternatives>
     <tex-math><![CDATA[Y]]></tex-math>
     <mml:math display="inline" xmlns:mml="http://www.w3.org/1998/Math/MathML"><mml:mi>Y</mml:mi></mml:math></alternatives></inline-formula>)?”
-    To investigate this, the study randomly assigns students to two
-    groups, each using different algebra teaching method
+    To investigate this, the study could randomly assign students to two
+    groups, each using a different teaching method
     <inline-formula><alternatives>
     <tex-math><![CDATA[(X=\{1,2\})]]></tex-math>
     <mml:math display="inline" xmlns:mml="http://www.w3.org/1998/Math/MathML"><mml:mrow><mml:mo stretchy="true" form="prefix">(</mml:mo><mml:mi>X</mml:mi><mml:mo>=</mml:mo><mml:mo stretchy="false" form="prefix">{</mml:mo><mml:mn>1</mml:mn><mml:mo>,</mml:mo><mml:mn>2</mml:mn><mml:mo stretchy="false" form="postfix">}</mml:mo><mml:mo stretchy="true" form="postfix">)</mml:mo></mml:mrow></mml:math></alternatives></inline-formula>.
-    Students’ conceptual understanding of algebra is evaluated through
-    pairwise comparisons, resulting in a dichotomous outcome
+    Students’ conceptual understanding of the topic could be evaluated
+    through pairwise comparisons, resulting in a dichotomous outcome
     <inline-formula><alternatives>
     <tex-math><![CDATA[(Y=\{0,1\})]]></tex-math>
     <mml:math display="inline" xmlns:mml="http://www.w3.org/1998/Math/MathML"><mml:mrow><mml:mo stretchy="true" form="prefix">(</mml:mo><mml:mi>Y</mml:mi><mml:mo>=</mml:mo><mml:mo stretchy="false" form="prefix">{</mml:mo><mml:mn>0</mml:mn><mml:mo>,</mml:mo><mml:mn>1</mml:mn><mml:mo stretchy="false" form="postfix">}</mml:mo><mml:mo stretchy="true" form="postfix">)</mml:mo></mml:mrow></mml:math></alternatives></inline-formula>,
-    indicating which student possesses a higher degree of understanding
-    among those compared. The research question is then framed as the
+    indicating which student among those compared has a higher level of
+    understanding. The research question could be then framed as the
     estimand, “<italic>On average</italic>, is there a difference in
-    conceptual understanding of algebra between the two groups of
-    student?” This estimand is mathematically expressed as
+    conceptual understanding of the topic between the two groups of
+    students?” This estimand could be mathematically expressed as
     <inline-formula><alternatives>
     <tex-math><![CDATA[E[Y| X=1] - E[Y| X=2]]]></tex-math>
     <mml:math display="inline" xmlns:mml="http://www.w3.org/1998/Math/MathML"><mml:mrow><mml:mi>E</mml:mi><mml:mrow><mml:mo stretchy="true" form="prefix">[</mml:mo><mml:mi>Y</mml:mi><mml:mo stretchy="false" form="prefix">|</mml:mo><mml:mi>X</mml:mi><mml:mo>=</mml:mo><mml:mn>1</mml:mn><mml:mo stretchy="true" form="postfix">]</mml:mo></mml:mrow><mml:mo>−</mml:mo><mml:mi>E</mml:mi><mml:mrow><mml:mo stretchy="true" form="prefix">[</mml:mo><mml:mi>Y</mml:mi><mml:mo stretchy="false" form="prefix">|</mml:mo><mml:mi>X</mml:mi><mml:mo>=</mml:mo><mml:mn>2</mml:mn><mml:mo stretchy="true" form="postfix">]</mml:mo></mml:mrow></mml:mrow></mml:math></alternatives></inline-formula>,
@@ -490,8 +490,8 @@ the University of Antwerp (BOF).</funding-statement>
     and Terry 1952</xref>;
     <xref alt="Luce 1959" rid="ref-Luce_1959" ref-type="bibr">Luce
     1959</xref>) is an estimator known for its effectiveness in modeling
-    pairwise comparisons, providing accurate estimates for the desired
-    estimand when its assumptions are met.</p>
+    pairwise comparisons, yielding accurate estimates for the target of
+    inference discussed earlier, as long as its assumptions are met.</p>
     <p>However, many studies aim to understand the mechanisms underlying
     specific data types and also seek to establish causal relationships
     rather than merely infer associations. In the earlier example, the
@@ -517,17 +517,17 @@ the University of Antwerp (BOF).</funding-statement>
     and Winship 2014</xref>;
     <xref alt="Neal 2020" rid="ref-Neal_2020" ref-type="bibr">Neal
     2020</xref>).</p>
-    <p>Although experiments are widely regarded as the gold standard in
+    <p>Experiments are widely regarded as the gold standard in
     evidence-based science
     (<xref alt="Hariton and Locascio 2018" rid="ref-Hariton_et_al_2018" ref-type="bibr">Hariton
     and Locascio 2018</xref>;
     <xref alt="Hansson 2014" rid="ref-Hansson_2014" ref-type="bibr">Hansson
-    2014</xref>), researchers often encounter constraints that limit
-    their ability to conduct experimental studies. These constraints
-    include ethical concerns, such as the assignment of individuals to
-    potentially harmful interventions, and practical limitations, such
-    as the infeasibility of, for example, assigning individuals to
-    genetic modifications or physical impairments
+    2014</xref>), however, researchers often encounter constraints that
+    limit their ability to conduct experimental studies. These
+    constraints include ethical concerns, such as the assignment of
+    individuals to potentially harmful interventions, and practical
+    limitations, such as the infeasibility of, for example, assigning
+    individuals to genetic modifications or physical impairments
     (<xref alt="Neal 2020" rid="ref-Neal_2020" ref-type="bibr">Neal
     2020</xref>). In these instances, causal inference offers a valuable
     alternative for generating causal estimates. <italic>Causal
@@ -541,34 +541,32 @@ the University of Antwerp (BOF).</funding-statement>
     inference provides a rigorous mathematical framework for analyzing
     causes and counterfactuals
     (<xref alt="Pearl 2009" rid="ref-Pearl_2009" ref-type="bibr">Pearl
-    2009</xref>). Moreover, the framework is beneficial for both
-    observational and experimental studies, as it provides significant
-    theoretical insights that enhance their design
+    2009</xref>). Consequently, the framework offers significant
+    theoretical insights that enhance the design of observational and
+    experimental studies
     (<xref alt="McElreath 2020" rid="ref-McElreath_2020" ref-type="bibr">McElreath
     2020</xref>).</p>
-    <p>Counterfactuals represent the highest level of cognitive
-    abstraction in the ladder of causation, followed by intervention and
-    association
-    (<xref alt="Pearl and Mackenzie 2018" rid="ref-Pearl_et_al_2018" ref-type="bibr">Pearl
-    and Mackenzie 2018</xref>), and a detailed explanation of causes,
-    counterfactuals, and their applications is beyond the scope of this
-    document. However, it is important to note that causal inference
-    addresses the question, “What would have happened in the world under
-    different circumstances?” by transforming unobserved
-    <italic>potential outcomes</italic>, known as counterfactuals, into
-    associational estimates. <italic>Counterfactuals</italic> represent
-    scenarios <italic>contrary to fact</italic>, where alternative
-    <italic>potential outcomes</italic> resulting from a cause are
-    neither observed nor observable
+    <p>Although a detailed explanation of causes, and counterfactuals is
+    beyond the scope of this document, it suffices to say that causal
+    inference addresses the <italic>fundamental problem of
+    causality</italic> through the use of counterfactuals
+    (<xref alt="Neal 2020" rid="ref-Neal_2020" ref-type="bibr">Neal
+    2020</xref>). The framework defines the <italic>individual causal
+    effect</italic> (ICE) as the difference between an individual’s
+    observed and unobserved potential outcomes. These unobserved
+    potential outcomes, termed <italic>counterfactuals</italic>,
+    represent hypothetical scenarios that are <italic>contrary to
+    fact</italic>, where alternative outcomes for an individual,
+    resulting from a specific cause, are neither observed nor observable
     (<xref alt="Neal 2020" rid="ref-Neal_2020" ref-type="bibr">Neal
     2020</xref>;
     <xref alt="Counterfactual 2024" rid="ref-Counterfactual_2024" ref-type="bibr">Counterfactual
-    2024</xref>). The framework achieves this transformation while
-    ensuring the absence of confounding. Ultimately, the
-    <italic>fundamental problem of causality</italic> is reduced to
-    calculating differences between averages of observed outcomes and
-    the transformed counterfactuals, thereby identifying causal
-    effects.</p>
+    2024</xref>). The framework then extends this estimand to groups by
+    introducing the <italic>average causal effect</italic> (ACE). The
+    ACE reflects the difference between averages of observed potential
+    outcomes and counterfactuals across groups. Finally, similar to an
+    experiment, the framework identifies the ACE from associational
+    estimates by ensuring the absence of confounding.</p>
     <p>Several approaches to causal inference and counterfactuals exist,
     but two are particularly prominent: the potential outcomes approach,
     also known as the Neyman-Rubin causal model
@@ -580,8 +578,8 @@ the University of Antwerp (BOF).</funding-statement>
     2009</xref>;
     <xref alt="Pearl, Glymour, and Jewell 2016" rid="ref-Pearl_et_al_2016" ref-type="bibr">Pearl,
     Glymour, and Jewell 2016</xref>). Both approaches employ rigorous
-    mathematical notation to characterize causal inference, but they do
-    so in different ways
+    mathematical notation to characterize the ACE, but they do so in
+    different ways
     (<xref alt="Neal 2020" rid="ref-Neal_2020" ref-type="bibr">Neal
     2020</xref>). The potential outcomes approach relies on
     counterfactual notation, whereas the structural approach employs
@@ -593,34 +591,30 @@ the University of Antwerp (BOF).</funding-statement>
     effects
     (<xref alt="Pearl 2010" rid="ref-Pearl_2010" ref-type="bibr">Pearl
     2010</xref>).</p>
-    <p>However, the structural approach offers an additional key
-    advantage over the potential outcomes approach: it enables the
-    graphical and formal representation of any system through directed
-    acyclic graphs (DAG,
-    <xref alt="Gross, Yellen, and Anderson 2018" rid="ref-Gross_et_al_2018" ref-type="bibr">Gross,
-    Yellen, and Anderson 2018</xref>;
-    <xref alt="Neal 2020" rid="ref-Neal_2020" ref-type="bibr">Neal
-    2020</xref>) and and structural causal models (SCM,
+    <p>The structural approach, however, offers a notable advantage over
+    the potential outcomes approach by allowing the graphical and formal
+    representation of theories through directed acyclic graphs (DAG,
     <xref alt="Pearl 2009" rid="ref-Pearl_2009" ref-type="bibr">Pearl
     2009</xref>;
     <xref alt="Pearl, Glymour, and Jewell 2016" rid="ref-Pearl_et_al_2016" ref-type="bibr">Pearl,
-    Glymour, and Jewell 2016</xref>). DAGs serve as heuristics,
-    effectively conveying the assumed causal structure of a system
-    (<xref alt="Pearl, Glymour, and Jewell 2016" rid="ref-Pearl_et_al_2016" ref-type="bibr">Pearl,
-    Glymour, and Jewell 2016</xref>). A heuristic is a strategy that
-    simplifies information to make decisions more quickly, efficiently,
-    and sometimes more accurately than complex methods
-    (<xref alt="Chow 2015" rid="ref-Chow_2015" ref-type="bibr">Chow
-    2015</xref>). Consequently, DAGs do not represent detailed
-    statistical models but allow researchers to deduce which statistical
-    models can provide valid causal inferences, assuming the causal
-    structure depicted in the DAGs are accurate
+    Glymour, and Jewell 2016</xref>;
+    <xref alt="Gross, Yellen, and Anderson 2018" rid="ref-Gross_et_al_2018" ref-type="bibr">Gross,
+    Yellen, and Anderson 2018</xref>;
+    <xref alt="Neal 2020" rid="ref-Neal_2020" ref-type="bibr">Neal
+    2020</xref>). DAGs function as heuristics, effectively conveying the
+    presumed causal structure of a system, referred to as a
+    <italic>scientific model</italic>
+    (<xref alt="McElreath 2020" rid="ref-McElreath_2020" ref-type="bibr">McElreath
+    2020</xref>). They do not represent detailed statistical models but
+    allow researchers to deduce which statistical models can provide
+    valid causal inferences, assuming the causal structure depicted in
+    the DAGs are accurate
     (<xref alt="McElreath 2020" rid="ref-McElreath_2020" ref-type="bibr">McElreath
     2020</xref>). The Identification-Estimation flowchart in
     <xref alt="Figure 1" rid="fig-IEflow">Figure 1</xref> visually
-    represents the process of transitioning from estimands to estimates,
-    and the application of the sicentific model and data to identify and
-    estimates causal effects.</p>
+    represents this process of transitioning from estimands to
+    estimates, as well as the application of the scientific model and
+    data to identify and estimate causal effects.</p>
     <fig id="fig-IEflow">
       <caption><p>Figure 1: Identification-Estimation flowchart.
       Extracted and slightly modified from Neal
@@ -1783,22 +1777,6 @@ the University of Antwerp (BOF).</funding-statement>
           <edition>2</edition>
           <uri></uri>
           <pub-id pub-id-type="doi"></pub-id>
-        </element-citation>
-      </ref>
-      <ref id="ref-Chow_2015">
-        <element-citation publication-type="article-journal">
-          <person-group person-group-type="author">
-            <name><surname>Chow</surname><given-names>S.</given-names></name>
-          </person-group>
-          <article-title>Many meanings of ‘heuristic’</article-title>
-          <source>The British Journal for the Philosophy of Science</source>
-          <year iso-8601-date="2015">2015</year>
-          <volume>66</volume>
-          <issue>4</issue>
-          <uri></uri>
-          <pub-id pub-id-type="doi">10.1093/bjps/axu028</pub-id>
-          <fpage>977</fpage>
-          <lpage>1016</lpage>
         </element-citation>
       </ref>
       <ref id="ref-Pearl_et_al_2016">
