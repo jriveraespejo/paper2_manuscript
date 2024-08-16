@@ -161,30 +161,30 @@ Ultimately, this study provides a robust causal and probabilistic foundation for
 
 # Theoretical framework {#sec-framework}
 
-This section introduces fundamental concepts in causal inference, such as directed acyclic graphs (DAGs), structural causal models (SCMs), and the flow of association and causation in graphs. The section is not a comprehensive description of causal inference methods. Readers interested in deeper exploration should consult introductory papers like @Pearl_2010, @Rohrer_2018, @Pearl_2019, and @Cinelli_et_al_2020. They may also find introductory books such as @Pearl_et_al_2018, @Neal_2020 and @McElreath_2020 useful. For more advanced study, seminal intermediate papers like @Neyman_et_al_1923, @Rubin_1974, @Spirtes_et_al_1991, and @Sekhon_2009, as well as books like @Pearl_2009, @Morgan_et_al_2014 and @Hernan_et_al_2020 are recommended.
+This section introduces fundamental concepts in causal inference but does not offer a comprehensive description of causal inference methods. Readers interested in deeper exploration should consult introductory papers like @Pearl_2010, @Rohrer_2018, @Pearl_2019, and @Cinelli_et_al_2020. They may also find introductory books such as @Pearl_et_al_2018, @Neal_2020 and @McElreath_2020 useful. For more advanced study, seminal intermediate papers like @Neyman_et_al_1923, @Rubin_1974, @Spirtes_et_al_1991, and @Sekhon_2009, as well as books like @Pearl_2009, @Morgan_et_al_2014 and @Hernan_et_al_2020 are recommended.
 
 
 ## The structural approach to causal inference {#sec-framework-structural}
 
 <!-- 1. What does empirical research do first? -->
-Empirical research addresses real-world challenges by relying on evidence gathered through observation and experimentation. In this context, researchers typically frame their research questions as *estimands* or *targets of inference*. These estimands represent the specific quantities the study aims to determine [@Everitt_et_al_2010]. For instance, a study might examine the question, “To what extent do different teaching methods ($X$) influence students’ conceptual understanding of a topic ($Y$)?" To investigate this, the study could randomly assign students to two groups, each using a different teaching method $(X=\{1,2\})$. Students’ conceptual understanding of the topic could be evaluated through pairwise comparisons, resulting in a dichotomous outcome $(Y=\{0,1\})$, indicating which student among those compared has a higher level of understanding. The research question could be then framed as the estimand, “*On average*, is there a difference in conceptual understanding of the topic between the two groups of students?” This estimand could be mathematically expressed as $E[Y| X=1] - E[Y| X=2]$, where $E[\cdot]$ denotes the expected value. An example of this approach is seen in @Jones_et_al_2019.
+Empirical research addresses real-world challenges by relying on evidence gathered through observation and experimentation. In this context, researchers typically frame their research questions as *estimands* or *targets of inference*. These estimands represent the specific quantities the study aims to determine [@Everitt_et_al_2010]. For instance, a study might examine the question, “To what extent do different teaching methods ($T$) influence students’ conceptual understanding of a topic ($Y$)?" To investigate this, the study could randomly assign students to two groups, each using a different teaching method $(T_{i}=\{1,2\})$. Students’ conceptual understanding of the topic could be evaluated through pairwise comparisons, resulting in a dichotomous outcome $(Y_{i}=\{0,1\})$, indicating which student among those compared has a higher level of understanding. The research question could be then framed as the estimand, “*On average*, is there a difference in conceptual understanding of the topic between the two groups of students?” This estimand could be mathematically expressed by the associational quantity $E[Y_{i}| T_{i}=1] - E[Y_{i}| T_{i}=2]$, where $E[\cdot]$ denotes the expected value. An example of this approach is seen in @Jones_et_al_2019.
 
 <!-- 2. What do they do next? -->
-Researchers then proceed to identify the estimands. *Identification* refers to the process of accurately computing an estimand using an estimator. An *estimator* is a method or function that maps data into an estimate [@Neal_2020]. *Estimates* are numerical values that approximate the estimand and are derived through *estimation*, which refer to the process of integrating data with an estimator [@Everitt_et_al_2010]. Although various methods can approximate an estimand, researchers prioritize estimators with desirable properties that ensure the accuracy of estimates. For instance, the BTL model [@Bradley_et_al_1952; @Luce_1959] is an estimator known for its effectiveness in modeling pairwise comparisons, yielding accurate estimates for the target of inference discussed earlier, as long as its assumptions are met.
+Researchers then proceed to identify the estimands. *Identification* refers to the process of accurately computing an estimand using an estimator. An *estimator* is a method or function that maps data into an estimate [@Neal_2020]. *Estimates* are numerical values that approximate the estimand and are derived through *estimation*, which refer to the process of integrating data with an estimator [@Everitt_et_al_2010]. Although various methods can approximate an estimand, researchers prioritize estimators with desirable properties that ensure the accuracy of estimates. For instance, the BTL model [@Bradley_et_al_1952; @Luce_1959] is an estimator known for its effectiveness in modeling pairwise comparisons, yielding accurate estimates for the target of inference discussed earlier, as long as the assumptions of the model are met.
 
 <!-- 3. But we want these estimands to be causal -->
-However, many studies aim to understand the mechanisms underlying specific data types and also seek to establish causal relationships rather than merely infer associations. In the earlier example, the associational estimates obtained using the BTL model can be interpreted as causal, because the data were collected using a randomized experiment. Randomized experiments enable the causal interpretation of associational estimates by ensuring several key properties, including common support, no interference, and consistency [@Morgan_et_al_2014; @Neal_2020]. The most crucial property, however, is that randomization effectively eliminates confounding. *Confounding* occurs when an external variable influences both the outcome and the variable of interest, leading to spurious association [@Everitt_et_al_2010]. Randomization mitigates this issue by decoupling the intervention assignment mechanism, such as assigning students to different groups, from other variables and outcomes [@Morgan_et_al_2014; @Neal_2020].
+However, many studies aim to understand the mechanisms underlying specific data types and also seek to establish causal relationships rather than merely infer associations. In the earlier example, the differences between groups obtained using the BTL model, referred to as the associational estimates, can be interpreted as causal because the data were collected through a randomized experiment. Randomized experiments enable the causal interpretation of associational estimates by ensuring several key properties, including common support, no interference, and consistency [@Morgan_et_al_2014; @Neal_2020]. The most crucial property, however, is that randomization effectively eliminates confounding. *Confounding* occurs when an external variable influences both the outcome and the variable of interest, leading to spurious associations [@Everitt_et_al_2010]. Randomization mitigates this issue by decoupling the intervention assignment mechanism, such as assigning students to different groups, from other variables and outcomes [@Morgan_et_al_2014; @Neal_2020].
 
-<!-- 4. causal inference to the rescue -->
+<!-- 4. Experiments are not available to everyone, then causal inference comes to the rescue -->
 Experiments are widely regarded as the gold standard in evidence-based science [@Hariton_et_al_2018; @Hansson_2014], however, researchers often encounter constraints that limit their ability to conduct experimental studies. These constraints include ethical concerns, such as the assignment of individuals to potentially harmful interventions, and practical limitations, such as the infeasibility of, for example, assigning individuals to genetic modifications or physical impairments [@Neal_2020]. In these instances, causal inference offers a valuable alternative for generating causal estimates. *Causal inference* is a framework designed to identify the causes of phenomena and estimate their effects using data [@Shaughnessy_et_al_2010; @Neal_2020]. Unlike classical statistical modeling, which focuses primarily on summarizing data and inferring associations, causal inference provides a rigorous mathematical framework for analyzing causes and counterfactuals [@Pearl_2009]. Consequently, the framework offers significant theoretical insights that enhance the design of observational and experimental studies [@McElreath_2020].
 
-<!-- 5. But how does it work? -->
-Although a detailed explanation of causes, and counterfactuals is beyond the scope of this document, it suffices to say that causal inference addresses the *fundamental problem of causality* through the use of counterfactuals [@Neal_2020]. The framework defines the *individual causal effect* (ICE) as the difference between an individual's observed and unobserved potential outcomes. These unobserved potential outcomes, termed *counterfactuals*, represent hypothetical scenarios that are *contrary to fact*, where alternative outcomes for an individual, resulting from a specific cause, are neither observed nor observable [@Neal_2020; @Counterfactual_2024]. The framework then extends this estimand to groups by introducing the *average causal effect* (ACE). The ACE reflects the difference between averages of observed potential outcomes and counterfactuals across groups. Finally, similar to an experiment, the framework identifies the ACE from associational estimates by ensuring the absence of confounding.
+<!-- 6. But how does it work? -->
+While a detailed explanation of causes and counterfactuals is beyond the scope of this document, it is important to note that causal inference addresses the *fundamental problem of causality* through the use of counterfactuals [@Neal_2020]. The framework defines *individual causal effects* (ICE) as the difference between an individual's observed and unobserved potential outcomes. These unobserved potential outcomes, known as *counterfactuals*, represent hypothetical scenarios that are *contrary to fact*, where alternative outcomes for an individual, resulting from a specific cause, are neither observed nor observable [@Neal_2020; @Counterfactual_2024]. The framework then extends this estimand to *average causal effects* (ACE), which captures the difference between sample averages of observed potential outcomes and counterfactuals. Finally, much like in an experiment, the framework identifies the ACE from associational estimates by conditioning for a *sufficient adjustment set* of variables, ensuring the absence of confounding [@Morgan_et_al_2014].
 
-<!-- 6. How do we apply causal inference and counterfactuals? -->
+<!-- 7. How do we apply causal inference and counterfactuals? -->
 Several approaches to causal inference and counterfactuals exist, but two are particularly prominent: the potential outcomes approach, also known as the Neyman-Rubin causal model [@Neyman_et_al_1923; @Rubin_1974], and the structural approach [@Pearl_2009; @Pearl_et_al_2016]. Both approaches employ rigorous mathematical notation to characterize the ACE, but they do so in different ways [@Neal_2020]. The potential outcomes approach relies on counterfactual notation, whereas the structural approach employs do-calculus [@Pearl_2009]. Despite these differences, both notations can be expressed in terms of the other, and both approaches provide methods for using experimental and observational data to estimate causal effects [@Pearl_2010].
 
-<!-- 7. But which approach are we going to use? -->
+<!-- 8. But which approach are we going to use? -->
 The structural approach, however, offers a notable advantage over the potential outcomes approach by allowing the graphical and formal representation of theories through directed acyclic graphs [DAG, @Pearl_2009; @Pearl_et_al_2016; @Gross_et_al_2018; @Neal_2020]. DAGs function as heuristics, effectively conveying the presumed causal structure of a system, referred to as a *scientific model*. They do not represent detailed statistical models but allow researchers to deduce which statistical models can provide valid causal inferences, assuming the causal structure depicted in the DAGs are accurate [@McElreath_2020]. The Identification-Estimation flowchart in @fig-IEflow [@McElreath_2020; @Neal_2020] visually represents this process of transitioning from estimands to estimates, as well as the application of the scientific model and data to identify and estimate causal effects.
 
 <!-- A heuristic is a strategy that simplifies information to make decisions more quickly, efficiently, and sometimes more accurately than complex methods [@Chow_2015]. -->
@@ -318,6 +318,34 @@ Lastly, the right panels of @fig-dags_scms depict the SCM form of the fundamenta
 <!-- 4. But what does the building blocks mean? -->
 A careful examination of @fig-dags_scms highlights the assumptions underlying these building blocks. Figures [-@fig-mdag_bb1], [-@fig-sdag_bb1], and SCM [-@fig-scm_bb1] depict two unconnected nodes, representing a scenario where variables $X$ and $Y$ are not causally related. Figures [-@fig-mdag_bb2], [-@fig-sdag_bb2], and SCM [-@fig-scm_bb2] illustrate two connected nodes, showing a scenario where a *parent* node $X$ exerts a causal influence on a *child* node $Y$. Consequently, $Y$ is considered a *descendant* of $X$. Figures [-@fig-mdag_bb3], [-@fig-sdag_bb3], and SCM [-@fig-scm_bb3] depict a *chain* or *pipe*, where $X$ influences $Z$, and $Z$ influences $Y$. In this configuration, $X$ is a parent node of $Z$, and $Z$ is a parent node of $Y$. This creates a *directed path* between $X$ and $Y$. Consequently, $X$ is an *ancestor* of $Y$, and $Z$ fully *mediates* the relationship between the two. Figures [-@fig-mdag_bb4], [-@fig-sdag_bb4], and SCM [-@fig-scm_bb4] illustrate a *fork*, where variables $X$ and $Y$ are both influenced by $Z$. Here, $Z$ is a parent node of $X$ and $Y$. Finally, Figures [-@fig-mdag_bb5], [-@fig-sdag_bb5], SCM [-@fig-scm_bb5] depict a *collider*, also known as *inmorality*, where variables $X$ and $Y$ are concurrent causes of $Z$. In this configuration, $X$ and $Y$ are not causally related to each other but both influence $Z$. Additionally, in all SCMs, the errors are assumed to be mutually independent of each other and of all other variables in the graph, as evidenced by the pairwise relations $e_{X} \dsep e_{Y}$, $e_{X} \dsep e_{Z}$, and $e_{Z} \dsep e_{Y}$.
 
+<!-- 5. continuing with the motivating example -->
+The motivating example in @sec-framework-structural can further illustrate how to use the five fundamental building blocks to construct a system's causal structure. In this scenario, the investigator aims to determine whether, *on average*, there is a difference in conceptual understanding of a topic $(Y_{i}=\{0,1\})$ between two groups of students $(T_{i}=\{1,2\})$, described by the estimand $E[Y_{i}| T_{i}=1] - E[Y_{i}| T_{i}=2]$. However, unlike the previous case, an experiment cannot be conducted, and the problem suggests that the country to which a student belongs ($X$) may influence both $T$ and $Y$. Such scenarios are plausible, especially when the teaching methods depend on software or access to technology, which may be limited in certain countries [(maybe an example with more impact?)]{style="color:blue;"}. @fig-example illustrates the plausible causal structure of the motivating example. A detailed examination of Figures [-@fig-mdag_example1], [-@fig-sdag_example1], and SCM [-@fig-scm_example1] reveals the presence of at least four of the five fundamental building blocks. The figures display multiple descendants, as indicated by pairwise relations such as $X \rightarrow T$, $X \rightarrow Y$, and $T \rightarrow Y$. Additionally, the figures features multiple pairs of unconnected nodes, evident from the relations $e_{T} \dsep e_{X}$, $e_{T} \dsep e_{Y}$, and $e_{X} \dsep e_{Y}$. Finally, the figures illustrate the fork $X \rightarrow \{T,Y\}$, and two colliders with $\{X,e_{T}\} \rightarrow T$ and $\{X,T,e_{Y}\} \rightarrow Y$.
+
+
+::: {#fig-example layout="[ [1,1,1],[1,1,1],[1,1,1] ]"}
+
+![Magnified representation](images/figures/mdag_example1.png){#fig-mdag_example1 fig-align="center" width=100%}
+
+![Standard representation](images/figures/sdag_example1.png){#fig-sdag_example1 fig-align="center" width=55%}
+
+::: {#fig-scm_example1 fig-align="center"}
+$$
+\begin{aligned}
+  X & := f_{X}(e_{X}) \\
+  T & := f_{Z}(X,e_{T}) \\
+  Y & := f_{Y}(T,X,e_{Y}) \\
+  e_{T} & \dsep e_{X} \\
+  e_{T} & \dsep e_{Y} \\
+  e_{X} & \dsep e_{Y}
+\end{aligned}
+$$
+
+Structural causal model
+:::
+
+DAGs for a plausible causal structure in a system.
+:::
+
 
 ## The flow of association and causation in graphs {#sec-framework-flow}
 
@@ -404,38 +432,6 @@ A careful examination of @fig-dags_scms highlights the assumptions underlying th
 
 <!-- Ardmed with dags and scm, and theit probabilité implication, we can now expand on thé motivating example provided in section xx -->
 
-
-## A motivating example {#sec-framework-example}
-
-<!-- Given the heuristic nature of DAGs, a motivating example can help clarify how to use the five fundamental building blocks to construct the causal structure of a system. Consider a research problem where the causal effect of a variable $T$ on an outcome $Y$ needs investigation. The problem suggests that a variable $X$ potentially influences both $T$ and $Y$. Beyond these relationships, the problem does not specify any further variables of interest. Such scenarios are not hard to imagine. For instance, $T$ might represent different treatments that could affect the recovery from cancer $Y$, while $X$ could denote the patient's age. Similarly, in the context of a DCJ study like the one described by @Boonen_et_al_2020, $T$ could represent the duration of a child's cochlear implant use, which might influence the child's overall speech quality $Y$, with $X$ indicating the child's hearing status. [(not a bad example, but I prefer one using writing skills)]{style="color:blue;"} -->
-
-<!-- 6. DAG for the motivating example -->
-<!-- @fig-example illustrates the plausible causal structure of the motivating example. A detailed examination of Figures [-@fig-mdag_example1], [-@fig-sdag_example1], and SCM [-@fig-scm_example1] reveals the presence of at least four of the five fundamental building blocks. The figures display multiple descendants, as indicated by pairwise relations such as $X \rightarrow T$, $X \rightarrow Y$, and $T \rightarrow Y$. Additionally, the figures features multiple pairs of unconnected nodes, evident from the relations $e_{T} \dsep e_{X}$, $e_{T} \dsep e_{Y}$, and $e_{X} \dsep e_{Y}$. Finally, the figures illustrate the fork $X \rightarrow \{T,Y\}$, and two colliders with $\{X,e_{T}\} \rightarrow T$ and $\{X,T,e_{Y}\} \rightarrow Y$. -->
-
-
-<!-- ::: {#fig-example layout="[ [1,1,1],[1,1,1],[1,1,1] ]"} -->
-
-<!-- ![Magnified representation](images/figures/mdag_example1.png){#fig-mdag_example1 fig-align="center" width=100%} -->
-
-<!-- ![Standard representation](images/figures/sdag_example1.png){#fig-sdag_example1 fig-align="center" width=55%} -->
-
-<!-- ::: {#fig-scm_example1 fig-align="center"} -->
-<!-- $$ -->
-<!-- \begin{aligned} -->
-<!--   X & := f_{X}(e_{X}) \\ -->
-<!--   T & := f_{Z}(X,e_{T}) \\ -->
-<!--   Y & := f_{Y}(T,X,e_{Y}) \\ -->
-<!--   e_{T} & \dsep e_{X} \\ -->
-<!--   e_{T} & \dsep e_{Y} \\ -->
-<!--   e_{X} & \dsep e_{Y} -->
-<!-- \end{aligned} -->
-<!-- $$ -->
-
-<!-- Structural causal model -->
-<!-- ::: -->
-
-<!-- DAGs for a plausible causal structure in a system. -->
-<!-- ::: -->
 
 
 # Theory {#sec-theory}
