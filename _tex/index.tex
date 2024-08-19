@@ -324,15 +324,15 @@ represent the specific quantities the study aims to determine
 question, ``To what extent do different teaching methods (\(T\))
 influence students' conceptual understanding of a topic (\(Y\))?'' To
 investigate this, the study could randomly assign students to two
-groups, each using a different teaching method \((T_{i}=\{1,2\})\).
+groups, each using a different teaching method \((T=\{1,2\})\).
 Students' conceptual understanding of the topic could be evaluated
 through pairwise comparisons, resulting in a dichotomous outcome
-\((Y_{i}=\{0,1\})\), indicating which student among those compared has a
+\((Y=\{0,1\})\), indicating which student among those compared has a
 higher level of understanding. The research question could be then
 framed as the estimand, ``\emph{On average}, is there a difference in
 conceptual understanding of the topic between the two groups of
 students?'' This estimand could be mathematically expressed by the
-associational quantity \(E[Y_{i}| T_{i}=1] - E[Y_{i}| T_{i}=2]\), where
+associational random quantity \(E[Y| T=1] - E[Y| T=2]\), where
 \(E[\cdot]\) denotes the expected value. An example of this approach is
 seen in \citet{Jones_et_al_2019}.
 
@@ -341,68 +341,88 @@ Researchers then proceed to identify the estimands.
 estimand using an estimator. An \emph{estimator} is a method or function
 that maps data into an estimate \citep{Neal_2020}. \emph{Estimates} are
 numerical values that approximate the estimand and are derived through
-\emph{estimation}, which refer to the process of integrating data with
+\emph{estimation}, which refers to the process of integrating data with
 an estimator \citep{Everitt_et_al_2010}. Although various methods can
 approximate an estimand, researchers prioritize estimators with
 desirable properties that ensure the accuracy of estimates. For
-instance, the BTL model \citep{Bradley_et_al_1952, Luce_1959} is an
-estimator known for its effectiveness in modeling pairwise comparisons,
-yielding accurate estimates for the target of inference discussed
-earlier, as long as the assumptions of the model are met.
+instance, the Z-test is an estimator known for its effectiveness in
+comparing two proportions, yielding accurate estimates when its
+underlying assumptions are met \citep{Kanji_2006}. The Z-test is
+expressed as a signal-to-noise ratio:
+\(Z = (\hat{p}_{1} - \hat{p}_{2})/ \hat{s}_{p}\). The signal is the
+difference between the group sample proportions,
+\(\hat{p}_{1} = \sum_{i=1}^{n_{1}}{Y_{i}/n_{1}}\) and
+\(\hat{p}_{2} = \sum_{i=1}^{n_{2}}{Y_{i}/n_{2}}\), analogous to
+\(E[Y| T=1]\) and \(E[Y| T=2]\), respectively. The noise \(\hat{s}_{p}\)
+is the unpooled sample variability observed between the two groups.
 
 However, many studies aim to understand the mechanisms underlying
-specific data types and also seek to establish causal relationships
-rather than merely infer associations. In the earlier example, the
-differences between groups obtained using the BTL model, referred to as
-the associational estimates, can be interpreted as causal because the
-data were collected through a randomized experiment. Randomized
-experiments enable the causal interpretation of associational estimates
-by ensuring several key properties, including common support, no
-interference, and consistency \citep{Morgan_et_al_2014, Neal_2020}. The
-most crucial property, however, is that randomization effectively
-eliminates confounding. \emph{Confounding} occurs when an external
-variable influences both the outcome and the variable of interest,
-leading to spurious associations \citep{Everitt_et_al_2010}.
-Randomization mitigates this issue by decoupling the intervention
-assignment mechanism, such as assigning students to different groups,
-from other variables and outcomes \citep{Morgan_et_al_2014, Neal_2020}.
+specific data and also seek to establish causal relationships rather
+than merely infer associations. In the earlier example, the differences
+between groups obtained using the Z-test, referred to as the
+associational estimate, can be interpreted as causal because the data
+were collected through a randomized experiment. Randomized experiments
+enable the causal interpretation of associational estimates by ensuring
+several key properties, including common support, no interference, and
+consistency \citep{Morgan_et_al_2014, Neal_2020}. The most crucial
+property, however, is that randomization effectively eliminates
+confounding. \emph{Confounding} occurs when an external variable
+influences both the outcome and the variable of interest, leading to
+spurious associations \citep{Everitt_et_al_2010}. Randomization
+mitigates this issue by decoupling the intervention assignment
+mechanism, such as assigning students to different groups, from other
+variables and outcomes \citep{Morgan_et_al_2014, Neal_2020}.
 
-Experiments are widely regarded as the gold standard in evidence-based
-science \citep{Hariton_et_al_2018, Hansson_2014}, however, researchers
-often encounter constraints that limit their ability to conduct
-experimental studies. These constraints include ethical concerns, such
-as the assignment of individuals to potentially harmful interventions,
-and practical limitations, such as the infeasibility of, for example,
+Experiments are widely recognized as the gold standard in evidence-based
+science \citep{Hariton_et_al_2018, Hansson_2014}. However, researchers
+often face constraints that limit their ability to conduct experimental
+studies. These constraints include ethical concerns, such as the
+assignment of individuals to potentially harmful interventions, and
+practical limitations, such as the infeasibility of, for example,
 assigning individuals to genetic modifications or physical impairments
-\citep{Neal_2020}. In these instances, causal inference offers a
-valuable alternative for generating causal estimates. \emph{Causal
-inference} is a framework designed to identify the causes of phenomena
-and estimate their effects using data
-\citep{Shaughnessy_et_al_2010, Neal_2020}. Unlike classical statistical
-modeling, which focuses primarily on summarizing data and inferring
-associations, causal inference provides a rigorous mathematical
-framework for analyzing causes and counterfactuals \citep{Pearl_2009}.
-Consequently, the framework offers significant theoretical insights that
+\citep{Neal_2020}. In these situations, causal inference provides a
+valuable alternative for generating causal estimates, particularly when
+the goal is to understand the mechanisms underlying specific data.
+Moreover, the framework offers significant theoretical insights that
 enhance the design of observational and experimental studies
 \citep{McElreath_2020}.
 
-While a detailed explanation of causes and counterfactuals is beyond the
-scope of this document, it is important to note that causal inference
-addresses the \emph{fundamental problem of causality} through the use of
-counterfactuals \citep{Neal_2020}. The framework defines
-\emph{individual causal effects} (ICE) as the difference between an
-individual's observed and unobserved potential outcomes. These
-unobserved potential outcomes, known as \emph{counterfactuals},
-represent hypothetical scenarios that are \emph{contrary to fact}, where
-alternative outcomes for an individual, resulting from a specific cause,
-are neither observed nor observable
-\citep{Neal_2020, Counterfactual_2024}. The framework then extends this
-estimand to \emph{average causal effects} (ACE), which captures the
-difference between sample averages of observed potential outcomes and
-counterfactuals. Finally, much like in an experiment, the framework
-identifies the ACE from associational estimates by conditioning for a
-\emph{sufficient adjustment set} of variables, ensuring the absence of
-confounding \citep{Morgan_et_al_2014}.
+Unlike classical statistical modeling, which focuses primarily on
+summarizing data and inferring associations, \emph{causal inference} is
+a framework designed to identify causes and estimate their effects using
+data \citep{Shaughnessy_et_al_2010, Neal_2020}. This framework employs
+rigorous mathematical techniques to address the fundamental problem of
+causality \citep{Pearl_2009}, which is essential for understanding and
+defining causal effects. The \emph{fundamental problem of causality}
+centers on answering the question, ``What would have happened `in the
+world' under different circumstances?'' a concept known as
+counterfactuals. \emph{Counterfactuals} represent hypothetical scenarios
+that are \emph{contrary to fact}, where alternative outcomes resulting
+from a specific cause are neither observed nor observable
+\citep{Neal_2020, Counterfactual_2024}.
+
+Although a comprehensive discussion of causes and counterfactuals
+exceeds the scope of this document, a brief overview of how the
+framework addresses the fundamental problem of causality is possible
+using the previous example. The framework starts by defining
+\emph{individual causal effects} (ICE) as the difference between
+students' observed and unobserved potential outcomes:
+\(\tau_{i} = (Y_{i}| T_{i}=1) - (Y_{i}| T_{i}=2)\). Notice once a
+student is assigned to \(T_{i}=1\), the potential outcome under
+\(T_{i}=2\) is no longer observed nor observable, and is thus termed a
+\emph{counterfactual}. To address the challenge posed by
+counterfactuals, the framework extends the ICE to \emph{average causal
+effects} (ACE). The ACE is defined as
+\(\tau = E[\tau_{i}] = E[Y_{i}| T_{i}=1] - E[Y_{i}| T_{i}=2]\), and
+represents the difference between the average of observed potential
+outcomes and counterfactuals in the sample. Finally, akin to
+experimental studies, the ACE is identified from associational estimates
+by ensuring the absence of confounding. This is accomplished by
+statistically conditioning on a \emph{sufficient adjustment set} of
+variables (\(X\)). Consequently, the ACE is expressed as
+\(\tau = E_{X}[E[Y_{i}| T_{i}=1, X] - E[Y_{i}| T_{i}=2, X]]\), where
+\(E_{X}[\cdot]\) denotes the marginal expected value over \(X\)
+\citep{Morgan_et_al_2014}.
 
 Several approaches to causal inference and counterfactuals exist, but
 two are particularly prominent: the potential outcomes approach, also
@@ -419,7 +439,7 @@ estimate causal effects \citep{Pearl_2010}.
 
 The structural approach, however, offers a notable advantage over the
 potential outcomes approach by allowing the graphical and formal
-representation of theories through directed acyclic graphs
+representation of the ACE through directed acyclic graphs
 \citep[DAG,][]{Pearl_2009, Pearl_et_al_2016, Gross_et_al_2018, Neal_2020}.
 DAGs function as heuristics, effectively conveying the presumed causal
 structure of a system, referred to as a \emph{scientific model}. They do
@@ -427,9 +447,9 @@ not represent detailed statistical models but allow researchers to
 deduce which statistical models can provide valid causal inferences,
 assuming the causal structure depicted in the DAGs are accurate
 \citep{McElreath_2020}. The Identification-Estimation flowchart in
-Figure~\ref{fig-IEflow} visually represents this process of
-transitioning from estimands to estimates, as well as the application of
-the scientific model and data to identify and estimate causal effects.
+Figure~\ref{fig-IEflow} visually represents the process of transitioning
+from estimands to estimates, as well as the application of the
+scientific model and data to identify and estimate causal effects.
 
 \begin{figure}
 
@@ -779,16 +799,16 @@ The motivating example in Section~\ref{sec-framework-structural} can
 further illustrate how to use the five fundamental building blocks to
 construct a system's causal structure. In this scenario, the
 investigator aims to determine whether, \emph{on average}, there is a
-difference in conceptual understanding of a topic \((Y_{i}=\{0,1\})\)
-between two groups of students \((T_{i}=\{1,2\})\), described by the
-estimand \(E[Y_{i}| T_{i}=1] - E[Y_{i}| T_{i}=2]\). However, unlike the
-previous case, an experiment cannot be conducted, and the problem
-suggests that the country to which a student belongs (\(X\)) may
-influence both \(T\) and \(Y\). Such scenarios are plausible, especially
-when the teaching methods depend on software or access to technology,
-which may be limited in certain countries {(maybe an example with more
-impact?)}. Figure~\ref{fig-example} illustrates the plausible causal
-structure of the motivating example. A detailed examination of Figures
+difference in conceptual understanding of a topic \((Y=\{0,1\})\)
+between two groups of students \((T=\{1,2\})\), described by the
+estimand \(E[Y| T=1] - E[Y| T=2]\). However, unlike the previous case,
+an experiment cannot be conducted, and the problem suggests that the
+country to which a student belongs (\(X\)) may influence both \(T\) and
+\(Y\). Such scenarios are plausible, especially when the teaching
+methods depend on software or access to technology, which may be limited
+in certain countries {(maybe an example with more impact?)}.
+Figure~\ref{fig-example} illustrates the plausible causal structure of
+the motivating example. A detailed examination of Figures
 \ref{fig-mdag_example1}, \ref{fig-sdag_example1}, and SCM
 \ref{fig-scm_example1} reveals the presence of at least four of the five
 fundamental building blocks. The figures display multiple descendants,
