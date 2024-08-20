@@ -199,10 +199,10 @@ sciences</institution>
 <corresp id="cor-1">JoseManuel.RiveraEspejo@uantwerpen.be</corresp>
 </author-notes>
 
-<pub-date date-type="pub" publication-format="electronic" iso-8601-date="2024-08-19">
+<pub-date date-type="pub" publication-format="electronic" iso-8601-date="2024-08-20">
 <year>2024</year>
 <month>8</month>
-<day>19</day>
+<day>20</day>
 </pub-date>
 
 
@@ -460,7 +460,7 @@ the University of Antwerp (BOF).</funding-statement>
     estimand, “<italic>On average</italic>, is there a difference in
     conceptual understanding of the topic between the two groups of
     students?” This estimand could be mathematically expressed by the
-    associational random quantity <inline-formula><alternatives>
+    random quantity <inline-formula><alternatives>
     <tex-math><![CDATA[E[Y| T=1] - E[Y| T=2]]]></tex-math>
     <mml:math display="inline" xmlns:mml="http://www.w3.org/1998/Math/MathML"><mml:mrow><mml:mi>E</mml:mi><mml:mrow><mml:mo stretchy="true" form="prefix">[</mml:mo><mml:mi>Y</mml:mi><mml:mo stretchy="false" form="prefix">|</mml:mo><mml:mi>T</mml:mi><mml:mo>=</mml:mo><mml:mn>1</mml:mn><mml:mo stretchy="true" form="postfix">]</mml:mo></mml:mrow><mml:mo>−</mml:mo><mml:mi>E</mml:mi><mml:mrow><mml:mo stretchy="true" form="prefix">[</mml:mo><mml:mi>Y</mml:mi><mml:mo stretchy="false" form="prefix">|</mml:mo><mml:mi>T</mml:mi><mml:mo>=</mml:mo><mml:mn>2</mml:mn><mml:mo stretchy="true" form="postfix">]</mml:mo></mml:mrow></mml:mrow></mml:math></alternatives></inline-formula>,
     where <inline-formula><alternatives>
@@ -472,8 +472,8 @@ the University of Antwerp (BOF).</funding-statement>
     <p>Researchers then proceed to identify the estimands.
     <italic>Identification</italic> refers to the process of accurately
     computing an estimand using an estimator. An
-    <italic>estimator</italic> is a method or function that maps data
-    into an estimate
+    <italic>estimator</italic> is a method or function that transforms
+    data into an estimate
     (<xref alt="Neal 2020" rid="ref-Neal_2020" ref-type="bibr">Neal
     2020</xref>). <italic>Estimates</italic> are numerical values that
     approximate the estimand and are derived through
@@ -483,9 +483,9 @@ the University of Antwerp (BOF).</funding-statement>
     and Skrondal 2010</xref>). Although various methods can approximate
     an estimand, researchers prioritize estimators with desirable
     properties that ensure the accuracy of estimates. For instance, the
-    Z-test is an estimator known for its effectiveness in comparing two
-    proportions, yielding accurate estimates when its underlying
-    assumptions are met
+    Z-test is an estimator known for its effectiveness in comparing
+    groups’ proportions, yielding accurate estimates when the underlying
+    assumptions of the statistic are met
     (<xref alt="Kanji 2006" rid="ref-Kanji_2006" ref-type="bibr">Kanji
     2006</xref>). The Z-test is expressed as a signal-to-noise ratio:
     <inline-formula><alternatives>
@@ -549,7 +549,7 @@ the University of Antwerp (BOF).</funding-statement>
     2020</xref>). In these situations, causal inference provides a
     valuable alternative for generating causal estimates, particularly
     when the goal is to understand the mechanisms underlying specific
-    data. Moreover, the framework offers significant theoretical
+    data. Moreover, the framework provides significant theoretical
     insights that enhance the design of observational and experimental
     studies
     (<xref alt="McElreath 2020" rid="ref-McElreath_2020" ref-type="bibr">McElreath
@@ -561,53 +561,52 @@ the University of Antwerp (BOF).</funding-statement>
     (<xref alt="Shaughnessy, Zechmeister, and Zechmeister 2010" rid="ref-Shaughnessy_et_al_2010" ref-type="bibr">Shaughnessy,
     Zechmeister, and Zechmeister 2010</xref>;
     <xref alt="Neal 2020" rid="ref-Neal_2020" ref-type="bibr">Neal
-    2020</xref>). This framework employs rigorous mathematical
-    techniques to address the fundamental problem of causality
+    2020</xref>). The framework employs rigorous mathematical techniques
+    to address the <italic>fundamental problem of causality</italic>
     (<xref alt="Pearl 2009" rid="ref-Pearl_2009" ref-type="bibr">Pearl
-    2009</xref>), which is essential for understanding and defining
-    causal effects. The <italic>fundamental problem of
-    causality</italic> centers on answering the question, “What would
+    2009</xref>). This problem revolves around the question, “What would
     have happened ‘in the world’ under different circumstances?” a
-    concept known as counterfactuals. <italic>Counterfactuals</italic>
-    represent hypothetical scenarios that are <italic>contrary to
-    fact</italic>, where alternative outcomes resulting from a specific
-    cause are neither observed nor observable
+    concept known as counterfactuals, essential for understanding and
+    defining causal effects. <italic>Counterfactuals</italic> represent
+    hypothetical scenarios that are <italic>contrary to fact</italic>,
+    where alternative outcomes resulting from a specific cause are
+    neither observed nor observable
     (<xref alt="Neal 2020" rid="ref-Neal_2020" ref-type="bibr">Neal
     2020</xref>;
     <xref alt="Counterfactual 2024" rid="ref-Counterfactual_2024" ref-type="bibr">Counterfactual
     2024</xref>).</p>
     <p>Although a comprehensive discussion of causes and counterfactuals
     exceeds the scope of this document, a brief overview of how the
-    framework addresses the fundamental problem of causality is possible
-    using the previous example. The framework starts by defining
-    <italic>individual causal effects</italic> (ICE) as the difference
-    between students’ observed and unobserved potential outcomes:
-    <inline-formula><alternatives>
+    framework addresses the fundamental problem of causality can be
+    provided. The framework begins by defining <italic>individual causal
+    effects</italic> (ICE) as the difference between students’ observed
+    and unobserved potential outcomes: <inline-formula><alternatives>
     <tex-math><![CDATA[\tau_{i} = (Y_{i}| T_{i}=1) - (Y_{i}| T_{i}=2)]]></tex-math>
     <mml:math display="inline" xmlns:mml="http://www.w3.org/1998/Math/MathML"><mml:mrow><mml:msub><mml:mi>τ</mml:mi><mml:mi>i</mml:mi></mml:msub><mml:mo>=</mml:mo><mml:mrow><mml:mo stretchy="true" form="prefix">(</mml:mo><mml:msub><mml:mi>Y</mml:mi><mml:mi>i</mml:mi></mml:msub><mml:mo stretchy="false" form="prefix">|</mml:mo><mml:msub><mml:mi>T</mml:mi><mml:mi>i</mml:mi></mml:msub><mml:mo>=</mml:mo><mml:mn>1</mml:mn><mml:mo stretchy="true" form="postfix">)</mml:mo></mml:mrow><mml:mo>−</mml:mo><mml:mrow><mml:mo stretchy="true" form="prefix">(</mml:mo><mml:msub><mml:mi>Y</mml:mi><mml:mi>i</mml:mi></mml:msub><mml:mo stretchy="false" form="prefix">|</mml:mo><mml:msub><mml:mi>T</mml:mi><mml:mi>i</mml:mi></mml:msub><mml:mo>=</mml:mo><mml:mn>2</mml:mn><mml:mo stretchy="true" form="postfix">)</mml:mo></mml:mrow></mml:mrow></mml:math></alternatives></inline-formula>.
-    Notice once a student is assigned to <inline-formula><alternatives>
+    Notice when a student is assigned to <inline-formula><alternatives>
     <tex-math><![CDATA[T_{i}=1]]></tex-math>
     <mml:math display="inline" xmlns:mml="http://www.w3.org/1998/Math/MathML"><mml:mrow><mml:msub><mml:mi>T</mml:mi><mml:mi>i</mml:mi></mml:msub><mml:mo>=</mml:mo><mml:mn>1</mml:mn></mml:mrow></mml:math></alternatives></inline-formula>,
     the potential outcome under <inline-formula><alternatives>
     <tex-math><![CDATA[T_{i}=2]]></tex-math>
     <mml:math display="inline" xmlns:mml="http://www.w3.org/1998/Math/MathML"><mml:mrow><mml:msub><mml:mi>T</mml:mi><mml:mi>i</mml:mi></mml:msub><mml:mo>=</mml:mo><mml:mn>2</mml:mn></mml:mrow></mml:math></alternatives></inline-formula>
-    is no longer observed nor observable, and is thus termed a
-    <italic>counterfactual</italic>. To address the challenge posed by
+    is no longer observed nor observable, and thus termed a
+    <italic>counterfactual</italic>. To overcome the challenge posed by
     counterfactuals, the framework extends the ICE to <italic>average
     causal effects</italic> (ACE). The ACE is defined as
     <inline-formula><alternatives>
     <tex-math><![CDATA[\tau = E[\tau_{i}] = E[Y_{i}| T_{i}=1] - E[Y_{i}| T_{i}=2]]]></tex-math>
     <mml:math display="inline" xmlns:mml="http://www.w3.org/1998/Math/MathML"><mml:mrow><mml:mi>τ</mml:mi><mml:mo>=</mml:mo><mml:mi>E</mml:mi><mml:mrow><mml:mo stretchy="true" form="prefix">[</mml:mo><mml:msub><mml:mi>τ</mml:mi><mml:mi>i</mml:mi></mml:msub><mml:mo stretchy="true" form="postfix">]</mml:mo></mml:mrow><mml:mo>=</mml:mo><mml:mi>E</mml:mi><mml:mrow><mml:mo stretchy="true" form="prefix">[</mml:mo><mml:msub><mml:mi>Y</mml:mi><mml:mi>i</mml:mi></mml:msub><mml:mo stretchy="false" form="prefix">|</mml:mo><mml:msub><mml:mi>T</mml:mi><mml:mi>i</mml:mi></mml:msub><mml:mo>=</mml:mo><mml:mn>1</mml:mn><mml:mo stretchy="true" form="postfix">]</mml:mo></mml:mrow><mml:mo>−</mml:mo><mml:mi>E</mml:mi><mml:mrow><mml:mo stretchy="true" form="prefix">[</mml:mo><mml:msub><mml:mi>Y</mml:mi><mml:mi>i</mml:mi></mml:msub><mml:mo stretchy="false" form="prefix">|</mml:mo><mml:msub><mml:mi>T</mml:mi><mml:mi>i</mml:mi></mml:msub><mml:mo>=</mml:mo><mml:mn>2</mml:mn><mml:mo stretchy="true" form="postfix">]</mml:mo></mml:mrow></mml:mrow></mml:math></alternatives></inline-formula>,
-    and represents the difference between the average of observed
-    potential outcomes and counterfactuals in the sample. Finally, akin
-    to experimental studies, the ACE is identified from associational
-    estimates by ensuring the absence of confounding. This is
-    accomplished by statistically conditioning on a <italic>sufficient
-    adjustment set</italic> of variables (<inline-formula><alternatives>
+    representing the difference between the average of observed
+    potential outcomes and counterfactuals across the sample. Finally,
+    similar to experimental studies, the counterfactuals are identified
+    from associational estimates by ensuring the absence of confounding.
+    This is accomplished by statistically conditioning on a
+    <italic>sufficient adjustment set</italic> of variables
+    (<inline-formula><alternatives>
     <tex-math><![CDATA[X]]></tex-math>
     <mml:math display="inline" xmlns:mml="http://www.w3.org/1998/Math/MathML"><mml:mi>X</mml:mi></mml:math></alternatives></inline-formula>).
-    Consequently, the ACE is expressed as <inline-formula><alternatives>
-    <tex-math><![CDATA[\tau = E_{X}[E[Y_{i}| T_{i}=1, X] - E[Y_{i}| T_{i}=2, X]]]]></tex-math>
+    As a result, the ACE is expressed as <inline-formula><alternatives>
+    <tex-math><![CDATA[\tau = E_{X}\left[E[Y_{i}| T_{i}=1, X] - E[Y_{i}| T_{i}=2, X]\right]]]></tex-math>
     <mml:math display="inline" xmlns:mml="http://www.w3.org/1998/Math/MathML"><mml:mrow><mml:mi>τ</mml:mi><mml:mo>=</mml:mo><mml:msub><mml:mi>E</mml:mi><mml:mi>X</mml:mi></mml:msub><mml:mrow><mml:mo stretchy="true" form="prefix">[</mml:mo><mml:mi>E</mml:mi><mml:mrow><mml:mo stretchy="true" form="prefix">[</mml:mo><mml:msub><mml:mi>Y</mml:mi><mml:mi>i</mml:mi></mml:msub><mml:mo stretchy="false" form="prefix">|</mml:mo><mml:msub><mml:mi>T</mml:mi><mml:mi>i</mml:mi></mml:msub><mml:mo>=</mml:mo><mml:mn>1</mml:mn><mml:mo>,</mml:mo><mml:mi>X</mml:mi><mml:mo stretchy="true" form="postfix">]</mml:mo></mml:mrow><mml:mo>−</mml:mo><mml:mi>E</mml:mi><mml:mrow><mml:mo stretchy="true" form="prefix">[</mml:mo><mml:msub><mml:mi>Y</mml:mi><mml:mi>i</mml:mi></mml:msub><mml:mo stretchy="false" form="prefix">|</mml:mo><mml:msub><mml:mi>T</mml:mi><mml:mi>i</mml:mi></mml:msub><mml:mo>=</mml:mo><mml:mn>2</mml:mn><mml:mo>,</mml:mo><mml:mi>X</mml:mi><mml:mo stretchy="true" form="postfix">]</mml:mo></mml:mrow><mml:mo stretchy="true" form="postfix">]</mml:mo></mml:mrow></mml:mrow></mml:math></alternatives></inline-formula>,
     where <inline-formula><alternatives>
     <tex-math><![CDATA[E_{X}[\cdot]]]></tex-math>
@@ -644,7 +643,7 @@ the University of Antwerp (BOF).</funding-statement>
     2010</xref>).</p>
     <p>The structural approach, however, offers a notable advantage over
     the potential outcomes approach by allowing the graphical and formal
-    representation of the ACE through directed acyclic graphs (DAG,
+    representation of a system through directed acyclic graphs (DAG,
     <xref alt="Pearl 2009" rid="ref-Pearl_2009" ref-type="bibr">Pearl
     2009</xref>;
     <xref alt="Pearl, Glymour, and Jewell 2016" rid="ref-Pearl_et_al_2016" ref-type="bibr">Pearl,
@@ -653,11 +652,11 @@ the University of Antwerp (BOF).</funding-statement>
     Yellen, and Anderson 2018</xref>;
     <xref alt="Neal 2020" rid="ref-Neal_2020" ref-type="bibr">Neal
     2020</xref>). DAGs function as heuristics, effectively conveying the
-    presumed causal structure of a system, referred to as a
-    <italic>scientific model</italic>. They do not represent detailed
-    statistical models but allow researchers to deduce which statistical
-    models can provide valid causal inferences, assuming the causal
-    structure depicted in the DAGs are accurate
+    presumed causal structure of the system underlying the ACE, referred
+    to as a <italic>scientific model</italic>. They do not represent
+    detailed statistical models but allow researchers to deduce which
+    statistical models can provide valid causal inferences, assuming the
+    causal structure depicted in the DAGs are accurate
     (<xref alt="McElreath 2020" rid="ref-McElreath_2020" ref-type="bibr">McElreath
     2020</xref>). The Identification-Estimation flowchart in
     <xref alt="Figure 1" rid="fig-IEflow">Figure 1</xref> visually
@@ -713,7 +712,7 @@ the University of Antwerp (BOF).</funding-statement>
     2020</xref>). This feature enables the decomposition of complex
     structures into basic building blocks, facilitating the analysis of
     these structures by focusing on the causal assumptions associated
-    with each building block individually
+    with individual building blocks
     (<xref alt="McElreath 2020" rid="ref-McElreath_2020" ref-type="bibr">McElreath
     2020</xref>). These building blocks can be represented in three
     ways: the magnified representation, the standard representation, and
@@ -1166,11 +1165,12 @@ the University of Antwerp (BOF).</funding-statement>
     <mml:math display="inline" xmlns:mml="http://www.w3.org/1998/Math/MathML"><mml:mrow><mml:msub><mml:mi>e</mml:mi><mml:mi>Z</mml:mi></mml:msub><mml:mo>⊥</mml:mo><mml:mspace width="-0.167em"></mml:mspace><mml:mspace width="-0.167em"></mml:mspace><mml:mspace width="-0.167em"></mml:mspace><mml:mo>⊥</mml:mo><mml:msub><mml:mi>e</mml:mi><mml:mi>Y</mml:mi></mml:msub></mml:mrow></mml:math></alternatives></inline-formula>.</p>
     <p>The motivating example in
     <xref alt="Section 2.1" rid="sec-framework-structural">Section 2.1</xref>
-    can further illustrate how to use the five fundamental building
-    blocks to construct a system’s causal structure. In this scenario,
-    the investigator aims to determine whether, <italic>on
-    average</italic>, there is a difference in conceptual understanding
-    of a topic <inline-formula><alternatives>
+    can be used to further illustrate how the five fundamental building
+    blocks help construct a system’s causal structure. In this scenario,
+    an experiment cannot be conducted but the investigator still aims to
+    determine whether, <italic>on average</italic>, there is a
+    difference in conceptual understanding of a topic
+    <inline-formula><alternatives>
     <tex-math><![CDATA[(Y=\{0,1\})]]></tex-math>
     <mml:math display="inline" xmlns:mml="http://www.w3.org/1998/Math/MathML"><mml:mrow><mml:mo stretchy="true" form="prefix">(</mml:mo><mml:mi>Y</mml:mi><mml:mo>=</mml:mo><mml:mo stretchy="false" form="prefix">{</mml:mo><mml:mn>0</mml:mn><mml:mo>,</mml:mo><mml:mn>1</mml:mn><mml:mo stretchy="false" form="postfix">}</mml:mo><mml:mo stretchy="true" form="postfix">)</mml:mo></mml:mrow></mml:math></alternatives></inline-formula>
     between two groups of students <inline-formula><alternatives>
@@ -1179,9 +1179,8 @@ the University of Antwerp (BOF).</funding-statement>
     described by the estimand <inline-formula><alternatives>
     <tex-math><![CDATA[E[Y| T=1] - E[Y| T=2]]]></tex-math>
     <mml:math display="inline" xmlns:mml="http://www.w3.org/1998/Math/MathML"><mml:mrow><mml:mi>E</mml:mi><mml:mrow><mml:mo stretchy="true" form="prefix">[</mml:mo><mml:mi>Y</mml:mi><mml:mo stretchy="false" form="prefix">|</mml:mo><mml:mi>T</mml:mi><mml:mo>=</mml:mo><mml:mn>1</mml:mn><mml:mo stretchy="true" form="postfix">]</mml:mo></mml:mrow><mml:mo>−</mml:mo><mml:mi>E</mml:mi><mml:mrow><mml:mo stretchy="true" form="prefix">[</mml:mo><mml:mi>Y</mml:mi><mml:mo stretchy="false" form="prefix">|</mml:mo><mml:mi>T</mml:mi><mml:mo>=</mml:mo><mml:mn>2</mml:mn><mml:mo stretchy="true" form="postfix">]</mml:mo></mml:mrow></mml:mrow></mml:math></alternatives></inline-formula>.
-    However, unlike the previous case, an experiment cannot be
-    conducted, and the problem suggests that the country to which a
-    student belongs (<inline-formula><alternatives>
+    The problem further suggests that the country to which a student
+    belongs (<inline-formula><alternatives>
     <tex-math><![CDATA[X]]></tex-math>
     <mml:math display="inline" xmlns:mml="http://www.w3.org/1998/Math/MathML"><mml:mi>X</mml:mi></mml:math></alternatives></inline-formula>)
     may influence both <inline-formula><alternatives>
@@ -1195,14 +1194,14 @@ the University of Antwerp (BOF).</funding-statement>
     certain countries <styled-content style="color:blue;">(maybe an
     example with more impact?)</styled-content>.
     <xref alt="Figure 3" rid="fig-example">Figure 3</xref> illustrates
-    the plausible causal structure of the motivating example. A detailed
-    examination of Figures <xref alt="3 (a)" rid="fig-mdag_example1">3
-    (a)</xref>, <xref alt="3 (b)" rid="fig-sdag_example1">3 (b)</xref>,
-    and SCM <xref alt="3 (c)" rid="fig-scm_example1">3 (c)</xref>
-    reveals the presence of at least four of the five fundamental
-    building blocks. The figures display multiple descendants, as
-    indicated by pairwise relations such as
-    <inline-formula><alternatives>
+    the plausible causal structure of this motivating example. A
+    detailed examination of Figures
+    <xref alt="3 (a)" rid="fig-mdag_example1">3 (a)</xref>,
+    <xref alt="3 (b)" rid="fig-sdag_example1">3 (b)</xref>, and SCM
+    <xref alt="3 (c)" rid="fig-scm_example1">3 (c)</xref> reveals the
+    presence of at least four of the five fundamental building blocks.
+    The figures display multiple descendants, as indicated by pairwise
+    relations such as <inline-formula><alternatives>
     <tex-math><![CDATA[X \rightarrow T]]></tex-math>
     <mml:math display="inline" xmlns:mml="http://www.w3.org/1998/Math/MathML"><mml:mrow><mml:mi>X</mml:mi><mml:mo>→</mml:mo><mml:mi>T</mml:mi></mml:mrow></mml:math></alternatives></inline-formula>,
     <inline-formula><alternatives>
@@ -1211,7 +1210,7 @@ the University of Antwerp (BOF).</funding-statement>
     and <inline-formula><alternatives>
     <tex-math><![CDATA[T \rightarrow Y]]></tex-math>
     <mml:math display="inline" xmlns:mml="http://www.w3.org/1998/Math/MathML"><mml:mrow><mml:mi>T</mml:mi><mml:mo>→</mml:mo><mml:mi>Y</mml:mi></mml:mrow></mml:math></alternatives></inline-formula>.
-    Additionally, the figures features multiple pairs of unconnected
+    Additionally, the figures feature multiple pairs of unconnected
     nodes, evident from the relations <inline-formula><alternatives>
     <tex-math><![CDATA[e_{T} \perp\!\!\!\perp e_{X}]]></tex-math>
     <mml:math display="inline" xmlns:mml="http://www.w3.org/1998/Math/MathML"><mml:mrow><mml:msub><mml:mi>e</mml:mi><mml:mi>T</mml:mi></mml:msub><mml:mo>⊥</mml:mo><mml:mspace width="-0.167em"></mml:mspace><mml:mspace width="-0.167em"></mml:mspace><mml:mspace width="-0.167em"></mml:mspace><mml:mo>⊥</mml:mo><mml:msub><mml:mi>e</mml:mi><mml:mi>X</mml:mi></mml:msub></mml:mrow></mml:math></alternatives></inline-formula>,

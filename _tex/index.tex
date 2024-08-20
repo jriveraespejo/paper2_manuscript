@@ -332,23 +332,23 @@ higher level of understanding. The research question could be then
 framed as the estimand, ``\emph{On average}, is there a difference in
 conceptual understanding of the topic between the two groups of
 students?'' This estimand could be mathematically expressed by the
-associational random quantity \(E[Y| T=1] - E[Y| T=2]\), where
-\(E[\cdot]\) denotes the expected value. An example of this approach is
-seen in \citet{Jones_et_al_2019}.
+random quantity \(E[Y| T=1] - E[Y| T=2]\), where \(E[\cdot]\) denotes
+the expected value. An example of this approach is seen in
+\citet{Jones_et_al_2019}.
 
 Researchers then proceed to identify the estimands.
 \emph{Identification} refers to the process of accurately computing an
 estimand using an estimator. An \emph{estimator} is a method or function
-that maps data into an estimate \citep{Neal_2020}. \emph{Estimates} are
-numerical values that approximate the estimand and are derived through
-\emph{estimation}, which refers to the process of integrating data with
-an estimator \citep{Everitt_et_al_2010}. Although various methods can
-approximate an estimand, researchers prioritize estimators with
-desirable properties that ensure the accuracy of estimates. For
-instance, the Z-test is an estimator known for its effectiveness in
-comparing two proportions, yielding accurate estimates when its
-underlying assumptions are met \citep{Kanji_2006}. The Z-test is
-expressed as a signal-to-noise ratio:
+that transforms data into an estimate \citep{Neal_2020}.
+\emph{Estimates} are numerical values that approximate the estimand and
+are derived through \emph{estimation}, which refers to the process of
+integrating data with an estimator \citep{Everitt_et_al_2010}. Although
+various methods can approximate an estimand, researchers prioritize
+estimators with desirable properties that ensure the accuracy of
+estimates. For instance, the Z-test is an estimator known for its
+effectiveness in comparing groups' proportions, yielding accurate
+estimates when the underlying assumptions of the statistic are met
+\citep{Kanji_2006}. The Z-test is expressed as a signal-to-noise ratio:
 \(Z = (\hat{p}_{1} - \hat{p}_{2})/ \hat{s}_{p}\). The signal is the
 difference between the group sample proportions,
 \(\hat{p}_{1} = \sum_{i=1}^{n_{1}}{Y_{i}/n_{1}}\) and
@@ -383,45 +383,45 @@ assigning individuals to genetic modifications or physical impairments
 \citep{Neal_2020}. In these situations, causal inference provides a
 valuable alternative for generating causal estimates, particularly when
 the goal is to understand the mechanisms underlying specific data.
-Moreover, the framework offers significant theoretical insights that
+Moreover, the framework provides significant theoretical insights that
 enhance the design of observational and experimental studies
 \citep{McElreath_2020}.
 
 Unlike classical statistical modeling, which focuses primarily on
 summarizing data and inferring associations, \emph{causal inference} is
 a framework designed to identify causes and estimate their effects using
-data \citep{Shaughnessy_et_al_2010, Neal_2020}. This framework employs
-rigorous mathematical techniques to address the fundamental problem of
-causality \citep{Pearl_2009}, which is essential for understanding and
-defining causal effects. The \emph{fundamental problem of causality}
-centers on answering the question, ``What would have happened `in the
-world' under different circumstances?'' a concept known as
-counterfactuals. \emph{Counterfactuals} represent hypothetical scenarios
-that are \emph{contrary to fact}, where alternative outcomes resulting
-from a specific cause are neither observed nor observable
-\citep{Neal_2020, Counterfactual_2024}.
+data \citep{Shaughnessy_et_al_2010, Neal_2020}. The framework employs
+rigorous mathematical techniques to address the \emph{fundamental
+problem of causality} \citep{Pearl_2009}. This problem revolves around
+the question, ``What would have happened `in the world' under different
+circumstances?'' a concept known as counterfactuals, essential for
+understanding and defining causal effects. \emph{Counterfactuals}
+represent hypothetical scenarios that are \emph{contrary to fact}, where
+alternative outcomes resulting from a specific cause are neither
+observed nor observable \citep{Neal_2020, Counterfactual_2024}.
 
 Although a comprehensive discussion of causes and counterfactuals
 exceeds the scope of this document, a brief overview of how the
-framework addresses the fundamental problem of causality is possible
-using the previous example. The framework starts by defining
-\emph{individual causal effects} (ICE) as the difference between
-students' observed and unobserved potential outcomes:
-\(\tau_{i} = (Y_{i}| T_{i}=1) - (Y_{i}| T_{i}=2)\). Notice once a
+framework addresses the fundamental problem of causality can be
+provided. The framework begins by defining \emph{individual causal
+effects} (ICE) as the difference between students' observed and
+unobserved potential outcomes:
+\(\tau_{i} = (Y_{i}| T_{i}=1) - (Y_{i}| T_{i}=2)\). Notice when a
 student is assigned to \(T_{i}=1\), the potential outcome under
-\(T_{i}=2\) is no longer observed nor observable, and is thus termed a
-\emph{counterfactual}. To address the challenge posed by
+\(T_{i}=2\) is no longer observed nor observable, and thus termed a
+\emph{counterfactual}. To overcome the challenge posed by
 counterfactuals, the framework extends the ICE to \emph{average causal
 effects} (ACE). The ACE is defined as
-\(\tau = E[\tau_{i}] = E[Y_{i}| T_{i}=1] - E[Y_{i}| T_{i}=2]\), and
-represents the difference between the average of observed potential
-outcomes and counterfactuals in the sample. Finally, akin to
-experimental studies, the ACE is identified from associational estimates
-by ensuring the absence of confounding. This is accomplished by
-statistically conditioning on a \emph{sufficient adjustment set} of
-variables (\(X\)). Consequently, the ACE is expressed as
-\(\tau = E_{X}[E[Y_{i}| T_{i}=1, X] - E[Y_{i}| T_{i}=2, X]]\), where
-\(E_{X}[\cdot]\) denotes the marginal expected value over \(X\)
+\(\tau = E[\tau_{i}] = E[Y_{i}| T_{i}=1] - E[Y_{i}| T_{i}=2]\),
+representing the difference between the average of observed potential
+outcomes and counterfactuals across the sample. Finally, similar to
+experimental studies, the counterfactuals are identified from
+associational estimates by ensuring the absence of confounding. This is
+accomplished by statistically conditioning on a \emph{sufficient
+adjustment set} of variables (\(X\)). As a result, the ACE is expressed
+as
+\(\tau = E_{X}\left[E[Y_{i}| T_{i}=1, X] - E[Y_{i}| T_{i}=2, X]\right]\),
+where \(E_{X}[\cdot]\) denotes the marginal expected value over \(X\)
 \citep{Morgan_et_al_2014}.
 
 Several approaches to causal inference and counterfactuals exist, but
@@ -439,17 +439,18 @@ estimate causal effects \citep{Pearl_2010}.
 
 The structural approach, however, offers a notable advantage over the
 potential outcomes approach by allowing the graphical and formal
-representation of the ACE through directed acyclic graphs
+representation of a system through directed acyclic graphs
 \citep[DAG,][]{Pearl_2009, Pearl_et_al_2016, Gross_et_al_2018, Neal_2020}.
 DAGs function as heuristics, effectively conveying the presumed causal
-structure of a system, referred to as a \emph{scientific model}. They do
-not represent detailed statistical models but allow researchers to
-deduce which statistical models can provide valid causal inferences,
-assuming the causal structure depicted in the DAGs are accurate
-\citep{McElreath_2020}. The Identification-Estimation flowchart in
-Figure~\ref{fig-IEflow} visually represents the process of transitioning
-from estimands to estimates, as well as the application of the
-scientific model and data to identify and estimate causal effects.
+structure of the system underlying the ACE, referred to as a
+\emph{scientific model}. They do not represent detailed statistical
+models but allow researchers to deduce which statistical models can
+provide valid causal inferences, assuming the causal structure depicted
+in the DAGs are accurate \citep{McElreath_2020}. The
+Identification-Estimation flowchart in Figure~\ref{fig-IEflow} visually
+represents the process of transitioning from estimands to estimates, as
+well as the application of the scientific model and data to identify and
+estimate causal effects.
 
 \begin{figure}
 
@@ -496,7 +497,7 @@ structures using only five fundamental building blocks
 \citep{Neal_2020, McElreath_2020}. This feature enables the
 decomposition of complex structures into basic building blocks,
 facilitating the analysis of these structures by focusing on the causal
-assumptions associated with each building block individually
+assumptions associated with individual building blocks
 \citep{McElreath_2020}. These building blocks can be represented in
 three ways: the magnified representation, the standard representation,
 and the structural causal model form \citep[SCM,][]{Morgan_et_al_2014}.
@@ -795,30 +796,30 @@ and of all other variables in the graph, as evidenced by the pairwise
 relations \(e_{X} \perp\!\!\!\perp e_{Y}\),
 \(e_{X} \perp\!\!\!\perp e_{Z}\), and \(e_{Z} \perp\!\!\!\perp e_{Y}\).
 
-The motivating example in Section~\ref{sec-framework-structural} can
-further illustrate how to use the five fundamental building blocks to
-construct a system's causal structure. In this scenario, the
-investigator aims to determine whether, \emph{on average}, there is a
-difference in conceptual understanding of a topic \((Y=\{0,1\})\)
-between two groups of students \((T=\{1,2\})\), described by the
-estimand \(E[Y| T=1] - E[Y| T=2]\). However, unlike the previous case,
-an experiment cannot be conducted, and the problem suggests that the
-country to which a student belongs (\(X\)) may influence both \(T\) and
-\(Y\). Such scenarios are plausible, especially when the teaching
-methods depend on software or access to technology, which may be limited
-in certain countries {(maybe an example with more impact?)}.
-Figure~\ref{fig-example} illustrates the plausible causal structure of
-the motivating example. A detailed examination of Figures
-\ref{fig-mdag_example1}, \ref{fig-sdag_example1}, and SCM
-\ref{fig-scm_example1} reveals the presence of at least four of the five
-fundamental building blocks. The figures display multiple descendants,
-as indicated by pairwise relations such as \(X \rightarrow T\),
-\(X \rightarrow Y\), and \(T \rightarrow Y\). Additionally, the figures
-features multiple pairs of unconnected nodes, evident from the relations
-\(e_{T} \perp\!\!\!\perp e_{X}\), \(e_{T} \perp\!\!\!\perp e_{Y}\), and
-\(e_{X} \perp\!\!\!\perp e_{Y}\). Finally, the figures illustrate the
-fork \(X \rightarrow \{T,Y\}\), and two colliders with
-\(\{X,e_{T}\} \rightarrow T\) and \(\{X,T,e_{Y}\} \rightarrow Y\).
+The motivating example in Section~\ref{sec-framework-structural} can be
+used to further illustrate how the five fundamental building blocks help
+construct a system's causal structure. In this scenario, an experiment
+cannot be conducted but the investigator still aims to determine
+whether, \emph{on average}, there is a difference in conceptual
+understanding of a topic \((Y=\{0,1\})\) between two groups of students
+\((T=\{1,2\})\), described by the estimand \(E[Y| T=1] - E[Y| T=2]\).
+The problem further suggests that the country to which a student belongs
+(\(X\)) may influence both \(T\) and \(Y\). Such scenarios are
+plausible, especially when the teaching methods depend on software or
+access to technology, which may be limited in certain countries {(maybe
+an example with more impact?)}. Figure~\ref{fig-example} illustrates the
+plausible causal structure of this motivating example. A detailed
+examination of Figures \ref{fig-mdag_example1}, \ref{fig-sdag_example1},
+and SCM \ref{fig-scm_example1} reveals the presence of at least four of
+the five fundamental building blocks. The figures display multiple
+descendants, as indicated by pairwise relations such as
+\(X \rightarrow T\), \(X \rightarrow Y\), and \(T \rightarrow Y\).
+Additionally, the figures feature multiple pairs of unconnected nodes,
+evident from the relations \(e_{T} \perp\!\!\!\perp e_{X}\),
+\(e_{T} \perp\!\!\!\perp e_{Y}\), and \(e_{X} \perp\!\!\!\perp e_{Y}\).
+Finally, the figures illustrate the fork \(X \rightarrow \{T,Y\}\), and
+two colliders with \(\{X,e_{T}\} \rightarrow T\) and
+\(\{X,T,e_{Y}\} \rightarrow Y\).
 
 \begin{figure}
 
