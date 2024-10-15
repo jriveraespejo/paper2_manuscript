@@ -1,2 +1,0 @@
-pdftocairo fig.pdf -png -rx 400 -ry 400
-
