@@ -103,10 +103,10 @@ sciences</institution>
 <corresp id="cor-1">JoseManuel.RiveraEspejo@uantwerpen.be</corresp>
 </author-notes>
 
-<pub-date date-type="pub" publication-format="electronic" iso-8601-date="2024-10-15">
+<pub-date date-type="pub" publication-format="electronic" iso-8601-date="2024-10-16">
 <year>2024</year>
 <month>10</month>
-<day>15</day>
+<day>16</day>
 </pub-date>
 
 
@@ -151,21 +151,21 @@ the University of Antwerp (BOF).</funding-statement>
   1927</xref>;
   <xref alt="Pollitt 2012a" rid="ref-Pollitt_2012a" ref-type="bibr">Pollitt
   2012a</xref>) for assessing competencies and traits. These studies
-  have examined the method’s strengths from two main perspectives: its
-  capacity to produce reliable and valid trait scores, and its practical
-  applicability. In terms of reliability and validity, research
-  indicates that CJ generates precise and consistent scores that
-  accurately represent the traits being measured. Key contributions in
-  this area include those by Bramley
-  (<xref alt="2008" rid="ref-Bramley_2008" ref-type="bibr">2008</xref>),
-  Pollitt
+  have evaluated CJ from two main perspectives: its ability to produce
+  reliable and valid trait scores, and its practical applicability. In
+  terms of reliability and validity, research has shown that CJ can
+  generate precise and consistent scores that accurately represent the
+  traits being measured. Notable contributions in this research area
+  include studies by Pollitt
   (<xref alt="2012b" rid="ref-Pollitt_2012b" ref-type="bibr">2012b</xref>),
   Whitehouse
   (<xref alt="2012" rid="ref-Whitehouse_2012" ref-type="bibr">2012</xref>),
+  van Daal et al.
+  (<xref alt="2019a" rid="ref-vanDaal_et_al_2016" ref-type="bibr">2019a</xref>),
   Lesterhuis
   (<xref alt="2018" rid="ref-Lesterhuis_2018" ref-type="bibr">2018</xref>),
   van Daal et al.
-  (<xref alt="2019" rid="ref-vanDaal_et_al_2019" ref-type="bibr">2019</xref>),
+  (<xref alt="2019b" rid="ref-vanDaal_et_al_2019" ref-type="bibr">2019b</xref>),
   Bramley and Vitello
   (<xref alt="2019" rid="ref-Bramley_et_al_2019" ref-type="bibr">2019</xref>),
   Verhavert et al.
@@ -174,11 +174,11 @@ the University of Antwerp (BOF).</funding-statement>
   (<xref alt="2022" rid="ref-Crompvoets_et_al_2022" ref-type="bibr">2022</xref>),
   and Bouwer et al.
   (<xref alt="2023" rid="ref-Bouwer_et_al_2023" ref-type="bibr">2023</xref>).
-  Regarding practical applicability, several studies have demonstrated
+  Regarding practical applicability, several studies have highlighted
   the method’s versatility in both educational and non-educational
-  settings, offering an efficient and effective alternative for
-  measurement and evaluation. Notable examples include the works of
-  Jones
+  contexts, presenting it as an efficient and effective alternative for
+  measurement and evaluation. Key examples in this research area include
+  the works of Jones
   (<xref alt="2015" rid="ref-Jones_2015" ref-type="bibr">2015</xref>),
   Bartholomew et al.
   (<xref alt="2018" rid="ref-Bartholomew_et_al_2018" ref-type="bibr">2018</xref>),
@@ -190,9 +190,42 @@ the University of Antwerp (BOF).</funding-statement>
   (<xref alt="2020" rid="ref-Bartholomew_et_al_2020" ref-type="bibr">2020</xref>),
   and Boonen, Kloots, and Gillis
   (<xref alt="2020" rid="ref-Boonen_et_al_2020" ref-type="bibr">2020</xref>).</p>
+  <p>Nevertheless, despite the growing number of CJ studies, the
+  research approaches employed in the literature have been unsystematic
+  and non-integrated, leading to the oversight of several critical
+  issues related to the method. These issues include concerns about the
+  measurement model responsible for generating the CJ scores, the
+  structural component used for further data analysis and hypothesis
+  testing, and challenges related to the design of CJ experiments. For
+  instance, a notable concern regarding the measurement model is the
+  prevalent reliance on the assumptions of Case 5 from Thurstone’s law
+  of comparative judgment
+  (<xref alt="1927" rid="ref-Thurstone_1927" ref-type="bibr">1927</xref>).
+  Although Case 5 was originally articulated to produce a “rough
+  measurement” or “rather coarse scaling” of traits
+  (<xref alt="Thurstone 1927, 268–69" rid="ref-Thurstone_1927" ref-type="bibr">Thurstone
+  1927, 268–69</xref>), its assumptions have become predominant in the
+  literature due to its implementation through the Bradley-Terry-Luce
+  (BTL) model
+  (<xref alt="Bradley and Terry 1952" rid="ref-Bradley_et_al_1952" ref-type="bibr">Bradley
+  and Terry 1952</xref>;
+  <xref alt="Luce 1959" rid="ref-Luce_1959" ref-type="bibr">Luce
+  1959</xref>). This leaves issues such as the presence of judge’ biases
+  hinted by Bramley
+  (<xref alt="2008" rid="ref-Bramley_2008" ref-type="bibr">2008</xref>)
+  and Kelly, Richardson, and Isaacs
+  (<xref alt="2022" rid="ref-Kelly_et_al_2022" ref-type="bibr">2022</xref>),
+  and evidenced by Pollitt and Elliott
+  (<xref alt="2003" rid="ref-Pollitt_et_al_2003" ref-type="bibr">2003</xref>),
+  (<xref alt="Arlett_2003?" rid="ref-Arlett_2003" ref-type="bibr"><bold>Arlett_2003?</bold></xref>),
+  and
+  (<xref alt="Guthrie_2003?" rid="ref-Guthrie_2003" ref-type="bibr"><bold>Guthrie_2003?</bold></xref>)</p>
 </sec>
 <sec id="sec-theory">
   <title>Theory</title>
+  <sec id="sec-theory-thurstone">
+    <title>Let’s talk about Thurstone co.</title>
+  </sec>
   <sec id="sec-theory-scientific">
     <title>A scientific model for the CJ</title>
   </sec>
@@ -269,6 +302,39 @@ the University of Antwerp (BOF).</funding-statement>
           <lpage>499</lpage>
         </element-citation>
       </ref>
+      <ref id="ref-Bradley_et_al_1952">
+        <element-citation publication-type="article-journal">
+          <person-group person-group-type="author">
+            <name><surname>Bradley</surname><given-names>R.</given-names></name>
+            <name><surname>Terry</surname><given-names>M.</given-names></name>
+          </person-group>
+          <article-title>Rank analysis of incomplete block designs: I. The method of paired comparisons</article-title>
+          <source>Biometrika</source>
+          <year iso-8601-date="1952">1952</year>
+          <volume>39</volume>
+          <issue>3-4</issue>
+          <uri>http://www.jstor.com/stable/2334029</uri>
+          <pub-id pub-id-type="doi">10.2307/2334029</pub-id>
+          <fpage>324</fpage>
+          <lpage>345</lpage>
+        </element-citation>
+      </ref>
+      <ref id="ref-Luce_1959">
+        <element-citation publication-type="article-journal">
+          <person-group person-group-type="author">
+            <name><surname>Luce</surname><given-names>R.</given-names></name>
+          </person-group>
+          <article-title>On the possible psychophysical laws</article-title>
+          <source>The Psychologcal Review</source>
+          <year iso-8601-date="1959">1959</year>
+          <volume>66</volume>
+          <issue>2</issue>
+          <uri></uri>
+          <pub-id pub-id-type="doi">10.1037/h0043178</pub-id>
+          <fpage>482</fpage>
+          <lpage>499</lpage>
+        </element-citation>
+      </ref>
       <ref id="ref-Pollitt_2012a">
         <element-citation publication-type="article-journal">
           <person-group person-group-type="author">
@@ -315,6 +381,25 @@ the University of Antwerp (BOF).</funding-statement>
           <pub-id pub-id-type="doi">10.1007/s10649-015-9607-1</pub-id>
           <fpage>337</fpage>
           <lpage>355</lpage>
+        </element-citation>
+      </ref>
+      <ref id="ref-vanDaal_et_al_2016">
+        <element-citation publication-type="article-journal">
+          <person-group person-group-type="author">
+            <name><surname>van Daal</surname><given-names>T.</given-names></name>
+            <name><surname>Lesterhuis</surname><given-names>M.</given-names></name>
+            <name><surname>Coertjens</surname><given-names>L.</given-names></name>
+            <name><surname>Donche</surname><given-names>V.</given-names></name>
+            <name><surname>De Maeyer</surname><given-names>S.</given-names></name>
+          </person-group>
+          <article-title>Validity of comparative judgement to assess academic writing: Examining implications of its holistic character and building on a shared consensus</article-title>
+          <source>Assessment in Education: Principles, Policy &amp; Practice</source>
+          <year iso-8601-date="2019">2019</year>
+          <volume>26</volume>
+          <issue>1</issue>
+          <pub-id pub-id-type="doi">10.1080/0969594X.2016.1253542</pub-id>
+          <fpage>59</fpage>
+          <lpage>74</lpage>
         </element-citation>
       </ref>
       <ref id="ref-Bartholomew_et_al_2018">
@@ -450,6 +535,25 @@ the University of Antwerp (BOF).</funding-statement>
           <lpage>71</lpage>
         </element-citation>
       </ref>
+      <ref id="ref-Kelly_et_al_2022">
+        <element-citation publication-type="article-journal">
+          <person-group person-group-type="author">
+            <name><surname>Kelly</surname><given-names>K.</given-names></name>
+            <name><surname>Richardson</surname><given-names>M.</given-names></name>
+            <name><surname>Isaacs</surname><given-names>T.</given-names></name>
+          </person-group>
+          <article-title>Critiquing the rationales for using comparative judgement: A call for clarity</article-title>
+          <source>Assessment in Education: Principles, Policy &amp; Practice</source>
+          <publisher-name>Routledge</publisher-name>
+          <year iso-8601-date="2022">2022</year>
+          <volume>29</volume>
+          <issue>6</issue>
+          <uri></uri>
+          <pub-id pub-id-type="doi">10.1080/0969594X.2022.2147901</pub-id>
+          <fpage>674</fpage>
+          <lpage>688</lpage>
+        </element-citation>
+      </ref>
       <ref id="ref-Crompvoets_et_al_2022">
         <element-citation publication-type="article-journal">
           <person-group person-group-type="author">
@@ -538,12 +642,25 @@ the University of Antwerp (BOF).</funding-statement>
           <lpage>349</lpage>
         </element-citation>
       </ref>
+      <ref id="ref-Pollitt_et_al_2003">
+        <element-citation>
+          <person-group person-group-type="author">
+            <name><surname>Pollitt</surname><given-names>A.</given-names></name>
+            <name><surname>Elliott</surname><given-names>G.</given-names></name>
+          </person-group>
+          <article-title>Finding a proper role for human judgement in the examination system.</article-title>
+          <publisher-name>University of Cambridge Local Examinations Syndicate</publisher-name>
+          <year iso-8601-date="2003">2003</year>
+          <uri>https://www.cambridgeassessment.org.uk/Images/109707-monitoring-and-investigating-comparability-a-proper-role-for-human-judgement.pdf</uri>
+        </element-citation>
+      </ref>
       <ref id="ref-Whitehouse_2012">
-        <element-citation publication-type="paper-conference">
+        <element-citation>
           <person-group person-group-type="author">
             <name><surname>Whitehouse</surname><given-names>C.</given-names></name>
           </person-group>
           <article-title>Testing the validity of judgements about geography essays using the adaptive comparative judgement method</article-title>
+          <publisher-name>Centre for Education Research &amp; Policy</publisher-name>
           <year iso-8601-date="2012">2012</year>
           <uri>https://filestore.aqa.org.uk/content/research/CERP_RP_CW_24102012_0.pdf?download=1</uri>
         </element-citation>
