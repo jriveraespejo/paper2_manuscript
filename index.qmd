@@ -95,8 +95,7 @@ execute:
 <!-- a. issues within the method as such, critical analyze some aspect of the method -->
 <!-- b. practical use of the method, generate scores with the BTL, and use this scores with some hypotheses, or descriptions. -->
 
-Over the past decade, numerous studies have documented the effectiveness of the *comparative judgment* (CJ) method [@Thurstone_1927; @Pollitt_2012a] for assessing competencies and traits. These studies have examined the method's strengths from two main perspectives: its capacity to produce reliable and valid trait scores, and its practical applicability. In terms of reliability and validity, research indicates that CJ generates precise and consistent scores that accurately represent the traits being measured. Key contributions in this area include those by @Bramley_2008, @Pollitt_2012b, @Whitehouse_2012, @Lesterhuis_2018, @vanDaal_et_al_2019, @Bramley_et_al_2019, @Verhavert_et_al_2019, @Crompvoets_et_al_2022, and @Bouwer_et_al_2023. Regarding practical applicability, several studies have demonstrated the method's versatility in both educational and non-educational settings, offering an efficient and effective alternative for measurement and evaluation. Notable examples include the works of @Jones_2015, @Bartholomew_et_al_2018, @Jones_et_al_2019, @Marshall_et_al_2020, @Bartholomew_et_al_2020, and @Boonen_et_al_2020.
-
+Over the past decade, numerous studies have documented the effectiveness of the *comparative judgment* (CJ) method [@Thurstone_1927; @Pollitt_2012a] for assessing competencies and traits. These studies have evaluated CJ from two main perspectives: its ability to produce reliable and valid trait scores, and its practical applicability. In terms of reliability and validity, research has shown that CJ can generate precise and consistent scores that accurately represent the traits being measured. Notable contributions in this research area include studies by @Pollitt_2012b, @Whitehouse_2012, @vanDaal_et_al_2016, @Lesterhuis_2018, @vanDaal_et_al_2019, @Bramley_et_al_2019, @Verhavert_et_al_2019, @Crompvoets_et_al_2022, and @Bouwer_et_al_2023. Regarding practical applicability, several studies have highlighted the method's versatility in both educational and non-educational contexts, presenting it as an efficient and effective alternative for measurement and evaluation. Key examples in this research area include the works of @Jones_2015, @Bartholomew_et_al_2018, @Jones_et_al_2019, @Marshall_et_al_2020, @Bartholomew_et_al_2020, and @Boonen_et_al_2020.
 
 <!-- 2. But what are the problems of DCJ as a method? -->
 
@@ -107,6 +106,16 @@ Over the past decade, numerous studies have documented the effectiveness of the 
 <!--   a.2 It does not consider that stimuli may be nested in individuals -->
 <!-- b. in all literature there is a disconnection between measurement model and the structural part (common practical use) -->
 <!-- c. what about the experimental design?, what are the implications of certain comparison algorithms? -->
+
+Nevertheless, despite the growing number of CJ studies, the research approaches employed in the literature have been unsystematic and non-integrated, leading to the oversight of several critical issues related to the method. These issues include concerns about the measurement model responsible for generating the CJ scores, the structural component used for further data analysis and hypothesis testing, and challenges related to the design of CJ experiments. For instance, a notable concern regarding the measurement model is the prevalent reliance on the assumptions of Case 5 from Thurstone's law of comparative judgment [-@Thurstone_1927]. Although Case 5 was originally articulated to produce a "rough measurement" or "rather coarse scaling" of traits [@Thurstone_1927, p. 268-269], its assumptions have become predominant in the literature due to its implementation through the Bradley-Terry-Luce (BTL) model [@Bradley_et_al_1952; @Luce_1959]. This leaves issues such as the presence of judge' biases hinted by @Bramley_2008 and @Kelly_et_al_2022, and evidenced by @Pollitt_et_al_2003, @Arlett_2003, and @Guthrie_2003
+
+<!-- a practice that may not be justifiable. -->
+
+
+<!-- One issue related to the structural component, is the disconnection existing in the literature between the measurement model and the structural component used for hypothesis testing,  -->
+
+
+<!-- and issues related to the method's experimental design. These issues can affect the method's reliability, validity, and practical applicability. -->
 
 
 
@@ -122,6 +131,10 @@ Over the past decade, numerous studies have documented the effectiveness of the 
 # Theory {#sec-theory}
 <!-- 21:00 recording -->
 
+
+
+## Let's talk about Thurstone co. {#sec-theory-thurstone}
+
 <!-- Notes: -->
 <!-- - But what it is the problem with this way of using DCJ (just one paragraph) -->
 <!-- a. measurement model is based on case V -->
@@ -129,6 +142,48 @@ Over the past decade, numerous studies have documented the effectiveness of the 
 <!--   a.2 It does not consider that stimuli may be nested in individuals -->
 <!-- b. in all literature there is a disconnection between measurement model and the structural part (common practical use) -->
 <!-- c. what about the experimental design?, what are the implications of certain comparison algorithms? -->
+
+
+<!-- Use the SEM description of measurement model and structural model. -->
+
+<!-- The issues fall into three categories: those related to the measurement model, the structural model, and the experimental design. -->
+
+<!-- Reliability is a necessary but not sufficient condition for validity. Reliability can exist without validity but validity cannot exist without reliability [@Perron_et_al_2015]. -->
+
+<!-- Measurement model -->
+
+<!-- @Thurstone_1927 justify the use of case V, on multiple assumptions, but the most important for our purpose are three:  -->
+
+<!-- (a) related to Case 3, it assumes the correlation between stimuli is zero, this translates into the cancellation of judges effects by mean of opposing and equally weigthed 'mood' and 'simultaneous contrasts' effects. This is demonstrated using the additivive nature of the logit scale, which helps to cancel 'bias' judges effects. -->
+<!-- This is the case of confounding, and @Andrich_1978 already showed that if judges effects are parametrized, it gets eliminated experimentally in the paired comparison method.  -->
+
+<!-- possibility of bias is hinted in @Bramley_2008, and later mentioned again in @Kelly_et_al_2022, and some evidence is found in @Pollitt_et_al_2003, @Arlett_2003, @Guthrie_2003 and @Gijsen_et_al_2021 -->
+
+
+<!-- (b) related to Case 3, it assumes the correlation between stimuli is zero, this also translates into the idea that stimuli are the main focus of estimation and analysis, but what happens when the focus of analysis is the individuals that generated those stimuli. There is an amount of correlation that it is not accounted for.  -->
+<!-- This is the case of clustering or measurement error, and overlooking issues such as clustering and measurement error can lead to biased and less precise parameter estimates [@McElreath_2020], ultimately diminishing the statistical power of models and increasing the likelihood of committing type I or type II errors when addressing research inquiries.  -->
+
+<!-- This has been considered in the literature as a (see https://doi.org/10.1177/1471082X15571817) or a multilevel BTL model (find sources) -->
+
+<!-- (c) related to case 5, discriminal dispersions of the stimuli are equal, but it is not hard to imagine that certain individuals can produce good quality texts with more precision than other individuals.  -->
+
+<!-- This ties up with the next subject -->
+
+
+
+<!-- Structural model -->
+
+<!-- Regarding this, it is apparent that in all literature there is a disconnection between measurement model and the structural part, where hypothesis and summaries are performed. -->
+
+<!-- The current literature estimates the CJ scores to later used them into other analysis, such as investigating bias and misfits among judges, or for the comparison of groups of individuals. This ignores measurement error. -->
+
+
+
+<!-- Experimental design -->
+
+<!-- In this regard, although the literature has tested multiple features of the experimental design of the method, such as the comparison algorithm and the number of comparisons, it is not clear where this procedures fit in the whole process of comparison, and what are their implications for the outcome of the method. -->
+
+<!-- present the evidence of bias effects of adaptive algorithms, the not clear view of how many comparisons per (sub)units are required. Adhoc rules of thumb. -->
 
 
 ## A scientific model for the CJ {#sec-theory-scientific}
