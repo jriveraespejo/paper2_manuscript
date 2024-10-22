@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.6.28">
+<meta name="generator" content="quarto-1.6.29">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -10,10 +10,10 @@
 <meta name="author" content="Tine van van Daal">
 <meta name="author" content="Sven De De Maeyer">
 <meta name="author" content="Steven Gillis">
-<meta name="dcterms.date" content="2024-10-18">
+<meta name="dcterms.date" content="2024-10-22">
 <meta name="keywords" content="causal inference, probability, Thurstone, comparative judgement, directed acyclic graph, structural causal models, statistical modeling">
 
-<title>Causes and effects in Dichotomous Comparative Judgments: an information-theoretical system of plausible mechanism</title>
+<title>Let’s talk about Thurstone &amp; Co.: An information-theoretical model for comparative judgments, and its statistical translation</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -55,7 +55,7 @@ div.csl-indent {
 <script src="site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="site_libs/quarto-html/anchor.min.js"></script>
 <link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-75d73ece3e5fc6e04b504c8afc5573bd.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-29a703985b9506ee1f3285ce059650bf.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
 <link href="site_libs/bootstrap/bootstrap-11ee72aef64f0fa59a1d49be3462426e.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
@@ -67,7 +67,7 @@ div.csl-indent {
 </script>
 
 
-<meta name="citation_title" content="Causes and effects in Dichotomous Comparative Judgments: an information-theoretical system of plausible mechanism">
+<meta name="citation_title" content="Let&amp;amp;#039;s talk about Thurstone &amp; Co.: An information-theoretical model for comparative judgments, and its statistical translation">
 <meta name="citation_abstract" content="(to do)
 ">
 <meta name="citation_keywords" content="causal inference,probability,Thurstone,comparative judgement,directed acyclic graph,structural causal models,statistical modeling">
@@ -75,10 +75,10 @@ div.csl-indent {
 <meta name="citation_author" content="Tine van van Daal">
 <meta name="citation_author" content="Sven De De Maeyer">
 <meta name="citation_author" content="Steven Gillis">
-<meta name="citation_publication_date" content="2024-10-18">
-<meta name="citation_cover_date" content="2024-10-18">
+<meta name="citation_publication_date" content="2024-10-22">
+<meta name="citation_cover_date" content="2024-10-22">
 <meta name="citation_year" content="2024">
-<meta name="citation_online_date" content="2024-10-18">
+<meta name="citation_online_date" content="2024-10-22">
 <meta name="citation_language" content="en">
 <meta name="citation_reference" content="citation_title=Correlation and causation;,citation_author=S. Wright;,citation_publication_date=1927;,citation_cover_date=1927;,citation_year=1927;,citation_fulltext_html_url=https://books.google.co.ao/books/about/Journal_of_Agricultural_Research.html?hl=pt-PT&amp;amp;amp;id=lNNdIV_qpwIC;,citation_issue=7;,citation_volume=20;,citation_journal_title=Correlation and causation;">
 <meta name="citation_reference" content="citation_title=On the interpretation of χ2 from contingency tables, and the calculation of p;,citation_author=R. Fisher;,citation_publication_date=1922;,citation_cover_date=1922;,citation_year=1922;,citation_fulltext_html_url=http://www.jstor.org/stable/2340521;,citation_issue=1;,citation_doi=10.2307/2340521;,citation_volume=85;,citation_journal_title=Journal of the Royal Statistical Society;,citation_publisher=[Wiley, Royal Statistical Society];">
@@ -100,6 +100,7 @@ div.csl-indent {
 <meta name="citation_reference" content="citation_title=The analysis of permutations;,citation_author=R. Plackett;,citation_publication_date=1975;,citation_cover_date=1975;,citation_year=1975;,citation_fulltext_html_url=https://www.jstor.org/stable/2346567;,citation_issue=2;,citation_doi=10.2307/2346567;,citation_volume=24;,citation_journal_title=Journal of the Royal Statistical Society;">
 <meta name="citation_reference" content="citation_title=Bayesian estimation in unrestricted factor analysis: A treatment for heywood cases;,citation_author=J. Martin;,citation_author=R. McDonald;,citation_publication_date=1975;,citation_cover_date=1975;,citation_year=1975;,citation_issue=40;,citation_doi=10.1007/BF02291552;,citation_journal_title=Psychometrika;">
 <meta name="citation_reference" content="citation_title=Relationships between the thurstone and rasch approaches to item scaling;,citation_author=D. Andrich;,citation_publication_date=1978;,citation_cover_date=1978;,citation_year=1978;,citation_issue=3;,citation_doi=10.1177/014662167800200319;,citation_volume=2;,citation_journal_title=Applied Psychological Measurement;">
+<meta name="citation_reference" content="citation_title=Predicting the impact of simple and compound life change events;,citation_author=H. Wainer;,citation_author=D. TimbersFairbank;,citation_author=R. Hough;,citation_publication_date=1978;,citation_cover_date=1978;,citation_year=1978;,citation_issue=3;,citation_doi=10.1177/014662167800200301;,citation_volume=2;,citation_journal_title=Applied Psychological Measurement;">
 <meta name="citation_reference" content="citation_title=International intelligibility of english: Directions and resources;,citation_author=L. Smith;,citation_author=C. Nelson;,citation_publication_date=1985;,citation_cover_date=1985;,citation_year=1985;,citation_fulltext_html_url=https://onlinelibrary.wiley.com/doi/abs/10.1111/j.1467-971X.1985.tb00423.x;,citation_issue=3;,citation_doi=10.1111/j.1467-971X.1985.tb00423.x;,citation_volume=4;,citation_journal_title=World Englishes;">
 <meta name="citation_reference" content="citation_title=Non-native/non-native conversations: A model for negotiation of meaning;,citation_author=E. Varonis;,citation_author=G. Susan;,citation_publication_date=1985-04;,citation_cover_date=1985-04;,citation_year=1985;,citation_fulltext_html_url=https://academic.oup.com/applij/article-pdf/6/1/71/9741729/71.pdf;,citation_issue=1;,citation_doi=10.1093/applin/6.1.71;,citation_volume=6;,citation_journal_title=Applied Linguistics;">
 <meta name="citation_reference" content="citation_title=Bradley-terry-luce model with an ordered response;,citation_author=G. Tutz;,citation_publication_date=1986;,citation_cover_date=1986;,citation_year=1986;,citation_issue=3;,citation_doi=10.1016/0022-2496(86)90034-9;,citation_volume=30;,citation_journal_title=Journal of Mathemathical Psychology;">
@@ -129,6 +130,7 @@ div.csl-indent {
 <meta name="citation_reference" content="citation_title=Speech intelligibility of pediatric cochlear implant recipients with 7 years of device experience;,citation_author=S. Peng;,citation_author=L. Spencer;,citation_author=J. Tomblin;,citation_publication_date=2004;,citation_cover_date=2004;,citation_year=2004;,citation_issue=6;,citation_doi=10.1044/1092-4388(2004/092);,citation_volume=47;,citation_journal_title=Journal of speech, language, and hearing research;">
 <meta name="citation_reference" content="citation_title=Generalized multilevel structural equation modeling;,citation_author=S. Rabe-Hesketh;,citation_author=A. Skrondal;,citation_author=A. Pickles;,citation_publication_date=2004;,citation_cover_date=2004;,citation_year=2004;,citation_issue=2;,citation_doi=10.1007/BF02295939;,citation_volume=69;,citation_journal_title=Psychometrika;">
 <meta name="citation_reference" content="citation_title=Maximum likelihood estimation of limited and discrete dependent variable models with nested random effects;,citation_author=S. Rabe-Hesketh;,citation_author=A. Skrondal;,citation_author=A. Pickles;,citation_publication_date=2004;,citation_cover_date=2004;,citation_year=2004;,citation_fulltext_html_url=http://www.sciencedirect.com/science/article/pii/S0304407604001599;,citation_issue=2;,citation_doi=https://www.doi.org/10.1016/j.jeconom.2004.08.017;,citation_volume=128;,citation_journal_title=Journal of Econometrics;">
+<meta name="citation_reference" content="citation_title=Marking university examinations: Some lessons from psychophysics;,citation_author=D. Laming;,citation_publication_date=2004;,citation_cover_date=2004;,citation_year=2004;,citation_issue=2;,citation_doi=10.2304/plat.2003.3.2.89;,citation_volume=3;,citation_journal_title=Psychology Learning &amp;amp;amp; Teaching;">
 <meta name="citation_reference" content="citation_title=Measuring the intelligibility of conversational speech in children;,citation_author=P. Flipsen;,citation_publication_date=2006;,citation_cover_date=2006;,citation_year=2006;,citation_issue=4;,citation_doi=10.1080/02699200400024863;,citation_volume=20;,citation_journal_title=Clinical Linguistics &amp;amp;amp; Phonetics;">
 <meta name="citation_reference" content="citation_title=How vague is vague? A simulation study of the impact of the use of vague prior distributions in MCMC using WinBUGS;,citation_author=P. Lambert;,citation_author=A. Sutton;,citation_author=P. Burton;,citation_author=K. Abrams;,citation_author=D. Jones;,citation_publication_date=2006;,citation_cover_date=2006;,citation_year=2006;,citation_issue=15;,citation_doi=10.1002/sim.2112;,citation_volume=24;,citation_journal_title=Journal of Statistics in Medicine;">
 <meta name="citation_reference" content="citation_title=Intelligibility of conversational speech produced by children with cochlear implants;,citation_author=P. Flipsen;,citation_author=L. Colvard;,citation_publication_date=2006;,citation_cover_date=2006;,citation_year=2006;,citation_fulltext_html_url=https://www.sciencedirect.com/science/article/pii/S0021992405000614;,citation_issue=2;,citation_doi=10.1016/j.jcomdis.2005.11.001;,citation_volume=39;,citation_journal_title=Journal of Communication Disorders;">
@@ -190,6 +192,7 @@ div.csl-indent {
 <meta name="citation_reference" content="citation_title=Long-term communication outcomes for children receiving cochlear implants younger than 12 months;,citation_author=S. Dettman;,citation_author=R. Dowell;,citation_author=D. Choo;,citation_author=W. Arnott;,citation_author=Y. Abrahams;,citation_author=A. Davis;,citation_author=D. Dornan;,citation_author=J. Leigh;,citation_author=G. Constantinescu;,citation_author=R. Cowan;,citation_author=R. Briggs;,citation_publication_date=2016;,citation_cover_date=2016;,citation_year=2016;,citation_issue=2;,citation_doi=10.1097/MAO.0000000000000915;,citation_volume=37;,citation_journal_title=Otology &amp;amp;amp; Neurotology;">
 <meta name="citation_reference" content="citation_title=Validity of comparative judgement to assess academic writing: Examining implications of its holistic character and building on a shared consensus;,citation_author=T. Daal;,citation_author=M. Lesterhuis;,citation_author=L. Coertjens;,citation_author=V. Donche;,citation_author=S. De Maeyer;,citation_publication_date=2016;,citation_cover_date=2016;,citation_year=2016;,citation_issue=1;,citation_doi=10.1080/0969594X.2016.1253542;,citation_volume=26;,citation_journal_title=Assessment in Education: Principles, Policy &amp;amp;amp; Practice;">
 <meta name="citation_reference" content="citation_title=runjags: An R package providing interface utilities, model templates, parallel computing methods and additional distributions for MCMC models in JAGS;,citation_author=M. Denwood;,citation_publication_date=2016;,citation_cover_date=2016;,citation_year=2016;,citation_issue=9;,citation_doi=10.18637/jss.v071.i09;,citation_volume=71;,citation_journal_title=Journal of Statistical Software;">
+<meta name="citation_reference" content="citation_title=Teksten beoordelen met criterialijsten of via paarsgewijze vergelijking: Een afweging van betrouwbaarheid en tijdsinvestering;,citation_author=L. Coertjens;,citation_author=M Lesterhuis;,citation_author=S. Verhavert;,citation_author=R. Van Gasse;,citation_author=S. De Maeyer;,citation_publication_date=2017;,citation_cover_date=2017;,citation_year=2017;,citation_fulltext_html_url=https://repository.uantwerpen.be/docman/irua/e71ea9/147930.pdf;,citation_volume=94;,citation_journal_title=Pedagogische Studien;">
 <meta name="citation_reference" content="citation_title=Beta regression for the indicator values of well-being index for provinces in turkey;,citation_author=H. Unlü;,citation_author=S. Aktas;,citation_publication_date=2017;,citation_cover_date=2017;,citation_year=2017;,citation_fulltext_html_url=https://dergipark.org.tr/en/pub/jetas/issue/31347/321165;,citation_issue=2;,citation_doi=10.30931/jetas.321165;,citation_volume=2;,citation_journal_title=Journal of Engineering Technology and Applied Sciences;">
 <meta name="citation_reference" content="citation_title=The complexity of assessing student work using comparative judgment: The moderating role of decision accuracy;,citation_author=T. Daal;,citation_author=M. Lesterhuis;,citation_author=L. Coertjens;,citation_author=MT. Kamp;,citation_author=V. Donche;,citation_author=Sven De Maeyer;,citation_publication_date=2017;,citation_cover_date=2017;,citation_year=2017;,citation_fulltext_html_url=https://www.frontiersin.org/articles/10.3389/feduc.2017.00044;,citation_doi=10.3389/feduc.2017.00044;,citation_volume=2;,citation_journal_title=Frontiers in Education;">
 <meta name="citation_reference" content="citation_title=Practical bayesian model evaluation using leave-one-out cross-validation and WAIC;,citation_author=A. Vehtari;,citation_author=A. Gelman;,citation_author=J. Gabry;,citation_publication_date=2017;,citation_cover_date=2017;,citation_year=2017;,citation_issue=5;,citation_doi=10.1007/s11222-016-9696-4;,citation_volume=27;,citation_journal_title=Statistics and Computing;">
@@ -223,6 +226,7 @@ div.csl-indent {
 <meta name="citation_reference" content="citation_title=The only thing that can stop bad causal inference is good causal inference;,citation_author=J. Rohrer;,citation_author=S. Schmukle;,citation_author=R. McElreath;,citation_publication_date=2021;,citation_cover_date=2021;,citation_year=2021;,citation_doi=10.31234/osf.io/mz5jx;,citation_journal_title=PsyArXiv;">
 <meta name="citation_reference" content="citation_title=The complexity of comparative judgments in assessing argumentative writing: An eye tracking study;,citation_author=M. Gijsen;,citation_author=T. Daal;,citation_author=Marije Lesterhuis;,citation_author=David Gijbels;,citation_author=Sven De Maeyer;,citation_publication_date=2021;,citation_cover_date=2021;,citation_year=2021;,citation_fulltext_html_url=url{https://www.frontiersin.org/articles/10.3389/feduc.2020.582800};,citation_doi=10.3389/feduc.2020.582800;,citation_volume=5;,citation_journal_title=Frontiers in Education;">
 <meta name="citation_reference" content="citation_title=Rank-Normalization, Folding, and Localization: An Improved $\widehat{R}$ for Assessing Convergence of MCMC (with Discussion);,citation_author=A. Vehtari;,citation_author=A. Gelman;,citation_author=D. Simpson;,citation_author=B Carpenter;,citation_author=PC. Bürkner;,citation_publication_date=2021;,citation_cover_date=2021;,citation_year=2021;,citation_issue=2;,citation_doi=10.1214/20-BA1221;,citation_volume=16;,citation_journal_title=Bayesian Analysis;,citation_publisher=International Society for Bayesian Analysis;">
+<meta name="citation_reference" content="citation_title=The accuracy and efficiency of a reference-based adaptive selection algorithm for comparative judgment;,citation_author=San Verhavert;,citation_author=Antony Furlong;,citation_author=Renske Bouwer;,citation_publication_date=2022;,citation_cover_date=2022;,citation_year=2022;,citation_fulltext_html_url=https://www.frontiersin.org/journals/education/articles/10.3389/feduc.2021.785919;,citation_doi=10.3389/feduc.2021.785919;,citation_volume=6;,citation_journal_title=Frontiers in Education;">
 <meta name="citation_reference" content="citation_title=Critiquing the rationales for using comparative judgement: A call for clarity;,citation_author=K. Kelly;,citation_author=M. Richardson;,citation_author=T. Isaacs;,citation_publication_date=2022;,citation_cover_date=2022;,citation_year=2022;,citation_issue=6;,citation_doi=10.1080/0969594X.2022.2147901;,citation_volume=29;,citation_journal_title=Assessment in Education: Principles, Policy &amp;amp;amp; Practice;,citation_publisher=Routledge;">
 <meta name="citation_reference" content="citation_title=Speech intelligibility of children with an auditory brainstem implant: A triple-case study;,citation_author=J. Faes;,citation_author=S. De Maeyer;,citation_author=S. Gillis;,citation_publication_date=2022;,citation_cover_date=2022;,citation_year=2022;,citation_issue=12;,citation_doi=10.1080/02699206.2021.1988148;,citation_volume=36;,citation_journal_title=Clinical Linguistics &amp;amp;amp; Phonetics;">
 <meta name="citation_reference" content="citation_title=Ten simple rules for principled simulation modelling;,citation_author=L. Fogarty;,citation_author=A. Madeleine;,citation_author=T. Holding;,citation_author=A. Powell;,citation_author=A. Kandler;,citation_publication_date=2022-03;,citation_cover_date=2022-03;,citation_year=2022;,citation_issue=3;,citation_doi=10.1371/journal.pcbi.1009917;,citation_volume=18;,citation_journal_title=PLOS Computational Biology;">
@@ -236,6 +240,7 @@ div.csl-indent {
 <meta name="citation_reference" content="citation_title=Meditation and cognitive outcomes: A longitudinal analysis using data from the health and retirement study 2000–2016;,citation_author=S. Lopes;,citation_author=L. Shi;,citation_author=X. Pan;,citation_author=Y. Gu;,citation_author=C. Dengler-Crish;,citation_author=Y. Yan Li;,citation_author=B. Tiwari;,citation_author=D. Zhang;,citation_publication_date=2023;,citation_cover_date=2023;,citation_year=2023;,citation_doi=10.1007/s12671-023-02165-w;,citation_volume=14;,citation_journal_title=Mindfulness;">
 <meta name="citation_reference" content="citation_title=Does trust mediate the relationship between experiences of discrimination and health care access and utilization among minoritized canadians during COVID-19 pandemic?;,citation_author=J. Kangmennaang;,citation_author=A. Siiba;,citation_author=E. Bisung;,citation_publication_date=2023;,citation_cover_date=2023;,citation_year=2023;,citation_doi=10.1007/s40615-023-01809-w;,citation_journal_title=Journal of Racial and Ethnic Health Disparities;">
 <meta name="citation_reference" content="citation_title=A comparison of covariate adjustment approaches under model misspecification in individually randomized trials;,citation_author=M. Tackney;,citation_author=T. Morris;,citation_author=I. White;,citation_author=C. Leyrat;,citation_author=K. Diaz-Ordaz;,citation_author=E. Williamson;,citation_publication_date=2023;,citation_cover_date=2023;,citation_year=2023;,citation_issue=14;,citation_doi=10.1186/s13063-022-06967-6;,citation_volume=24;,citation_journal_title=Trials;">
+<meta name="citation_reference" content="citation_title=A bayesian active learning approach to comparative judgement within education assessment;,citation_author=A. Gray;,citation_author=A Rahat;,citation_author=T. Crick;,citation_author=S. Lindsay;,citation_publication_date=2024;,citation_cover_date=2024;,citation_year=2024;,citation_fulltext_html_url=https://www.sciencedirect.com/science/article/pii/S2666920X24000481;,citation_doi=10.1016/j.caeai.2024.100245;,citation_volume=6;,citation_journal_title=Computers and Education: Artificial Intelligence;">
 <meta name="citation_reference" content="citation_title=Psychometric methods;,citation_author=J. Guilford;,citation_publication_date=1954;,citation_cover_date=1954;,citation_year=1954;,citation_isbn=9780070251298;">
 <meta name="citation_reference" content="citation_title=Frog, where are you?;,citation_author=M. Mayer;,citation_publication_date=1969;,citation_cover_date=1969;,citation_year=1969;,citation_fulltext_html_url=https://books.google.be/books?id=Asi5KQAACAAJ;,citation_isbn=9780803728813;,citation_series_title=Boy, a dog, and a frog;">
 <meta name="citation_reference" content="citation_title=Generalized linear models;,citation_author=P. McCullagh;,citation_author=J. Nelder;,citation_publication_date=1983;,citation_cover_date=1983;,citation_year=1983;,citation_doi=10.1201/9780203753736;,citation_isbn=9780203753736;,citation_series_title=Monographs on statistics and applied probability;">
@@ -274,6 +279,7 @@ div.csl-indent {
 <meta name="citation_reference" content="citation_title=The CHILDES project: Tools for analyzing talk;,citation_author=B. MacWhinney;,citation_publication_date=2020;,citation_cover_date=2020;,citation_year=2020;,citation_doi=10.21415/3mhn-0z89;">
 <meta name="citation_reference" content="citation_title=Bayesian structural equation modeling;,citation_author=S. Depaoli;,citation_publication_date=2021;,citation_cover_date=2021;,citation_year=2021;,citation_isbn=9781462547746;,citation_series_title=Methodology in the social sciences;">
 <meta name="citation_reference" content="citation_title=Handbook of structural equation modeling;,citation_author=R. (eds.) Hoyle;,citation_publication_date=2023;,citation_cover_date=2023;,citation_year=2023;,citation_isbn=9781462544646;">
+<meta name="citation_reference" content="citation_title=Principles and practice of structural equation modeling;,citation_author=R. Kline;,citation_publication_date=2023;,citation_cover_date=2023;,citation_year=2023;,citation_isbn=9781462551910;,citation_series_title=Methodology in the social sciences;">
 <meta name="citation_reference" content="citation_title=The validity of comparative judgement for assessing text quality: An assessor’s perspective;,citation_author=M. Lesterhuis;,citation_publication_date=2018;,citation_cover_date=2018;,citation_year=2018;,citation_dissertation_institution=University of Antwerp;">
 <meta name="citation_reference" content="citation_title=Beyond a mere rank order: The method, the reliability and the efficiency of comparative judgment;,citation_author=S. Verhavert;,citation_publication_date=2018;,citation_cover_date=2018;,citation_year=2018;,citation_dissertation_institution=University of Antwerp;">
 <meta name="citation_reference" content="citation_title=Making a choice is not easy?!: Unravelling the task difficulty of comparative judgement to assess student work;,citation_author=T. Daal;,citation_publication_date=2020;,citation_cover_date=2020;,citation_year=2020;,citation_dissertation_institution=University of Antwerp;">
@@ -289,6 +295,10 @@ div.csl-indent {
 <meta name="citation_reference" content="citation_title=STEM skill assessment: An application of adaptive comparative judgment;,citation_author=S. Bartholomew;,citation_author=P. Williams;,citation_editor=J. Anderson;,citation_editor=Y. Li;,citation_publication_date=2020;,citation_cover_date=2020;,citation_year=2020;,citation_doi=10.1007/978-3-030-52229-2_18;,citation_inbook_title=Integrated approaches to STEM education. Advances in STEM education;">
 <meta name="citation_reference" content="citation_title=Investigating early pre-implant predictors of language and cognitive development in children with cochlear implants;,citation_author=M. Fagan;,citation_author=L. Eisenberg;,citation_author=K. Johnson;,citation_editor=M. Marschark;,citation_editor=H. Knoors;,citation_publication_date=2020;,citation_cover_date=2020;,citation_year=2020;,citation_doi=10.1093/oxfordhb/9780190054045.013.3;,citation_inbook_title=Oxford handbook of deaf studies in learning and cognition;">
 <meta name="citation_reference" content="citation_title=Causal Models;,citation_author=C. Hitchcock;,citation_editor=Edward N. Zalta;,citation_editor=Uri Nodelman;,citation_publication_date=2024;,citation_cover_date=2024;,citation_year=2024;,citation_fulltext_html_url=https://plato.stanford.edu/archives/spr2023/entries/causal-models/;,citation_inbook_title=The Stanford encyclopedia of philosophy;">
+<meta name="citation_reference" content="citation_title=Let’s stop marking exams;,citation_author=A. Pollitt;,citation_publication_date=2004;,citation_cover_date=2004;,citation_year=2004;,citation_fulltext_html_url=https://www.cambridgeassessment.org.uk/images/109719-let-s-stop-marking-exams.pdf;,citation_conference_title=Proceedings of the IAEA conference;,citation_conference=University of Cambridge Local Examinations Syndicate;">
+<meta name="citation_reference" content="citation_title=How to obtain efficient high reliabilities in assessing texts: Rubrics vs comparative judgement;,citation_author=M. Goossens;,citation_author=S. De Maeyer;,citation_editor=E. Ras;,citation_editor=A. Guerrero Roldán;,citation_publication_date=2018;,citation_cover_date=2018;,citation_year=2018;,citation_doi=10.1007/978-3-319-97807-9_2;,citation_conference_title=Technology enhanced assessment;,citation_conference=Springer International Publishing;">
+<meta name="citation_reference" content="citation_title=Active sampling for pairwise comparisons via approximate message passing and information gain maximization;,citation_author=A. Mikhailiuk;,citation_author=C. Wilmot;,citation_author=M. Perez-Ortiz;,citation_author=D. Yue;,citation_author=R. Mantiuk;,citation_publication_date=2021;,citation_cover_date=2021;,citation_year=2021;,citation_doi=10.1109/ICPR48806.2021.9412676;,citation_conference_title=2020 25th international conference on pattern recognition (ICPR);">
+<meta name="citation_reference" content="citation_title=Predicting initial essay quality scores to increase the efficiency of comparative judgment assessments;,citation_author=M. De Vrindt;,citation_author=A. Tack;,citation_author=R. Bouwer;,citation_author=W. Van Den Noortgate;,citation_author=M. Lesterhuis;,citation_publication_date=2024;,citation_cover_date=2024;,citation_year=2024;,citation_fulltext_html_url=https://aclanthology.org/2024.bea-1.12.pdf;,citation_conference_title=Proceedings of the 19th workshop on innovative use of NLP for building educational applications;,citation_conference=Association for Computational Linguistics; Association for Computational Linguistics;">
 <meta name="citation_reference" content="citation_title=Reliability, separation, strata statistics;,citation_author=W. Fisher;,citation_publication_date=1992;,citation_cover_date=1992;,citation_year=1992;,citation_fulltext_html_url=https://rasch.org/rmt/rmt63i.htm;">
 <meta name="citation_reference" content="citation_title=Reliability and separation;,citation_author=B. Wright;,citation_publication_date=1996;,citation_cover_date=1996;,citation_year=1996;,citation_fulltext_html_url=https://rasch.org/rmt/rmt63i.htm;">
 <meta name="citation_reference" content="citation_title=Accuracy of parameter estimation in gibbs sampling under the two-parameter logistic model;,citation_author=S. Kim;,citation_author=A. Cohen;,citation_publication_date=1999;,citation_cover_date=1999;,citation_year=1999;,citation_fulltext_html_url=https://eric.ed.gov/?id=ED430012;">
@@ -332,7 +342,7 @@ div.csl-indent {
 <header id="title-block-header" class="quarto-title-block default toc-left page-columns page-full">
   <div class="quarto-title-banner page-columns page-full">
     <div class="quarto-title column-body">
-      <h1 class="title">Causes and effects in Dichotomous Comparative Judgments: an information-theoretical system of plausible mechanism</h1>
+      <h1 class="title">Let’s talk about Thurstone &amp; Co.: An information-theoretical model for comparative judgments, and its statistical translation</h1>
           </div>
 
     
@@ -382,7 +392,7 @@ div.csl-indent {
                 <div>
             <div class="quarto-title-meta-heading">Published</div>
             <div class="quarto-title-meta-contents">
-              <p class="date">October 18, 2024</p>
+              <p class="date">October 22, 2024</p>
             </div>
           </div>
           
@@ -416,13 +426,16 @@ div.csl-indent {
    
   <ul>
   <li><a href="#sec-introduction" id="toc-sec-introduction" class="nav-link active" data-scroll-target="#sec-introduction"><span class="header-section-number">1</span> Introduction</a></li>
-  <li><a href="#sec-theory-thurstone" id="toc-sec-theory-thurstone" class="nav-link" data-scroll-target="#sec-theory-thurstone"><span class="header-section-number">2</span> Let’s talk about Thurstone co.</a>
+  <li><a href="#sec-theory-issues" id="toc-sec-theory-issues" class="nav-link" data-scroll-target="#sec-theory-issues"><span class="header-section-number">2</span> Overlooked issues in CJ literature</a>
   <ul class="collapse">
-  <li><a href="#the-disconect-between-structural-and-measurement-model" id="toc-the-disconect-between-structural-and-measurement-model" class="nav-link" data-scroll-target="#the-disconect-between-structural-and-measurement-model"><span class="header-section-number">2.1</span> The disconect between structural and measurement model</a></li>
+  <li><a href="#the-disconnect-between-structural-and-measurement-model" id="toc-the-disconnect-between-structural-and-measurement-model" class="nav-link" data-scroll-target="#the-disconnect-between-structural-and-measurement-model"><span class="header-section-number">2.1</span> The disconnect between structural and measurement model</a></li>
+  <li><a href="#case-5-and-the-measurement-model" id="toc-case-5-and-the-measurement-model" class="nav-link" data-scroll-target="#case-5-and-the-measurement-model"><span class="header-section-number">2.2</span> Case 5 and the measurement model</a></li>
+  <li><a href="#the-efficiency-and-reliability-of-comparison-algorithms" id="toc-the-efficiency-and-reliability-of-comparison-algorithms" class="nav-link" data-scroll-target="#the-efficiency-and-reliability-of-comparison-algorithms"><span class="header-section-number">2.3</span> The efficiency and reliability of comparison algorithms</a></li>
+  <li><a href="#what-is-the-solution" id="toc-what-is-the-solution" class="nav-link" data-scroll-target="#what-is-the-solution"><span class="header-section-number">2.4</span> What is the solution</a></li>
   </ul></li>
   <li><a href="#sec-theory" id="toc-sec-theory" class="nav-link" data-scroll-target="#sec-theory"><span class="header-section-number">3</span> Theory</a>
   <ul class="collapse">
-  <li><a href="#sec-theory-scientific" id="toc-sec-theory-scientific" class="nav-link" data-scroll-target="#sec-theory-scientific"><span class="header-section-number">3.1</span> A scientific model for the CJ</a></li>
+  <li><a href="#sec-theory-scientific" id="toc-sec-theory-scientific" class="nav-link" data-scroll-target="#sec-theory-scientific"><span class="header-section-number">3.1</span> A theoretical model for the CJ</a></li>
   <li><a href="#sec-theory-statmodel" id="toc-sec-theory-statmodel" class="nav-link" data-scroll-target="#sec-theory-statmodel"><span class="header-section-number">3.2</span> From theory to statistical model</a></li>
   </ul></li>
   <li><a href="#sec-discuss" id="toc-sec-discuss" class="nav-link" data-scroll-target="#sec-discuss"><span class="header-section-number">4</span> Discussion</a>
@@ -450,49 +463,38 @@ div.csl-indent {
 
 <section id="sec-introduction" class="level1" data-number="1">
 <h1 data-number="1"><span class="header-section-number">1</span> Introduction</h1>
-<!-- recording -->
+<!-- recording 1 -->
 <!-- Part 1; 00:00:00 - 00:09:10 -->
-<!-- Part 2; 00:14:30 - 00:21:00 -->
+<!-- recording 2 -->
+<!-- Part 2; 00:00:00 - 00:17:30 -->
 <!-- 1. Where are we now with DCJ? -->
-<!-- Notes: -->
-<!-- - In the past decade there has been a growing number of studies that document and analyze the merits of DCJ as an assessment tool. Define a bit DCJ. -->
-<!-- - It has been a growing field, where people has tested some important aspects of the method. In general, is an iterative process. People are iterating on particular aspects of the method, such as: -->
-<!-- a. issues within the method as such, critical analyze some aspect of the method -->
-<!-- b. practical use of the method, generate scores with the BTL, and use this scores with some hypotheses, or descriptions. -->
-<p>Over the past decade, numerous studies have documented the effectiveness of the <em>comparative judgment</em> (CJ) method <span class="citation" data-cites="Thurstone_1927">(<a href="#ref-Thurstone_1927" role="doc-biblioref">Thurstone 1927</a>)</span> for assessing competencies and traits. These studies have evaluated CJ from two main perspectives: its ability to produce reliable and valid trait scores, and its practical applicability. Research on reliability and validity has shown that CJ can generate precise and consistent scores <span class="citation" data-cites="Pollitt_2012a Pollitt_2012b Bramley_et_al_2019 Verhavert_et_al_2019 Crompvoets_et_al_2022 Bouwer_et_al_2023">(<a href="#ref-Pollitt_2012a" role="doc-biblioref">Pollitt 2012a</a>, <a href="#ref-Pollitt_2012b" role="doc-biblioref">2012b</a>; <a href="#ref-Bramley_et_al_2019" role="doc-biblioref">Bramley and Vitello 2019</a>; <a href="#ref-Verhavert_et_al_2019" role="doc-biblioref">Verhavert et al. 2019</a>; <a href="#ref-Crompvoets_et_al_2022" role="doc-biblioref">Crompvoets, Béguin, and Sijtsma 2022</a>; <a href="#ref-Bouwer_et_al_2023" role="doc-biblioref">Bouwer et al. 2023</a>)</span> that accurately represent the traits being measured <span class="citation" data-cites="Whitehouse_2012 vanDaal_et_al_2016 Lesterhuis_2018">(<a href="#ref-Whitehouse_2012" role="doc-biblioref">Whitehouse 2012</a>; <a href="#ref-vanDaal_et_al_2016" role="doc-biblioref">van Daal et al. 2016</a>; <a href="#ref-Lesterhuis_2018" role="doc-biblioref">Lesterhuis 2018</a>)</span>. Regarding practical applicability, several studies have highlighted CJ’s versatility across both educational and non-educational contexts, presenting it as an efficient and effective alternative for measurement and evaluation <span class="citation" data-cites="Jones_2015 Bartholomew_et_al_2018 Jones_et_al_2019 Marshall_et_al_2020 Bartholomew_et_al_2020 Boonen_et_al_2020">(<a href="#ref-Jones_2015" role="doc-biblioref">Jones 2015</a>; <a href="#ref-Bartholomew_et_al_2018" role="doc-biblioref">Bartholomew et al. 2018</a>; <a href="#ref-Jones_et_al_2019" role="doc-biblioref">Jones et al. 2019</a>; <a href="#ref-Marshall_et_al_2020" role="doc-biblioref">Marshall et al. 2020</a>; <a href="#ref-Bartholomew_et_al_2020" role="doc-biblioref">Bartholomew and Williams 2020</a>; <a href="#ref-Boonen_et_al_2020" role="doc-biblioref">Boonen, Kloots, and Gillis 2020</a>)</span>.</p>
+<p>Over the past decade, numerous studies have documented the effectiveness of the <em>comparative judgment</em> (CJ) method <span class="citation" data-cites="Thurstone_1927">(<a href="#ref-Thurstone_1927" role="doc-biblioref">Thurstone 1927</a>)</span> for assessing competencies and traits. These studies have evaluated CJ from three main perspectives: its ability to produce reliable and valid trait scores, its practical applicability, and its time efficiency. Research on reliability and validity shows that CJ can generate precise and consistent scores <span class="citation" data-cites="Pollitt_2012a Pollitt_2012b Coertjens_et_al_2017 Goossens_et_al_2018 Verhavert_et_al_2019 Crompvoets_et_al_2022 Bouwer_et_al_2023">(<a href="#ref-Pollitt_2012a" role="doc-biblioref">Pollitt 2012a</a>, <a href="#ref-Pollitt_2012b" role="doc-biblioref">2012b</a>; <a href="#ref-Coertjens_et_al_2017" role="doc-biblioref">Coertjens et al. 2017</a>; <a href="#ref-Goossens_et_al_2018" role="doc-biblioref">Goossens and De Maeyer 2018</a>; <a href="#ref-Verhavert_et_al_2019" role="doc-biblioref">Verhavert et al. 2019</a>; <a href="#ref-Crompvoets_et_al_2022" role="doc-biblioref">Crompvoets, Béguin, and Sijtsma 2022</a>; <a href="#ref-Bouwer_et_al_2023" role="doc-biblioref">Bouwer et al. 2023</a>)</span> that accurately represent the traits being measured <span class="citation" data-cites="Whitehouse_2012 vanDaal_et_al_2016 Lesterhuis_2018 Bouwer_et_al_2023">(<a href="#ref-Whitehouse_2012" role="doc-biblioref">Whitehouse 2012</a>; <a href="#ref-vanDaal_et_al_2016" role="doc-biblioref">van Daal et al. 2016</a>; <a href="#ref-Lesterhuis_2018" role="doc-biblioref">Lesterhuis 2018</a>; <a href="#ref-Bouwer_et_al_2023" role="doc-biblioref">Bouwer et al. 2023</a>)</span>. Research on practical applicability highlights CJ’s versatility across both educational and non-educational contexts, presenting it as an efficient and effective alternative for measurement and evaluation <span class="citation" data-cites="Pollitt_2004 Jones_2015 Bartholomew_et_al_2018 Jones_et_al_2019 Marshall_et_al_2020 Bartholomew_et_al_2020 Boonen_et_al_2020">(<a href="#ref-Pollitt_2004" role="doc-biblioref">Pollitt 2004</a>; <a href="#ref-Jones_2015" role="doc-biblioref">Jones 2015</a>; <a href="#ref-Bartholomew_et_al_2018" role="doc-biblioref">Bartholomew et al. 2018</a>; <a href="#ref-Jones_et_al_2019" role="doc-biblioref">Jones et al. 2019</a>; <a href="#ref-Marshall_et_al_2020" role="doc-biblioref">Marshall et al. 2020</a>; <a href="#ref-Bartholomew_et_al_2020" role="doc-biblioref">Bartholomew and Williams 2020</a>; <a href="#ref-Boonen_et_al_2020" role="doc-biblioref">Boonen, Kloots, and Gillis 2020</a>)</span>. Lastly, research on time efficiency suggests that CJ can offer at least equal, if not significant, time savings when evaluating stimuli compared to traditional marking methods <span class="citation" data-cites="Pollitt_2012a Pollitt_2012b Coertjens_et_al_2017 Goossens_et_al_2018">(<a href="#ref-Pollitt_2012a" role="doc-biblioref">Pollitt 2012a</a>, <a href="#ref-Pollitt_2012b" role="doc-biblioref">2012b</a>; <a href="#ref-Coertjens_et_al_2017" role="doc-biblioref">Coertjens et al. 2017</a>; <a href="#ref-Goossens_et_al_2018" role="doc-biblioref">Goossens and De Maeyer 2018</a>)</span>.</p>
 <!-- 2. But what are the problems of DCJ as a method? -->
-<!-- Notes:  -->
-<!-- - But what it is the problem with this way of using DCJ (just one paragraph) -->
-<!-- a. measurement model is based on case V -->
-<!--   a.1 It does not consider the effects of judges (different perceptions per stimuli) -->
-<!--   a.2 It does not consider that stimuli may be nested in individuals -->
-<!-- b. in all literature there is a disconnection between measurement model and the structural part (common practical use) -->
-<!-- c. what about the experimental design?, what are the implications of certain comparison algorithms? -->
-<p>Nevertheless, despite the growing number of CJ studies, the unsystematic and fragmented research approaches employed in the literature have overlooked several critical issues concerning the method. These issues fall into three main categories: concerns about the structural model, the measurement model, and the experimental design of CJ. In the following sections, each issue will be discussed in detail, followed by the introduction of an approach that addresses all three concerns simultaneously.</p>
+<p>Nevertheless, despite the growing number of CJ studies, the unsystematic and fragmented research approaches employed in the literature have overlooked several critical issues concerning the method. These issues fall into three main categories: the disconnect between CJ’s structural and measurement model, the over-reliance on Thurstone’s Case 5 <span class="citation" data-cites="Thurstone_1927">(<a href="#ref-Thurstone_1927" role="doc-biblioref">1927</a>)</span> in its measurement model, and the role of the comparison algorithms and the number of comparisons on the method’s reliability and validity. In the following sections, each issue will be discussed in detail, followed by the introduction of a theoretical model and its translation into a statistical model that addresses all three concerns simultaneously.</p>
 </section>
-<section id="sec-theory-thurstone" class="level1" data-number="2">
-<h1 data-number="2"><span class="header-section-number">2</span> Let’s talk about Thurstone co.</h1>
-<!-- Notes: -->
-<!-- - But what it is the problem with this way of using DCJ (just one paragraph) -->
+<section id="sec-theory-issues" class="level1" data-number="2">
+<h1 data-number="2"><span class="header-section-number">2</span> Overlooked issues in CJ literature</h1>
+<section id="the-disconnect-between-structural-and-measurement-model" class="level2" data-number="2.1">
+<h2 data-number="2.1" class="anchored" data-anchor-id="the-disconnect-between-structural-and-measurement-model"><span class="header-section-number">2.1</span> The disconnect between structural and measurement model</h2>
+<!-- 1. The BTL model is CJ's measurement model -->
+<p>In the CJ literature, the Bradley-Terry-Luce (BTL) model <span class="citation" data-cites="Bradley_et_al_1952 Luce_1959">(<a href="#ref-Bradley_et_al_1952" role="doc-biblioref">Bradley and Terry 1952</a>; <a href="#ref-Luce_1959" role="doc-biblioref">Luce 1959</a>)</span> serves as the measurement model for CJ because it specifies how latent variables are estimated from observed ones <span class="citation" data-cites="Hoyle_et_al_2023 Kline_et_al_2023">(<a href="#ref-Hoyle_et_al_2023" role="doc-biblioref">Hoyle 2023</a>; <a href="#ref-Kline_et_al_2023" role="doc-biblioref">Kline 2023</a>)</span>. In a CJ study, multiple judges conduct several rounds of pairwise comparisons to evaluate the relative manifestation of a trait between a pair of stimuli. This evaluation results in a dichotomous outcome that indicates which stimulus is perceived to exhibit a higher degree of the trait. The BTL model then uses these observed outcomes to estimate scores that represent the latent trait of interest <span class="citation" data-cites="Pollitt_2012a Pollitt_2012b Whitehouse_2012 Jones_2015 vanDaal_et_al_2016 Lesterhuis_2018 Boonen_et_al_2020 Bouwer_et_al_2023">(<a href="#ref-Pollitt_2012a" role="doc-biblioref">Pollitt 2012a</a>, <a href="#ref-Pollitt_2012b" role="doc-biblioref">2012b</a>; <a href="#ref-Whitehouse_2012" role="doc-biblioref">Whitehouse 2012</a>; <a href="#ref-Jones_2015" role="doc-biblioref">Jones 2015</a>; <a href="#ref-vanDaal_et_al_2016" role="doc-biblioref">van Daal et al. 2016</a>; <a href="#ref-Lesterhuis_2018" role="doc-biblioref">Lesterhuis 2018</a>; <a href="#ref-Boonen_et_al_2020" role="doc-biblioref">Boonen, Kloots, and Gillis 2020</a>; <a href="#ref-Bouwer_et_al_2023" role="doc-biblioref">Bouwer et al. 2023</a>)</span>.</p>
+<!-- 2. But there is no structural model, only post estimation analyses -->
+<p>Moreover, in the CJ literature, it is common practice for BTL-generated scores, or their transformations, to undergo additional data analysis and hypothesis testing. Researchers have utilized these scores in independent analyses to identify ‘misfit’ judges and stimuli <span class="citation" data-cites="Pollitt_2012b vanDaal_et_al_2017 Goossens_et_al_2018">(<a href="#ref-Pollitt_2012b" role="doc-biblioref">Pollitt 2012b</a>; <a href="#ref-vanDaal_et_al_2017" role="doc-biblioref">van Daal et al. 2017</a>; <a href="#ref-Goossens_et_al_2018" role="doc-biblioref">Goossens and De Maeyer 2018</a>)</span>, detect biases in judges’ ratings <span class="citation" data-cites="Pollitt_et_al_2003 Pollitt_2012b">(<a href="#ref-Pollitt_et_al_2003" role="doc-biblioref">Pollitt and Elliott 2003</a>; <a href="#ref-Pollitt_2012b" role="doc-biblioref">Pollitt 2012b</a>)</span>, calculate correlations with other scoring methods <span class="citation" data-cites="Goossens_et_al_2018 Bouwer_et_al_2023">(<a href="#ref-Goossens_et_al_2018" role="doc-biblioref">Goossens and De Maeyer 2018</a>; <a href="#ref-Bouwer_et_al_2023" role="doc-biblioref">Bouwer et al. 2023</a>)</span>, or test hypotheses related to the trait of interest <span class="citation" data-cites="Bramley_et_al_2019 Boonen_et_al_2020 Bouwer_et_al_2023 vanDaal_et_al_2017 Jones_et_al_2019 Gijsen_et_al_2021">(<a href="#ref-Bramley_et_al_2019" role="doc-biblioref">Bramley and Vitello 2019</a>; <a href="#ref-Boonen_et_al_2020" role="doc-biblioref">Boonen, Kloots, and Gillis 2020</a>; <a href="#ref-Bouwer_et_al_2023" role="doc-biblioref">Bouwer et al. 2023</a>; <a href="#ref-vanDaal_et_al_2017" role="doc-biblioref">van Daal et al. 2017</a>; <a href="#ref-Jones_et_al_2019" role="doc-biblioref">Jones et al. 2019</a>; <a href="#ref-Gijsen_et_al_2021" role="doc-biblioref">Gijsen et al. 2021</a>)</span>.</p>
+<!-- 3. But what is the problem with this? -->
+<!-- However, the statistical literature cautions when using estimated scores for further independent data analysis and hypothesis testing. Since BTL-generated scores are parameter estimates that carry inherent uncertainty, separating the subsequent analyses from this uncertainty may lead to an artificial inflation of the precision and power of the analyses and tests. Consequently, this practice could increase the risk of committing a type I error, wherein a null hypothesis is incorrectly rejected [@McElreath_2020]. An appropriate approach to address this issue, consistent with the principles of Structural Equation Modeling (SEM) [@Hoyle_et_al_2023; @Kline_et_al_2023], is that these analyses should be conducted at the structural level rather than as independent analyses. Consequently, an approach that integrates the structural and measurement model should be followed. -->
+<!-- However, there is often a lack of integration between the structural model, which captures the relationships among the variables, and the measurement model, which generates the CJ scores. This disconnect can lead to inaccurate inferences about the traits being measured. -->
+</section>
+<section id="case-5-and-the-measurement-model" class="level2" data-number="2.2">
+<h2 data-number="2.2" class="anchored" data-anchor-id="case-5-and-the-measurement-model"><span class="header-section-number">2.2</span> Case 5 and the measurement model</h2>
+<!-- Measurement model -->
 <!-- a. measurement model is based on case V -->
 <!--   a.1 It does not consider the effects of judges (different perceptions per stimuli) -->
 <!--   a.2 It does not consider that stimuli may be nested in individuals -->
-<!-- b. in all literature there is a disconnection between measurement model and the structural part (common practical use) -->
-<!-- c. what about the experimental design?, what are the implications of certain comparison algorithms? -->
-<!-- Use the SEM description of measurement model and structural model. -->
-<section id="the-disconect-between-structural-and-measurement-model" class="level2" data-number="2.1">
-<h2 data-number="2.1" class="anchored" data-anchor-id="the-disconect-between-structural-and-measurement-model"><span class="header-section-number">2.1</span> The disconect between structural and measurement model</h2>
-<!-- Structural model -->
-<!-- Regarding this, it is apparent that in all literature there is a disconnection between measurement model and the structural part, where hypothesis and summaries are performed. -->
-<!-- The current literature estimates the CJ scores to later used them into other analysis, such as investigating bias and misfits among judges, or for the comparison of groups of individuals. This ignores measurement error. -->
-<p>A key issue in the first category is the apparent disconnect between the method’s structural and measurement models. In CJ literature, it is common to perform data analysis and hypothesis testing on scores estimated using the Bradley-Terry-Luce (BTL) model <span class="citation" data-cites="Bradley_et_al_1952 Luce_1959">(<a href="#ref-Bradley_et_al_1952" role="doc-biblioref">Bradley and Terry 1952</a>; <a href="#ref-Luce_1959" role="doc-biblioref">Luce 1959</a>)</span>. Several studies use the scores generated by the BTL model or their transformations to identify ‘misfit’ judges and stimuli <span class="citation" data-cites="Pollitt_2012b vanDaal_et_al_2017">(<a href="#ref-Pollitt_2012b" role="doc-biblioref">Pollitt 2012b</a>; <a href="#ref-vanDaal_et_al_2017" role="doc-biblioref">van Daal et al. 2017</a>)</span>, detect ‘bias’ in judges’ ratings <span class="citation" data-cites="Pollitt_et_al_2003 Pollitt_2012b">(<a href="#ref-Pollitt_et_al_2003" role="doc-biblioref">Pollitt and Elliott 2003</a>; <a href="#ref-Pollitt_2012b" role="doc-biblioref">Pollitt 2012b</a>)</span>, or test various hypotheses about the underlying trait being measured <span class="citation" data-cites="Bramley_et_al_2019 Boonen_et_al_2020 Bouwer_et_al_2023 vanDaal_et_al_2017 Jones_et_al_2019 Gijsen_et_al_2021">(<a href="#ref-Bramley_et_al_2019" role="doc-biblioref">Bramley and Vitello 2019</a>; <a href="#ref-Boonen_et_al_2020" role="doc-biblioref">Boonen, Kloots, and Gillis 2020</a>; <a href="#ref-Bouwer_et_al_2023" role="doc-biblioref">Bouwer et al. 2023</a>; <a href="#ref-vanDaal_et_al_2017" role="doc-biblioref">van Daal et al. 2017</a>; <a href="#ref-Jones_et_al_2019" role="doc-biblioref">Jones et al. 2019</a>; <a href="#ref-Gijsen_et_al_2021" role="doc-biblioref">Gijsen et al. 2021</a>)</span>. In the motivating example, …</p>
-<p>However, since these scores are parameter estimates with inherent uncertainty, the statistical literature suggests that separating the analysis from this uncertainty may artificially inflate the precision and power of the results. This, in turn, could increase the risk of committing a type I error, where a null hypothesis is wrongly rejected <span class="citation" data-cites="McElreath_2020">(<a href="#ref-McElreath_2020" role="doc-biblioref">McElreath 2020</a>)</span>. In the motivating example</p>
-<p>To address this issue properly, the approach should follow a strategy similar to that used in Structural Equation Modeling (SEM), where data analysis and hypothesis testing occur at the structural model level, while the BTL model functions as the measurement model.</p>
-<!-- Measurement model -->
 <!-- @Thurstone_1927 justify the use of case V, on multiple assumptions, but the most important for our purpose are three:  -->
 <!-- (a) related to Case 3, it assumes the correlation between stimuli is zero, this translates into the cancellation of judges effects by mean of opposing and equally weigthed 'mood' and 'simultaneous contrasts' effects. This is demonstrated using the additivive nature of the logit scale, which helps to cancel 'bias' judges effects. -->
-<!-- This is the case of confounding, and @Andrich_1978 already showed that if judges effects are parametrized, it gets eliminated experimentally in the paired comparison method.  -->
+<!-- This is the case of confounding, and @Andrich_1978; @Wainer_et_al_1978 already showed that if judges effects are parametrized, it gets eliminated experimentally in the paired comparison method.  -->
 <!-- possibility of bias is hinted in @Bramley_2008, and later mentioned again in @Kelly_et_al_2022, and some evidence is found in @Pollitt_et_al_2003, @Arlett_2003, @Guthrie_2003, @vanDaal_et_al_2017 and @Gijsen_et_al_2021 -->
+<!-- @Pollitt_et_al_2003 In Thurstone’s method each judge’s standard cancels out when a comparison is made, and any misfit between data and model must indicate a difference of some other kind. This is studied by analysing the residuals that remain after the model is fitted to the data. Whenever one script is judged to have a higher value than a competing one it is expected to ‘win’ the comparison: if it does the residual will be small, but if it loses then the residual for that judge’s comparison of those two scripts will be large. Any patterns of large residuals will indicate some sort of bias – in this context bias simply means a source of systematic, rather than random, variability. indicates that one judge – Judge 5 – is significantly biased in some way. (Consider the problem of using adhoc methods) -->
 <!-- Reliability is a necessary but not sufficient condition for validity. Reliability can exist without validity but validity cannot exist without reliability [@Perron_et_al_2015]. -->
 <!-- (b) related to Case 3, it assumes the correlation between stimuli is zero, this also translates into the idea that stimuli are the main focus of estimation and analysis, but what happens when the focus of analysis is the individuals that generated those stimuli. There is an amount of correlation that it is not accounted for.  -->
 <!-- This is the case of clustering or measurement error, and overlooking issues such as clustering and measurement error can lead to biased and less precise parameter estimates [@McElreath_2020], ultimately diminishing the statistical power of models and increasing the likelihood of committing type I or type II errors when addressing research inquiries.  -->
@@ -502,10 +504,27 @@ div.csl-indent {
 <!-- Moreover, a notable concern in the second category is the measurement model's reliance on the assumptions of Case 5 from Thurstone's law of comparative judgment [-@Thurstone_1927]. As noted, it is common practice in the literature to use the BTL model as a means of generating CJ scores, serving as the measurement model. -->
 <!-- Since the study by @Bramley_2008, it has been clear that the BTL model represents a statistical articulation of Case 5. -->
 <!-- Although Case 5 was originally articulated to produce a "rather coarse scaling" of traits [@Thurstone_1927, p. 269], its assumptions have become predominant in the literature due to its implementation through the Bradley-Terry-Luce (BTL) model [@Bradley_et_al_1952; @Luce_1959]. This leaves issues such as the presence of judge' biases hinted by @Bramley_2008 and @Kelly_et_al_2022, and evidenced by @Pollitt_et_al_2003, @Arlett_2003, and @Guthrie_2003 -->
+<!-- All studies use SSR as a measure of reliability -->
+</section>
+<section id="the-efficiency-and-reliability-of-comparison-algorithms" class="level2" data-number="2.3">
+<h2 data-number="2.3" class="anchored" data-anchor-id="the-efficiency-and-reliability-of-comparison-algorithms"><span class="header-section-number">2.3</span> The efficiency and reliability of comparison algorithms</h2>
 <!-- Experimental design -->
 <!-- In this regard, although the literature has tested multiple features of the experimental design of the method, such as the comparison algorithm and the number of comparisons, it is not clear where this procedures fit in the whole process of comparison, and what are their implications for the outcome of the method. -->
-<!-- present the evidence of bias effects of adaptive algorithms, the not clear view of how many comparisons per (sub)units are required. Adhoc rules of thumb. -->
+<!-- @Bramley_et_al_2019 and @Bramley_2015 says adaptivity inflates reliability. present the evidence of bias effects of adaptive algorithms, the not clear view of how many comparisons per (sub)units are required. Adhoc rules of thumb. -->
+<!-- @Gray_et_al_2024 entropy-driven active learning pair-selection algorithm to compare stimuli, vs random and no repeating pairs -->
+<!-- @DeVrindt_et_al_2024 cold start problem to optimize time efficiency. -->
+<!-- @Mikhailiuk_et_al_2021 proposed a fully Bayesian active sampling strategy for pairwise comparisons via Approximate Message Passing and Information Gain Maximization. ASAP computes the full posterior distribution, which is crucial to achieving accurate EIG estimates, and thus the accuracy of active sampling. We recommend ASAP, as it offered the highest accuracy of inferred scores compared to existing methods in experiments with real and synthetic data. -->
+<!-- @Verhavert_et_al_2022 The current article proposes a new adaptive selection algorithm using a previously calibrated reference set. Using a reference set should eliminate the reliability inflation. It is proven that this adaptive selection algorithm is more efficient without reducing the accuracy of the results and without increasing the standard deviation of the assessment results. Akin to BIB designs and more specifically to BTIB designs  -->
 <!-- and issues related to the method's experimental design. These issues can affect the method's reliability, validity, and practical applicability. -->
+<!-- @Coertjens_et_al_2017 assess reliability and time investment. We conclude that pairwise comparison requires a similar time investment from evaluators as the criterion list method. We want to note that the outcomes in this study depend heavily on the design. First, the time taken for an assessment is strongly determined by the length of the criteria list used and the length of the texts (Breland, 1983). Not adaptive -->
+<!-- Although the process of pairwise comparisons is quite easy and fast for raters to apply (@Laming_2004; @Pollitt_2004), even without training, the increase in time investment that is needed for CJ decreases its feasibility in educational practice. -->
+<!-- Messick_1989 talks about efficiency and feasibility for application  -->
+<!-- @Bramley_2008 proposes ranking instead of comparisons -->
+<!-- talk about the number of comparisons @Verhavert_et_al_2019, @Crompvoets_et_al_2022, @Pollitt_2004 -->
+<!-- @Pollitt_2012b concludes that speed is not related to the quality of assessments in pairwise comparisons -->
+</section>
+<section id="what-is-the-solution" class="level2" data-number="2.4">
+<h2 data-number="2.4" class="anchored" data-anchor-id="what-is-the-solution"><span class="header-section-number">2.4</span> What is the solution</h2>
 <!-- 3. What is the solution? -->
 <!-- Notes:  -->
 <!-- - There is some gain on considering a more integrated overarching systematic way of looking on what happen in DCJ when people compare two stimuli -->
@@ -515,18 +534,21 @@ div.csl-indent {
 </section>
 <section id="sec-theory" class="level1" data-number="3">
 <h1 data-number="3"><span class="header-section-number">3</span> Theory</h1>
-<!-- 21:00 recording -->
+<!-- recording 1 -->
+<!-- Part 2; 00:14:30 - 00:21:00 -->
 <section id="sec-theory-scientific" class="level2" data-number="3.1">
-<h2 data-number="3.1" class="anchored" data-anchor-id="sec-theory-scientific"><span class="header-section-number">3.1</span> A scientific model for the CJ</h2>
+<h2 data-number="3.1" class="anchored" data-anchor-id="sec-theory-scientific"><span class="header-section-number">3.1</span> A theoretical model for the CJ</h2>
 </section>
 <section id="sec-theory-statmodel" class="level2" data-number="3.2">
 <h2 data-number="3.2" class="anchored" data-anchor-id="sec-theory-statmodel"><span class="header-section-number">3.2</span> From theory to statistical model</h2>
+<!-- @Pritikin_2020 and @Gray_et_al_2024 bayesian modeling attempts -->
 </section>
 </section>
 <section id="sec-discuss" class="level1" data-number="4">
 <h1 data-number="4"><span class="header-section-number">4</span> Discussion</h1>
 <section id="sec-discuss-finding" class="level2" data-number="4.1">
 <h2 data-number="4.1" class="anchored" data-anchor-id="sec-discuss-finding"><span class="header-section-number">4.1</span> Findings</h2>
+<!-- Pollitt (2012a) argues that assessors in pairwise comparisons need less training, given intuitive comparison and decision making. However, there is a distinct lack of research on the role of training.  -->
 </section>
 <section id="sec-discuss-limitations" class="level2" data-number="4.2">
 <h2 data-number="4.2" class="anchored" data-anchor-id="sec-discuss-limitations"><span class="header-section-number">4.2</span> Limitations and further research</h2>
@@ -561,17 +583,29 @@ Bradley, R., and M. Terry. 1952. <span>“Rank Analysis of Incomplete Block Desi
 <div id="ref-Bramley_et_al_2019" class="csl-entry" role="listitem">
 Bramley, T., and S. Vitello. 2019. <span>“The Effect of Adaptivity on the Reliability Coefficient in Adaptive Comparative Judgement.”</span> <em>Assessment in Education: Principles, Policy and Practice</em> 71 (9): 1–25. <a href="https://doi.org/10.1080/0969594X.2017.1418734">https://doi.org/10.1080/0969594X.2017.1418734</a>.
 </div>
+<div id="ref-Coertjens_et_al_2017" class="csl-entry" role="listitem">
+Coertjens, L., M Lesterhuis, S. Verhavert, R. Van Gasse, and S. De Maeyer. 2017. <span>“Teksten Beoordelen Met Criterialijsten of via Paarsgewijze Vergelijking: Een Afweging van Betrouwbaarheid En Tijdsinvestering.”</span> <em>Pedagogische Studien</em> 94: 283–303. <a href="https://repository.uantwerpen.be/docman/irua/e71ea9/147930.pdf">https://repository.uantwerpen.be/docman/irua/e71ea9/147930.pdf</a>.
+</div>
 <div id="ref-Crompvoets_et_al_2022" class="csl-entry" role="listitem">
 Crompvoets, Elise A. V., Anton A. Béguin, and Klaas Sijtsma. 2022. <span>“On the Bias and Stability of the Results of Comparative Judgment.”</span> <em>Frontiers in Education</em> 6. <a href="https://doi.org/10.3389/feduc.2021.788202">https://doi.org/10.3389/feduc.2021.788202</a>.
 </div>
 <div id="ref-Gijsen_et_al_2021" class="csl-entry" role="listitem">
 Gijsen, M., T. van Daal, Marije Lesterhuis, David Gijbels, and Sven De Maeyer. 2021. <span>“The Complexity of Comparative Judgments in Assessing Argumentative Writing: An Eye Tracking Study.”</span> <em>Frontiers in Education</em> 5. <a href="https://doi.org/10.3389/feduc.2020.582800">https://doi.org/10.3389/feduc.2020.582800</a>.
 </div>
+<div id="ref-Goossens_et_al_2018" class="csl-entry" role="listitem">
+Goossens, M., and S. De Maeyer. 2018. <span>“How to Obtain Efficient High Reliabilities in Assessing Texts: Rubrics Vs Comparative Judgement.”</span> In <em>Technology Enhanced Assessment</em>, edited by E. Ras and A. Guerrero Roldán, 13–25. Springer International Publishing. <a href="https://doi.org/10.1007/978-3-319-97807-9_2">https://doi.org/10.1007/978-3-319-97807-9_2</a>.
+</div>
+<div id="ref-Hoyle_et_al_2023" class="csl-entry" role="listitem">
+Hoyle, R. (eds.). 2023. <em><a href="">Handbook of Structural Equation Modeling</a></em>. Guilford Press.
+</div>
 <div id="ref-Jones_2015" class="csl-entry" role="listitem">
 Jones, I. 2015. <span>“The Problem of Assessing Problem Solving: Can Comparative Judgement Help?”</span> <em>Educational Studies in Mathematics</em> 89 (3): 337–55. <a href="https://doi.org/10.1007/s10649-015-9607-1">https://doi.org/10.1007/s10649-015-9607-1</a>.
 </div>
 <div id="ref-Jones_et_al_2019" class="csl-entry" role="listitem">
 Jones, I., M. Bisson, C. Gilmore, and M. Inglis. 2019. <span>“Measuring Conceptual Understanding in Randomised Controlled Trials: Can Comparative Judgement Help?”</span> <em>British Educational Research Journal</em> 45 (3): 662–80. <a href="https://doi.org/10.1002/berj.3519">https://doi.org/10.1002/berj.3519</a>.
+</div>
+<div id="ref-Kline_et_al_2023" class="csl-entry" role="listitem">
+Kline, R. 2023. <em><a href="">Principles and Practice of Structural Equation Modeling</a></em>. Methodology in the Social Sciences. Guilford Press.
 </div>
 <div id="ref-Lesterhuis_2018" class="csl-entry" role="listitem">
 Lesterhuis, M. 2018. <span>“The Validity of Comparative Judgement for Assessing Text Quality: An Assessor’s Perspective.”</span> PhD thesis, University of Antwerp.
@@ -582,11 +616,11 @@ Luce, R. 1959. <span>“On the Possible Psychophysical Laws.”</span> <em>The P
 <div id="ref-Marshall_et_al_2020" class="csl-entry" role="listitem">
 Marshall, N., K Shaw, J. Hunter, and I. Jones. 2020. <span>“Assessment by Comparative Judgement: An Application to Secondary Statistics and English in New Zealand.”</span> <em>New Zealand Journal of Educational Studies</em> 55: 49–71. <a href="https://doi.org/10.1007/s40841-020-00163-3">https://doi.org/10.1007/s40841-020-00163-3</a>.
 </div>
-<div id="ref-McElreath_2020" class="csl-entry" role="listitem">
-McElreath, R. 2020. <em><a href="">Statistical Rethinking: A Bayesian Course with Examples in r and STAN</a></em>. Chapman; Hall/CRC.
+<div id="ref-Pollitt_2004" class="csl-entry" role="listitem">
+Pollitt, A. 2004. <span>“Let’s Stop Marking Exams.”</span> In <em>Proceedings of the IAEA Conference</em>. Philadelphia: University of Cambridge Local Examinations Syndicate. <a href="https://www.cambridgeassessment.org.uk/images/109719-let-s-stop-marking-exams.pdf">https://www.cambridgeassessment.org.uk/images/109719-let-s-stop-marking-exams.pdf</a>.
 </div>
 <div id="ref-Pollitt_2012a" class="csl-entry" role="listitem">
-Pollitt, A. 2012a. <span>“Comparative Judgement for Assessment.”</span> <em>International Journal of Technology and Design Education</em> 22 (2): 157--170. <a href="https://doi.org/10.1007/s10798-011-9189-x">https://doi.org/10.1007/s10798-011-9189-x</a>.
+———. 2012a. <span>“Comparative Judgement for Assessment.”</span> <em>International Journal of Technology and Design Education</em> 22 (2): 157--170. <a href="https://doi.org/10.1007/s10798-011-9189-x">https://doi.org/10.1007/s10798-011-9189-x</a>.
 </div>
 <div id="ref-Pollitt_2012b" class="csl-entry" role="listitem">
 ———. 2012b. <span>“The Method of Adaptive Comparative Judgement.”</span> <em>Assessment in Education: Principles, Policy and Practice</em> 19 (3): 281--300. <a href="https://doi.org/10.1080/0969594X.2012.665354">https://doi.org/10.1080/0969594X.2012.665354</a>.
@@ -629,18 +663,18 @@ Whitehouse, C. 2012. <span>“Testing the Validity of Judgements about Geography
 </div></section><section class="quarto-appendix-contents" id="quarto-citation"><h2 class="anchored quarto-appendix-heading">Citation</h2><div><div class="quarto-appendix-secondary-label">BibTeX citation:</div><pre class="sourceCode code-with-copy quarto-appendix-bibtex"><code class="sourceCode bibtex">@online{rivera_espejo2024,
   author = {Rivera Espejo, Jose Manuel and van van Daal, Tine and De De
     Maeyer, Sven and Gillis, Steven},
-  title = {Causes and Effects in {Dichotomous} {Comparative}
-    {Judgments:} An Information-Theoretical System of Plausible
-    Mechanism},
-  date = {2024-10-18},
+  title = {Let’s Talk about {Thurstone} \&amp; {Co.:} {An}
+    Information-Theoretical Model for Comparative Judgments, and Its
+    Statistical Translation},
+  date = {2024-10-22},
   langid = {en},
   abstract = {(to do)}
 }
 </code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre><div class="quarto-appendix-secondary-label">For attribution, please cite this work as:</div><div id="ref-rivera_espejo2024" class="csl-entry quarto-appendix-citeas" role="listitem">
 Rivera Espejo, Jose Manuel, Tine van van Daal, Sven De De Maeyer, and
-Steven Gillis. 2024. <span>“Causes and Effects in Dichotomous
-Comparative Judgments: An Information-Theoretical System of Plausible
-Mechanism.”</span> October 18, 2024.
+Steven Gillis. 2024. <span>“Let’s Talk about Thurstone &amp; Co.: An
+Information-Theoretical Model for Comparative Judgments, and Its
+Statistical Translation.”</span> October 22, 2024.
 </div></div></section></div></main>
 <!-- /main column -->
 <script id="quarto-html-after-body" type="application/javascript">

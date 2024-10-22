@@ -22,8 +22,9 @@ and Interchange DTD v1.2 20190208//EN" "JATS-archivearticle1.dtd">
 
 
 <title-group>
-<article-title>Causes and effects in Dichotomous Comparative Judgments:
-an information-theoretical system of plausible mechanism</article-title>
+<article-title>Let’s talk about Thurstone &amp; Co.: An
+information-theoretical model for comparative judgments, and its
+statistical translation</article-title>
 </title-group>
 
 <contrib-group>
@@ -103,10 +104,10 @@ sciences</institution>
 <corresp id="cor-1">JoseManuel.RiveraEspejo@uantwerpen.be</corresp>
 </author-notes>
 
-<pub-date date-type="pub" publication-format="electronic" iso-8601-date="2024-10-18">
+<pub-date date-type="pub" publication-format="electronic" iso-8601-date="2024-10-22">
 <year>2024</year>
 <month>10</month>
-<day>18</day>
+<day>22</day>
 </pub-date>
 
 
@@ -149,15 +150,17 @@ the University of Antwerp (BOF).</funding-statement>
   effectiveness of the <italic>comparative judgment</italic> (CJ) method
   (<xref alt="Thurstone 1927" rid="ref-Thurstone_1927" ref-type="bibr">Thurstone
   1927</xref>) for assessing competencies and traits. These studies have
-  evaluated CJ from two main perspectives: its ability to produce
-  reliable and valid trait scores, and its practical applicability.
-  Research on reliability and validity has shown that CJ can generate
-  precise and consistent scores
+  evaluated CJ from three main perspectives: its ability to produce
+  reliable and valid trait scores, its practical applicability, and its
+  time efficiency. Research on reliability and validity shows that CJ
+  can generate precise and consistent scores
   (<xref alt="Pollitt 2012a" rid="ref-Pollitt_2012a" ref-type="bibr">Pollitt
   2012a</xref>,
   <xref alt="2012b" rid="ref-Pollitt_2012b" ref-type="bibr">2012b</xref>;
-  <xref alt="Bramley and Vitello 2019" rid="ref-Bramley_et_al_2019" ref-type="bibr">Bramley
-  and Vitello 2019</xref>;
+  <xref alt="Coertjens et al. 2017" rid="ref-Coertjens_et_al_2017" ref-type="bibr">Coertjens
+  et al. 2017</xref>;
+  <xref alt="Goossens and De Maeyer 2018" rid="ref-Goossens_et_al_2018" ref-type="bibr">Goossens
+  and De Maeyer 2018</xref>;
   <xref alt="Verhavert et al. 2019" rid="ref-Verhavert_et_al_2019" ref-type="bibr">Verhavert
   et al. 2019</xref>;
   <xref alt="Crompvoets, Béguin, and Sijtsma 2022" rid="ref-Crompvoets_et_al_2022" ref-type="bibr">Crompvoets,
@@ -170,11 +173,15 @@ the University of Antwerp (BOF).</funding-statement>
   <xref alt="van Daal et al. 2016" rid="ref-vanDaal_et_al_2016" ref-type="bibr">van
   Daal et al. 2016</xref>;
   <xref alt="Lesterhuis 2018" rid="ref-Lesterhuis_2018" ref-type="bibr">Lesterhuis
-  2018</xref>). Regarding practical applicability, several studies have
-  highlighted CJ’s versatility across both educational and
-  non-educational contexts, presenting it as an efficient and effective
-  alternative for measurement and evaluation
-  (<xref alt="Jones 2015" rid="ref-Jones_2015" ref-type="bibr">Jones
+  2018</xref>;
+  <xref alt="Bouwer et al. 2023" rid="ref-Bouwer_et_al_2023" ref-type="bibr">Bouwer
+  et al. 2023</xref>). Research on practical applicability highlights
+  CJ’s versatility across both educational and non-educational contexts,
+  presenting it as an efficient and effective alternative for
+  measurement and evaluation
+  (<xref alt="Pollitt 2004" rid="ref-Pollitt_2004" ref-type="bibr">Pollitt
+  2004</xref>;
+  <xref alt="Jones 2015" rid="ref-Jones_2015" ref-type="bibr">Jones
   2015</xref>;
   <xref alt="Bartholomew et al. 2018" rid="ref-Bartholomew_et_al_2018" ref-type="bibr">Bartholomew
   et al. 2018</xref>;
@@ -185,40 +192,87 @@ the University of Antwerp (BOF).</funding-statement>
   <xref alt="Bartholomew and Williams 2020" rid="ref-Bartholomew_et_al_2020" ref-type="bibr">Bartholomew
   and Williams 2020</xref>;
   <xref alt="Boonen, Kloots, and Gillis 2020" rid="ref-Boonen_et_al_2020" ref-type="bibr">Boonen,
-  Kloots, and Gillis 2020</xref>).</p>
+  Kloots, and Gillis 2020</xref>). Lastly, research on time efficiency
+  suggests that CJ can offer at least equal, if not significant, time
+  savings when evaluating stimuli compared to traditional marking
+  methods
+  (<xref alt="Pollitt 2012a" rid="ref-Pollitt_2012a" ref-type="bibr">Pollitt
+  2012a</xref>,
+  <xref alt="2012b" rid="ref-Pollitt_2012b" ref-type="bibr">2012b</xref>;
+  <xref alt="Coertjens et al. 2017" rid="ref-Coertjens_et_al_2017" ref-type="bibr">Coertjens
+  et al. 2017</xref>;
+  <xref alt="Goossens and De Maeyer 2018" rid="ref-Goossens_et_al_2018" ref-type="bibr">Goossens
+  and De Maeyer 2018</xref>).</p>
   <p>Nevertheless, despite the growing number of CJ studies, the
   unsystematic and fragmented research approaches employed in the
   literature have overlooked several critical issues concerning the
-  method. These issues fall into three main categories: concerns about
-  the structural model, the measurement model, and the experimental
-  design of CJ. In the following sections, each issue will be discussed
-  in detail, followed by the introduction of an approach that addresses
-  all three concerns simultaneously.</p>
+  method. These issues fall into three main categories: the disconnect
+  between CJ’s structural and measurement model, the over-reliance on
+  Thurstone’s Case 5
+  (<xref alt="1927" rid="ref-Thurstone_1927" ref-type="bibr">1927</xref>)
+  in its measurement model, and the role of the comparison algorithms
+  and the number of comparisons on the method’s reliability and
+  validity. In the following sections, each issue will be discussed in
+  detail, followed by the introduction of a theoretical model and its
+  translation into a statistical model that addresses all three concerns
+  simultaneously.</p>
 </sec>
-<sec id="sec-theory-thurstone">
-  <title>Let’s talk about Thurstone co.</title>
-  <sec id="the-disconect-between-structural-and-measurement-model">
-    <title>The disconect between structural and measurement
+<sec id="sec-theory-issues">
+  <title>Overlooked issues in CJ literature</title>
+  <sec id="the-disconnect-between-structural-and-measurement-model">
+    <title>The disconnect between structural and measurement
     model</title>
-    <p>A key issue in the first category is the apparent disconnect
-    between the method’s structural and measurement models. In CJ
-    literature, it is common to perform data analysis and hypothesis
-    testing on scores estimated using the Bradley-Terry-Luce (BTL) model
+    <p>In the CJ literature, the Bradley-Terry-Luce (BTL) model
     (<xref alt="Bradley and Terry 1952" rid="ref-Bradley_et_al_1952" ref-type="bibr">Bradley
     and Terry 1952</xref>;
     <xref alt="Luce 1959" rid="ref-Luce_1959" ref-type="bibr">Luce
-    1959</xref>). Several studies use the scores generated by the BTL
-    model or their transformations to identify ‘misfit’ judges and
-    stimuli
+    1959</xref>) serves as the measurement model for CJ because it
+    specifies how latent variables are estimated from observed ones
+    (<xref alt="Hoyle 2023" rid="ref-Hoyle_et_al_2023" ref-type="bibr">Hoyle
+    2023</xref>;
+    <xref alt="Kline 2023" rid="ref-Kline_et_al_2023" ref-type="bibr">Kline
+    2023</xref>). In a CJ study, multiple judges conduct several rounds
+    of pairwise comparisons to evaluate the relative manifestation of a
+    trait between a pair of stimuli. This evaluation results in a
+    dichotomous outcome that indicates which stimulus is perceived to
+    exhibit a higher degree of the trait. The BTL model then uses these
+    observed outcomes to estimate scores that represent the latent trait
+    of interest
+    (<xref alt="Pollitt 2012a" rid="ref-Pollitt_2012a" ref-type="bibr">Pollitt
+    2012a</xref>,
+    <xref alt="2012b" rid="ref-Pollitt_2012b" ref-type="bibr">2012b</xref>;
+    <xref alt="Whitehouse 2012" rid="ref-Whitehouse_2012" ref-type="bibr">Whitehouse
+    2012</xref>;
+    <xref alt="Jones 2015" rid="ref-Jones_2015" ref-type="bibr">Jones
+    2015</xref>;
+    <xref alt="van Daal et al. 2016" rid="ref-vanDaal_et_al_2016" ref-type="bibr">van
+    Daal et al. 2016</xref>;
+    <xref alt="Lesterhuis 2018" rid="ref-Lesterhuis_2018" ref-type="bibr">Lesterhuis
+    2018</xref>;
+    <xref alt="Boonen, Kloots, and Gillis 2020" rid="ref-Boonen_et_al_2020" ref-type="bibr">Boonen,
+    Kloots, and Gillis 2020</xref>;
+    <xref alt="Bouwer et al. 2023" rid="ref-Bouwer_et_al_2023" ref-type="bibr">Bouwer
+    et al. 2023</xref>).</p>
+    <p>Moreover, in the CJ literature, it is common practice for
+    BTL-generated scores, or their transformations, to undergo
+    additional data analysis and hypothesis testing. Researchers have
+    utilized these scores in independent analyses to identify ‘misfit’
+    judges and stimuli
     (<xref alt="Pollitt 2012b" rid="ref-Pollitt_2012b" ref-type="bibr">Pollitt
     2012b</xref>;
     <xref alt="van Daal et al. 2017" rid="ref-vanDaal_et_al_2017" ref-type="bibr">van
-    Daal et al. 2017</xref>), detect ‘bias’ in judges’ ratings
+    Daal et al. 2017</xref>;
+    <xref alt="Goossens and De Maeyer 2018" rid="ref-Goossens_et_al_2018" ref-type="bibr">Goossens
+    and De Maeyer 2018</xref>), detect biases in judges’ ratings
     (<xref alt="Pollitt and Elliott 2003" rid="ref-Pollitt_et_al_2003" ref-type="bibr">Pollitt
     and Elliott 2003</xref>;
     <xref alt="Pollitt 2012b" rid="ref-Pollitt_2012b" ref-type="bibr">Pollitt
-    2012b</xref>), or test various hypotheses about the underlying trait
-    being measured
+    2012b</xref>), calculate correlations with other scoring methods
+    (<xref alt="Goossens and De Maeyer 2018" rid="ref-Goossens_et_al_2018" ref-type="bibr">Goossens
+    and De Maeyer 2018</xref>;
+    <xref alt="Bouwer et al. 2023" rid="ref-Bouwer_et_al_2023" ref-type="bibr">Bouwer
+    et al. 2023</xref>), or test hypotheses related to the trait of
+    interest
     (<xref alt="Bramley and Vitello 2019" rid="ref-Bramley_et_al_2019" ref-type="bibr">Bramley
     and Vitello 2019</xref>;
     <xref alt="Boonen, Kloots, and Gillis 2020" rid="ref-Boonen_et_al_2020" ref-type="bibr">Boonen,
@@ -230,26 +284,23 @@ the University of Antwerp (BOF).</funding-statement>
     <xref alt="Jones et al. 2019" rid="ref-Jones_et_al_2019" ref-type="bibr">Jones
     et al. 2019</xref>;
     <xref alt="Gijsen et al. 2021" rid="ref-Gijsen_et_al_2021" ref-type="bibr">Gijsen
-    et al. 2021</xref>). In the motivating example, …</p>
-    <p>However, since these scores are parameter estimates with inherent
-    uncertainty, the statistical literature suggests that separating the
-    analysis from this uncertainty may artificially inflate the
-    precision and power of the results. This, in turn, could increase
-    the risk of committing a type I error, where a null hypothesis is
-    wrongly rejected
-    (<xref alt="McElreath 2020" rid="ref-McElreath_2020" ref-type="bibr">McElreath
-    2020</xref>). In the motivating example</p>
-    <p>To address this issue properly, the approach should follow a
-    strategy similar to that used in Structural Equation Modeling (SEM),
-    where data analysis and hypothesis testing occur at the structural
-    model level, while the BTL model functions as the measurement
-    model.</p>
+    et al. 2021</xref>).</p>
+  </sec>
+  <sec id="case-5-and-the-measurement-model">
+    <title>Case 5 and the measurement model</title>
+  </sec>
+  <sec id="the-efficiency-and-reliability-of-comparison-algorithms">
+    <title>The efficiency and reliability of comparison
+    algorithms</title>
+  </sec>
+  <sec id="what-is-the-solution">
+    <title>What is the solution</title>
   </sec>
 </sec>
 <sec id="sec-theory">
   <title>Theory</title>
   <sec id="sec-theory-scientific">
-    <title>A scientific model for the CJ</title>
+    <title>A theoretical model for the CJ</title>
   </sec>
   <sec id="sec-theory-statmodel">
     <title>From theory to statistical model</title>
@@ -422,6 +473,25 @@ the University of Antwerp (BOF).</funding-statement>
           <pub-id pub-id-type="doi">10.1080/0969594X.2016.1253542</pub-id>
           <fpage>59</fpage>
           <lpage>74</lpage>
+        </element-citation>
+      </ref>
+      <ref id="ref-Coertjens_et_al_2017">
+        <element-citation publication-type="article-journal">
+          <person-group person-group-type="author">
+            <name><surname>Coertjens</surname><given-names>L.</given-names></name>
+            <name><surname>Lesterhuis</surname><given-names>M</given-names></name>
+            <name><surname>Verhavert</surname><given-names>S.</given-names></name>
+            <name><surname>Van Gasse</surname><given-names>R.</given-names></name>
+            <name><surname>De Maeyer</surname><given-names>S.</given-names></name>
+          </person-group>
+          <article-title>Teksten beoordelen met criterialijsten of via paarsgewijze vergelijking: Een afweging van betrouwbaarheid en tijdsinvestering</article-title>
+          <source>Pedagogische Studien</source>
+          <year iso-8601-date="2017">2017</year>
+          <volume>94</volume>
+          <uri>https://repository.uantwerpen.be/docman/irua/e71ea9/147930.pdf</uri>
+          <pub-id pub-id-type="doi"></pub-id>
+          <fpage>283</fpage>
+          <lpage>303</lpage>
         </element-citation>
       </ref>
       <ref id="ref-vanDaal_et_al_2017">
@@ -606,15 +676,28 @@ the University of Antwerp (BOF).</funding-statement>
           <lpage>518</lpage>
         </element-citation>
       </ref>
-      <ref id="ref-McElreath_2020">
+      <ref id="ref-Hoyle_et_al_2023">
         <element-citation publication-type="book">
           <person-group person-group-type="author">
-            <name><surname>McElreath</surname><given-names>R.</given-names></name>
+            <name><surname>Hoyle</surname><given-names>R. (eds.)</given-names></name>
           </person-group>
-          <source>Statistical rethinking: A bayesian course with examples in r and STAN</source>
-          <publisher-name>Chapman; Hall/CRC</publisher-name>
-          <year iso-8601-date="2020">2020</year>
-          <isbn>9780367139919</isbn>
+          <source>Handbook of structural equation modeling</source>
+          <publisher-name>Guilford Press</publisher-name>
+          <year iso-8601-date="2023">2023</year>
+          <isbn>9781462544646</isbn>
+          <uri></uri>
+          <pub-id pub-id-type="doi"></pub-id>
+        </element-citation>
+      </ref>
+      <ref id="ref-Kline_et_al_2023">
+        <element-citation publication-type="book">
+          <person-group person-group-type="author">
+            <name><surname>Kline</surname><given-names>R.</given-names></name>
+          </person-group>
+          <source>Principles and practice of structural equation modeling</source>
+          <publisher-name>Guilford Press</publisher-name>
+          <year iso-8601-date="2023">2023</year>
+          <isbn>9781462551910</isbn>
           <uri></uri>
           <pub-id pub-id-type="doi"></pub-id>
         </element-citation>
@@ -648,6 +731,42 @@ the University of Antwerp (BOF).</funding-statement>
           <pub-id pub-id-type="doi">10.1007/978-3-030-52229-2_18</pub-id>
           <fpage>331</fpage>
           <lpage>349</lpage>
+        </element-citation>
+      </ref>
+      <ref id="ref-Pollitt_2004">
+        <element-citation publication-type="paper-conference">
+          <person-group person-group-type="author">
+            <name><surname>Pollitt</surname><given-names>A.</given-names></name>
+          </person-group>
+          <article-title>Let’s stop marking exams</article-title>
+          <source>Proceedings of the IAEA conference</source>
+          <publisher-name>University of Cambridge Local Examinations Syndicate</publisher-name>
+          <publisher-loc>Philadelphia</publisher-loc>
+          <year iso-8601-date="2004">2004</year>
+          <volume></volume>
+          <uri>https://www.cambridgeassessment.org.uk/images/109719-let-s-stop-marking-exams.pdf</uri>
+          <fpage></fpage>
+          <lpage></lpage>
+        </element-citation>
+      </ref>
+      <ref id="ref-Goossens_et_al_2018">
+        <element-citation publication-type="paper-conference">
+          <person-group person-group-type="author">
+            <name><surname>Goossens</surname><given-names>M.</given-names></name>
+            <name><surname>De Maeyer</surname><given-names>S.</given-names></name>
+          </person-group>
+          <article-title>How to obtain efficient high reliabilities in assessing texts: Rubrics vs comparative judgement</article-title>
+          <source>Technology enhanced assessment</source>
+          <person-group person-group-type="editor">
+            <name><surname>Ras</surname><given-names>E.</given-names></name>
+            <name><surname>Guerrero Roldán</surname><given-names>A.</given-names></name>
+          </person-group>
+          <publisher-name>Springer International Publishing</publisher-name>
+          <year iso-8601-date="2018">2018</year>
+          <uri></uri>
+          <pub-id pub-id-type="doi">10.1007/978-3-319-97807-9_2</pub-id>
+          <fpage>13</fpage>
+          <lpage>25</lpage>
         </element-citation>
       </ref>
       <ref id="ref-Pollitt_et_al_2003">
