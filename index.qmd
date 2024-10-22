@@ -1,5 +1,5 @@
 ---
-title: "Causes and effects in Dichotomous Comparative Judgments: an information-theoretical system of plausible mechanism"
+title: "Let's talk about Thurstone & Co.: An information-theoretical model for comparative judgments, and its statistical translation"
 author:
   - name: 
       given: Jose Manuel
@@ -83,72 +83,54 @@ execute:
 
 # Introduction {#sec-introduction}
 
-<!-- recording -->
+<!-- recording 1 -->
 <!-- Part 1; 00:00:00 - 00:09:10 -->
-<!-- Part 2; 00:14:30 - 00:21:00 -->
+
+<!-- recording 2 -->
+<!-- Part 2; 00:00:00 - 00:17:30 -->
 
 <!-- 1. Where are we now with DCJ? -->
-
-<!-- Notes: -->
-<!-- - In the past decade there has been a growing number of studies that document and analyze the merits of DCJ as an assessment tool. Define a bit DCJ. -->
-<!-- - It has been a growing field, where people has tested some important aspects of the method. In general, is an iterative process. People are iterating on particular aspects of the method, such as: -->
-<!-- a. issues within the method as such, critical analyze some aspect of the method -->
-<!-- b. practical use of the method, generate scores with the BTL, and use this scores with some hypotheses, or descriptions. -->
-
-Over the past decade, numerous studies have documented the effectiveness of the *comparative judgment* (CJ) method [@Thurstone_1927] for assessing competencies and traits. These studies have evaluated CJ from two main perspectives: its ability to produce reliable and valid trait scores, and its practical applicability. Research on reliability and validity has shown that CJ can generate precise and consistent scores [@Pollitt_2012a; @Pollitt_2012b; @Bramley_et_al_2019; @Verhavert_et_al_2019; @Crompvoets_et_al_2022; @Bouwer_et_al_2023] that accurately represent the traits being measured [@Whitehouse_2012; @vanDaal_et_al_2016; @Lesterhuis_2018]. Regarding practical applicability, several studies have highlighted CJ's versatility across both educational and non-educational contexts, presenting it as an efficient and effective alternative for measurement and evaluation [@Jones_2015; @Bartholomew_et_al_2018; @Jones_et_al_2019; @Marshall_et_al_2020; @Bartholomew_et_al_2020; @Boonen_et_al_2020].
+Over the past decade, numerous studies have documented the effectiveness of the *comparative judgment* (CJ) method [@Thurstone_1927] for assessing competencies and traits. These studies have evaluated CJ from three main perspectives: its ability to produce reliable and valid trait scores, its practical applicability, and its time efficiency. Research on reliability and validity shows that CJ can generate precise and consistent scores [@Pollitt_2012a; @Pollitt_2012b; @Coertjens_et_al_2017; @Goossens_et_al_2018; @Verhavert_et_al_2019; @Crompvoets_et_al_2022; @Bouwer_et_al_2023] that accurately represent the traits being measured [@Whitehouse_2012; @vanDaal_et_al_2016; @Lesterhuis_2018; @Bouwer_et_al_2023]. Research on practical applicability highlights CJ's versatility across both educational and non-educational contexts, presenting it as an efficient and effective alternative for measurement and evaluation [@Pollitt_2004; @Jones_2015; @Bartholomew_et_al_2018; @Jones_et_al_2019; @Marshall_et_al_2020; @Bartholomew_et_al_2020; @Boonen_et_al_2020]. Lastly, research on time efficiency suggests that CJ can offer at least equal, if not significant, time savings when evaluating stimuli compared to traditional marking methods [@Pollitt_2012a; @Pollitt_2012b; @Coertjens_et_al_2017; @Goossens_et_al_2018].
 
 <!-- 2. But what are the problems of DCJ as a method? -->
-
-<!-- Notes:  -->
-<!-- - But what it is the problem with this way of using DCJ (just one paragraph) -->
-<!-- a. measurement model is based on case V -->
-<!--   a.1 It does not consider the effects of judges (different perceptions per stimuli) -->
-<!--   a.2 It does not consider that stimuli may be nested in individuals -->
-<!-- b. in all literature there is a disconnection between measurement model and the structural part (common practical use) -->
-<!-- c. what about the experimental design?, what are the implications of certain comparison algorithms? -->
-
-Nevertheless, despite the growing number of CJ studies, the unsystematic and fragmented research approaches employed in the literature have overlooked several critical issues concerning the method. These issues fall into three main categories: concerns about the structural model, the measurement model, and the experimental design of CJ. In the following sections, each issue will be discussed in detail, followed by the introduction of an approach that addresses all three concerns simultaneously.
+Nevertheless, despite the growing number of CJ studies, the unsystematic and fragmented research approaches employed in the literature have overlooked several critical issues concerning the method. These issues fall into three main categories: the disconnect between CJ's structural and measurement model, the over-reliance on Thurstone's Case 5 [-@Thurstone_1927] in its measurement model, and the role of the comparison algorithms and the number of comparisons on the method's reliability and validity. In the following sections, each issue will be discussed in detail, followed by the introduction of a theoretical model and its translation into a statistical model that addresses all three concerns simultaneously.
 
 
-# Let's talk about Thurstone co. {#sec-theory-thurstone}
+# Overlooked issues in CJ literature {#sec-theory-issues}
 
-<!-- Notes: -->
-<!-- - But what it is the problem with this way of using DCJ (just one paragraph) -->
-<!-- a. measurement model is based on case V -->
-<!--   a.1 It does not consider the effects of judges (different perceptions per stimuli) -->
-<!--   a.2 It does not consider that stimuli may be nested in individuals -->
-<!-- b. in all literature there is a disconnection between measurement model and the structural part (common practical use) -->
-<!-- c. what about the experimental design?, what are the implications of certain comparison algorithms? -->
+## The disconnect between structural and measurement model
 
+<!-- 1. The BTL model is CJ's measurement model -->
+In the CJ literature, the Bradley-Terry-Luce (BTL) model [@Bradley_et_al_1952; @Luce_1959] serves as the measurement model for CJ because it specifies how latent variables are estimated from observed ones [@Hoyle_et_al_2023; @Kline_et_al_2023]. In a CJ study, multiple judges conduct several rounds of pairwise comparisons to evaluate the relative manifestation of a trait between a pair of stimuli. This evaluation results in a dichotomous outcome that indicates which stimulus is perceived to exhibit a higher degree of the trait. The BTL model then uses these observed outcomes to estimate scores that represent the latent trait of interest [@Pollitt_2012a; @Pollitt_2012b; @Whitehouse_2012; @Jones_2015; @vanDaal_et_al_2016; @Lesterhuis_2018; @Boonen_et_al_2020; @Bouwer_et_al_2023].
 
-<!-- Use the SEM description of measurement model and structural model. -->
+<!-- 2. But there is no structural model, only post estimation analyses -->
+Moreover, in the CJ literature, it is common practice for BTL-generated scores, or their transformations, to undergo additional data analysis and hypothesis testing. Researchers have utilized these scores in independent analyses to identify 'misfit' judges and stimuli [@Pollitt_2012b; @vanDaal_et_al_2017; @Goossens_et_al_2018], detect biases in judges' ratings [@Pollitt_et_al_2003; @Pollitt_2012b], calculate correlations with other scoring methods [@Goossens_et_al_2018; @Bouwer_et_al_2023], or test hypotheses related to the trait of interest [@Bramley_et_al_2019; @Boonen_et_al_2020; @Bouwer_et_al_2023; @vanDaal_et_al_2017; @Jones_et_al_2019; @Gijsen_et_al_2021]. 
 
+<!-- 3. But what is the problem with this? -->
+<!-- However, the statistical literature cautions when using estimated scores for further independent data analysis and hypothesis testing. Since BTL-generated scores are parameter estimates that carry inherent uncertainty, separating the subsequent analyses from this uncertainty may lead to an artificial inflation of the precision and power of the analyses and tests. Consequently, this practice could increase the risk of committing a type I error, wherein a null hypothesis is incorrectly rejected [@McElreath_2020]. An appropriate approach to address this issue, consistent with the principles of Structural Equation Modeling (SEM) [@Hoyle_et_al_2023; @Kline_et_al_2023], is that these analyses should be conducted at the structural level rather than as independent analyses. Consequently, an approach that integrates the structural and measurement model should be followed. -->
 
-## The disconect between structural and measurement model
-
-<!-- Structural model -->
-
-<!-- Regarding this, it is apparent that in all literature there is a disconnection between measurement model and the structural part, where hypothesis and summaries are performed. -->
-
-<!-- The current literature estimates the CJ scores to later used them into other analysis, such as investigating bias and misfits among judges, or for the comparison of groups of individuals. This ignores measurement error. -->
+<!-- However, there is often a lack of integration between the structural model, which captures the relationships among the variables, and the measurement model, which generates the CJ scores. This disconnect can lead to inaccurate inferences about the traits being measured. -->
 
 
-A key issue in the first category is the apparent disconnect between the method's structural and measurement models. In CJ literature, it is common to perform data analysis and hypothesis testing on scores estimated using the Bradley-Terry-Luce (BTL) model [@Bradley_et_al_1952; @Luce_1959]. Several studies use the scores generated by the BTL model or their transformations to identify 'misfit' judges and stimuli [@Pollitt_2012b; @vanDaal_et_al_2017], detect 'bias' in judges' ratings [@Pollitt_et_al_2003; @Pollitt_2012b], or test various hypotheses about the underlying trait being measured [@Bramley_et_al_2019; @Boonen_et_al_2020; @Bouwer_et_al_2023; @vanDaal_et_al_2017; @Jones_et_al_2019; @Gijsen_et_al_2021]. In the motivating example, ...
-
-However, since these scores are parameter estimates with inherent uncertainty, the statistical literature suggests that separating the analysis from this uncertainty may artificially inflate the precision and power of the results. This, in turn, could increase the risk of committing a type I error, where a null hypothesis is wrongly rejected [@McElreath_2020]. In the motivating example
-
-To address this issue properly, the approach should follow a strategy similar to that used in Structural Equation Modeling (SEM), where data analysis and hypothesis testing occur at the structural model level, while the BTL model functions as the measurement model.
-
-
+## Case 5 and the measurement model
 
 <!-- Measurement model -->
+
+<!-- a. measurement model is based on case V -->
+<!--   a.1 It does not consider the effects of judges (different perceptions per stimuli) -->
+<!--   a.2 It does not consider that stimuli may be nested in individuals -->
+
+
 
 <!-- @Thurstone_1927 justify the use of case V, on multiple assumptions, but the most important for our purpose are three:  -->
 
 <!-- (a) related to Case 3, it assumes the correlation between stimuli is zero, this translates into the cancellation of judges effects by mean of opposing and equally weigthed 'mood' and 'simultaneous contrasts' effects. This is demonstrated using the additivive nature of the logit scale, which helps to cancel 'bias' judges effects. -->
-<!-- This is the case of confounding, and @Andrich_1978 already showed that if judges effects are parametrized, it gets eliminated experimentally in the paired comparison method.  -->
+<!-- This is the case of confounding, and @Andrich_1978; @Wainer_et_al_1978 already showed that if judges effects are parametrized, it gets eliminated experimentally in the paired comparison method.  -->
 
 <!-- possibility of bias is hinted in @Bramley_2008, and later mentioned again in @Kelly_et_al_2022, and some evidence is found in @Pollitt_et_al_2003, @Arlett_2003, @Guthrie_2003, @vanDaal_et_al_2017 and @Gijsen_et_al_2021 -->
+
+<!-- @Pollitt_et_al_2003 In Thurstone’s method each judge’s standard cancels out when a comparison is made, and any misfit between data and model must indicate a difference of some other kind. This is studied by analysing the residuals that remain after the model is fitted to the data. Whenever one script is judged to have a higher value than a competing one it is expected to ‘win’ the comparison: if it does the residual will be small, but if it loses then the residual for that judge’s comparison of those two scripts will be large. Any patterns of large residuals will indicate some sort of bias – in this context bias simply means a source of systematic, rather than random, variability. indicates that one judge – Judge 5 – is significantly biased in some way. (Consider the problem of using adhoc methods) -->
+
 
 <!-- Reliability is a necessary but not sufficient condition for validity. Reliability can exist without validity but validity cannot exist without reliability [@Perron_et_al_2015]. -->
 
@@ -163,8 +145,6 @@ To address this issue properly, the approach should follow a strategy similar to
 <!-- This ties up with the next subject -->
 
 
-
-
 <!-- Moreover, a notable concern in the second category is the measurement model's reliance on the assumptions of Case 5 from Thurstone's law of comparative judgment [-@Thurstone_1927]. As noted, it is common practice in the literature to use the BTL model as a means of generating CJ scores, serving as the measurement model. -->
 
 <!-- Since the study by @Bramley_2008, it has been clear that the BTL model represents a statistical articulation of Case 5. -->
@@ -172,18 +152,48 @@ To address this issue properly, the approach should follow a strategy similar to
 <!-- Although Case 5 was originally articulated to produce a "rather coarse scaling" of traits [@Thurstone_1927, p. 269], its assumptions have become predominant in the literature due to its implementation through the Bradley-Terry-Luce (BTL) model [@Bradley_et_al_1952; @Luce_1959]. This leaves issues such as the presence of judge' biases hinted by @Bramley_2008 and @Kelly_et_al_2022, and evidenced by @Pollitt_et_al_2003, @Arlett_2003, and @Guthrie_2003 -->
 
 
+<!-- All studies use SSR as a measure of reliability -->
 
+
+## The efficiency and reliability of comparison algorithms
 
 <!-- Experimental design -->
 
 <!-- In this regard, although the literature has tested multiple features of the experimental design of the method, such as the comparison algorithm and the number of comparisons, it is not clear where this procedures fit in the whole process of comparison, and what are their implications for the outcome of the method. -->
 
-<!-- present the evidence of bias effects of adaptive algorithms, the not clear view of how many comparisons per (sub)units are required. Adhoc rules of thumb. -->
+<!-- @Bramley_et_al_2019 and @Bramley_2015 says adaptivity inflates reliability. present the evidence of bias effects of adaptive algorithms, the not clear view of how many comparisons per (sub)units are required. Adhoc rules of thumb. -->
+
+<!-- @Gray_et_al_2024 entropy-driven active learning pair-selection algorithm to compare stimuli, vs random and no repeating pairs -->
+
+<!-- @DeVrindt_et_al_2024 cold start problem to optimize time efficiency. -->
+
+<!-- @Mikhailiuk_et_al_2021 proposed a fully Bayesian active sampling strategy for pairwise comparisons via Approximate Message Passing and Information Gain Maximization. ASAP computes the full posterior distribution, which is crucial to achieving accurate EIG estimates, and thus the accuracy of active sampling. We recommend ASAP, as it offered the highest accuracy of inferred scores compared to existing methods in experiments with real and synthetic data. -->
+
+<!-- @Verhavert_et_al_2022 The current article proposes a new adaptive selection algorithm using a previously calibrated reference set. Using a reference set should eliminate the reliability inflation. It is proven that this adaptive selection algorithm is more efficient without reducing the accuracy of the results and without increasing the standard deviation of the assessment results. Akin to BIB designs and more specifically to BTIB designs  -->
 
 
 <!-- and issues related to the method's experimental design. These issues can affect the method's reliability, validity, and practical applicability. -->
 
 
+<!-- @Coertjens_et_al_2017 assess reliability and time investment. We conclude that pairwise comparison requires a similar time investment from evaluators as the criterion list method. We want to note that the outcomes in this study depend heavily on the design. First, the time taken for an assessment is strongly determined by the length of the criteria list used and the length of the texts (Breland, 1983). Not adaptive -->
+
+
+<!-- Although the process of pairwise comparisons is quite easy and fast for raters to apply (@Laming_2004; @Pollitt_2004), even without training, the increase in time investment that is needed for CJ decreases its feasibility in educational practice. -->
+
+
+<!-- Messick_1989 talks about efficiency and feasibility for application  -->
+
+<!-- @Bramley_2008 proposes ranking instead of comparisons -->
+
+
+<!-- talk about the number of comparisons @Verhavert_et_al_2019, @Crompvoets_et_al_2022, @Pollitt_2004 -->
+
+
+<!-- @Pollitt_2012b concludes that speed is not related to the quality of assessments in pairwise comparisons -->
+
+
+
+## What is the solution
 
 <!-- 3. What is the solution? -->
 
@@ -195,18 +205,22 @@ To address this issue properly, the approach should follow a strategy similar to
 
 
 # Theory {#sec-theory}
-<!-- 21:00 recording -->
+<!-- recording 1 -->
+<!-- Part 2; 00:14:30 - 00:21:00 -->
 
 
-## A scientific model for the CJ {#sec-theory-scientific}
+
+## A theoretical model for the CJ {#sec-theory-scientific}
 
 ## From theory to statistical model {#sec-theory-statmodel}
 
+<!-- @Pritikin_2020 and @Gray_et_al_2024 bayesian modeling attempts -->
 
 # Discussion {#sec-discuss}
 
 ## Findings {#sec-discuss-finding}
 
+<!-- Pollitt (2012a) argues that assessors in pairwise comparisons need less training, given intuitive comparison and decision making. However, there is a distinct lack of research on the role of training.  -->
 
 ## Limitations and further research {#sec-discuss-limitations}
 
