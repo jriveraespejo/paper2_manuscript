@@ -104,10 +104,10 @@ sciences</institution>
 <corresp id="cor-1">JoseManuel.RiveraEspejo@uantwerpen.be</corresp>
 </author-notes>
 
-<pub-date date-type="pub" publication-format="electronic" iso-8601-date="2024-10-22">
+<pub-date date-type="pub" publication-format="electronic" iso-8601-date="2024-10-23">
 <year>2024</year>
 <month>10</month>
-<day>22</day>
+<day>23</day>
 </pub-date>
 
 
@@ -203,41 +203,41 @@ the University of Antwerp (BOF).</funding-statement>
   et al. 2017</xref>;
   <xref alt="Goossens and De Maeyer 2018" rid="ref-Goossens_et_al_2018" ref-type="bibr">Goossens
   and De Maeyer 2018</xref>).</p>
-  <p>Nevertheless, despite the growing number of CJ studies, the
-  unsystematic and fragmented research approaches employed in the
-  literature have overlooked several critical issues concerning the
-  method. These issues fall into three main categories: the disconnect
-  between CJ’s structural and measurement model, the over-reliance on
-  Thurstone’s Case 5
+  <p>Nevertheless, despite the growing number of studies on CJ,
+  unsystematic and fragmented research approaches in the literature have
+  left several critical issues unaddressed. These issues can be grouped
+  into three main categories: the disconnect between CJ’s structural and
+  measurement model, the over-reliance on the assumptions of Thurstone’s
+  Case 5
   (<xref alt="1927" rid="ref-Thurstone_1927" ref-type="bibr">1927</xref>)
-  in its measurement model, and the role of the comparison algorithms
-  and the number of comparisons on the method’s reliability and
-  validity. In the following sections, each issue will be discussed in
-  detail, followed by the introduction of a theoretical model and its
-  translation into a statistical model that addresses all three concerns
-  simultaneously.</p>
+  in its measurement model, and the unclear role and impact of
+  comparison algorithms and the number of comparisons on the method’s
+  reliability and validity. The following sections will discuss each of
+  these issues in detail,, followed by the introduction of a theoretical
+  model and its statistical translation, which aim to address all three
+  concerns simultaneously.</p>
 </sec>
 <sec id="sec-theory-issues">
-  <title>Overlooked issues in CJ literature</title>
-  <sec id="the-disconnect-between-structural-and-measurement-model">
+  <title>The three critical issues in CJ literature</title>
+  <sec id="the-disconnect-between-structural-and-measurement-models">
     <title>The disconnect between structural and measurement
-    model</title>
-    <p>In the CJ literature, the Bradley-Terry-Luce (BTL) model
+    models</title>
+    <p>In a typical CJ study, the Bradley-Terry-Luce (BTL) model
     (<xref alt="Bradley and Terry 1952" rid="ref-Bradley_et_al_1952" ref-type="bibr">Bradley
     and Terry 1952</xref>;
     <xref alt="Luce 1959" rid="ref-Luce_1959" ref-type="bibr">Luce
-    1959</xref>) serves as the measurement model for CJ because it
-    specifies how latent variables are estimated from observed ones
+    1959</xref>) serves as the measurement model. This model specifies
+    how latent variables are estimated from observed ones
     (<xref alt="Hoyle 2023" rid="ref-Hoyle_et_al_2023" ref-type="bibr">Hoyle
     2023</xref>;
     <xref alt="Kline 2023" rid="ref-Kline_et_al_2023" ref-type="bibr">Kline
-    2023</xref>). In a CJ study, multiple judges conduct several rounds
-    of pairwise comparisons to evaluate the relative manifestation of a
-    trait between a pair of stimuli. This evaluation results in a
-    dichotomous outcome that indicates which stimulus is perceived to
-    exhibit a higher degree of the trait. The BTL model then uses these
-    observed outcomes to estimate scores that represent the latent trait
-    of interest
+    2023</xref>). In the context of CJ, multiple judges engage in
+    several rounds of pairwise comparisons to assess the relative
+    manifestation of a trait between two stimuli. Each comparison
+    generates a dichotomous outcome, indicating which stimulus is
+    perceived to exhibit a higher degree of the trait. The BTL model
+    then uses these observed outcomes to estimate scores that represent
+    the latent trait of interest
     (<xref alt="Pollitt 2012a" rid="ref-Pollitt_2012a" ref-type="bibr">Pollitt
     2012a</xref>,
     <xref alt="2012b" rid="ref-Pollitt_2012b" ref-type="bibr">2012b</xref>;
@@ -253,11 +253,10 @@ the University of Antwerp (BOF).</funding-statement>
     Kloots, and Gillis 2020</xref>;
     <xref alt="Bouwer et al. 2023" rid="ref-Bouwer_et_al_2023" ref-type="bibr">Bouwer
     et al. 2023</xref>).</p>
-    <p>Moreover, in the CJ literature, it is common practice for
-    BTL-generated scores, or their transformations, to undergo
-    additional data analysis and hypothesis testing. Researchers have
-    utilized these scores in independent analyses to identify ‘misfit’
-    judges and stimuli
+    <p>Moreover, researchers often use these BTL-generated scores or
+    their transformations separately, applying additional analyses or
+    hypothesis testing. The CJ literature shows that these scores have
+    been employed to identify ‘misfit’ judges and stimuli
     (<xref alt="Pollitt 2012b" rid="ref-Pollitt_2012b" ref-type="bibr">Pollitt
     2012b</xref>;
     <xref alt="van Daal et al. 2017" rid="ref-vanDaal_et_al_2017" ref-type="bibr">van
@@ -285,25 +284,38 @@ the University of Antwerp (BOF).</funding-statement>
     et al. 2019</xref>;
     <xref alt="Gijsen et al. 2021" rid="ref-Gijsen_et_al_2021" ref-type="bibr">Gijsen
     et al. 2021</xref>).</p>
+    <p>However, the statistical literature warns against using estimated
+    scores for separate analyses and hypothesis testing. BTL-generated
+    scores are parameter estimates that inherently carry uncertainty.
+    Neglecting this uncertainty can inflate the precision and
+    statistical power in independent analyses and tests. This oversight,
+    in turn, may increase the risk of committing a type I error, where
+    the null hypothesis is incorrectly rejected
+    (<xref alt="McElreath 2020" rid="ref-McElreath_2020" ref-type="bibr">McElreath
+    2020</xref>). To mitigate this risk, principles from Structural
+    Equation Modeling (SEM)
+    (<xref alt="Hoyle 2023" rid="ref-Hoyle_et_al_2023" ref-type="bibr">Hoyle
+    2023</xref>;
+    <xref alt="Kline 2023" rid="ref-Kline_et_al_2023" ref-type="bibr">Kline
+    2023</xref>) recommend conducting such analyses within the
+    structural model of CJ rather than separately. Therefore, an
+    integrated approach combining both structural and measurement models
+    is advisable.</p>
   </sec>
-  <sec id="case-5-and-the-measurement-model">
-    <title>Case 5 and the measurement model</title>
+  <sec id="the-assumptions-of-case-5-and-the-measurement-model">
+    <title>The assumptions of Case 5 and the measurement model</title>
   </sec>
-  <sec id="the-efficiency-and-reliability-of-comparison-algorithms">
-    <title>The efficiency and reliability of comparison
-    algorithms</title>
-  </sec>
-  <sec id="what-is-the-solution">
-    <title>What is the solution</title>
+  <sec id="the-role-and-impact-of-comparison-algorithms">
+    <title>The role and impact of comparison algorithms</title>
   </sec>
 </sec>
 <sec id="sec-theory">
   <title>Theory</title>
-  <sec id="sec-theory-scientific">
-    <title>A theoretical model for the CJ</title>
+  <sec id="sec-theory-theoretical">
+    <title>A theoretical model for CJ</title>
   </sec>
-  <sec id="sec-theory-statmodel">
-    <title>From theory to statistical model</title>
+  <sec id="sec-theory-statistics">
+    <title>From theory to statistics</title>
   </sec>
 </sec>
 <sec id="sec-discuss">
@@ -674,6 +686,19 @@ the University of Antwerp (BOF).</funding-statement>
           <pub-id pub-id-type="doi">10.17239/jowr-2024.15.03.03</pub-id>
           <fpage>497</fpage>
           <lpage>518</lpage>
+        </element-citation>
+      </ref>
+      <ref id="ref-McElreath_2020">
+        <element-citation publication-type="book">
+          <person-group person-group-type="author">
+            <name><surname>McElreath</surname><given-names>R.</given-names></name>
+          </person-group>
+          <source>Statistical rethinking: A bayesian course with examples in r and STAN</source>
+          <publisher-name>Chapman; Hall/CRC</publisher-name>
+          <year iso-8601-date="2020">2020</year>
+          <isbn>9780367139919</isbn>
+          <uri></uri>
+          <pub-id pub-id-type="doi"></pub-id>
         </element-citation>
       </ref>
       <ref id="ref-Hoyle_et_al_2023">

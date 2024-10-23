@@ -229,39 +229,40 @@ equal, if not significant, time savings when evaluating stimuli compared
 to traditional marking methods
 \citep{Pollitt_2012a, Pollitt_2012b, Coertjens_et_al_2017, Goossens_et_al_2018}.
 
-Nevertheless, despite the growing number of CJ studies, the unsystematic
-and fragmented research approaches employed in the literature have
-overlooked several critical issues concerning the method. These issues
-fall into three main categories: the disconnect between CJ's structural
-and measurement model, the over-reliance on Thurstone's Case 5
-\citeyearpar{Thurstone_1927} in its measurement model, and the role of
-the comparison algorithms and the number of comparisons on the method's
-reliability and validity. In the following sections, each issue will be
-discussed in detail, followed by the introduction of a theoretical model
-and its translation into a statistical model that addresses all three
-concerns simultaneously.
+Nevertheless, despite the growing number of studies on CJ, unsystematic
+and fragmented research approaches in the literature have left several
+critical issues unaddressed. These issues can be grouped into three main
+categories: the disconnect between CJ's structural and measurement
+model, the over-reliance on the assumptions of Thurstone's Case 5
+\citeyearpar{Thurstone_1927} in its measurement model, and the unclear
+role and impact of comparison algorithms and the number of comparisons
+on the method's reliability and validity. The following sections will
+discuss each of these issues in detail,, followed by the introduction of
+a theoretical model and its statistical translation, which aim to
+address all three concerns simultaneously.
 
-\section{Overlooked issues in CJ literature}\label{sec-theory-issues}
+\section{The three critical issues in CJ
+literature}\label{sec-theory-issues}
 
 \subsection{The disconnect between structural and measurement
-model}\label{the-disconnect-between-structural-and-measurement-model}
+models}\label{the-disconnect-between-structural-and-measurement-models}
 
-In the CJ literature, the Bradley-Terry-Luce (BTL) model
-\citep{Bradley_et_al_1952, Luce_1959} serves as the measurement model
-for CJ because it specifies how latent variables are estimated from
-observed ones \citep{Hoyle_et_al_2023, Kline_et_al_2023}. In a CJ study,
-multiple judges conduct several rounds of pairwise comparisons to
-evaluate the relative manifestation of a trait between a pair of
-stimuli. This evaluation results in a dichotomous outcome that indicates
-which stimulus is perceived to exhibit a higher degree of the trait. The
-BTL model then uses these observed outcomes to estimate scores that
-represent the latent trait of interest
+In a typical CJ study, the Bradley-Terry-Luce (BTL) model
+\citep{Bradley_et_al_1952, Luce_1959} serves as the measurement model.
+This model specifies how latent variables are estimated from observed
+ones \citep{Hoyle_et_al_2023, Kline_et_al_2023}. In the context of CJ,
+multiple judges engage in several rounds of pairwise comparisons to
+assess the relative manifestation of a trait between two stimuli. Each
+comparison generates a dichotomous outcome, indicating which stimulus is
+perceived to exhibit a higher degree of the trait. The BTL model then
+uses these observed outcomes to estimate scores that represent the
+latent trait of interest
 \citep{Pollitt_2012a, Pollitt_2012b, Whitehouse_2012, Jones_2015, vanDaal_et_al_2016, Lesterhuis_2018, Boonen_et_al_2020, Bouwer_et_al_2023}.
 
-Moreover, in the CJ literature, it is common practice for BTL-generated
-scores, or their transformations, to undergo additional data analysis
-and hypothesis testing. Researchers have utilized these scores in
-independent analyses to identify `misfit' judges and stimuli
+Moreover, researchers often use these BTL-generated scores or their
+transformations separately, applying additional analyses or hypothesis
+testing. The CJ literature shows that these scores have been employed to
+identify `misfit' judges and stimuli
 \citep{Pollitt_2012b, vanDaal_et_al_2017, Goossens_et_al_2018}, detect
 biases in judges' ratings \citep{Pollitt_et_al_2003, Pollitt_2012b},
 calculate correlations with other scoring methods
@@ -269,20 +270,30 @@ calculate correlations with other scoring methods
 related to the trait of interest
 \citep{Bramley_et_al_2019, Boonen_et_al_2020, Bouwer_et_al_2023, vanDaal_et_al_2017, Jones_et_al_2019, Gijsen_et_al_2021}.
 
-\subsection{Case 5 and the measurement
-model}\label{case-5-and-the-measurement-model}
+However, the statistical literature warns against using estimated scores
+for separate analyses and hypothesis testing. BTL-generated scores are
+parameter estimates that inherently carry uncertainty. Neglecting this
+uncertainty can inflate the precision and statistical power in
+independent analyses and tests. This oversight, in turn, may increase
+the risk of committing a type I error, where the null hypothesis is
+incorrectly rejected \citep{McElreath_2020}. To mitigate this risk,
+principles from Structural Equation Modeling (SEM)
+\citep{Hoyle_et_al_2023, Kline_et_al_2023} recommend conducting such
+analyses within the structural model of CJ rather than separately.
+Therefore, an integrated approach combining both structural and
+measurement models is advisable.
 
-\subsection{The efficiency and reliability of comparison
-algorithms}\label{the-efficiency-and-reliability-of-comparison-algorithms}
+\subsection{The assumptions of Case 5 and the measurement
+model}\label{the-assumptions-of-case-5-and-the-measurement-model}
 
-\subsection{What is the solution}\label{what-is-the-solution}
+\subsection{The role and impact of comparison
+algorithms}\label{the-role-and-impact-of-comparison-algorithms}
 
 \section{Theory}\label{sec-theory}
 
-\subsection{A theoretical model for the CJ}\label{sec-theory-scientific}
+\subsection{A theoretical model for CJ}\label{sec-theory-theoretical}
 
-\subsection{From theory to statistical
-model}\label{sec-theory-statmodel}
+\subsection{From theory to statistics}\label{sec-theory-statistics}
 
 \section{Discussion}\label{sec-discuss}
 
