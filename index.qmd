@@ -1,5 +1,6 @@
 ---
-title: "Let's talk about Thurstone & Co.: An information-theoretical model for comparative judgments, and its statistical translation"
+title: "Let's talk about Thurstone & Co. "
+subtitle: "An information-theoretical model for comparative judgments, and its statistical translation"
 author:
   - name: 
       given: Jose Manuel
