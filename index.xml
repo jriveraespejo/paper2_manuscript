@@ -104,10 +104,10 @@ sciences</institution>
 <corresp id="cor-1">JoseManuel.RiveraEspejo@uantwerpen.be</corresp>
 </author-notes>
 
-<pub-date date-type="pub" publication-format="electronic" iso-8601-date="2024-10-23">
+<pub-date date-type="pub" publication-format="electronic" iso-8601-date="2024-10-24">
 <year>2024</year>
 <month>10</month>
-<day>23</day>
+<day>24</day>
 </pub-date>
 
 
@@ -205,15 +205,15 @@ the University of Antwerp (BOF).</funding-statement>
   and De Maeyer 2018</xref>).</p>
   <p>Nevertheless, despite the growing number of studies on CJ,
   unsystematic and fragmented research approaches in the literature have
-  left several critical issues unaddressed. These issues can be grouped
-  into three main categories: the disconnect between CJ’s structural and
+  left several critical issues unaddressed. This research primarily
+  focuses on three: the apparent disconnect between CJ’s structural and
   measurement model, the over-reliance on the assumptions of Thurstone’s
   Case 5
   (<xref alt="1927" rid="ref-Thurstone_1927" ref-type="bibr">1927</xref>)
-  in its measurement model, and the unclear role and impact of
+  in CJ’s measurement model, and the unclear role and impact of
   comparison algorithms and the number of comparisons on the method’s
   reliability and validity. The following sections will discuss each of
-  these issues in detail,, followed by the introduction of a theoretical
+  these issues in detail, followed by the introduction of a theoretical
   model and its statistical translation, which aim to address all three
   concerns simultaneously.</p>
 </sec>
@@ -227,17 +227,15 @@ the University of Antwerp (BOF).</funding-statement>
     and Terry 1952</xref>;
     <xref alt="Luce 1959" rid="ref-Luce_1959" ref-type="bibr">Luce
     1959</xref>) serves as the measurement model. This model specifies
-    how latent variables are estimated from observed ones
-    (<xref alt="Hoyle 2023" rid="ref-Hoyle_et_al_2023" ref-type="bibr">Hoyle
-    2023</xref>;
-    <xref alt="Kline 2023" rid="ref-Kline_et_al_2023" ref-type="bibr">Kline
-    2023</xref>). In the context of CJ, multiple judges engage in
-    several rounds of pairwise comparisons to assess the relative
-    manifestation of a trait between two stimuli. Each comparison
-    generates a dichotomous outcome, indicating which stimulus is
-    perceived to exhibit a higher degree of the trait. The BTL model
-    then uses these observed outcomes to estimate scores that represent
-    the latent trait of interest
+    how latent variables are estimated from observed variables
+    (<xref alt="Everitt and Skrondal 2010" rid="ref-Everitt_et_al_2010" ref-type="bibr">Everitt
+    and Skrondal 2010</xref>). In CJ, multiple judges engage in several
+    rounds of pairwise comparisons to assess the relative manifestation
+    of a trait between two stimuli. Each comparison generates a
+    dichotomous outcome, indicating which stimulus is perceived to
+    exhibit a higher degree of the trait. The BTL model then uses these
+    observed outcomes to estimate scores that represent the latent trait
+    of interest
     (<xref alt="Pollitt 2012a" rid="ref-Pollitt_2012a" ref-type="bibr">Pollitt
     2012a</xref>,
     <xref alt="2012b" rid="ref-Pollitt_2012b" ref-type="bibr">2012b</xref>;
@@ -254,9 +252,9 @@ the University of Antwerp (BOF).</funding-statement>
     <xref alt="Bouwer et al. 2023" rid="ref-Bouwer_et_al_2023" ref-type="bibr">Bouwer
     et al. 2023</xref>).</p>
     <p>Moreover, researchers often use these BTL-generated scores or
-    their transformations separately, applying additional analyses or
-    hypothesis testing. The CJ literature shows that these scores have
-    been employed to identify ‘misfit’ judges and stimuli
+    their transformations separately, conducting further analyses or
+    hypothesis testing. The CJ literature highlights how these scores
+    have been employed to identify ‘misfit’ judges and stimuli
     (<xref alt="Pollitt 2012b" rid="ref-Pollitt_2012b" ref-type="bibr">Pollitt
     2012b</xref>;
     <xref alt="van Daal et al. 2017" rid="ref-vanDaal_et_al_2017" ref-type="bibr">van
@@ -284,23 +282,25 @@ the University of Antwerp (BOF).</funding-statement>
     et al. 2019</xref>;
     <xref alt="Gijsen et al. 2021" rid="ref-Gijsen_et_al_2021" ref-type="bibr">Gijsen
     et al. 2021</xref>).</p>
-    <p>However, the statistical literature warns against using estimated
-    scores for separate analyses and hypothesis testing. BTL-generated
-    scores are parameter estimates that inherently carry uncertainty.
-    Neglecting this uncertainty can inflate the precision and
-    statistical power in independent analyses and tests. This oversight,
-    in turn, may increase the risk of committing a type I error, where
-    the null hypothesis is incorrectly rejected
+    <p>However, the statistical literature cautions against using
+    estimated scores for separate analyses and hypothesis testing. A key
+    consideration is that BTL-generated scores are parameter estimates
+    that inherently carry uncertainty. Ignoring this uncertainty when
+    conducting separate analyses and test can inflate their precision
+    and statistical power. This, in turn, increases the risk of
+    committing a type I error, which is when a null hypothesis is
+    incorrectly rejected
     (<xref alt="McElreath 2020" rid="ref-McElreath_2020" ref-type="bibr">McElreath
     2020</xref>). To mitigate this risk, principles from Structural
     Equation Modeling (SEM)
     (<xref alt="Hoyle 2023" rid="ref-Hoyle_et_al_2023" ref-type="bibr">Hoyle
     2023</xref>;
     <xref alt="Kline 2023" rid="ref-Kline_et_al_2023" ref-type="bibr">Kline
-    2023</xref>) recommend conducting such analyses within the
-    structural model of CJ rather than separately. Therefore, an
-    integrated approach combining both structural and measurement models
-    is advisable.</p>
+    2023</xref>) recommend conducting these analyses within a structural
+    model that accounts for both the scores and their uncertainties,
+    rather than treating them separately. Thus, an integrated approach
+    combining CJ’s structural and measurement models can offer
+    significant advantages.</p>
   </sec>
   <sec id="the-assumptions-of-case-5-and-the-measurement-model">
     <title>The assumptions of Case 5 and the measurement model</title>
@@ -686,6 +686,20 @@ the University of Antwerp (BOF).</funding-statement>
           <pub-id pub-id-type="doi">10.17239/jowr-2024.15.03.03</pub-id>
           <fpage>497</fpage>
           <lpage>518</lpage>
+        </element-citation>
+      </ref>
+      <ref id="ref-Everitt_et_al_2010">
+        <element-citation publication-type="book">
+          <person-group person-group-type="author">
+            <name><surname>Everitt</surname><given-names>B.</given-names></name>
+            <name><surname>Skrondal</surname><given-names>A.</given-names></name>
+          </person-group>
+          <source>The cambridge dictionary of statistics</source>
+          <publisher-name>Cambridge University Press</publisher-name>
+          <year iso-8601-date="2010">2010</year>
+          <isbn>978-0521766999</isbn>
+          <uri></uri>
+          <pub-id pub-id-type="doi"></pub-id>
         </element-citation>
       </ref>
       <ref id="ref-McElreath_2020">

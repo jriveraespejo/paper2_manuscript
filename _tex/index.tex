@@ -231,13 +231,13 @@ to traditional marking methods
 
 Nevertheless, despite the growing number of studies on CJ, unsystematic
 and fragmented research approaches in the literature have left several
-critical issues unaddressed. These issues can be grouped into three main
-categories: the disconnect between CJ's structural and measurement
-model, the over-reliance on the assumptions of Thurstone's Case 5
-\citeyearpar{Thurstone_1927} in its measurement model, and the unclear
+critical issues unaddressed. This research primarily focuses on three:
+the apparent disconnect between CJ's structural and measurement model,
+the over-reliance on the assumptions of Thurstone's Case 5
+\citeyearpar{Thurstone_1927} in CJ's measurement model, and the unclear
 role and impact of comparison algorithms and the number of comparisons
 on the method's reliability and validity. The following sections will
-discuss each of these issues in detail,, followed by the introduction of
+discuss each of these issues in detail, followed by the introduction of
 a theoretical model and its statistical translation, which aim to
 address all three concerns simultaneously.
 
@@ -250,19 +250,18 @@ models}\label{the-disconnect-between-structural-and-measurement-models}
 In a typical CJ study, the Bradley-Terry-Luce (BTL) model
 \citep{Bradley_et_al_1952, Luce_1959} serves as the measurement model.
 This model specifies how latent variables are estimated from observed
-ones \citep{Hoyle_et_al_2023, Kline_et_al_2023}. In the context of CJ,
-multiple judges engage in several rounds of pairwise comparisons to
-assess the relative manifestation of a trait between two stimuli. Each
-comparison generates a dichotomous outcome, indicating which stimulus is
-perceived to exhibit a higher degree of the trait. The BTL model then
-uses these observed outcomes to estimate scores that represent the
-latent trait of interest
+variables \citep{Everitt_et_al_2010}. In CJ, multiple judges engage in
+several rounds of pairwise comparisons to assess the relative
+manifestation of a trait between two stimuli. Each comparison generates
+a dichotomous outcome, indicating which stimulus is perceived to exhibit
+a higher degree of the trait. The BTL model then uses these observed
+outcomes to estimate scores that represent the latent trait of interest
 \citep{Pollitt_2012a, Pollitt_2012b, Whitehouse_2012, Jones_2015, vanDaal_et_al_2016, Lesterhuis_2018, Boonen_et_al_2020, Bouwer_et_al_2023}.
 
 Moreover, researchers often use these BTL-generated scores or their
-transformations separately, applying additional analyses or hypothesis
-testing. The CJ literature shows that these scores have been employed to
-identify `misfit' judges and stimuli
+transformations separately, conducting further analyses or hypothesis
+testing. The CJ literature highlights how these scores have been
+employed to identify `misfit' judges and stimuli
 \citep{Pollitt_2012b, vanDaal_et_al_2017, Goossens_et_al_2018}, detect
 biases in judges' ratings \citep{Pollitt_et_al_2003, Pollitt_2012b},
 calculate correlations with other scoring methods
@@ -270,18 +269,19 @@ calculate correlations with other scoring methods
 related to the trait of interest
 \citep{Bramley_et_al_2019, Boonen_et_al_2020, Bouwer_et_al_2023, vanDaal_et_al_2017, Jones_et_al_2019, Gijsen_et_al_2021}.
 
-However, the statistical literature warns against using estimated scores
-for separate analyses and hypothesis testing. BTL-generated scores are
-parameter estimates that inherently carry uncertainty. Neglecting this
-uncertainty can inflate the precision and statistical power in
-independent analyses and tests. This oversight, in turn, may increase
-the risk of committing a type I error, where the null hypothesis is
-incorrectly rejected \citep{McElreath_2020}. To mitigate this risk,
-principles from Structural Equation Modeling (SEM)
-\citep{Hoyle_et_al_2023, Kline_et_al_2023} recommend conducting such
-analyses within the structural model of CJ rather than separately.
-Therefore, an integrated approach combining both structural and
-measurement models is advisable.
+However, the statistical literature cautions against using estimated
+scores for separate analyses and hypothesis testing. A key consideration
+is that BTL-generated scores are parameter estimates that inherently
+carry uncertainty. Ignoring this uncertainty when conducting separate
+analyses and test can inflate their precision and statistical power.
+This, in turn, increases the risk of committing a type I error, which is
+when a null hypothesis is incorrectly rejected \citep{McElreath_2020}.
+To mitigate this risk, principles from Structural Equation Modeling
+(SEM) \citep{Hoyle_et_al_2023, Kline_et_al_2023} recommend conducting
+these analyses within a structural model that accounts for both the
+scores and their uncertainties, rather than treating them separately.
+Thus, an integrated approach combining CJ's structural and measurement
+models can offer significant advantages.
 
 \subsection{The assumptions of Case 5 and the measurement
 model}\label{the-assumptions-of-case-5-and-the-measurement-model}
