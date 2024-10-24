@@ -211,14 +211,14 @@ the University of Antwerp (BOF).</funding-statement>
   Case 5
   (<xref alt="1927" rid="ref-Thurstone_1927" ref-type="bibr">1927</xref>)
   in CJ’s measurement model, and the unclear role and impact of
-  comparison algorithms and the number of comparisons on the method’s
-  reliability and validity. The following sections will discuss each of
-  these issues in detail, followed by the introduction of a theoretical
-  model and its statistical translation, which aim to address all three
-  concerns simultaneously.</p>
+  comparison algorithms on the method’s reliability and validity. The
+  following sections will discuss each of these issues in detail,
+  followed by the introduction of a theoretical model and its
+  statistical translation, which aim to address all three concerns
+  simultaneously.</p>
 </sec>
 <sec id="sec-theory-issues">
-  <title>The three critical issues in CJ literature</title>
+  <title>Three critical issues in CJ literature</title>
   <sec id="the-disconnect-between-structural-and-measurement-models">
     <title>The disconnect between structural and measurement
     models</title>
@@ -226,8 +226,12 @@ the University of Antwerp (BOF).</funding-statement>
     (<xref alt="Bradley and Terry 1952" rid="ref-Bradley_et_al_1952" ref-type="bibr">Bradley
     and Terry 1952</xref>;
     <xref alt="Luce 1959" rid="ref-Luce_1959" ref-type="bibr">Luce
-    1959</xref>) serves as the measurement model. This model specifies
-    how latent variables are estimated from observed variables
+    1959</xref>) serves as the measurement model
+    (<xref alt="Andrich 1978" rid="ref-Andrich_1978" ref-type="bibr">Andrich
+    1978</xref>;
+    <xref alt="Bramley 2008" rid="ref-Bramley_2008" ref-type="bibr">Bramley
+    2008</xref>). This model specifies how latent variables are
+    estimated from manifest variables
     (<xref alt="Everitt and Skrondal 2010" rid="ref-Everitt_et_al_2010" ref-type="bibr">Everitt
     and Skrondal 2010</xref>). In CJ, multiple judges engage in several
     rounds of pairwise comparisons to assess the relative manifestation
@@ -253,8 +257,8 @@ the University of Antwerp (BOF).</funding-statement>
     et al. 2023</xref>).</p>
     <p>Moreover, researchers often use these BTL-generated scores or
     their transformations separately, conducting further analyses or
-    hypothesis testing. The CJ literature highlights how these scores
-    have been employed to identify ‘misfit’ judges and stimuli
+    hypothesis testing. The CJ literature shows how these scores have
+    been employed to identify ‘misfit’ judges and stimuli
     (<xref alt="Pollitt 2012b" rid="ref-Pollitt_2012b" ref-type="bibr">Pollitt
     2012b</xref>;
     <xref alt="van Daal et al. 2017" rid="ref-vanDaal_et_al_2017" ref-type="bibr">van
@@ -283,24 +287,32 @@ the University of Antwerp (BOF).</funding-statement>
     <xref alt="Gijsen et al. 2021" rid="ref-Gijsen_et_al_2021" ref-type="bibr">Gijsen
     et al. 2021</xref>).</p>
     <p>However, the statistical literature cautions against using
-    estimated scores for separate analyses and hypothesis testing. A key
+    estimated scores for separate analyses and tests. A key
     consideration is that BTL-generated scores are parameter estimates
     that inherently carry uncertainty. Ignoring this uncertainty when
-    conducting separate analyses and test can inflate their precision
+    conducting separate analyses and tests can inflate their precision
     and statistical power. This, in turn, increases the risk of
-    committing a type I error, which is when a null hypothesis is
-    incorrectly rejected
+    committing a type I error
     (<xref alt="McElreath 2020" rid="ref-McElreath_2020" ref-type="bibr">McElreath
-    2020</xref>). To mitigate this risk, principles from Structural
-    Equation Modeling (SEM)
+    2020</xref>), which is when a null hypothesis is incorrectly
+    rejected
+    (<xref alt="Everitt and Skrondal 2010" rid="ref-Everitt_et_al_2010" ref-type="bibr">Everitt
+    and Skrondal 2010</xref>). To mitigate this risk, principles from
+    Structural Equation Modeling (SEM)
     (<xref alt="Hoyle 2023" rid="ref-Hoyle_et_al_2023" ref-type="bibr">Hoyle
     2023</xref>;
     <xref alt="Kline 2023" rid="ref-Kline_et_al_2023" ref-type="bibr">Kline
-    2023</xref>) recommend conducting these analyses within a structural
-    model that accounts for both the scores and their uncertainties,
-    rather than treating them separately. Thus, an integrated approach
-    combining CJ’s structural and measurement models can offer
-    significant advantages.</p>
+    2023</xref>) and Item Response Theory (IRT)
+    (<xref alt="de Ayala 2009" rid="ref-deAyala_2009" ref-type="bibr">de
+    Ayala 2009</xref>;
+    <xref alt="Fox 2010" rid="ref-Fox_2010" ref-type="bibr">Fox
+    2010</xref>;
+    <xref alt="van der Linden 2017" rid="ref-vanderLinden_et_al_2017" ref-type="bibr">van
+    der Linden 2017</xref>) recommend conducting these analyses and
+    tests within a structural model that accounts for both the scores
+    and their uncertainties, rather than treating them separately. Thus,
+    an integrated approach combining CJ’s structural and measurement
+    models can offer significant advantages.</p>
   </sec>
   <sec id="the-assumptions-of-case-5-and-the-measurement-model">
     <title>The assumptions of Case 5 and the measurement model</title>
@@ -418,6 +430,22 @@ the University of Antwerp (BOF).</funding-statement>
           <pub-id pub-id-type="doi">10.1037/h0043178</pub-id>
           <fpage>482</fpage>
           <lpage>499</lpage>
+        </element-citation>
+      </ref>
+      <ref id="ref-Andrich_1978">
+        <element-citation publication-type="article-journal">
+          <person-group person-group-type="author">
+            <name><surname>Andrich</surname><given-names>D.</given-names></name>
+          </person-group>
+          <article-title>Relationships between the thurstone and rasch approaches to item scaling</article-title>
+          <source>Applied Psychological Measurement</source>
+          <year iso-8601-date="1978">1978</year>
+          <volume>2</volume>
+          <issue>3</issue>
+          <uri></uri>
+          <pub-id pub-id-type="doi">10.1177/014662167800200319</pub-id>
+          <fpage>451</fpage>
+          <lpage>462</lpage>
         </element-citation>
       </ref>
       <ref id="ref-Pollitt_2012a">
@@ -688,6 +716,19 @@ the University of Antwerp (BOF).</funding-statement>
           <lpage>518</lpage>
         </element-citation>
       </ref>
+      <ref id="ref-deAyala_2009">
+        <element-citation publication-type="book">
+          <person-group person-group-type="author">
+            <name><surname>de Ayala</surname><given-names>R.</given-names></name>
+          </person-group>
+          <source>The theory and practice of item response theory</source>
+          <publisher-name>The Guilford Press</publisher-name>
+          <year iso-8601-date="2009">2009</year>
+          <isbn>9781593858698</isbn>
+          <uri></uri>
+          <pub-id pub-id-type="doi"></pub-id>
+        </element-citation>
+      </ref>
       <ref id="ref-Everitt_et_al_2010">
         <element-citation publication-type="book">
           <person-group person-group-type="author">
@@ -698,6 +739,32 @@ the University of Antwerp (BOF).</funding-statement>
           <publisher-name>Cambridge University Press</publisher-name>
           <year iso-8601-date="2010">2010</year>
           <isbn>978-0521766999</isbn>
+          <uri></uri>
+          <pub-id pub-id-type="doi"></pub-id>
+        </element-citation>
+      </ref>
+      <ref id="ref-Fox_2010">
+        <element-citation publication-type="book">
+          <person-group person-group-type="author">
+            <name><surname>Fox</surname><given-names>J. P.</given-names></name>
+          </person-group>
+          <source>Bayesian item response modeling, theory and applications</source>
+          <publisher-name>Springer</publisher-name>
+          <year iso-8601-date="2010">2010</year>
+          <volume></volume>
+          <uri></uri>
+          <pub-id pub-id-type="doi"></pub-id>
+        </element-citation>
+      </ref>
+      <ref id="ref-vanderLinden_et_al_2017">
+        <element-citation publication-type="book">
+          <source>Handbook of item response theory</source>
+          <person-group person-group-type="editor">
+            <name><surname>van der Linden</surname><given-names>W.</given-names></name>
+          </person-group>
+          <publisher-name>CRC Press</publisher-name>
+          <year iso-8601-date="2017">2017</year>
+          <volume>1-3</volume>
           <uri></uri>
           <pub-id pub-id-type="doi"></pub-id>
         </element-citation>
@@ -749,6 +816,28 @@ the University of Antwerp (BOF).</funding-statement>
           <article-title>The validity of comparative judgement for assessing text quality: An assessor’s perspective</article-title>
           <publisher-name>University of Antwerp</publisher-name>
           <year iso-8601-date="2018">2018</year>
+        </element-citation>
+      </ref>
+      <ref id="ref-Bramley_2008">
+        <element-citation publication-type="chapter">
+          <person-group person-group-type="author">
+            <name><surname>Bramley</surname><given-names>T.</given-names></name>
+          </person-group>
+          <article-title>Paired comparison methods</article-title>
+          <source>Techniques for monitoring the comparability of examination standards</source>
+          <person-group person-group-type="editor">
+            <name><surname>Newton</surname><given-names>P.</given-names></name>
+            <name><surname>Baird</surname><given-names>J.</given-names></name>
+            <name><surname>Goldsteing</surname><given-names>H.</given-names></name>
+            <name><surname>Patrick</surname><given-names>H.</given-names></name>
+            <name><surname>Tymms</surname><given-names>P.</given-names></name>
+          </person-group>
+          <publisher-name>GOV.UK.</publisher-name>
+          <year iso-8601-date="2008">2008</year>
+          <uri>https://www.gov.uk/government/publications/techniques-for-monitoring-the-comparability-of-examination-standards</uri>
+          <pub-id pub-id-type="doi"></pub-id>
+          <fpage>246</fpage>
+          <lpage>300</lpage>
         </element-citation>
       </ref>
       <ref id="ref-Bartholomew_et_al_2020">
