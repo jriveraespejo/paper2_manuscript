@@ -261,7 +261,7 @@ estimate scores that represent the latent trait of interest
 
 Moreover, researchers often use these BTL-generated scores or their
 transformations separately, conducting further analyses or hypothesis
-testing. The CJ literature shows how these scores have been employed to
+testing. The literature shows how these scores have been employed to
 identify `misfit' judges and stimuli
 \citep{Pollitt_2012b, vanDaal_et_al_2017, Goossens_et_al_2018}, detect
 biases in judges' ratings \citep{Pollitt_et_al_2003, Pollitt_2012b},
@@ -274,11 +274,11 @@ However, the statistical literature cautions against using estimated
 scores for separate analyses and tests. A key consideration is that
 BTL-generated scores are parameter estimates that inherently carry
 uncertainty. Ignoring this uncertainty when conducting separate analyses
-and tests can inflate their precision and statistical power. This, in
-turn, increases the risk of committing a type I error
-\citep{McElreath_2020}, which is when a null hypothesis is incorrectly
-rejected \citep{Everitt_et_al_2010}. To mitigate this risk, principles
-from Structural Equation Modeling (SEM)
+and tests can inflate their precision and statistical power, increasing
+the risk of committing a type I error \citep{McElreath_2020}, which is
+when a null hypothesis is incorrectly rejected
+\citep{Everitt_et_al_2010}. To mitigate this risk, principles from
+Structural Equation Modeling (SEM)
 \citep{Hoyle_et_al_2023, Kline_et_al_2023} and Item Response Theory
 (IRT) \citep{deAyala_2009, Fox_2010, vanderLinden_et_al_2017} recommend
 conducting these analyses and tests within a structural model that
@@ -288,6 +288,84 @@ structural and measurement models can offer significant advantages.
 
 \subsection{The assumptions of Case 5 and the measurement
 model}\label{the-assumptions-of-case-5-and-the-measurement-model}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  the BTL model is the statistical articulation of Case 5
+\end{enumerate}
+
+From early on in the literature, it has been clear that the BTL model
+represents a statistical articulation of Thurstone's Case 5
+\citeyearpar{Thurstone_1927}. Talk about \citet{Pollitt_et_al_2003} and
+\citet{Bramley_2008}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\setcounter{enumi}{1}
+\tightlist
+\item
+  But this model hold the greater number of assumptions
+\end{enumerate}
+
+Although Case 5 was originally articulated to produce a ``rather coarse
+scaling'' of traits \citep[p.~269]{Thurstone_1927}, its assumptions have
+become predominant in the literature, but Thurstone's Case 5 is the case
+that holds the greater amount of simplifying assumptions.
+
+\citet{Thurstone_1927} justify the use of case V, on multiple
+assumptions, but the most important for our purpose are three:
+
+\begin{enumerate}
+\def\labelenumi{(\alph{enumi})}
+\tightlist
+\item
+  related to Case 3, it assumes the correlation between stimuli is zero,
+  this translates into the cancellation of judges effects by mean of
+  opposing and equally weigthed `mood' and `simultaneous contrasts'
+  effects. This is demonstrated using the additivive nature of the logit
+  scale, which helps to cancel `bias' judges effects.
+\end{enumerate}
+
+\begin{enumerate}
+\def\labelenumi{(\alph{enumi})}
+\setcounter{enumi}{1}
+\tightlist
+\item
+  related to Case 3, it assumes the correlation between stimuli is zero,
+  this also translates into the idea that stimuli are the main focus of
+  estimation and analysis, but what happens when the focus of analysis
+  is the individuals that generated those stimuli. Meaning there is an
+  amount of correlation that it is not accounted for.
+\end{enumerate}
+
+\begin{enumerate}
+\def\labelenumi{(\alph{enumi})}
+\setcounter{enumi}{2}
+\tightlist
+\item
+  related to case 5, discriminal dispersions of the stimuli are equal,
+  but it is not hard to imagine that certain individuals can produce
+  good quality texts with more precision than other individuals.
+\end{enumerate}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\setcounter{enumi}{2}
+\tightlist
+\item
+  What problems does this bring?
+\end{enumerate}
+
+This leaves issues such as the presence of judge' biases hinted by
+\citet{Bramley_2008} and \citet{Kelly_et_al_2022}, and evidenced by
+\citet{Pollitt_et_al_2003}, \citet{Arlett_2003}, and
+\citet{Guthrie_2003}
+
+{Reliability is a necessary but not sufficient condition for validity.
+Reliability can exist without validity but validity cannot exist without
+reliability \citep{Perron_et_al_2015}}.
 
 \subsection{The role and impact of comparison
 algorithms}\label{the-role-and-impact-of-comparison-algorithms}

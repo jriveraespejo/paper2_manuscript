@@ -10,7 +10,7 @@
 <meta name="author" content="Tine van van Daal">
 <meta name="author" content="Sven De De Maeyer">
 <meta name="author" content="Steven Gillis">
-<meta name="dcterms.date" content="2024-10-24">
+<meta name="dcterms.date" content="2024-10-25">
 <meta name="keywords" content="causal inference, probability, Thurstone, comparative judgement, directed acyclic graph, structural causal models, statistical modeling">
 
 <title>Let’s talk about Thurstone &amp; Co.: An information-theoretical model for comparative judgments, and its statistical translation</title>
@@ -75,10 +75,10 @@ div.csl-indent {
 <meta name="citation_author" content="Tine van van Daal">
 <meta name="citation_author" content="Sven De De Maeyer">
 <meta name="citation_author" content="Steven Gillis">
-<meta name="citation_publication_date" content="2024-10-24">
-<meta name="citation_cover_date" content="2024-10-24">
+<meta name="citation_publication_date" content="2024-10-25">
+<meta name="citation_cover_date" content="2024-10-25">
 <meta name="citation_year" content="2024">
-<meta name="citation_online_date" content="2024-10-24">
+<meta name="citation_online_date" content="2024-10-25">
 <meta name="citation_language" content="en">
 <meta name="citation_reference" content="citation_title=Correlation and causation;,citation_author=S. Wright;,citation_publication_date=1927;,citation_cover_date=1927;,citation_year=1927;,citation_fulltext_html_url=https://books.google.co.ao/books/about/Journal_of_Agricultural_Research.html?hl=pt-PT&amp;amp;amp;id=lNNdIV_qpwIC;,citation_issue=7;,citation_volume=20;,citation_journal_title=Correlation and causation;">
 <meta name="citation_reference" content="citation_title=On the interpretation of χ2 from contingency tables, and the calculation of p;,citation_author=R. Fisher;,citation_publication_date=1922;,citation_cover_date=1922;,citation_year=1922;,citation_fulltext_html_url=http://www.jstor.org/stable/2340521;,citation_issue=1;,citation_doi=10.2307/2340521;,citation_volume=85;,citation_journal_title=Journal of the Royal Statistical Society;,citation_publisher=[Wiley, Royal Statistical Society];">
@@ -394,7 +394,7 @@ div.csl-indent {
                 <div>
             <div class="quarto-title-meta-heading">Published</div>
             <div class="quarto-title-meta-contents">
-              <p class="date">October 24, 2024</p>
+              <p class="date">October 25, 2024</p>
             </div>
           </div>
           
@@ -480,31 +480,44 @@ div.csl-indent {
 <!-- 1. The BTL model is CJ's measurement model -->
 <p>In a typical CJ study, the Bradley-Terry-Luce (BTL) model <span class="citation" data-cites="Bradley_et_al_1952 Luce_1959">(<a href="#ref-Bradley_et_al_1952" role="doc-biblioref">Bradley and Terry 1952</a>; <a href="#ref-Luce_1959" role="doc-biblioref">Luce 1959</a>)</span> serves as the measurement model <span class="citation" data-cites="Andrich_1978 Bramley_2008">(<a href="#ref-Andrich_1978" role="doc-biblioref">Andrich 1978</a>; <a href="#ref-Bramley_2008" role="doc-biblioref">Bramley 2008</a>)</span>. This model specifies how latent variables are estimated from manifest variables <span class="citation" data-cites="Everitt_et_al_2010">(<a href="#ref-Everitt_et_al_2010" role="doc-biblioref">Everitt and Skrondal 2010</a>)</span>. In CJ, multiple judges engage in several rounds of pairwise comparisons to assess the relative manifestation of a trait between two stimuli. Each comparison generates a dichotomous outcome, indicating which stimulus is perceived to exhibit a higher degree of the trait. The BTL model then uses these observed outcomes to estimate scores that represent the latent trait of interest <span class="citation" data-cites="Pollitt_2012a Pollitt_2012b Whitehouse_2012 Jones_2015 vanDaal_et_al_2016 Lesterhuis_2018 Boonen_et_al_2020 Bouwer_et_al_2023">(<a href="#ref-Pollitt_2012a" role="doc-biblioref">Pollitt 2012a</a>, <a href="#ref-Pollitt_2012b" role="doc-biblioref">2012b</a>; <a href="#ref-Whitehouse_2012" role="doc-biblioref">Whitehouse 2012</a>; <a href="#ref-Jones_2015" role="doc-biblioref">Jones 2015</a>; <a href="#ref-vanDaal_et_al_2016" role="doc-biblioref">van Daal et al. 2016</a>; <a href="#ref-Lesterhuis_2018" role="doc-biblioref">Lesterhuis 2018</a>; <a href="#ref-Boonen_et_al_2020" role="doc-biblioref">Boonen, Kloots, and Gillis 2020</a>; <a href="#ref-Bouwer_et_al_2023" role="doc-biblioref">Bouwer et al. 2023</a>)</span>.</p>
 <!-- 2. But there is no structural model, only post estimation analyses -->
-<p>Moreover, researchers often use these BTL-generated scores or their transformations separately, conducting further analyses or hypothesis testing. The CJ literature shows how these scores have been employed to identify ‘misfit’ judges and stimuli <span class="citation" data-cites="Pollitt_2012b vanDaal_et_al_2017 Goossens_et_al_2018">(<a href="#ref-Pollitt_2012b" role="doc-biblioref">Pollitt 2012b</a>; <a href="#ref-vanDaal_et_al_2017" role="doc-biblioref">van Daal et al. 2017</a>; <a href="#ref-Goossens_et_al_2018" role="doc-biblioref">Goossens and De Maeyer 2018</a>)</span>, detect biases in judges’ ratings <span class="citation" data-cites="Pollitt_et_al_2003 Pollitt_2012b">(<a href="#ref-Pollitt_et_al_2003" role="doc-biblioref">Pollitt and Elliott 2003</a>; <a href="#ref-Pollitt_2012b" role="doc-biblioref">Pollitt 2012b</a>)</span>, calculate correlations with other scoring methods <span class="citation" data-cites="Goossens_et_al_2018 Bouwer_et_al_2023">(<a href="#ref-Goossens_et_al_2018" role="doc-biblioref">Goossens and De Maeyer 2018</a>; <a href="#ref-Bouwer_et_al_2023" role="doc-biblioref">Bouwer et al. 2023</a>)</span>, or test hypotheses related to the trait of interest <span class="citation" data-cites="Bramley_et_al_2019 Boonen_et_al_2020 Bouwer_et_al_2023 vanDaal_et_al_2017 Jones_et_al_2019 Gijsen_et_al_2021">(<a href="#ref-Bramley_et_al_2019" role="doc-biblioref">Bramley and Vitello 2019</a>; <a href="#ref-Boonen_et_al_2020" role="doc-biblioref">Boonen, Kloots, and Gillis 2020</a>; <a href="#ref-Bouwer_et_al_2023" role="doc-biblioref">Bouwer et al. 2023</a>; <a href="#ref-vanDaal_et_al_2017" role="doc-biblioref">van Daal et al. 2017</a>; <a href="#ref-Jones_et_al_2019" role="doc-biblioref">Jones et al. 2019</a>; <a href="#ref-Gijsen_et_al_2021" role="doc-biblioref">Gijsen et al. 2021</a>)</span>.</p>
+<p>Moreover, researchers often use these BTL-generated scores or their transformations separately, conducting further analyses or hypothesis testing. The literature shows how these scores have been employed to identify ‘misfit’ judges and stimuli <span class="citation" data-cites="Pollitt_2012b vanDaal_et_al_2017 Goossens_et_al_2018">(<a href="#ref-Pollitt_2012b" role="doc-biblioref">Pollitt 2012b</a>; <a href="#ref-vanDaal_et_al_2017" role="doc-biblioref">van Daal et al. 2017</a>; <a href="#ref-Goossens_et_al_2018" role="doc-biblioref">Goossens and De Maeyer 2018</a>)</span>, detect biases in judges’ ratings <span class="citation" data-cites="Pollitt_et_al_2003 Pollitt_2012b">(<a href="#ref-Pollitt_et_al_2003" role="doc-biblioref">Pollitt and Elliott 2003</a>; <a href="#ref-Pollitt_2012b" role="doc-biblioref">Pollitt 2012b</a>)</span>, calculate correlations with other scoring methods <span class="citation" data-cites="Goossens_et_al_2018 Bouwer_et_al_2023">(<a href="#ref-Goossens_et_al_2018" role="doc-biblioref">Goossens and De Maeyer 2018</a>; <a href="#ref-Bouwer_et_al_2023" role="doc-biblioref">Bouwer et al. 2023</a>)</span>, or test hypotheses related to the trait of interest <span class="citation" data-cites="Bramley_et_al_2019 Boonen_et_al_2020 Bouwer_et_al_2023 vanDaal_et_al_2017 Jones_et_al_2019 Gijsen_et_al_2021">(<a href="#ref-Bramley_et_al_2019" role="doc-biblioref">Bramley and Vitello 2019</a>; <a href="#ref-Boonen_et_al_2020" role="doc-biblioref">Boonen, Kloots, and Gillis 2020</a>; <a href="#ref-Bouwer_et_al_2023" role="doc-biblioref">Bouwer et al. 2023</a>; <a href="#ref-vanDaal_et_al_2017" role="doc-biblioref">van Daal et al. 2017</a>; <a href="#ref-Jones_et_al_2019" role="doc-biblioref">Jones et al. 2019</a>; <a href="#ref-Gijsen_et_al_2021" role="doc-biblioref">Gijsen et al. 2021</a>)</span>.</p>
 <!-- 3. But what is the problem with this? and what is the solution? -->
-<p>However, the statistical literature cautions against using estimated scores for separate analyses and tests. A key consideration is that BTL-generated scores are parameter estimates that inherently carry uncertainty. Ignoring this uncertainty when conducting separate analyses and tests can inflate their precision and statistical power. This, in turn, increases the risk of committing a type I error <span class="citation" data-cites="McElreath_2020">(<a href="#ref-McElreath_2020" role="doc-biblioref">McElreath 2020</a>)</span>, which is when a null hypothesis is incorrectly rejected <span class="citation" data-cites="Everitt_et_al_2010">(<a href="#ref-Everitt_et_al_2010" role="doc-biblioref">Everitt and Skrondal 2010</a>)</span>. To mitigate this risk, principles from Structural Equation Modeling (SEM) <span class="citation" data-cites="Hoyle_et_al_2023 Kline_et_al_2023">(<a href="#ref-Hoyle_et_al_2023" role="doc-biblioref">Hoyle 2023</a>; <a href="#ref-Kline_et_al_2023" role="doc-biblioref">Kline 2023</a>)</span> and Item Response Theory (IRT) <span class="citation" data-cites="deAyala_2009 Fox_2010 vanderLinden_et_al_2017">(<a href="#ref-deAyala_2009" role="doc-biblioref">de Ayala 2009</a>; <a href="#ref-Fox_2010" role="doc-biblioref">Fox 2010</a>; <a href="#ref-vanderLinden_et_al_2017" role="doc-biblioref">van der Linden 2017</a>)</span> recommend conducting these analyses and tests within a structural model that accounts for both the scores and their uncertainties, rather than treating them separately. Thus, an integrated approach combining CJ’s structural and measurement models can offer significant advantages.</p>
+<p>However, the statistical literature cautions against using estimated scores for separate analyses and tests. A key consideration is that BTL-generated scores are parameter estimates that inherently carry uncertainty. Ignoring this uncertainty when conducting separate analyses and tests can inflate their precision and statistical power, increasing the risk of committing a type I error <span class="citation" data-cites="McElreath_2020">(<a href="#ref-McElreath_2020" role="doc-biblioref">McElreath 2020</a>)</span>, which is when a null hypothesis is incorrectly rejected <span class="citation" data-cites="Everitt_et_al_2010">(<a href="#ref-Everitt_et_al_2010" role="doc-biblioref">Everitt and Skrondal 2010</a>)</span>. To mitigate this risk, principles from Structural Equation Modeling (SEM) <span class="citation" data-cites="Hoyle_et_al_2023 Kline_et_al_2023">(<a href="#ref-Hoyle_et_al_2023" role="doc-biblioref">Hoyle 2023</a>; <a href="#ref-Kline_et_al_2023" role="doc-biblioref">Kline 2023</a>)</span> and Item Response Theory (IRT) <span class="citation" data-cites="deAyala_2009 Fox_2010 vanderLinden_et_al_2017">(<a href="#ref-deAyala_2009" role="doc-biblioref">de Ayala 2009</a>; <a href="#ref-Fox_2010" role="doc-biblioref">Fox 2010</a>; <a href="#ref-vanderLinden_et_al_2017" role="doc-biblioref">van der Linden 2017</a>)</span> recommend conducting these analyses and tests within a structural model that accounts for both the scores and their uncertainties, rather than treating them separately. Thus, an integrated approach combining CJ’s structural and measurement models can offer significant advantages.</p>
 </section>
 <section id="the-assumptions-of-case-5-and-the-measurement-model" class="level2" data-number="2.2">
 <h2 data-number="2.2" class="anchored" data-anchor-id="the-assumptions-of-case-5-and-the-measurement-model"><span class="header-section-number">2.2</span> The assumptions of Case 5 and the measurement model</h2>
-<!-- Measurement model -->
-<!-- a. measurement model is based on case V -->
-<!--   a.1 It does not consider the effects of judges (different perceptions per stimuli) -->
-<!--   a.2 It does not consider that stimuli may be nested in individuals -->
-<!-- Moreover, a notable concern in the second category is the measurement model's reliance on the assumptions of Case 5 from Thurstone's law of comparative judgment [-@Thurstone_1927]. As noted, it is common practice in the literature to use the BTL model as a means of generating CJ scores, serving as the measurement model. -->
-<!-- Since the study by @Bramley_2008, it has been clear that the BTL model represents a statistical articulation of Case 5. -->
-<!-- Although Case 5 was originally articulated to produce a "rather coarse scaling" of traits [@Thurstone_1927, p. 269], its assumptions have become predominant in the literature due to its implementation through the Bradley-Terry-Luce (BTL) model [@Bradley_et_al_1952; @Luce_1959]. This leaves issues such as the presence of judge' biases hinted by @Bramley_2008 and @Kelly_et_al_2022, and evidenced by @Pollitt_et_al_2003, @Arlett_2003, and @Guthrie_2003 -->
-<!-- @Thurstone_1927 justify the use of case V, on multiple assumptions, but the most important for our purpose are three:  -->
-<!-- (a) related to Case 3, it assumes the correlation between stimuli is zero, this translates into the cancellation of judges effects by mean of opposing and equally weigthed 'mood' and 'simultaneous contrasts' effects. This is demonstrated using the additivive nature of the logit scale, which helps to cancel 'bias' judges effects. -->
+<ol type="1">
+<li>the BTL model is the statistical articulation of Case 5</li>
+</ol>
+<p>From early on in the literature, it has been clear that the BTL model represents a statistical articulation of Thurstone’s Case 5 <span class="citation" data-cites="Thurstone_1927">(<a href="#ref-Thurstone_1927" role="doc-biblioref">1927</a>)</span>. Talk about <span class="citation" data-cites="Pollitt_et_al_2003">Pollitt and Elliott (<a href="#ref-Pollitt_et_al_2003" role="doc-biblioref">2003</a>)</span> and <span class="citation" data-cites="Bramley_2008">Bramley (<a href="#ref-Bramley_2008" role="doc-biblioref">2008</a>)</span></p>
+<ol start="2" type="1">
+<li>But this model hold the greater number of assumptions</li>
+</ol>
+<p>Although Case 5 was originally articulated to produce a “rather coarse scaling” of traits <span class="citation" data-cites="Thurstone_1927">(<a href="#ref-Thurstone_1927" role="doc-biblioref">Thurstone 1927, 269</a>)</span>, its assumptions have become predominant in the literature, but Thurstone’s Case 5 is the case that holds the greater amount of simplifying assumptions.</p>
+<p><span class="citation" data-cites="Thurstone_1927">Thurstone (<a href="#ref-Thurstone_1927" role="doc-biblioref">1927</a>)</span> justify the use of case V, on multiple assumptions, but the most important for our purpose are three:</p>
+<ol type="a">
+<li>related to Case 3, it assumes the correlation between stimuli is zero, this translates into the cancellation of judges effects by mean of opposing and equally weigthed ‘mood’ and ‘simultaneous contrasts’ effects. This is demonstrated using the additivive nature of the logit scale, which helps to cancel ‘bias’ judges effects.</li>
+</ol>
 <!-- This is the case of confounding, and @Andrich_1978; @Wainer_et_al_1978 already showed that if judges effects are parametrized, it gets eliminated experimentally in the paired comparison method.  -->
 <!-- possibility of bias is hinted in @Bramley_2008, and later mentioned again in @Kelly_et_al_2022, and some evidence is found in @Pollitt_et_al_2003, @Arlett_2003, @Guthrie_2003, @vanDaal_et_al_2017 and @Gijsen_et_al_2021 -->
-<!-- @Pollitt_et_al_2003 In Thurstone’s method each judge’s standard cancels out when a comparison is made, and any misfit between data and model must indicate a difference of some other kind. This is studied by analysing the residuals that remain after the model is fitted to the data. Whenever one script is judged to have a higher value than a competing one it is expected to ‘win’ the comparison: if it does the residual will be small, but if it loses then the residual for that judge’s comparison of those two scripts will be large. Any patterns of large residuals will indicate some sort of bias – in this context bias simply means a source of systematic, rather than random, variability. indicates that one judge – Judge 5 – is significantly biased in some way. (Consider the problem of using adhoc methods) -->
-<!-- Reliability is a necessary but not sufficient condition for validity. Reliability can exist without validity but validity cannot exist without reliability [@Perron_et_al_2015]. -->
-<!-- (b) related to Case 3, it assumes the correlation between stimuli is zero, this also translates into the idea that stimuli are the main focus of estimation and analysis, but what happens when the focus of analysis is the individuals that generated those stimuli. There is an amount of correlation that it is not accounted for.  -->
+<!-- @Pollitt_et_al_2003 In Thurstone’s method each judge’s standard cancels out when a comparison is made, and any misfit between data and model must indicate a difference of some other kind. This is studied by analyzing the residuals that remain after the model is fitted to the data. Whenever one script is judged to have a higher value than a competing one it is expected to ‘win’ the comparison: if it does the residual will be small, but if it loses then the residual for that judge’s comparison of those two scripts will be large. Any patterns of large residuals will indicate some sort of bias – in this context bias simply means a source of systematic, rather than random, variability. indicates that one judge – Judge 5 – is significantly biased in some way. (Consider the problem of using adhoc methods) -->
+<ol start="2" type="a">
+<li>related to Case 3, it assumes the correlation between stimuli is zero, this also translates into the idea that stimuli are the main focus of estimation and analysis, but what happens when the focus of analysis is the individuals that generated those stimuli. Meaning there is an amount of correlation that it is not accounted for.</li>
+</ol>
 <!-- This is the case of clustering or measurement error, and overlooking issues such as clustering and measurement error can lead to biased and less precise parameter estimates [@McElreath_2020], ultimately diminishing the statistical power of models and increasing the likelihood of committing type I or type II errors when addressing research inquiries.  -->
 <!-- This has been considered in the literature as a (see https://doi.org/10.1177/1471082X15571817) or a multilevel BTL model (find sources) -->
-<!-- (c) related to case 5, discriminal dispersions of the stimuli are equal, but it is not hard to imagine that certain individuals can produce good quality texts with more precision than other individuals.  -->
-<!-- This ties up with the next subject -->
+<ol start="3" type="a">
+<li>related to case 5, discriminal dispersions of the stimuli are equal, but it is not hard to imagine that certain individuals can produce good quality texts with more precision than other individuals.</li>
+</ol>
+<ol start="3" type="1">
+<li>What problems does this bring?</li>
+</ol>
+<!--   a.1 It does not consider the effects of judges (different perceptions per stimuli) -->
+<!--   a.2 It does not consider that stimuli may be nested in individuals -->
+<p>This leaves issues such as the presence of judge’ biases hinted by <span class="citation" data-cites="Bramley_2008">Bramley (<a href="#ref-Bramley_2008" role="doc-biblioref">2008</a>)</span> and <span class="citation" data-cites="Kelly_et_al_2022">Kelly, Richardson, and Isaacs (<a href="#ref-Kelly_et_al_2022" role="doc-biblioref">2022</a>)</span>, and evidenced by <span class="citation" data-cites="Pollitt_et_al_2003">Pollitt and Elliott (<a href="#ref-Pollitt_et_al_2003" role="doc-biblioref">2003</a>)</span>, <span class="citation" data-cites="Arlett_2003">(<a href="#ref-Arlett_2003" role="doc-biblioref"><strong>Arlett_2003?</strong></a>)</span>, and <span class="citation" data-cites="Guthrie_2003">(<a href="#ref-Guthrie_2003" role="doc-biblioref"><strong>Guthrie_2003?</strong></a>)</span></p>
+<p><span style="color:red;">Reliability is a necessary but not sufficient condition for validity. Reliability can exist without validity but validity cannot exist without reliability <span class="citation" data-cites="Perron_et_al_2015">(<a href="#ref-Perron_et_al_2015" role="doc-biblioref">Perron and Gillespie 2015</a>)</span></span>.</p>
 <!-- All studies use SSR as a measure of reliability -->
+<!-- This ties up with the next subject -->
 </section>
 <section id="the-role-and-impact-of-comparison-algorithms" class="level2" data-number="2.3">
 <h2 data-number="2.3" class="anchored" data-anchor-id="the-role-and-impact-of-comparison-algorithms"><span class="header-section-number">2.3</span> The role and impact of comparison algorithms</h2>
@@ -616,6 +629,9 @@ Jones, I. 2015. <span>“The Problem of Assessing Problem Solving: Can Comparati
 <div id="ref-Jones_et_al_2019" class="csl-entry" role="listitem">
 Jones, I., M. Bisson, C. Gilmore, and M. Inglis. 2019. <span>“Measuring Conceptual Understanding in Randomised Controlled Trials: Can Comparative Judgement Help?”</span> <em>British Educational Research Journal</em> 45 (3): 662–80. <a href="https://doi.org/10.1002/berj.3519">https://doi.org/10.1002/berj.3519</a>.
 </div>
+<div id="ref-Kelly_et_al_2022" class="csl-entry" role="listitem">
+Kelly, K., M. Richardson, and T. Isaacs. 2022. <span>“Critiquing the Rationales for Using Comparative Judgement: A Call for Clarity.”</span> <em>Assessment in Education: Principles, Policy &amp; Practice</em> 29 (6): 674–88. <a href="https://doi.org/10.1080/0969594X.2022.2147901">https://doi.org/10.1080/0969594X.2022.2147901</a>.
+</div>
 <div id="ref-Kline_et_al_2023" class="csl-entry" role="listitem">
 Kline, R. 2023. <em><a href="">Principles and Practice of Structural Equation Modeling</a></em>. Methodology in the Social Sciences. Guilford Press.
 </div>
@@ -630,6 +646,9 @@ Marshall, N., K Shaw, J. Hunter, and I. Jones. 2020. <span>“Assessment by Comp
 </div>
 <div id="ref-McElreath_2020" class="csl-entry" role="listitem">
 McElreath, R. 2020. <em><a href="">Statistical Rethinking: A Bayesian Course with Examples in r and STAN</a></em>. Chapman; Hall/CRC.
+</div>
+<div id="ref-Perron_et_al_2015" class="csl-entry" role="listitem">
+Perron, B., and D. Gillespie. 2015. <span>“<span class="nocase">Reliability and Measurement Error</span>.”</span> In <em><span class="nocase">Key Concepts in Measurement</span></em>. Oxford University Press. <a href="https://doi.org/10.1093/acprof:oso/9780199855483.003.0004">https://doi.org/10.1093/acprof:oso/9780199855483.003.0004</a>.
 </div>
 <div id="ref-Pollitt_2004" class="csl-entry" role="listitem">
 Pollitt, A. 2004. <span>“Let’s Stop Marking Exams.”</span> In <em>Proceedings of the IAEA Conference</em>. Philadelphia: University of Cambridge Local Examinations Syndicate. <a href="https://www.cambridgeassessment.org.uk/images/109719-let-s-stop-marking-exams.pdf">https://www.cambridgeassessment.org.uk/images/109719-let-s-stop-marking-exams.pdf</a>.
@@ -684,7 +703,7 @@ Whitehouse, C. 2012. <span>“Testing the Validity of Judgements about Geography
   title = {Let’s Talk about {Thurstone} \&amp; {Co.:} {An}
     Information-Theoretical Model for Comparative Judgments, and Its
     Statistical Translation},
-  date = {2024-10-24},
+  date = {2024-10-25},
   langid = {en},
   abstract = {(to do)}
 }
@@ -692,7 +711,7 @@ Whitehouse, C. 2012. <span>“Testing the Validity of Judgements about Geography
 Rivera Espejo, Jose Manuel, Tine van van Daal, Sven De De Maeyer, and
 Steven Gillis. 2024. <span>“Let’s Talk about Thurstone &amp; Co.: An
 Information-Theoretical Model for Comparative Judgments, and Its
-Statistical Translation.”</span> October 24, 2024.
+Statistical Translation.”</span> October 25, 2024.
 </div></div></section></div></main>
 <!-- /main column -->
 <script id="quarto-html-after-body" type="application/javascript">

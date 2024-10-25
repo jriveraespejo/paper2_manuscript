@@ -104,10 +104,10 @@ sciences</institution>
 <corresp id="cor-1">JoseManuel.RiveraEspejo@uantwerpen.be</corresp>
 </author-notes>
 
-<pub-date date-type="pub" publication-format="electronic" iso-8601-date="2024-10-24">
+<pub-date date-type="pub" publication-format="electronic" iso-8601-date="2024-10-25">
 <year>2024</year>
 <month>10</month>
-<day>24</day>
+<day>25</day>
 </pub-date>
 
 
@@ -257,8 +257,8 @@ the University of Antwerp (BOF).</funding-statement>
     et al. 2023</xref>).</p>
     <p>Moreover, researchers often use these BTL-generated scores or
     their transformations separately, conducting further analyses or
-    hypothesis testing. The CJ literature shows how these scores have
-    been employed to identify ‘misfit’ judges and stimuli
+    hypothesis testing. The literature shows how these scores have been
+    employed to identify ‘misfit’ judges and stimuli
     (<xref alt="Pollitt 2012b" rid="ref-Pollitt_2012b" ref-type="bibr">Pollitt
     2012b</xref>;
     <xref alt="van Daal et al. 2017" rid="ref-vanDaal_et_al_2017" ref-type="bibr">van
@@ -291,8 +291,8 @@ the University of Antwerp (BOF).</funding-statement>
     consideration is that BTL-generated scores are parameter estimates
     that inherently carry uncertainty. Ignoring this uncertainty when
     conducting separate analyses and tests can inflate their precision
-    and statistical power. This, in turn, increases the risk of
-    committing a type I error
+    and statistical power, increasing the risk of committing a type I
+    error
     (<xref alt="McElreath 2020" rid="ref-McElreath_2020" ref-type="bibr">McElreath
     2020</xref>), which is when a null hypothesis is incorrectly
     rejected
@@ -316,6 +316,86 @@ the University of Antwerp (BOF).</funding-statement>
   </sec>
   <sec id="the-assumptions-of-case-5-and-the-measurement-model">
     <title>The assumptions of Case 5 and the measurement model</title>
+    <list list-type="order">
+      <list-item>
+        <p>the BTL model is the statistical articulation of Case 5</p>
+      </list-item>
+    </list>
+    <p>From early on in the literature, it has been clear that the BTL
+    model represents a statistical articulation of Thurstone’s Case 5
+    (<xref alt="1927" rid="ref-Thurstone_1927" ref-type="bibr">1927</xref>).
+    Talk about Pollitt and Elliott
+    (<xref alt="2003" rid="ref-Pollitt_et_al_2003" ref-type="bibr">2003</xref>)
+    and Bramley
+    (<xref alt="2008" rid="ref-Bramley_2008" ref-type="bibr">2008</xref>)</p>
+    <list list-type="order">
+      <list-item>
+        <label>2.</label>
+        <p>But this model hold the greater number of assumptions</p>
+      </list-item>
+    </list>
+    <p>Although Case 5 was originally articulated to produce a “rather
+    coarse scaling” of traits
+    (<xref alt="Thurstone 1927, 269" rid="ref-Thurstone_1927" ref-type="bibr">Thurstone
+    1927, 269</xref>), its assumptions have become predominant in the
+    literature, but Thurstone’s Case 5 is the case that holds the
+    greater amount of simplifying assumptions.</p>
+    <p>Thurstone
+    (<xref alt="1927" rid="ref-Thurstone_1927" ref-type="bibr">1927</xref>)
+    justify the use of case V, on multiple assumptions, but the most
+    important for our purpose are three:</p>
+    <list list-type="alpha-lower">
+      <list-item>
+        <label>(a)</label>
+        <p>related to Case 3, it assumes the correlation between stimuli
+        is zero, this translates into the cancellation of judges effects
+        by mean of opposing and equally weigthed ‘mood’ and
+        ‘simultaneous contrasts’ effects. This is demonstrated using the
+        additivive nature of the logit scale, which helps to cancel
+        ‘bias’ judges effects.</p>
+      </list-item>
+    </list>
+    <list list-type="alpha-lower">
+      <list-item>
+        <label>(b)</label>
+        <p>related to Case 3, it assumes the correlation between stimuli
+        is zero, this also translates into the idea that stimuli are the
+        main focus of estimation and analysis, but what happens when the
+        focus of analysis is the individuals that generated those
+        stimuli. Meaning there is an amount of correlation that it is
+        not accounted for.</p>
+      </list-item>
+    </list>
+    <list list-type="alpha-lower">
+      <list-item>
+        <label>(c)</label>
+        <p>related to case 5, discriminal dispersions of the stimuli are
+        equal, but it is not hard to imagine that certain individuals
+        can produce good quality texts with more precision than other
+        individuals.</p>
+      </list-item>
+    </list>
+    <list list-type="order">
+      <list-item>
+        <label>3.</label>
+        <p>What problems does this bring?</p>
+      </list-item>
+    </list>
+    <p>This leaves issues such as the presence of judge’ biases hinted
+    by Bramley
+    (<xref alt="2008" rid="ref-Bramley_2008" ref-type="bibr">2008</xref>)
+    and Kelly, Richardson, and Isaacs
+    (<xref alt="2022" rid="ref-Kelly_et_al_2022" ref-type="bibr">2022</xref>),
+    and evidenced by Pollitt and Elliott
+    (<xref alt="2003" rid="ref-Pollitt_et_al_2003" ref-type="bibr">2003</xref>),
+    (<xref alt="Arlett_2003?" rid="ref-Arlett_2003" ref-type="bibr"><bold>Arlett_2003?</bold></xref>),
+    and
+    (<xref alt="Guthrie_2003?" rid="ref-Guthrie_2003" ref-type="bibr"><bold>Guthrie_2003?</bold></xref>)</p>
+    <p><styled-content style="color:red;">Reliability is a necessary but
+    not sufficient condition for validity. Reliability can exist without
+    validity but validity cannot exist without reliability
+    (<xref alt="Perron and Gillespie 2015" rid="ref-Perron_et_al_2015" ref-type="bibr">Perron
+    and Gillespie 2015</xref>)</styled-content>.</p>
   </sec>
   <sec id="the-role-and-impact-of-comparison-algorithms">
     <title>The role and impact of comparison algorithms</title>
@@ -681,6 +761,25 @@ the University of Antwerp (BOF).</funding-statement>
           <pub-id pub-id-type="doi">10.3389/feduc.2020.582800</pub-id>
         </element-citation>
       </ref>
+      <ref id="ref-Kelly_et_al_2022">
+        <element-citation publication-type="article-journal">
+          <person-group person-group-type="author">
+            <name><surname>Kelly</surname><given-names>K.</given-names></name>
+            <name><surname>Richardson</surname><given-names>M.</given-names></name>
+            <name><surname>Isaacs</surname><given-names>T.</given-names></name>
+          </person-group>
+          <article-title>Critiquing the rationales for using comparative judgement: A call for clarity</article-title>
+          <source>Assessment in Education: Principles, Policy &amp; Practice</source>
+          <publisher-name>Routledge</publisher-name>
+          <year iso-8601-date="2022">2022</year>
+          <volume>29</volume>
+          <issue>6</issue>
+          <uri></uri>
+          <pub-id pub-id-type="doi">10.1080/0969594X.2022.2147901</pub-id>
+          <fpage>674</fpage>
+          <lpage>688</lpage>
+        </element-citation>
+      </ref>
       <ref id="ref-Crompvoets_et_al_2022">
         <element-citation publication-type="article-journal">
           <person-group person-group-type="author">
@@ -838,6 +937,20 @@ the University of Antwerp (BOF).</funding-statement>
           <pub-id pub-id-type="doi"></pub-id>
           <fpage>246</fpage>
           <lpage>300</lpage>
+        </element-citation>
+      </ref>
+      <ref id="ref-Perron_et_al_2015">
+        <element-citation publication-type="chapter">
+          <person-group person-group-type="author">
+            <name><surname>Perron</surname><given-names>B.</given-names></name>
+            <name><surname>Gillespie</surname><given-names>D.</given-names></name>
+          </person-group>
+          <article-title>Reliability and Measurement Error</article-title>
+          <source>Key Concepts in Measurement</source>
+          <publisher-name>Oxford University Press</publisher-name>
+          <year iso-8601-date="2015-04">2015</year><month>04</month>
+          <uri></uri>
+          <pub-id pub-id-type="doi">10.1093/acprof:oso/9780199855483.003.0004</pub-id>
         </element-citation>
       </ref>
       <ref id="ref-Bartholomew_et_al_2020">
