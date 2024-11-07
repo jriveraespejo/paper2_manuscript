@@ -211,13 +211,13 @@ judgement \sep Structural Causal Models \sep
 \section{Introduction}\label{sec-introduction}
 
 In \emph{comparative judgment} (CJ) studies, judges assess the presence
-of a trait or competence by conducting pairwise comparisons of stimuli
-\citep{Thurstone_1927, Pollitt_2004, Pollitt_2012a}. The comparison
-produces a dichotomous outcome, indicating which stimulus is perceived
-to possess a higher trait level. After conducting multiple rounds of
+of a trait or competence in different stimuli by performing pairwise
+comparisons \citep{Thurstone_1927, Pollitt_2004, Pollitt_2012a}. The
+comparison produces a dichotomous outcome, indicating which stimulus is
+perceived to possess a higher trait level. After multiple rounds of
 pairwise comparisons, researchers use the Bradley-Terry-Luce (BTL) model
-\citep{Bradley_et_al_1952, Luce_1959} to process the outcomes and
-estimate scores that reflect the underlying trait of interest. This
+\citep{Bradley_et_al_1952, Luce_1959} to process the resulting outcomes
+and estimate scores that reflect the underlying trait of interest. This
 method has been successfully employed in assessing the quality of
 written texts, where quality describes the underlying trait of interest
 and the texts serve as the stimuli
@@ -270,47 +270,42 @@ underlying quality level of the texts (the latent variable)
 \citep{Laming_2004, Pollitt_2012b, Whitehouse_2012, vanDaal_et_al_2016, Lesterhuis_2018, Coertjens_et_al_2017, Goossens_et_al_2018, Bouwer_et_al_2023}.
 
 Researchers then typically use the estimated BTL scores, or their
-transformations, to conduct additional analyses or hypothesis testing.
-The scores have been used to identify `misfit' judges and stimuli
-\citep{Pollitt_2012b, vanDaal_et_al_2017, Goossens_et_al_2018}, detect
-biases in judges' ratings \citep{Pollitt_et_al_2003, Pollitt_2012b},
-calculate correlations with other assessment methods
-\citep{Goossens_et_al_2018, Bouwer_et_al_2023}, or test hypotheses
-related to the underlying trait of interest
+transformations, to conduct additional analyses or hypothesis tests. For
+example, these scores have been used to identify `misfit' judges and
+stimuli \citep{Pollitt_2012b, vanDaal_et_al_2017, Goossens_et_al_2018},
+detect biases in judges' ratings
+\citep{Pollitt_et_al_2003, Pollitt_2012b}, calculate correlations with
+other assessment methods \citep{Goossens_et_al_2018, Bouwer_et_al_2023},
+or test hypotheses related to the underlying trait of interest
 \citep{Bramley_et_al_2019, Boonen_et_al_2020, Bouwer_et_al_2023, vanDaal_et_al_2017, Jones_et_al_2019, Gijsen_et_al_2021}.
 
-However, the statistical literature cautions against using estimated
-scores to conduct additional analyses or tests. A key consideration is
-that BTL scores are parameter estimates that inherently carry
-uncertainty. Ignoring this uncertainty when conducting separate analyses
-and tests can inflate their precision and statistical power, increasing
-the risk of committing a type I error \citep{McElreath_2020}. A type I
-error results when a null hypothesis is incorrectly rejected
-\citep{Everitt_et_al_2010}.
+However, the statistical literature advises caution when using estimated
+scores to conduct additional analyses or hypotheses tests. A key
+consideration is that BTL scores are parameter estimates that inherently
+carry uncertainty. Ignoring this uncertainty can introduce bias into the
+analysis and reduce the precision of hypothesis tests. Notably, the
+direction and magnitude of this bias are often unpredictable; results
+may be attenuated, exaggerated, or remain unaffected, depending on the
+uncertainty in the scores and the actual effects being tested
+\citetext{\citealp[p.~25]{Kline_et_al_2023}; \citealp[p.~137]{Hoyle_et_al_2023}}.
+Furthermore, reduced precision in hypothesis tests weakens their
+statistical power, ultimately increasing the likelihood of committing
+type-I or type-II errors \citep{McElreath_2020}.
 
 To mitigate these risks, principles from Structural Equation Modeling
-(SEM) \citep{Hoyle_et_al_2023, Kline_et_al_2023} and Item Response
-Theory (IRT) \citep{deAyala_2009, Fox_2010, vanderLinden_et_al_2017}
-recommend conducting these analyses and tests within a structural model.
-A structural model specify how different manifest or latent variables
+(SEM) \citep[p.~138]{Kline_et_al_2023, Hoyle_et_al_2023} and Item
+Response Theory (IRT)
+\citep{deAyala_2009, Fox_2010, vanderLinden_et_al_2017} recommend
+conducting these analyses and tests within a structural model. A
+structural model specifies how different manifest or latent variables
 influence the latent variable of interest \citep{Everitt_et_al_2010}.
 This approach allows analyses that can account for both the scores and
 their uncertainties simultaneously, rather than treating them as
 separate elements. Therefore, an integrated approach that combines CJ's
-structural and measurement models can offer significant advantages.
+measurement and structural models can offer significant advantages.
 
 \subsection{The assumptions of Case 5 and the measurement
 model}\label{the-assumptions-of-case-5-and-the-measurement-model}
-
-From early on in the literature, it has been clear that the BTL model
-represents a statistical articulation of Thurstone's Case 5
-\citeyearpar{Thurstone_1927}. Talk about \citet{Pollitt_et_al_2003} and
-\citet{Bramley_2008}.
-
-What case 5 implies, Assumptions. Not a normal distribution but a
-logistic distribution
-
-Table with assumptions
 
 \subsection{The role and impact of comparison
 algorithms}\label{the-role-and-impact-of-comparison-algorithms}
@@ -380,11 +375,6 @@ acquisition:} S.G. and S.DM.
 \newpage{}
 
 \section{Appendix}\label{sec-appendix}
-
-\subsection{Appendix A: Ignoring uncertainty}\label{sec-appendix-A}
-
-\subsection{Appendix B: The five cases of
-Thurstone}\label{sec-appendix-B}
 
 \newpage{}
 

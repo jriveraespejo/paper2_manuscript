@@ -104,10 +104,10 @@ sciences</institution>
 <corresp id="cor-1">JoseManuel.RiveraEspejo@uantwerpen.be</corresp>
 </author-notes>
 
-<pub-date date-type="pub" publication-format="electronic" iso-8601-date="2024-11-05">
+<pub-date date-type="pub" publication-format="electronic" iso-8601-date="2024-11-07">
 <year>2024</year>
 <month>11</month>
-<day>5</day>
+<day>7</day>
 </pub-date>
 
 
@@ -147,25 +147,25 @@ the University of Antwerp (BOF).</funding-statement>
 <sec id="sec-introduction">
   <title>Introduction</title>
   <p>In <italic>comparative judgment</italic> (CJ) studies, judges
-  assess the presence of a trait or competence by conducting pairwise
-  comparisons of stimuli
+  assess the presence of a trait or competence in different stimuli by
+  performing pairwise comparisons
   (<xref alt="Thurstone 1927" rid="ref-Thurstone_1927" ref-type="bibr">Thurstone
   1927</xref>;
   <xref alt="Pollitt 2004" rid="ref-Pollitt_2004" ref-type="bibr">Pollitt
   2004</xref>,
   <xref alt="2012a" rid="ref-Pollitt_2012a" ref-type="bibr">2012a</xref>).
   The comparison produces a dichotomous outcome, indicating which
-  stimulus is perceived to possess a higher trait level. After
-  conducting multiple rounds of pairwise comparisons, researchers use
-  the Bradley-Terry-Luce (BTL) model
+  stimulus is perceived to possess a higher trait level. After multiple
+  rounds of pairwise comparisons, researchers use the Bradley-Terry-Luce
+  (BTL) model
   (<xref alt="Bradley and Terry 1952" rid="ref-Bradley_et_al_1952" ref-type="bibr">Bradley
   and Terry 1952</xref>;
   <xref alt="Luce 1959" rid="ref-Luce_1959" ref-type="bibr">Luce
-  1959</xref>) to process the outcomes and estimate scores that reflect
-  the underlying trait of interest. This method has been successfully
-  employed in assessing the quality of written texts, where quality
-  describes the underlying trait of interest and the texts serve as the
-  stimuli
+  1959</xref>) to process the resulting outcomes and estimate scores
+  that reflect the underlying trait of interest. This method has been
+  successfully employed in assessing the quality of written texts, where
+  quality describes the underlying trait of interest and the texts serve
+  as the stimuli
   (<xref alt="Laming 2004" rid="ref-Laming_2004" ref-type="bibr">Laming
   2004</xref>;
   <xref alt="Pollitt 2012b" rid="ref-Pollitt_2012b" ref-type="bibr">Pollitt
@@ -282,9 +282,9 @@ the University of Antwerp (BOF).</funding-statement>
     <xref alt="Bouwer et al. 2023" rid="ref-Bouwer_et_al_2023" ref-type="bibr">Bouwer
     et al. 2023</xref>).</p>
     <p>Researchers then typically use the estimated BTL scores, or their
-    transformations, to conduct additional analyses or hypothesis
-    testing. The scores have been used to identify ‘misfit’ judges and
-    stimuli
+    transformations, to conduct additional analyses or hypothesis tests.
+    For example, these scores have been used to identify ‘misfit’ judges
+    and stimuli
     (<xref alt="Pollitt 2012b" rid="ref-Pollitt_2012b" ref-type="bibr">Pollitt
     2012b</xref>;
     <xref alt="van Daal et al. 2017" rid="ref-vanDaal_et_al_2017" ref-type="bibr">van
@@ -312,52 +312,47 @@ the University of Antwerp (BOF).</funding-statement>
     et al. 2019</xref>;
     <xref alt="Gijsen et al. 2021" rid="ref-Gijsen_et_al_2021" ref-type="bibr">Gijsen
     et al. 2021</xref>).</p>
-    <p>However, the statistical literature cautions against using
-    estimated scores to conduct additional analyses or tests. A key
-    consideration is that BTL scores are parameter estimates that
-    inherently carry uncertainty. Ignoring this uncertainty when
-    conducting separate analyses and tests can inflate their precision
-    and statistical power, increasing the risk of committing a type I
-    error
+    <p>However, the statistical literature advises caution when using
+    estimated scores to conduct additional analyses or hypotheses tests.
+    A key consideration is that BTL scores are parameter estimates that
+    inherently carry uncertainty. Ignoring this uncertainty can
+    introduce bias into the analysis and reduce the precision of
+    hypothesis tests. Notably, the direction and magnitude of this bias
+    are often unpredictable; results may be attenuated, exaggerated, or
+    remain unaffected, depending on the uncertainty in the scores and
+    the actual effects being tested
+    (<xref alt="Kline 2023, 25" rid="ref-Kline_et_al_2023" ref-type="bibr">Kline
+    2023, 25</xref>;
+    <xref alt="Hoyle 2023, 137" rid="ref-Hoyle_et_al_2023" ref-type="bibr">Hoyle
+    2023, 137</xref>). Furthermore, reduced precision in hypothesis
+    tests weakens their statistical power, ultimately increasing the
+    likelihood of committing type-I or type-II errors
     (<xref alt="McElreath 2020" rid="ref-McElreath_2020" ref-type="bibr">McElreath
-    2020</xref>). A type I error results when a null hypothesis is
-    incorrectly rejected
-    (<xref alt="Everitt and Skrondal 2010" rid="ref-Everitt_et_al_2010" ref-type="bibr">Everitt
-    and Skrondal 2010</xref>).</p>
+    2020</xref>).</p>
     <p>To mitigate these risks, principles from Structural Equation
     Modeling (SEM)
-    (<xref alt="Hoyle 2023" rid="ref-Hoyle_et_al_2023" ref-type="bibr">Hoyle
+    (<xref alt="Kline 2023" rid="ref-Kline_et_al_2023" ref-type="bibr">Kline
     2023</xref>;
-    <xref alt="Kline 2023" rid="ref-Kline_et_al_2023" ref-type="bibr">Kline
-    2023</xref>) and Item Response Theory (IRT)
+    <xref alt="Hoyle 2023, 138" rid="ref-Hoyle_et_al_2023" ref-type="bibr">Hoyle
+    2023, 138</xref>) and Item Response Theory (IRT)
     (<xref alt="de Ayala 2009" rid="ref-deAyala_2009" ref-type="bibr">de
     Ayala 2009</xref>;
     <xref alt="Fox 2010" rid="ref-Fox_2010" ref-type="bibr">Fox
     2010</xref>;
     <xref alt="van der Linden 2017" rid="ref-vanderLinden_et_al_2017" ref-type="bibr">van
     der Linden 2017</xref>) recommend conducting these analyses and
-    tests within a structural model. A structural model specify how
+    tests within a structural model. A structural model specifies how
     different manifest or latent variables influence the latent variable
     of interest
     (<xref alt="Everitt and Skrondal 2010" rid="ref-Everitt_et_al_2010" ref-type="bibr">Everitt
     and Skrondal 2010</xref>). This approach allows analyses that can
     account for both the scores and their uncertainties simultaneously,
     rather than treating them as separate elements. Therefore, an
-    integrated approach that combines CJ’s structural and measurement
+    integrated approach that combines CJ’s measurement and structural
     models can offer significant advantages.</p>
   </sec>
   <sec id="the-assumptions-of-case-5-and-the-measurement-model">
     <title>The assumptions of Case 5 and the measurement model</title>
-    <p>From early on in the literature, it has been clear that the BTL
-    model represents a statistical articulation of Thurstone’s Case 5
-    (<xref alt="1927" rid="ref-Thurstone_1927" ref-type="bibr">1927</xref>).
-    Talk about Pollitt and Elliott
-    (<xref alt="2003" rid="ref-Pollitt_et_al_2003" ref-type="bibr">2003</xref>)
-    and Bramley
-    (<xref alt="2008" rid="ref-Bramley_2008" ref-type="bibr">2008</xref>).</p>
-    <p>What case 5 implies, Assumptions. Not a normal distribution but a
-    logistic distribution</p>
-    <p>Table with assumptions</p>
   </sec>
   <sec id="the-role-and-impact-of-comparison-algorithms">
     <title>The role and impact of comparison algorithms</title>
@@ -427,13 +422,7 @@ the University of Antwerp (BOF).</funding-statement>
 </sec>
 <sec id="sec-appendix">
   <title>Appendix</title>
-  <sec id="sec-appendix-A">
-    <title>Appendix A: Ignoring uncertainty</title>
-  </sec>
-  <sec id="sec-appendix-B">
-    <title>Appendix B: The five cases of Thurstone</title>
-    <p></p>
-  </sec>
+  <p></p>
 </sec>
 </body>
 
@@ -685,7 +674,7 @@ the University of Antwerp (BOF).</funding-statement>
       <person-group person-group-type="author">
         <name><surname>Verhavert</surname><given-names>S.</given-names></name>
         <name><surname>Bouwer</surname><given-names>R.</given-names></name>
-        <name><surname>Donche</surname><given-names>V</given-names></name>
+        <name><surname>Donche</surname><given-names>V.</given-names></name>
         <name><surname>De Maeyer</surname><given-names>S.</given-names></name>
       </person-group>
       <article-title>A meta-analysis on the reliability of comparative judgement</article-title>
@@ -772,9 +761,9 @@ the University of Antwerp (BOF).</funding-statement>
   <ref id="ref-Crompvoets_et_al_2022">
     <element-citation publication-type="article-journal">
       <person-group person-group-type="author">
-        <name><surname>Crompvoets</surname><given-names>Elise A. V.</given-names></name>
-        <name><surname>Béguin</surname><given-names>Anton A.</given-names></name>
-        <name><surname>Sijtsma</surname><given-names>Klaas</given-names></name>
+        <name><surname>Crompvoets</surname><given-names>E.</given-names></name>
+        <name><surname>Béguin</surname><given-names>A.</given-names></name>
+        <name><surname>Sijtsma</surname><given-names>K.</given-names></name>
       </person-group>
       <article-title>On the bias and stability of the results of comparative judgment</article-title>
       <source>Frontiers in Education</source>
@@ -1030,1022 +1019,6 @@ the University of Antwerp (BOF).</funding-statement>
 </ref-list>
 </back>
 
-<sub-article article-type="notebook" id="nb-4-nb-article">
-<front-stub>
-<title-group>
-<article-title>Let’s talk about Thurstone &amp; Co.: An
-information-theoretical model for comparative judgments, and its
-statistical translation</article-title>
-</title-group>
-<contrib-group>
-<contrib contrib-type="author" corresp="yes">
-<contrib-id contrib-id-type="orcid">0000-0002-3088-2783</contrib-id>
-<name>
-<surname>Rivera Espejo</surname>
-<given-names>Jose Manuel</given-names>
-</name>
-<string-name>Jose Manuel Rivera Espejo</string-name>
 
-<email>JoseManuel.RiveraEspejo@uantwerpen.be</email>
-<xref ref-type="aff" rid="aff-1-nb-article">a</xref>
-<xref ref-type="corresp" rid="cor-1-nb-article">&#x002A;</xref>
-</contrib>
-<contrib contrib-type="author">
-<contrib-id contrib-id-type="orcid">https://orcid.org/0000-0001-9398-9775</contrib-id>
-<name>
-<surname>van Daal</surname>
-<given-names>Tine</given-names>
-</name>
-<string-name>Tine van Daal</string-name>
-
-<email>tine.vandaal@uantwerpen.be</email>
-<xref ref-type="aff" rid="aff-1-nb-article">a</xref>
-</contrib>
-<contrib contrib-type="author">
-<contrib-id contrib-id-type="orcid">0000-0003-2888-1631</contrib-id>
-<name>
-<surname>De Maeyer</surname>
-<given-names>Sven</given-names>
-</name>
-<string-name>Sven De Maeyer</string-name>
-
-<email>sven.demaeyer@uantwerpen.be</email>
-<xref ref-type="aff" rid="aff-1-nb-article">a</xref>
-</contrib>
-<contrib contrib-type="author">
-<name>
-<surname>Gillis</surname>
-<given-names>Steven</given-names>
-</name>
-<string-name>Steven Gillis</string-name>
-
-<email>steven.gillis@uantwerpen.be</email>
-<xref ref-type="aff" rid="aff-2-nb-article">b</xref>
-</contrib>
-</contrib-group>
-<aff id="aff-1-nb-article">
-<institution content-type="dept">Training and education
-sciences</institution>
-<institution-wrap>
-<institution>University of Antwerp</institution>
-</institution-wrap>
-
-
-
-
-
-
-
-</aff>
-<aff id="aff-2-nb-article">
-<institution content-type="dept">Linguistics</institution>
-<institution-wrap>
-<institution>University of Antwerp</institution>
-</institution-wrap>
-
-
-
-
-
-
-
-</aff>
-<author-notes>
-<corresp id="cor-1-nb-article">JoseManuel.RiveraEspejo@uantwerpen.be</corresp>
-</author-notes>
-<abstract>
-<p>(to do)</p>
-</abstract>
-</front-stub>
-
-<body>
-<sec specific-use="notebook-content">
-<code language="r script"># # load packages
-# libraries = c('RColorBrewer','stringr','dplyr','tidyverse',
-#               'rechape2','knitr','kableExtra',
-#               'rstan','StanHeaders','runjags','rethinking')
-# sapply(libraries, require, character.only=T)</code>
-</sec>
-<sec specific-use="notebook-content">
-<code language="r script"># # load functions
-# main_dir = '/home/josema/Desktop/1. Work/1 research/PhD Antwerp/#thesis/paper2/paper2_manuscript'
-# source( file.path( main_dir, 'code', 'user-defined-functions.R') )</code>
-</sec>
-<sec id="sec-introduction-nb-article">
-  <title>Introduction</title>
-  <p>In <italic>comparative judgment</italic> (CJ) studies, judges
-  assess the presence of a trait or competence by conducting pairwise
-  comparisons of stimuli
-  (<xref alt="Thurstone 1927" rid="ref-Thurstone_1927-nb-article" ref-type="bibr">Thurstone
-  1927</xref>;
-  <xref alt="Pollitt 2004" rid="ref-Pollitt_2004-nb-article" ref-type="bibr">Pollitt
-  2004</xref>,
-  <xref alt="2012a" rid="ref-Pollitt_2012a-nb-article" ref-type="bibr">2012a</xref>).
-  The comparison produces a dichotomous outcome, indicating which
-  stimulus is perceived to possess a higher trait level. After
-  conducting multiple rounds of pairwise comparisons, researchers use
-  the Bradley-Terry-Luce (BTL) model
-  (<xref alt="Bradley and Terry 1952" rid="ref-Bradley_et_al_1952-nb-article" ref-type="bibr">Bradley
-  and Terry 1952</xref>;
-  <xref alt="Luce 1959" rid="ref-Luce_1959-nb-article" ref-type="bibr">Luce
-  1959</xref>) to process the outcomes and estimate scores that reflect
-  the underlying trait of interest. This method has been successfully
-  employed in assessing the quality of written texts, where quality
-  describes the underlying trait of interest and the texts serve as the
-  stimuli
-  (<xref alt="Laming 2004" rid="ref-Laming_2004-nb-article" ref-type="bibr">Laming
-  2004</xref>;
-  <xref alt="Pollitt 2012b" rid="ref-Pollitt_2012b-nb-article" ref-type="bibr">Pollitt
-  2012b</xref>;
-  <xref alt="Whitehouse 2012" rid="ref-Whitehouse_2012-nb-article" ref-type="bibr">Whitehouse
-  2012</xref>;
-  <xref alt="van Daal et al. 2016" rid="ref-vanDaal_et_al_2016-nb-article" ref-type="bibr">van
-  Daal et al. 2016</xref>;
-  <xref alt="Lesterhuis 2018" rid="ref-Lesterhuis_2018-nb-article" ref-type="bibr">Lesterhuis
-  2018</xref>;
-  <xref alt="Coertjens et al. 2017" rid="ref-Coertjens_et_al_2017-nb-article" ref-type="bibr">Coertjens
-  et al. 2017</xref>;
-  <xref alt="Goossens and De Maeyer 2018" rid="ref-Goossens_et_al_2018-nb-article" ref-type="bibr">Goossens
-  and De Maeyer 2018</xref>;
-  <xref alt="Bouwer et al. 2023" rid="ref-Bouwer_et_al_2023-nb-article" ref-type="bibr">Bouwer
-  et al. 2023</xref>).</p>
-  <p>Numerous studies have documented the effectiveness of CJ in
-  assessing various traits and competencies over the past decade. These
-  studies have emphasized three aspects of the method’s effectiveness:
-  its reliability, validity, and practical applicability. Research on
-  reliability indicates that CJ requires a relatively small number of
-  pairwise comparisons
-  (<xref alt="S. Verhavert et al. 2019" rid="ref-Verhavert_et_al_2019-nb-article" ref-type="bibr">S.
-  Verhavert et al. 2019</xref>;
-  <xref alt="Crompvoets, Béguin, and Sijtsma 2022" rid="ref-Crompvoets_et_al_2022-nb-article" ref-type="bibr">Crompvoets,
-  Béguin, and Sijtsma 2022</xref>) to produce trait scores that are as
-  precise and consistent as those generated by other assessment methods
-  (<xref alt="Coertjens et al. 2017" rid="ref-Coertjens_et_al_2017-nb-article" ref-type="bibr">Coertjens
-  et al. 2017</xref>;
-  <xref alt="Goossens and De Maeyer 2018" rid="ref-Goossens_et_al_2018-nb-article" ref-type="bibr">Goossens
-  and De Maeyer 2018</xref>;
-  <xref alt="Bouwer et al. 2023" rid="ref-Bouwer_et_al_2023-nb-article" ref-type="bibr">Bouwer
-  et al. 2023</xref>). Furthermore, evidence suggests that the
-  reliability and time efficiency of CJ are comparable, if not superior,
-  to those of other assessment methods when employing adaptive
-  comparison algorithms
-  (<xref alt="Pollitt 2012b" rid="ref-Pollitt_2012b-nb-article" ref-type="bibr">Pollitt
-  2012b</xref>;
-  <xref alt="San Verhavert, Furlong, and Bouwer 2022" rid="ref-Verhavert_et_al_2022-nb-article" ref-type="bibr">San
-  Verhavert, Furlong, and Bouwer 2022</xref>;
-  <xref alt="Mikhailiuk et al. 2021" rid="ref-Mikhailiuk_et_al_2021-nb-article" ref-type="bibr">Mikhailiuk
-  et al. 2021</xref>). Additionally, research on validity suggests that
-  scores generated by CJ can accurately represent the traits under
-  measurement
-  (<xref alt="Whitehouse 2012" rid="ref-Whitehouse_2012-nb-article" ref-type="bibr">Whitehouse
-  2012</xref>;
-  <xref alt="van Daal et al. 2016" rid="ref-vanDaal_et_al_2016-nb-article" ref-type="bibr">van
-  Daal et al. 2016</xref>;
-  <xref alt="Lesterhuis 2018" rid="ref-Lesterhuis_2018-nb-article" ref-type="bibr">Lesterhuis
-  2018</xref>;
-  <xref alt="Bartholomew et al. 2018" rid="ref-Bartholomew_et_al_2018-nb-article" ref-type="bibr">Bartholomew
-  et al. 2018</xref>;
-  <xref alt="Bouwer et al. 2023" rid="ref-Bouwer_et_al_2023-nb-article" ref-type="bibr">Bouwer
-  et al. 2023</xref>). Finally, research on practical applicability
-  highlights the method’s versatility across both educational and
-  non-educational contexts
-  (<xref alt="Jones 2015" rid="ref-Jones_2015-nb-article" ref-type="bibr">Jones
-  2015</xref>;
-  <xref alt="Bartholomew et al. 2018" rid="ref-Bartholomew_et_al_2018-nb-article" ref-type="bibr">Bartholomew
-  et al. 2018</xref>;
-  <xref alt="Jones et al. 2019" rid="ref-Jones_et_al_2019-nb-article" ref-type="bibr">Jones
-  et al. 2019</xref>;
-  <xref alt="Marshall et al. 2020" rid="ref-Marshall_et_al_2020-nb-article" ref-type="bibr">Marshall
-  et al. 2020</xref>;
-  <xref alt="Bartholomew and Williams 2020" rid="ref-Bartholomew_et_al_2020-nb-article" ref-type="bibr">Bartholomew
-  and Williams 2020</xref>;
-  <xref alt="Boonen, Kloots, and Gillis 2020" rid="ref-Boonen_et_al_2020-nb-article" ref-type="bibr">Boonen,
-  Kloots, and Gillis 2020</xref>).</p>
-  <p>Nevertheless, despite the growing number of CJ studies, the
-  literature’s unsystematic and fragmented research approaches have left
-  several critical issues unaddressed. This research primarily focuses
-  on three: the apparent disconnect between CJ’s measurement and
-  structural model, the over-reliance on the assumptions of Thurstone’s
-  Case 5
-  (<xref alt="1927" rid="ref-Thurstone_1927-nb-article" ref-type="bibr">1927</xref>)
-  in CJ’s measurement model, and the unclear role of comparison
-  algorithms on the method’s reliability and validity. The following
-  sections will discuss each of these issues in detail, followed by the
-  introduction of a theoretical model and its statistical translation,
-  which aims to address all three concerns simultaneously.</p>
-</sec>
-<sec id="sec-theory-issues-nb-article">
-  <title>Three critical issues in CJ literature</title>
-  <sec id="the-disconnect-between-structural-and-measurement-models-nb-article">
-    <title>The disconnect between structural and measurement
-    models</title>
-    <p>In a typical CJ study, the BTL model serves as the measurement
-    model for CJ
-    (<xref alt="Andrich 1978" rid="ref-Andrich_1978-nb-article" ref-type="bibr">Andrich
-    1978</xref>;
-    <xref alt="Bramley 2008" rid="ref-Bramley_2008-nb-article" ref-type="bibr">Bramley
-    2008</xref>). A measurement model specifies how manifest variables
-    contribute to the estimation of latent variables
-    (<xref alt="Everitt and Skrondal 2010" rid="ref-Everitt_et_al_2010-nb-article" ref-type="bibr">Everitt
-    and Skrondal 2010</xref>). For example, when evaluating text
-    quality, the BTL model uses the dichotomous outcomes resulting from
-    the pairwise comparisons (the manifest variables) to estimate scores
-    that reflect the underlying quality level of the texts (the latent
-    variable)
-    (<xref alt="Laming 2004" rid="ref-Laming_2004-nb-article" ref-type="bibr">Laming
-    2004</xref>;
-    <xref alt="Pollitt 2012b" rid="ref-Pollitt_2012b-nb-article" ref-type="bibr">Pollitt
-    2012b</xref>;
-    <xref alt="Whitehouse 2012" rid="ref-Whitehouse_2012-nb-article" ref-type="bibr">Whitehouse
-    2012</xref>;
-    <xref alt="van Daal et al. 2016" rid="ref-vanDaal_et_al_2016-nb-article" ref-type="bibr">van
-    Daal et al. 2016</xref>;
-    <xref alt="Lesterhuis 2018" rid="ref-Lesterhuis_2018-nb-article" ref-type="bibr">Lesterhuis
-    2018</xref>;
-    <xref alt="Coertjens et al. 2017" rid="ref-Coertjens_et_al_2017-nb-article" ref-type="bibr">Coertjens
-    et al. 2017</xref>;
-    <xref alt="Goossens and De Maeyer 2018" rid="ref-Goossens_et_al_2018-nb-article" ref-type="bibr">Goossens
-    and De Maeyer 2018</xref>;
-    <xref alt="Bouwer et al. 2023" rid="ref-Bouwer_et_al_2023-nb-article" ref-type="bibr">Bouwer
-    et al. 2023</xref>).</p>
-    <p>Researchers then typically use the estimated BTL scores, or their
-    transformations, to conduct additional analyses or hypothesis
-    testing. The scores have been used to identify ‘misfit’ judges and
-    stimuli
-    (<xref alt="Pollitt 2012b" rid="ref-Pollitt_2012b-nb-article" ref-type="bibr">Pollitt
-    2012b</xref>;
-    <xref alt="van Daal et al. 2017" rid="ref-vanDaal_et_al_2017-nb-article" ref-type="bibr">van
-    Daal et al. 2017</xref>;
-    <xref alt="Goossens and De Maeyer 2018" rid="ref-Goossens_et_al_2018-nb-article" ref-type="bibr">Goossens
-    and De Maeyer 2018</xref>), detect biases in judges’ ratings
-    (<xref alt="Pollitt and Elliott 2003" rid="ref-Pollitt_et_al_2003-nb-article" ref-type="bibr">Pollitt
-    and Elliott 2003</xref>;
-    <xref alt="Pollitt 2012b" rid="ref-Pollitt_2012b-nb-article" ref-type="bibr">Pollitt
-    2012b</xref>), calculate correlations with other assessment methods
-    (<xref alt="Goossens and De Maeyer 2018" rid="ref-Goossens_et_al_2018-nb-article" ref-type="bibr">Goossens
-    and De Maeyer 2018</xref>;
-    <xref alt="Bouwer et al. 2023" rid="ref-Bouwer_et_al_2023-nb-article" ref-type="bibr">Bouwer
-    et al. 2023</xref>), or test hypotheses related to the underlying
-    trait of interest
-    (<xref alt="Bramley and Vitello 2019" rid="ref-Bramley_et_al_2019-nb-article" ref-type="bibr">Bramley
-    and Vitello 2019</xref>;
-    <xref alt="Boonen, Kloots, and Gillis 2020" rid="ref-Boonen_et_al_2020-nb-article" ref-type="bibr">Boonen,
-    Kloots, and Gillis 2020</xref>;
-    <xref alt="Bouwer et al. 2023" rid="ref-Bouwer_et_al_2023-nb-article" ref-type="bibr">Bouwer
-    et al. 2023</xref>;
-    <xref alt="van Daal et al. 2017" rid="ref-vanDaal_et_al_2017-nb-article" ref-type="bibr">van
-    Daal et al. 2017</xref>;
-    <xref alt="Jones et al. 2019" rid="ref-Jones_et_al_2019-nb-article" ref-type="bibr">Jones
-    et al. 2019</xref>;
-    <xref alt="Gijsen et al. 2021" rid="ref-Gijsen_et_al_2021-nb-article" ref-type="bibr">Gijsen
-    et al. 2021</xref>).</p>
-    <p>However, the statistical literature cautions against using
-    estimated scores to conduct additional analyses or tests. A key
-    consideration is that BTL scores are parameter estimates that
-    inherently carry uncertainty. Ignoring this uncertainty when
-    conducting separate analyses and tests can inflate their precision
-    and statistical power, increasing the risk of committing a type I
-    error
-    (<xref alt="McElreath 2020" rid="ref-McElreath_2020-nb-article" ref-type="bibr">McElreath
-    2020</xref>). A type I error results when a null hypothesis is
-    incorrectly rejected
-    (<xref alt="Everitt and Skrondal 2010" rid="ref-Everitt_et_al_2010-nb-article" ref-type="bibr">Everitt
-    and Skrondal 2010</xref>).</p>
-    <p>To mitigate these risks, principles from Structural Equation
-    Modeling (SEM)
-    (<xref alt="Hoyle 2023" rid="ref-Hoyle_et_al_2023-nb-article" ref-type="bibr">Hoyle
-    2023</xref>;
-    <xref alt="Kline 2023" rid="ref-Kline_et_al_2023-nb-article" ref-type="bibr">Kline
-    2023</xref>) and Item Response Theory (IRT)
-    (<xref alt="de Ayala 2009" rid="ref-deAyala_2009-nb-article" ref-type="bibr">de
-    Ayala 2009</xref>;
-    <xref alt="Fox 2010" rid="ref-Fox_2010-nb-article" ref-type="bibr">Fox
-    2010</xref>;
-    <xref alt="van der Linden 2017" rid="ref-vanderLinden_et_al_2017-nb-article" ref-type="bibr">van
-    der Linden 2017</xref>) recommend conducting these analyses and
-    tests within a structural model. A structural model specify how
-    different manifest or latent variables influence the latent variable
-    of interest
-    (<xref alt="Everitt and Skrondal 2010" rid="ref-Everitt_et_al_2010-nb-article" ref-type="bibr">Everitt
-    and Skrondal 2010</xref>). This approach allows analyses that can
-    account for both the scores and their uncertainties simultaneously,
-    rather than treating them as separate elements. Therefore, an
-    integrated approach that combines CJ’s structural and measurement
-    models can offer significant advantages.</p>
-  </sec>
-  <sec id="the-assumptions-of-case-5-and-the-measurement-model-nb-article">
-    <title>The assumptions of Case 5 and the measurement model</title>
-    <p>From early on in the literature, it has been clear that the BTL
-    model represents a statistical articulation of Thurstone’s Case 5
-    (<xref alt="1927" rid="ref-Thurstone_1927-nb-article" ref-type="bibr">1927</xref>).
-    Talk about Pollitt and Elliott
-    (<xref alt="2003" rid="ref-Pollitt_et_al_2003-nb-article" ref-type="bibr">2003</xref>)
-    and Bramley
-    (<xref alt="2008" rid="ref-Bramley_2008-nb-article" ref-type="bibr">2008</xref>).</p>
-    <p>What case 5 implies, Assumptions. Not a normal distribution but a
-    logistic distribution</p>
-    <p>Table with assumptions</p>
-  </sec>
-  <sec id="the-role-and-impact-of-comparison-algorithms-nb-article">
-    <title>The role and impact of comparison algorithms</title>
-  </sec>
-</sec>
-<sec id="sec-theory-nb-article">
-  <title>Theory</title>
-  <sec id="sec-theory-theoretical-nb-article">
-    <title>A theoretical model for CJ</title>
-  </sec>
-  <sec id="sec-theory-statistics-nb-article">
-    <title>From theory to statistics</title>
-  </sec>
-</sec>
-<sec id="sec-discuss-nb-article">
-  <title>Discussion</title>
-  <sec id="sec-discuss-finding-nb-article">
-    <title>Findings</title>
-  </sec>
-  <sec id="sec-discuss-limitations-nb-article">
-    <title>Limitations and further research</title>
-  </sec>
-</sec>
-<sec id="sec-conclusion-nb-article">
-  <title>Conclusion</title>
-  <p></p>
-</sec>
-<sec id="declarations-nb-article">
-  <title>Declarations</title>
-  <p><bold>Funding:</bold> The project was founded through the Research
-  Fund of the University of Antwerp (BOF).</p>
-  <p><bold>Financial interests:</bold> The authors have no relevant
-  financial interest to disclose.</p>
-  <p><bold>Non-financial interests:</bold> Author XX serve on advisory
-  broad of Company Y but receives no compensation this role.</p>
-  <p><bold>Ethics approval:</bold> The University of Antwerp Research
-  Ethics Committee has confirmed that no ethical approval is
-  required.</p>
-  <p><bold>Consent to participate:</bold> Not applicable</p>
-  <p><bold>Consent for publication:</bold> All authors have read and
-  agreed to the published version of the manuscript.</p>
-  <p><bold>Availability of data and materials:</bold> No data was
-  utilized in this study.</p>
-  <p><bold>Code availability:</bold> All the code utilized in this
-  research is available in the digital document located at:
-  <ext-link ext-link-type="uri" xlink:href="https://jriveraespejo.github.io/paper2_manuscript/">https://jriveraespejo.github.io/paper2_manuscript/</ext-link>.</p>
-  <p><bold>AI-assisted technologies in the writing process:</bold> The
-  authors used ChatGPT, an AI language model, during the preparation of
-  this work. They occasionally employed the tool to refine phrasing and
-  optimize wording, ensuring appropriate language use and enhancing the
-  manuscript’s clarity and coherence. The authors take full
-  responsibility for the final content of the publication.</p>
-  <p><bold>CRediT authorship contribution statement:</bold>
-  <italic>Conceptualization:</italic> S.G., S.DM., T.vD., and J.M.R.E;
-  <italic>Methodology:</italic> S.DM., T.vD., and J.M.R.E;
-  <italic>Software:</italic> J.M.R.E.; <italic>Validation:</italic>
-  J.M.R.E.; <italic>Formal Analysis:</italic> J.M.R.E.;
-  <italic>Investigation:</italic> J.M.R.E; <italic>Resources:</italic>
-  S.G., S.DM., and T.vD.; <italic>Data curation:</italic> J.M.R.E.;
-  <italic>Writing - original draft:</italic> J.M.R.E.; <italic>Writing -
-  review &amp; editing:</italic> S.G., S.DM., and T.vD.;
-  <italic>Visualization:</italic> J.M.R.E.;
-  <italic>Supervision:</italic> S.G. and S.DM.; <italic>Project
-  administration:</italic> S.G. and S.DM.; <italic>Funding
-  acquisition:</italic> S.G. and S.DM.</p>
-  <p></p>
-</sec>
-<sec id="sec-appendix-nb-article">
-  <title>Appendix</title>
-  <sec id="sec-appendix-A-nb-article">
-    <title>Appendix A: Ignoring uncertainty</title>
-    <sec specific-use="notebook-content">
-    <code language="r script"># # simulate units and sub-units
-# USd = sim_units_trait( Un=10,
-#                        Us=c(1,1),
-#                        Ub=c(0,-0.2,0.2),
-#                        Useed = 45789,
-#                        Sn=6,
-#                        Ss=c(0.8,0.8),
-#                        Sb=c(0,0,0),
-#                        Sseed = 9478 )
-# 
-# # simulate judges bias
-# Jd = sim_judges_bias( Jn=10,
-#                       Js=c(0.02,0.02),
-#                       Jseed = 79985 )
-# 
-# 
-# # simulate full comparison data
-# d = cm_full( USd=USd$USd,
-#              Jd=Jd$Jd )
-# 
-# 
-# # set data in list
-# dL = list_data( d )
-# str(dL)</code>
-    </sec>
-  </sec>
-  <sec id="sec-appendix-B-nb-article">
-    <title>Appendix B: The five cases of Thurstone</title>
-    <p></p>
-  </sec>
-</sec>
-</body>
-
-
-
-<back>
-<ref-list>
-  <title>References</title>
-  <ref id="ref-Thurstone_1927-nb-article">
-    <element-citation publication-type="article-journal">
-      <person-group person-group-type="author">
-        <name><surname>Thurstone</surname><given-names>L.</given-names></name>
-      </person-group>
-      <article-title>A law of comparative judgment</article-title>
-      <source>Psychological Review</source>
-      <year iso-8601-date="1927">1927</year>
-      <volume>34</volume>
-      <issue>4</issue>
-      <uri></uri>
-      <pub-id pub-id-type="doi">10.1037/h0070288</pub-id>
-      <fpage>482</fpage>
-      <lpage>499</lpage>
-    </element-citation>
-  </ref>
-  <ref id="ref-Bradley_et_al_1952-nb-article">
-    <element-citation publication-type="article-journal">
-      <person-group person-group-type="author">
-        <name><surname>Bradley</surname><given-names>R.</given-names></name>
-        <name><surname>Terry</surname><given-names>M.</given-names></name>
-      </person-group>
-      <article-title>Rank analysis of incomplete block designs: I. The method of paired comparisons</article-title>
-      <source>Biometrika</source>
-      <year iso-8601-date="1952">1952</year>
-      <volume>39</volume>
-      <issue>3-4</issue>
-      <uri>http://www.jstor.com/stable/2334029</uri>
-      <pub-id pub-id-type="doi">10.2307/2334029</pub-id>
-      <fpage>324</fpage>
-      <lpage>345</lpage>
-    </element-citation>
-  </ref>
-  <ref id="ref-Luce_1959-nb-article">
-    <element-citation publication-type="article-journal">
-      <person-group person-group-type="author">
-        <name><surname>Luce</surname><given-names>R.</given-names></name>
-      </person-group>
-      <article-title>On the possible psychophysical laws</article-title>
-      <source>The Psychologcal Review</source>
-      <year iso-8601-date="1959">1959</year>
-      <volume>66</volume>
-      <issue>2</issue>
-      <uri></uri>
-      <pub-id pub-id-type="doi">10.1037/h0043178</pub-id>
-      <fpage>482</fpage>
-      <lpage>499</lpage>
-    </element-citation>
-  </ref>
-  <ref id="ref-Andrich_1978-nb-article">
-    <element-citation publication-type="article-journal">
-      <person-group person-group-type="author">
-        <name><surname>Andrich</surname><given-names>D.</given-names></name>
-      </person-group>
-      <article-title>Relationships between the thurstone and rasch approaches to item scaling</article-title>
-      <source>Applied Psychological Measurement</source>
-      <year iso-8601-date="1978">1978</year>
-      <volume>2</volume>
-      <issue>3</issue>
-      <uri></uri>
-      <pub-id pub-id-type="doi">10.1177/014662167800200319</pub-id>
-      <fpage>451</fpage>
-      <lpage>462</lpage>
-    </element-citation>
-  </ref>
-  <ref id="ref-Laming_2004-nb-article">
-    <element-citation publication-type="article-journal">
-      <person-group person-group-type="author">
-        <name><surname>Laming</surname><given-names>D.</given-names></name>
-      </person-group>
-      <article-title>Marking university examinations: Some lessons from psychophysics</article-title>
-      <source>Psychology Learning &amp; Teaching</source>
-      <year iso-8601-date="2004">2004</year>
-      <volume>3</volume>
-      <issue>2</issue>
-      <uri></uri>
-      <pub-id pub-id-type="doi">10.2304/plat.2003.3.2.89</pub-id>
-      <fpage>89</fpage>
-      <lpage>96</lpage>
-    </element-citation>
-  </ref>
-  <ref id="ref-Pollitt_2012a-nb-article">
-    <element-citation publication-type="article-journal">
-      <person-group person-group-type="author">
-        <name><surname>Pollitt</surname><given-names>A.</given-names></name>
-      </person-group>
-      <article-title>Comparative judgement for assessment</article-title>
-      <source>International Journal of Technology and Design Education</source>
-      <year iso-8601-date="2012">2012</year>
-      <volume>22</volume>
-      <issue>2</issue>
-      <uri></uri>
-      <pub-id pub-id-type="doi">10.1007/s10798-011-9189-x</pub-id>
-      <fpage>157</fpage>
-      <lpage>170</lpage>
-    </element-citation>
-  </ref>
-  <ref id="ref-Pollitt_2012b-nb-article">
-    <element-citation publication-type="article-journal">
-      <person-group person-group-type="author">
-        <name><surname>Pollitt</surname><given-names>A.</given-names></name>
-      </person-group>
-      <article-title>The method of adaptive comparative judgement</article-title>
-      <source>Assessment in Education: Principles, Policy and Practice</source>
-      <year iso-8601-date="2012">2012</year>
-      <volume>19</volume>
-      <issue>3</issue>
-      <uri></uri>
-      <pub-id pub-id-type="doi">10.1080/0969594X.2012.665354</pub-id>
-      <fpage>281</fpage>
-      <lpage>300</lpage>
-    </element-citation>
-  </ref>
-  <ref id="ref-Jones_2015-nb-article">
-    <element-citation publication-type="article-journal">
-      <person-group person-group-type="author">
-        <name><surname>Jones</surname><given-names>I.</given-names></name>
-      </person-group>
-      <article-title>The problem of assessing problem solving: Can comparative judgement help?</article-title>
-      <source>Educational Studies in Mathematics</source>
-      <year iso-8601-date="2015">2015</year>
-      <volume>89</volume>
-      <issue>3</issue>
-      <uri></uri>
-      <pub-id pub-id-type="doi">10.1007/s10649-015-9607-1</pub-id>
-      <fpage>337</fpage>
-      <lpage>355</lpage>
-    </element-citation>
-  </ref>
-  <ref id="ref-vanDaal_et_al_2016-nb-article">
-    <element-citation publication-type="article-journal">
-      <person-group person-group-type="author">
-        <name><surname>van Daal</surname><given-names>T.</given-names></name>
-        <name><surname>Lesterhuis</surname><given-names>M.</given-names></name>
-        <name><surname>Coertjens</surname><given-names>L.</given-names></name>
-        <name><surname>Donche</surname><given-names>V.</given-names></name>
-        <name><surname>De Maeyer</surname><given-names>S.</given-names></name>
-      </person-group>
-      <article-title>Validity of comparative judgement to assess academic writing: Examining implications of its holistic character and building on a shared consensus</article-title>
-      <source>Assessment in Education: Principles, Policy &amp; Practice</source>
-      <year iso-8601-date="2016">2016</year>
-      <volume>26</volume>
-      <issue>1</issue>
-      <pub-id pub-id-type="doi">10.1080/0969594X.2016.1253542</pub-id>
-      <fpage>59</fpage>
-      <lpage>74</lpage>
-    </element-citation>
-  </ref>
-  <ref id="ref-Coertjens_et_al_2017-nb-article">
-    <element-citation publication-type="article-journal">
-      <person-group person-group-type="author">
-        <name><surname>Coertjens</surname><given-names>L.</given-names></name>
-        <name><surname>Lesterhuis</surname><given-names>M</given-names></name>
-        <name><surname>Verhavert</surname><given-names>S.</given-names></name>
-        <name><surname>Van Gasse</surname><given-names>R.</given-names></name>
-        <name><surname>De Maeyer</surname><given-names>S.</given-names></name>
-      </person-group>
-      <article-title>Teksten beoordelen met criterialijsten of via paarsgewijze vergelijking: Een afweging van betrouwbaarheid en tijdsinvestering</article-title>
-      <source>Pedagogische Studien</source>
-      <year iso-8601-date="2017">2017</year>
-      <volume>94</volume>
-      <uri>https://repository.uantwerpen.be/docman/irua/e71ea9/147930.pdf</uri>
-      <pub-id pub-id-type="doi"></pub-id>
-      <fpage>283</fpage>
-      <lpage>303</lpage>
-    </element-citation>
-  </ref>
-  <ref id="ref-vanDaal_et_al_2017-nb-article">
-    <element-citation publication-type="article-journal">
-      <person-group person-group-type="author">
-        <name><surname>van Daal</surname><given-names>T.</given-names></name>
-        <name><surname>Lesterhuis</surname><given-names>M.</given-names></name>
-        <name><surname>Coertjens</surname><given-names>L.</given-names></name>
-        <name><surname>van de Kamp</surname><given-names>MT.</given-names></name>
-        <name><surname>Donche</surname><given-names>V.</given-names></name>
-        <name><surname>De Maeyer</surname><given-names>Sven</given-names></name>
-      </person-group>
-      <article-title>The complexity of assessing student work using comparative judgment: The moderating role of decision accuracy</article-title>
-      <source>Frontiers in Education</source>
-      <year iso-8601-date="2017">2017</year>
-      <volume>2</volume>
-      <uri>https://www.frontiersin.org/articles/10.3389/feduc.2017.00044</uri>
-      <pub-id pub-id-type="doi">10.3389/feduc.2017.00044</pub-id>
-    </element-citation>
-  </ref>
-  <ref id="ref-Bartholomew_et_al_2018-nb-article">
-    <element-citation publication-type="article-journal">
-      <person-group person-group-type="author">
-        <name><surname>Bartholomew</surname><given-names>S.</given-names></name>
-        <name><surname>Nadelson</surname><given-names>L.</given-names></name>
-        <name><surname>Goodridge</surname><given-names>W.</given-names></name>
-        <name><surname>Reeve</surname><given-names>E.</given-names></name>
-      </person-group>
-      <article-title>Adaptive comparative judgment as a tool for assessing open-ended design problems and model eliciting activities</article-title>
-      <source>Educational Assessment</source>
-      <publisher-name>Routledge</publisher-name>
-      <year iso-8601-date="2018">2018</year>
-      <volume>23</volume>
-      <issue>2</issue>
-      <uri></uri>
-      <pub-id pub-id-type="doi">10.1080/10627197.2018.1444986</pub-id>
-      <fpage>85</fpage>
-      <lpage>101</lpage>
-    </element-citation>
-  </ref>
-  <ref id="ref-Jones_et_al_2019-nb-article">
-    <element-citation publication-type="article-journal">
-      <person-group person-group-type="author">
-        <name><surname>Jones</surname><given-names>I.</given-names></name>
-        <name><surname>Bisson</surname><given-names>M.</given-names></name>
-        <name><surname>Gilmore</surname><given-names>C.</given-names></name>
-        <name><surname>Inglis</surname><given-names>M.</given-names></name>
-      </person-group>
-      <article-title>Measuring conceptual understanding in randomised controlled trials: Can comparative judgement help?</article-title>
-      <source>British Educational Research Journal</source>
-      <year iso-8601-date="2019">2019</year>
-      <volume>45</volume>
-      <issue>3</issue>
-      <uri>https://bera-journals.onlinelibrary.wiley.com/doi/abs/10.1002/berj.3519</uri>
-      <pub-id pub-id-type="doi">10.1002/berj.3519</pub-id>
-      <fpage>662</fpage>
-      <lpage>680</lpage>
-    </element-citation>
-  </ref>
-  <ref id="ref-Bramley_et_al_2019-nb-article">
-    <element-citation publication-type="article-journal">
-      <person-group person-group-type="author">
-        <name><surname>Bramley</surname><given-names>T.</given-names></name>
-        <name><surname>Vitello</surname><given-names>S.</given-names></name>
-      </person-group>
-      <article-title>The effect of adaptivity on the reliability coefficient in adaptive comparative judgement</article-title>
-      <source>Assessment in Education: Principles, Policy and Practice</source>
-      <year iso-8601-date="2019">2019</year>
-      <volume>71</volume>
-      <issue>9</issue>
-      <pub-id pub-id-type="doi">10.1080/0969594X.2017.1418734</pub-id>
-      <fpage>1</fpage>
-      <lpage>25</lpage>
-    </element-citation>
-  </ref>
-  <ref id="ref-Verhavert_et_al_2019-nb-article">
-    <element-citation publication-type="article-journal">
-      <person-group person-group-type="author">
-        <name><surname>Verhavert</surname><given-names>S.</given-names></name>
-        <name><surname>Bouwer</surname><given-names>R.</given-names></name>
-        <name><surname>Donche</surname><given-names>V</given-names></name>
-        <name><surname>De Maeyer</surname><given-names>S.</given-names></name>
-      </person-group>
-      <article-title>A meta-analysis on the reliability of comparative judgement</article-title>
-      <source>Assessment in Education: Principles, Policy and Practice</source>
-      <year iso-8601-date="2019">2019</year>
-      <volume>26</volume>
-      <issue>5</issue>
-      <uri></uri>
-      <pub-id pub-id-type="doi">10.1080/0969594X.2019.1602027</pub-id>
-      <fpage>541</fpage>
-      <lpage>562</lpage>
-    </element-citation>
-  </ref>
-  <ref id="ref-Boonen_et_al_2020-nb-article">
-    <element-citation publication-type="article-journal">
-      <person-group person-group-type="author">
-        <name><surname>Boonen</surname><given-names>N.</given-names></name>
-        <name><surname>Kloots</surname><given-names>H.</given-names></name>
-        <name><surname>Gillis</surname><given-names>S.</given-names></name>
-      </person-group>
-      <article-title>Rating the overall speech quality of hearing-impaired children by means of comparative judgements</article-title>
-      <source>Journal of Communication Disorders</source>
-      <year iso-8601-date="2020">2020</year>
-      <volume>83</volume>
-      <issue></issue>
-      <uri></uri>
-      <pub-id pub-id-type="doi">10.1016/j.jcomdis.2019.105969</pub-id>
-      <fpage>1675</fpage>
-      <lpage>1687</lpage>
-    </element-citation>
-  </ref>
-  <ref id="ref-Marshall_et_al_2020-nb-article">
-    <element-citation publication-type="article-journal">
-      <person-group person-group-type="author">
-        <name><surname>Marshall</surname><given-names>N.</given-names></name>
-        <name><surname>Shaw</surname><given-names>K</given-names></name>
-        <name><surname>Hunter</surname><given-names>J.</given-names></name>
-        <name><surname>Jones</surname><given-names>I.</given-names></name>
-      </person-group>
-      <article-title>Assessment by comparative judgement: An application to secondary statistics and english in new zealand</article-title>
-      <source>New Zealand Journal of Educational Studies</source>
-      <publisher-name>International Society for Bayesian Analysis</publisher-name>
-      <year iso-8601-date="2020">2020</year>
-      <volume>55</volume>
-      <issue></issue>
-      <uri></uri>
-      <pub-id pub-id-type="doi">10.1007/s40841-020-00163-3</pub-id>
-      <fpage>49</fpage>
-      <lpage>71</lpage>
-    </element-citation>
-  </ref>
-  <ref id="ref-Gijsen_et_al_2021-nb-article">
-    <element-citation publication-type="article-journal">
-      <person-group person-group-type="author">
-        <name><surname>Gijsen</surname><given-names>M.</given-names></name>
-        <name><surname>van Daal</surname><given-names>T.</given-names></name>
-        <name><surname>Lesterhuis</surname><given-names>Marije</given-names></name>
-        <name><surname>Gijbels</surname><given-names>David</given-names></name>
-        <name><surname>De Maeyer</surname><given-names>Sven</given-names></name>
-      </person-group>
-      <article-title>The complexity of comparative judgments in assessing argumentative writing: An eye tracking study</article-title>
-      <source>Frontiers in Education</source>
-      <year iso-8601-date="2021">2021</year>
-      <volume>5</volume>
-      <uri>url{https://www.frontiersin.org/articles/10.3389/feduc.2020.582800}</uri>
-      <pub-id pub-id-type="doi">10.3389/feduc.2020.582800</pub-id>
-    </element-citation>
-  </ref>
-  <ref id="ref-Verhavert_et_al_2022-nb-article">
-    <element-citation publication-type="article-journal">
-      <person-group person-group-type="author">
-        <name><surname>Verhavert</surname><given-names>San</given-names></name>
-        <name><surname>Furlong</surname><given-names>Antony</given-names></name>
-        <name><surname>Bouwer</surname><given-names>Renske</given-names></name>
-      </person-group>
-      <article-title>The accuracy and efficiency of a reference-based adaptive selection algorithm for comparative judgment</article-title>
-      <source>Frontiers in Education</source>
-      <year iso-8601-date="2022">2022</year>
-      <volume>6</volume>
-      <uri>https://www.frontiersin.org/journals/education/articles/10.3389/feduc.2021.785919</uri>
-      <pub-id pub-id-type="doi">10.3389/feduc.2021.785919</pub-id>
-    </element-citation>
-  </ref>
-  <ref id="ref-Crompvoets_et_al_2022-nb-article">
-    <element-citation publication-type="article-journal">
-      <person-group person-group-type="author">
-        <name><surname>Crompvoets</surname><given-names>Elise A. V.</given-names></name>
-        <name><surname>Béguin</surname><given-names>Anton A.</given-names></name>
-        <name><surname>Sijtsma</surname><given-names>Klaas</given-names></name>
-      </person-group>
-      <article-title>On the bias and stability of the results of comparative judgment</article-title>
-      <source>Frontiers in Education</source>
-      <year iso-8601-date="2022">2022</year>
-      <volume>6</volume>
-      <uri>url{https://www.frontiersin.org/articles/10.3389/feduc.2021.788202}</uri>
-      <pub-id pub-id-type="doi">10.3389/feduc.2021.788202</pub-id>
-    </element-citation>
-  </ref>
-  <ref id="ref-Bouwer_et_al_2023-nb-article">
-    <element-citation publication-type="article-journal">
-      <person-group person-group-type="author">
-        <name><surname>Bouwer</surname><given-names>R.</given-names></name>
-        <name><surname>Lesterhuis</surname><given-names>M.</given-names></name>
-        <name><surname>De Smedt</surname><given-names>F.</given-names></name>
-        <name><surname>Van Keer</surname><given-names>H.</given-names></name>
-        <name><surname>De Maeyer</surname><given-names>S.</given-names></name>
-      </person-group>
-      <article-title>Comparative approaches to the assessment of writing: Reliability and validity of benchmark rating and comparative judgement</article-title>
-      <source>Journal of Writing Research</source>
-      <year iso-8601-date="2023">2023</year>
-      <volume>15</volume>
-      <issue>3</issue>
-      <uri>https://www.jowr.org/index.php/jowr/article/view/867</uri>
-      <pub-id pub-id-type="doi">10.17239/jowr-2024.15.03.03</pub-id>
-      <fpage>497</fpage>
-      <lpage>518</lpage>
-    </element-citation>
-  </ref>
-  <ref id="ref-deAyala_2009-nb-article">
-    <element-citation publication-type="book">
-      <person-group person-group-type="author">
-        <name><surname>de Ayala</surname><given-names>R.</given-names></name>
-      </person-group>
-      <source>The theory and practice of item response theory</source>
-      <publisher-name>The Guilford Press</publisher-name>
-      <year iso-8601-date="2009">2009</year>
-      <isbn>9781593858698</isbn>
-      <uri></uri>
-      <pub-id pub-id-type="doi"></pub-id>
-    </element-citation>
-  </ref>
-  <ref id="ref-Everitt_et_al_2010-nb-article">
-    <element-citation publication-type="book">
-      <person-group person-group-type="author">
-        <name><surname>Everitt</surname><given-names>B.</given-names></name>
-        <name><surname>Skrondal</surname><given-names>A.</given-names></name>
-      </person-group>
-      <source>The cambridge dictionary of statistics</source>
-      <publisher-name>Cambridge University Press</publisher-name>
-      <year iso-8601-date="2010">2010</year>
-      <isbn>978-0521766999</isbn>
-      <uri></uri>
-      <pub-id pub-id-type="doi"></pub-id>
-    </element-citation>
-  </ref>
-  <ref id="ref-Fox_2010-nb-article">
-    <element-citation publication-type="book">
-      <person-group person-group-type="author">
-        <name><surname>Fox</surname><given-names>J. P.</given-names></name>
-      </person-group>
-      <source>Bayesian item response modeling, theory and applications</source>
-      <publisher-name>Springer</publisher-name>
-      <year iso-8601-date="2010">2010</year>
-      <volume></volume>
-      <uri></uri>
-      <pub-id pub-id-type="doi"></pub-id>
-    </element-citation>
-  </ref>
-  <ref id="ref-vanderLinden_et_al_2017-nb-article">
-    <element-citation publication-type="book">
-      <source>Handbook of item response theory</source>
-      <person-group person-group-type="editor">
-        <name><surname>van der Linden</surname><given-names>W.</given-names></name>
-      </person-group>
-      <publisher-name>CRC Press</publisher-name>
-      <year iso-8601-date="2017">2017</year>
-      <volume>1-3</volume>
-      <uri></uri>
-      <pub-id pub-id-type="doi"></pub-id>
-    </element-citation>
-  </ref>
-  <ref id="ref-McElreath_2020-nb-article">
-    <element-citation publication-type="book">
-      <person-group person-group-type="author">
-        <name><surname>McElreath</surname><given-names>R.</given-names></name>
-      </person-group>
-      <source>Statistical rethinking: A bayesian course with examples in r and STAN</source>
-      <publisher-name>Chapman; Hall/CRC</publisher-name>
-      <year iso-8601-date="2020">2020</year>
-      <isbn>9780367139919</isbn>
-      <uri></uri>
-      <pub-id pub-id-type="doi"></pub-id>
-    </element-citation>
-  </ref>
-  <ref id="ref-Hoyle_et_al_2023-nb-article">
-    <element-citation publication-type="book">
-      <person-group person-group-type="author">
-        <name><surname>Hoyle</surname><given-names>R. (eds.)</given-names></name>
-      </person-group>
-      <source>Handbook of structural equation modeling</source>
-      <publisher-name>Guilford Press</publisher-name>
-      <year iso-8601-date="2023">2023</year>
-      <isbn>9781462544646</isbn>
-      <uri></uri>
-      <pub-id pub-id-type="doi"></pub-id>
-    </element-citation>
-  </ref>
-  <ref id="ref-Kline_et_al_2023-nb-article">
-    <element-citation publication-type="book">
-      <person-group person-group-type="author">
-        <name><surname>Kline</surname><given-names>R.</given-names></name>
-      </person-group>
-      <source>Principles and practice of structural equation modeling</source>
-      <publisher-name>Guilford Press</publisher-name>
-      <year iso-8601-date="2023">2023</year>
-      <isbn>9781462551910</isbn>
-      <uri></uri>
-      <pub-id pub-id-type="doi"></pub-id>
-    </element-citation>
-  </ref>
-  <ref id="ref-Lesterhuis_2018-nb-article">
-    <element-citation publication-type="thesis">
-      <person-group person-group-type="author">
-        <name><surname>Lesterhuis</surname><given-names>M.</given-names></name>
-      </person-group>
-      <article-title>The validity of comparative judgement for assessing text quality: An assessor’s perspective</article-title>
-      <publisher-name>University of Antwerp</publisher-name>
-      <year iso-8601-date="2018">2018</year>
-    </element-citation>
-  </ref>
-  <ref id="ref-Bramley_2008-nb-article">
-    <element-citation publication-type="chapter">
-      <person-group person-group-type="author">
-        <name><surname>Bramley</surname><given-names>T.</given-names></name>
-      </person-group>
-      <article-title>Paired comparison methods</article-title>
-      <source>Techniques for monitoring the comparability of examination standards</source>
-      <person-group person-group-type="editor">
-        <name><surname>Newton</surname><given-names>P.</given-names></name>
-        <name><surname>Baird</surname><given-names>J.</given-names></name>
-        <name><surname>Goldsteing</surname><given-names>H.</given-names></name>
-        <name><surname>Patrick</surname><given-names>H.</given-names></name>
-        <name><surname>Tymms</surname><given-names>P.</given-names></name>
-      </person-group>
-      <publisher-name>GOV.UK.</publisher-name>
-      <year iso-8601-date="2008">2008</year>
-      <uri>https://www.gov.uk/government/publications/techniques-for-monitoring-the-comparability-of-examination-standards</uri>
-      <pub-id pub-id-type="doi"></pub-id>
-      <fpage>246</fpage>
-      <lpage>300</lpage>
-    </element-citation>
-  </ref>
-  <ref id="ref-Bartholomew_et_al_2020-nb-article">
-    <element-citation publication-type="chapter">
-      <person-group person-group-type="author">
-        <name><surname>Bartholomew</surname><given-names>S.</given-names></name>
-        <name><surname>Williams</surname><given-names>P.</given-names></name>
-      </person-group>
-      <article-title>STEM skill assessment: An application of adaptive comparative judgment</article-title>
-      <source>Integrated approaches to STEM education. Advances in STEM education</source>
-      <person-group person-group-type="editor">
-        <name><surname>Anderson</surname><given-names>J.</given-names></name>
-        <name><surname>Li</surname><given-names>Y.</given-names></name>
-      </person-group>
-      <publisher-name>Springer</publisher-name>
-      <year iso-8601-date="2020">2020</year>
-      <volume></volume>
-      <uri></uri>
-      <pub-id pub-id-type="doi">10.1007/978-3-030-52229-2_18</pub-id>
-      <fpage>331</fpage>
-      <lpage>349</lpage>
-    </element-citation>
-  </ref>
-  <ref id="ref-Pollitt_2004-nb-article">
-    <element-citation publication-type="paper-conference">
-      <person-group person-group-type="author">
-        <name><surname>Pollitt</surname><given-names>A.</given-names></name>
-      </person-group>
-      <article-title>Let’s stop marking exams</article-title>
-      <source>Proceedings of the IAEA conference</source>
-      <publisher-name>University of Cambridge Local Examinations Syndicate</publisher-name>
-      <publisher-loc>Philadelphia</publisher-loc>
-      <year iso-8601-date="2004">2004</year>
-      <volume></volume>
-      <uri>https://www.cambridgeassessment.org.uk/images/109719-let-s-stop-marking-exams.pdf</uri>
-      <fpage></fpage>
-      <lpage></lpage>
-    </element-citation>
-  </ref>
-  <ref id="ref-Goossens_et_al_2018-nb-article">
-    <element-citation publication-type="paper-conference">
-      <person-group person-group-type="author">
-        <name><surname>Goossens</surname><given-names>M.</given-names></name>
-        <name><surname>De Maeyer</surname><given-names>S.</given-names></name>
-      </person-group>
-      <article-title>How to obtain efficient high reliabilities in assessing texts: Rubrics vs comparative judgement</article-title>
-      <source>Technology enhanced assessment</source>
-      <person-group person-group-type="editor">
-        <name><surname>Ras</surname><given-names>E.</given-names></name>
-        <name><surname>Guerrero Roldán</surname><given-names>A.</given-names></name>
-      </person-group>
-      <publisher-name>Springer International Publishing</publisher-name>
-      <year iso-8601-date="2018">2018</year>
-      <uri></uri>
-      <pub-id pub-id-type="doi">10.1007/978-3-319-97807-9_2</pub-id>
-      <fpage>13</fpage>
-      <lpage>25</lpage>
-    </element-citation>
-  </ref>
-  <ref id="ref-Mikhailiuk_et_al_2021-nb-article">
-    <element-citation publication-type="paper-conference">
-      <person-group person-group-type="author">
-        <name><surname>Mikhailiuk</surname><given-names>A.</given-names></name>
-        <name><surname>Wilmot</surname><given-names>C.</given-names></name>
-        <name><surname>Perez-Ortiz</surname><given-names>M.</given-names></name>
-        <name><surname>Yue</surname><given-names>D.</given-names></name>
-        <name><surname>Mantiuk</surname><given-names>R.</given-names></name>
-      </person-group>
-      <article-title>Active sampling for pairwise comparisons via approximate message passing and information gain maximization</article-title>
-      <source>2020 25th international conference on pattern recognition (ICPR)</source>
-      <year iso-8601-date="2021">2021</year>
-      <volume></volume>
-      <uri></uri>
-      <pub-id pub-id-type="doi">10.1109/ICPR48806.2021.9412676</pub-id>
-      <fpage>2559</fpage>
-      <lpage>2566</lpage>
-    </element-citation>
-  </ref>
-  <ref id="ref-Pollitt_et_al_2003-nb-article">
-    <element-citation>
-      <person-group person-group-type="author">
-        <name><surname>Pollitt</surname><given-names>A.</given-names></name>
-        <name><surname>Elliott</surname><given-names>G.</given-names></name>
-      </person-group>
-      <article-title>Finding a proper role for human judgement in the examination system.</article-title>
-      <publisher-name>University of Cambridge Local Examinations Syndicate</publisher-name>
-      <year iso-8601-date="2003">2003</year>
-      <uri>https://www.cambridgeassessment.org.uk/Images/109707-monitoring-and-investigating-comparability-a-proper-role-for-human-judgement.pdf</uri>
-    </element-citation>
-  </ref>
-  <ref id="ref-Whitehouse_2012-nb-article">
-    <element-citation>
-      <person-group person-group-type="author">
-        <name><surname>Whitehouse</surname><given-names>C.</given-names></name>
-      </person-group>
-      <article-title>Testing the validity of judgements about geography essays using the adaptive comparative judgement method</article-title>
-      <publisher-name>Centre for Education Research &amp; Policy</publisher-name>
-      <year iso-8601-date="2012">2012</year>
-      <uri>https://filestore.aqa.org.uk/content/research/CERP_RP_CW_24102012_0.pdf?download=1</uri>
-    </element-citation>
-  </ref>
-</ref-list>
-</back>
-
-
-</sub-article>
 
 </article>
