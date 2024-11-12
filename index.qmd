@@ -81,6 +81,19 @@ execute:
   message: false
 ---
 
+```{r}
+#| results: hide
+#| label: code-package
+
+# main directory
+main_dir = '/home/josema/Desktop/1. Work/1 research/PhD Antwerp/#thesis/paper2/paper2_manuscript'
+
+# load packages
+libraries = c('tidyverse','tibble','gt')
+sapply(libraries, require, character.only=T)
+
+```
+
 # Introduction {#sec-introduction}
 
 <!-- recording: Sven 24.10.04; time: 00:00:00 - 00:09:10 -->
@@ -102,7 +115,7 @@ Numerous studies have documented the effectiveness of CJ in assessing traits and
 <!-- Adaptive comparison algorithms dynamically present stimuli to judges, based on the results of previous comparisons. They aim to enhance the informativeness of comparisons while optimizing judges' time [@Bramley_2015].  -->
 
 <!-- 3. But what are the problems of DCJ as a method? -->
-Nevertheless, despite the growing number of CJ studies, unsystematic and fragmented research approaches in the literature have left several critical issues unaddressed. This research primarily focuses on three: the apparent disconnect between CJ's measurement and structural model, the over-reliance on the assumptions of Thurstone's Case 5 [-@Thurstone_1927] in CJ's measurement model, and the unclear role of comparison algorithms on the method's reliability and validity. The following sections will discuss each of these issues in detail, followed by the introduction of a theoretical model and its statistical translation, which aims to address all three concerns simultaneously.
+Nevertheless, despite the growing number of CJ studies, unsystematic and fragmented research approaches in the literature have left several critical issues unaddressed. This research primarily focuses on three: the apparent disconnect between CJ's measurement and structural model, the over-reliance on the assumptions of Thurstone's Case V [-@Thurstone_1927] in CJ's measurement model, and the unclear role of comparison algorithms on the method's reliability and validity. The following sections will discuss each of these issues in detail, followed by the introduction of a theoretical model and its statistical translation, which aims to address all three concerns simultaneously.
 
 
 # Three critical issues in CJ literature {#sec-theory-issues}
@@ -111,7 +124,7 @@ Nevertheless, despite the growing number of CJ studies, unsystematic and fragmen
 
 <!-- recording: Sven 24.10.04; time: 00:14:30 - 00:21:00 -->
 <!-- recording: Sven and Tine 24.10.18; time: 00:08:30 - 00:14:55 -->
-<!-- recording: Sven and Tine 24.10.25; time: 00:17:00 - 00:31:00 -->
+<!-- recording: Sven and Tine 24.10.25; time: 00:17:00 - 00:31:10 -->
 
 <!-- 1. The BTL model is CJ's measurement model -->
 In a typical CJ study, the Bradley-Terry-Luce (BTL) model [@Bradley_et_al_1952; @Luce_1959] serves as the measurement model for CJ [@Andrich_1978; @Bramley_2008]. A measurement model specifies how manifest variables contribute to the estimation of latent variables [@Everitt_et_al_2010]. For example, when evaluating text quality, researchers use the BTL model to process the dichotomous outcomes resulting from the pairwise comparisons (the manifest variables) to estimate scores that reflect the underlying quality level of the texts (the latent variable) [@Laming_2004; @Pollitt_2012b; @Whitehouse_2012; @vanDaal_et_al_2016; @Lesterhuis_2018; @Coertjens_et_al_2017; @Goossens_et_al_2018; @Bouwer_et_al_2023]. 
@@ -121,37 +134,60 @@ Researchers then typically use the estimated BTL scores, or their transformation
 
 <!-- 3. But what is the problem with this? -->
 However, the statistical literature advises caution when using estimated scores to conduct additional analyses or hypotheses tests. A key consideration is that BTL scores are parameter estimates that inherently carry uncertainty. Ignoring this uncertainty can introduce bias into the analysis and reduce the precision of hypothesis tests. Notably, the direction and magnitude of the bias are often unpredictable; results may be attenuated, exaggerated, or remain unaffected, depending on the amount of uncertainty present in the scores and the actual effects being tested [@Kline_et_al_2023, pp. 25; @Hoyle_et_al_2023, pp. 137]. Furthermore, reduced precision in hypothesis tests weakens their statistical power, ultimately increasing the likelihood of committing type-I or type-II errors [@McElreath_2020]. 
-
 <!-- A type-I error occurs when a *true* null hypothesis is incorrectly rejected, while a type-II error occurs when a *false* null hypothesis is incorrectly accepted [@Everitt_et_al_2010]. -->
 
 <!-- 4. So, what is the solution?  -->
-To mitigate these risks, principles from Structural Equation Modeling (SEM) [@Hoyle_et_al_2023, pp. 138] and Item Response Theory (IRT) [@Fox_2010, chap. 6; @vanderLinden_et_al_2017_I, chap. 24] recommend conducting these analyses and tests within a structural model. A structural model specifies how different manifest or latent variables influence the latent variable of interest [@Everitt_et_al_2010]. This approach allows analyses that can account for both the scores and their uncertainties simultaneously, rather than treating them as separate elements. Therefore, an integrated approach that combines CJ’s measurement and structural models can offer significant advantages.
+To mitigate these risks, principles from Structural Equation Modeling (SEM) [@Hoyle_et_al_2023, pp. 138] and Item Response Theory (IRT) [@Fox_2010, chap. 6; @vanderLinden_et_al_2017_I, chap. 24] recommend conducting these analyses and tests within a structural model. A structural model specifies how different manifest or latent variables influence the latent variable of interest [@Everitt_et_al_2010]. This approach allows analyses that can account for both the BTL scores and their uncertainties simultaneously, rather than treating them as separate elements. Therefore, an integrated approach that combines CJ’s measurement and structural models can offer significant advantages.
 
 
-## The assumptions of Case 5 and the measurement model
+## The assumptions of Case V and the measurement model
 
-<!-- recording: Sven and Tine 24.10.25; time: 00:31:00 - 00:52:20 -->
-
-<!-- []{style="color:red;"}. -->
-
-<!-- 1. What are the five cases of Thurstone? -->
-
-
+<!-- recording: Sven and Tine 24.10.25; time: 00:31:10 - 00:52:20 -->
 
 <!-- 1. the BTL model is the statistical articulation of Case 5 -->
-
-<!-- From early on in the literature, it has been clear that the BTL model represents a statistical articulation of Thurstone's Case 5 [-@Thurstone_1927]. Talk about @Pollitt_et_al_2003 and @Bramley_2008. -->
-
-<!--   What case 5 implies, Assumptions. Not a normal distribution but a logistic distribution -->
-
-<!--   Table with assumptions -->
-
+In the CJ literature, researchers use the BTL model as the statistical representation of Thurstone's theory, particularly Thurstone's Case V. The BTL model closely aligns with the assumptions of Case V, with one notable distinction: the mathematical function linking dichotomous outcomes to trait scores, referred to as the *discriminal process distribution*. While Case V uses a cumulative normal distribution, the BTL model employs the more tractable logistic distribution [@Bramley_2008, pp. 254] (see @tbl-thurstone_cases). Importantly, this modification does not have a significant impact on the estimation or interpretation of the model compared with Case V, mainly because the logistic and normal distributions are related to each other by a factor of $1.7$ [@vanderLinden_et_al_2017_I, pp. 16].
 
 <!-- 2. But this model hold the greater number of assumptions -->
+However, Case V incorporates the largest number of simplifying assumptions [@Bramley_2008, pp. 253], prioritizing ease of use from the statistical point of view over precision in trait measurement. This focus on simplicity reflects Case V’s original purpose: to provide a "rather coarse scaling" of traits [@Thurstone_1927, pp. 269]. @tbl-thurstone_cases presents each of Thurstone's cases along with their underlying assumptions. These assumptions fall into four categories: assumptions concerning the *discriminal process distribution* and *discriminal dispersion* of stimuli, assumptions about correlations among stimuli, and assumptions regarding who makes the comparisons, either a single judge or multiple judges. For a comprehensive explanation of this theoretical progression, see @Thurstone_1927 and @Bramley_2008 [pp. 248-253].
 
-<!--   Although Case 5 was originally articulated to produce a "rather coarse scaling" of traits [@Thurstone_1927, p. 269], its assumptions have become predominant in the literature, but Thurstone's Case 5 is the case that holds the greater amount of simplifying assumptions. -->
+```{r}
+# #| results: hide
+# #| label: tbl-thurstone_cases
+# #| tbl-cap: "Thurstone's cases and BTL model assumptions."
+# #| classes: plain
+# 
+# assump = tibble( 
+#   Assumption = c('Discriminal process distribution', 'Discriminal dispersion', 
+#                  'Correlation between stimuli', 'Who compares?'),
+#   `Case I` = c('Cummulative Normal','Different','Constant','Single judge'),
+#   `Case II` = c('Cummulative Normal','Different','Constant','Multiple judges'),
+#   `Case III` = c('Cummulative Normal','Different','Zero','Multiple judges'),
+#   `Case IV` = c('Cummulative Normal','Similar','Zero','Multiple judges'),
+#   `Case V` = c('Cummulative Normal','Equal','Zero','Multiple judges'),
+#   `BTL model` = c('Logistic','Equal','Zero','Multiple judges') ) 
+# 
+# assump = assump %>% 
+#   mutate( Assumption = str_replace_all( Assumption, " ", "<br>" ),
+#           `Case I` = str_replace_all( `Case I`, " ", "<br>" ),
+#           `Case II` = str_replace_all( `Case II`, " ", "<br>" ),
+#           `Case III` = str_replace_all( `Case III`, " ", "<br>" ),
+#           `Case IV` = str_replace_all( `Case IV`, " ", "<br>" ),
+#           `Case V` = str_replace_all( `Case V`, " ", "<br>" ),
+#           `BTL model` = str_replace_all( `BTL model`, " ", "<br>" ) )
+# 
+# gt_assump = gt(assump) |>
+#   tab_spanner( label=md("**Thurstone's**"), columns=2:6 ) |>
+#   cols_align( align="center", columns=1:7 ) |>
+#   tab_style( style = cell_text(weight="bold"), locations=cells_column_labels() ) |>
+#   tab_options( table.font.size=pct(90) ) |>
+#   fmt_markdown( columns=everything() ) 
+# 
+# gt_assump
 
-<!--   @Thurstone_1927 justify the use of case V, on multiple assumptions, but the most important for our purpose are three: -->
+```
+
+
+@Thurstone_1927 justify the use of case V, on multiple assumptions, but the most important for our purpose are three:
 
 <!--   (a) related to Case 2 and case 3, it assumes the correlation between stimuli is zero, this translates into the cancellation of judges effects by mean of opposing and equally weighted 'mood' and 'simultaneous contrasts' effects. This is demonstrated using the additive nature of the logit scale, which helps to cancel 'bias' judges effects.  -->
 
@@ -186,11 +222,14 @@ To mitigate these risks, principles from Structural Equation Modeling (SEM) [@Ho
 
 <!-- If your scores are not reliable they cannot be valid. People have been employing a model with assumptions that they do not know if those assumptions apply for their cases. And when you do that, the scores you produce most likely will not be reliable, which, in turn, renders them invalid. -->
 
-<!-- Reliability is a necessary but not sufficient condition for validity. Reliability can exist without validity but validity cannot exist without reliability [@Perron_et_al_2015] -->
+<!-- Reliability is a necessary but not sufficient condition for validity. Reliability can exist without validity but validity cannot exist without reliability [@Perron_et_al_2015, pp. 2] -->
 
 
 
 ## The role and impact of comparison algorithms
+
+<!-- []{style="color:red;"}. -->
+
 
 <!-- Experimental design -->
 
