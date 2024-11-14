@@ -211,10 +211,10 @@ judgement \sep Structural Causal Models \sep
 \section{Introduction}\label{sec-introduction}
 
 In \emph{comparative judgment} (CJ) studies, judges assess a specific
-trait or competence across various stimuli by performing pairwise
+trait or attribute across various stimuli by performing pairwise
 comparisons \citep{Thurstone_1927, Pollitt_2004, Pollitt_2012a}. Each
 comparison produces a dichotomous outcome, indicating which stimulus is
-perceived to manifest a higher trait level. For example, when assessing
+perceived to exhibit a higher trait level. For example, when assessing
 text quality, judges compare pairs of written texts (the stimuli) to
 determine the relative quality each text exhibit (the trait)
 \citep{Laming_2004, Pollitt_2012b, Whitehouse_2012, vanDaal_et_al_2016, Lesterhuis_2018, Coertjens_et_al_2017, Goossens_et_al_2018, Bouwer_et_al_2023}.
@@ -239,27 +239,125 @@ Finally, research on practical applicability highlights the method's
 versatility across both educational and non-educational contexts
 \citep{Jones_2015, Bartholomew_et_al_2018, Jones_et_al_2019, Marshall_et_al_2020, Bartholomew_et_al_2020, Boonen_et_al_2020}.
 
-Nevertheless, despite the growing number of CJ studies, unsystematic and
-fragmented research approaches in the literature have left several
-critical issues unaddressed. This research primarily focuses on three:
-the apparent disconnect between CJ's measurement and structural model,
-the over-reliance on the assumptions of Thurstone's Case 5
-\citeyearpar{Thurstone_1927} in CJ's measurement model, and the unclear
-role of comparison algorithms on the method's reliability and validity.
-The following sections will discuss each of these issues in detail,
-followed by the introduction of a theoretical model and its statistical
-translation, which aims to address all three concerns simultaneously.
+Nevertheless, despite the increasing number of CJ studies, unsystematic
+and fragmented research approaches have left several critical issues
+unaddressed. This research primarily focuses on three: the over-reliance
+on Thurstone's Case V assumptions in the statistical analysis of CJ
+data, the apparent disconnect between CJ's trait measurement and
+hypothesis testing, and the unclear role and influence of comparison
+algorithms on the method's reliability and validity. The following
+sections will discuss each of these issues in detail, followed by the
+introduction of a theoretical model and its statistical translation,
+which aims to address all three concerns simultaneously.
 
 \section{Three critical issues in CJ
 literature}\label{sec-theory-issues}
 
+\subsection{The Case V and the statistical analysis of CJ
+data}\label{the-case-v-and-the-statistical-analysis-of-cj-data}
+
+In its most general form, Thurstone's theory
+\citeyearpar{Thurstone_1927} posits that when a judge compares two
+stimuli, the resulting dichotomous outcome depends on two main factors:
+the discriminal process and the law of comparative judgment. The
+\emph{discriminal process} refers to the psychological effect each
+stimulus has on the judges, or more simply stated, the judges'
+perception of the trait level of each stimulus. Thurstone assumes that
+the discriminal process for each stimulus follows a Normal distribution.
+In this distribution, the mode (mean), known as the \emph{modal
+discriminal process}, represents the position of the stimulus on the
+trait continuum, while the dispersion, known as the \emph{discriminal
+dispersion}, reflects variability in the perceived trait level of the
+stimulus. Figure~\ref{fig-discriminal_process} shows a visual depiction
+of the discriminal process of two stimuli (objects).
+
+\begin{figure}
+
+\centering{
+
+\includegraphics[width=0.7\linewidth,height=\textheight,keepaspectratio]{./images/figures/discriminal_process.png}
+
+}
+
+\caption{\label{fig-discriminal_process}Discriminal processes of two
+stimuli (objects). Extracted from \citet[pp.~249]{Bramley_2008}}
+
+\end{figure}%
+
+However, since the discriminal mode and dispersion of a single stimulus
+are not directly observable without comparing it to other stimuli, the
+\emph{law of comparative judgment} becomes essential. This law asserts
+that when assessing a specific trait by comparing two stimuli, the
+stimulus positioned further along the continuum is perceived as having a
+higher level of that trait. Thus, the observed dichotomous outcome is
+determined by the distribution of the difference between the discriminal
+processes of the two stimuli, called the \emph{discriminal difference}.
+Figure~\ref{fig-comparative_judgment} shows a visual depiction of the
+discriminal difference of two stimuli (objects).
+
+\begin{figure}
+
+\centering{
+
+\includegraphics[width=0.65\linewidth,height=\textheight,keepaspectratio]{./images/figures/comparative_judgment.png}
+
+}
+
+\caption{\label{fig-comparative_judgment}Discriminal difference between
+two stimuli (objects). Extracted from \citet[pp.~251]{Bramley_2008}}
+
+\end{figure}%
+
+Thurstone's general form of the theory primarily applies to pairwise
+comparisons of stimuli made by a single judge
+\citep[pp.~267]{Thurstone_1927}. Therefore, to enhance the theory's
+practical applicability, he developed five distinct cases, each
+incorporating a series of increasingly simplifying assumptions.
+Figure~\ref{fig-thurstone_cases} outlines each case along with their key
+assumptions. For a detailed explanation of this theoretical progression,
+see \citet{Thurstone_1927} and \citet[pp.~248-253]{Bramley_2008}.
+
+\begin{figure}
+
+\centering{
+
+\includegraphics[width=0.85\linewidth,height=\textheight,keepaspectratio]{./images/tables/thurstone_cases.png}
+
+}
+
+\caption{\label{fig-thurstone_cases}Thurstones cases and asumptions}
+
+\end{figure}%
+
+Surprisingly, Case V is the most commonly used case in the CJ
+literature, despite incorporating the largest number of simplifying
+assumptions \citep[pp.~253]{Bramley_2008}. This widespread adoption is
+primarily due to the Bradley-Terry-Luce (BTL) model
+\citep{Bradley_et_al_1952, Luce_1959}, which offers a simpler
+statistical representation of the case. The BTL model closely aligns
+with Case V's assumptions, with one key difference: the distribution of
+the discriminal process. While Case V assumes a Normal distribution, the
+BTL model uses the more mathematically tractable logistic distribution
+\citep[pp.~254]{Bramley_2008} (see Figure~\ref{fig-thurstone_cases}).
+However, this adjustment does not significantly affect the model's
+estimation or interpretation, as the logistic and normal distributions
+are related to each other by a factor of approximately \(1.7\)
+\citep[pp.~16]{vanderLinden_et_al_2017_I}.
+
+However, because Case V was originally developed to provide a ``rather
+coarse scaling'' of traits \citep[pp.~269]{Thurstone_1927}, prioritizing
+statistical ease of use over precision in trait measurement, two of its
+assumptions may be causing more problems than expected: the assumption
+of zero correlation between the stimuli, and the assumption of equal
+dispersion between stimuli.
+
 \subsection{The disconnect between structural and measurement
 models}\label{the-disconnect-between-structural-and-measurement-models}
 
-In a typical CJ study, the Bradley-Terry-Luce (BTL) model
-\citep{Bradley_et_al_1952, Luce_1959} serves as the measurement model
-for CJ \citep{Andrich_1978, Bramley_2008}. A measurement model specifies
-how manifest variables contribute to the estimation of latent variables
+As outlined in the previous section, the BTL model typically functions
+as the measurement model in a CJ study
+\citep{Andrich_1978, Bramley_2008}. A measurement model specifies how
+manifest variables contribute to the estimation of latent variables
 \citep{Everitt_et_al_2010}. For example, when evaluating text quality,
 researchers use the BTL model to process the dichotomous outcomes
 resulting from the pairwise comparisons (the manifest variables) to
@@ -297,13 +395,10 @@ To mitigate these risks, principles from Structural Equation Modeling
 recommend conducting these analyses and tests within a structural model.
 A structural model specifies how different manifest or latent variables
 influence the latent variable of interest \citep{Everitt_et_al_2010}.
-This approach allows analyses that can account for both the scores and
-their uncertainties simultaneously, rather than treating them as
+This approach allows analyses that can account for both the BTL scores
+and their uncertainties simultaneously, rather than treating them as
 separate elements. Therefore, an integrated approach that combines CJ's
 measurement and structural models can offer significant advantages.
-
-\subsection{The assumptions of Case 5 and the measurement
-model}\label{the-assumptions-of-case-5-and-the-measurement-model}
 
 \subsection{The role and impact of comparison
 algorithms}\label{the-role-and-impact-of-comparison-algorithms}

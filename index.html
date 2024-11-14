@@ -10,7 +10,7 @@
 <meta name="author" content="Tine van van Daal">
 <meta name="author" content="Sven De De Maeyer">
 <meta name="author" content="Steven Gillis">
-<meta name="dcterms.date" content="2024-11-08">
+<meta name="dcterms.date" content="2024-11-14">
 <meta name="keywords" content="Probability, Directed Acyclic Graphs, Bayesian methods, Thurstonian model, Comparative judgement, Structural Causal Models, Statistical modeling">
 
 <title>Let’s talk about Thurstone &amp; Co.: An information-theoretical model for comparative judgments, and its statistical translation</title>
@@ -59,6 +59,9 @@ div.csl-indent {
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
 <link href="site_libs/bootstrap/bootstrap-fd2cfa8b5d7e1d29c70154a761d0686f.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script src="site_libs/quarto-contrib/glightbox/glightbox.min.js"></script>
+<link href="site_libs/quarto-contrib/glightbox/glightbox.min.css" rel="stylesheet">
+<link href="site_libs/quarto-contrib/glightbox/lightbox.css" rel="stylesheet">
 <script async="" src="https://hypothes.is/embed.js"></script>
 <script>
   window.document.addEventListener("DOMContentLoaded", function (_event) {
@@ -66,6 +69,35 @@ div.csl-indent {
   });
 </script>
 
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN") {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
 
 <meta name="citation_title" content="Let&amp;amp;#039;s talk about Thurstone &amp; Co.: An information-theoretical model for comparative judgments, and its statistical translation">
 <meta name="citation_abstract" content="(to do)
@@ -75,10 +107,10 @@ div.csl-indent {
 <meta name="citation_author" content="Tine van van Daal">
 <meta name="citation_author" content="Sven De De Maeyer">
 <meta name="citation_author" content="Steven Gillis">
-<meta name="citation_publication_date" content="2024-11-08">
-<meta name="citation_cover_date" content="2024-11-08">
+<meta name="citation_publication_date" content="2024-11-14">
+<meta name="citation_cover_date" content="2024-11-14">
 <meta name="citation_year" content="2024">
-<meta name="citation_online_date" content="2024-11-08">
+<meta name="citation_online_date" content="2024-11-14">
 <meta name="citation_language" content="en">
 <meta name="citation_reference" content="citation_title=Correlation and causation;,citation_author=S. Wright;,citation_publication_date=1927;,citation_cover_date=1927;,citation_year=1927;,citation_fulltext_html_url=https://books.google.co.ao/books/about/Journal_of_Agricultural_Research.html?hl=pt-PT&amp;amp;amp;id=lNNdIV_qpwIC;,citation_issue=7;,citation_volume=20;,citation_journal_title=Correlation and causation;">
 <meta name="citation_reference" content="citation_title=On the interpretation of χ2 from contingency tables, and the calculation of p;,citation_author=R. Fisher;,citation_publication_date=1922;,citation_cover_date=1922;,citation_year=1922;,citation_fulltext_html_url=http://www.jstor.org/stable/2340521;,citation_issue=1;,citation_doi=10.2307/2340521;,citation_volume=85;,citation_journal_title=Journal of the Royal Statistical Society;,citation_publisher=[Wiley, Royal Statistical Society];">
@@ -293,7 +325,7 @@ div.csl-indent {
 <meta name="citation_reference" content="citation_title=The neyman-rubin model of causal inference and estimation via matching methods;,citation_author=J. Sekhon;,citation_editor=J Box-Steffensmeier;,citation_editor=H. Brady;,citation_editor=D. Collier;,citation_publication_date=2009;,citation_cover_date=2009;,citation_year=2009;,citation_doi=10.1093/oxfordhb/9780199286546.003.0011;,citation_inbook_title=The oxford handbook of political methodology;">
 <meta name="citation_reference" content="citation_title=MCMC using hamiltonian dynamics;,citation_author=R. Neal;,citation_editor=S. Brooks;,citation_editor=A. Gelman;,citation_editor=G. Jones;,citation_editor=X. Meng;,citation_publication_date=2012;,citation_cover_date=2012;,citation_year=2012;,citation_fulltext_html_url=https://arxiv.org/abs/1206.1901;,citation_inbook_title=Handbook of markov chain monte carlo;">
 <meta name="citation_reference" content="citation_title=Multilevel structural equation modeling;,citation_author=S. Rabe-Hesketh;,citation_author=A. Skrondal;,citation_author=X. Zheng;,citation_editor=R. Hoyle;,citation_publication_date=2012;,citation_cover_date=2012;,citation_year=2012;,citation_inbook_title=Handbook of structural equation modeling;">
-<meta name="citation_reference" content="citation_title=Reliability and Measurement Error;,citation_author=B. Perron;,citation_author=D. Gillespie;,citation_publication_date=2015-04;,citation_cover_date=2015-04;,citation_year=2015;,citation_doi=10.1093/acprof:oso/9780199855483.003.0004;,citation_inbook_title=Key Concepts in Measurement;">
+<meta name="citation_reference" content="citation_title=Reliability and Measurement Error;,citation_author=B. Perron;,citation_author=D. Gillespie;,citation_publication_date=2015-04;,citation_cover_date=2015-04;,citation_year=2015;,citation_doi=10.1093/acprof:oso/9780199855483.003.0004;,citation_inbook_title=Key Concepts in Measurement;,citation_series_title=Pocket guides to social work research methods;">
 <meta name="citation_reference" content="citation_title=Linguistics: Core concepts and principles;,citation_author=A. Gudivada;,citation_author=D. Rao;,citation_author=V. Gudivada;,citation_editor=Venkat N. Gudivada;,citation_editor=C. R. Rao;,citation_publication_date=2018;,citation_cover_date=2018;,citation_year=2018;,citation_fulltext_html_url=https://www.sciencedirect.com/science/article/pii/S0169716118300208;,citation_doi=10.1016/bs.host.2018.07.005;,citation_volume=38;,citation_inbook_title=Computational analysis and understanding of natural languages: Principles, methods and applications;,citation_series_title=Handbook of statistics;">
 <meta name="citation_reference" content="citation_title=Speech and language in congenitally deaf children with a cochlear implant;,citation_author=S. Gillis;,citation_editor=ElitzurHG Dattner;,citation_editor=Dorit Ravid;,citation_publication_date=2018;,citation_cover_date=2018;,citation_year=2018;,citation_doi=10.1515/9781614514909-038;,citation_inbook_title=Handbook of communication disorders: Theoretical, empirical, and applied linguistic perspectives;">
 <meta name="citation_reference" content="citation_title=STEM skill assessment: An application of adaptive comparative judgment;,citation_author=S. Bartholomew;,citation_author=P. Williams;,citation_editor=J. Anderson;,citation_editor=Y. Li;,citation_publication_date=2020;,citation_cover_date=2020;,citation_year=2020;,citation_doi=10.1007/978-3-030-52229-2_18;,citation_inbook_title=Integrated approaches to STEM education. Advances in STEM education;">
@@ -396,7 +428,7 @@ div.csl-indent {
                 <div>
             <div class="quarto-title-meta-heading">Published</div>
             <div class="quarto-title-meta-contents">
-              <p class="date">November 8, 2024</p>
+              <p class="date">November 14, 2024</p>
             </div>
           </div>
           
@@ -432,8 +464,8 @@ div.csl-indent {
   <li><a href="#sec-introduction" id="toc-sec-introduction" class="nav-link active" data-scroll-target="#sec-introduction"><span class="header-section-number">1</span> Introduction</a></li>
   <li><a href="#sec-theory-issues" id="toc-sec-theory-issues" class="nav-link" data-scroll-target="#sec-theory-issues"><span class="header-section-number">2</span> Three critical issues in CJ literature</a>
   <ul class="collapse">
-  <li><a href="#the-disconnect-between-structural-and-measurement-models" id="toc-the-disconnect-between-structural-and-measurement-models" class="nav-link" data-scroll-target="#the-disconnect-between-structural-and-measurement-models"><span class="header-section-number">2.1</span> The disconnect between structural and measurement models</a></li>
-  <li><a href="#the-assumptions-of-case-5-and-the-measurement-model" id="toc-the-assumptions-of-case-5-and-the-measurement-model" class="nav-link" data-scroll-target="#the-assumptions-of-case-5-and-the-measurement-model"><span class="header-section-number">2.2</span> The assumptions of Case 5 and the measurement model</a></li>
+  <li><a href="#the-case-v-and-the-statistical-analysis-of-cj-data" id="toc-the-case-v-and-the-statistical-analysis-of-cj-data" class="nav-link" data-scroll-target="#the-case-v-and-the-statistical-analysis-of-cj-data"><span class="header-section-number">2.1</span> The Case V and the statistical analysis of CJ data</a></li>
+  <li><a href="#the-disconnect-between-structural-and-measurement-models" id="toc-the-disconnect-between-structural-and-measurement-models" class="nav-link" data-scroll-target="#the-disconnect-between-structural-and-measurement-models"><span class="header-section-number">2.2</span> The disconnect between structural and measurement models</a></li>
   <li><a href="#the-role-and-impact-of-comparison-algorithms" id="toc-the-role-and-impact-of-comparison-algorithms" class="nav-link" data-scroll-target="#the-role-and-impact-of-comparison-algorithms"><span class="header-section-number">2.3</span> The role and impact of comparison algorithms</a></li>
   </ul></li>
   <li><a href="#sec-theory" id="toc-sec-theory" class="nav-link" data-scroll-target="#sec-theory"><span class="header-section-number">3</span> Theory</a>
@@ -469,7 +501,7 @@ div.csl-indent {
 <!-- recording: Sven and Tine 24.10.18; time: 00:04:05 - 00:08:30 -->
 <!-- recording: Sven and Tine 24.10.25; time: 00:00:00 - 00:17:00 -->
 <!-- 1. What does CJ do? -->
-<p>In <em>comparative judgment</em> (CJ) studies, judges assess a specific trait or competence across various stimuli by performing pairwise comparisons <span class="citation" data-cites="Thurstone_1927 Pollitt_2004 Pollitt_2012a">(<a href="#ref-Thurstone_1927" role="doc-biblioref">Thurstone 1927</a>; <a href="#ref-Pollitt_2004" role="doc-biblioref">Pollitt 2004</a>, <a href="#ref-Pollitt_2012a" role="doc-biblioref">2012a</a>)</span>. Each comparison produces a dichotomous outcome, indicating which stimulus is perceived to manifest a higher trait level. For example, when assessing text quality, judges compare pairs of written texts (the stimuli) to determine the relative quality each text exhibit (the trait) <span class="citation" data-cites="Laming_2004 Pollitt_2012b Whitehouse_2012 vanDaal_et_al_2016 Lesterhuis_2018 Coertjens_et_al_2017 Goossens_et_al_2018 Bouwer_et_al_2023">(<a href="#ref-Laming_2004" role="doc-biblioref">Laming 2004</a>; <a href="#ref-Pollitt_2012b" role="doc-biblioref">Pollitt 2012b</a>; <a href="#ref-Whitehouse_2012" role="doc-biblioref">Whitehouse 2012</a>; <a href="#ref-vanDaal_et_al_2016" role="doc-biblioref">van Daal et al. 2016</a>; <a href="#ref-Lesterhuis_2018" role="doc-biblioref">Lesterhuis 2018</a>; <a href="#ref-Coertjens_et_al_2017" role="doc-biblioref">Coertjens et al. 2017</a>; <a href="#ref-Goossens_et_al_2018" role="doc-biblioref">Goossens and De Maeyer 2018</a>; <a href="#ref-Bouwer_et_al_2023" role="doc-biblioref">Bouwer et al. 2023</a>)</span>.</p>
+<p>In <em>comparative judgment</em> (CJ) studies, judges assess a specific trait or attribute across various stimuli by performing pairwise comparisons <span class="citation" data-cites="Thurstone_1927 Pollitt_2004 Pollitt_2012a">(<a href="#ref-Thurstone_1927" role="doc-biblioref">Thurstone 1927</a>; <a href="#ref-Pollitt_2004" role="doc-biblioref">Pollitt 2004</a>, <a href="#ref-Pollitt_2012a" role="doc-biblioref">2012a</a>)</span>. Each comparison produces a dichotomous outcome, indicating which stimulus is perceived to exhibit a higher trait level. For example, when assessing text quality, judges compare pairs of written texts (the stimuli) to determine the relative quality each text exhibit (the trait) <span class="citation" data-cites="Laming_2004 Pollitt_2012b Whitehouse_2012 vanDaal_et_al_2016 Lesterhuis_2018 Coertjens_et_al_2017 Goossens_et_al_2018 Bouwer_et_al_2023">(<a href="#ref-Laming_2004" role="doc-biblioref">Laming 2004</a>; <a href="#ref-Pollitt_2012b" role="doc-biblioref">Pollitt 2012b</a>; <a href="#ref-Whitehouse_2012" role="doc-biblioref">Whitehouse 2012</a>; <a href="#ref-vanDaal_et_al_2016" role="doc-biblioref">van Daal et al. 2016</a>; <a href="#ref-Lesterhuis_2018" role="doc-biblioref">Lesterhuis 2018</a>; <a href="#ref-Coertjens_et_al_2017" role="doc-biblioref">Coertjens et al. 2017</a>; <a href="#ref-Goossens_et_al_2018" role="doc-biblioref">Goossens and De Maeyer 2018</a>; <a href="#ref-Bouwer_et_al_2023" role="doc-biblioref">Bouwer et al. 2023</a>)</span>.</p>
 <!-- and spoken language [@Boonen_et_al_2020]. Additionally, it has been applied to evaluate various competencies, including mathematical problem-solving skills [@Jones_2015], engineering design skills [@Bartholomew_et_al_2018], conceptual understanding in algebra [@Jones_et_al_2019], statistical and English knowledge [@Marshall_et_al_2020], and STEM knowledge and skills [@Bartholomew_et_al_2020]. -->
 <!-- 2. Where are we now with DCJ? -->
 <p>Numerous studies have documented the effectiveness of CJ in assessing traits and competencies over the past decade. These studies have emphasized three aspects of the method’s effectiveness: its reliability, validity, and practical applicability. Research on reliability indicates that CJ requires a relatively small number of pairwise comparisons <span class="citation" data-cites="Verhavert_et_al_2019 Crompvoets_et_al_2022">(<a href="#ref-Verhavert_et_al_2019" role="doc-biblioref">S. Verhavert et al. 2019</a>; <a href="#ref-Crompvoets_et_al_2022" role="doc-biblioref">Crompvoets, Béguin, and Sijtsma 2022</a>)</span> to produce trait scores that are as precise and consistent as those generated by other assessment methods <span class="citation" data-cites="Coertjens_et_al_2017 Goossens_et_al_2018 Bouwer_et_al_2023">(<a href="#ref-Coertjens_et_al_2017" role="doc-biblioref">Coertjens et al. 2017</a>; <a href="#ref-Goossens_et_al_2018" role="doc-biblioref">Goossens and De Maeyer 2018</a>; <a href="#ref-Bouwer_et_al_2023" role="doc-biblioref">Bouwer et al. 2023</a>)</span>. Furthermore, evidence suggests that the reliability and time efficiency of CJ are comparable, if not superior, to those of other assessment methods when employing adaptive comparison algorithms <span class="citation" data-cites="Pollitt_2012b Verhavert_et_al_2022 Mikhailiuk_et_al_2021">(<a href="#ref-Pollitt_2012b" role="doc-biblioref">Pollitt 2012b</a>; <a href="#ref-Verhavert_et_al_2022" role="doc-biblioref">San Verhavert, Furlong, and Bouwer 2022</a>; <a href="#ref-Mikhailiuk_et_al_2021" role="doc-biblioref">Mikhailiuk et al. 2021</a>)</span>. On the other hand, research on validity suggests that scores generated by CJ can accurately represent the traits under measurement <span class="citation" data-cites="Whitehouse_2012 vanDaal_et_al_2016 Lesterhuis_2018 Bartholomew_et_al_2018 Bouwer_et_al_2023">(<a href="#ref-Whitehouse_2012" role="doc-biblioref">Whitehouse 2012</a>; <a href="#ref-vanDaal_et_al_2016" role="doc-biblioref">van Daal et al. 2016</a>; <a href="#ref-Lesterhuis_2018" role="doc-biblioref">Lesterhuis 2018</a>; <a href="#ref-Bartholomew_et_al_2018" role="doc-biblioref">Bartholomew et al. 2018</a>; <a href="#ref-Bouwer_et_al_2023" role="doc-biblioref">Bouwer et al. 2023</a>)</span>. Finally, research on practical applicability highlights the method’s versatility across both educational and non-educational contexts <span class="citation" data-cites="Jones_2015 Bartholomew_et_al_2018 Jones_et_al_2019 Marshall_et_al_2020 Bartholomew_et_al_2020 Boonen_et_al_2020">(<a href="#ref-Jones_2015" role="doc-biblioref">Jones 2015</a>; <a href="#ref-Bartholomew_et_al_2018" role="doc-biblioref">Bartholomew et al. 2018</a>; <a href="#ref-Jones_et_al_2019" role="doc-biblioref">Jones et al. 2019</a>; <a href="#ref-Marshall_et_al_2020" role="doc-biblioref">Marshall et al. 2020</a>; <a href="#ref-Bartholomew_et_al_2020" role="doc-biblioref">Bartholomew and Williams 2020</a>; <a href="#ref-Boonen_et_al_2020" role="doc-biblioref">Boonen, Kloots, and Gillis 2020</a>)</span>.</p>
@@ -477,54 +509,88 @@ div.csl-indent {
 <!-- holistic benchmark ratings [@Bouwer_et_al_2023] -->
 <!-- Adaptive comparison algorithms dynamically present stimuli to judges, based on the results of previous comparisons. They aim to enhance the informativeness of comparisons while optimizing judges' time [@Bramley_2015].  -->
 <!-- 3. But what are the problems of DCJ as a method? -->
-<p>Nevertheless, despite the growing number of CJ studies, unsystematic and fragmented research approaches in the literature have left several critical issues unaddressed. This research primarily focuses on three: the apparent disconnect between CJ’s measurement and structural model, the over-reliance on the assumptions of Thurstone’s Case 5 <span class="citation" data-cites="Thurstone_1927">(<a href="#ref-Thurstone_1927" role="doc-biblioref">1927</a>)</span> in CJ’s measurement model, and the unclear role of comparison algorithms on the method’s reliability and validity. The following sections will discuss each of these issues in detail, followed by the introduction of a theoretical model and its statistical translation, which aims to address all three concerns simultaneously.</p>
+<p>Nevertheless, despite the increasing number of CJ studies, unsystematic and fragmented research approaches have left several critical issues unaddressed. This research primarily focuses on three: the over-reliance on Thurstone’s Case V assumptions in the statistical analysis of CJ data, the apparent disconnect between CJ’s trait measurement and hypothesis testing, and the unclear role and influence of comparison algorithms on the method’s reliability and validity. The following sections will discuss each of these issues in detail, followed by the introduction of a theoretical model and its statistical translation, which aims to address all three concerns simultaneously.</p>
 </section>
 <section id="sec-theory-issues" class="level1" data-number="2">
 <h1 data-number="2"><span class="header-section-number">2</span> Three critical issues in CJ literature</h1>
-<section id="the-disconnect-between-structural-and-measurement-models" class="level2" data-number="2.1">
-<h2 data-number="2.1" class="anchored" data-anchor-id="the-disconnect-between-structural-and-measurement-models"><span class="header-section-number">2.1</span> The disconnect between structural and measurement models</h2>
-<!-- recording: Sven 24.10.04; time: 00:14:30 - 00:21:00 -->
-<!-- recording: Sven and Tine 24.10.18; time: 00:08:30 - 00:14:55 -->
-<!-- recording: Sven and Tine 24.10.25; time: 00:17:00 - 00:31:00 -->
-<!-- 1. The BTL model is CJ's measurement model -->
-<p>In a typical CJ study, the Bradley-Terry-Luce (BTL) model <span class="citation" data-cites="Bradley_et_al_1952 Luce_1959">(<a href="#ref-Bradley_et_al_1952" role="doc-biblioref">Bradley and Terry 1952</a>; <a href="#ref-Luce_1959" role="doc-biblioref">Luce 1959</a>)</span> serves as the measurement model for CJ <span class="citation" data-cites="Andrich_1978 Bramley_2008">(<a href="#ref-Andrich_1978" role="doc-biblioref">Andrich 1978</a>; <a href="#ref-Bramley_2008" role="doc-biblioref">Bramley 2008</a>)</span>. A measurement model specifies how manifest variables contribute to the estimation of latent variables <span class="citation" data-cites="Everitt_et_al_2010">(<a href="#ref-Everitt_et_al_2010" role="doc-biblioref">Everitt and Skrondal 2010</a>)</span>. For example, when evaluating text quality, researchers use the BTL model to process the dichotomous outcomes resulting from the pairwise comparisons (the manifest variables) to estimate scores that reflect the underlying quality level of the texts (the latent variable) <span class="citation" data-cites="Laming_2004 Pollitt_2012b Whitehouse_2012 vanDaal_et_al_2016 Lesterhuis_2018 Coertjens_et_al_2017 Goossens_et_al_2018 Bouwer_et_al_2023">(<a href="#ref-Laming_2004" role="doc-biblioref">Laming 2004</a>; <a href="#ref-Pollitt_2012b" role="doc-biblioref">Pollitt 2012b</a>; <a href="#ref-Whitehouse_2012" role="doc-biblioref">Whitehouse 2012</a>; <a href="#ref-vanDaal_et_al_2016" role="doc-biblioref">van Daal et al. 2016</a>; <a href="#ref-Lesterhuis_2018" role="doc-biblioref">Lesterhuis 2018</a>; <a href="#ref-Coertjens_et_al_2017" role="doc-biblioref">Coertjens et al. 2017</a>; <a href="#ref-Goossens_et_al_2018" role="doc-biblioref">Goossens and De Maeyer 2018</a>; <a href="#ref-Bouwer_et_al_2023" role="doc-biblioref">Bouwer et al. 2023</a>)</span>.</p>
-<!-- 2. But there is no structural model, only post estimation analyses -->
-<p>Researchers then typically use the estimated BTL scores, or their transformations, to conduct additional analyses or hypothesis tests. For example, these scores have been used to identify ‘misfit’ judges and stimuli <span class="citation" data-cites="Pollitt_2012b vanDaal_et_al_2017 Goossens_et_al_2018">(<a href="#ref-Pollitt_2012b" role="doc-biblioref">Pollitt 2012b</a>; <a href="#ref-vanDaal_et_al_2017" role="doc-biblioref">van Daal et al. 2017</a>; <a href="#ref-Goossens_et_al_2018" role="doc-biblioref">Goossens and De Maeyer 2018</a>)</span>, detect biases in judges’ ratings <span class="citation" data-cites="Pollitt_et_al_2003 Pollitt_2012b">(<a href="#ref-Pollitt_et_al_2003" role="doc-biblioref">Pollitt and Elliott 2003</a>; <a href="#ref-Pollitt_2012b" role="doc-biblioref">Pollitt 2012b</a>)</span>, calculate correlations with other assessment methods <span class="citation" data-cites="Goossens_et_al_2018 Bouwer_et_al_2023">(<a href="#ref-Goossens_et_al_2018" role="doc-biblioref">Goossens and De Maeyer 2018</a>; <a href="#ref-Bouwer_et_al_2023" role="doc-biblioref">Bouwer et al. 2023</a>)</span>, or test hypotheses related to the underlying trait of interest <span class="citation" data-cites="Bramley_et_al_2019 Boonen_et_al_2020 Bouwer_et_al_2023 vanDaal_et_al_2017 Jones_et_al_2019 Gijsen_et_al_2021">(<a href="#ref-Bramley_et_al_2019" role="doc-biblioref">Bramley and Vitello 2019</a>; <a href="#ref-Boonen_et_al_2020" role="doc-biblioref">Boonen, Kloots, and Gillis 2020</a>; <a href="#ref-Bouwer_et_al_2023" role="doc-biblioref">Bouwer et al. 2023</a>; <a href="#ref-vanDaal_et_al_2017" role="doc-biblioref">van Daal et al. 2017</a>; <a href="#ref-Jones_et_al_2019" role="doc-biblioref">Jones et al. 2019</a>; <a href="#ref-Gijsen_et_al_2021" role="doc-biblioref">Gijsen et al. 2021</a>)</span>.</p>
-<!-- 3. But what is the problem with this? -->
-<p>However, the statistical literature advises caution when using estimated scores to conduct additional analyses or hypotheses tests. A key consideration is that BTL scores are parameter estimates that inherently carry uncertainty. Ignoring this uncertainty can introduce bias into the analysis and reduce the precision of hypothesis tests. Notably, the direction and magnitude of the bias are often unpredictable; results may be attenuated, exaggerated, or remain unaffected, depending on the amount of uncertainty present in the scores and the actual effects being tested <span class="citation" data-cites="Kline_et_al_2023 Hoyle_et_al_2023">(<a href="#ref-Kline_et_al_2023" role="doc-biblioref">Kline 2023, 25</a>; <a href="#ref-Hoyle_et_al_2023" role="doc-biblioref">Hoyle 2023, 137</a>)</span>. Furthermore, reduced precision in hypothesis tests weakens their statistical power, ultimately increasing the likelihood of committing type-I or type-II errors <span class="citation" data-cites="McElreath_2020">(<a href="#ref-McElreath_2020" role="doc-biblioref">McElreath 2020</a>)</span>.</p>
-<!-- A type-I error occurs when a *true* null hypothesis is incorrectly rejected, while a type-II error occurs when a *false* null hypothesis is incorrectly accepted [@Everitt_et_al_2010]. -->
-<!-- 4. So, what is the solution?  -->
-<p>To mitigate these risks, principles from Structural Equation Modeling (SEM) <span class="citation" data-cites="Hoyle_et_al_2023">(<a href="#ref-Hoyle_et_al_2023" role="doc-biblioref">Hoyle 2023, 138</a>)</span> and Item Response Theory (IRT) <span class="citation" data-cites="Fox_2010 vanderLinden_et_al_2017_I">(<a href="#ref-Fox_2010" role="doc-biblioref">Fox 2010, chap. 6</a>; <a href="#ref-vanderLinden_et_al_2017_I" role="doc-biblioref">van der Linden 2017, vol. 1, chap. 24</a>)</span> recommend conducting these analyses and tests within a structural model. A structural model specifies how different manifest or latent variables influence the latent variable of interest <span class="citation" data-cites="Everitt_et_al_2010">(<a href="#ref-Everitt_et_al_2010" role="doc-biblioref">Everitt and Skrondal 2010</a>)</span>. This approach allows analyses that can account for both the scores and their uncertainties simultaneously, rather than treating them as separate elements. Therefore, an integrated approach that combines CJ’s measurement and structural models can offer significant advantages.</p>
-</section>
-<section id="the-assumptions-of-case-5-and-the-measurement-model" class="level2" data-number="2.2">
-<h2 data-number="2.2" class="anchored" data-anchor-id="the-assumptions-of-case-5-and-the-measurement-model"><span class="header-section-number">2.2</span> The assumptions of Case 5 and the measurement model</h2>
-<!-- recording: Sven and Tine 24.10.25; time: 00:31:00 - 00:52:20 -->
-<!-- []{style="color:red;"}. -->
-<!-- 1. What are the five cases of Thurstone? -->
-<!-- 1. the BTL model is the statistical articulation of Case 5 -->
-<!-- From early on in the literature, it has been clear that the BTL model represents a statistical articulation of Thurstone's Case 5 [-@Thurstone_1927]. Talk about @Pollitt_et_al_2003 and @Bramley_2008. -->
-<!--   What case 5 implies, Assumptions. Not a normal distribution but a logistic distribution -->
-<!--   Table with assumptions -->
-<!-- 2. But this model hold the greater number of assumptions -->
-<!--   Although Case 5 was originally articulated to produce a "rather coarse scaling" of traits [@Thurstone_1927, p. 269], its assumptions have become predominant in the literature, but Thurstone's Case 5 is the case that holds the greater amount of simplifying assumptions. -->
-<!--   @Thurstone_1927 justify the use of case V, on multiple assumptions, but the most important for our purpose are three: -->
-<!--   (a) related to Case 2 and case 3, it assumes the correlation between stimuli is zero, this translates into the cancellation of judges effects by mean of opposing and equally weighted 'mood' and 'simultaneous contrasts' effects. This is demonstrated using the additive nature of the logit scale, which helps to cancel 'bias' judges effects.  -->
+<section id="the-case-v-and-the-statistical-analysis-of-cj-data" class="level2" data-number="2.1">
+<h2 data-number="2.1" class="anchored" data-anchor-id="the-case-v-and-the-statistical-analysis-of-cj-data"><span class="header-section-number">2.1</span> The Case V and the statistical analysis of CJ data</h2>
+<!-- recording: Sven and Tine 24.10.25; time: 00:31:10 - 00:52:20 -->
+<!-- recording: Sven and Tine 24.11.12; time: 00:00:00 - 00:00:00 -->
+<!-- 1. What is the general from of the CJ theory? -->
+<p>In its most general form, Thurstone’s theory <span class="citation" data-cites="Thurstone_1927">(<a href="#ref-Thurstone_1927" role="doc-biblioref">1927</a>)</span> posits that when a judge compares two stimuli, the resulting dichotomous outcome depends on two main factors: the discriminal process and the law of comparative judgment. The <em>discriminal process</em> refers to the psychological effect each stimulus has on the judges, or more simply stated, the judges’ perception of the trait level of each stimulus. Thurstone assumes that the discriminal process for each stimulus follows a Normal distribution. In this distribution, the mode (mean), known as the <em>modal discriminal process</em>, represents the position of the stimulus on the trait continuum, while the dispersion, known as the <em>discriminal dispersion</em>, reflects variability in the perceived trait level of the stimulus. <a href="#fig-discriminal_process" class="quarto-xref">Figure&nbsp;1</a> shows a visual depiction of the discriminal process of two stimuli (objects).</p>
+<div id="fig-discriminal_process" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-fig" id="fig-discriminal_process-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;1: Discriminal processes of two stimuli (objects). Extracted from <span class="citation" data-cites="Bramley_2008">Bramley (<a href="#ref-Bramley_2008" role="doc-biblioref">2008, 249</a>)</span>
+</figcaption>
+<div aria-describedby="fig-discriminal_process-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<a href="./images/figures/discriminal_process.png" class="lightbox" data-gallery="quarto-lightbox-gallery-1" title="Figure&nbsp;1: Discriminal processes of two stimuli (objects). Extracted from @Bramley_2008 [pp. 249]"><img src="./images/figures/discriminal_process.png" class="img-fluid figure-img" style="width:70.0%"></a>
+</div>
+</figure>
+</div>
+<p>However, since the discriminal mode and dispersion of a single stimulus are not directly observable without comparing it to other stimuli, the <em>law of comparative judgment</em> becomes essential. This law asserts that when assessing a specific trait by comparing two stimuli, the stimulus positioned further along the continuum is perceived as having a higher level of that trait. Thus, the observed dichotomous outcome is determined by the distribution of the difference between the discriminal processes of the two stimuli, called the <em>discriminal difference</em>. <a href="#fig-comparative_judgment" class="quarto-xref">Figure&nbsp;2</a> shows a visual depiction of the discriminal difference of two stimuli (objects).</p>
+<div id="fig-comparative_judgment" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-fig" id="fig-comparative_judgment-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;2: Discriminal difference between two stimuli (objects). Extracted from <span class="citation" data-cites="Bramley_2008">Bramley (<a href="#ref-Bramley_2008" role="doc-biblioref">2008, 251</a>)</span>
+</figcaption>
+<div aria-describedby="fig-comparative_judgment-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<a href="./images/figures/comparative_judgment.png" class="lightbox" data-gallery="quarto-lightbox-gallery-2" title="Figure&nbsp;2: Discriminal difference between two stimuli (objects). Extracted from @Bramley_2008 [pp. 251]"><img src="./images/figures/comparative_judgment.png" class="img-fluid figure-img" style="width:65.0%"></a>
+</div>
+</figure>
+</div>
+<!-- 2. But several simplifying assumption are made to ease its use -->
+<p>Thurstone’s general form of the theory primarily applies to pairwise comparisons of stimuli made by a single judge <span class="citation" data-cites="Thurstone_1927">(<a href="#ref-Thurstone_1927" role="doc-biblioref">Thurstone 1927, 267</a>)</span>. Therefore, to enhance the theory’s practical applicability, he developed five distinct cases, each incorporating a series of increasingly simplifying assumptions. <a href="#fig-thurstone_cases" class="quarto-xref">Figure&nbsp;3</a> outlines each case along with their key assumptions. For a detailed explanation of this theoretical progression, see <span class="citation" data-cites="Thurstone_1927">Thurstone (<a href="#ref-Thurstone_1927" role="doc-biblioref">1927</a>)</span> and <span class="citation" data-cites="Bramley_2008">Bramley (<a href="#ref-Bramley_2008" role="doc-biblioref">2008, 248–53</a>)</span>.</p>
+<div id="fig-thurstone_cases" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-fig" id="fig-thurstone_cases-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;3: Thurstones cases and asumptions
+</figcaption>
+<div aria-describedby="fig-thurstone_cases-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<a href="./images/tables/thurstone_cases.png" class="lightbox" data-gallery="quarto-lightbox-gallery-3" title="Figure&nbsp;3: Thurstones cases and asumptions"><img src="./images/tables/thurstone_cases.png" class="img-fluid figure-img" style="width:85.0%"></a>
+</div>
+</figure>
+</div>
+<!-- 3. And yet Case V is is the most commonly used -->
+<p>Surprisingly, Case V is the most commonly used case in the CJ literature, despite incorporating the largest number of simplifying assumptions <span class="citation" data-cites="Bramley_2008">(<a href="#ref-Bramley_2008" role="doc-biblioref">Bramley 2008, 253</a>)</span>. This widespread adoption is primarily due to the Bradley-Terry-Luce (BTL) model <span class="citation" data-cites="Bradley_et_al_1952 Luce_1959">(<a href="#ref-Bradley_et_al_1952" role="doc-biblioref">Bradley and Terry 1952</a>; <a href="#ref-Luce_1959" role="doc-biblioref">Luce 1959</a>)</span>, which offers a simpler statistical representation of the case. The BTL model closely aligns with Case V’s assumptions, with one key difference: the distribution of the discriminal process. While Case V assumes a Normal distribution, the BTL model uses the more mathematically tractable logistic distribution <span class="citation" data-cites="Bramley_2008">(<a href="#ref-Bramley_2008" role="doc-biblioref">Bramley 2008, 254</a>)</span> (see <a href="#fig-thurstone_cases" class="quarto-xref">Figure&nbsp;3</a>). However, this adjustment does not significantly affect the model’s estimation or interpretation, as the logistic and normal distributions are related to each other by a factor of approximately <span class="math inline">\(1.7\)</span> <span class="citation" data-cites="vanderLinden_et_al_2017_I">(<a href="#ref-vanderLinden_et_al_2017_I" role="doc-biblioref">van der Linden 2017, 1:16</a>)</span>.</p>
+<!-- the mathematical function linking dichotomous outcomes to trait scores -->
+<!-- 4. But two assumptions of Case V might not hold -->
+<p>However, because Case V was originally developed to provide a “rather coarse scaling” of traits <span class="citation" data-cites="Thurstone_1927">(<a href="#ref-Thurstone_1927" role="doc-biblioref">Thurstone 1927, 269</a>)</span>, prioritizing statistical ease of use over precision in trait measurement, two of its assumptions may be causing more problems than expected: the assumption of zero correlation between the stimuli, and the assumption of equal dispersion between stimuli.</p>
+<!-- @Thurstone_1927 justify the use of case V, on multiple assumptions, but the most important for our purpose are two: -->
+<!--   (a) it assumes the correlation between stimuli is zero, this translates into the cancellation of judges effects by mean of opposing and equally weighted 'mood' and 'simultaneous contrasts' effects. This is demonstrated using the additive nature of the logit scale, which helps to cancel 'bias' judges effects.  -->
 <!--   Particularly on how CJ is used now, use the text example -->
 <!--   What we are saying is that the judges' effects depend on the stimuli, by means of an interaction (but present) or because the judges works as a confounder. This, in the best scenario, cause less precise estimates, and in the worst scenario, biased estimates. possibility of bias is hinted in @Bramley_2008, and later mentioned again in @Kelly_et_al_2022, and some evidence is found in @Pollitt_et_al_2003, @vanDaal_et_al_2017 and @Gijsen_et_al_2021 -->
 <!--   @Pollitt_et_al_2003 In Thurstone’s method each judge’s standard cancels out when a comparison is made, and any misfit between data and model must indicate a difference of some other kind. This is studied by analyzing the residuals that remain after the model is fitted to the data. Whenever one script is judged to have a higher value than a competing one it is expected to ‘win’ the comparison: if it does the residual will be small, but if it loses then the residual for that judge’s comparison of those two scripts will be large. Any patterns of large residuals will indicate some sort of bias – in this context bias simply means a source of systematic, rather than random, variability. indicates that one judge – Judge 5 – is significantly biased in some way. (Consider the problem of using adhoc methods) -->
 <!--   Moreover, a solution was already envisioned, @Andrich_1978 and @Wainer_et_al_1978 already showed that if judges effects are parametrized, it gets eliminated experimentally in the paired comparison method.  -->
 <!--   use the example of writing!!! -->
-<!--   (b) related to Case 3, it assumes the correlation between stimuli is zero, this also translates into the idea that stimuli are the main focus of estimation and analysis, but what happens when the focus of analysis is the individuals that generated those stimuli. Meaning there is an amount of correlation that it is not accounted for.  -->
+<!--   (b) it assumes the correlation between stimuli is zero, this also translates into the idea that stimuli are the main focus of estimation and analysis, but what happens when the focus of analysis is the individuals that generated those stimuli. Meaning there is an amount of correlation that it is not accounted for.  -->
 <!--   Here we loose precision, because we are not controlling for clustering -->
 <!-- This is the case of clustering or measurement error, and overlooking issues such as clustering and measurement error can lead to biased and less precise parameter estimates [@McElreath_2020], ultimately diminishing the statistical power of models and increasing the likelihood of committing type I or type II errors when addressing research inquiries. -->
 <!-- This has been considered in the literature as a (see https://doi.org/10.1177/1471082X15571817) or a multilevel BTL model (find sources) -->
-<!--   (c) related to case 5, discriminal dispersions of the stimuli are equal, but it is not hard to imagine that certain individuals can produce good quality texts with more precision than other individuals. Example of exaggerated comparison of individuals, university students vs secondary school students. -->
+<!-- (c) discriminal dispersions of the stimuli are equal, but it is not hard to imagine that certain individuals can produce good quality texts with more precision than other individuals. Example of exaggerated comparison of individuals, university students vs secondary school students. -->
 <!--   here we face misspecification in the model -->
+<!-- "It is probably true that this variability of the discriminal dispersions on the psychological continuum is of relatively less serious importance in dealing with strictly homogenous stimulus series, but it becomes a serious factor in dealing with less conspicuous attributes or with less homogenous stimulus series such as handwriting specimens, English compositions, sewing samples, oriental rugs." [@Thurstone_1927]. -->
 <!-- If your scores are not reliable they cannot be valid. People have been employing a model with assumptions that they do not know if those assumptions apply for their cases. And when you do that, the scores you produce most likely will not be reliable, which, in turn, renders them invalid. -->
-<!-- Reliability is a necessary but not sufficient condition for validity. Reliability can exist without validity but validity cannot exist without reliability [@Perron_et_al_2015] -->
+<!-- Reliability is a necessary but not sufficient condition for validity. Reliability can exist without validity but validity cannot exist without reliability [@Perron_et_al_2015, pp. 2] -->
+</section>
+<section id="the-disconnect-between-structural-and-measurement-models" class="level2" data-number="2.2">
+<h2 data-number="2.2" class="anchored" data-anchor-id="the-disconnect-between-structural-and-measurement-models"><span class="header-section-number">2.2</span> The disconnect between structural and measurement models</h2>
+<!-- recording: Sven 24.10.04; time: 00:14:30 - 00:21:00 -->
+<!-- recording: Sven and Tine 24.10.18; time: 00:08:30 - 00:14:55 -->
+<!-- recording: Sven and Tine 24.10.25; time: 00:17:00 - 00:31:10 -->
+<!-- 1. The BTL model is CJ's measurement model -->
+<p>As outlined in the previous section, the BTL model typically functions as the measurement model in a CJ study <span class="citation" data-cites="Andrich_1978 Bramley_2008">(<a href="#ref-Andrich_1978" role="doc-biblioref">Andrich 1978</a>; <a href="#ref-Bramley_2008" role="doc-biblioref">Bramley 2008</a>)</span>. A measurement model specifies how manifest variables contribute to the estimation of latent variables <span class="citation" data-cites="Everitt_et_al_2010">(<a href="#ref-Everitt_et_al_2010" role="doc-biblioref">Everitt and Skrondal 2010</a>)</span>. For example, when evaluating text quality, researchers use the BTL model to process the dichotomous outcomes resulting from the pairwise comparisons (the manifest variables) to estimate scores that reflect the underlying quality level of the texts (the latent variable) <span class="citation" data-cites="Laming_2004 Pollitt_2012b Whitehouse_2012 vanDaal_et_al_2016 Lesterhuis_2018 Coertjens_et_al_2017 Goossens_et_al_2018 Bouwer_et_al_2023">(<a href="#ref-Laming_2004" role="doc-biblioref">Laming 2004</a>; <a href="#ref-Pollitt_2012b" role="doc-biblioref">Pollitt 2012b</a>; <a href="#ref-Whitehouse_2012" role="doc-biblioref">Whitehouse 2012</a>; <a href="#ref-vanDaal_et_al_2016" role="doc-biblioref">van Daal et al. 2016</a>; <a href="#ref-Lesterhuis_2018" role="doc-biblioref">Lesterhuis 2018</a>; <a href="#ref-Coertjens_et_al_2017" role="doc-biblioref">Coertjens et al. 2017</a>; <a href="#ref-Goossens_et_al_2018" role="doc-biblioref">Goossens and De Maeyer 2018</a>; <a href="#ref-Bouwer_et_al_2023" role="doc-biblioref">Bouwer et al. 2023</a>)</span>.</p>
+<!-- 2. But there is no structural model, only post estimation analyses -->
+<p>Researchers then typically use the estimated BTL scores, or their transformations, to conduct additional analyses or hypothesis tests. For example, these scores have been used to identify ‘misfit’ judges and stimuli <span class="citation" data-cites="Pollitt_2012b vanDaal_et_al_2017 Goossens_et_al_2018">(<a href="#ref-Pollitt_2012b" role="doc-biblioref">Pollitt 2012b</a>; <a href="#ref-vanDaal_et_al_2017" role="doc-biblioref">van Daal et al. 2017</a>; <a href="#ref-Goossens_et_al_2018" role="doc-biblioref">Goossens and De Maeyer 2018</a>)</span>, detect biases in judges’ ratings <span class="citation" data-cites="Pollitt_et_al_2003 Pollitt_2012b">(<a href="#ref-Pollitt_et_al_2003" role="doc-biblioref">Pollitt and Elliott 2003</a>; <a href="#ref-Pollitt_2012b" role="doc-biblioref">Pollitt 2012b</a>)</span>, calculate correlations with other assessment methods <span class="citation" data-cites="Goossens_et_al_2018 Bouwer_et_al_2023">(<a href="#ref-Goossens_et_al_2018" role="doc-biblioref">Goossens and De Maeyer 2018</a>; <a href="#ref-Bouwer_et_al_2023" role="doc-biblioref">Bouwer et al. 2023</a>)</span>, or test hypotheses related to the underlying trait of interest <span class="citation" data-cites="Bramley_et_al_2019 Boonen_et_al_2020 Bouwer_et_al_2023 vanDaal_et_al_2017 Jones_et_al_2019 Gijsen_et_al_2021">(<a href="#ref-Bramley_et_al_2019" role="doc-biblioref">Bramley and Vitello 2019</a>; <a href="#ref-Boonen_et_al_2020" role="doc-biblioref">Boonen, Kloots, and Gillis 2020</a>; <a href="#ref-Bouwer_et_al_2023" role="doc-biblioref">Bouwer et al. 2023</a>; <a href="#ref-vanDaal_et_al_2017" role="doc-biblioref">van Daal et al. 2017</a>; <a href="#ref-Jones_et_al_2019" role="doc-biblioref">Jones et al. 2019</a>; <a href="#ref-Gijsen_et_al_2021" role="doc-biblioref">Gijsen et al. 2021</a>)</span>.</p>
+<!-- 3. But what is the problem with this? -->
+<p>However, the statistical literature advises caution when using estimated scores to conduct additional analyses or hypotheses tests. A key consideration is that BTL scores are parameter estimates that inherently carry uncertainty. Ignoring this uncertainty can introduce bias into the analysis and reduce the precision of hypothesis tests. Notably, the direction and magnitude of the bias are often unpredictable; results may be attenuated, exaggerated, or remain unaffected, depending on the amount of uncertainty present in the scores and the actual effects being tested <span class="citation" data-cites="Kline_et_al_2023 Hoyle_et_al_2023">(<a href="#ref-Kline_et_al_2023" role="doc-biblioref">Kline 2023, 25</a>; <a href="#ref-Hoyle_et_al_2023" role="doc-biblioref">Hoyle 2023, 137</a>)</span>. Furthermore, reduced precision in hypothesis tests weakens their statistical power, ultimately increasing the likelihood of committing type-I or type-II errors <span class="citation" data-cites="McElreath_2020">(<a href="#ref-McElreath_2020" role="doc-biblioref">McElreath 2020</a>)</span>. <!-- A type-I error occurs when a *true* null hypothesis is incorrectly rejected, while a type-II error occurs when a *false* null hypothesis is incorrectly accepted [@Everitt_et_al_2010]. --></p>
+<!-- 4. So, what is the solution?  -->
+<p>To mitigate these risks, principles from Structural Equation Modeling (SEM) <span class="citation" data-cites="Hoyle_et_al_2023">(<a href="#ref-Hoyle_et_al_2023" role="doc-biblioref">Hoyle 2023, 138</a>)</span> and Item Response Theory (IRT) <span class="citation" data-cites="Fox_2010 vanderLinden_et_al_2017_I">(<a href="#ref-Fox_2010" role="doc-biblioref">Fox 2010, chap. 6</a>; <a href="#ref-vanderLinden_et_al_2017_I" role="doc-biblioref">van der Linden 2017, vol. 1, chap. 24</a>)</span> recommend conducting these analyses and tests within a structural model. A structural model specifies how different manifest or latent variables influence the latent variable of interest <span class="citation" data-cites="Everitt_et_al_2010">(<a href="#ref-Everitt_et_al_2010" role="doc-biblioref">Everitt and Skrondal 2010</a>)</span>. This approach allows analyses that can account for both the BTL scores and their uncertainties simultaneously, rather than treating them as separate elements. Therefore, an integrated approach that combines CJ’s measurement and structural models can offer significant advantages.</p>
 </section>
 <section id="the-role-and-impact-of-comparison-algorithms" class="level2" data-number="2.3">
 <h2 data-number="2.3" class="anchored" data-anchor-id="the-role-and-impact-of-comparison-algorithms"><span class="header-section-number">2.3</span> The role and impact of comparison algorithms</h2>
+<!-- []{style="color:red;"}. -->
 <!-- Experimental design -->
 <!-- In this regard, although the literature has tested multiple features of the experimental design of the method, such as the comparison algorithm and the number of comparisons, it is not clear where this procedures fit in the whole process of comparison, and what are their implications for the outcome of the method. -->
 <!-- @Bramley_et_al_2019 and @Bramley_2015 says adaptivity inflates reliability. present the evidence of bias effects of adaptive algorithms, the not clear view of how many comparisons per (sub)units are required. Adhoc rules of thumb. -->
@@ -544,6 +610,7 @@ div.csl-indent {
 <!-- talk about the number of comparisons @Verhavert_et_al_2019, @Crompvoets_et_al_2022, @Pollitt_2004 -->
 <!-- @Pollitt_2012b concludes that speed is not related to the quality of assessments in pairwise comparisons -->
 <!-- All studies use SSR as a measure of reliability -->
+<!-- It is assumed that the single observer compares each pair of stimuli a sufficient number of times so that a proportion may be determined for eah pair [@Thurstone_1927]. -->
 </section>
 </section>
 <section id="sec-theory" class="level1" data-number="3">
@@ -722,7 +789,7 @@ Whitehouse, C. 2012. <span>“Testing the Validity of Judgements about Geography
   title = {Let’s Talk about {Thurstone} \&amp; {Co.:} {An}
     Information-Theoretical Model for Comparative Judgments, and Its
     Statistical Translation},
-  date = {2024-11-08},
+  date = {2024-11-14},
   langid = {en},
   abstract = {(to do)}
 }
@@ -730,7 +797,7 @@ Whitehouse, C. 2012. <span>“Testing the Validity of Judgements about Geography
 Rivera Espejo, Jose Manuel, Tine van van Daal, Sven De De Maeyer, and
 Steven Gillis. 2024. <span>“Let’s Talk about Thurstone &amp; Co.: An
 Information-Theoretical Model for Comparative Judgments, and Its
-Statistical Translation.”</span> November 8, 2024.
+Statistical Translation.”</span> November 14, 2024.
 </div></div></section></div></main>
 <!-- /main column -->
 <script id="quarto-html-after-body" type="application/javascript">
@@ -1154,6 +1221,38 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 });
 </script>
 </div> <!-- /content -->
+<script>var lightboxQuarto = GLightbox({"closeEffect":"zoom","descPosition":"bottom","loop":false,"openEffect":"zoom","selector":".lightbox"});
+(function() {
+  let previousOnload = window.onload;
+  window.onload = () => {
+    if (previousOnload) {
+      previousOnload();
+    }
+    lightboxQuarto.on('slide_before_load', (data) => {
+      const { slideIndex, slideNode, slideConfig, player, trigger } = data;
+      const href = trigger.getAttribute('href');
+      if (href !== null) {
+        const imgEl = window.document.querySelector(`a[href="${href}"] img`);
+        if (imgEl !== null) {
+          const srcAttr = imgEl.getAttribute("src");
+          if (srcAttr && srcAttr.startsWith("data:")) {
+            slideConfig.href = srcAttr;
+          }
+        }
+      } 
+    });
+  
+    lightboxQuarto.on('slide_after_load', (data) => {
+      const { slideIndex, slideNode, slideConfig, player, trigger } = data;
+      if (window.Quarto?.typesetMath) {
+        window.Quarto.typesetMath(slideNode);
+      }
+    });
+  
+  };
+  
+})();
+          </script>
 
 
 
