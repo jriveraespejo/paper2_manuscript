@@ -81,19 +81,6 @@ execute:
   message: false
 ---
 
-```{r}
-#| results: hide
-#| label: code-package
-
-# main directory
-main_dir = '/home/josema/Desktop/1. Work/1 research/PhD Antwerp/#thesis/paper2/paper2_manuscript'
-
-# load packages
-libraries = c('tidyverse','tibble','gt')
-sapply(libraries, require, character.only=T)
-
-```
-
 # Introduction {#sec-introduction}
 
 <!-- recording: Sven 24.10.04; time: 00:00:00 - 00:09:10 -->
@@ -102,7 +89,7 @@ sapply(libraries, require, character.only=T)
 <!-- recording: Sven and Tine 24.10.25; time: 00:00:00 - 00:17:00 -->
 
 <!-- 1. What does CJ do? -->
-In *comparative judgment* (CJ) studies, judges assess a specific trait or competence across various stimuli by performing pairwise comparisons [@Thurstone_1927; @Pollitt_2004; @Pollitt_2012a]. Each comparison produces a dichotomous outcome, indicating which stimulus is perceived to manifest a higher trait level. For example, when assessing text quality, judges compare pairs of written texts (the stimuli) to determine the relative quality each text exhibit (the trait) [@Laming_2004; @Pollitt_2012b; @Whitehouse_2012; @vanDaal_et_al_2016; @Lesterhuis_2018; @Coertjens_et_al_2017; @Goossens_et_al_2018; @Bouwer_et_al_2023].
+In *comparative judgment* (CJ) studies, judges assess a specific trait or attribute across various stimuli by performing pairwise comparisons [@Thurstone_1927; @Pollitt_2004; @Pollitt_2012a]. Each comparison produces a dichotomous outcome, indicating which stimulus is perceived to exhibit a higher trait level. For example, when assessing text quality, judges compare pairs of written texts (the stimuli) to determine the relative quality each text exhibit (the trait) [@Laming_2004; @Pollitt_2012b; @Whitehouse_2012; @vanDaal_et_al_2016; @Lesterhuis_2018; @Coertjens_et_al_2017; @Goossens_et_al_2018; @Bouwer_et_al_2023].
 
 <!-- and spoken language [@Boonen_et_al_2020]. Additionally, it has been applied to evaluate various competencies, including mathematical problem-solving skills [@Jones_2015], engineering design skills [@Bartholomew_et_al_2018], conceptual understanding in algebra [@Jones_et_al_2019], statistical and English knowledge [@Marshall_et_al_2020], and STEM knowledge and skills [@Bartholomew_et_al_2020]. -->
 
@@ -115,81 +102,41 @@ Numerous studies have documented the effectiveness of CJ in assessing traits and
 <!-- Adaptive comparison algorithms dynamically present stimuli to judges, based on the results of previous comparisons. They aim to enhance the informativeness of comparisons while optimizing judges' time [@Bramley_2015].  -->
 
 <!-- 3. But what are the problems of DCJ as a method? -->
-Nevertheless, despite the growing number of CJ studies, unsystematic and fragmented research approaches in the literature have left several critical issues unaddressed. This research primarily focuses on three: the apparent disconnect between CJ's measurement and structural model, the over-reliance on the assumptions of Thurstone's Case V [-@Thurstone_1927] in CJ's measurement model, and the unclear role of comparison algorithms on the method's reliability and validity. The following sections will discuss each of these issues in detail, followed by the introduction of a theoretical model and its statistical translation, which aims to address all three concerns simultaneously.
+Nevertheless, despite the increasing number of CJ studies, unsystematic and fragmented research approaches have left several critical issues unaddressed. This research primarily focuses on three: the over-reliance on Thurstone's Case V assumptions in the statistical analysis of CJ data, the apparent disconnect between CJ's trait measurement and hypothesis testing, and the unclear role and influence of comparison algorithms on the method's reliability and validity. The following sections will discuss each of these issues in detail, followed by the introduction of a theoretical model and its statistical translation, which aims to address all three concerns simultaneously.
 
 
 # Three critical issues in CJ literature {#sec-theory-issues}
 
-## The disconnect between structural and measurement models
-
-<!-- recording: Sven 24.10.04; time: 00:14:30 - 00:21:00 -->
-<!-- recording: Sven and Tine 24.10.18; time: 00:08:30 - 00:14:55 -->
-<!-- recording: Sven and Tine 24.10.25; time: 00:17:00 - 00:31:10 -->
-
-<!-- 1. The BTL model is CJ's measurement model -->
-In a typical CJ study, the Bradley-Terry-Luce (BTL) model [@Bradley_et_al_1952; @Luce_1959] serves as the measurement model for CJ [@Andrich_1978; @Bramley_2008]. A measurement model specifies how manifest variables contribute to the estimation of latent variables [@Everitt_et_al_2010]. For example, when evaluating text quality, researchers use the BTL model to process the dichotomous outcomes resulting from the pairwise comparisons (the manifest variables) to estimate scores that reflect the underlying quality level of the texts (the latent variable) [@Laming_2004; @Pollitt_2012b; @Whitehouse_2012; @vanDaal_et_al_2016; @Lesterhuis_2018; @Coertjens_et_al_2017; @Goossens_et_al_2018; @Bouwer_et_al_2023]. 
-
-<!-- 2. But there is no structural model, only post estimation analyses -->
-Researchers then typically use the estimated BTL scores, or their transformations, to conduct additional analyses or hypothesis tests. For example, these scores have been used to identify 'misfit' judges and stimuli [@Pollitt_2012b; @vanDaal_et_al_2017; @Goossens_et_al_2018], detect biases in judges' ratings [@Pollitt_et_al_2003; @Pollitt_2012b], calculate correlations with other assessment methods [@Goossens_et_al_2018; @Bouwer_et_al_2023], or test hypotheses related to the underlying trait of interest [@Bramley_et_al_2019; @Boonen_et_al_2020; @Bouwer_et_al_2023; @vanDaal_et_al_2017; @Jones_et_al_2019; @Gijsen_et_al_2021].
-
-<!-- 3. But what is the problem with this? -->
-However, the statistical literature advises caution when using estimated scores to conduct additional analyses or hypotheses tests. A key consideration is that BTL scores are parameter estimates that inherently carry uncertainty. Ignoring this uncertainty can introduce bias into the analysis and reduce the precision of hypothesis tests. Notably, the direction and magnitude of the bias are often unpredictable; results may be attenuated, exaggerated, or remain unaffected, depending on the amount of uncertainty present in the scores and the actual effects being tested [@Kline_et_al_2023, pp. 25; @Hoyle_et_al_2023, pp. 137]. Furthermore, reduced precision in hypothesis tests weakens their statistical power, ultimately increasing the likelihood of committing type-I or type-II errors [@McElreath_2020]. 
-<!-- A type-I error occurs when a *true* null hypothesis is incorrectly rejected, while a type-II error occurs when a *false* null hypothesis is incorrectly accepted [@Everitt_et_al_2010]. -->
-
-<!-- 4. So, what is the solution?  -->
-To mitigate these risks, principles from Structural Equation Modeling (SEM) [@Hoyle_et_al_2023, pp. 138] and Item Response Theory (IRT) [@Fox_2010, chap. 6; @vanderLinden_et_al_2017_I, chap. 24] recommend conducting these analyses and tests within a structural model. A structural model specifies how different manifest or latent variables influence the latent variable of interest [@Everitt_et_al_2010]. This approach allows analyses that can account for both the BTL scores and their uncertainties simultaneously, rather than treating them as separate elements. Therefore, an integrated approach that combines CJ’s measurement and structural models can offer significant advantages.
-
-
-## The assumptions of Case V and the measurement model
+## The Case V and the statistical analysis of CJ data
 
 <!-- recording: Sven and Tine 24.10.25; time: 00:31:10 - 00:52:20 -->
+<!-- recording: Sven and Tine 24.11.12; time: 00:00:00 - 00:00:00 -->
 
-<!-- 1. the BTL model is the statistical articulation of Case 5 -->
-In the CJ literature, researchers use the BTL model as the statistical representation of Thurstone's theory, particularly Thurstone's Case V. The BTL model closely aligns with the assumptions of Case V, with one notable distinction: the mathematical function linking dichotomous outcomes to trait scores, referred to as the *discriminal process distribution*. While Case V uses a cumulative normal distribution, the BTL model employs the more tractable logistic distribution [@Bramley_2008, pp. 254] (see @tbl-thurstone_cases). Importantly, this modification does not have a significant impact on the estimation or interpretation of the model compared with Case V, mainly because the logistic and normal distributions are related to each other by a factor of $1.7$ [@vanderLinden_et_al_2017_I, pp. 16].
+<!-- 1. What is the general from of the CJ theory? -->
+In its most general form, Thurstone's theory [-@Thurstone_1927] posits that when a judge compares two stimuli, the resulting dichotomous outcome depends on two main factors: the discriminal process and the law of comparative judgment. The *discriminal process* refers to the psychological effect each stimulus has on the judges, or more simply stated, the judges’ perception of the trait level of each stimulus. Thurstone assumes that the discriminal process for each stimulus follows a Normal distribution. In this distribution, the mode (mean), known as the *modal discriminal process*, represents the position of the stimulus on the trait continuum, while the dispersion, known as the *discriminal dispersion*, reflects variability in the perceived trait level of the stimulus. @fig-discriminal_process shows a visual depiction of the discriminal process of two stimuli (objects). 
 
-<!-- 2. But this model hold the greater number of assumptions -->
-However, Case V incorporates the largest number of simplifying assumptions [@Bramley_2008, pp. 253], prioritizing ease of use from the statistical point of view over precision in trait measurement. This focus on simplicity reflects Case V’s original purpose: to provide a "rather coarse scaling" of traits [@Thurstone_1927, pp. 269]. @tbl-thurstone_cases presents each of Thurstone's cases along with their underlying assumptions. These assumptions fall into four categories: assumptions concerning the *discriminal process distribution* and *discriminal dispersion* of stimuli, assumptions about correlations among stimuli, and assumptions regarding who makes the comparisons, either a single judge or multiple judges. For a comprehensive explanation of this theoretical progression, see @Thurstone_1927 and @Bramley_2008 [pp. 248-253].
+![Discriminal processes of two stimuli (objects). Extracted from @Bramley_2008 [pp. 249] ](/images/figures/discriminal_process.png){#fig-discriminal_process width=70%}
 
-```{r}
-# #| results: hide
-# #| label: tbl-thurstone_cases
-# #| tbl-cap: "Thurstone's cases and BTL model assumptions."
-# #| classes: plain
-# 
-# assump = tibble( 
-#   Assumption = c('Discriminal process distribution', 'Discriminal dispersion', 
-#                  'Correlation between stimuli', 'Who compares?'),
-#   `Case I` = c('Cummulative Normal','Different','Constant','Single judge'),
-#   `Case II` = c('Cummulative Normal','Different','Constant','Multiple judges'),
-#   `Case III` = c('Cummulative Normal','Different','Zero','Multiple judges'),
-#   `Case IV` = c('Cummulative Normal','Similar','Zero','Multiple judges'),
-#   `Case V` = c('Cummulative Normal','Equal','Zero','Multiple judges'),
-#   `BTL model` = c('Logistic','Equal','Zero','Multiple judges') ) 
-# 
-# assump = assump %>% 
-#   mutate( Assumption = str_replace_all( Assumption, " ", "<br>" ),
-#           `Case I` = str_replace_all( `Case I`, " ", "<br>" ),
-#           `Case II` = str_replace_all( `Case II`, " ", "<br>" ),
-#           `Case III` = str_replace_all( `Case III`, " ", "<br>" ),
-#           `Case IV` = str_replace_all( `Case IV`, " ", "<br>" ),
-#           `Case V` = str_replace_all( `Case V`, " ", "<br>" ),
-#           `BTL model` = str_replace_all( `BTL model`, " ", "<br>" ) )
-# 
-# gt_assump = gt(assump) |>
-#   tab_spanner( label=md("**Thurstone's**"), columns=2:6 ) |>
-#   cols_align( align="center", columns=1:7 ) |>
-#   tab_style( style = cell_text(weight="bold"), locations=cells_column_labels() ) |>
-#   tab_options( table.font.size=pct(90) ) |>
-#   fmt_markdown( columns=everything() ) 
-# 
-# gt_assump
+However, since the discriminal mode and dispersion of a single stimulus are not directly observable without comparing it to other stimuli, the *law of comparative judgment* becomes essential. This law asserts that when assessing a specific trait by comparing two stimuli, the stimulus positioned further along the continuum is perceived as having a higher level of that trait. Thus, the observed dichotomous outcome is determined by the distribution of the difference between the discriminal processes of the two stimuli, called the *discriminal difference*. @fig-comparative_judgment shows a visual depiction of the discriminal difference of two stimuli (objects).
 
-```
+![Discriminal difference between two stimuli (objects). Extracted from @Bramley_2008 [pp. 251] ](/images/figures/comparative_judgment.png){#fig-comparative_judgment width=65%}
 
+<!-- 2. But several simplifying assumption are made to ease its use -->
+Thurstone’s general form of the theory primarily applies to pairwise comparisons of stimuli made by a single judge [@Thurstone_1927, pp. 267]. Therefore, to enhance the theory's practical applicability, he developed five distinct cases, each incorporating a series of increasingly simplifying assumptions. @fig-thurstone_cases outlines each case along with their key assumptions. For a detailed explanation of this theoretical progression, see @Thurstone_1927 and @Bramley_2008 [pp. 248-253].
 
-@Thurstone_1927 justify the use of case V, on multiple assumptions, but the most important for our purpose are three:
+![Thurstones cases and asumptions](/images/tables/thurstone_cases.png){#fig-thurstone_cases width=85%}
 
-<!--   (a) related to Case 2 and case 3, it assumes the correlation between stimuli is zero, this translates into the cancellation of judges effects by mean of opposing and equally weighted 'mood' and 'simultaneous contrasts' effects. This is demonstrated using the additive nature of the logit scale, which helps to cancel 'bias' judges effects.  -->
+<!-- 3. And yet Case V is is the most commonly used -->
+Surprisingly, Case V is the most commonly used case in the CJ literature, despite incorporating the largest number of simplifying assumptions [@Bramley_2008, pp. 253]. This widespread adoption is primarily due to the Bradley-Terry-Luce (BTL) model [@Bradley_et_al_1952; @Luce_1959], which offers a simpler statistical representation of the case. The BTL model closely aligns with Case V’s assumptions, with one key difference: the distribution of the discriminal process. While Case V assumes a Normal distribution, the BTL model uses the more mathematically tractable logistic distribution [@Bramley_2008, pp. 254] (see @fig-thurstone_cases). However, this adjustment does not significantly affect the model’s estimation or interpretation, as the logistic and normal distributions are related to each other by a factor of approximately $1.7$ [@vanderLinden_et_al_2017_I, pp. 16].
+
+<!-- the mathematical function linking dichotomous outcomes to trait scores -->
+
+<!-- 4. But two assumptions of Case V might not hold -->
+However, because Case V was originally developed to provide a "rather coarse scaling" of traits [@Thurstone_1927, pp. 269], prioritizing statistical ease of use over precision in trait measurement, two of its assumptions may be causing more problems than expected: the assumption of zero correlation between the stimuli, and the assumption of equal dispersion between stimuli. 
+
+<!-- @Thurstone_1927 justify the use of case V, on multiple assumptions, but the most important for our purpose are two: -->
+
+<!--   (a) it assumes the correlation between stimuli is zero, this translates into the cancellation of judges effects by mean of opposing and equally weighted 'mood' and 'simultaneous contrasts' effects. This is demonstrated using the additive nature of the logit scale, which helps to cancel 'bias' judges effects.  -->
 
 <!--   Particularly on how CJ is used now, use the text example -->
 
@@ -203,7 +150,7 @@ However, Case V incorporates the largest number of simplifying assumptions [@Bra
 <!--   use the example of writing!!! -->
 
 
-<!--   (b) related to Case 3, it assumes the correlation between stimuli is zero, this also translates into the idea that stimuli are the main focus of estimation and analysis, but what happens when the focus of analysis is the individuals that generated those stimuli. Meaning there is an amount of correlation that it is not accounted for.  -->
+<!--   (b) it assumes the correlation between stimuli is zero, this also translates into the idea that stimuli are the main focus of estimation and analysis, but what happens when the focus of analysis is the individuals that generated those stimuli. Meaning there is an amount of correlation that it is not accounted for.  -->
 
 <!--   Here we loose precision, because we are not controlling for clustering -->
 
@@ -213,11 +160,11 @@ However, Case V incorporates the largest number of simplifying assumptions [@Bra
 
 
 
-<!--   (c) related to case 5, discriminal dispersions of the stimuli are equal, but it is not hard to imagine that certain individuals can produce good quality texts with more precision than other individuals. Example of exaggerated comparison of individuals, university students vs secondary school students. -->
+<!-- (c) discriminal dispersions of the stimuli are equal, but it is not hard to imagine that certain individuals can produce good quality texts with more precision than other individuals. Example of exaggerated comparison of individuals, university students vs secondary school students. -->
 
 <!--   here we face misspecification in the model -->
 
-
+<!-- "It is probably true that this variability of the discriminal dispersions on the psychological continuum is of relatively less serious importance in dealing with strictly homogenous stimulus series, but it becomes a serious factor in dealing with less conspicuous attributes or with less homogenous stimulus series such as handwriting specimens, English compositions, sewing samples, oriental rugs." [@Thurstone_1927]. -->
 
 
 <!-- If your scores are not reliable they cannot be valid. People have been employing a model with assumptions that they do not know if those assumptions apply for their cases. And when you do that, the scores you produce most likely will not be reliable, which, in turn, renders them invalid. -->
@@ -225,6 +172,24 @@ However, Case V incorporates the largest number of simplifying assumptions [@Bra
 <!-- Reliability is a necessary but not sufficient condition for validity. Reliability can exist without validity but validity cannot exist without reliability [@Perron_et_al_2015, pp. 2] -->
 
 
+## The disconnect between structural and measurement models
+
+<!-- recording: Sven 24.10.04; time: 00:14:30 - 00:21:00 -->
+<!-- recording: Sven and Tine 24.10.18; time: 00:08:30 - 00:14:55 -->
+<!-- recording: Sven and Tine 24.10.25; time: 00:17:00 - 00:31:10 -->
+
+<!-- 1. The BTL model is CJ's measurement model -->
+As outlined in the previous section, the BTL model typically functions as the measurement model in a CJ study [@Andrich_1978; @Bramley_2008]. A measurement model specifies how manifest variables contribute to the estimation of latent variables [@Everitt_et_al_2010]. For example, when evaluating text quality, researchers use the BTL model to process the dichotomous outcomes resulting from the pairwise comparisons (the manifest variables) to estimate scores that reflect the underlying quality level of the texts (the latent variable) [@Laming_2004; @Pollitt_2012b; @Whitehouse_2012; @vanDaal_et_al_2016; @Lesterhuis_2018; @Coertjens_et_al_2017; @Goossens_et_al_2018; @Bouwer_et_al_2023]. 
+
+<!-- 2. But there is no structural model, only post estimation analyses -->
+Researchers then typically use the estimated BTL scores, or their transformations, to conduct additional analyses or hypothesis tests. For example, these scores have been used to identify 'misfit' judges and stimuli [@Pollitt_2012b; @vanDaal_et_al_2017; @Goossens_et_al_2018], detect biases in judges' ratings [@Pollitt_et_al_2003; @Pollitt_2012b], calculate correlations with other assessment methods [@Goossens_et_al_2018; @Bouwer_et_al_2023], or test hypotheses related to the underlying trait of interest [@Bramley_et_al_2019; @Boonen_et_al_2020; @Bouwer_et_al_2023; @vanDaal_et_al_2017; @Jones_et_al_2019; @Gijsen_et_al_2021].
+
+<!-- 3. But what is the problem with this? -->
+However, the statistical literature advises caution when using estimated scores to conduct additional analyses or hypotheses tests. A key consideration is that BTL scores are parameter estimates that inherently carry uncertainty. Ignoring this uncertainty can introduce bias into the analysis and reduce the precision of hypothesis tests. Notably, the direction and magnitude of the bias are often unpredictable; results may be attenuated, exaggerated, or remain unaffected, depending on the amount of uncertainty present in the scores and the actual effects being tested [@Kline_et_al_2023, pp. 25; @Hoyle_et_al_2023, pp. 137]. Furthermore, reduced precision in hypothesis tests weakens their statistical power, ultimately increasing the likelihood of committing type-I or type-II errors [@McElreath_2020]. 
+<!-- A type-I error occurs when a *true* null hypothesis is incorrectly rejected, while a type-II error occurs when a *false* null hypothesis is incorrectly accepted [@Everitt_et_al_2010]. -->
+
+<!-- 4. So, what is the solution?  -->
+To mitigate these risks, principles from Structural Equation Modeling (SEM) [@Hoyle_et_al_2023, pp. 138] and Item Response Theory (IRT) [@Fox_2010, chap. 6; @vanderLinden_et_al_2017_I, chap. 24] recommend conducting these analyses and tests within a structural model. A structural model specifies how different manifest or latent variables influence the latent variable of interest [@Everitt_et_al_2010]. This approach allows analyses that can account for both the BTL scores and their uncertainties simultaneously, rather than treating them as separate elements. Therefore, an integrated approach that combines CJ’s measurement and structural models can offer significant advantages.
 
 ## The role and impact of comparison algorithms
 
@@ -272,6 +237,9 @@ However, Case V incorporates the largest number of simplifying assumptions [@Bra
 
 
 <!-- All studies use SSR as a measure of reliability -->
+
+
+<!-- It is assumed that the single observer compares each pair of stimuli a sufficient number of times so that a proportion may be determined for eah pair [@Thurstone_1927]. -->
 
 
 
