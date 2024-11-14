@@ -172,7 +172,7 @@ However, because Case V was originally developed to provide a "rather coarse sca
 <!-- Reliability is a necessary but not sufficient condition for validity. Reliability can exist without validity but validity cannot exist without reliability [@Perron_et_al_2015, pp. 2] -->
 
 
-## The disconnect between structural and measurement models
+## The disconnect between trait measurement and hypothesis testing
 
 <!-- recording: Sven 24.10.04; time: 00:14:30 - 00:21:00 -->
 <!-- recording: Sven and Tine 24.10.18; time: 00:08:30 - 00:14:55 -->
