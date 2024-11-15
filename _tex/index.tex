@@ -212,10 +212,10 @@ judgement \sep Structural Causal Models \sep
 
 In \emph{comparative judgment} (CJ) studies, judges assess a specific
 trait or attribute across various stimuli by performing pairwise
-comparisons \citep{Thurstone_1927, Pollitt_2004, Pollitt_2012a}. Each
-comparison produces a dichotomous outcome, indicating which stimulus is
-perceived to exhibit a higher trait level. For example, when assessing
-text quality, judges compare pairs of written texts (the stimuli) to
+comparisons \citep{Thurstone_1927a, Thurstone_1927b}. Each comparison
+produces a dichotomous outcome, indicating which stimulus is perceived
+to exhibit a higher trait level. For example, when assessing text
+quality, judges compare pairs of written texts (the stimuli) to
 determine the relative quality each text exhibit (the trait)
 \citep{Laming_2004, Pollitt_2012b, Whitehouse_2012, vanDaal_et_al_2016, Lesterhuis_2018, Coertjens_et_al_2017, Goossens_et_al_2018, Bouwer_et_al_2023}.
 
@@ -244,23 +244,20 @@ and fragmented research approaches have left several critical issues
 unaddressed. This research primarily focuses on three: the over-reliance
 on Thurstone's Case V assumptions in the statistical analysis of CJ
 data, the apparent disconnect between CJ's trait measurement and
-hypothesis testing, and the unclear role and influence of comparison
-algorithms on the method's reliability and validity. The following
-sections will discuss each of these issues in detail, followed by the
-introduction of a theoretical model and its statistical translation,
-which aims to address all three concerns simultaneously.
+hypothesis testing, and the unclear role of comparison algorithms on the
+method's reliability and validity. The following sections will discuss
+each of these issues in detail, followed by the introduction of a
+theoretical model and its statistical translation, which aims to address
+all three concerns simultaneously.
 
 \section{Three critical issues in CJ
 literature}\label{sec-theory-issues}
 
-\subsection{The Case V and the statistical analysis of CJ
-data}\label{the-case-v-and-the-statistical-analysis-of-cj-data}
-
 In its most general form, Thurstone's theory
-\citeyearpar{Thurstone_1927} posits that when a judge compares two
-stimuli, the resulting dichotomous outcome depends on two main factors:
-the discriminal process and the law of comparative judgment. The
-\emph{discriminal process} refers to the psychological effect each
+\citeyearpar{Thurstone_1927b} posits that the dichotomous outcome
+resulting from comparing two stimuli is determined by two factors: the
+discriminal process of each stimulus and their discriminal difference.
+The \emph{discriminal process} refers to the psychological effect each
 stimulus has on the judges, or more simply stated, the judges'
 perception of the trait level of each stimulus. Thurstone assumes that
 the discriminal process for each stimulus follows a Normal distribution.
@@ -268,8 +265,8 @@ In this distribution, the mode (mean), known as the \emph{modal
 discriminal process}, represents the position of the stimulus on the
 trait continuum, while the dispersion, known as the \emph{discriminal
 dispersion}, reflects variability in the perceived trait level of the
-stimulus. Figure~\ref{fig-discriminal_process} shows a visual depiction
-of the discriminal process of two stimuli (objects).
+stimulus. Figure~\ref{fig-discriminal_process} shows example
+distributions of discriminal process for two stimuli (objects).
 
 \begin{figure}
 
@@ -279,8 +276,9 @@ of the discriminal process of two stimuli (objects).
 
 }
 
-\caption{\label{fig-discriminal_process}Discriminal processes of two
-stimuli (objects). Extracted from \citet[pp.~249]{Bramley_2008}}
+\caption{\label{fig-discriminal_process}Example distributions of
+discriminal processes for two stimuli (objects). Extracted from
+\citet[pp.~249]{Bramley_2008}.}
 
 \end{figure}%
 
@@ -292,8 +290,8 @@ stimulus positioned further along the continuum is perceived as having a
 higher level of that trait. Thus, the observed dichotomous outcome is
 determined by the distribution of the difference between the discriminal
 processes of the two stimuli, called the \emph{discriminal difference}.
-Figure~\ref{fig-comparative_judgment} shows a visual depiction of the
-discriminal difference of two stimuli (objects).
+Figure~\ref{fig-comparative_judgment} shows an example distribution of
+the discriminal difference for two stimuli (objects).
 
 \begin{figure}
 
@@ -303,19 +301,23 @@ discriminal difference of two stimuli (objects).
 
 }
 
-\caption{\label{fig-comparative_judgment}Discriminal difference between
-two stimuli (objects). Extracted from \citet[pp.~251]{Bramley_2008}}
+\caption{\label{fig-comparative_judgment}Distribution of the discriminal
+difference between two stimuli (objects). Extracted from
+\citet[pp.~251]{Bramley_2008}.}
 
 \end{figure}%
 
-Thurstone's general form of the theory primarily applies to pairwise
+Importantly, the theory's general form primarily addresses pairwise
 comparisons of stimuli made by a single judge
-\citep[pp.~267]{Thurstone_1927}. Therefore, to enhance the theory's
-practical applicability, he developed five distinct cases, each
-incorporating a series of increasingly simplifying assumptions.
-Figure~\ref{fig-thurstone_cases} outlines each case along with their key
-assumptions. For a detailed explanation of this theoretical progression,
-see \citet{Thurstone_1927} and \citet[pp.~248-253]{Bramley_2008}.
+\citep[pp.~267]{Thurstone_1927b}. Consequently, to enhance its practical
+applicability, Thurstone introduced five distinct cases, each defined by
+progressively simplifying assumptions. Figure~\ref{fig-thurstone_cases}
+summarizes these cases, focusing on key assumptions such as the
+distribution of discriminal processes, the similarity of discriminal
+dispersion across stimuli, the correlation between stimuli, and which
+judges perform the comparisons. For a comprehensive discussion of this
+progression, refer to \citet{Thurstone_1927b} and
+\citet[pp.~248-253]{Bramley_2008}.
 
 \begin{figure}
 
@@ -329,40 +331,86 @@ see \citet{Thurstone_1927} and \citet[pp.~248-253]{Bramley_2008}.
 
 \end{figure}%
 
-Surprisingly, Case V is the most commonly used case in the CJ
-literature, despite incorporating the largest number of simplifying
-assumptions \citep[pp.~253]{Bramley_2008}. This widespread adoption is
-primarily due to the Bradley-Terry-Luce (BTL) model
-\citep{Bradley_et_al_1952, Luce_1959}, which offers a simpler
-statistical representation of the case. The BTL model closely aligns
-with Case V's assumptions, with one key difference: the distribution of
-the discriminal process. While Case V assumes a Normal distribution, the
-BTL model uses the more mathematically tractable logistic distribution
-\citep[pp.~254]{Bramley_2008} (see Figure~\ref{fig-thurstone_cases}).
-However, this adjustment does not significantly affect the model's
-estimation or interpretation, as the logistic and normal distributions
-are related to each other by a factor of approximately \(1.7\)
-\citep[pp.~16]{vanderLinden_et_al_2017_I}.
+\subsection{The Case V and the statistical analysis of CJ
+data}\label{the-case-v-and-the-statistical-analysis-of-cj-data}
 
-However, because Case V was originally developed to provide a ``rather
-coarse scaling'' of traits \citep[pp.~269]{Thurstone_1927}, prioritizing
-statistical ease of use over precision in trait measurement, two of its
-assumptions may be causing more problems than expected: the assumption
-of zero correlation between the stimuli, and the assumption of equal
-dispersion between stimuli.
+Surprisingly, despite its reliance on the largest number of simplifying
+assumptions \citep[pp.~253]{Bramley_2008}, Case V remains the most
+widely used case in the CJ literature. This popularity is largely due to
+its simplified statistical representation in the Bradley-Terry-Luce
+(BTL) model \citep{Bradley_et_al_1952, Luce_1959}. The BTL model mirrors
+Case V's assumptions, with one key difference: while Case V assumes a
+Normal distribution for the discriminal processes, the BTL model uses
+the more mathematically tractable logistic distribution
+\citep[pp.~254]{Bramley_2008} (see Figure~\ref{fig-thurstone_cases}).
+This substitution has little effect on the model's estimation or
+interpretation, as the Normal and logistic distributions differ by a
+scaling factor of approximately \(1.7\)
+\citep[pp.~16]{vanderLinden_et_al_2017_I} (refer to
+Figure~\ref{fig-logistic_vs_normal}).
+
+\begin{figure}
+
+\begin{minipage}{0.50\linewidth}
+
+\centering{
+
+\includegraphics[width=0.95\linewidth,height=\textheight,keepaspectratio]{./images/figures/density.png}
+
+}
+
+\subcaption{\label{fig-density}Probability density}
+
+\end{minipage}%
+%
+\begin{minipage}{0.50\linewidth}
+
+\centering{
+
+\includegraphics[width=0.95\linewidth,height=\textheight,keepaspectratio]{./images/figures/cumulative.png}
+
+}
+
+\subcaption{\label{fig-cumulative}Cummulative probability}
+
+\end{minipage}%
+
+\caption{\label{fig-logistic_vs_normal}Probability density and
+cumulative probability of the logistic and Normal distributions.
+Extracted from \citet[pp.~254-255]{Bramley_2008}.}
+
+\end{figure}%
+
+However, Case V (and its BTL model counterpart) was originally developed
+to provide a ``rather coarse scaling'' of traits
+\citep[pp.~269]{Thurstone_1927b}, prioritizing statistical simplicity
+over precision in trait measurement. As a result, its assumptions may
+not be suitable for applications beyond the psychophysical contexts,
+which typically involve simple, homogeneous stimuli. Thurstone himself
+cautioned that its use ``should not be made without (an) experimental
+test'' \citep[pp.~270]{Thurstone_1927b}, further acknowledging that some
+assumptions could become problematic with less homogeneous stimuli, such
+as handwriting or English compositions \citep[pp.~374]{Thurstone_1927a}.
+Consequently, given that current CJ applications often involve more
+complex, less homogeneous stimuli, two assumptions of Case V may not
+always hold theoretical or in practice: the assumption of zero
+correlation and equal dispersion between stimuli.
+
+{Regarding the assumption of \emph{zero correlation between stimuli}
+\ldots{}}
 
 \subsection{The disconnect between trait measurement and hypothesis
 testing}\label{the-disconnect-between-trait-measurement-and-hypothesis-testing}
 
-As outlined in the previous section, the BTL model typically functions
-as the measurement model in a CJ study
-\citep{Andrich_1978, Bramley_2008}. A measurement model specifies how
-manifest variables contribute to the estimation of latent variables
-\citep{Everitt_et_al_2010}. For example, when evaluating text quality,
-researchers use the BTL model to process the dichotomous outcomes
-resulting from the pairwise comparisons (the manifest variables) to
-estimate scores that reflect the underlying quality level of the texts
-(the latent variable)
+Building on the previous section, it is evident that the BTL model
+typically functions as the measurement model for the trait under
+assessment \citep{Andrich_1978, Bramley_2008}. A measurement model
+specifies how manifest variables contribute to the estimation of latent
+variables \citep{Everitt_et_al_2010}. For example, when evaluating text
+quality, researchers use the BTL model to process the dichotomous
+outcomes resulting from the pairwise comparisons (the manifest
+variables) to estimate scores that reflect the underlying quality level
+of the texts (the latent variable)
 \citep{Laming_2004, Pollitt_2012b, Whitehouse_2012, vanDaal_et_al_2016, Lesterhuis_2018, Coertjens_et_al_2017, Goossens_et_al_2018, Bouwer_et_al_2023}.
 
 Researchers then typically use the estimated BTL scores, or their

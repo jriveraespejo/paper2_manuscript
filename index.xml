@@ -149,11 +149,9 @@ the University of Antwerp (BOF).</funding-statement>
   <p>In <italic>comparative judgment</italic> (CJ) studies, judges
   assess a specific trait or attribute across various stimuli by
   performing pairwise comparisons
-  (<xref alt="Thurstone 1927" rid="ref-Thurstone_1927" ref-type="bibr">Thurstone
-  1927</xref>;
-  <xref alt="Pollitt 2004" rid="ref-Pollitt_2004" ref-type="bibr">Pollitt
-  2004</xref>,
-  <xref alt="2012a" rid="ref-Pollitt_2012a" ref-type="bibr">2012a</xref>).
+  (<xref alt="Thurstone 1927b" rid="ref-Thurstone_1927a" ref-type="bibr">Thurstone
+  1927b</xref>,
+  <xref alt="1927a" rid="ref-Thurstone_1927b" ref-type="bibr">1927a</xref>).
   Each comparison produces a dichotomous outcome, indicating which
   stimulus is perceived to exhibit a higher trait level. For example,
   when assessing text quality, judges compare pairs of written texts
@@ -161,8 +159,8 @@ the University of Antwerp (BOF).</funding-statement>
   trait)
   (<xref alt="Laming 2004" rid="ref-Laming_2004" ref-type="bibr">Laming
   2004</xref>;
-  <xref alt="Pollitt 2012b" rid="ref-Pollitt_2012b" ref-type="bibr">Pollitt
-  2012b</xref>;
+  <xref alt="Pollitt 2012" rid="ref-Pollitt_2012b" ref-type="bibr">Pollitt
+  2012</xref>;
   <xref alt="Whitehouse 2012" rid="ref-Whitehouse_2012" ref-type="bibr">Whitehouse
   2012</xref>;
   <xref alt="van Daal et al. 2016" rid="ref-vanDaal_et_al_2016" ref-type="bibr">van
@@ -195,8 +193,8 @@ the University of Antwerp (BOF).</funding-statement>
   reliability and time efficiency of CJ are comparable, if not superior,
   to those of other assessment methods when employing adaptive
   comparison algorithms
-  (<xref alt="Pollitt 2012b" rid="ref-Pollitt_2012b" ref-type="bibr">Pollitt
-  2012b</xref>;
+  (<xref alt="Pollitt 2012" rid="ref-Pollitt_2012b" ref-type="bibr">Pollitt
+  2012</xref>;
   <xref alt="San Verhavert, Furlong, and Bouwer 2022" rid="ref-Verhavert_et_al_2022" ref-type="bibr">San
   Verhavert, Furlong, and Bouwer 2022</xref>;
   <xref alt="Mikhailiuk et al. 2021" rid="ref-Mikhailiuk_et_al_2021" ref-type="bibr">Mikhailiuk
@@ -232,117 +230,168 @@ the University of Antwerp (BOF).</funding-statement>
   critical issues unaddressed. This research primarily focuses on three:
   the over-reliance on Thurstone’s Case V assumptions in the statistical
   analysis of CJ data, the apparent disconnect between CJ’s trait
-  measurement and hypothesis testing, and the unclear role and influence
-  of comparison algorithms on the method’s reliability and validity. The
-  following sections will discuss each of these issues in detail,
-  followed by the introduction of a theoretical model and its
-  statistical translation, which aims to address all three concerns
-  simultaneously.</p>
+  measurement and hypothesis testing, and the unclear role of comparison
+  algorithms on the method’s reliability and validity. The following
+  sections will discuss each of these issues in detail, followed by the
+  introduction of a theoretical model and its statistical translation,
+  which aims to address all three concerns simultaneously.</p>
 </sec>
 <sec id="sec-theory-issues">
   <title>Three critical issues in CJ literature</title>
+  <p>In its most general form, Thurstone’s theory
+  (<xref alt="1927a" rid="ref-Thurstone_1927b" ref-type="bibr">1927a</xref>)
+  posits that the dichotomous outcome resulting from comparing two
+  stimuli is determined by two factors: the discriminal process of each
+  stimulus and their discriminal difference. The <italic>discriminal
+  process</italic> refers to the psychological effect each stimulus has
+  on the judges, or more simply stated, the judges’ perception of the
+  trait level of each stimulus. Thurstone assumes that the discriminal
+  process for each stimulus follows a Normal distribution. In this
+  distribution, the mode (mean), known as the <italic>modal discriminal
+  process</italic>, represents the position of the stimulus on the trait
+  continuum, while the dispersion, known as the <italic>discriminal
+  dispersion</italic>, reflects variability in the perceived trait level
+  of the stimulus.
+  <xref alt="Figure 1" rid="fig-discriminal_process">Figure 1</xref>
+  shows example distributions of discriminal process for two stimuli
+  (objects).</p>
+  <fig id="fig-discriminal_process">
+    <caption><p>Figure 1: Example distributions of discriminal processes
+    for two stimuli (objects). Extracted from Bramley
+    (<xref alt="2008, 249" rid="ref-Bramley_2008" ref-type="bibr">2008,
+    249</xref>).</p></caption>
+    <graphic mimetype="image" mime-subtype="png" xlink:href="./images/figures/discriminal_process.png" />
+  </fig>
+  <p>However, since the discriminal mode and dispersion of a single
+  stimulus are not directly observable without comparing it to other
+  stimuli, the <italic>law of comparative judgment</italic> becomes
+  essential. This law asserts that when assessing a specific trait by
+  comparing two stimuli, the stimulus positioned further along the
+  continuum is perceived as having a higher level of that trait. Thus,
+  the observed dichotomous outcome is determined by the distribution of
+  the difference between the discriminal processes of the two stimuli,
+  called the <italic>discriminal difference</italic>.
+  <xref alt="Figure 2" rid="fig-comparative_judgment">Figure 2</xref>
+  shows an example distribution of the discriminal difference for two
+  stimuli (objects).</p>
+  <fig id="fig-comparative_judgment">
+    <caption><p>Figure 2: Distribution of the discriminal difference
+    between two stimuli (objects). Extracted from Bramley
+    (<xref alt="2008, 251" rid="ref-Bramley_2008" ref-type="bibr">2008,
+    251</xref>).</p></caption>
+    <graphic mimetype="image" mime-subtype="png" xlink:href="./images/figures/comparative_judgment.png" />
+  </fig>
+  <p>Importantly, the theory’s general form primarily addresses pairwise
+  comparisons of stimuli made by a single judge
+  (<xref alt="Thurstone 1927a, 267" rid="ref-Thurstone_1927b" ref-type="bibr">Thurstone
+  1927a, 267</xref>). Consequently, to enhance its practical
+  applicability, Thurstone introduced five distinct cases, each defined
+  by progressively simplifying assumptions.
+  <xref alt="Figure 3" rid="fig-thurstone_cases">Figure 3</xref>
+  summarizes these cases, focusing on key assumptions such as the
+  distribution of discriminal processes, the similarity of discriminal
+  dispersion across stimuli, the correlation between stimuli, and which
+  judges perform the comparisons. For a comprehensive discussion of this
+  progression, refer to Thurstone
+  (<xref alt="1927a" rid="ref-Thurstone_1927b" ref-type="bibr">1927a</xref>)
+  and Bramley
+  (<xref alt="2008, 248–53" rid="ref-Bramley_2008" ref-type="bibr">2008,
+  248–53</xref>).</p>
+  <fig id="fig-thurstone_cases">
+    <caption><p>Figure 3: Thurstones cases and asumptions</p></caption>
+    <graphic mimetype="image" mime-subtype="png" xlink:href="./images/tables/thurstone_cases.png" />
+  </fig>
   <sec id="the-case-v-and-the-statistical-analysis-of-cj-data">
     <title>The Case V and the statistical analysis of CJ data</title>
-    <p>In its most general form, Thurstone’s theory
-    (<xref alt="1927" rid="ref-Thurstone_1927" ref-type="bibr">1927</xref>)
-    posits that when a judge compares two stimuli, the resulting
-    dichotomous outcome depends on two main factors: the discriminal
-    process and the law of comparative judgment. The <italic>discriminal
-    process</italic> refers to the psychological effect each stimulus
-    has on the judges, or more simply stated, the judges’ perception of
-    the trait level of each stimulus. Thurstone assumes that the
-    discriminal process for each stimulus follows a Normal distribution.
-    In this distribution, the mode (mean), known as the <italic>modal
-    discriminal process</italic>, represents the position of the
-    stimulus on the trait continuum, while the dispersion, known as the
-    <italic>discriminal dispersion</italic>, reflects variability in the
-    perceived trait level of the stimulus.
-    <xref alt="Figure 1" rid="fig-discriminal_process">Figure 1</xref>
-    shows a visual depiction of the discriminal process of two stimuli
-    (objects).</p>
-    <fig id="fig-discriminal_process">
-      <caption><p>Figure 1: Discriminal processes of two stimuli
-      (objects). Extracted from Bramley
-      (<xref alt="2008, 249" rid="ref-Bramley_2008" ref-type="bibr">2008,
-      249</xref>)</p></caption>
-      <graphic mimetype="image" mime-subtype="png" xlink:href="./images/figures/discriminal_process.png" />
-    </fig>
-    <p>However, since the discriminal mode and dispersion of a single
-    stimulus are not directly observable without comparing it to other
-    stimuli, the <italic>law of comparative judgment</italic> becomes
-    essential. This law asserts that when assessing a specific trait by
-    comparing two stimuli, the stimulus positioned further along the
-    continuum is perceived as having a higher level of that trait. Thus,
-    the observed dichotomous outcome is determined by the distribution
-    of the difference between the discriminal processes of the two
-    stimuli, called the <italic>discriminal difference</italic>.
-    <xref alt="Figure 2" rid="fig-comparative_judgment">Figure 2</xref>
-    shows a visual depiction of the discriminal difference of two
-    stimuli (objects).</p>
-    <fig id="fig-comparative_judgment">
-      <caption><p>Figure 2: Discriminal difference between two stimuli
-      (objects). Extracted from Bramley
-      (<xref alt="2008, 251" rid="ref-Bramley_2008" ref-type="bibr">2008,
-      251</xref>)</p></caption>
-      <graphic mimetype="image" mime-subtype="png" xlink:href="./images/figures/comparative_judgment.png" />
-    </fig>
-    <p>Thurstone’s general form of the theory primarily applies to
-    pairwise comparisons of stimuli made by a single judge
-    (<xref alt="Thurstone 1927, 267" rid="ref-Thurstone_1927" ref-type="bibr">Thurstone
-    1927, 267</xref>). Therefore, to enhance the theory’s practical
-    applicability, he developed five distinct cases, each incorporating
-    a series of increasingly simplifying assumptions.
-    <xref alt="Figure 3" rid="fig-thurstone_cases">Figure 3</xref>
-    outlines each case along with their key assumptions. For a detailed
-    explanation of this theoretical progression, see Thurstone
-    (<xref alt="1927" rid="ref-Thurstone_1927" ref-type="bibr">1927</xref>)
-    and Bramley
-    (<xref alt="2008, 248–53" rid="ref-Bramley_2008" ref-type="bibr">2008,
-    248–53</xref>).</p>
-    <fig id="fig-thurstone_cases">
-      <caption><p>Figure 3: Thurstones cases and
-      asumptions</p></caption>
-      <graphic mimetype="image" mime-subtype="png" xlink:href="./images/tables/thurstone_cases.png" />
-    </fig>
-    <p>Surprisingly, Case V is the most commonly used case in the CJ
-    literature, despite incorporating the largest number of simplifying
-    assumptions
+    <p>Surprisingly, despite its reliance on the largest number of
+    simplifying assumptions
     (<xref alt="Bramley 2008, 253" rid="ref-Bramley_2008" ref-type="bibr">Bramley
-    2008, 253</xref>). This widespread adoption is primarily due to the
-    Bradley-Terry-Luce (BTL) model
+    2008, 253</xref>), Case V remains the most widely used case in the
+    CJ literature. This popularity is largely due to its simplified
+    statistical representation in the Bradley-Terry-Luce (BTL) model
     (<xref alt="Bradley and Terry 1952" rid="ref-Bradley_et_al_1952" ref-type="bibr">Bradley
     and Terry 1952</xref>;
     <xref alt="Luce 1959" rid="ref-Luce_1959" ref-type="bibr">Luce
-    1959</xref>), which offers a simpler statistical representation of
-    the case. The BTL model closely aligns with Case V’s assumptions,
-    with one key difference: the distribution of the discriminal
-    process. While Case V assumes a Normal distribution, the BTL model
-    uses the more mathematically tractable logistic distribution
+    1959</xref>). The BTL model mirrors Case V’s assumptions, with one
+    key difference: while Case V assumes a Normal distribution for the
+    discriminal processes, the BTL model uses the more mathematically
+    tractable logistic distribution
     (<xref alt="Bramley 2008, 254" rid="ref-Bramley_2008" ref-type="bibr">Bramley
     2008, 254</xref>) (see
     <xref alt="Figure 3" rid="fig-thurstone_cases">Figure 3</xref>).
-    However, this adjustment does not significantly affect the model’s
-    estimation or interpretation, as the logistic and normal
-    distributions are related to each other by a factor of approximately
-    <inline-formula><alternatives>
+    This substitution has little effect on the model’s estimation or
+    interpretation, as the Normal and logistic distributions differ by a
+    scaling factor of approximately <inline-formula><alternatives>
     <tex-math><![CDATA[1.7]]></tex-math>
     <mml:math display="inline" xmlns:mml="http://www.w3.org/1998/Math/MathML"><mml:mn>1.7</mml:mn></mml:math></alternatives></inline-formula>
     (<xref alt="van der Linden 2017, 1:16" rid="ref-vanderLinden_et_al_2017_I" ref-type="bibr">van
-    der Linden 2017, 1:16</xref>).</p>
-    <p>However, because Case V was originally developed to provide a
-    “rather coarse scaling” of traits
-    (<xref alt="Thurstone 1927, 269" rid="ref-Thurstone_1927" ref-type="bibr">Thurstone
-    1927, 269</xref>), prioritizing statistical ease of use over
-    precision in trait measurement, two of its assumptions may be
-    causing more problems than expected: the assumption of zero
-    correlation between the stimuli, and the assumption of equal
-    dispersion between stimuli.</p>
+    der Linden 2017, 1:16</xref>) (refer to
+    <xref alt="Figure 4" rid="fig-logistic_vs_normal">Figure 4</xref>).</p>
+    <fig id="fig-logistic_vs_normal">
+      <caption><p>Figure 4: Probability density and cumulative
+      probability of the logistic and Normal distributions. Extracted
+      from Bramley
+      (<xref alt="2008, 254–55" rid="ref-Bramley_2008" ref-type="bibr">2008,
+      254–55</xref>).</p></caption>
+      <table-wrap>
+        <table>
+          <colgroup>
+            <col width="50%" />
+            <col width="50%" />
+          </colgroup>
+          <tbody>
+            <tr>
+              <td align="left"><p specific-use="wrapper">
+                <boxed-text>
+                  <fig id="fig-density">
+                    <caption><p>(a) Probability density</p></caption>
+                    <graphic mimetype="image" mime-subtype="png" xlink:href="./images/figures/density.png" />
+                  </fig>
+                </boxed-text>
+              </p></td>
+              <td align="left"><p specific-use="wrapper">
+                <boxed-text>
+                  <fig id="fig-cumulative">
+                    <caption><p>(b) Cummulative
+                    probability</p></caption>
+                    <graphic mimetype="image" mime-subtype="png" xlink:href="./images/figures/cumulative.png" />
+                  </fig>
+                </boxed-text>
+              </p></td>
+            </tr>
+          </tbody>
+        </table>
+      </table-wrap>
+    </fig>
+    <p>However, Case V (and its BTL model counterpart) was originally
+    developed to provide a “rather coarse scaling” of traits
+    (<xref alt="Thurstone 1927a, 269" rid="ref-Thurstone_1927b" ref-type="bibr">Thurstone
+    1927a, 269</xref>), prioritizing statistical simplicity over
+    precision in trait measurement. As a result, its assumptions may not
+    be suitable for applications beyond the psychophysical contexts,
+    which typically involve simple, homogeneous stimuli. Thurstone
+    himself cautioned that its use “should not be made without (an)
+    experimental test”
+    (<xref alt="Thurstone 1927a, 270" rid="ref-Thurstone_1927b" ref-type="bibr">Thurstone
+    1927a, 270</xref>), further acknowledging that some assumptions
+    could become problematic with less homogeneous stimuli, such as
+    handwriting or English compositions
+    (<xref alt="Thurstone 1927b, 374" rid="ref-Thurstone_1927a" ref-type="bibr">Thurstone
+    1927b, 374</xref>). Consequently, given that current CJ applications
+    often involve more complex, less homogeneous stimuli, two
+    assumptions of Case V may not always hold theoretical or in
+    practice: the assumption of zero correlation and equal dispersion
+    between stimuli.</p>
+    <p><styled-content style="color:red;">Regarding the assumption of
+    <italic>zero correlation between stimuli</italic>
+    …</styled-content></p>
   </sec>
   <sec id="the-disconnect-between-trait-measurement-and-hypothesis-testing">
     <title>The disconnect between trait measurement and hypothesis
     testing</title>
-    <p>As outlined in the previous section, the BTL model typically
-    functions as the measurement model in a CJ study
+    <p>Building on the previous section, it is evident that the BTL
+    model typically functions as the measurement model for the trait
+    under assessment
     (<xref alt="Andrich 1978" rid="ref-Andrich_1978" ref-type="bibr">Andrich
     1978</xref>;
     <xref alt="Bramley 2008" rid="ref-Bramley_2008" ref-type="bibr">Bramley
@@ -356,8 +405,8 @@ the University of Antwerp (BOF).</funding-statement>
     level of the texts (the latent variable)
     (<xref alt="Laming 2004" rid="ref-Laming_2004" ref-type="bibr">Laming
     2004</xref>;
-    <xref alt="Pollitt 2012b" rid="ref-Pollitt_2012b" ref-type="bibr">Pollitt
-    2012b</xref>;
+    <xref alt="Pollitt 2012" rid="ref-Pollitt_2012b" ref-type="bibr">Pollitt
+    2012</xref>;
     <xref alt="Whitehouse 2012" rid="ref-Whitehouse_2012" ref-type="bibr">Whitehouse
     2012</xref>;
     <xref alt="van Daal et al. 2016" rid="ref-vanDaal_et_al_2016" ref-type="bibr">van
@@ -374,16 +423,16 @@ the University of Antwerp (BOF).</funding-statement>
     transformations, to conduct additional analyses or hypothesis tests.
     For example, these scores have been used to identify ‘misfit’ judges
     and stimuli
-    (<xref alt="Pollitt 2012b" rid="ref-Pollitt_2012b" ref-type="bibr">Pollitt
-    2012b</xref>;
+    (<xref alt="Pollitt 2012" rid="ref-Pollitt_2012b" ref-type="bibr">Pollitt
+    2012</xref>;
     <xref alt="van Daal et al. 2017" rid="ref-vanDaal_et_al_2017" ref-type="bibr">van
     Daal et al. 2017</xref>;
     <xref alt="Goossens and De Maeyer 2018" rid="ref-Goossens_et_al_2018" ref-type="bibr">Goossens
     and De Maeyer 2018</xref>), detect biases in judges’ ratings
     (<xref alt="Pollitt and Elliott 2003" rid="ref-Pollitt_et_al_2003" ref-type="bibr">Pollitt
     and Elliott 2003</xref>;
-    <xref alt="Pollitt 2012b" rid="ref-Pollitt_2012b" ref-type="bibr">Pollitt
-    2012b</xref>), calculate correlations with other assessment methods
+    <xref alt="Pollitt 2012" rid="ref-Pollitt_2012b" ref-type="bibr">Pollitt
+    2012</xref>), calculate correlations with other assessment methods
     (<xref alt="Goossens and De Maeyer 2018" rid="ref-Goossens_et_al_2018" ref-type="bibr">Goossens
     and De Maeyer 2018</xref>;
     <xref alt="Bouwer et al. 2023" rid="ref-Bouwer_et_al_2023" ref-type="bibr">Bouwer
@@ -511,7 +560,23 @@ the University of Antwerp (BOF).</funding-statement>
 <back>
 <ref-list>
   <title>References</title>
-  <ref id="ref-Thurstone_1927">
+  <ref id="ref-Thurstone_1927a">
+    <element-citation publication-type="article-journal">
+      <person-group person-group-type="author">
+        <name><surname>Thurstone</surname><given-names>L.</given-names></name>
+      </person-group>
+      <article-title>Psychophysical analysis</article-title>
+      <source>American Journal of Psychology</source>
+      <year iso-8601-date="1927">1927</year>
+      <volume></volume>
+      <issue>38</issue>
+      <uri>https://brocku.ca/MeadProject/Thurstone/Thurstone_1927g.html</uri>
+      <pub-id pub-id-type="doi"></pub-id>
+      <fpage>368</fpage>
+      <lpage>89</lpage>
+    </element-citation>
+  </ref>
+  <ref id="ref-Thurstone_1927b">
     <element-citation publication-type="article-journal">
       <person-group person-group-type="author">
         <name><surname>Thurstone</surname><given-names>L.</given-names></name>
@@ -590,22 +655,6 @@ the University of Antwerp (BOF).</funding-statement>
       <pub-id pub-id-type="doi">10.2304/plat.2003.3.2.89</pub-id>
       <fpage>89</fpage>
       <lpage>96</lpage>
-    </element-citation>
-  </ref>
-  <ref id="ref-Pollitt_2012a">
-    <element-citation publication-type="article-journal">
-      <person-group person-group-type="author">
-        <name><surname>Pollitt</surname><given-names>A.</given-names></name>
-      </person-group>
-      <article-title>Comparative judgement for assessment</article-title>
-      <source>International Journal of Technology and Design Education</source>
-      <year iso-8601-date="2012">2012</year>
-      <volume>22</volume>
-      <issue>2</issue>
-      <uri></uri>
-      <pub-id pub-id-type="doi">10.1007/s10798-011-9189-x</pub-id>
-      <fpage>157</fpage>
-      <lpage>170</lpage>
     </element-citation>
   </ref>
   <ref id="ref-Pollitt_2012b">
@@ -1005,22 +1054,6 @@ the University of Antwerp (BOF).</funding-statement>
       <pub-id pub-id-type="doi">10.1007/978-3-030-52229-2_18</pub-id>
       <fpage>331</fpage>
       <lpage>349</lpage>
-    </element-citation>
-  </ref>
-  <ref id="ref-Pollitt_2004">
-    <element-citation publication-type="paper-conference">
-      <person-group person-group-type="author">
-        <name><surname>Pollitt</surname><given-names>A.</given-names></name>
-      </person-group>
-      <article-title>Let’s stop marking exams</article-title>
-      <source>Proceedings of the IAEA conference</source>
-      <publisher-name>University of Cambridge Local Examinations Syndicate</publisher-name>
-      <publisher-loc>Philadelphia</publisher-loc>
-      <year iso-8601-date="2004">2004</year>
-      <volume></volume>
-      <uri>https://www.cambridgeassessment.org.uk/images/109719-let-s-stop-marking-exams.pdf</uri>
-      <fpage></fpage>
-      <lpage></lpage>
     </element-citation>
   </ref>
   <ref id="ref-Goossens_et_al_2018">
