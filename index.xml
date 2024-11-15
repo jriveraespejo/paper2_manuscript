@@ -315,12 +315,12 @@ the University of Antwerp (BOF).</funding-statement>
     1959</xref>). The BTL model mirrors Case V’s assumptions, with one
     key difference: while Case V assumes a Normal distribution for the
     discriminal processes, the BTL model uses the more mathematically
-    tractable logistic distribution
+    tractable Logistic distribution
     (<xref alt="Bramley 2008, 254" rid="ref-Bramley_2008" ref-type="bibr">Bramley
     2008, 254</xref>) (see
     <xref alt="Figure 3" rid="fig-thurstone_cases">Figure 3</xref>).
     This substitution has little effect on the model’s estimation or
-    interpretation, as the Normal and logistic distributions differ by a
+    interpretation, as the Normal and Logistic distributions differ by a
     scaling factor of approximately <inline-formula><alternatives>
     <tex-math><![CDATA[1.7]]></tex-math>
     <mml:math display="inline" xmlns:mml="http://www.w3.org/1998/Math/MathML"><mml:mn>1.7</mml:mn></mml:math></alternatives></inline-formula>
@@ -379,7 +379,7 @@ the University of Antwerp (BOF).</funding-statement>
     (<xref alt="Thurstone 1927b, 374" rid="ref-Thurstone_1927a" ref-type="bibr">Thurstone
     1927b, 374</xref>). Consequently, given that current CJ applications
     often involve more complex, less homogeneous stimuli, two
-    assumptions of Case V may not always hold theoretical or in
+    assumptions of Case V may not always hold theoretically or in
     practice: the assumption of zero correlation and equal dispersion
     between stimuli.</p>
     <p><styled-content style="color:red;">Regarding the assumption of
