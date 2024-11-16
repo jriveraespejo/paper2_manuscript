@@ -308,9 +308,12 @@ the University of Antwerp (BOF).</funding-statement>
     <p>Surprisingly, despite its reliance on the largest number of
     simplifying assumptions
     (<xref alt="Bramley 2008, 253" rid="ref-Bramley_2008" ref-type="bibr">Bramley
-    2008, 253</xref>), Case V remains the most widely used case in the
-    CJ literature. This popularity is largely due to its simplified
-    statistical representation in the Bradley-Terry-Luce (BTL) model
+    2008, 253</xref>;
+    <xref alt="Kelly, Richardson, and Isaacs 2022, 677" rid="ref-Kelly_et_al_2022" ref-type="bibr">Kelly,
+    Richardson, and Isaacs 2022, 677</xref>), Case V remains the most
+    widely used case in the CJ literature. This popularity is largely
+    due to its simplified statistical representation in the
+    Bradley-Terry-Luce (BTL) model
     (<xref alt="Bradley and Terry 1952" rid="ref-Bradley_et_al_1952" ref-type="bibr">Bradley
     and Terry 1952</xref>;
     <xref alt="Luce 1959" rid="ref-Luce_1959" ref-type="bibr">Luce
@@ -318,7 +321,9 @@ the University of Antwerp (BOF).</funding-statement>
     key difference: while Case V assumes a Normal distribution for the
     stimuli’s discriminal processes, the BTL model uses the more
     mathematically tractable Logistic distribution
-    (<xref alt="Bramley 2008, 254" rid="ref-Bramley_2008" ref-type="bibr">Bramley
+    (<xref alt="Andrich 1978" rid="ref-Andrich_1978" ref-type="bibr">Andrich
+    1978</xref>;
+    <xref alt="Bramley 2008, 254" rid="ref-Bramley_2008" ref-type="bibr">Bramley
     2008, 254</xref>) (see
     <xref alt="Table 1" rid="tbl-thurstone_cases">Table 1</xref>). This
     substitution has little effect on the model’s estimation or
@@ -369,10 +374,12 @@ the University of Antwerp (BOF).</funding-statement>
     developed to provide a “rather coarse scaling” of traits
     (<xref alt="Thurstone 1927a, 269" rid="ref-Thurstone_1927b" ref-type="bibr">Thurstone
     1927a, 269</xref>), prioritizing statistical simplicity over
-    precision in trait measurement. As a result, its assumptions may not
-    suit applications beyond the psychophysical contexts for which it
-    was created. Thurstone himself cautioned that its use “should not be
-    made without (an) experimental test”
+    precision in trait measurement
+    (<xref alt="Kelly, Richardson, and Isaacs 2022, 677" rid="ref-Kelly_et_al_2022" ref-type="bibr">Kelly,
+    Richardson, and Isaacs 2022, 677</xref>). As a result, its
+    assumptions may not suit applications beyond the psychophysical
+    contexts for which it was created. Thurstone himself cautioned that
+    its use “should not be made without (an) experimental test”
     (<xref alt="Thurstone 1927a, 270" rid="ref-Thurstone_1927b" ref-type="bibr">Thurstone
     1927a, 270</xref>), acknowledging that some assumptions could prove
     problematic with more complex, less homogeneous stimuli, such as
@@ -905,6 +912,25 @@ the University of Antwerp (BOF).</funding-statement>
       <volume>6</volume>
       <uri>https://www.frontiersin.org/journals/education/articles/10.3389/feduc.2021.785919</uri>
       <pub-id pub-id-type="doi">10.3389/feduc.2021.785919</pub-id>
+    </element-citation>
+  </ref>
+  <ref id="ref-Kelly_et_al_2022">
+    <element-citation publication-type="article-journal">
+      <person-group person-group-type="author">
+        <name><surname>Kelly</surname><given-names>K.</given-names></name>
+        <name><surname>Richardson</surname><given-names>M.</given-names></name>
+        <name><surname>Isaacs</surname><given-names>T.</given-names></name>
+      </person-group>
+      <article-title>Critiquing the rationales for using comparative judgement: A call for clarity</article-title>
+      <source>Assessment in Education: Principles, Policy &amp; Practice</source>
+      <publisher-name>Routledge</publisher-name>
+      <year iso-8601-date="2022">2022</year>
+      <volume>29</volume>
+      <issue>6</issue>
+      <uri></uri>
+      <pub-id pub-id-type="doi">10.1080/0969594X.2022.2147901</pub-id>
+      <fpage>674</fpage>
+      <lpage>688</lpage>
     </element-citation>
   </ref>
   <ref id="ref-Crompvoets_et_al_2022">
