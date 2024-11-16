@@ -213,8 +213,10 @@ the University of Antwerp (BOF).</funding-statement>
   et al. 2023</xref>). Finally, research on practical applicability
   highlights the method’s versatility across both educational and
   non-educational contexts
-  (<xref alt="Jones 2015" rid="ref-Jones_2015" ref-type="bibr">Jones
-  2015</xref>;
+  (<xref alt="Kimbell 2012" rid="ref-Kimbell_2012" ref-type="bibr">Kimbell
+  2012</xref>;
+  <xref alt="Jones and Inglis 2015" rid="ref-Jones_et_al_2015" ref-type="bibr">Jones
+  and Inglis 2015</xref>;
   <xref alt="Bartholomew et al. 2018" rid="ref-Bartholomew_et_al_2018" ref-type="bibr">Bartholomew
   et al. 2018</xref>;
   <xref alt="Jones et al. 2019" rid="ref-Jones_et_al_2019" ref-type="bibr">Jones
@@ -382,7 +384,7 @@ the University of Antwerp (BOF).</funding-statement>
     practice: the zero correlation and equal dispersion between
     stimuli.</p>
     <p><styled-content style="color:red;">The <italic>zero correlation
-    between stimuli</italic> represents two additional assumtions about
+    between stimuli</italic> represents two additional assumptions about
     the method:</styled-content></p>
   </sec>
   <sec id="the-disconnect-between-trait-measurement-and-hypothesis-testing">
@@ -672,10 +674,27 @@ the University of Antwerp (BOF).</funding-statement>
       <lpage>300</lpage>
     </element-citation>
   </ref>
-  <ref id="ref-Jones_2015">
+  <ref id="ref-Kimbell_2012">
+    <element-citation publication-type="article-journal">
+      <person-group person-group-type="author">
+        <name><surname>Kimbell</surname><given-names>R.</given-names></name>
+      </person-group>
+      <article-title>Evolving project e-scape for national assessment</article-title>
+      <source>International Journal of Technology and Design Education</source>
+      <year iso-8601-date="2012">2012</year>
+      <volume>22</volume>
+      <issue></issue>
+      <uri></uri>
+      <pub-id pub-id-type="doi">10.1007/s10798-011-9190-4</pub-id>
+      <fpage>135</fpage>
+      <lpage>155</lpage>
+    </element-citation>
+  </ref>
+  <ref id="ref-Jones_et_al_2015">
     <element-citation publication-type="article-journal">
       <person-group person-group-type="author">
         <name><surname>Jones</surname><given-names>I.</given-names></name>
+        <name><surname>Inglis</surname><given-names>M.</given-names></name>
       </person-group>
       <article-title>The problem of assessing problem solving: Can comparative judgement help?</article-title>
       <source>Educational Studies in Mathematics</source>
