@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.6.34">
+<meta name="generator" content="quarto-1.6.36">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -10,7 +10,7 @@
 <meta name="author" content="Tine van van Daal">
 <meta name="author" content="Sven De De Maeyer">
 <meta name="author" content="Steven Gillis">
-<meta name="dcterms.date" content="2024-11-15">
+<meta name="dcterms.date" content="2024-11-16">
 <meta name="keywords" content="Probability, Directed Acyclic Graphs, Bayesian methods, Thurstonian model, Comparative judgement, Structural Causal Models, Statistical modeling">
 
 <title>Let’s talk about Thurstone &amp; Co.: An information-theoretical model for comparative judgments, and its statistical translation</title>
@@ -55,7 +55,7 @@ div.csl-indent {
 <script src="site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="site_libs/quarto-html/anchor.min.js"></script>
 <link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-f23ab18612d661d7bd56dbc0c0fd3817.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-01c78b5cd655e4cd89133cf59d535862.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
 <link href="site_libs/bootstrap/bootstrap-5d59c2e5a8db551e40990b3b335d3f63.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
@@ -107,10 +107,10 @@ window.Quarto = {
 <meta name="citation_author" content="Tine van van Daal">
 <meta name="citation_author" content="Sven De De Maeyer">
 <meta name="citation_author" content="Steven Gillis">
-<meta name="citation_publication_date" content="2024-11-15">
-<meta name="citation_cover_date" content="2024-11-15">
+<meta name="citation_publication_date" content="2024-11-16">
+<meta name="citation_cover_date" content="2024-11-16">
 <meta name="citation_year" content="2024">
-<meta name="citation_online_date" content="2024-11-15">
+<meta name="citation_online_date" content="2024-11-16">
 <meta name="citation_language" content="en">
 <meta name="citation_reference" content="citation_title=Correlation and causation;,citation_author=S. Wright;,citation_publication_date=1927;,citation_cover_date=1927;,citation_year=1927;,citation_fulltext_html_url=https://books.google.co.ao/books/about/Journal_of_Agricultural_Research.html?hl=pt-PT&amp;amp;amp;id=lNNdIV_qpwIC;,citation_issue=7;,citation_volume=20;,citation_journal_title=Correlation and causation;">
 <meta name="citation_reference" content="citation_title=On the interpretation of χ2 from contingency tables, and the calculation of p;,citation_author=R. Fisher;,citation_publication_date=1922;,citation_cover_date=1922;,citation_year=1922;,citation_fulltext_html_url=http://www.jstor.org/stable/2340521;,citation_issue=1;,citation_doi=10.2307/2340521;,citation_volume=85;,citation_journal_title=Journal of the Royal Statistical Society;,citation_publisher=[Wiley, Royal Statistical Society];">
@@ -429,7 +429,7 @@ window.Quarto = {
                 <div>
             <div class="quarto-title-meta-heading">Published</div>
             <div class="quarto-title-meta-contents">
-              <p class="date">November 15, 2024</p>
+              <p class="date">November 16, 2024</p>
             </div>
           </div>
           
@@ -515,7 +515,7 @@ window.Quarto = {
 <section id="sec-theory-issues" class="level1" data-number="2">
 <h1 data-number="2"><span class="header-section-number">2</span> Three critical issues in CJ literature</h1>
 <!-- 1. Thurstone's Theory of CJ: discriminal process -->
-<p>In its most general form, Thurstone’s theory <span class="citation" data-cites="Thurstone_1927b">(<a href="#ref-Thurstone_1927b" role="doc-biblioref">1927a</a>)</span> posits that the dichotomous outcome resulting from comparing two stimuli is determined by two factors: the discriminal process of each stimulus and their discriminal difference. The <em>discriminal process</em> refers to the psychological effect each stimulus has on the judges, or more simply stated, the judges’ perception of the trait level of each stimulus. Thurstone assumes that the discriminal process for each stimulus follows a Normal distribution. In this distribution, the mode (mean), known as the <em>modal discriminal process</em>, represents the position of the stimulus on the trait continuum, while the dispersion, known as the <em>discriminal dispersion</em>, reflects variability in the perceived trait level of the stimulus. <a href="#fig-discriminal_process" class="quarto-xref">Figure&nbsp;1</a> shows example distributions of discriminal process for two stimuli (objects).</p>
+<p>In its most general form, Thurstone’s theory <span class="citation" data-cites="Thurstone_1927b">(<a href="#ref-Thurstone_1927b" role="doc-biblioref">1927a</a>)</span> posits that the dichotomous outcome resulting from comparing two stimuli is determined by two factors: the discriminal process of each stimulus and their discriminal difference. The <em>discriminal process</em> refers to the psychological effect each stimulus has on the judges, or more simply stated, the judges’ perception of the trait level of each stimulus. Thurstone assumes that the discriminal process for each stimulus follows a Normal distribution. In this distribution, the mode (mean), known as the <em>modal discriminal process</em>, represents the position of the stimulus on the trait continuum, while the dispersion, known as the <em>discriminal dispersion</em>, reflects variability in the stimulus’ perceived trait level. <a href="#fig-discriminal_process" class="quarto-xref">Figure&nbsp;1</a> shows example distributions of discriminal process for two stimuli (objects).</p>
 <div id="fig-discriminal_process" class="quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-fig figure">
 <figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-fig" id="fig-discriminal_process-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
@@ -527,7 +527,7 @@ Figure&nbsp;1: Example distributions of discriminal processes for two stimuli (o
 </figure>
 </div>
 <!-- 2. Thurstone's Theory of CJ: discriminal difference -->
-<p>However, since the discriminal mode and dispersion of a single stimulus are not directly observable without comparing it to other stimuli, the <em>law of comparative judgment</em> becomes essential. This law asserts that when assessing a specific trait by comparing two stimuli, the stimulus positioned further along the continuum is perceived as having a higher level of that trait. Thus, the observed dichotomous outcome is determined by the distribution of the difference between the discriminal processes of the two stimuli, called the <em>discriminal difference</em>. <a href="#fig-comparative_judgment" class="quarto-xref">Figure&nbsp;2</a> shows an example distribution of the discriminal difference for two stimuli (objects).</p>
+<p>However, since the discriminal mode and dispersion of a single stimulus are not directly observable except through comparison, the <em>law of comparative judgment</em> becomes essential. This law asserts that when assessing a specific trait by comparing two stimuli, the stimulus positioned further along the continuum is perceived as having a higher level of that trait. Thus, the observed dichotomous outcome is determined by the distribution of the difference between the stimuli’s discriminal processes, called the <em>discriminal difference</em>. <a href="#fig-comparative_judgment" class="quarto-xref">Figure&nbsp;2</a> shows an example distribution of the discriminal difference for two stimuli (objects).</p>
 <div id="fig-comparative_judgment" class="quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-fig figure">
 <figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-fig" id="fig-comparative_judgment-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
@@ -539,14 +539,14 @@ Figure&nbsp;2: Distribution of the discriminal difference between two stimuli (o
 </figure>
 </div>
 <!-- 3. Thurstone's Cases and their simplifying assumptions  -->
-<p>Importantly, the theory’s general form primarily addresses pairwise comparisons of stimuli made by a single judge <span class="citation" data-cites="Thurstone_1927b">(<a href="#ref-Thurstone_1927b" role="doc-biblioref">Thurstone 1927a, 267</a>)</span>. Consequently, to enhance its practical applicability, Thurstone introduced five distinct cases, each defined by progressively simplifying assumptions. <a href="#fig-thurstone_cases" class="quarto-xref">Figure&nbsp;3</a> summarizes these cases, focusing on key assumptions such as the distribution of discriminal processes, the similarity of discriminal dispersion across stimuli, the correlation between stimuli, and which judges perform the comparisons. For a comprehensive discussion of this progression, refer to <span class="citation" data-cites="Thurstone_1927b">Thurstone (<a href="#ref-Thurstone_1927b" role="doc-biblioref">1927a</a>)</span> and <span class="citation" data-cites="Bramley_2008">Bramley (<a href="#ref-Bramley_2008" role="doc-biblioref">2008, 248–53</a>)</span>.</p>
-<div id="fig-thurstone_cases" class="quarto-float quarto-figure quarto-figure-center anchored">
-<figure class="quarto-float quarto-float-fig figure">
-<figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-fig" id="fig-thurstone_cases-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Figure&nbsp;3: Thurstones cases and asumptions
+<p>Importantly, the theory’s general form primarily addresses pairwise comparisons of stimuli made by a single judge <span class="citation" data-cites="Thurstone_1927b">(<a href="#ref-Thurstone_1927b" role="doc-biblioref">Thurstone 1927a, 267</a>)</span>. Consequently, to enhance its practical applicability, Thurstone introduced five distinct cases, each defined by progressively simplifying assumptions. <a href="#tbl-thurstone_cases" class="quarto-xref">Table&nbsp;1</a> summarizes these cases, focusing on key assumptions such as the distribution of discriminal processes, the similarity of discriminal dispersions across stimuli, the correlation between stimuli, and which judges perform the comparisons. For a comprehensive discussion of this progression, refer to <span class="citation" data-cites="Thurstone_1927b">Thurstone (<a href="#ref-Thurstone_1927b" role="doc-biblioref">1927a</a>)</span> and <span class="citation" data-cites="Bramley_2008">Bramley (<a href="#ref-Bramley_2008" role="doc-biblioref">2008, 248–53</a>)</span>.</p>
+<div id="tbl-thurstone_cases" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-tbl figure">
+<figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-thurstone_cases-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Table&nbsp;1: Thurstones cases and asumptions
 </figcaption>
-<div aria-describedby="fig-thurstone_cases-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<a href="./images/tables/thurstone_cases.png" class="lightbox" data-gallery="quarto-lightbox-gallery-3" title="Figure&nbsp;3: Thurstones cases and asumptions"><img src="./images/tables/thurstone_cases.png" class="img-fluid figure-img" style="width:85.0%"></a>
+<div aria-describedby="tbl-thurstone_cases-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<a href="./images/tables/thurstone_cases.png" class="lightbox" data-gallery="quarto-lightbox-gallery-3" title="Table&nbsp;1: Thurstones cases and asumptions"><img src="./images/tables/thurstone_cases.png" class="img-fluid figure-img" style="width:90.0%"></a>
 </div>
 </figure>
 </div>
@@ -555,12 +555,12 @@ Figure&nbsp;3: Thurstones cases and asumptions
 <!-- recording: Sven and Tine 24.10.25; time: 00:31:10 - 00:52:20 -->
 <!-- recording: Sven and Tine 24.11.12; time: 00:00:00 - 00:00:00 -->
 <!-- 1. The Case V and its simpler statistical representation: the BTL model -->
-<p>Surprisingly, despite its reliance on the largest number of simplifying assumptions <span class="citation" data-cites="Bramley_2008">(<a href="#ref-Bramley_2008" role="doc-biblioref">Bramley 2008, 253</a>)</span>, Case V remains the most widely used case in the CJ literature. This popularity is largely due to its simplified statistical representation in the Bradley-Terry-Luce (BTL) model <span class="citation" data-cites="Bradley_et_al_1952 Luce_1959">(<a href="#ref-Bradley_et_al_1952" role="doc-biblioref">Bradley and Terry 1952</a>; <a href="#ref-Luce_1959" role="doc-biblioref">Luce 1959</a>)</span>. The BTL model mirrors Case V’s assumptions, with one key difference: while Case V assumes a Normal distribution for the discriminal processes, the BTL model uses the more mathematically tractable Logistic distribution <span class="citation" data-cites="Bramley_2008">(<a href="#ref-Bramley_2008" role="doc-biblioref">Bramley 2008, 254</a>)</span> (see <a href="#fig-thurstone_cases" class="quarto-xref">Figure&nbsp;3</a>). This substitution has little effect on the model’s estimation or interpretation, as the Normal and Logistic distributions differ by a scaling factor of approximately <span class="math inline">\(1.7\)</span> <span class="citation" data-cites="vanderLinden_et_al_2017_I">(<a href="#ref-vanderLinden_et_al_2017_I" role="doc-biblioref">van der Linden 2017, 1:16</a>)</span> (refer to <a href="#fig-logistic_vs_normal" class="quarto-xref">Figure&nbsp;4</a>).</p>
+<p>Surprisingly, despite its reliance on the largest number of simplifying assumptions <span class="citation" data-cites="Bramley_2008">(<a href="#ref-Bramley_2008" role="doc-biblioref">Bramley 2008, 253</a>)</span>, Case V remains the most widely used case in the CJ literature. This popularity is largely due to its simplified statistical representation in the Bradley-Terry-Luce (BTL) model <span class="citation" data-cites="Bradley_et_al_1952 Luce_1959">(<a href="#ref-Bradley_et_al_1952" role="doc-biblioref">Bradley and Terry 1952</a>; <a href="#ref-Luce_1959" role="doc-biblioref">Luce 1959</a>)</span>. The BTL model mirrors Case V’s assumptions, with one key difference: while Case V assumes a Normal distribution for the stimuli’s discriminal processes, the BTL model uses the more mathematically tractable Logistic distribution <span class="citation" data-cites="Bramley_2008">(<a href="#ref-Bramley_2008" role="doc-biblioref">Bramley 2008, 254</a>)</span> (see <a href="#tbl-thurstone_cases" class="quarto-xref">Table&nbsp;1</a>). This substitution has little effect on the model’s estimation or interpretation, as the Normal and Logistic distributions differ by a scaling factor of approximately <span class="math inline">\(1.7\)</span> <span class="citation" data-cites="vanderLinden_et_al_2017_I">(<a href="#ref-vanderLinden_et_al_2017_I" role="doc-biblioref">van der Linden 2017, 1:16</a>)</span> (refer to <a href="#fig-logistic_vs_normal" class="quarto-xref">Figure&nbsp;3</a>).</p>
 <!-- the mathematical function linking dichotomous outcomes to trait scores -->
 <div id="fig-logistic_vs_normal" class="quarto-layout-panel">
 <figure class="quarto-float quarto-float-fig figure">
 <figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-fig" id="fig-logistic_vs_normal-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Figure&nbsp;4: Probability density and cumulative probability of the logistic and Normal distributions. Extracted from <span class="citation" data-cites="Bramley_2008">Bramley (<a href="#ref-Bramley_2008" role="doc-biblioref">2008, 254–55</a>)</span>.
+Figure&nbsp;3: Probability density and cumulative probability of the logistic and Normal distributions. Extracted from <span class="citation" data-cites="Bramley_2008">Bramley (<a href="#ref-Bramley_2008" role="doc-biblioref">2008, 254–55</a>)</span>.
 </figcaption>
 <div aria-describedby="fig-logistic_vs_normal-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <div class="quarto-layout-row">
@@ -571,7 +571,7 @@ Figure&nbsp;4: Probability density and cumulative probability of the logistic an
 (a) Probability density
 </figcaption>
 <div aria-describedby="fig-density-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<a href="./images/figures/density.png" class="lightbox" data-gallery="fig-logistic_vs_normal" title="Figure&nbsp;4&nbsp;(a): Probability density"><img src="./images/figures/density.png" class="img-fluid figure-img" style="width:95.0%" data-ref-parent="fig-logistic_vs_normal"></a>
+<a href="./images/figures/density.png" class="lightbox" data-gallery="fig-logistic_vs_normal" title="Figure&nbsp;3&nbsp;(a): Probability density"><img src="./images/figures/density.png" class="img-fluid figure-img" style="width:95.0%" data-ref-parent="fig-logistic_vs_normal"></a>
 </div>
 </figure>
 </div>
@@ -583,7 +583,7 @@ Figure&nbsp;4: Probability density and cumulative probability of the logistic an
 (b) Cummulative probability
 </figcaption>
 <div aria-describedby="fig-cumulative-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<a href="./images/figures/cumulative.png" class="lightbox" data-gallery="fig-logistic_vs_normal" title="Figure&nbsp;4&nbsp;(b): Cummulative probability"><img src="./images/figures/cumulative.png" class="img-fluid figure-img" style="width:95.0%" data-ref-parent="fig-logistic_vs_normal"></a>
+<a href="./images/figures/cumulative.png" class="lightbox" data-gallery="fig-logistic_vs_normal" title="Figure&nbsp;3&nbsp;(b): Cummulative probability"><img src="./images/figures/cumulative.png" class="img-fluid figure-img" style="width:95.0%" data-ref-parent="fig-logistic_vs_normal"></a>
 </div>
 </figure>
 </div>
@@ -593,9 +593,9 @@ Figure&nbsp;4: Probability density and cumulative probability of the logistic an
 </figure>
 </div>
 <!-- 2. But what are limitations of Case V (and the BTL model) -->
-<p>However, Case V (and its BTL model counterpart) was originally developed to provide a “rather coarse scaling” of traits <span class="citation" data-cites="Thurstone_1927b">(<a href="#ref-Thurstone_1927b" role="doc-biblioref">Thurstone 1927a, 269</a>)</span>, prioritizing statistical simplicity over precision in trait measurement. As a result, its assumptions may not be suitable for applications beyond the psychophysical contexts, which typically involve simple, homogeneous stimuli. Thurstone himself cautioned that its use “should not be made without (an) experimental test” <span class="citation" data-cites="Thurstone_1927b">(<a href="#ref-Thurstone_1927b" role="doc-biblioref">Thurstone 1927a, 270</a>)</span>, further acknowledging that some assumptions could become problematic with less homogeneous stimuli, such as handwriting or English compositions <span class="citation" data-cites="Thurstone_1927a">(<a href="#ref-Thurstone_1927a" role="doc-biblioref">Thurstone 1927b, 374</a>)</span>. Consequently, given that current CJ applications often involve more complex, less homogeneous stimuli, two assumptions of Case V may not always hold theoretically or in practice: the assumption of zero correlation and equal dispersion between stimuli.</p>
+<p>However, Case V (and its BTL model counterpart) was originally developed to provide a “rather coarse scaling” of traits <span class="citation" data-cites="Thurstone_1927b">(<a href="#ref-Thurstone_1927b" role="doc-biblioref">Thurstone 1927a, 269</a>)</span>, prioritizing statistical simplicity over precision in trait measurement. As a result, its assumptions may not suit applications beyond the psychophysical contexts for which it was created. Thurstone himself cautioned that its use “should not be made without (an) experimental test” <span class="citation" data-cites="Thurstone_1927b">(<a href="#ref-Thurstone_1927b" role="doc-biblioref">Thurstone 1927a, 270</a>)</span>, acknowledging that some assumptions could prove problematic with more complex, less homogeneous stimuli, such as handwriting or English compositions <span class="citation" data-cites="Thurstone_1927a">(<a href="#ref-Thurstone_1927a" role="doc-biblioref">Thurstone 1927b, 374</a>)</span>. Consequently, given that current CJ applications often deal with complex, less homogeneous stimuli, two key assumptions of Case V may not consistently hold in theory or practice: the zero correlation and equal dispersion between stimuli.</p>
 <!-- 3. The problems of assuming zero correlation between stimuli -->
-<p><span style="color:red;">Regarding the assumption of <em>zero correlation between stimuli</em> …</span></p>
+<p><span style="color:red;">The <em>zero correlation between stimuli</em> represents two additional assumtions about the method:</span></p>
 <!-- this translates into the cancellation of judges effects by mean of opposing and equally weighted 'mood' and 'simultaneous contrasts' effects. This is demonstrated using the additive nature of the logit scale, which helps to cancel 'bias' judges effects. -->
 <!--   What we are saying is that the judges' effects depend on the stimuli, by means of an interaction (but present) or because the judges works as a confounder. This, in the best scenario, cause less precise estimates, and in the worst scenario, biased estimates. possibility of bias is hinted in @Bramley_2008, and later mentioned again in @Kelly_et_al_2022, and some evidence is found in @Pollitt_et_al_2003, @vanDaal_et_al_2017 and @Gijsen_et_al_2021 -->
 <!-- @Pollitt_et_al_2003 In Thurstone’s method each judge’s standard cancels out when a comparison is made, and any misfit between data and model must indicate a difference of some other kind. This is studied by analyzing the residuals that remain after the model is fitted to the data. Whenever one script is judged to have a higher value than a competing one it is expected to ‘win’ the comparison: if it does the residual will be small, but if it loses then the residual for that judge’s comparison of those two scripts will be large. Any patterns of large residuals will indicate some sort of bias – in this context bias simply means a source of systematic, rather than random, variability. indicates that one judge – Judge 5 – is significantly biased in some way. (Consider the problem of using adhoc methods) -->
@@ -619,7 +619,7 @@ Figure&nbsp;4: Probability density and cumulative probability of the logistic an
 <!-- recording: Sven and Tine 24.10.18; time: 00:08:30 - 00:14:55 -->
 <!-- recording: Sven and Tine 24.10.25; time: 00:17:00 - 00:31:10 -->
 <!-- 1. The BTL model as a measurement model for estimating latent traits -->
-<p>Building on the previous section, it is evident that the BTL model typically functions as the measurement model for the trait under assessment <span class="citation" data-cites="Andrich_1978 Bramley_2008">(<a href="#ref-Andrich_1978" role="doc-biblioref">Andrich 1978</a>; <a href="#ref-Bramley_2008" role="doc-biblioref">Bramley 2008</a>)</span>. A measurement model specifies how manifest variables contribute to the estimation of latent variables <span class="citation" data-cites="Everitt_et_al_2010">(<a href="#ref-Everitt_et_al_2010" role="doc-biblioref">Everitt and Skrondal 2010</a>)</span>. For example, when evaluating text quality, researchers use the BTL model to process the dichotomous outcomes resulting from the pairwise comparisons (the manifest variables) to estimate scores that reflect the underlying quality level of the texts (the latent variable) <span class="citation" data-cites="Laming_2004 Pollitt_2012b Whitehouse_2012 vanDaal_et_al_2016 Lesterhuis_2018 Coertjens_et_al_2017 Goossens_et_al_2018 Bouwer_et_al_2023">(<a href="#ref-Laming_2004" role="doc-biblioref">Laming 2004</a>; <a href="#ref-Pollitt_2012b" role="doc-biblioref">Pollitt 2012</a>; <a href="#ref-Whitehouse_2012" role="doc-biblioref">Whitehouse 2012</a>; <a href="#ref-vanDaal_et_al_2016" role="doc-biblioref">van Daal et al. 2016</a>; <a href="#ref-Lesterhuis_2018" role="doc-biblioref">Lesterhuis 2018</a>; <a href="#ref-Coertjens_et_al_2017" role="doc-biblioref">Coertjens et al. 2017</a>; <a href="#ref-Goossens_et_al_2018" role="doc-biblioref">Goossens and De Maeyer 2018</a>; <a href="#ref-Bouwer_et_al_2023" role="doc-biblioref">Bouwer et al. 2023</a>)</span>.</p>
+<p>Building on the previous section, it is evident that the BTL model typically functions as the measurement model for the trait of interest <span class="citation" data-cites="Andrich_1978 Bramley_2008">(<a href="#ref-Andrich_1978" role="doc-biblioref">Andrich 1978</a>; <a href="#ref-Bramley_2008" role="doc-biblioref">Bramley 2008</a>)</span>. A measurement model specifies how manifest variables contribute to the estimation of latent variables <span class="citation" data-cites="Everitt_et_al_2010">(<a href="#ref-Everitt_et_al_2010" role="doc-biblioref">Everitt and Skrondal 2010</a>)</span>. For example, when evaluating text quality, researchers use the BTL model to process the dichotomous outcomes resulting from the pairwise comparisons (the manifest variables) to estimate scores that reflect the underlying texts’ quality level (the latent variable) <span class="citation" data-cites="Laming_2004 Pollitt_2012b Whitehouse_2012 vanDaal_et_al_2016 Lesterhuis_2018 Coertjens_et_al_2017 Goossens_et_al_2018 Bouwer_et_al_2023">(<a href="#ref-Laming_2004" role="doc-biblioref">Laming 2004</a>; <a href="#ref-Pollitt_2012b" role="doc-biblioref">Pollitt 2012</a>; <a href="#ref-Whitehouse_2012" role="doc-biblioref">Whitehouse 2012</a>; <a href="#ref-vanDaal_et_al_2016" role="doc-biblioref">van Daal et al. 2016</a>; <a href="#ref-Lesterhuis_2018" role="doc-biblioref">Lesterhuis 2018</a>; <a href="#ref-Coertjens_et_al_2017" role="doc-biblioref">Coertjens et al. 2017</a>; <a href="#ref-Goossens_et_al_2018" role="doc-biblioref">Goossens and De Maeyer 2018</a>; <a href="#ref-Bouwer_et_al_2023" role="doc-biblioref">Bouwer et al. 2023</a>)</span>.</p>
 <!-- 2. Utilizing BTL Scores for further analysis and hypothesis testing -->
 <p>Researchers then typically use the estimated BTL scores, or their transformations, to conduct additional analyses or hypothesis tests. For example, these scores have been used to identify ‘misfit’ judges and stimuli <span class="citation" data-cites="Pollitt_2012b vanDaal_et_al_2017 Goossens_et_al_2018">(<a href="#ref-Pollitt_2012b" role="doc-biblioref">Pollitt 2012</a>; <a href="#ref-vanDaal_et_al_2017" role="doc-biblioref">van Daal et al. 2017</a>; <a href="#ref-Goossens_et_al_2018" role="doc-biblioref">Goossens and De Maeyer 2018</a>)</span>, detect biases in judges’ ratings <span class="citation" data-cites="Pollitt_et_al_2003 Pollitt_2012b">(<a href="#ref-Pollitt_et_al_2003" role="doc-biblioref">Pollitt and Elliott 2003</a>; <a href="#ref-Pollitt_2012b" role="doc-biblioref">Pollitt 2012</a>)</span>, calculate correlations with other assessment methods <span class="citation" data-cites="Goossens_et_al_2018 Bouwer_et_al_2023">(<a href="#ref-Goossens_et_al_2018" role="doc-biblioref">Goossens and De Maeyer 2018</a>; <a href="#ref-Bouwer_et_al_2023" role="doc-biblioref">Bouwer et al. 2023</a>)</span>, or test hypotheses related to the underlying trait of interest <span class="citation" data-cites="Bramley_et_al_2019 Boonen_et_al_2020 Bouwer_et_al_2023 vanDaal_et_al_2017 Jones_et_al_2019 Gijsen_et_al_2021">(<a href="#ref-Bramley_et_al_2019" role="doc-biblioref">Bramley and Vitello 2019</a>; <a href="#ref-Boonen_et_al_2020" role="doc-biblioref">Boonen, Kloots, and Gillis 2020</a>; <a href="#ref-Bouwer_et_al_2023" role="doc-biblioref">Bouwer et al. 2023</a>; <a href="#ref-vanDaal_et_al_2017" role="doc-biblioref">van Daal et al. 2017</a>; <a href="#ref-Jones_et_al_2019" role="doc-biblioref">Jones et al. 2019</a>; <a href="#ref-Gijsen_et_al_2021" role="doc-biblioref">Gijsen et al. 2021</a>)</span>.</p>
 <!-- 3. But what are the challenges in using BTL scores for further analysis? -->
@@ -825,7 +825,7 @@ Whitehouse, C. 2012. <span>“Testing the Validity of Judgements about Geography
   title = {Let’s Talk about {Thurstone} \&amp; {Co.:} {An}
     Information-Theoretical Model for Comparative Judgments, and Its
     Statistical Translation},
-  date = {2024-11-15},
+  date = {2024-11-16},
   langid = {en},
   abstract = {(to do)}
 }
@@ -833,7 +833,7 @@ Whitehouse, C. 2012. <span>“Testing the Validity of Judgements about Geography
 Rivera Espejo, Jose Manuel, Tine van van Daal, Sven De De Maeyer, and
 Steven Gillis. 2024. <span>“Let’s Talk about Thurstone &amp; Co.: An
 Information-Theoretical Model for Comparative Judgments, and Its
-Statistical Translation.”</span> November 15, 2024.
+Statistical Translation.”</span> November 16, 2024.
 </div></div></section></div></main>
 <!-- /main column -->
 <script id="quarto-html-after-body" type="application/javascript">

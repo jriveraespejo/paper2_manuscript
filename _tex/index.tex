@@ -264,9 +264,9 @@ the discriminal process for each stimulus follows a Normal distribution.
 In this distribution, the mode (mean), known as the \emph{modal
 discriminal process}, represents the position of the stimulus on the
 trait continuum, while the dispersion, known as the \emph{discriminal
-dispersion}, reflects variability in the perceived trait level of the
-stimulus. Figure~\ref{fig-discriminal_process} shows example
-distributions of discriminal process for two stimuli (objects).
+dispersion}, reflects variability in the stimulus' perceived trait
+level. Figure~\ref{fig-discriminal_process} shows example distributions
+of discriminal process for two stimuli (objects).
 
 \begin{figure}
 
@@ -283,13 +283,13 @@ discriminal processes for two stimuli (objects). Extracted from
 \end{figure}%
 
 However, since the discriminal mode and dispersion of a single stimulus
-are not directly observable without comparing it to other stimuli, the
-\emph{law of comparative judgment} becomes essential. This law asserts
-that when assessing a specific trait by comparing two stimuli, the
-stimulus positioned further along the continuum is perceived as having a
-higher level of that trait. Thus, the observed dichotomous outcome is
-determined by the distribution of the difference between the discriminal
-processes of the two stimuli, called the \emph{discriminal difference}.
+are not directly observable except through comparison, the \emph{law of
+comparative judgment} becomes essential. This law asserts that when
+assessing a specific trait by comparing two stimuli, the stimulus
+positioned further along the continuum is perceived as having a higher
+level of that trait. Thus, the observed dichotomous outcome is
+determined by the distribution of the difference between the stimuli's
+discriminal processes, called the \emph{discriminal difference}.
 Figure~\ref{fig-comparative_judgment} shows an example distribution of
 the discriminal difference for two stimuli (objects).
 
@@ -311,25 +311,25 @@ Importantly, the theory's general form primarily addresses pairwise
 comparisons of stimuli made by a single judge
 \citep[pp.~267]{Thurstone_1927b}. Consequently, to enhance its practical
 applicability, Thurstone introduced five distinct cases, each defined by
-progressively simplifying assumptions. Figure~\ref{fig-thurstone_cases}
+progressively simplifying assumptions. Table~\ref{tbl-thurstone_cases}
 summarizes these cases, focusing on key assumptions such as the
 distribution of discriminal processes, the similarity of discriminal
-dispersion across stimuli, the correlation between stimuli, and which
+dispersions across stimuli, the correlation between stimuli, and which
 judges perform the comparisons. For a comprehensive discussion of this
 progression, refer to \citet{Thurstone_1927b} and
 \citet[pp.~248-253]{Bramley_2008}.
 
-\begin{figure}
+\begin{table}
+
+\caption{\label{tbl-thurstone_cases}Thurstones cases and asumptions}
 
 \centering{
 
-\includegraphics[width=0.85\linewidth,height=\textheight,keepaspectratio]{./images/tables/thurstone_cases.png}
+\includegraphics[width=0.9\linewidth,height=\textheight,keepaspectratio]{./images/tables/thurstone_cases.png}
 
 }
 
-\caption{\label{fig-thurstone_cases}Thurstones cases and asumptions}
-
-\end{figure}%
+\end{table}%
 
 \subsection{The Case V and the statistical analysis of CJ
 data}\label{the-case-v-and-the-statistical-analysis-of-cj-data}
@@ -340,9 +340,9 @@ widely used case in the CJ literature. This popularity is largely due to
 its simplified statistical representation in the Bradley-Terry-Luce
 (BTL) model \citep{Bradley_et_al_1952, Luce_1959}. The BTL model mirrors
 Case V's assumptions, with one key difference: while Case V assumes a
-Normal distribution for the discriminal processes, the BTL model uses
-the more mathematically tractable Logistic distribution
-\citep[pp.~254]{Bramley_2008} (see Figure~\ref{fig-thurstone_cases}).
+Normal distribution for the stimuli's discriminal processes, the BTL
+model uses the more mathematically tractable Logistic distribution
+\citep[pp.~254]{Bramley_2008} (see Table~\ref{tbl-thurstone_cases}).
 This substitution has little effect on the model's estimation or
 interpretation, as the Normal and Logistic distributions differ by a
 scaling factor of approximately \(1.7\)
@@ -385,32 +385,32 @@ However, Case V (and its BTL model counterpart) was originally developed
 to provide a ``rather coarse scaling'' of traits
 \citep[pp.~269]{Thurstone_1927b}, prioritizing statistical simplicity
 over precision in trait measurement. As a result, its assumptions may
-not be suitable for applications beyond the psychophysical contexts,
-which typically involve simple, homogeneous stimuli. Thurstone himself
-cautioned that its use ``should not be made without (an) experimental
-test'' \citep[pp.~270]{Thurstone_1927b}, further acknowledging that some
-assumptions could become problematic with less homogeneous stimuli, such
-as handwriting or English compositions \citep[pp.~374]{Thurstone_1927a}.
-Consequently, given that current CJ applications often involve more
-complex, less homogeneous stimuli, two assumptions of Case V may not
-always hold theoretically or in practice: the assumption of zero
-correlation and equal dispersion between stimuli.
+not suit applications beyond the psychophysical contexts for which it
+was created. Thurstone himself cautioned that its use ``should not be
+made without (an) experimental test'' \citep[pp.~270]{Thurstone_1927b},
+acknowledging that some assumptions could prove problematic with more
+complex, less homogeneous stimuli, such as handwriting or English
+compositions \citep[pp.~374]{Thurstone_1927a}. Consequently, given that
+current CJ applications often deal with complex, less homogeneous
+stimuli, two key assumptions of Case V may not consistently hold in
+theory or practice: the zero correlation and equal dispersion between
+stimuli.
 
-{Regarding the assumption of \emph{zero correlation between stimuli}
-\ldots{}}
+{The \emph{zero correlation between stimuli} represents two additional
+assumtions about the method:}
 
 \subsection{The disconnect between trait measurement and hypothesis
 testing}\label{the-disconnect-between-trait-measurement-and-hypothesis-testing}
 
 Building on the previous section, it is evident that the BTL model
-typically functions as the measurement model for the trait under
-assessment \citep{Andrich_1978, Bramley_2008}. A measurement model
-specifies how manifest variables contribute to the estimation of latent
-variables \citep{Everitt_et_al_2010}. For example, when evaluating text
-quality, researchers use the BTL model to process the dichotomous
-outcomes resulting from the pairwise comparisons (the manifest
-variables) to estimate scores that reflect the underlying quality level
-of the texts (the latent variable)
+typically functions as the measurement model for the trait of interest
+\citep{Andrich_1978, Bramley_2008}. A measurement model specifies how
+manifest variables contribute to the estimation of latent variables
+\citep{Everitt_et_al_2010}. For example, when evaluating text quality,
+researchers use the BTL model to process the dichotomous outcomes
+resulting from the pairwise comparisons (the manifest variables) to
+estimate scores that reflect the underlying texts' quality level (the
+latent variable)
 \citep{Laming_2004, Pollitt_2012b, Whitehouse_2012, vanDaal_et_al_2016, Lesterhuis_2018, Coertjens_et_al_2017, Goossens_et_al_2018, Bouwer_et_al_2023}.
 
 Researchers then typically use the estimated BTL scores, or their
