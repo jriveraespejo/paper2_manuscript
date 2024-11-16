@@ -129,7 +129,7 @@ Importantly, the theory's general form primarily addresses pairwise comparisons 
 <!-- recording: Sven and Tine 24.11.12; time: 00:00:00 - 00:00:00 -->
 
 <!-- 1. The Case V and its simpler statistical representation: the BTL model -->
-Surprisingly, despite its reliance on the largest number of simplifying assumptions [@Bramley_2008, pp. 253], Case V remains the most widely used case in the CJ literature. This popularity is largely due to its simplified statistical representation in the Bradley-Terry-Luce (BTL) model [@Bradley_et_al_1952; @Luce_1959]. The BTL model mirrors Case V’s assumptions, with one key difference: while Case V assumes a Normal distribution for the stimuli's discriminal processes, the BTL model uses the more mathematically tractable Logistic distribution [@Bramley_2008, pp. 254] (see @tbl-thurstone_cases). This substitution has little effect on the model's estimation or interpretation, as the Normal and Logistic distributions differ by a scaling factor of approximately $1.7$ [@vanderLinden_et_al_2017_I, pp. 16] (refer to @fig-logistic_vs_normal).
+Surprisingly, despite its reliance on the largest number of simplifying assumptions [@Bramley_2008, pp. 253; @Kelly_et_al_2022, pp. 677], Case V remains the most widely used case in the CJ literature. This popularity is largely due to its simplified statistical representation in the Bradley-Terry-Luce (BTL) model [@Bradley_et_al_1952; @Luce_1959]. The BTL model mirrors Case V’s assumptions, with one key difference: while Case V assumes a Normal distribution for the stimuli's discriminal processes, the BTL model uses the more mathematically tractable Logistic distribution [@Andrich_1978; @Bramley_2008, pp. 254] (see @tbl-thurstone_cases). This substitution has little effect on the model's estimation or interpretation, as the Normal and Logistic distributions differ by a scaling factor of approximately $1.7$ [@vanderLinden_et_al_2017_I, pp. 16] (refer to @fig-logistic_vs_normal).
 
 <!-- the mathematical function linking dichotomous outcomes to trait scores -->
 
@@ -143,7 +143,9 @@ Probability density and cumulative probability of the logistic and Normal distri
 :::
 
 <!-- 2. But what are limitations of Case V (and the BTL model) -->
-However, Case V (and its BTL model counterpart) was originally developed to provide a "rather coarse scaling" of traits [@Thurstone_1927b, pp. 269], prioritizing statistical simplicity over precision in trait measurement. As a result, its assumptions may not suit applications beyond the psychophysical contexts for which it was created. Thurstone himself cautioned that its use "should not be made without (an) experimental test" [@Thurstone_1927b, pp. 270], acknowledging that some assumptions could prove problematic with more complex, less homogeneous stimuli, such as handwriting or English compositions [@Thurstone_1927a, pp. 374]. Consequently, given that current CJ applications often deal with complex, less homogeneous stimuli, two key assumptions of Case V may not consistently hold in theory or practice: the zero correlation and equal dispersion between stimuli. 
+However, Case V (and its BTL model counterpart) was originally developed to provide a "rather coarse scaling" of traits [@Thurstone_1927b, pp. 269], prioritizing statistical simplicity over precision in trait measurement [@Kelly_et_al_2022, pp. 677]. As a result, its assumptions may not suit applications beyond the psychophysical contexts for which it was created. Thurstone himself cautioned that its use "should not be made without (an) experimental test" [@Thurstone_1927b, pp. 270], acknowledging that some assumptions could prove problematic with more complex, less homogeneous stimuli, such as handwriting or English compositions [@Thurstone_1927a, pp. 374]. Consequently, given that current CJ applications often deal with complex, less homogeneous stimuli, two key assumptions of Case V may not consistently hold in theory or practice: the zero correlation and equal dispersion between stimuli. 
+
+<!-- Adding assumptions simplifies the formula and improves its tractability, but one cannot place as much confidence in the outputs of the formula if those assumptions are not met [@Kelly_et_al_2022, pp. 677]. -->
 
 <!-- 3. The problems of assuming zero correlation between stimuli -->
 [The *zero correlation between stimuli* represents two additional assumptions about the method:   ]{style="color:red;"}
@@ -156,6 +158,13 @@ However, Case V (and its BTL model counterpart) was originally developed to prov
 <!-- @Pollitt_et_al_2003 In Thurstone’s method each judge’s standard cancels out when a comparison is made, and any misfit between data and model must indicate a difference of some other kind. This is studied by analyzing the residuals that remain after the model is fitted to the data. Whenever one script is judged to have a higher value than a competing one it is expected to ‘win’ the comparison: if it does the residual will be small, but if it loses then the residual for that judge’s comparison of those two scripts will be large. Any patterns of large residuals will indicate some sort of bias – in this context bias simply means a source of systematic, rather than random, variability. indicates that one judge – Judge 5 – is significantly biased in some way. (Consider the problem of using adhoc methods) -->
 
 <!-- The accuracy of judgment may vary by subject and by judge [@Gill_et_al_2013; @vanDaal_2020; @vanDaal_et_al_2017] -->
+
+<!-- If it is acknowledged that judges may differ in what they value, it is not inconceivable that judges may differ as a function of their gender, age, ethnicity, culture, class, income, education and so on. Would the aggregate view of young, British-Asian men always be the same as the aggregate view of older, black women? [@Kelly_et_al_2022, pp. 683] -->
+
+
+<!-- Such differences may not be detected through analyses of bias and misfit. McMahon and Jones (2015) found differences between students and teachers in what was valued in assessments of understanding of a chemistry experiment. Where students prioritised factual recall, teachers prioritised scientific explanation. Both groups produced highly reliable scales (reliability estimates of .893 for students, and .874 for teachers). Although, in this case, a clear argument as to whose consensus should take priority can be made, it demonstrates the existence of different, but equally reliable, sets of consensuses depending on who is asked. [@Kelly_et_al_2022, pp. 683] -->
+
+
 
 
 <!-- this also translates into the idea that stimuli are the main focus of estimation and analysis, but what happens when the focus of analysis is the individuals that generated those stimuli. Meaning there is an amount of correlation that it is not accounted for. example of Boonen -->
@@ -225,7 +234,7 @@ To mitigate these risks, principles from Structural Equation Modeling (SEM) [@Ho
 
 <!-- In this regard, although the literature has tested multiple features of the experimental design of the method, such as the comparison algorithm and the number of comparisons, it is not clear where this procedures fit in the whole process of comparison, and what are their implications for the outcome of the method. -->
 
-<!-- @Bramley_et_al_2019 and @Bramley_2015 says adaptivity inflates reliability. present the evidence of bias effects of adaptive algorithms, the not clear view of how many comparisons per (sub)units are required. Adhoc rules of thumb. -->
+<!-- @Bramley_et_al_2019 and @Bramley_2015 says adaptivity inflates reliability. present the evidence of bias effects of adaptive algorithms, the not clear view of how many comparisons per (sub)units are required or how many judges should be involved [@Kelly_et_al_2022, pp. 682]. Adhoc rules of thumb. -->
 
 <!-- @Bramley_2015 -->
 <!-- The implication is that the SSR statistic is worthless as an indicator of the quality / consistency / reliability of a scale constructed from an ACJ study that has involved a significant number of adaptive rounds. With random or fixed rounds, the SSR values were all below 0.25, which would generally be taken as an indicator of failure to create a meaningful scale. To put it another way, a low value of SSR almost certainly indicates low reliability, but a high value of SSR does not necessarily indicate high reliability.  -->
@@ -308,13 +317,26 @@ To mitigate these risks, principles from Structural Equation Modeling (SEM) [@Ho
 
 ## Findings {#sec-discuss-finding}
 
+<!-- "If Thurstone’s Law is to be used in support of comparative judgment for -->
+<!-- assessment, his theory must be extended to cover the uses and applications that are required for assessment purposes." [@Kelly_et_al_2022, pp. 678] -->
+
+
 <!-- Pollitt (2012a) argues that assessors in pairwise comparisons need less training, given intuitive comparison and decision making. However, there is a distinct lack of research on the role of training.  -->
 
-<!-- Due to efficiency of scoring, most of research only colects only one text. This assumes that there is significant homogeneity between text of the same individual, compared to the between individual variability. However, this cannot be known ad-hoc.  -->
+<!-- Due to efficiency of scoring, most of research only collects only one text. This assumes that there is significant homogeneity between text of the same individual, compared to the between individual variability. However, this cannot be known ad-hoc.  -->
+
+
+
+<!-- "Another challenge to the intrinsic validity argument is that the aggregate approach and valuing of diversity in expert views (Van Daal et al., 2019) is in tension with the idea of removing misfitting judges (Pollitt, 2012a). If someone is considered an expert, and the validity of comparative judgment rests on the collective expertise of a community of practice, the decision to remove them and discard their judgments can only be justifiable on the assumption that those judgments do not reflect their expertise. ... It is thus unclear whether or not this divergence is welcomed." [@Kelly_et_al_2022, pp. 681] -->
+
+<!-- We advocate for the no removal of judges, but rather identify them and treat the data with the appropriate model, so these 'misfits' do not affect the measurement of the trait -->
+
+
 
 ## Limitations and further research {#sec-discuss-limitations}
 
 
+<!-- The field of comparative judgment, while growing, is still relatively small, and at present we do not have compelling answers to fundamental questions such as: how many judges do we need? Who should judge? How many judgments should they make? And crucially, how can we be confident that they are basing their judgments on acceptable criteria? If judges are not using construct-relevant criteria, then the argument that comparative judgments are necessarily valid cannot be upheld. We recognise that there is unlikely to be a single answer to these questions for all the cases in which comparative judgment may be used. However, work to derive some general principles for good practice would be valuable.[@Kelly_et_al_2022, pp. 683] -->
 
 # Conclusion {#sec-conclusion}
 
