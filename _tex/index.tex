@@ -275,12 +275,12 @@ positioned further along the trait continuum is perceived as having a
 higher level of that trait. Thus, the theory assumes the observed
 dichotomous outcome is determined by the distribution of the difference
 between the underlying discriminal processes of the stimuli, referred to
-as the \emph{discriminal difference}. This suggests that the outcome
+as the \emph{discriminal difference}. This indicates that the outcome
 depends on the relative distance between stimuli, rather than their
 absolute positions on the trait continuum.
 
-These concepts can be illustrated through an example. For instance, in
-the context of evaluating text quality,
+These concepts are more easily understood through an example. For
+instance, in the context of evaluating text quality,
 Figure~\ref{fig-discriminal_process} could depict the underlying
 discriminal process distributions for two written texts, highlighting
 differences in their discriminal dispersions and modal discriminal
@@ -418,7 +418,7 @@ practice: the zero correlation and equal dispersion between stimuli.
 
 The assumption of \emph{zero correlation between stimuli} is more easily
 understood through an example. For instance, when using pairwise
-comparisons to evaluate text quality, the assumption suggests that a
+comparisons to evaluate text quality, the assumption suggests that the
 judge's perception of the trait in one text does not influence his
 perception of the same trait on another. Thurstone attributed this
 independence to the cancellation of potential judges' biases, driven by
@@ -436,18 +436,48 @@ with multi-dimensional, complex traits and heterogeneous stimuli, such
 as when evaluating written text quality, their assessments are
 influenced by multiple, intricate aspects of the stimuli
 \citep{vanDaal_et_al_2016, Lesterhuis_2018, Chambers_et_al_2022}. In
-such cases, it is not inconceivable that these various aspects of the
-stimuli unevenly influence the judges' perception of one text over
-another, leading to biases that resist cancellation, as the effects of
-the factors involved in the comparison are neither equally weighted nor
+such cases, it is not inconceivable that various aspects of the stimuli
+unevenly influence the judges' perception of one text over another,
+leading to biases that resist cancellation, as the effects of the
+factors involved in the comparison are neither equally weighted nor
 opposing. For example, this may occur when a judge, while assessing the
 argumentative quality of a text, places disproportionate emphasis on
 grammatical errors, ultimately favoring texts with fewer errors but
 weaker arguments. Although the literature does not provide direct
 evidence for this specific argument, studies such as
 \citet{Pollitt_et_al_2003} do offer evidence of judges' biases,
-supporting the idea that the factors involved in pairwise comparisons
-may not always cancel out.
+supporting the idea that the factors involved in the pairwise
+comparisons may not always cancel out.
+
+In the second scenario, although the CJ literature has acknowledged the
+existence of additional hierarchical structures relevant to the stimuli,
+the statistical handling of this extra source of correlation has been
+inadequate. For example, in cases where data included multiple samples
+of stimuli within different individuals, researchers have often relied
+on using (averaged) estimated BTL scores to conduct further analyses and
+tests at the hierarchical level of the individuals
+\citep{Bramley_et_al_2019, Boonen_et_al_2020, Bouwer_et_al_2023, vanDaal_et_al_2017, Jones_et_al_2019, Gijsen_et_al_2021}.
+However, this approach has the notable limitation of ignoring the
+uncertainty associated with the scores (refer to section
+Section~\ref{sec-theory-issue2} for a detailed discussion of this
+issue).
+
+In contrast, the assumption of \emph{equal dispersion between stimuli}
+suggests that the perceived trait of all texts varies around their modal
+discriminal process in the same way across comparisons. While Thurstone
+noted that the assumption of equal dispersion may be violated when
+``dealing with less conspicuous attributes or with less homogeneous
+stimuli'' \citep[pp.~374]{Thurstone_1927a}, no study explicitly proposes
+that this assumption may also be violated due to the presence of an
+additional hierarchical structure relevant to the texts. One such
+scenario could occur when comparing university and secondary school
+students. In this case, university students may consistently (or more
+precisely) produce higher-quality texts, while secondary school students
+might exhibit a broader range of writing abilities, leading to greater
+variability in their text quality. Despite the contrived nature of the
+example, it helps to effectively illustrate how assuming equal
+dispersions in the texts can overlook meaningful differences in the
+reliability of text quality across groups or individuals.
 
 \subsection{The disconnect between trait measurement and hypothesis
 testing}\label{sec-theory-issue2}
@@ -478,21 +508,21 @@ identify ``misfit'' judges and stimuli
 considerations for their possible exclusion.
 
 However, the statistical literature advises caution when using estimated
-scores to conduct additional analyses and tests while warning against
-eliminating data through ad-hoc univariate procedures. A key
-consideration is that BTL scores are parameter estimates that inherently
-carry uncertainty. Ignoring this uncertainty can bias the analysis and
-reduce the precision of hypothesis tests. Notably, the direction and
-magnitude of such biases are often unpredictable. Results may be
-attenuated, exaggerated, or remain unaffected depending on the degree of
-uncertainty in the scores and the actual effects being tested
+scores for additional analyses and tests, as well as when eliminating
+data through ad hoc univariate procedures. A key consideration is that
+BTL scores are parameter estimates that inherently carry uncertainty.
+Ignoring this uncertainty can bias the analysis and reduce the precision
+of hypothesis tests. Notably, the direction and magnitude of such biases
+are often unpredictable. Results may be attenuated, exaggerated, or
+remain unaffected depending on the degree of uncertainty in the scores
+and the actual effects being tested
 \citetext{\citealp[pp.~25]{Kline_et_al_2023}; \citealp[pp.~137]{Hoyle_et_al_2023}}.
-Moreover, eliminating data using ad-hoc univariate procedures using
-these scores compounds this issue by excluding possible valuable
-information from the analyses \citep{McElreath_2020}, further
-introducing bias. Finally, the reduced precision in hypothesis tests
-weakens their statistical power, increasing the likelihood of type-I or
-type-II errors \citep{McElreath_2020}.
+Moreover, excluding data using ad hoc univariate procedures can compound
+these issues by discarding potentially valuable information, further
+exacerbating the bias \citep{Zimmerman_1994, McElreath_2020}. Finally,
+the reduced precision in hypothesis tests diminishes their statistical
+power, increasing the likelihood of type-I or type-II errors
+\citep{McElreath_2020}.
 
 To mitigate these risks, principles from Structural Equation Modeling
 (SEM) \citep[pp.~138]{Hoyle_et_al_2023} and Item Response Theory (IRT)
@@ -505,8 +535,8 @@ and their uncertainties simultaneously, rather than treating them as
 separate elements. Therefore, an integrated approach that combines CJ's
 measurement and structural models can offer significant advantages.
 
-\subsection{Assessment design features and their role on reliability and
-validity}\label{sec-theory-issue3}
+\subsection{The assessment design features and their role on reliability
+and validity}\label{sec-theory-issue3}
 
 \section{An updated theoretical and statistical model for
 CJ}\label{sec-theory}

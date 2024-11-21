@@ -264,11 +264,11 @@ the University of Antwerp (BOF).</funding-statement>
   observed dichotomous outcome is determined by the distribution of the
   difference between the underlying discriminal processes of the
   stimuli, referred to as the <italic>discriminal difference</italic>.
-  This suggests that the outcome depends on the relative distance
+  This indicates that the outcome depends on the relative distance
   between stimuli, rather than their absolute positions on the trait
   continuum.</p>
-  <p>These concepts can be illustrated through an example. For instance,
-  in the context of evaluating text quality,
+  <p>These concepts are more easily understood through an example. For
+  instance, in the context of evaluating text quality,
   <xref alt="Figure 1 (a)" rid="fig-discriminal_process">Figure 1
   (a)</xref> could depict the underlying discriminal process
   distributions for two written texts, highlighting differences in their
@@ -429,7 +429,7 @@ the University of Antwerp (BOF).</funding-statement>
     <p>The assumption of <italic>zero correlation between
     stimuli</italic> is more easily understood through an example. For
     instance, when using pairwise comparisons to evaluate text quality,
-    the assumption suggests that a judge’s perception of the trait in
+    the assumption suggests that the judge’s perception of the trait in
     one text does not influence his perception of the same trait on
     another. Thurstone attributed this independence to the cancellation
     of potential judges’ biases, driven by two opposing and equally
@@ -455,9 +455,9 @@ the University of Antwerp (BOF).</funding-statement>
     2018b</xref>;
     <xref alt="Chambers and Cunningham 2022" rid="ref-Chambers_et_al_2022" ref-type="bibr">Chambers
     and Cunningham 2022</xref>). In such cases, it is not inconceivable
-    that these various aspects of the stimuli unevenly influence the
-    judges’ perception of one text over another, leading to biases that
-    resist cancellation, as the effects of the factors involved in the
+    that various aspects of the stimuli unevenly influence the judges’
+    perception of one text over another, leading to biases that resist
+    cancellation, as the effects of the factors involved in the
     comparison are neither equally weighted nor opposing. For example,
     this may occur when a judge, while assessing the argumentative
     quality of a text, places disproportionate emphasis on grammatical
@@ -466,8 +466,51 @@ the University of Antwerp (BOF).</funding-statement>
     for this specific argument, studies such as Pollitt and Elliott
     (<xref alt="2003" rid="ref-Pollitt_et_al_2003" ref-type="bibr">2003</xref>)
     do offer evidence of judges’ biases, supporting the idea that the
-    factors involved in pairwise comparisons may not always cancel
+    factors involved in the pairwise comparisons may not always cancel
     out.</p>
+    <p>In the second scenario, although the CJ literature has
+    acknowledged the existence of additional hierarchical structures
+    relevant to the stimuli, the statistical handling of this extra
+    source of correlation has been inadequate. For example, in cases
+    where data included multiple samples of stimuli within different
+    individuals, researchers have often relied on using (averaged)
+    estimated BTL scores to conduct further analyses and tests at the
+    hierarchical level of the individuals
+    (<xref alt="Bramley and Vitello 2019" rid="ref-Bramley_et_al_2019" ref-type="bibr">Bramley
+    and Vitello 2019</xref>;
+    <xref alt="Boonen, Kloots, and Gillis 2020" rid="ref-Boonen_et_al_2020" ref-type="bibr">Boonen,
+    Kloots, and Gillis 2020</xref>;
+    <xref alt="Bouwer et al. 2023" rid="ref-Bouwer_et_al_2023" ref-type="bibr">Bouwer
+    et al. 2023</xref>;
+    <xref alt="van Daal et al. 2017" rid="ref-vanDaal_et_al_2017" ref-type="bibr">van
+    Daal et al. 2017</xref>;
+    <xref alt="Jones et al. 2019" rid="ref-Jones_et_al_2019" ref-type="bibr">Jones
+    et al. 2019</xref>;
+    <xref alt="Gijsen et al. 2021" rid="ref-Gijsen_et_al_2021" ref-type="bibr">Gijsen
+    et al. 2021</xref>). However, this approach has the notable
+    limitation of ignoring the uncertainty associated with the scores
+    (refer to section
+    <xref alt="Section 3.2" rid="sec-theory-issue2">Section 3.2</xref>
+    for a detailed discussion of this issue).</p>
+    <p>In contrast, the assumption of <italic>equal dispersion between
+    stimuli</italic> suggests that the perceived trait of all texts
+    varies around their modal discriminal process in the same way across
+    comparisons. While Thurstone noted that the assumption of equal
+    dispersion may be violated when “dealing with less conspicuous
+    attributes or with less homogeneous stimuli”
+    (<xref alt="Thurstone 1927b, 374" rid="ref-Thurstone_1927a" ref-type="bibr">Thurstone
+    1927b, 374</xref>), no study explicitly proposes that this
+    assumption may also be violated due to the presence of an additional
+    hierarchical structure relevant to the texts. One such scenario
+    could occur when comparing university and secondary school students.
+    In this case, university students may consistently (or more
+    precisely) produce higher-quality texts, while secondary school
+    students might exhibit a broader range of writing abilities, leading
+    to greater variability in their text quality. Despite the contrived
+    nature of the example, it helps to effectively illustrate how
+    assuming equal dispersions in the texts can overlook meaningful
+    differences in the reliability of text quality across groups or
+    individuals.</p>
   </sec>
   <sec id="sec-theory-issue2">
     <title>The disconnect between trait measurement and hypothesis
@@ -537,25 +580,27 @@ the University of Antwerp (BOF).</funding-statement>
     and De Maeyer 2018</xref>), with considerations for their possible
     exclusion.</p>
     <p>However, the statistical literature advises caution when using
-    estimated scores to conduct additional analyses and tests while
-    warning against eliminating data through ad-hoc univariate
-    procedures. A key consideration is that BTL scores are parameter
-    estimates that inherently carry uncertainty. Ignoring this
-    uncertainty can bias the analysis and reduce the precision of
-    hypothesis tests. Notably, the direction and magnitude of such
-    biases are often unpredictable. Results may be attenuated,
-    exaggerated, or remain unaffected depending on the degree of
-    uncertainty in the scores and the actual effects being tested
+    estimated scores for additional analyses and tests, as well as when
+    eliminating data through ad hoc univariate procedures. A key
+    consideration is that BTL scores are parameter estimates that
+    inherently carry uncertainty. Ignoring this uncertainty can bias the
+    analysis and reduce the precision of hypothesis tests. Notably, the
+    direction and magnitude of such biases are often unpredictable.
+    Results may be attenuated, exaggerated, or remain unaffected
+    depending on the degree of uncertainty in the scores and the actual
+    effects being tested
     (<xref alt="Kline 2023, 25" rid="ref-Kline_et_al_2023" ref-type="bibr">Kline
     2023, 25</xref>;
     <xref alt="Hoyle 2023, 137" rid="ref-Hoyle_et_al_2023" ref-type="bibr">Hoyle
-    2023, 137</xref>). Moreover, eliminating data using ad-hoc
-    univariate procedures using these scores compounds this issue by
-    excluding possible valuable information from the analyses
-    (<xref alt="McElreath 2020" rid="ref-McElreath_2020" ref-type="bibr">McElreath
-    2020</xref>), further introducing bias. Finally, the reduced
-    precision in hypothesis tests weakens their statistical power,
-    increasing the likelihood of type-I or type-II errors
+    2023, 137</xref>). Moreover, excluding data using ad hoc univariate
+    procedures can compound these issues by discarding potentially
+    valuable information, further exacerbating the bias
+    (<xref alt="Zimmerman 1994" rid="ref-Zimmerman_1994" ref-type="bibr">Zimmerman
+    1994</xref>;
+    <xref alt="McElreath 2020" rid="ref-McElreath_2020" ref-type="bibr">McElreath
+    2020</xref>). Finally, the reduced precision in hypothesis tests
+    diminishes their statistical power, increasing the likelihood of
+    type-I or type-II errors
     (<xref alt="McElreath 2020" rid="ref-McElreath_2020" ref-type="bibr">McElreath
     2020</xref>).</p>
     <p>To mitigate these risks, principles from Structural Equation
@@ -577,8 +622,8 @@ the University of Antwerp (BOF).</funding-statement>
     structural models can offer significant advantages.</p>
   </sec>
   <sec id="sec-theory-issue3">
-    <title>Assessment design features and their role on reliability and
-    validity</title>
+    <title>The assessment design features and their role on reliability
+    and validity</title>
   </sec>
 </sec>
 <sec id="sec-theory">
@@ -731,6 +776,23 @@ the University of Antwerp (BOF).</funding-statement>
       <pub-id pub-id-type="doi">10.1177/014662167800200319</pub-id>
       <fpage>451</fpage>
       <lpage>462</lpage>
+    </element-citation>
+  </ref>
+  <ref id="ref-Zimmerman_1994">
+    <element-citation publication-type="article-journal">
+      <person-group person-group-type="author">
+        <name><surname>Zimmerman</surname><given-names>D.</given-names></name>
+      </person-group>
+      <article-title>A note on the influence of outliers on parametric and nonparametric tests</article-title>
+      <source>The Journal of General Psychology</source>
+      <publisher-name>Routledge</publisher-name>
+      <year iso-8601-date="1994">1994</year>
+      <volume>121</volume>
+      <issue>4</issue>
+      <uri></uri>
+      <pub-id pub-id-type="doi">10.1080/00221309.1994.9921213</pub-id>
+      <fpage>391</fpage>
+      <lpage>401</lpage>
     </element-citation>
   </ref>
   <ref id="ref-Laming_2004">
