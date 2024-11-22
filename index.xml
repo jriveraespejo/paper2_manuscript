@@ -104,10 +104,10 @@ sciences</institution>
 <corresp id="cor-1">JoseManuel.RiveraEspejo@uantwerpen.be</corresp>
 </author-notes>
 
-<pub-date date-type="pub" publication-format="electronic" iso-8601-date="2024-11-21">
+<pub-date date-type="pub" publication-format="electronic" iso-8601-date="2024-11-22">
 <year>2024</year>
 <month>11</month>
-<day>21</day>
+<day>22</day>
 </pub-date>
 
 
@@ -278,8 +278,8 @@ the University of Antwerp (BOF).</funding-statement>
   (b)</xref> could display the discriminal difference distribution for
   these texts, showing that text A is perceived to exhibit significantly
   higher quality than text B, as indicated by the shaded gray area.
-  Consequently, the dichotomous outcome of this comparison would favor
-  text A.</p>
+  Consequently, the dichotomous outcome of this comparison would
+  probably favor text A.</p>
   <fig id="fig-thurstone_theory">
     <caption><p>Figure 1: Example distribution of discriminal processes
     and their discriminal difference for two written texts (stimuli or
@@ -362,8 +362,9 @@ the University of Antwerp (BOF).</funding-statement>
     2008, 254</xref>) (see
     <xref alt="Table 1" rid="tbl-thurstone_cases">Table 1</xref>). This
     substitution has little impact on the model’s estimation or
-    interpretation, as the Normal and Logistic distributions differ by a
-    scaling factor of approximately <inline-formula><alternatives>
+    interpretation, as the Normal and Logistic distributions share
+    similar statistical properties, differing only by a scaling factor
+    of approximately <inline-formula><alternatives>
     <tex-math><![CDATA[1.7]]></tex-math>
     <mml:math display="inline" xmlns:mml="http://www.w3.org/1998/Math/MathML"><mml:mn>1.7</mml:mn></mml:math></alternatives></inline-formula>
     (<xref alt="van der Linden 2017, 1:16" rid="ref-vanderLinden_et_al_2017_I" ref-type="bibr">van
@@ -427,55 +428,59 @@ the University of Antwerp (BOF).</funding-statement>
     practice: the zero correlation and equal dispersion between
     stimuli.</p>
     <p>The assumption of <italic>zero correlation between
-    stimuli</italic> is more easily understood through an example. For
+    stimuli</italic> can be better understood through an example. For
     instance, when using pairwise comparisons to evaluate text quality,
-    the assumption suggests that the judge’s perception of the trait in
-    one text does not influence his perception of the same trait on
-    another. Thurstone attributed this independence to the cancellation
-    of potential judges’ biases, driven by two opposing and equally
+    the assumption implies that a judge’s perception of a trait in one
+    text does not influence his perception of the same trait in another
+    text. Thurstone attributed this independence to the cancellation of
+    potential judges’ biases, driven by two opposing and equally
     weighted effects occurring during the pairwise comparisons
     (<xref alt="Thurstone 1927a, 268" rid="ref-Thurstone_1927b" ref-type="bibr">Thurstone
     1927a, 268</xref>). This cancellation was mathematically
     demonstrated by Andrich
     (<xref alt="1978" rid="ref-Andrich_1978" ref-type="bibr">1978</xref>),
-    assuming discriminal processes with additive biases. However, it is
-    easy to imagine two scenarios where the zero correlation assumption
-    almost certainly does not hold: when the pairwise comparison
-    involves multidimensional, complex traits with heterogeneous
-    stimuli, and when an additional hierarchical structure is relevant
-    to the stimuli.</p>
-    <p>In the first scenario, evidence suggests that when judges are
-    confronted with multi-dimensional, complex traits and heterogeneous
-    stimuli, such as when evaluating written text quality, their
-    assessments are influenced by multiple, intricate aspects of the
-    stimuli
+    using the BTL model under the assumption of additive biases in the
+    discriminal processes. However, it is easy to imagine at least two
+    scenarios where the zero correlation assumption almost certainly
+    does not hold: when the pairwise comparison involves
+    multidimensional, complex traits with heterogeneous stimuli, and
+    when an additional hierarchical structure is relevant to the
+    stimuli.</p>
+    <p>In the first scenario, the intricate aspects of multidimensional,
+    complex traits and heterogeneous stimuli may introduce dependencies
+    between stimuli. Research on text quality suggests that when judges
+    evaluate these traits, they often rely on various intricate aspects
+    of the stimuli to form their judgments
     (<xref alt="van Daal et al. 2016" rid="ref-vanDaal_et_al_2016" ref-type="bibr">van
     Daal et al. 2016</xref>;
     <xref alt="Lesterhuis 2018b" rid="ref-Lesterhuis_2018" ref-type="bibr">Lesterhuis
     2018b</xref>;
     <xref alt="Chambers and Cunningham 2022" rid="ref-Chambers_et_al_2022" ref-type="bibr">Chambers
-    and Cunningham 2022</xref>). In such cases, it is not inconceivable
-    that various aspects of the stimuli unevenly influence the judges’
-    perception of one text over another, leading to biases that resist
-    cancellation, as the effects of the factors involved in the
-    comparison are neither equally weighted nor opposing. For example,
-    this may occur when a judge, while assessing the argumentative
-    quality of a text, places disproportionate emphasis on grammatical
-    errors, ultimately favoring texts with fewer errors but weaker
-    arguments. Although the literature does not provide direct evidence
-    for this specific argument, studies such as Pollitt and Elliott
+    and Cunningham 2022</xref>). In this context, it is not
+    inconceivable that these aspects, being neither equally weighted nor
+    opposing, may unevenly influence judges’ perceptions, resulting in
+    biases that resist cancellation. For example, this might occur when
+    a judge assessing the argumentative quality of a text places
+    disproportionate emphasis on grammatical accuracy, ultimately
+    favoring texts with fewer errors but weaker arguments. While direct
+    evidence for this specific scenario is lacking, studies such as
+    Pollitt and Elliott
     (<xref alt="2003" rid="ref-Pollitt_et_al_2003" ref-type="bibr">2003</xref>)
-    do offer evidence of judges’ biases, supporting the idea that the
-    factors involved in the pairwise comparisons may not always cancel
-    out.</p>
-    <p>In the second scenario, although the CJ literature has
-    acknowledged the existence of additional hierarchical structures
-    relevant to the stimuli, the statistical handling of this extra
-    source of correlation has been inadequate. For example, in cases
-    where data included multiple samples of stimuli within different
-    individuals, researchers have often relied on using (averaged)
-    estimated BTL scores to conduct further analyses and tests at the
-    hierarchical level of the individuals
+    demonstrate the presence of judges’ biases, supporting the idea that
+    the different factors influencing pairwise comparisons may not
+    always cancel out.</p>
+    <p>In the second scenario, the shared context or inherent
+    connections created by the additional hierarchical structure may
+    introduce dependencies between stimuli, a statistical phenomenon
+    commonly known as clustering
+    (<xref alt="Everitt and Skrondal 2010" rid="ref-Everitt_et_al_2010" ref-type="bibr">Everitt
+    and Skrondal 2010</xref>). Nevertheless, despite recognizing such
+    hierarchical structures in CJ data, the statistical handling of this
+    extra source of dependency in the CJ literature has been inadequate.
+    For instance, in cases where the CJ data included multiple samples
+    of stimuli from the same individuals, researchers have often relied
+    on (averaged) estimated BTL scores to conduct subsequent analyses
+    and tests at the individual hierarchical level
     (<xref alt="Bramley and Vitello 2019" rid="ref-Bramley_et_al_2019" ref-type="bibr">Bramley
     and Vitello 2019</xref>;
     <xref alt="Boonen, Kloots, and Gillis 2020" rid="ref-Boonen_et_al_2020" ref-type="bibr">Boonen,
@@ -487,37 +492,41 @@ the University of Antwerp (BOF).</funding-statement>
     <xref alt="Jones et al. 2019" rid="ref-Jones_et_al_2019" ref-type="bibr">Jones
     et al. 2019</xref>;
     <xref alt="Gijsen et al. 2021" rid="ref-Gijsen_et_al_2021" ref-type="bibr">Gijsen
-    et al. 2021</xref>). However, this approach has the notable
+    et al. 2021</xref>). This approach, however, has the significant
     limitation of ignoring the uncertainty associated with the scores
     (refer to section
     <xref alt="Section 3.2" rid="sec-theory-issue2">Section 3.2</xref>
     for a detailed discussion of this issue).</p>
     <p>In contrast, the assumption of <italic>equal dispersion between
-    stimuli</italic> suggests that the perceived trait of all texts
-    varies around their modal discriminal process in the same way across
-    comparisons. While Thurstone noted that the assumption of equal
-    dispersion may be violated when “dealing with less conspicuous
-    attributes or with less homogeneous stimuli”
+    stimuli</italic> suggests that the variability in the perceived
+    trait level of the stimuli is the same across stimuli. While
+    Thurstone acknowledged that this assumption may be violated when
+    “dealing with less conspicuous attributes or with less homogeneous
+    stimuli”
     (<xref alt="Thurstone 1927b, 374" rid="ref-Thurstone_1927a" ref-type="bibr">Thurstone
     1927b, 374</xref>), no study explicitly proposes that this
-    assumption may also be violated due to the presence of an additional
-    hierarchical structure relevant to the texts. One such scenario
-    could occur when comparing university and secondary school students.
-    In this case, university students may consistently (or more
-    precisely) produce higher-quality texts, while secondary school
-    students might exhibit a broader range of writing abilities, leading
-    to greater variability in their text quality. Despite the contrived
-    nature of the example, it helps to effectively illustrate how
-    assuming equal dispersions in the texts can overlook meaningful
-    differences in the reliability of text quality across groups or
-    individuals.</p>
+    assumption could also be violated due to the presence of an
+    additional hierarchical (grouping) structure relevant to the texts.
+    One such scenario might arise, for example, when comparing texts
+    produced by university and secondary school students. In this case,
+    university students may consistently (or more precisely) produce
+    higher-quality texts, while secondary school students, who exhibit a
+    broader range of writing abilities, would show greater variability
+    in the quality of their texts. Although this example is somewhat
+    contrived, it effectively illustrates how assuming equal dispersions
+    across texts can overlook meaningful differences in the reliability
+    of text quality across groups or individuals.</p>
+    <p><styled-content style="color:red;">“however”
+    paragraph</styled-content></p>
+    <p><styled-content style="color:red;">“to mitigate”
+    paragraph</styled-content></p>
   </sec>
   <sec id="sec-theory-issue2">
     <title>The disconnect between trait measurement and hypothesis
     testing</title>
     <p>Building on the previous section, it is evident that the BTL
-    model commonly functions as the measurement model for the trait of
-    interest in CJ experiments
+    model commonly functions as the trait’s measurement model in CJ
+    experiments
     (<xref alt="Andrich 1978" rid="ref-Andrich_1978" ref-type="bibr">Andrich
     1978</xref>;
     <xref alt="Bramley 2008" rid="ref-Bramley_2008" ref-type="bibr">Bramley
@@ -600,7 +609,7 @@ the University of Antwerp (BOF).</funding-statement>
     <xref alt="McElreath 2020" rid="ref-McElreath_2020" ref-type="bibr">McElreath
     2020</xref>). Finally, the reduced precision in hypothesis tests
     diminishes their statistical power, increasing the likelihood of
-    type-I or type-II errors
+    committing type-I or type-II errors
     (<xref alt="McElreath 2020" rid="ref-McElreath_2020" ref-type="bibr">McElreath
     2020</xref>).</p>
     <p>To mitigate these risks, principles from Structural Equation
@@ -622,8 +631,8 @@ the University of Antwerp (BOF).</funding-statement>
     structural models can offer significant advantages.</p>
   </sec>
   <sec id="sec-theory-issue3">
-    <title>The assessment design features and their role on reliability
-    and validity</title>
+    <title>The diverse assessment design features and their role on
+    reliability and validity</title>
   </sec>
 </sec>
 <sec id="sec-theory">
