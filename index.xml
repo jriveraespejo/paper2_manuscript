@@ -104,10 +104,10 @@ sciences</institution>
 <corresp id="cor-1">JoseManuel.RiveraEspejo@uantwerpen.be</corresp>
 </author-notes>
 
-<pub-date date-type="pub" publication-format="electronic" iso-8601-date="2024-11-22">
+<pub-date date-type="pub" publication-format="electronic" iso-8601-date="2024-11-25">
 <year>2024</year>
 <month>11</month>
-<day>22</day>
+<day>25</day>
 </pub-date>
 
 
@@ -256,30 +256,33 @@ the University of Antwerp (BOF).</funding-statement>
   continuum. Meanwhile, the dispersion of the distribution, referred to
   as the <italic>discriminal dispersion</italic>, reflects the
   variability in the perceived trait level of the stimulus.</p>
-  <p>However, since the discriminal process of a single stimulus is not
-  directly observable, the <italic>law of comparative judgment</italic>
-  becomes essential. This law states that in pairwise comparisons, the
-  stimulus positioned further along the trait continuum is perceived as
-  having a higher level of that trait. Thus, the theory assumes the
+  <p>Nevertheless, the theory posits that because the discriminal
+  process of a single stimulus is not directly observable, the
+  <italic>law of comparative judgment</italic> becomes essential. This
+  law states that in pairwise comparisons, the stimulus positioned
+  further along the trait continuum is perceived as having a higher
+  level of that trait. This emphasize that the outcome depends on the
+  relative distance between stimuli, rather than their absolute
+  positions on the trait continuum. Thus, the theory assumes the
   observed dichotomous outcome is determined by the distribution of the
   difference between the underlying discriminal processes of the
-  stimuli, referred to as the <italic>discriminal difference</italic>.
-  This indicates that the outcome depends on the relative distance
-  between stimuli, rather than their absolute positions on the trait
-  continuum.</p>
+  stimuli, referred to as the <italic>discriminal
+  difference</italic>.</p>
   <p>These concepts are more easily understood through an example. For
   instance, in the context of evaluating text quality,
   <xref alt="Figure 1 (a)" rid="fig-discriminal_process">Figure 1
-  (a)</xref> could depict the underlying discriminal process
-  distributions for two written texts, highlighting differences in their
-  discriminal dispersions and modal discriminal processes along the
-  quality trait continuum. Furthermore,
+  (a)</xref> depicts the underlying discriminal process distributions
+  for two written texts. The figure highlights differences in the texts’
+  positions along the quality trait continuum, represented by their
+  modal discriminal processes, as well as differences in the variability
+  of their perceived trait levels, represented by their discriminal
+  dispersions. Furthermore,
   <xref alt="Figure 1 (b)" rid="fig-discriminal_difference">Figure 1
-  (b)</xref> could display the discriminal difference distribution for
-  these texts, showing that text A is perceived to exhibit significantly
-  higher quality than text B, as indicated by the shaded gray area.
-  Consequently, the dichotomous outcome of this comparison would
-  probably favor text A.</p>
+  (b)</xref> displays the discriminal difference distribution for these
+  texts. This figure shows that text A is perceived to exhibit
+  significantly higher quality than text B, as indicated by the shaded
+  gray area. Consequently, the dichotomous outcome of this comparison
+  would likely favor text A.</p>
   <fig id="fig-thurstone_theory">
     <caption><p>Figure 1: Example distribution of discriminal processes
     and their discriminal difference for two written texts (stimuli or
@@ -318,15 +321,16 @@ the University of Antwerp (BOF).</funding-statement>
   <p>Importantly, the general form of Thurstone’s theory primarily
   addressed pairwise comparisons of stimuli made by a single judge
   (<xref alt="Thurstone 1927a, 267" rid="ref-Thurstone_1927b" ref-type="bibr">Thurstone
-  1927a, 267</xref>). Thus, for practical application, Thurstone
-  introduced five distinct cases derived from this general form, each
-  defined by progressively simplifying assumptions.
-  <xref alt="Table 1" rid="tbl-thurstone_cases">Table 1</xref>
-  summarizes these cases, highlighting key assumptions such as the
-  distribution of discriminal processes, the similarity of discriminal
+  1927a, 267</xref>). Thus, to facilitate its practical application,
+  Thurstone developed five distinct cases derived from this general
+  form. Each case progressively introduces additional simplifying
+  assumptions related to different features of the theory, such as the
+  distribution of discriminal processes, the uniformity of discriminal
   dispersions across stimuli, the correlation between stimuli, and the
-  number of judges performing the comparisons. For a comprehensive
-  discussion of this progression, refer to Thurstone
+  number of judges performing the comparisons. A summary of these cases
+  is provided in
+  <xref alt="Table 1" rid="tbl-thurstone_cases">Table 1</xref>. For a
+  detailed examination of this progression, refer to Thurstone
   (<xref alt="1927a" rid="ref-Thurstone_1927b" ref-type="bibr">1927a</xref>)
   and Bramley
   (<xref alt="2008, 248–53" rid="ref-Bramley_2008" ref-type="bibr">2008,
@@ -354,8 +358,8 @@ the University of Antwerp (BOF).</funding-statement>
     <xref alt="Luce 1959" rid="ref-Luce_1959" ref-type="bibr">Luce
     1959</xref>). The BTL model mirrors the assumptions of Case V, with
     one key difference: while Case V assumes a Normal distribution for
-    the discriminal processes of stimuli, the BTL model uses the more
-    mathematically tractable Logistic distribution
+    the discriminal processes of the stimuli, the BTL model uses the
+    more mathematically tractable Logistic distribution
     (<xref alt="Andrich 1978" rid="ref-Andrich_1978" ref-type="bibr">Andrich
     1978</xref>;
     <xref alt="Bramley 2008, 254" rid="ref-Bramley_2008" ref-type="bibr">Bramley
@@ -439,18 +443,19 @@ the University of Antwerp (BOF).</funding-statement>
     1927a, 268</xref>). This cancellation was mathematically
     demonstrated by Andrich
     (<xref alt="1978" rid="ref-Andrich_1978" ref-type="bibr">1978</xref>),
-    using the BTL model under the assumption of additive biases in the
-    discriminal processes. However, it is easy to imagine at least two
+    using the BTL model under the assumption of discriminal processes
+    with additive biases. However, it is easy to imagine at least two
     scenarios where the zero correlation assumption almost certainly
     does not hold: when the pairwise comparison involves
     multidimensional, complex traits with heterogeneous stimuli, and
     when an additional hierarchical structure is relevant to the
     stimuli.</p>
     <p>In the first scenario, the intricate aspects of multidimensional,
-    complex traits and heterogeneous stimuli may introduce dependencies
-    between stimuli. Research on text quality suggests that when judges
-    evaluate these traits, they often rely on various intricate aspects
-    of the stimuli to form their judgments
+    complex traits may introduce dependencies between heterogeneous
+    stimuli due to certain judges’ biases that resist cancellation.
+    Research on text quality indicates that when judges evaluate such
+    traits, they often rely on various intricate aspects of the stimuli
+    to form their judgments
     (<xref alt="van Daal et al. 2016" rid="ref-vanDaal_et_al_2016" ref-type="bibr">van
     Daal et al. 2016</xref>;
     <xref alt="Lesterhuis 2018b" rid="ref-Lesterhuis_2018" ref-type="bibr">Lesterhuis
@@ -459,7 +464,7 @@ the University of Antwerp (BOF).</funding-statement>
     and Cunningham 2022</xref>). In this context, it is not
     inconceivable that these aspects, being neither equally weighted nor
     opposing, may unevenly influence judges’ perceptions, resulting in
-    biases that resist cancellation. For example, this might occur when
+    biases that resist cancellation. For example, this could occur when
     a judge assessing the argumentative quality of a text places
     disproportionate emphasis on grammatical accuracy, ultimately
     favoring texts with fewer errors but weaker arguments. While direct
@@ -467,8 +472,8 @@ the University of Antwerp (BOF).</funding-statement>
     Pollitt and Elliott
     (<xref alt="2003" rid="ref-Pollitt_et_al_2003" ref-type="bibr">2003</xref>)
     demonstrate the presence of judges’ biases, supporting the idea that
-    the different factors influencing pairwise comparisons may not
-    always cancel out.</p>
+    the factors influencing pairwise comparisons may not always cancel
+    out.</p>
     <p>In the second scenario, the shared context or inherent
     connections created by the additional hierarchical structure may
     introduce dependencies between stimuli, a statistical phenomenon
@@ -493,13 +498,13 @@ the University of Antwerp (BOF).</funding-statement>
     et al. 2019</xref>;
     <xref alt="Gijsen et al. 2021" rid="ref-Gijsen_et_al_2021" ref-type="bibr">Gijsen
     et al. 2021</xref>). This approach, however, has the significant
-    limitation of ignoring the uncertainty associated with the scores
-    (refer to section
+    limitation of ignoring the uncertainty associated with the BTL
+    scores (refer to section
     <xref alt="Section 3.2" rid="sec-theory-issue2">Section 3.2</xref>
     for a detailed discussion of this issue).</p>
     <p>In contrast, the assumption of <italic>equal dispersion between
     stimuli</italic> suggests that the variability in the perceived
-    trait level of the stimulus is the same across stimuli. While
+    trait level of the stimulus is the same across all stimuli. While
     Thurstone acknowledged that this assumption may be violated when
     “dealing with less conspicuous attributes or with less homogeneous
     stimuli”
@@ -516,8 +521,8 @@ the University of Antwerp (BOF).</funding-statement>
     contrived, it effectively illustrates how assuming equal dispersions
     across texts can overlook meaningful differences in the reliability
     of text quality across groups or individuals.</p>
-    <p><styled-content style="color:red;">“however”
-    paragraph</styled-content></p>
+    <p><styled-content style="color:red;">“However”
+    paragraph</styled-content> </p>
     <p><styled-content style="color:red;">“to mitigate”
     paragraph</styled-content></p>
   </sec>
