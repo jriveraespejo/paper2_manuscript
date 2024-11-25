@@ -189,27 +189,13 @@ In contrast, the assumption of *equal dispersion between stimuli* suggests that 
 
 
 <!-- 7. But what are the challenges when these assumptions are violated? -->
-["However" paragraph]{style="color:red;"}
-<!-- But the psychometric literature warns against ignoring additional traits that might confound the measurement of the trait of interest. Particularly, @vanderLinden_et_al_2017_I, [pp. 346] suggests that when the assumption of unidimensionality, i.e, when the model expects to measure only one trait, is violated and more than one dimension is necessary to describe the position of the stimuli in the trait space, The association between the responses to the items given one proficiency parameter does then not vanish, i.e. violating the usual conditional independence assumption -->
+But the psychometric and statistical literature strongly advises against ignoring additional traits that could confound the measurement of the trait of interest, overlooking clustering (grouping) structures, or mis-specifying the trait’s measurement model. First, when additional traits are ignored in favor of a unidimensional trait structure, such as when judges' biases are disregarded, the association between stimuli does not vanish [@vanderLinden_et_al_2017_II, pp. 346]. This mismatch can result in a potential overestimation of precision (reliability) in the measurement process [@Hoyle_et_al_2023, pp. 340-341], or worse, introduce bias into the trait's measurement [@Ackerman_1989]. Second, when relevant hierarchical (or grouping) structures are present in the data, ignoring these structures can further exacerbate the inflation of measurement reliability (citation needed). Lastly, mis-specifying the measurement model by assuming, for example, equal discriminal dispersions across stimuli can overlook meaningful differences in the reliability of the trait. Taken together, these mis-specifications and oversights can lead to misleading conclusions about the trait measurement, ultimately casting doubts about the validity of the trait, as validity cannot exist without reliability [@Perron_et_al_2015, pp. 2].
 
-<!-- @Hoyle_et_al_2023 [pp. 340-341] indicates that the implication of forcing multidimensional data into a unidimensional model is that the standard measurement error for the trait become too small, due to the multidimensionality. Moreover,  -->
-
-<!-- Suppose the assumption of unidimensionality is violated and more than one dimension is necessary to describe the test takers’ position in the latent space. The association between the responses to the items given one proficiency parameter does then not vanish, i.e. violating the usual conditional independence assumption [@vanderLinden_et_al_2017_I, pp. 346] -->
-
-<!-- Furthermore, statistical literature also caution about ignoring clustering (grouping) structures present in the data, as these might  -->
-
-<!-- Cancellation of judges: What we are saying is that the judges' effects depend on the stimuli, by means of an interaction (but present) or because the judges works as a confounder. This, in the best scenario, cause less precise estimates by ignoring clusters, and in the worst scenario, biased estimates if the judges do register biases. -->
-
-<!-- Multilevel structure: Here we loose precision, because we are not controlling for clustering, and overlooking issues such as clustering and measurement error can lead to biased and less precise parameter estimates [@McElreath_2020], ultimately diminishing the statistical power of models and increasing the likelihood of committing type I or type II errors when addressing research inquiries. -->
-
-<!-- Different dispersion: here we face misspecification in the model? -->
-
-<!-- This observation highlights how variability in the quality of stimuli should be accounted for when comparing heterogeneous groups or evaluating complex attributes like writing ability. -->
-
-<!-- If your scores are not reliable they cannot be valid. People have been employing a model with assumptions that they do not know if those assumptions apply for their cases. And when you do that, the scores you produce most likely will not be reliable, which, in turn, renders them invalid. -->
-
+<!-- forcing a unidimensional trait structure on multidimensional data can inflate the perceived measurement precision (reliability) of the trait [@Hoyle_et_al_2023, pp. 340-341] -->
+ 
 <!-- Reliability is a necessary but not sufficient condition for validity. Reliability can exist without validity but validity cannot exist without reliability [@Perron_et_al_2015, pp. 2] -->
 
+<!-- If your scores are not reliable they cannot be valid. People have been employing a model with assumptions that they do not know if those assumptions apply for their cases. And when you do that, the scores you produce most likely will not be reliable, which, in turn, renders them invalid. -->
 
 
 
