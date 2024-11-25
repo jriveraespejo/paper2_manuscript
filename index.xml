@@ -371,8 +371,8 @@ the University of Antwerp (BOF).</funding-statement>
     of approximately <inline-formula><alternatives>
     <tex-math><![CDATA[1.7]]></tex-math>
     <mml:math display="inline" xmlns:mml="http://www.w3.org/1998/Math/MathML"><mml:mn>1.7</mml:mn></mml:math></alternatives></inline-formula>
-    (<xref alt="van der Linden 2017, 1:16" rid="ref-vanderLinden_et_al_2017_I" ref-type="bibr">van
-    der Linden 2017, 1:16</xref>) (see
+    (<xref alt="van der Linden 2017a, 1:16" rid="ref-vanderLinden_et_al_2017_I" ref-type="bibr">van
+    der Linden 2017a, 1:16</xref>) (see
     <xref alt="Figure 2" rid="fig-logistic_vs_normal">Figure 2</xref>).</p>
     <fig id="fig-logistic_vs_normal">
       <caption><p>Figure 2: Probability density and cumulative
@@ -521,8 +521,33 @@ the University of Antwerp (BOF).</funding-statement>
     contrived, it effectively illustrates how assuming equal dispersions
     across texts can overlook meaningful differences in the reliability
     of text quality across groups or individuals.</p>
-    <p><styled-content style="color:red;">“However”
-    paragraph</styled-content> </p>
+    <p>But the psychometric and statistical literature strongly advises
+    against ignoring additional traits that could confound the
+    measurement of the trait of interest, overlooking clustering
+    (grouping) structures, or mis-specifying the trait’s measurement
+    model. First, when additional traits are ignored in favor of a
+    unidimensional trait structure, such as when judges’ biases are
+    disregarded, the association between stimuli does not vanish
+    (<xref alt="van der Linden 2017b, 2:346" rid="ref-vanderLinden_et_al_2017_II" ref-type="bibr">van
+    der Linden 2017b, 2:346</xref>). This mismatch can result in a
+    potential overestimation of precision (reliability) in the
+    measurement process
+    (<xref alt="Hoyle 2023, 340–41" rid="ref-Hoyle_et_al_2023" ref-type="bibr">Hoyle
+    2023, 340–41</xref>), or worse, introduce bias into the trait’s
+    measurement
+    (<xref alt="Ackerman 1989" rid="ref-Ackerman_1989" ref-type="bibr">Ackerman
+    1989</xref>). Second, when relevant hierarchical (or grouping)
+    structures are present in the data, ignoring these structures can
+    further exacerbate the inflation of measurement reliability
+    (citation needed). Lastly, mis-specifying the measurement model by
+    assuming, for example, equal discriminal dispersions across stimuli
+    can overlook meaningful differences in the reliability of the trait.
+    Taken together, these mis-specifications and oversights can lead to
+    misleading conclusions about the trait measurement, ultimately
+    casting doubts about the validity of the trait, as validity cannot
+    exist without reliability
+    (<xref alt="Perron and Gillespie 2015, 2" rid="ref-Perron_et_al_2015" ref-type="bibr">Perron
+    and Gillespie 2015, 2</xref>).</p>
     <p><styled-content style="color:red;">“to mitigate”
     paragraph</styled-content></p>
   </sec>
@@ -623,11 +648,11 @@ the University of Antwerp (BOF).</funding-statement>
     2023, 138</xref>) and Item Response Theory (IRT)
     (<xref alt="Fox 2010, chap. 6" rid="ref-Fox_2010" ref-type="bibr">Fox
     2010, chap. 6</xref>;
-    <xref alt="van der Linden 2017, vol. 1, chap. 24" rid="ref-vanderLinden_et_al_2017_I" ref-type="bibr">van
-    der Linden 2017, vol. 1, chap. 24</xref>) recommend conducting these
-    analyses and tests within a structural model. A structural model
-    specifies how different manifest or latent variables influence the
-    latent variable of interest
+    <xref alt="van der Linden 2017a, vol. 1, chap. 24" rid="ref-vanderLinden_et_al_2017_I" ref-type="bibr">van
+    der Linden 2017a, vol. 1, chap. 24</xref>) recommend conducting
+    these analyses and tests within a structural model. A structural
+    model specifies how different manifest or latent variables influence
+    the latent variable of interest
     (<xref alt="Everitt and Skrondal 2010" rid="ref-Everitt_et_al_2010" ref-type="bibr">Everitt
     and Skrondal 2010</xref>). This approach allows analyses that can
     account for both the BTL scores and their uncertainties
@@ -790,6 +815,22 @@ the University of Antwerp (BOF).</funding-statement>
       <pub-id pub-id-type="doi">10.1177/014662167800200319</pub-id>
       <fpage>451</fpage>
       <lpage>462</lpage>
+    </element-citation>
+  </ref>
+  <ref id="ref-Ackerman_1989">
+    <element-citation publication-type="article-journal">
+      <person-group person-group-type="author">
+        <name><surname>Ackerman</surname><given-names>T.</given-names></name>
+      </person-group>
+      <article-title>Unidimensional IRT calibration of compensatory and noncompensatory multidimensional items</article-title>
+      <source>Applied Psychological Measurement</source>
+      <year iso-8601-date="1989">1989</year>
+      <volume>13</volume>
+      <issue>2</issue>
+      <uri></uri>
+      <pub-id pub-id-type="doi">10.1177/014662168901300201</pub-id>
+      <fpage>113</fpage>
+      <lpage>127</lpage>
     </element-citation>
   </ref>
   <ref id="ref-Zimmerman_1994">
@@ -1197,6 +1238,19 @@ the University of Antwerp (BOF).</funding-statement>
       <pub-id pub-id-type="doi"></pub-id>
     </element-citation>
   </ref>
+  <ref id="ref-vanderLinden_et_al_2017_II">
+    <element-citation publication-type="book">
+      <source>Handbook of item response theory: Statistical tools</source>
+      <person-group person-group-type="editor">
+        <name><surname>van der Linden</surname><given-names>W.</given-names></name>
+      </person-group>
+      <publisher-name>CRC Press</publisher-name>
+      <year iso-8601-date="2017">2017</year>
+      <volume>2</volume>
+      <uri></uri>
+      <pub-id pub-id-type="doi"></pub-id>
+    </element-citation>
+  </ref>
   <ref id="ref-McElreath_2020">
     <element-citation publication-type="book">
       <person-group person-group-type="author">
@@ -1267,6 +1321,20 @@ the University of Antwerp (BOF).</funding-statement>
       <pub-id pub-id-type="doi"></pub-id>
       <fpage>246</fpage>
       <lpage>300</lpage>
+    </element-citation>
+  </ref>
+  <ref id="ref-Perron_et_al_2015">
+    <element-citation publication-type="chapter">
+      <person-group person-group-type="author">
+        <name><surname>Perron</surname><given-names>B.</given-names></name>
+        <name><surname>Gillespie</surname><given-names>D.</given-names></name>
+      </person-group>
+      <article-title>Reliability and Measurement Error</article-title>
+      <source>Key Concepts in Measurement</source>
+      <publisher-name>Oxford University Press</publisher-name>
+      <year iso-8601-date="2015-04">2015</year><month>04</month>
+      <uri></uri>
+      <pub-id pub-id-type="doi">10.1093/acprof:oso/9780199855483.003.0004</pub-id>
     </element-citation>
   </ref>
   <ref id="ref-Bartholomew_et_al_2020">
