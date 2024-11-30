@@ -81,6 +81,10 @@ execute:
   message: false
 ---
 
+<!-- abstract -->
+<!-- recording: Sven and Tine 24.11.25; time: 00:58:20 - 00:59:20 -->
+
+
 # Introduction {#sec-introduction}
 
 <!-- recording: Sven 24.10.04; time: 00:00:00 - 00:09:10 -->
@@ -102,37 +106,37 @@ Numerous studies have documented the effectiveness of CJ in assessing traits and
 <!-- Adaptive comparison algorithms dynamically present stimuli to judges, based on the results of previous comparisons. They aim to enhance the informativeness of comparisons while optimizing judges' time [@Bramley_2015].  -->
 
 <!-- 3. But what critical issues remain in CJ Research?, what is the organization of the study? -->
-Nevertheless, despite the increasing number of CJ studies, unsystematic and fragmented research approaches have left several critical issues unaddressed. The present study primarily focuses on three: the over-reliance on the assumptions of Thurstone's Case V in the statistical analysis of CJ data, the apparent disconnect between CJ's trait measurement and hypothesis testing, and the unclear role of the diverse assessment design features on CJ's reliability and validity. The following sections begin with a brief overview of Thurstone's theory and a detailed discussion of these issues. Subsequently, the study introduces a theoretical model for CJ that builds upon Thurstone's theory, alongside its statistical translation, designed to address all three concerns simultaneously.  
+Nevertheless, despite the increasing number of CJ studies, unsystematic and fragmented research approaches have left several critical issues unaddressed. The present study primarily focuses on two: the over-reliance on the assumptions of Thurstone's Case V in the statistical analysis of CJ data, and the apparent disconnect between CJ's trait measurement and hypothesis testing. The following sections begin with a brief overview of Thurstone's theory and a detailed discussion of these issues. Subsequently, the study introduces a theoretical model for CJ that builds upon Thurstone's theory, alongside its statistical translation, designed to address the two concerns simultaneously.  
 
 
 # Thurstone's theory {#sec-thurstone_theory}
 <!-- recording: Sven and Tine 24.11.18; time: 00:04:30 - 00:14:50 -->
 <!-- recording: Sven and Tine 24.11.18; time: 00:19:04 - 00:21:37 -->
+<!-- recording: Sven and Tine 24.11.25; time: 00:00:35 - 00:06:55 -->
+<!-- recording: Sven and Tine 24.11.25; time: 00:30:35 - 00:35:10 -->
 
 <!-- 1. Thurstone's Theory of CJ: discriminal process -->
-In its most general form, Thurstone's theory [-@Thurstone_1927b] suggests that two factors determine the dichotomous outcome of pairwise comparisons: the discriminal process of each stimulus and their discriminal difference. The *discriminal process* refers to the psychological effect each stimulus exerts on the judges, or more simply, the underlying perception of the stimulus' trait level. According to the theory, the discriminal process for each stimulus follows a Normal distribution. The mode (mean) of this distribution, referred to as the *modal discriminal process*, represents the stimulus' position on the trait continuum. Meanwhile, the dispersion of the distribution, referred to as the *discriminal dispersion*, reflects the variability in the perceived trait level of the stimulus.
+In its most general form, Thurstone's theory deals with pairwise comparisons of stimuli made by a single judge [@Thurstone_1927b, pp. 267]. The theory proposes that two key factors determine the dichotomous outcome of these designs: the discriminal process of each stimulus and their discriminal difference. The *discriminal process* represents the psychological impact each stimulus has on judges or, more simply, their underlying perception of the stimulus' trait level. According to the theory, the discriminal process for each stimulus follows a Normal distribution, where its mode (or mean), referred to as the *modal discriminal process*, indicates the stimulus' position on the trait continuum, and its dispersion, known as the *discriminal dispersion*, reflects the variability in the perceived trait level of the stimulus.
+
+For instance, @fig-discriminal_process illustrates the discriminal process distributions along a quality trait continuum for two written texts. The figure shows that these processes follow a Normal distribution. Moreover, it depicts differences in the texts' positions along the quality trait continuum, where text B is positioned two units further along the continuum than text A, as indicated by their modal discriminal processes ($S_{B}=2$ and $S_{A}=0$). Finally, it highlights differences in the texts' discriminal dispersions ($\sigma_{B}=1$ and $\sigma_{A}=0.5$), showing that text B exhibits a greater variability in its perceived quality than text A, as reflected by its wider distribution.
+
+
+![Example distributions of the discriminal processes for two written texts](/images/figures/discriminal_process.png){#fig-discriminal_process width=70%}
 
 <!-- 2. Thurstone's Theory of CJ: discriminal difference -->
-Nevertheless, the theory posits that because the discriminal process of a single stimulus is not directly observable, the *law of comparative judgment* becomes essential. This law states that in pairwise comparisons, the stimulus positioned further along the trait continuum is perceived as having a higher level of that trait. This emphasize that the outcome depends on the relative distance between stimuli, rather than their absolute positions on the trait continuum. Thus, the theory assumes the observed dichotomous outcome is determined by the distribution of the difference between the underlying discriminal processes of the stimuli, referred to as the *discriminal difference*.
+However, because the discriminal process of a single stimulus is not directly observable, the theory introduces the *law of comparative judgment*. This law posits that in pairwise comparisons, a judge perceives the stimulus positioned further along the trait continuum as having a higher level of that trait. This principle highlights that the outcome of a pairwise comparison likely depends on the relative distance between stimuli rather than their absolute positions on the trait continuum.
 
-<!-- 3. Example-->
-These concepts are more easily understood through an example. For instance, in the context of evaluating text quality, @fig-discriminal_process depicts the underlying discriminal process distributions for two written texts. The figure highlights differences in the texts' positions along the quality trait continuum, represented by their modal discriminal processes, as well as differences in the variability of their perceived trait levels, represented by their discriminal dispersions. Furthermore, @fig-discriminal_difference displays the discriminal difference distribution for these texts. This figure shows that text A is perceived to exhibit significantly higher quality than text B, as indicated by the shaded gray area. Consequently, the dichotomous outcome of this comparison would likely favor text A.
+Thus, the theory assumes that the observed dichotomous outcome arises from the distribution of the difference between the underlying discriminal processes of the stimuli, known as the *discriminal difference*. Since the individual discriminal processes follow a Normal distribution, their difference also follows a Normal distribution. The mode (or mean) of this distribution, representing the (average) relative separation, is given by the difference between the modal discriminal processes of the stimuli $S_{BA} = S_{B} - S_{A}$. Meanwhile, the dispersion of the distribution, reflecting the variability in the relative separation, is calculated as $\sigma_{BA} = \sqrt{\sigma_{B}^{2} + \sigma_{A}^{2} - \rho\sigma_{B}\sigma_{A}}$. Here, $\sigma_{B}$ and $\sigma_{A}$ are the previously defined discriminal dispersions, while $\rho$ measures the correlation between their discriminal processes. This correlation quantifies how much the judge's perception of the trait in one stimulus influences his perception of the same trait in the other.
 
-::: {#fig-thurstone_theory layout-ncol=2}
+@fig-discriminal_difference shows the distribution of the discriminal difference for the texts depicted in @fig-discriminal_process, assuming a correlation of $\rho = 0.6$. The figure reveals that, under these conditions, the judge perceives text B as having significantly higher quality than text A, as indicated by the shaded gray area under the curve $P(B > A)$. As a result, the dichotomous outcome of this comparison almost certainly favors text B over text A.
 
-![Discriminal processes](/images/figures/discriminal_process.png){#fig-discriminal_process width=95%}
+![Example distribution of the discriminal difference for the two texts shown in @fig-discriminal_process, assuming a correlation of 0.6](/images/figures/discriminal_difference.png){#fig-discriminal_difference width=70%}
 
-![Discriminal difference](/images/figures/comparative_judgment.png){#fig-discriminal_difference width=100%}
+Additionally, @fig-correlation illustrates how varying correlations influence the distribution of the discriminal difference for the same two texts. The figure shows that as the correlation increases, indicating a stronger influence of the judge's perception of quality in one text on his perception of the other, the distribution of the discriminal difference becomes narrower. This narrowing affects the area under the curve that determines the comparison outcome and, ultimately, the conclusions drawn from this outcome. 
 
-Example distribution of discriminal processes and their discriminal difference for two written texts (stimuli or objects). Extracted from @Bramley_2008 [pp. 249-251].
-:::
+For instance, when two texts clearly differ in quality, as depicted in @fig-discriminal_process, higher correlations increase the likelihood that the discriminal difference more distinctly favors text B over text A, as indicated by the shaded gray area under the curve in @fig-correlation. Conversely, it is easy to infer that when the two texts have similar or identical quality levels, higher correlations reduce the likelihood that the discriminal difference distinctly favors one text over the other, as the distribution narrows around zero (not depicted in the figure).
 
-
-<!-- 4. Thurstone's Cases and their simplifying assumptions  -->
-Importantly, the general form of Thurstone's theory primarily addressed pairwise comparisons of stimuli made by a single judge [@Thurstone_1927b, pp. 267]. Thus, to facilitate its practical application, Thurstone developed five distinct cases derived from this general form. Each case progressively introduces additional simplifying assumptions related to different features of the theory, such as the distribution of discriminal processes, the uniformity of discriminal dispersions across stimuli, the correlation between stimuli, and the number of judges performing the comparisons. A summary of these cases is provided in @tbl-thurstone_cases. For a detailed examination of this progression, refer to @Thurstone_1927b and @Bramley_2008 [pp. 248-253].
-
-
-![Thurstones cases and asumptions](/images/tables/thurstone_cases.png){#tbl-thurstone_cases width=90%}
+![The effect of correlation on the distribution of the discriminal difference of the same two written text](/images/figures/correlation.png){#fig-correlation width=70%}
 
 
 # Three critical issues in CJ literature {#sec-theory-issues}
@@ -144,70 +148,90 @@ Importantly, the general form of Thurstone's theory primarily addressed pairwise
 <!-- recording: Sven and Tine 24.11.18; time: 00:00:25 - 00:04:30 -->
 <!-- recording: Sven and Tine 24.11.18; time: 00:14:50 - 00:19:04 -->
 <!-- recording: Sven and Tine 24.11.18; time: 00:21:37 - 00:47:20 -->
+<!-- recording: Sven and Tine 24.11.25; time: 00:06:55 - 00:24:50 -->
+<!-- recording: Sven and Tine 24.11.25; time: 00:35:10 - 00:49:30 -->
 
-<!-- 1. The Case V and its simpler statistical representation: the BTL model -->
-Despite its reliance on the largest number of simplifying assumptions [@Bramley_2008, pp. 253; @Kelly_et_al_2022, pp. 677], Case V remains the most widely used case in the CJ literature. This popularity is largely due to its simplified statistical representation in the Bradley-Terry-Luce (BTL) model [@Bradley_et_al_1952; @Luce_1959]. The BTL model mirrors the assumptions of Case V, with one key difference: while Case V assumes a Normal distribution for the discriminal processes of the stimuli, the BTL model uses the more mathematically tractable Logistic distribution [@Andrich_1978; @Bramley_2008, pp. 254] (see @tbl-thurstone_cases). This substitution has little impact on the model's estimation or interpretation, as the Normal and Logistic distributions share similar statistical properties, differing only by a scaling factor of approximately $1.7$ [@vanderLinden_et_al_2017_I, pp. 16] (see @fig-logistic_vs_normal).
+<!-- 1. Thurstone's Cases and their simplifying assumptions  -->
+The previous section outlines the general form of Thurstone's theory, which applies to a CJ design where a single judge evaluates multiple stimuli. For the practical application of the theory, Thurstone developed four additional cases derived from this general form, where each successive case incorporates additional simplifying assumptions. Case I represents the general form of the theory. Case II extends this by allowing multiple judges to make comparisons rather than restricting the comparisons to a single judge. Case III introduces the assumption of zero correlation between stimuli. Case IV builds on this by assuming that the stimuli have similar dispersions. Finally, Case V replaces this assumption with the condition that the stimuli have equal discriminal dispersions. @tbl-thurstone_cases summarizes these cases and their assumptions. For a detailed discussion of this progression, refer to @Thurstone_1927b and @Bramley_2008 [pp. 248-253].
+
+<!-- , suggesting all stimuli have the same variability in their perceived trait levels -->
+
+![Thurstones cases and asumptions](/images/tables/thurstone_cases.png){#tbl-thurstone_cases width=90%}
+
+<!-- 2. The Case V and its simpler statistical representation: the BTL model -->
+Despite its reliance on the largest number of simplifying assumptions [@Bramley_2008, pp. 253; @Kelly_et_al_2022, pp. 677], Case V remains the most widely used case in the CJ literature. This popularity stems mainly from its simplified statistical representation in the Bradley-Terry-Luce (BTL) model [@Bradley_et_al_1952; @Luce_1959]. The BTL model mirrors the assumptions of Case V, with one key difference: while Case V assumes a Normal distribution for the discriminal processes of the stimuli, the BTL model uses the more mathematically tractable Logistic distribution [@Andrich_1978; @Bramley_2008, pp. 254] (see @tbl-thurstone_cases). This substitution has little impact on the model's estimation or interpretation, as the Normal and Logistic distributions share similar statistical properties, differing only by a scaling factor of approximately $1.7$ [@vanderLinden_et_al_2017_I, pp. 16] (see @fig-logistic_vs_normal).
 
 <!-- the mathematical function linking dichotomous outcomes to trait scores -->
 
-::: {#fig-logistic_vs_normal layout-ncol=2}
+::: {#fig-logistic_vs_normal layout-nrow=2}
 
-![Probability density](/images/figures/density.png){#fig-density width=85%}
+![Probability density](/images/figures/density.png){#fig-density width=70%}
 
-![Cummulative probability](/images/figures/cumulative.png){#fig-cumulative width=85%}
+![Cummulative probability](/images/figures/cummulative.png){#fig-cumulative width=70%}
 
 Probability density and cumulative probability of the logistic and Normal distributions. Extracted from @Bramley_2008 [pp. 254-255].
 :::
 
-<!-- 2. But what are limitations of Case V (and the BTL model)? -->
-However, Case V was originally developed to provide a "rather coarse scaling" of traits [@Thurstone_1927b, pp. 269], prioritizing statistical simplicity over precision in trait measurement [@Kelly_et_al_2022, pp. 677]. As a result, its assumptions may not be suitable for applications beyond the psycho-physical contexts for which it was created. Thurstone himself cautioned that its use "should not be made without (an) experimental test" [@Thurstone_1927b, pp. 270], acknowledging that some assumptions could prove problematic in the presence of complex traits or heterogeneous stimuli, such as handwriting or English compositions [@Thurstone_1927a, pp. 374]. Consequently, given that modern CJ applications frequently involve these types of traits and stimuli, two main assumptions of Case V may not consistently hold in theory or practice: the zero correlation and equal dispersion between stimuli.
+<!-- 3. But what are limitations of Case V (and the BTL model)? -->
+However, Thurstone originally developed Case V to provide a "rather coarse scaling" of traits [@Thurstone_1927b, pp. 269], prioritizing statistical simplicity over precision in trait measurement [@Kelly_et_al_2022, pp. 677]. As a result, its assumptions may not be suitable for applications beyond the psycho-physical contexts for which it was created. Thurstone himself cautioned that its use "should not be made without (an) experimental test" [@Thurstone_1927b, pp. 270], acknowledging that some assumptions could prove problematic in the presence of complex traits or heterogeneous stimuli, such as handwriting or English compositions [@Thurstone_1927a, pp. 374]. Consequently, given that modern CJ applications frequently involve these traits and stimuli, two main assumptions of Case V may not consistently hold in theory or practice: the zero correlation and equal dispersion between stimuli.
 
 <!-- Adding assumptions simplifies the formula and improves its tractability, but one cannot place as much confidence in the outputs of the formula if those assumptions are not met [@Kelly_et_al_2022, pp. 677]. -->
 
-<!-- 3. What does the zero correlation between stimuli imply? and does it hold? -->
-The assumption of *zero correlation between stimuli* can be better understood through an example. For instance, when using pairwise comparisons to evaluate text quality, the assumption implies that a judge's perception of a trait in one text does not influence his perception of the same trait in another text. Thurstone attributed this independence to the cancellation of potential judges' biases, driven by two opposing and equally weighted effects occurring during the pairwise comparisons [@Thurstone_1927b, pp. 268]. This cancellation was mathematically demonstrated by @Andrich_1978, using the BTL model under the assumption of discriminal processes with additive biases. However, it is easy to imagine at least two scenarios where the zero correlation assumption almost certainly does not hold: when the pairwise comparison involves multidimensional, complex traits with heterogeneous stimuli, and when an additional hierarchical structure is relevant to the stimuli.
+<!-- 4. What does the zero correlation between stimuli imply? and does it hold? -->
+As outlined in the previous section, the assumption of *zero correlation between stimuli* suggests that during a pairwise comparison, a judge's perception of quality in one text does not influence his perception of the same trait in another text (see @fig-correlation, $\rho=0$). Thurstone attributed this independence to the cancellation of potential judges' biases, driven by two opposing and equally weighted effects occurring during the pairwise comparisons [@Thurstone_1927b, pp. 268]. @Andrich_1978 mathematically demonstrated this cancellation using the BTL model under the assumption of discriminal processes with additive biases. However, it is easy to imagine at least two scenarios where the zero correlation assumption almost certainly does not hold: when the pairwise comparison involves multidimensional, complex traits with heterogeneous stimuli and when an additional hierarchical structure is relevant to the stimuli.
 
 <!-- "It is a safe assumption that when the stimulus series is very homogeneous with no distracting attributes, the correlation between discriminal deviations is low and possible even zero" [@Thurstone_1927b, pp. 268]. -->
 
-<!-- 4. The first scenario where the assumption does not hold -->
-In the first scenario, the intricate aspects of multidimensional, complex traits may introduce dependencies between heterogeneous stimuli due to certain judges' biases that resist cancellation. Research on text quality indicates that when judges evaluate such traits, they often rely on various intricate aspects of the stimuli to form their judgments [@vanDaal_et_al_2016; @Lesterhuis_2018; @Chambers_et_al_2022]. In this context, it is not inconceivable that these aspects, being neither equally weighted nor opposing, may unevenly influence judges' perceptions, resulting in biases that resist cancellation. For example, this could occur when a judge assessing the argumentative quality of a text places disproportionate emphasis on grammatical accuracy, ultimately favoring texts with fewer errors but weaker arguments. While direct evidence for this specific scenario is lacking, studies such as @Pollitt_et_al_2003 demonstrate the presence of judges' biases, supporting the idea that the factors influencing pairwise comparisons may not always cancel out.
+<!-- 5. The first scenario where the assumption does not hold -->
+In the first scenario, the intricate aspects of multidimensional, complex traits may introduce dependencies between heterogeneous stimuli due to certain judges' biases that resist cancellation. Research on text quality indicates that when judges evaluate these traits, they often rely on various intricate aspects of the stimuli to form their judgments [@vanDaal_et_al_2016; @Lesterhuis_2018; @Chambers_et_al_2022]. These aspects, which are likely neither equally weighted nor opposing, may influence judges' perceptions unevenly. For example, this could occur when a judge assessing the argumentative quality of a text places disproportionate emphasis on grammatical accuracy, ultimately favoring texts with fewer errors but weaker arguments. Ignoring these relevant additional "traits" can result in biases that resist cancellation, introducing dependencies between stimuli [@vanderLinden_et_al_2017_II, pp. 346] and ultimately violating the assumption of zero correlation. While direct evidence for the specific mechanisms causing biases is lacking, studies such as @Pollitt_et_al_2003 demonstrate the presence of such biases, supporting the idea that the factors influencing pairwise comparisons may not always cancel out.
+
+<!-- If the test taker’s position on one latent trait is fixed, the assumption of local stochastic independence requires the association between the responses to the items to vanish. Suppose the assumption is violated and more than one dimension is necessary to describe the test takers’ position in the latent space. The association between the responses to the items given one proficiency parameter does then not vanish. [@vanderLinden_et_al_2017_II, pp. 346]. -->
 
 <!-- research shows that, in the presence of these traits and stimuli, the accuracy of the judges' trait perception is influenced by the rank-order distance of the stimuli [@vanDaal_et_al_2017; @Gijsen_et_al_2021], a coarse measure of the relative positioning of the stimuli within the trait continuum. -->
 
-<!-- 5. The second scenario where the assumption does not hold -->
-In the second scenario, the shared context or inherent connections created by the additional hierarchical structure may introduce dependencies between stimuli, a statistical phenomenon commonly known as clustering [@Everitt_et_al_2010]. Nevertheless, despite recognizing such hierarchical structures in CJ data, the statistical handling of this extra source of dependency in the CJ literature has been inadequate. For instance, in cases where the CJ data included multiple samples of stimuli from the same individuals, researchers have often relied on (averaged) estimated BTL scores to conduct subsequent analyses and tests at the individual hierarchical level [@Bramley_et_al_2019; @Boonen_et_al_2020; @Bouwer_et_al_2023; @vanDaal_et_al_2017; @Jones_et_al_2019; @Gijsen_et_al_2021]. This approach, however, has the significant limitation of ignoring the uncertainty associated with the BTL scores (refer to section @sec-theory-issue2 for a detailed discussion of this issue).
+<!-- 6. The second scenario where the assumption does not hold -->
+In the second scenario, the shared context or inherent connections created by additional hierarchical structures may introduce dependencies between stimuli, a statistical phenomenon commonly known as clustering [@Everitt_et_al_2010]. Although the CJ literature acknowledges the presence of such hierarchical structures in CJ data, the statistical handling of this extra source of dependency has been inadequate. For example, when CJ data includes multiple samples of stimuli from the same individuals, researchers often rely on (average) estimated BTL scores to conduct subsequent analyses and tests at the individual hierarchical level [@Bramley_et_al_2019; @Boonen_et_al_2020; @Bouwer_et_al_2023; @vanDaal_et_al_2017; @Jones_et_al_2019; @Gijsen_et_al_2021]. This approach, however, has the significant limitation of ignoring the uncertainty associated with the BTL scores, which generates additional statistical and measurement issues, as discussed in section @sec-theory-issue2.
 
-<!-- (Is this a validity contention?) -->
-<!-- Furthermore, it is not inconceivable that the selection of a particular group of judges used to perform the pairwise comparison could result in an incomplete depiction of the dimensions and complexity of the trait. Previous research has highlighted that factors such as age, culture, and education [@Kelly_et_al_2022, pp. 683], as well as individual differences among judges [@Gill_et_al_2013; @vanDaal_et_al_2017; @vanDaal_2020], could influence judgment accuracy, thereby affecting the "shared consensus" of the trait measurement. As @Kelly_et_al_2022 noted [pp. 683], “Would the aggregate view of young, British-Asian men always be the same as the aggregate view of older, black women?” -->
+<!-- 7. But what are the challenges when these assumptions are violated? -->
+In any case, the psychometric and statistical literature strongly advises against ignoring relevant additional traits or overlooking clustering (grouping) structures that may introduce dependencies between stimuli. First, ignoring additional aspects pertinent to the trait of interest can cause a dimensional mismatch, which can lead to an overestimation of the precision (reliability) of the trait's measurement [@Hoyle_et_al_2023, pp. 340-341] or, worse, introduce bias into the measurement process [@Ackerman_1989]. Additionally, overlooking relevant hierarchical (or grouping) structures can exacerbate the inflation of reliability by reducing the accuracy of the model's parameters [@Hoyle_et_al_2023, pp. 482]. Taken together, these oversights undermine the reliability of the measurement process and, since validity cannot exist without reliability [@Perron_et_al_2015, pp. 2], ultimately compromise the validity of the results derived from it.
 
-<!-- Such differences may not be detected through analyses of bias and misfit. McMahon and Jones (2015) found differences between students and teachers in what was valued in assessments of understanding of a chemistry experiment. Where students prioritised factual recall, teachers prioritised scientific explanation. Both groups produced highly reliable scales (reliability estimates of .893 for students, and .874 for teachers). Although, in this case, a clear argument as to whose consensus should take priority can be made, it demonstrates the existence of different, but equally reliable, sets of consensuses depending on who is asked. [@Kelly_et_al_2022, pp. 683] -->
+<!-- forcing a unidimensional trait structure on multidimensional data can inflate the perceived measurement precision (reliability) of the trait [@Hoyle_et_al_2023, pp. 340-341] -->
+ 
+<!-- Reliability is a necessary but not sufficient condition for validity. Reliability can exist without validity but validity cannot exist without reliability [@Perron_et_al_2015, pp. 2]. If your scores are not reliable they cannot be valid. People have been employing a model with assumptions that they do not know if those assumptions apply for their cases. And when you do that, the scores you produce most likely will not be reliable, which, in turn, renders them invalid. -->
 
-<!-- 6. What does the equal dispersion between stimuli imply? and does it hold? -->
-In contrast, the assumption of *equal dispersion between stimuli* suggests that the variability in the perceived trait level of the stimulus is the same across all stimuli. While Thurstone acknowledged that this assumption may be violated when "dealing with less conspicuous attributes or with less homogeneous stimuli" [@Thurstone_1927a, pp. 374], no study explicitly proposes that this assumption could also be violated due to the presence of an additional hierarchical (grouping) structure relevant to the texts. One such scenario might arise, for example, when comparing texts produced by university and secondary school students. In this case, university students may consistently (or more precisely) produce higher-quality texts, while secondary school students, who exhibit a broader range of writing abilities, would show greater variability in the quality of their texts. Although this example is somewhat contrived, it effectively illustrates how assuming equal dispersions across texts can overlook meaningful differences in the reliability of text quality across groups or individuals.
+<!-- Brennen generalizability theory, generalize conclusions over groups. To generalize over judges, you need to estimate them. Akin to Frisch-Wough-Lovel theorem. -->
+
+<!-- 8. So, how do we mitigate these risks? -->
+<!-- Luckily, @Andrich_1978 and @Wainer_et_al_1978 already proposed a solution to the first scenario where the assumption of zero correlation is violated. Both authors demonstrated that by parametrizing judges' biases in the measurement model of the trait of interest, their effects are experimentally eliminated from the trait's measurement process. Furthermore, a wealth of statistical literature offers a solution to the second scenario: incorporate the hierarchical structure into the measurement model of the trait of interest, similar to a multilevel SEM model [@Hoyle_et_al_2023, chap. 26]. -->
+
+<!-- Remember: the "mitigate" paragraph have the purpose of being the design principles that will guide the development of the theoretical and statistical model. -->
+
+<!-- 9. What does the equal dispersion between stimuli imply? and does it hold? -->
+<!-- In contrast, the assumption of *equal dispersion between stimuli* suggests that the variability in the perceived trait level of the stimulus is the same across all stimuli. While Thurstone acknowledged that this assumption may be violated when "dealing with less conspicuous attributes or with less homogeneous stimuli" [@Thurstone_1927a, pp. 374], ... -->
+
+<!-- It is a ridiculous assumption, because multidimensional, complex traits -->
+<!-- The dispersion is not the same for every text, a weak writer will produce consistently weak quality texts, in all the dimensions, this implies that every judge will agree on its lower quality, thereby the dispersion of the texts is going to be narrow. In contrast, when the texts move further along the quality trait continuum, implying that some areas of the texts are improved while some other remains, then there is a higher potential that there are discrepancies between the judges, as they focus in different aspects of the stimuli. So it seem that the extreme of the discriminal process distribution of the stimuli have higher reliability than the center? -->
+
+<!-- Some text will provoke more variability in the judgments, and that is because of the text. There is something in the text that cause doubts in the judges. -->
+
+<!-- Example of creativity from Tine. Misfiting text might be texts with larger dispersion, because there is a lot of confusion about them. When assessing creativity, for instance, student can do an assignment in really creative but an unexpected way, but because the judges did not expected such a way, they do not what to do with it, and that creates more dispersion in the judgment. Then the discriminal difference is all over the place. -->
 
 <!-- Of these, the most questionable is the one that the discriminal dispersions of all the objects are equal. Thurstone clearly did not expect this to hold for any but the most simple stimuli. The scripts used in cross-moderation exercises are obviously far more complex than any used by Thurstone, so it seems naive to expect this assumption to hold here [@Bramley_2008]. -->
 
 
-<!-- 7. But what are the challenges when these assumptions are violated? -->
-But the psychometric and statistical literature strongly advises against ignoring additional traits that could confound the measurement of the trait of interest, overlooking clustering (grouping) structures, or mis-specifying the trait’s measurement model. First, when additional traits are ignored in favor of a unidimensional trait structure, such as when judges' biases are disregarded, the association between stimuli does not vanish [@vanderLinden_et_al_2017_II, pp. 346]. This mismatch can result in a potential overestimation of precision (reliability) in the measurement process [@Hoyle_et_al_2023, pp. 340-341], or worse, introduce bias into the trait's measurement [@Ackerman_1989]. Second, when relevant hierarchical (or grouping) structures are present in the data, ignoring these structures can further exacerbate the inflation of measurement reliability (citation needed). Lastly, mis-specifying the measurement model by assuming, for example, equal discriminal dispersions across stimuli can overlook meaningful differences in the reliability of the trait. Taken together, these mis-specifications and oversights can lead to misleading conclusions about the trait measurement, ultimately casting doubts about the validity of the trait, as validity cannot exist without reliability [@Perron_et_al_2015, pp. 2].
+<!-- 10. But what are the challenges when these assumptions are violated? -->
+<!-- But the statistical literature warns against mis-specifying the trait’s measurement model. When mis-specifying the measurement model by assuming, for example, equal discriminal dispersions across stimuli, the model can overlook meaningful differences in the reliability of the trait. Taken together, these mis-specifications and oversights can lead to misleading conclusions about the trait measurement, ultimately casting doubts about the validity of the trait, as validity cannot exist without reliability [@Perron_et_al_2015, pp. 2]. -->
 
-<!-- forcing a unidimensional trait structure on multidimensional data can inflate the perceived measurement precision (reliability) of the trait [@Hoyle_et_al_2023, pp. 340-341] -->
- 
 <!-- Reliability is a necessary but not sufficient condition for validity. Reliability can exist without validity but validity cannot exist without reliability [@Perron_et_al_2015, pp. 2] -->
 
 <!-- If your scores are not reliable they cannot be valid. People have been employing a model with assumptions that they do not know if those assumptions apply for their cases. And when you do that, the scores you produce most likely will not be reliable, which, in turn, renders them invalid. -->
 
 
 
-<!-- 8. So, how do we mitigate these risks? -->
-["to mitigate" paragraph]{style="color:red;"}
-
-
-<!-- Moreover, a solution was already envisioned, @Andrich_1978 and @Wainer_et_al_1978 already showed that if judges effects are parametrized, it gets eliminated experimentally in the paired comparison method.  -->
+<!-- 11. So, how do we mitigate these risks? -->
+<!-- ["to mitigate" paragraph]{style="color:red;"} -->
 
 <!-- This has been considered in the literature as a (see https://doi.org/10.1177/1471082X15571817) or a multilevel BTL model (find sources) -->
-
-
 
 
 
@@ -215,16 +239,16 @@ But the psychometric and statistical literature strongly advises against ignorin
 
 <!-- recording: Sven 24.10.04; time: 00:14:30 - 00:21:00 -->
 <!-- recording: Sven and Tine 24.10.18; time: 00:08:30 - 00:14:55 -->
-<!-- recording: Sven and Tine 24.10.25; time: 00:17:00 - 00:31:10 -->
+<!-- recording: Sven and Tine 24.11.25; time: 00:49:30 - 00:53:30 -->
 
 <!-- 1. The BTL model as a measurement model for estimating latent traits -->
 Building on the previous section, it is evident that the BTL model commonly functions as the trait's measurement model in CJ experiments [@Andrich_1978; @Bramley_2008]. A measurement model specifies how manifest variables contribute to the estimation of latent variables [@Everitt_et_al_2010]. For example, when evaluating text quality, researchers use the BTL model to process the dichotomous outcomes resulting from the pairwise comparisons (the manifest variables) to estimate scores that reflect the underlying quality level of texts (the latent variable) [@Laming_2004; @Pollitt_2012b; @Whitehouse_2012; @vanDaal_et_al_2016; @Lesterhuis_2018_thesis; @Coertjens_et_al_2017; @Goossens_et_al_2018; @Bouwer_et_al_2023]. 
 
 <!-- 2. Utilizing BTL Scores for further analysis and hypothesis testing -->
-Researchers then typically use the estimated BTL scores, or their transformations, to conduct additional analyses and tests, or to make decisions regarding the exclusion of certain data in these analyses and tests. The literature shows that these scores have been employed to calculate correlations with other assessment methods [@Goossens_et_al_2018; @Bouwer_et_al_2023] or to test hypotheses related to the underlying traits of interest [@Bramley_et_al_2019; @Boonen_et_al_2020; @Bouwer_et_al_2023; @vanDaal_et_al_2017; @Jones_et_al_2019; @Gijsen_et_al_2021]. Additionally, the BTL scores have been used to detect biases in judges' ratings [@Pollitt_et_al_2003; @Pollitt_2012b], as well as to identify "misfit" judges and stimuli [@Pollitt_2012b; @vanDaal_et_al_2017; @Goossens_et_al_2018], with considerations for their possible exclusion.
+Researchers then typically use the estimated BTL scores, or their transformations, to conduct additional analyses or hypothesis tests. For example, these scores have been used to identify 'misfit' judges and stimuli [@Pollitt_2012b; @vanDaal_et_al_2017; @Goossens_et_al_2018], detect biases in judges' ratings [@Pollitt_et_al_2003; @Pollitt_2012b], calculate correlations with other assessment methods [@Goossens_et_al_2018; @Bouwer_et_al_2023], or test hypotheses related to the underlying trait of interest [@Bramley_et_al_2019; @Boonen_et_al_2020; @Bouwer_et_al_2023; @vanDaal_et_al_2017; @Jones_et_al_2019; @Gijsen_et_al_2021].
 
 <!-- 3. But what are the challenges in using BTL scores for further analysis? -->
-However, the statistical literature advises caution when using estimated scores for additional analyses and tests, as well as when eliminating data through ad hoc univariate procedures. A key consideration is that BTL scores are parameter estimates that inherently carry uncertainty. Ignoring this uncertainty can bias the analysis and reduce the precision of hypothesis tests. Notably, the direction and magnitude of such biases are often unpredictable. Results may be attenuated, exaggerated, or remain unaffected depending on the degree of uncertainty in the scores and the actual effects being tested [@Kline_et_al_2023, pp. 25; @Hoyle_et_al_2023, pp. 137]. Moreover, excluding data using ad hoc univariate procedures can compound these issues by discarding potentially valuable information, further exacerbating the bias [@Zimmerman_1994; @McElreath_2020]. Finally, the reduced precision in hypothesis tests diminishes their statistical power, increasing the likelihood of committing type-I or type-II errors [@McElreath_2020]. 
+However, the statistical literature advises caution when using estimated scores for additional analyses and tests. A key consideration is that BTL scores are parameter estimates that inherently carry uncertainty. Ignoring this uncertainty can bias the analysis and reduce the precision of hypothesis tests. Notably, the direction and magnitude of such biases are often unpredictable. Results may be attenuated, exaggerated, or remain unaffected depending on the degree of uncertainty in the scores and the actual effects being tested [@Kline_et_al_2023, pp. 25; @Hoyle_et_al_2023, pp. 137]. Finally, the reduced precision in hypothesis tests diminishes their statistical power, increasing the likelihood of committing type-I or type-II errors [@McElreath_2020]. 
 
 <!-- A type-I error occurs when a *true* null hypothesis is incorrectly rejected, while a type-II error occurs when a *false* null hypothesis is incorrectly accepted [@Everitt_et_al_2010]. -->
 
@@ -232,60 +256,17 @@ However, the statistical literature advises caution when using estimated scores 
 To mitigate these risks, principles from Structural Equation Modeling (SEM) [@Hoyle_et_al_2023, pp. 138] and Item Response Theory (IRT) [@Fox_2010, chap. 6; @vanderLinden_et_al_2017_I, chap. 24] recommend conducting these analyses and tests within a structural model. A structural model specifies how different manifest or latent variables influence the latent variable of interest [@Everitt_et_al_2010]. This approach allows analyses that can account for both the BTL scores and their uncertainties simultaneously, rather than treating them as separate elements. Therefore, an integrated approach that combines CJ’s measurement and structural models can offer significant advantages.
 
 
-## The diverse assessment design features and their role on reliability and validity {#sec-theory-issue3}
 
+<!-- ## The diverse assessment design features and their role on reliability and validity {#sec-theory-issue3} -->
+<!-- Do not include yet!, until you see if you need it when you write about the next section -->
 <!-- recording: Sven and Tine 24.11.18; time: 00:47:20 - 00:56:41 -->
+<!-- recording: Sven and Tine 24.11.25; time: 00:53:30 - 01:00:00 -->
 
-<!-- []{style="color:red;"} -->
-
-<!-- Experimental design -->
-
-<!-- In this regard, although the literature has tested multiple features of the experimental design of the method, such as the comparison algorithm and the number of comparisons, it is not clear where this procedures fit in the whole process of comparison, and what are their implications for the outcome of the method. -->
-
-<!-- @Bramley_et_al_2019 and @Bramley_2015 says adaptivity inflates reliability. present the evidence of bias effects of adaptive algorithms, the not clear view of how many comparisons per (sub)units are required or how many judges should be involved [@Kelly_et_al_2022, pp. 682]. Adhoc rules of thumb. -->
-
-<!-- @Bramley_2015 -->
-<!-- The implication is that the SSR statistic is worthless as an indicator of the quality / consistency / reliability of a scale constructed from an ACJ study that has involved a significant number of adaptive rounds. With random or fixed rounds, the SSR values were all below 0.25, which would generally be taken as an indicator of failure to create a meaningful scale. To put it another way, a low value of SSR almost certainly indicates low reliability, but a high value of SSR does not necessarily indicate high reliability.  -->
-<!-- This is not to say that the ACJ studies listed in Table 1 (or indeed other studies not listed) were themselves worthless, just that not much should be made of claims about very high reliability in ACJ studies on the basis of high values of the SSR statistic. In fact, many of those studies also showed moderate to high correlations with variables external to the analysis, which were rightly interpreted as evidence of concurrent validity. -->
-<!-- The conclusion is therefore that the SSR statistic is at best misleading and at worst worthless as an indicator of scale reliability whenever a CJ study has involved a significant amount of adaptivity. -->
-
-<!-- @Gray_et_al_2024 entropy-driven active learning pair-selection algorithm to compare stimuli, vs random and no repeating pairs -->
-
-<!-- @DeVrindt_et_al_2024 cold start problem to optimize time efficiency. -->
-
-<!-- @Mikhailiuk_et_al_2021 proposed a fully Bayesian active sampling strategy for pairwise comparisons via Approximate Message Passing and Information Gain Maximization. ASAP computes the full posterior distribution, which is crucial to achieving accurate EIG estimates, and thus the accuracy of active sampling. We recommend ASAP, as it offered the highest accuracy of inferred scores compared to existing methods in experiments with real and synthetic data. -->
-
-<!-- @Verhavert_et_al_2022 The current article proposes a new adaptive selection algorithm using a previously calibrated reference set. Using a reference set should eliminate the reliability inflation. It is proven that this adaptive selection algorithm is more efficient without reducing the accuracy of the results and without increasing the standard deviation of the assessment results. Akin to BIB designs and more specifically to BTIB designs  -->
-
-
-<!-- and issues related to the method's experimental design. These issues can affect the method's reliability, validity, and practical applicability. -->
-
-
-<!-- @Coertjens_et_al_2017 assess reliability and time investment. We conclude that pairwise comparison requires a similar time investment from evaluators as the criterion list method. We want to note that the outcomes in this study depend heavily on the design. First, the time taken for an assessment is strongly determined by the length of the criteria list used and the length of the texts (Breland, 1983). Not adaptive -->
-
-
-<!-- Although the process of pairwise comparisons is quite easy and fast for raters to apply (@Laming_2004; @Pollitt_2004), even without training, the increase in time investment that is needed for CJ decreases its feasibility in educational practice. -->
-
-
-<!-- Messick_1989 talks about efficiency and feasibility for application  -->
-
-<!-- @Bramley_2008 proposes ranking instead of comparisons -->
-
-
-<!-- talk about the number of comparisons @Verhavert_et_al_2019, @Crompvoets_et_al_2022, @Pollitt_2004 -->
-
-
-<!-- @Pollitt_2012b concludes that speed is not related to the quality of assessments in pairwise comparisons -->
-
-
-<!-- All studies use SSR as a measure of reliability -->
-
-
-<!-- It is assumed that the single observer compares each pair of stimuli a sufficient number of times so that a proportion may be determined for each pair [@Thurstone_1927b, pp. 267]. -->
 
 
 # An updated theoretical and statistical model for CJ {#sec-theory}
 
+<!-- []{style="color:red;"} -->
 
 <!-- 3. What is the solution? -->
 
@@ -302,6 +283,7 @@ To mitigate these risks, principles from Structural Equation Modeling (SEM) [@Ho
 <!-- recording: Sven 24.10.04; time: 00:21:00 - 00:34:10 -->
 <!-- recording: Sven 24.10.04; time: 00:41:00 - 00:46:00 -->
 <!-- recording: Sven and Tine 24.10.18; time: 00:00:00 - 00:04:05 -->
+<!-- recording: Sven and Tine 24.11.25; time: 01:00:00 - 01:08:40 -->
 
 <!-- comparison mechanism as missing mechanism -->
 <!-- recording: Sven 24.10.04; time: 00:09:10 - 00:14:30 -->
@@ -311,10 +293,14 @@ To mitigate these risks, principles from Structural Equation Modeling (SEM) [@Ho
 <!-- This means that the cancellation of judges' biases may not hold in theory or practice, and that judges' biases may depend on the stimuli, by means of an interaction (but present) or because the judges works as a confounder -->
 
 
+<!-- no study explicitly proposes that this assumption could also be violated due to the presence of an additional hierarchical (grouping) structure relevant to the texts. One such scenario might arise, for example, when comparing texts produced by university and secondary school students. In this case, university students may consistently (or more precisely) produce higher-quality texts, while secondary school students, who exhibit a broader range of writing abilities, would show greater variability in the quality of their texts. Although this example is somewhat contrived, it effectively illustrates how assuming equal dispersions across texts can overlook meaningful differences in the reliability of text quality across groups or individuals. -->
+
 
 ## From theory to statistics {#sec-theory-statistics}
 
 <!-- recording: Sven 24.10.04; time: 00:46:00 - 01:01:00 -->
+<!-- recording: Sven and Tine 24.11.25; time: 00:24:50 - 00:30:35 -->
+<!-- recording: Sven and Tine 24.11.25; time: 00:49:30 - 00:53:30 -->
 
 <!-- Using assumptions from IRT [@deAyala_2009, p. 20-21], we are assuming a multidimensional model, that violates the local independece assumption -->
 
@@ -323,19 +309,28 @@ To mitigate these risks, principles from Structural Equation Modeling (SEM) [@Ho
 <!-- @Pritikin_2020 and @Gray_et_al_2024 bayesian modeling attempts -->
 
 
+<!-- , as well as when eliminating data through ad hoc univariate procedures -->
+<!-- Moreover, excluding data using ad hoc univariate procedures can compound these issues by discarding potentially valuable information, further exacerbating the bias [@Zimmerman_1994; @McElreath_2020] -->
+
 
 # Discussion {#sec-discuss}
 
 ## Findings {#sec-discuss-finding}
 
-<!-- "If Thurstone’s Law is to be used in support of comparative judgment for -->
-<!-- assessment, his theory must be extended to cover the uses and applications that are required for assessment purposes." [@Kelly_et_al_2022, pp. 678] -->
+<!-- recording: Sven and Tine 24.11.25; time: 00:56:10 - 00:56:10 -->
+
+<!-- "If Thurstone’s Law is to be used in support of comparative judgment for assessment, his theory must be extended to cover the uses and applications that are required for assessment purposes." [@Kelly_et_al_2022, pp. 678] -->
 
 
 <!-- Pollitt (2012a) argues that assessors in pairwise comparisons need less training, given intuitive comparison and decision making. However, there is a distinct lack of research on the role of training.  -->
 
 <!-- Due to efficiency of scoring, most of research only collects only one text. This assumes that there is significant homogeneity between text of the same individual, compared to the between individual variability. However, this cannot be known ad-hoc.  -->
 
+
+<!-- (Is this a validity contention?) -->
+<!-- Furthermore, it is not inconceivable that the selection of a particular group of judges used to perform the pairwise comparison could result in an incomplete depiction of the dimensions and complexity of the trait. Previous research has highlighted that factors such as age, culture, and education [@Kelly_et_al_2022, pp. 683], as well as individual differences among judges [@Gill_et_al_2013; @vanDaal_et_al_2017; @vanDaal_2020], could influence judgment accuracy, thereby affecting the "shared consensus" of the trait measurement. As @Kelly_et_al_2022 noted [pp. 683], “Would the aggregate view of young, British-Asian men always be the same as the aggregate view of older, black women?” -->
+
+<!-- Such differences may not be detected through analyses of bias and misfit. McMahon and Jones (2015) found differences between students and teachers in what was valued in assessments of understanding of a chemistry experiment. Where students prioritized factual recall, teachers prioritized scientific explanation. Both groups produced highly reliable scales (reliability estimates of .893 for students, and .874 for teachers). Although, in this case, a clear argument as to whose consensus should take priority can be made, it demonstrates the existence of different, but equally reliable, sets of consensuses depending on who is asked. [@Kelly_et_al_2022, pp. 683] -->
 
 
 <!-- "Another challenge to the intrinsic validity argument is that the aggregate approach and valuing of diversity in expert views (Van Daal et al., 2019) is in tension with the idea of removing misfitting judges (Pollitt, 2012a). If someone is considered an expert, and the validity of comparative judgment rests on the collective expertise of a community of practice, the decision to remove them and discard their judgments can only be justifiable on the assumption that those judgments do not reflect their expertise. ... It is thus unclear whether or not this divergence is welcomed." [@Kelly_et_al_2022, pp. 681] -->
@@ -344,10 +339,15 @@ To mitigate these risks, principles from Structural Equation Modeling (SEM) [@Ho
 
 
 
+
+
 ## Limitations and further research {#sec-discuss-limitations}
 
 
 <!-- The field of comparative judgment, while growing, is still relatively small, and at present we do not have compelling answers to fundamental questions such as: how many judges do we need? Who should judge? How many judgments should they make? And crucially, how can we be confident that they are basing their judgments on acceptable criteria? If judges are not using construct-relevant criteria, then the argument that comparative judgments are necessarily valid cannot be upheld. We recognise that there is unlikely to be a single answer to these questions for all the cases in which comparative judgment may be used. However, work to derive some general principles for good practice would be valuable.[@Kelly_et_al_2022, pp. 683] -->
+
+<!-- @Bramley_2008 proposes ranking instead of comparisons -->
+
 
 # Conclusion {#sec-conclusion}
 
@@ -379,10 +379,6 @@ To mitigate these risks, principles from Structural Equation Modeling (SEM) [@Ho
 
 <!-- **Acknowledgements:** -->
 
-
-{{< pagebreak >}}
-
-# Appendix {#sec-appendix}
 
 
 {{< pagebreak >}}
