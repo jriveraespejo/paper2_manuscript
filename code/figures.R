@@ -1,0 +1,192 @@
+# working area ####
+rm(list=ls())
+
+main_dir = '/home/josema/Desktop/1. Work/1 research/PhD Antwerp/#thesis/paper2/paper2_manuscript/images/figures/'
+
+
+
+# functions ####
+colorArea <- function(from, to, density, ..., col="lightgray", dens=NULL){
+  y_seq = seq(from, to, length.out=500)
+  d = c(0, density(y_seq, ...), 0)
+  polygon(c(from, y_seq, to), d, col=col, density=dens, border=NA)
+}
+
+
+
+# figure 1a ####
+
+# distributional parameters
+dpA = c(0, 0.5) # distribution text A (mean, sd)
+dpB = c(2, 1) # distribution text B (mean, sd)
+rAB = 0.6 # correlation between discriminal processes
+
+# figure
+png( filename=file.path(main_dir, 'discriminal_process.png'), 
+     height=10, width=15, units='cm', res=400  )
+
+# initial figure
+par( mar=c(2,0,0.5,0) )
+plot( NULL, xlim=c(-2,6), ylim=c(0,0.9), 
+      xaxt='n', yaxt='n', xlab='', ylab='', axes=F )
+axis( side=1, labels=F, lwd.ticks=0 )
+axis( side=1, at=c(dpA[1], dpB[1]), tick=F, 
+      label=c( expression( S[A] ), expression( S[B] ) ) )
+
+# figure parameters
+pplotA = c( dnorm( dpA[1], mean=dpA[1], sd=dpA[2] ),
+            dnorm( dpA[1], mean=dpA[1], sd=dpA[2] ) + 0.05,
+            dnorm( dpA[1] + dpA[2], mean=dpA[1], sd=dpA[2]),
+            dnorm( dpA[1]+0.25, mean=dpA[1], sd=dpA[2] )-0.25 )
+
+pplotB = c( dnorm( dpB[1], mean=dpB[1], sd=dpB[2] ),
+            dnorm( dpB[1], mean=dpB[1], sd=dpB[2] ) + 0.05,
+            dnorm( dpB[1] + dpB[2], mean=dpB[1], sd=dpB[2]),
+            dnorm( dpB[1]+0.45, mean=dpB[1], sd=dpB[2] )-0.15 )
+
+
+# discriminal process text A
+curve( dnorm(x, mean=dpA[1], sd=dpA[2]), lwd=1.5, add=T ) 
+text( x=dpA[1], y=pplotA[2], cex=0.8, 'Text A' ) 
+lines( x=c(dpA[1], dpA[1]), y=c(pplotA[1], -0.1), lty=2, lwd=0.7 )
+lines( x=c(dpA[1], dpA[1]+dpA[2]), y=rep( pplotA[3], 2), lty=2, lwd=0.7 )
+text( x=dpA[1]+0.25, y=pplotA[4], cex=0.8, expression( sigma[A] ) ) 
+
+# discriminal process text B
+curve( dnorm(x, mean=dpB[1], sd=dpB[2]), lwd=1.5, add=T ) 
+text( x=dpB[1], y=pplotB[2], cex=0.8, 'Text B' ) 
+lines( x=c(dpB[1], dpB[1]), y=c(pplotB[1], -0.1), lty=2, lwd=0.7 )
+lines( x=c(dpB[1], dpB[1]+dpB[2]), y=rep( pplotB[3], 2), lty=2, lwd=0.7 )
+text( x=dpB[1]+0.45, y=pplotB[4], cex=0.8, expression( sigma[B] ) ) 
+
+dev.off()
+
+
+
+# figure 1b ####
+
+# distributional parameters
+dd = c( dpB[1]-dpA[1], sqrt( dpB[2]^2 + dpA[2]^2 - 2*rAB*dpB[2]*dpA[2] )) 
+dd_alt = c( dpB[1]-dpA[1], sqrt( dpB[2]^2 + dpA[2]^2 )) 
+
+# figure
+png( filename=file.path(main_dir, 'discriminal_difference.png'), 
+     height=10, width=15, units='cm', res=400  )
+
+# initial figure
+par( mar=c(2,0,0.5,0) )
+plot( NULL, xlim=c(-2,6), ylim=c(0,0.5), 
+      xaxt='n', yaxt='n', xlab='', ylab='', axes=F )
+axis( side=1, labels=F, lwd.ticks=0 )
+axis( side=1, at=c(0, dd[1]), tick=F, 
+      label=c(0, expression( S[BA] ) ) )
+
+# figure parameters
+pplotD = c( dnorm( dd[1], mean=dd[1], sd=dd[2] ),
+            dnorm( dd[1], mean=dd[1], sd=dd[2] ) + 0.05,
+            dnorm( dd[1] + dd[2], mean=dd[1], sd=dd[2]),
+            dnorm( dd[1]+0.4, mean=dd[1], sd=dd[2] )-0.16,
+            dnorm( 0, mean=dd[1], sd=dd[2] ) )
+
+# discriminal difference
+colorArea( from=0, to=7, density=dnorm, mean=dd[1], sd=dd[2],col=rgb(0,0,0,0.05) )
+curve( dnorm(x, mean=dd[1], sd=dd[2]), lwd=1.5, add=T ) 
+# text( x=dd[1], y=pplotD[2], cex=0.8, 'Text B' ) 
+lines( x=c(dd[1], dd[1]), y=c(pplotD[1], -0.1), lty=2, lwd=0.7 )
+lines( x=c(dd[1], dd[1]+dd[2]), y=rep( pplotD[3], 2), lty=2, lwd=0.7 )
+text( x=dd[1]+0.4, y=pplotD[4], cex=0.8, expression( sigma[AB] ) ) 
+text( x=dd[1]+1.65, y=0.32, cex=0.8, 'where:' )
+text( x=dd[1]+2, y=pplotD[4], cex=0.8,
+      expression( S[BA] == S[B] - S[A]) ) 
+text( x=dd[1]+2.45, y=pplotD[4]-0.04, cex=0.8,
+      expression( sigma[BA] == sqrt( sigma[B]^2 + sigma[A]^2 - rho*sigma[B]*sigma[A]) ) )
+lines( x=c(0,0), y=c(pplotD[5],-0.1), lty=2, lwd=0.7 )
+text( x=-0.7, y=0.05, cex=0.8, expression( P(B<A) ) ) 
+text( x=0.8, y=0.05, cex=0.8, expression( P(B>A) ) ) 
+
+# # alternative distribution when there is no correlation
+# curve( dnorm(x, mean=dd_alt[1], sd=dd_alt[2]), lwd=0.5, lty=2, add=T )
+# legend('topleft', lwd=c(1.5,0.5), lty=c(1,2), bty='n', col=rep('black',2), cex=0.8,
+#        legend=c( expression( 'Discriminal difference when ' (rho>0) ), 
+#                  expression( 'Discriminal difference when ' (rho==0) ) ) )
+
+dev.off()
+
+
+
+
+# figure 1c ####
+# distributional parameters
+rAB = round( seq(-0.6, 0.6, by=0.2), 2 ) # correlation between discriminal processes
+dd = list()
+dd[[1]] = dpB[1]-dpA[1]
+dd[[2]] = round( sqrt( dpB[2]^2 + dpA[2]^2 - 2*rAB*dpB[2]*dpA[2] ), 2 )
+
+
+png( filename=file.path(main_dir, 'correlation.png'),
+     height=10, width=15, units='cm', res=400  )
+
+# initial figure
+par( mar=c(2,0,0.5,0) )
+plot( NULL, xlim=c(-2,6), ylim=c(0,0.5),
+      xaxt='n', yaxt='n', xlab='', ylab='', axes=F )
+axis( side=1, labels=F, lwd.ticks=0 )
+axis( side=1, at=0, tick=F, label='0' )
+
+# distributions
+l_ty = c( rep(2,3),1,rep(2,2),1 )
+text = paste0( ' ~ rho == ', rAB )
+colorArea( from=0, to=7, density=dnorm, mean=dd[[1]], sd=dd[[2]][7], col=rgb(0,0,0,0.05) )
+for(i in 1:length(dd[[2]])){
+  # colorArea( from=0, to=7, density=dnorm, mean=dd[[1]], sd=dd[[2]][i], col=rgb(0,0,0,0.05) )
+  curve( dnorm(x, mean=dd[[1]], sd=dd[[2]][i]), lwd=0.214*i, lty=l_ty[i], add=T )
+}
+lines( x=c(0,0), y=c(0.1,-0.1), lty=2, lwd=0.7 )
+legend('topleft', lwd=0.214*(1:length(rAB)), lty=l_ty, bty='n',
+       legend=parse(text=text) )
+
+dev.off()
+
+
+
+
+
+
+
+# figure 2a ####
+png( filename=file.path(main_dir, 'density.png'), 
+     height=10, width=15, units='cm', res=400  )
+
+# initial figure
+par( mar=c(2,0,0.5,0) )
+plot( NULL, xlim=c(-6,6), ylim=c(0,0.25), 
+      xaxt='n', yaxt='n', xlab='', ylab='', axes=F )
+axis( side=1, labels=F, lwd.ticks=0 )
+
+# distributions
+curve( dlogis(x, location=0, scale=1), lwd=1.5, add=T ) 
+curve( dnorm(x, mean=0, sd=1.7), lwd=1.5, lty=2, add=T ) 
+legend('topleft', lwd=rep(1.5,2), lty=c(1,2), bty='n',
+       legend=c('Logistic', expression('Normal ' (sigma== 1.7) ) ) )
+
+dev.off()
+
+
+
+# figure 2b ####
+png( filename=file.path(main_dir, 'cummulative.png'), 
+     height=10, width=15, units='cm', res=400  )
+
+# initial figure
+par( mar=c(2,0,0.5,0) )
+plot( NULL, xlim=c(-6,6), ylim=c(0,1), 
+      xaxt='n', yaxt='n', xlab='', ylab='', axes=F )
+axis( side=1, labels=F, lwd.ticks=0 )
+
+# distributions
+curve( plogis(x, location=0, scale=1), lwd=1.5, add=T ) 
+curve( pnorm(x, mean=0, sd=1.7), lwd=1.5, lty=2, add=T ) 
+legend('topleft', lwd=rep(1.5,2), lty=c(1,2), bty='n',
+       legend=c('Logistic', expression('Normal ' (sigma== 1.7) ) ) )
+
+dev.off()
