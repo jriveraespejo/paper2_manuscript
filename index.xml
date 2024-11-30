@@ -262,21 +262,21 @@ the University of Antwerp (BOF).</funding-statement>
   trait continuum for two written texts. The figure shows that these
   processes follow a Normal distribution. Moreover, it depicts
   differences in the texts’ positions along the quality trait continuum,
-  where text B is positioned two units further along the continuum than
-  text A, as indicated by their modal discriminal processes
+  where text B is positioned further along the continuum than text A, as
+  indicated by their modal discriminal processes
   (<inline-formula><alternatives>
-  <tex-math><![CDATA[S_{B}=2]]></tex-math>
-  <mml:math display="inline" xmlns:mml="http://www.w3.org/1998/Math/MathML"><mml:mrow><mml:msub><mml:mi>S</mml:mi><mml:mi>B</mml:mi></mml:msub><mml:mo>=</mml:mo><mml:mn>2</mml:mn></mml:mrow></mml:math></alternatives></inline-formula>
+  <tex-math><![CDATA[S_{B}]]></tex-math>
+  <mml:math display="inline" xmlns:mml="http://www.w3.org/1998/Math/MathML"><mml:msub><mml:mi>S</mml:mi><mml:mi>B</mml:mi></mml:msub></mml:math></alternatives></inline-formula>
   and <inline-formula><alternatives>
-  <tex-math><![CDATA[S_{A}=0]]></tex-math>
-  <mml:math display="inline" xmlns:mml="http://www.w3.org/1998/Math/MathML"><mml:mrow><mml:msub><mml:mi>S</mml:mi><mml:mi>A</mml:mi></mml:msub><mml:mo>=</mml:mo><mml:mn>0</mml:mn></mml:mrow></mml:math></alternatives></inline-formula>).
+  <tex-math><![CDATA[S_{A}]]></tex-math>
+  <mml:math display="inline" xmlns:mml="http://www.w3.org/1998/Math/MathML"><mml:msub><mml:mi>S</mml:mi><mml:mi>A</mml:mi></mml:msub></mml:math></alternatives></inline-formula>).
   Finally, it highlights differences in the texts’ discriminal
   dispersions (<inline-formula><alternatives>
-  <tex-math><![CDATA[\sigma_{B}=1]]></tex-math>
-  <mml:math display="inline" xmlns:mml="http://www.w3.org/1998/Math/MathML"><mml:mrow><mml:msub><mml:mi>σ</mml:mi><mml:mi>B</mml:mi></mml:msub><mml:mo>=</mml:mo><mml:mn>1</mml:mn></mml:mrow></mml:math></alternatives></inline-formula>
+  <tex-math><![CDATA[\sigma_{B}]]></tex-math>
+  <mml:math display="inline" xmlns:mml="http://www.w3.org/1998/Math/MathML"><mml:msub><mml:mi>σ</mml:mi><mml:mi>B</mml:mi></mml:msub></mml:math></alternatives></inline-formula>
   and <inline-formula><alternatives>
-  <tex-math><![CDATA[\sigma_{A}=0.5]]></tex-math>
-  <mml:math display="inline" xmlns:mml="http://www.w3.org/1998/Math/MathML"><mml:mrow><mml:msub><mml:mi>σ</mml:mi><mml:mi>A</mml:mi></mml:msub><mml:mo>=</mml:mo><mml:mn>0.5</mml:mn></mml:mrow></mml:math></alternatives></inline-formula>),
+  <tex-math><![CDATA[\sigma_{A}]]></tex-math>
+  <mml:math display="inline" xmlns:mml="http://www.w3.org/1998/Math/MathML"><mml:msub><mml:mi>σ</mml:mi><mml:mi>A</mml:mi></mml:msub></mml:math></alternatives></inline-formula>),
   showing that text B exhibits a greater variability in its perceived
   quality than text A, as reflected by its wider distribution.</p>
   <fig id="fig-discriminal_process">
@@ -292,7 +292,7 @@ the University of Antwerp (BOF).</funding-statement>
   principle highlights that the outcome of a pairwise comparison likely
   depends on the relative distance between stimuli rather than their
   absolute positions on the trait continuum.</p>
-  <p>Thus, the theory assumes that the observed dichotomous outcome
+  <p>Indeed, the theory assumes that the observed dichotomous outcome
   arises from the distribution of the difference between the underlying
   discriminal processes of the stimuli, known as the <italic>discriminal
   difference</italic>. Since the individual discriminal processes follow
@@ -360,11 +360,10 @@ the University of Antwerp (BOF).</funding-statement>
   difference more distinctly favors text B over text A, as indicated by
   the shaded gray area under the curve in
   <xref alt="Figure 3" rid="fig-correlation">Figure 3</xref>.
-  Conversely, it is easy to infer that when the two texts have similar
-  or identical quality levels, higher correlations reduce the likelihood
-  that the discriminal difference distinctly favors one text over the
-  other, as the distribution narrows around zero (not depicted in the
-  figure).</p>
+  Conversely, when the two texts have similar or identical quality
+  levels, higher correlations reduce the likelihood that the discriminal
+  difference distinctly favors one text over the other, as the
+  distribution narrows around zero (not depicted in the figure).</p>
   <fig id="fig-correlation">
     <caption><p>Figure 3: The effect of correlation on the distribution
     of the discriminal difference of the same two written
