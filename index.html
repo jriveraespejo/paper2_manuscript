@@ -10,7 +10,7 @@
 <meta name="author" content="Tine van van Daal">
 <meta name="author" content="Sven De De Maeyer">
 <meta name="author" content="Steven Gillis">
-<meta name="dcterms.date" content="2024-11-30">
+<meta name="dcterms.date" content="2024-12-02">
 <meta name="keywords" content="Probability, Directed Acyclic Graphs, Bayesian methods, Thurstonian model, Comparative judgement, Structural Causal Models, Statistical modeling">
 
 <title>Let’s talk about Thurstone &amp; Co.: An information-theoretical model for comparative judgments, and its statistical translation</title>
@@ -107,10 +107,10 @@ window.Quarto = {
 <meta name="citation_author" content="Tine van van Daal">
 <meta name="citation_author" content="Sven De De Maeyer">
 <meta name="citation_author" content="Steven Gillis">
-<meta name="citation_publication_date" content="2024-11-30">
-<meta name="citation_cover_date" content="2024-11-30">
+<meta name="citation_publication_date" content="2024-12-02">
+<meta name="citation_cover_date" content="2024-12-02">
 <meta name="citation_year" content="2024">
-<meta name="citation_online_date" content="2024-11-30">
+<meta name="citation_online_date" content="2024-12-02">
 <meta name="citation_language" content="en">
 <meta name="citation_reference" content="citation_title=Correlation and causation;,citation_author=S. Wright;,citation_publication_date=1927;,citation_cover_date=1927;,citation_year=1927;,citation_fulltext_html_url=https://books.google.co.ao/books/about/Journal_of_Agricultural_Research.html?hl=pt-PT&amp;amp;amp;id=lNNdIV_qpwIC;,citation_issue=7;,citation_volume=20;,citation_journal_title=Correlation and causation;">
 <meta name="citation_reference" content="citation_title=On the interpretation of χ2 from contingency tables, and the calculation of p;,citation_author=R. Fisher;,citation_publication_date=1922;,citation_cover_date=1922;,citation_year=1922;,citation_fulltext_html_url=http://www.jstor.org/stable/2340521;,citation_issue=1;,citation_doi=10.2307/2340521;,citation_volume=85;,citation_journal_title=Journal of the Royal Statistical Society;,citation_publisher=[Wiley, Royal Statistical Society];">
@@ -434,7 +434,7 @@ window.Quarto = {
                 <div>
             <div class="quarto-title-meta-heading">Published</div>
             <div class="quarto-title-meta-contents">
-              <p class="date">November 30, 2024</p>
+              <p class="date">December 2, 2024</p>
             </div>
           </div>
           
@@ -525,7 +525,8 @@ window.Quarto = {
 <!-- recording: Sven and Tine 24.11.25; time: 00:00:35 - 00:06:55 -->
 <!-- recording: Sven and Tine 24.11.25; time: 00:30:35 - 00:35:10 -->
 <!-- 1. Thurstone's Theory of CJ: discriminal process -->
-<p>In its most general form, Thurstone’s theory deals with pairwise comparisons of stimuli made by a single judge <span class="citation" data-cites="Thurstone_1927b">(<a href="#ref-Thurstone_1927b" role="doc-biblioref">Thurstone 1927a, 267</a>)</span>. The theory proposes that two key factors determine the dichotomous outcome of these designs: the discriminal process of each stimulus and their discriminal difference. The <em>discriminal process</em> represents the psychological impact each stimulus has on judges or, more simply, their underlying perception of the stimulus’ trait level. According to the theory, the discriminal process for each stimulus follows a Normal distribution, where its mode (or mean), referred to as the <em>modal discriminal process</em>, indicates the stimulus’ position on the trait continuum, and its dispersion, known as the <em>discriminal dispersion</em>, reflects the variability in the perceived trait level of the stimulus.</p>
+<p>In its most general form, Thurstone’s theory deals with pairwise comparisons of stimuli made by a single judge <span class="citation" data-cites="Thurstone_1927b">(<a href="#ref-Thurstone_1927b" role="doc-biblioref">Thurstone 1927a, 267</a>)</span>. The theory proposes that two key factors determine the dichotomous outcome of these comparisons: the discriminal process of each stimulus and their discriminal difference. The <em>discriminal process</em> represents the psychological impact each stimulus has on judges or, more simply, their underlying perception of the stimulus’ trait level. According to the theory, the discriminal process for each stimulus follows a Normal distribution, where its mode (or the mean), referred to as the <em>modal discriminal process</em>, indicates the stimulus’ position on the trait continuum, and its dispersion, known as the <em>discriminal dispersion</em>, reflects the variability in the perceived trait level of the stimulus.</p>
+<!-- 2. Example of discriminal processes -->
 <p>For instance, <a href="#fig-discriminal_process" class="quarto-xref">Figure&nbsp;1</a> illustrates the discriminal process distributions along a quality trait continuum for two written texts. The figure shows that these processes follow a Normal distribution. Moreover, it depicts differences in the texts’ positions along the quality trait continuum, where text B is positioned further along the continuum than text A, as indicated by their modal discriminal processes (<span class="math inline">\(S_{B}\)</span> and <span class="math inline">\(S_{A}\)</span>). Finally, it highlights differences in the texts’ discriminal dispersions (<span class="math inline">\(\sigma_{B}\)</span> and <span class="math inline">\(\sigma_{A}\)</span>), showing that text B exhibits a greater variability in its perceived quality than text A, as reflected by its wider distribution.</p>
 <div id="fig-discriminal_process" class="quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-fig figure">
@@ -537,9 +538,10 @@ Figure&nbsp;1: Example distributions of the discriminal processes for two writte
 </div>
 </figure>
 </div>
-<!-- 2. Thurstone's Theory of CJ: discriminal difference -->
+<!-- 3. Thurstone's Theory of CJ: discriminal difference -->
 <p>However, because the discriminal process of a single stimulus is not directly observable, the theory introduces the <em>law of comparative judgment</em>. This law posits that in pairwise comparisons, a judge perceives the stimulus positioned further along the trait continuum as having a higher level of that trait. This principle highlights that the outcome of a pairwise comparison likely depends on the relative distance between stimuli rather than their absolute positions on the trait continuum.</p>
-<p>Indeed, the theory assumes that the observed dichotomous outcome arises from the distribution of the difference between the underlying discriminal processes of the stimuli, known as the <em>discriminal difference</em>. Since the individual discriminal processes follow a Normal distribution, their difference also follows a Normal distribution. The mode (or mean) of this distribution, representing the (average) relative separation, is given by the difference between the modal discriminal processes of the stimuli <span class="math inline">\(S_{BA} = S_{B} - S_{A}\)</span>. Meanwhile, the dispersion of the distribution, reflecting the variability in the relative separation, is calculated as <span class="math inline">\(\sigma_{BA} = \sqrt{\sigma_{B}^{2} + \sigma_{A}^{2} - \rho\sigma_{B}\sigma_{A}}\)</span>. Here, <span class="math inline">\(\sigma_{B}\)</span> and <span class="math inline">\(\sigma_{A}\)</span> are the previously defined discriminal dispersions, while <span class="math inline">\(\rho\)</span> measures the correlation between their discriminal processes. This correlation quantifies how much the judge’s perception of the trait in one stimulus influences his perception of the same trait in the other.</p>
+<p>Indeed, the theory assumes that the observed dichotomous outcome arises from the distribution of the difference between the underlying discriminal processes of the stimuli, known as the <em>discriminal difference</em>. Since the individual discriminal processes follow a Normal distribution, their difference also follows a Normal distribution. The mode (or the mean) of this distribution, representing the (average) relative separation, is given by the difference between the modal discriminal processes of the stimuli <span class="math inline">\(S_{BA} = S_{B} - S_{A}\)</span>. Meanwhile, the dispersion of the distribution, reflecting the variability in the relative separation, is calculated as <span class="math inline">\(\sigma_{BA} = \sqrt{\sigma_{B}^{2} + \sigma_{A}^{2} - \rho\sigma_{B}\sigma_{A}}\)</span>. Here, <span class="math inline">\(\sigma_{B}\)</span> and <span class="math inline">\(\sigma_{A}\)</span> are the previously defined discriminal dispersions, while <span class="math inline">\(\rho\)</span> measures the correlation between the discriminal processes of the stimuli. This correlation quantifies the dependence of the judge’s perception of the trait in one stimulus on his perception of the same trait in the other.</p>
+<!-- 4. Example of discriminal difference -->
 <p><a href="#fig-discriminal_difference" class="quarto-xref">Figure&nbsp;2</a> shows the distribution of the discriminal difference for the texts depicted in <a href="#fig-discriminal_process" class="quarto-xref">Figure&nbsp;1</a>, assuming a correlation of <span class="math inline">\(\rho = 0.6\)</span>. The figure reveals that, under these conditions, the judge perceives text B as having significantly higher quality than text A, as indicated by the shaded gray area under the curve <span class="math inline">\(P(B &gt; A)\)</span>. As a result, the dichotomous outcome of this comparison almost certainly favors text B over text A.</p>
 <div id="fig-discriminal_difference" class="quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-fig figure">
@@ -551,8 +553,10 @@ Figure&nbsp;2: Example distribution of the discriminal difference for the two te
 </div>
 </figure>
 </div>
-<p>Additionally, <a href="#fig-correlation" class="quarto-xref">Figure&nbsp;3</a> illustrates how varying correlations influence the distribution of the discriminal difference for the same two texts. The figure shows that as the correlation increases, indicating a stronger influence of the judge’s perception of quality in one text on his perception of the other, the distribution of the discriminal difference becomes narrower. This narrowing affects the area under the curve that determines the comparison outcome and, ultimately, the conclusions drawn from this outcome.</p>
-<p>For instance, when two texts clearly differ in quality, as depicted in <a href="#fig-discriminal_process" class="quarto-xref">Figure&nbsp;1</a>, higher correlations increase the likelihood that the discriminal difference more distinctly favors text B over text A, as indicated by the shaded gray area under the curve in <a href="#fig-correlation" class="quarto-xref">Figure&nbsp;3</a>. Conversely, when the two texts have similar or identical quality levels, higher correlations reduce the likelihood that the discriminal difference distinctly favors one text over the other, as the distribution narrows around zero (not depicted in the figure).</p>
+<!-- 5. The effects of correlation on the discriminal difference -->
+<p>Notably, the correlation between the discriminal processes, <span class="math inline">\(\rho\)</span>, plays a pivotal role in determining comparison outcomes by shaping the distribution of the discriminal difference between the stimuli. Specifically, as the correlation increases, reflecting a stronger dependence of the judge’s perception of quality in one stimulus on his perception of the other, the distribution of the discriminal difference narrows. This narrowing ultimately impacts the area under the curve that determines the comparison outcome and, consequently, the conclusions drawn from the comparison.</p>
+<!-- 6. example of the effects of correlation on the discriminal difference -->
+<p><a href="#fig-correlation" class="quarto-xref">Figure&nbsp;3</a> illustrates how varying correlations influence the distribution of the discriminal difference for the two texts depicted in <a href="#fig-discriminal_process" class="quarto-xref">Figure&nbsp;1</a>. Since the texts differ in quality, higher correlations increase the likelihood that the discriminal difference distinctly favors text B over text A. This is evident from the larger proportion of the area under the curve, <span class="math inline">\(P(B &gt; A)\)</span>, that lies above zero (shaded gray area in <a href="#fig-correlation" class="quarto-xref">Figure&nbsp;3</a>). Conversely, it is not hard to infer that if the texts had similar or identical quality levels, higher correlations would likely reduce the chance that the discriminal difference distinctly favors one text over the other. This probability reduction occurs because the distribution of the discriminal difference would become more narrowly centered around zero (not illustrated).</p>
 <div id="fig-correlation" class="quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-fig figure">
 <figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-fig" id="fig-correlation-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
@@ -890,7 +894,7 @@ Whitehouse, C. 2012. <span>“Testing the Validity of Judgements about Geography
   title = {Let’s Talk about {Thurstone} \&amp; {Co.:} {An}
     Information-Theoretical Model for Comparative Judgments, and Its
     Statistical Translation},
-  date = {2024-11-30},
+  date = {2024-12-02},
   langid = {en},
   abstract = {(to do)}
 }
@@ -898,7 +902,7 @@ Whitehouse, C. 2012. <span>“Testing the Validity of Judgements about Geography
 Rivera Espejo, Jose Manuel, Tine van van Daal, Sven De De Maeyer, and
 Steven Gillis. 2024. <span>“Let’s Talk about Thurstone &amp; Co.: An
 Information-Theoretical Model for Comparative Judgments, and Its
-Statistical Translation.”</span> November 30, 2024.
+Statistical Translation.”</span> December 2, 2024.
 </div></div></section></div></main>
 <!-- /main column -->
 <script id="quarto-html-after-body" type="application/javascript">

@@ -104,10 +104,10 @@ sciences</institution>
 <corresp id="cor-1">JoseManuel.RiveraEspejo@uantwerpen.be</corresp>
 </author-notes>
 
-<pub-date date-type="pub" publication-format="electronic" iso-8601-date="2024-11-30">
+<pub-date date-type="pub" publication-format="electronic" iso-8601-date="2024-12-02">
 <year>2024</year>
-<month>11</month>
-<day>30</day>
+<month>12</month>
+<day>2</day>
 </pub-date>
 
 
@@ -245,15 +245,15 @@ the University of Antwerp (BOF).</funding-statement>
   comparisons of stimuli made by a single judge
   (<xref alt="Thurstone 1927a, 267" rid="ref-Thurstone_1927b" ref-type="bibr">Thurstone
   1927a, 267</xref>). The theory proposes that two key factors determine
-  the dichotomous outcome of these designs: the discriminal process of
-  each stimulus and their discriminal difference. The
+  the dichotomous outcome of these comparisons: the discriminal process
+  of each stimulus and their discriminal difference. The
   <italic>discriminal process</italic> represents the psychological
   impact each stimulus has on judges or, more simply, their underlying
   perception of the stimulus’ trait level. According to the theory, the
   discriminal process for each stimulus follows a Normal distribution,
-  where its mode (or mean), referred to as the <italic>modal discriminal
-  process</italic>, indicates the stimulus’ position on the trait
-  continuum, and its dispersion, known as the <italic>discriminal
+  where its mode (or the mean), referred to as the <italic>modal
+  discriminal process</italic>, indicates the stimulus’ position on the
+  trait continuum, and its dispersion, known as the <italic>discriminal
   dispersion</italic>, reflects the variability in the perceived trait
   level of the stimulus.</p>
   <p>For instance,
@@ -297,9 +297,9 @@ the University of Antwerp (BOF).</funding-statement>
   discriminal processes of the stimuli, known as the <italic>discriminal
   difference</italic>. Since the individual discriminal processes follow
   a Normal distribution, their difference also follows a Normal
-  distribution. The mode (or mean) of this distribution, representing
-  the (average) relative separation, is given by the difference between
-  the modal discriminal processes of the stimuli
+  distribution. The mode (or the mean) of this distribution,
+  representing the (average) relative separation, is given by the
+  difference between the modal discriminal processes of the stimuli
   <inline-formula><alternatives>
   <tex-math><![CDATA[S_{BA} = S_{B} - S_{A}]]></tex-math>
   <mml:math display="inline" xmlns:mml="http://www.w3.org/1998/Math/MathML"><mml:mrow><mml:msub><mml:mi>S</mml:mi><mml:mrow><mml:mi>B</mml:mi><mml:mi>A</mml:mi></mml:mrow></mml:msub><mml:mo>=</mml:mo><mml:msub><mml:mi>S</mml:mi><mml:mi>B</mml:mi></mml:msub><mml:mo>−</mml:mo><mml:msub><mml:mi>S</mml:mi><mml:mi>A</mml:mi></mml:msub></mml:mrow></mml:math></alternatives></inline-formula>.
@@ -318,10 +318,10 @@ the University of Antwerp (BOF).</funding-statement>
   <inline-formula><alternatives>
   <tex-math><![CDATA[\rho]]></tex-math>
   <mml:math display="inline" xmlns:mml="http://www.w3.org/1998/Math/MathML"><mml:mi>ρ</mml:mi></mml:math></alternatives></inline-formula>
-  measures the correlation between their discriminal processes. This
-  correlation quantifies how much the judge’s perception of the trait in
-  one stimulus influences his perception of the same trait in the
-  other.</p>
+  measures the correlation between the discriminal processes of the
+  stimuli. This correlation quantifies the dependence of the judge’s
+  perception of the trait in one stimulus on his perception of the same
+  trait in the other.</p>
   <p><xref alt="Figure 2" rid="fig-discriminal_difference">Figure 2</xref>
   shows the distribution of the discriminal difference for the texts
   depicted in
@@ -344,26 +344,36 @@ the University of Antwerp (BOF).</funding-statement>
     assuming a correlation of 0.6</p></caption>
     <graphic mimetype="image" mime-subtype="png" xlink:href="./images/figures/discriminal_difference.png" />
   </fig>
-  <p>Additionally,
-  <xref alt="Figure 3" rid="fig-correlation">Figure 3</xref> illustrates
-  how varying correlations influence the distribution of the discriminal
-  difference for the same two texts. The figure shows that as the
-  correlation increases, indicating a stronger influence of the judge’s
-  perception of quality in one text on his perception of the other, the
-  distribution of the discriminal difference becomes narrower. This
-  narrowing affects the area under the curve that determines the
-  comparison outcome and, ultimately, the conclusions drawn from this
-  outcome.</p>
-  <p>For instance, when two texts clearly differ in quality, as depicted
-  in <xref alt="Figure 1" rid="fig-discriminal_process">Figure 1</xref>,
-  higher correlations increase the likelihood that the discriminal
-  difference more distinctly favors text B over text A, as indicated by
-  the shaded gray area under the curve in
-  <xref alt="Figure 3" rid="fig-correlation">Figure 3</xref>.
-  Conversely, when the two texts have similar or identical quality
-  levels, higher correlations reduce the likelihood that the discriminal
-  difference distinctly favors one text over the other, as the
-  distribution narrows around zero (not depicted in the figure).</p>
+  <p>Notably, the correlation between the discriminal processes,
+  <inline-formula><alternatives>
+  <tex-math><![CDATA[\rho]]></tex-math>
+  <mml:math display="inline" xmlns:mml="http://www.w3.org/1998/Math/MathML"><mml:mi>ρ</mml:mi></mml:math></alternatives></inline-formula>,
+  plays a pivotal role in determining comparison outcomes by shaping the
+  distribution of the discriminal difference between the stimuli.
+  Specifically, as the correlation increases, reflecting a stronger
+  dependence of the judge’s perception of quality in one stimulus on his
+  perception of the other, the distribution of the discriminal
+  difference narrows. This narrowing ultimately impacts the area under
+  the curve that determines the comparison outcome and, consequently,
+  the conclusions drawn from the comparison.</p>
+  <p><xref alt="Figure 3" rid="fig-correlation">Figure 3</xref>
+  illustrates how varying correlations influence the distribution of the
+  discriminal difference for the two texts depicted in
+  <xref alt="Figure 1" rid="fig-discriminal_process">Figure 1</xref>.
+  Since the texts differ in quality, higher correlations increase the
+  likelihood that the discriminal difference distinctly favors text B
+  over text A. This is evident from the larger proportion of the area
+  under the curve, <inline-formula><alternatives>
+  <tex-math><![CDATA[P(B > A)]]></tex-math>
+  <mml:math display="inline" xmlns:mml="http://www.w3.org/1998/Math/MathML"><mml:mrow><mml:mi>P</mml:mi><mml:mrow><mml:mo stretchy="true" form="prefix">(</mml:mo><mml:mi>B</mml:mi><mml:mo>&gt;</mml:mo><mml:mi>A</mml:mi><mml:mo stretchy="true" form="postfix">)</mml:mo></mml:mrow></mml:mrow></mml:math></alternatives></inline-formula>,
+  that lies above zero (shaded gray area in
+  <xref alt="Figure 3" rid="fig-correlation">Figure 3</xref>).
+  Conversely, it is not hard to infer that if the texts had similar or
+  identical quality levels, higher correlations would likely reduce the
+  chance that the discriminal difference distinctly favors one text over
+  the other. This probability reduction occurs because the distribution
+  of the discriminal difference would become more narrowly centered
+  around zero (not illustrated).</p>
   <fig id="fig-correlation">
     <caption><p>Figure 3: The effect of correlation on the distribution
     of the discriminal difference of the same two written
