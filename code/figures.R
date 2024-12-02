@@ -18,7 +18,7 @@ colorArea <- function(from, to, density, ..., col="lightgray", dens=NULL){
 
 # distributional parameters
 dpA = c(0, 0.5) # distribution text A (mean, sd)
-dpB = c(2, 1) # distribution text B (mean, sd)
+dpB = c(1, 1) # distribution text B (mean, sd)
 rAB = 0.6 # correlation between discriminal processes
 
 # figure
@@ -27,7 +27,7 @@ png( filename=file.path(main_dir, 'discriminal_process.png'),
 
 # initial figure
 par( mar=c(2,0,0.5,0) )
-plot( NULL, xlim=c(-2,6), ylim=c(0,0.9), 
+plot( NULL, xlim=c(-2,5), ylim=c(0,0.9), 
       xaxt='n', yaxt='n', xlab='', ylab='', axes=F )
 axis( side=1, labels=F, lwd.ticks=0 )
 axis( side=1, at=c(dpA[1], dpB[1]), tick=F, 
@@ -75,7 +75,7 @@ png( filename=file.path(main_dir, 'discriminal_difference.png'),
 
 # initial figure
 par( mar=c(2,0,0.5,0) )
-plot( NULL, xlim=c(-2,6), ylim=c(0,0.5), 
+plot( NULL, xlim=c(-2,5), ylim=c(0,0.5), 
       xaxt='n', yaxt='n', xlab='', ylab='', axes=F )
 axis( side=1, labels=F, lwd.ticks=0 )
 axis( side=1, at=c(0, dd[1]), tick=F, 
@@ -101,8 +101,8 @@ text( x=dd[1]+2, y=pplotD[4], cex=0.8,
 text( x=dd[1]+2.45, y=pplotD[4]-0.04, cex=0.8,
       expression( sigma[BA] == sqrt( sigma[B]^2 + sigma[A]^2 - rho*sigma[B]*sigma[A]) ) )
 lines( x=c(0,0), y=c(pplotD[5],-0.1), lty=2, lwd=0.7 )
-text( x=-0.7, y=0.05, cex=0.8, expression( P(B<A) ) ) 
-text( x=0.8, y=0.05, cex=0.8, expression( P(B>A) ) ) 
+# text( x=-0.5, y=0.05, cex=0.8, expression( P(B<A) ) ) 
+text( x=0.5, y=0.05, cex=0.8, expression( P(B>A) ) ) 
 
 # # alternative distribution when there is no correlation
 # curve( dnorm(x, mean=dd_alt[1], sd=dd_alt[2]), lwd=0.5, lty=2, add=T )
@@ -128,7 +128,7 @@ png( filename=file.path(main_dir, 'correlation.png'),
 
 # initial figure
 par( mar=c(2,0,0.5,0) )
-plot( NULL, xlim=c(-2,6), ylim=c(0,0.5),
+plot( NULL, xlim=c(-2,5), ylim=c(0,0.5),
       xaxt='n', yaxt='n', xlab='', ylab='', axes=F )
 axis( side=1, labels=F, lwd.ticks=0 )
 axis( side=1, at=0, tick=F, label='0' )
@@ -141,7 +141,8 @@ for(i in 1:length(dd[[2]])){
   # colorArea( from=0, to=7, density=dnorm, mean=dd[[1]], sd=dd[[2]][i], col=rgb(0,0,0,0.05) )
   curve( dnorm(x, mean=dd[[1]], sd=dd[[2]][i]), lwd=0.214*i, lty=l_ty[i], add=T )
 }
-lines( x=c(0,0), y=c(0.1,-0.1), lty=2, lwd=0.7 )
+lines( x=c(0,0), y=c(pplotD[5],-0.1), lty=2, lwd=0.7 )
+text( x=0.5, y=0.05, cex=0.8, expression( P(B>A) ) ) 
 legend('topleft', lwd=0.214*(1:length(rAB)), lty=l_ty, bty='n',
        legend=parse(text=text) )
 
