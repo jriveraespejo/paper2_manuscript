@@ -297,7 +297,9 @@ the University of Antwerp (BOF).</funding-statement>
   discriminal processes of the stimuli, known as the <italic>discriminal
   difference</italic>. Since the individual discriminal processes follow
   a Normal distribution, their difference also follows a Normal
-  distribution. The mode (or the mean) of this distribution,
+  distribution
+  (<xref alt="Andrich 1978" rid="ref-Andrich_1978" ref-type="bibr">Andrich
+  1978</xref>). The mode (or the mean) of this distribution,
   representing the (average) relative separation, is given by the
   difference between the modal discriminal processes of the stimuli
   <inline-formula><alternatives>
@@ -335,8 +337,8 @@ the University of Antwerp (BOF).</funding-statement>
   <inline-formula><alternatives>
   <tex-math><![CDATA[P(B > A)]]></tex-math>
   <mml:math display="inline" xmlns:mml="http://www.w3.org/1998/Math/MathML"><mml:mrow><mml:mi>P</mml:mi><mml:mrow><mml:mo stretchy="true" form="prefix">(</mml:mo><mml:mi>B</mml:mi><mml:mo>&gt;</mml:mo><mml:mi>A</mml:mi><mml:mo stretchy="true" form="postfix">)</mml:mo></mml:mrow></mml:mrow></mml:math></alternatives></inline-formula>.
-  As a result, the dichotomous outcome of this comparison almost
-  certainly favors text B over text A.</p>
+  As a result, the dichotomous outcome of this comparison would mostly
+  favor text B over text A.</p>
   <fig id="fig-discriminal_difference">
     <caption><p>Figure 2: Example distribution of the discriminal
     difference for the two texts shown in
@@ -355,7 +357,7 @@ the University of Antwerp (BOF).</funding-statement>
   perception of the other, the distribution of the discriminal
   difference narrows. This narrowing ultimately impacts the area under
   the curve that determines the comparison outcome and, consequently,
-  the conclusions drawn from the comparison.</p>
+  the conclusions drawn from this outcome.</p>
   <p><xref alt="Figure 3" rid="fig-correlation">Figure 3</xref>
   illustrates how varying correlations influence the distribution of the
   discriminal difference for the two texts depicted in
@@ -392,11 +394,11 @@ the University of Antwerp (BOF).</funding-statement>
     form, where each successive case incorporates additional simplifying
     assumptions. Case I represents the general form of the theory. Case
     II extends this by allowing multiple judges to make comparisons
-    rather than restricting the comparisons to a single judge. Case III
-    introduces the assumption of zero correlation between stimuli. Case
-    IV builds on this by assuming that the stimuli have similar
-    dispersions. Finally, Case V replaces this assumption with the
-    condition that the stimuli have equal discriminal dispersions.
+    rather than restricting them to a single judge. Case III introduces
+    the assumption of zero correlation between stimuli. Case IV builds
+    on this by assuming that the stimuli have similar dispersions.
+    Finally, Case V replaces this assumption with the condition that the
+    stimuli have equal discriminal dispersions.
     <xref alt="Table 1" rid="tbl-thurstone_cases">Table 1</xref>
     summarizes these cases and their assumptions. For a detailed
     discussion of this progression, refer to Thurstone
@@ -504,18 +506,14 @@ the University of Antwerp (BOF).</funding-statement>
     frequently involve these traits and stimuli, two main assumptions of
     Case V may not consistently hold in theory or practice: the zero
     correlation and equal dispersion between stimuli.</p>
-    <p>As outlined in the previous section, the assumption of
-    <italic>zero correlation between stimuli</italic> suggests that
-    during a pairwise comparison, a judge’s perception of quality in one
-    text does not influence his perception of the same trait in another
-    text (see
-    <xref alt="Figure 3" rid="fig-correlation">Figure 3</xref>,
-    <inline-formula><alternatives>
-    <tex-math><![CDATA[\rho=0]]></tex-math>
-    <mml:math display="inline" xmlns:mml="http://www.w3.org/1998/Math/MathML"><mml:mrow><mml:mi>ρ</mml:mi><mml:mo>=</mml:mo><mml:mn>0</mml:mn></mml:mrow></mml:math></alternatives></inline-formula>).
-    Thurstone attributed this independence to the cancellation of
-    potential judges’ biases, driven by two opposing and equally
-    weighted effects occurring during the pairwise comparisons
+    <p>As outlined in
+    <xref alt="Section 2" rid="sec-thurstone_theory">Section 2</xref>,
+    the assumption of <italic>zero correlation between stimuli</italic>
+    implies that, during a pairwise comparison, a judge’s perception of
+    quality in one text does not influence his perception of the same
+    trait in another text. Thurstone attributed this independence to the
+    cancellation of potential judges’ biases, driven by two opposing and
+    equally weighted effects occurring during the pairwise comparisons
     (<xref alt="Thurstone 1927a, 268" rid="ref-Thurstone_1927b" ref-type="bibr">Thurstone
     1927a, 268</xref>). Andrich
     (<xref alt="1978" rid="ref-Andrich_1978" ref-type="bibr">1978</xref>)
@@ -527,28 +525,26 @@ the University of Antwerp (BOF).</funding-statement>
     heterogeneous stimuli and when an additional hierarchical structure
     is relevant to the stimuli.</p>
     <p>In the first scenario, the intricate aspects of multidimensional,
-    complex traits may introduce dependencies between heterogeneous
-    stimuli due to certain judges’ biases that resist cancellation.
-    Research on text quality indicates that when judges evaluate these
-    traits, they often rely on various intricate aspects of the stimuli
-    to form their judgments
+    complex traits may introduce dependencies between the stimuli due to
+    certain judges’ biases that resist cancellation. Research on text
+    quality suggests that when judges evaluating these traits, they
+    often rely on various intricate characteristics of the stimuli
     (<xref alt="van Daal et al. 2016" rid="ref-vanDaal_et_al_2016" ref-type="bibr">van
     Daal et al. 2016</xref>;
     <xref alt="Lesterhuis 2018b" rid="ref-Lesterhuis_2018" ref-type="bibr">Lesterhuis
     2018b</xref>;
     <xref alt="Chambers and Cunningham 2022" rid="ref-Chambers_et_al_2022" ref-type="bibr">Chambers
-    and Cunningham 2022</xref>). These aspects, which are likely neither
-    equally weighted nor opposing, may influence judges’ perceptions
-    unevenly. For example, this could occur when a judge assessing the
-    argumentative quality of a text places disproportionate emphasis on
-    grammatical accuracy, ultimately favoring texts with fewer errors
-    but weaker arguments. Ignoring these relevant additional “traits”
-    can result in biases that resist cancellation, introducing
+    and Cunningham 2022</xref>). These additional relevant
+    characteristics, which are unlikely to be equally weighted or
+    opposing, can unevenly influence judges’ perceptions, creating
+    biases in their judgments and, consequently, introducing
     dependencies between stimuli
     (<xref alt="van der Linden 2017b, 2:346" rid="ref-vanderLinden_et_al_2017_II" ref-type="bibr">van
-    der Linden 2017b, 2:346</xref>) and ultimately violating the
-    assumption of zero correlation. While direct evidence for the
-    specific mechanisms causing biases is lacking, studies such as
+    der Linden 2017b, 2:346</xref>). For example, this could occur when
+    a judge assessing the argumentative quality of a text places
+    disproportionate emphasis on grammatical accuracy, ultimately
+    favoring texts with fewer errors but weaker arguments. While direct
+    evidence for this specific scenario is lacking, studies such as
     Pollitt and Elliott
     (<xref alt="2003" rid="ref-Pollitt_et_al_2003" ref-type="bibr">2003</xref>)
     demonstrate the presence of such biases, supporting the idea that
@@ -556,8 +552,8 @@ the University of Antwerp (BOF).</funding-statement>
     out.</p>
     <p>In the second scenario, the shared context or inherent
     connections created by additional hierarchical structures may
-    introduce dependencies between stimuli, a statistical phenomenon
-    commonly known as clustering
+    further introduce dependencies between stimuli, a statistical
+    phenomenon commonly known as clustering
     (<xref alt="Everitt and Skrondal 2010" rid="ref-Everitt_et_al_2010" ref-type="bibr">Everitt
     and Skrondal 2010</xref>). Although the CJ literature acknowledges
     the presence of such hierarchical structures in CJ data, the
@@ -582,27 +578,36 @@ the University of Antwerp (BOF).</funding-statement>
     scores, which generates additional statistical and measurement
     issues, as discussed in section
     <xref alt="Section 3.2" rid="sec-theory-issue2">Section 3.2</xref>.</p>
-    <p>In any case, the psychometric and statistical literature strongly
-    advises against ignoring relevant additional traits or overlooking
-    clustering (grouping) structures that may introduce dependencies
-    between stimuli. First, ignoring additional aspects pertinent to the
-    trait of interest can cause a dimensional mismatch, which can lead
-    to an overestimation of the precision (reliability) of the trait’s
-    measurement
-    (<xref alt="Hoyle 2023, 340–41" rid="ref-Hoyle_et_al_2023" ref-type="bibr">Hoyle
-    2023, 340–41</xref>) or, worse, introduce bias into the measurement
-    process
-    (<xref alt="Ackerman 1989" rid="ref-Ackerman_1989" ref-type="bibr">Ackerman
-    1989</xref>). Additionally, overlooking relevant hierarchical (or
-    grouping) structures can exacerbate the inflation of reliability by
-    reducing the accuracy of the model’s parameters
-    (<xref alt="Hoyle 2023, 482" rid="ref-Hoyle_et_al_2023" ref-type="bibr">Hoyle
-    2023, 482</xref>). Taken together, these oversights undermine the
-    reliability of the measurement process and, since validity cannot
-    exist without reliability
+    <p>In any case, the psychometric and statistical literature
+    underscores the importance of incorporating additional relevant
+    traits and clustering (grouping) structures into the modeling of CJ
+    data to address potential dependencies between stimuli. Oversights
+    in these areas can lead to misleading conclusions about the trait’s
+    reliability and ultimately compromise its validity
     (<xref alt="Perron and Gillespie 2015, 2" rid="ref-Perron_et_al_2015" ref-type="bibr">Perron
-    and Gillespie 2015, 2</xref>), ultimately compromise the validity of
-    the results derived from it.</p>
+    and Gillespie 2015, 2</xref>). Neglecting additional traits relevant
+    to the stimuli or the trait of interest, such as judges’ biases,
+    introduces a dimensional mismatch in the modeling process of the CJ
+    data. This mismatch often results in an overestimation of the
+    trait’s reliability
+    (<xref alt="Hoyle 2023, 341" rid="ref-Hoyle_et_al_2023" ref-type="bibr">Hoyle
+    2023, 341</xref>) or, worse, introduces biases into the estimated
+    trait
+    (<xref alt="Ackerman 1989" rid="ref-Ackerman_1989" ref-type="bibr">Ackerman
+    1989</xref>). Therefore, these traits must be incorporated into the
+    modeling of CJ data, as demonstrated by Andrich
+    (<xref alt="1978" rid="ref-Andrich_1978" ref-type="bibr">1978</xref>)
+    and Wainer, TimbersFairbank, and Hough
+    (<xref alt="1978" rid="ref-Wainer_et_al_1978" ref-type="bibr">1978</xref>).
+    Similarly, ignoring hierarchical (grouping) structures reduces the
+    accuracy of model parameter estimates and further exacerbates the
+    overestimation of reliability
+    (<xref alt="Hoyle 2023, 482" rid="ref-Hoyle_et_al_2023" ref-type="bibr">Hoyle
+    2023, 482</xref>). To address this, any additional hierarchical
+    structure relevant to the stimuli should also be included in the
+    model, as in Multilevel Structural Equation models (MSEM)
+    (<xref alt="Hoyle 2023, chap. 26" rid="ref-Hoyle_et_al_2023" ref-type="bibr">Hoyle
+    2023, chap. 26</xref>).</p>
   </sec>
   <sec id="sec-theory-issue2">
     <title>The disconnect between trait measurement and hypothesis
@@ -850,6 +855,24 @@ the University of Antwerp (BOF).</funding-statement>
       <pub-id pub-id-type="doi">10.1177/014662167800200319</pub-id>
       <fpage>451</fpage>
       <lpage>462</lpage>
+    </element-citation>
+  </ref>
+  <ref id="ref-Wainer_et_al_1978">
+    <element-citation publication-type="article-journal">
+      <person-group person-group-type="author">
+        <name><surname>Wainer</surname><given-names>H.</given-names></name>
+        <name><surname>TimbersFairbank</surname><given-names>D.</given-names></name>
+        <name><surname>Hough</surname><given-names>R.</given-names></name>
+      </person-group>
+      <article-title>Predicting the impact of simple and compound life change events</article-title>
+      <source>Applied Psychological Measurement</source>
+      <year iso-8601-date="1978">1978</year>
+      <volume>2</volume>
+      <issue>3</issue>
+      <uri></uri>
+      <pub-id pub-id-type="doi">10.1177/014662167800200301</pub-id>
+      <fpage>313</fpage>
+      <lpage>322</lpage>
     </element-citation>
   </ref>
   <ref id="ref-Ackerman_1989">

@@ -305,12 +305,13 @@ Indeed, the theory assumes that the observed dichotomous outcome arises
 from the distribution of the difference between the underlying
 discriminal processes of the stimuli, known as the \emph{discriminal
 difference}. Since the individual discriminal processes follow a Normal
-distribution, their difference also follows a Normal distribution. The
-mode (or the mean) of this distribution, representing the (average)
-relative separation, is given by the difference between the modal
-discriminal processes of the stimuli \(S_{BA} = S_{B} - S_{A}\).
-Meanwhile, the dispersion of the distribution, reflecting the
-variability in the relative separation, is calculated as
+distribution, their difference also follows a Normal distribution
+\citep{Andrich_1978}. The mode (or the mean) of this distribution,
+representing the (average) relative separation, is given by the
+difference between the modal discriminal processes of the stimuli
+\(S_{BA} = S_{B} - S_{A}\). Meanwhile, the dispersion of the
+distribution, reflecting the variability in the relative separation, is
+calculated as
 \(\sigma_{BA} = \sqrt{\sigma_{B}^{2} + \sigma_{A}^{2} - \rho\sigma_{B}\sigma_{A}}\).
 Here, \(\sigma_{B}\) and \(\sigma_{A}\) are the previously defined
 discriminal dispersions, while \(\rho\) measures the correlation between
@@ -324,8 +325,8 @@ Figure~\ref{fig-discriminal_process}, assuming a correlation of
 \(\rho = 0.6\). The figure reveals that, under these conditions, the
 judge perceives text B as having significantly higher quality than text
 A, as indicated by the shaded gray area under the curve \(P(B > A)\). As
-a result, the dichotomous outcome of this comparison almost certainly
-favors text B over text A.
+a result, the dichotomous outcome of this comparison would mostly favor
+text B over text A.
 
 \begin{figure}
 
@@ -349,7 +350,7 @@ dependence of the judge's perception of quality in one stimulus on his
 perception of the other, the distribution of the discriminal difference
 narrows. This narrowing ultimately impacts the area under the curve that
 determines the comparison outcome and, consequently, the conclusions
-drawn from the comparison.
+drawn from this outcome.
 
 Figure~\ref{fig-correlation} illustrates how varying correlations
 influence the distribution of the discriminal difference for the two
@@ -391,9 +392,9 @@ developed four additional cases derived from this general form, where
 each successive case incorporates additional simplifying assumptions.
 Case I represents the general form of the theory. Case II extends this
 by allowing multiple judges to make comparisons rather than restricting
-the comparisons to a single judge. Case III introduces the assumption of
-zero correlation between stimuli. Case IV builds on this by assuming
-that the stimuli have similar dispersions. Finally, Case V replaces this
+them to a single judge. Case III introduces the assumption of zero
+correlation between stimuli. Case IV builds on this by assuming that the
+stimuli have similar dispersions. Finally, Case V replaces this
 assumption with the condition that the stimuli have equal discriminal
 dispersions. Table~\ref{tbl-thurstone_cases} summarizes these cases and
 their assumptions. For a detailed discussion of this progression, refer
@@ -475,72 +476,76 @@ applications frequently involve these traits and stimuli, two main
 assumptions of Case V may not consistently hold in theory or practice:
 the zero correlation and equal dispersion between stimuli.
 
-As outlined in the previous section, the assumption of \emph{zero
-correlation between stimuli} suggests that during a pairwise comparison,
-a judge's perception of quality in one text does not influence his
-perception of the same trait in another text (see
-Figure~\ref{fig-correlation}, \(\rho=0\)). Thurstone attributed this
-independence to the cancellation of potential judges' biases, driven by
-two opposing and equally weighted effects occurring during the pairwise
-comparisons \citep[pp.~268]{Thurstone_1927b}. \citet{Andrich_1978}
-mathematically demonstrated this cancellation using the BTL model under
-the assumption of discriminal processes with additive biases. However,
-it is easy to imagine at least two scenarios where the zero correlation
-assumption almost certainly does not hold: when the pairwise comparison
-involves multidimensional, complex traits with heterogeneous stimuli and
-when an additional hierarchical structure is relevant to the stimuli.
+As outlined in Section~\ref{sec-thurstone_theory}, the assumption of
+\emph{zero correlation between stimuli} implies that, during a pairwise
+comparison, a judge's perception of quality in one text does not
+influence his perception of the same trait in another text. Thurstone
+attributed this independence to the cancellation of potential judges'
+biases, driven by two opposing and equally weighted effects occurring
+during the pairwise comparisons \citep[pp.~268]{Thurstone_1927b}.
+\citet{Andrich_1978} mathematically demonstrated this cancellation using
+the BTL model under the assumption of discriminal processes with
+additive biases. However, it is easy to imagine at least two scenarios
+where the zero correlation assumption almost certainly does not hold:
+when the pairwise comparison involves multidimensional, complex traits
+with heterogeneous stimuli and when an additional hierarchical structure
+is relevant to the stimuli.
 
 In the first scenario, the intricate aspects of multidimensional,
-complex traits may introduce dependencies between heterogeneous stimuli
-due to certain judges' biases that resist cancellation. Research on text
-quality indicates that when judges evaluate these traits, they often
-rely on various intricate aspects of the stimuli to form their judgments
+complex traits may introduce dependencies between the stimuli due to
+certain judges' biases that resist cancellation. Research on text
+quality suggests that when judges evaluating these traits, they often
+rely on various intricate characteristics of the stimuli
 \citep{vanDaal_et_al_2016, Lesterhuis_2018, Chambers_et_al_2022}. These
-aspects, which are likely neither equally weighted nor opposing, may
-influence judges' perceptions unevenly. For example, this could occur
-when a judge assessing the argumentative quality of a text places
+additional relevant characteristics, which are unlikely to be equally
+weighted or opposing, can unevenly influence judges' perceptions,
+creating biases in their judgments and, consequently, introducing
+dependencies between stimuli
+\citep[pp.~346]{vanderLinden_et_al_2017_II}. For example, this could
+occur when a judge assessing the argumentative quality of a text places
 disproportionate emphasis on grammatical accuracy, ultimately favoring
-texts with fewer errors but weaker arguments. Ignoring these relevant
-additional ``traits'' can result in biases that resist cancellation,
-introducing dependencies between stimuli
-\citep[pp.~346]{vanderLinden_et_al_2017_II} and ultimately violating the
-assumption of zero correlation. While direct evidence for the specific
-mechanisms causing biases is lacking, studies such as
+texts with fewer errors but weaker arguments. While direct evidence for
+this specific scenario is lacking, studies such as
 \citet{Pollitt_et_al_2003} demonstrate the presence of such biases,
 supporting the idea that the factors influencing pairwise comparisons
 may not always cancel out.
 
 In the second scenario, the shared context or inherent connections
-created by additional hierarchical structures may introduce dependencies
-between stimuli, a statistical phenomenon commonly known as clustering
-\citep{Everitt_et_al_2010}. Although the CJ literature acknowledges the
-presence of such hierarchical structures in CJ data, the statistical
-handling of this extra source of dependency has been inadequate. For
-example, when CJ data includes multiple samples of stimuli from the same
-individuals, researchers often rely on (average) estimated BTL scores to
-conduct subsequent analyses and tests at the individual hierarchical
-level
+created by additional hierarchical structures may further introduce
+dependencies between stimuli, a statistical phenomenon commonly known as
+clustering \citep{Everitt_et_al_2010}. Although the CJ literature
+acknowledges the presence of such hierarchical structures in CJ data,
+the statistical handling of this extra source of dependency has been
+inadequate. For example, when CJ data includes multiple samples of
+stimuli from the same individuals, researchers often rely on (average)
+estimated BTL scores to conduct subsequent analyses and tests at the
+individual hierarchical level
 \citep{Bramley_et_al_2019, Boonen_et_al_2020, Bouwer_et_al_2023, vanDaal_et_al_2017, Jones_et_al_2019, Gijsen_et_al_2021}.
 This approach, however, has the significant limitation of ignoring the
 uncertainty associated with the BTL scores, which generates additional
 statistical and measurement issues, as discussed in section
 Section~\ref{sec-theory-issue2}.
 
-In any case, the psychometric and statistical literature strongly
-advises against ignoring relevant additional traits or overlooking
-clustering (grouping) structures that may introduce dependencies between
-stimuli. First, ignoring additional aspects pertinent to the trait of
-interest can cause a dimensional mismatch, which can lead to an
-overestimation of the precision (reliability) of the trait's measurement
-\citep[pp.~340-341]{Hoyle_et_al_2023} or, worse, introduce bias into the
-measurement process \citep{Ackerman_1989}. Additionally, overlooking
-relevant hierarchical (or grouping) structures can exacerbate the
-inflation of reliability by reducing the accuracy of the model's
-parameters \citep[pp.~482]{Hoyle_et_al_2023}. Taken together, these
-oversights undermine the reliability of the measurement process and,
-since validity cannot exist without reliability
-\citep[pp.~2]{Perron_et_al_2015}, ultimately compromise the validity of
-the results derived from it.
+In any case, the psychometric and statistical literature underscores the
+importance of incorporating additional relevant traits and clustering
+(grouping) structures into the modeling of CJ data to address potential
+dependencies between stimuli. Oversights in these areas can lead to
+misleading conclusions about the trait's reliability and ultimately
+compromise its validity \citep[pp.~2]{Perron_et_al_2015}. Neglecting
+additional traits relevant to the stimuli or the trait of interest, such
+as judges' biases, introduces a dimensional mismatch in the modeling
+process of the CJ data. This mismatch often results in an overestimation
+of the trait's reliability \citep[pp.~341]{Hoyle_et_al_2023} or, worse,
+introduces biases into the estimated trait \citep{Ackerman_1989}.
+Therefore, these traits must be incorporated into the modeling of CJ
+data, as demonstrated by \citet{Andrich_1978} and
+\citet{Wainer_et_al_1978}. Similarly, ignoring hierarchical (grouping)
+structures reduces the accuracy of model parameter estimates and further
+exacerbates the overestimation of reliability
+\citep[pp.~482]{Hoyle_et_al_2023}. To address this, any additional
+hierarchical structure relevant to the stimuli should also be included
+in the model, as in Multilevel Structural Equation models (MSEM)
+\citep[chap.~26]{Hoyle_et_al_2023}.
 
 \subsection{The disconnect between trait measurement and hypothesis
 testing}\label{sec-theory-issue2}
