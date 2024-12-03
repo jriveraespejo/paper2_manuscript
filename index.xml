@@ -500,21 +500,47 @@ the University of Antwerp (BOF).</funding-statement>
     (<xref alt="Thurstone 1927a, 270" rid="ref-Thurstone_1927b" ref-type="bibr">Thurstone
     1927a, 270</xref>), acknowledging that some assumptions could prove
     problematic in the presence of complex traits or heterogeneous
-    stimuli, such as handwriting or English compositions
-    (<xref alt="Thurstone 1927b, 374" rid="ref-Thurstone_1927a" ref-type="bibr">Thurstone
-    1927b, 374</xref>). Consequently, given that modern CJ applications
+    stimuli
+    (<xref alt="Thurstone 1927b, 376" rid="ref-Thurstone_1927a" ref-type="bibr">Thurstone
+    1927b, 376</xref>). Consequently, given that modern CJ applications
     frequently involve these traits and stimuli, two main assumptions of
     Case V and, by extension, of the BTL model may not consistently hold
-    in theory or practice: the zero correlation and equal dispersion
+    in theory or practice: the equal dispersion and zero correlation
     between stimuli.</p>
-    <p>As outlined in
-    <xref alt="Section 2" rid="sec-thurstone_theory">Section 2</xref>,
-    the assumption of <italic>zero correlation between stimuli</italic>
-    implies that, during a pairwise comparison, a judge’s perception of
-    quality in one text does not influence his perception of the same
-    trait in another text. Thurstone attributed this independence to the
-    cancellation of potential judges’ biases, driven by two opposing and
-    equally weighted effects occurring during the pairwise comparisons
+    <p>On the one hand, the assumption of <italic>equal dispersion
+    between stimuli</italic> asserts that the variability in perceived
+    trait levels remains consistent across all stimuli. However,
+    Thurstone noted that this assumption may fail when researchers
+    assess complex traits or heterogeneous stimuli
+    (<xref alt="Thurstone 1927b, 376" rid="ref-Thurstone_1927a" ref-type="bibr">Thurstone
+    1927b, 376</xref>), as these can introduce greater discrepancies
+    into judgments due to their unique characteristics. One example of
+    this is the evaluation of creativity. In this context, for instance,
+    it is plausible that a student completes an assignment in a highly
+    creative yet unexpected way. Judges, unprepared for such
+    originality, may experience greater discrepancies in their judgments
+    of the assignment. As a result, the discriminal difference
+    associated with this assignment is expected to show a broader
+    dispersion, reflecting the larger variation in its discriminal
+    process compared to others. Although direct evidence for this
+    specific scenario is lacking,
+    <styled-content style="color:red;">studies such as van Daal
+    (<xref alt="2020, chap. 8" rid="ref-vanDaal_2020" ref-type="bibr">2020,
+    chap. 8</xref>) suggest that misfitting texts tend to exhibit larger
+    dispersion, likely due to increased confusion among judges regarding
+    the texts.</styled-content></p>
+    <p><styled-content style="color:red;">what are the challenges when
+    the equal dispersion assumption is violated?</styled-content></p>
+    <p><styled-content style="color:red;">how do we mitigate these
+    risks?</styled-content></p>
+    <p>On the other hand hand, the assumption of <italic>zero
+    correlation between stimuli</italic> implies that, during a pairwise
+    comparison, a judge’s perception of quality in one text does not
+    influence his perception of the same trait in another text (see
+    <xref alt="Section 2" rid="sec-thurstone_theory">Section 2</xref>).
+    Thurstone attributed this independence to the cancellation of
+    potential judges’ biases, driven by two opposing and equally
+    weighted effects occurring during the pairwise comparisons
     (<xref alt="Thurstone 1927a, 268" rid="ref-Thurstone_1927b" ref-type="bibr">Thurstone
     1927a, 268</xref>). Andrich
     (<xref alt="1978" rid="ref-Andrich_1978" ref-type="bibr">1978</xref>)
@@ -559,9 +585,9 @@ the University of Antwerp (BOF).</funding-statement>
     (<xref alt="Everitt and Skrondal 2010" rid="ref-Everitt_et_al_2010" ref-type="bibr">Everitt
     and Skrondal 2010</xref>). Although the CJ literature acknowledges
     the presence of such hierarchical structures, the statistical
-    handling of this extra source of dependency between the stimuli has
-    been inadequate. For example, when CJ data includes multiple samples
-    of stimuli from the same individuals, researchers often rely on
+    handling of this extra source of dependency between stimuli has been
+    inadequate. For example, when CJ data includes multiple samples of
+    stimuli from the same individuals, researchers often rely on
     (average) estimated BTL scores to conduct subsequent analyses and
     tests at the individual hierarchical level
     (<xref alt="Bramley and Vitello 2019" rid="ref-Bramley_et_al_2019" ref-type="bibr">Bramley
@@ -581,13 +607,13 @@ the University of Antwerp (BOF).</funding-statement>
     issues, as discussed in section
     <xref alt="Section 3.2" rid="sec-theory-issue2">Section 3.2</xref>.</p>
     <p>In any case, the psychometric and statistical literature
-    emphasizes the importance of addressing factors that create
+    emphasizes the importance of addressing the factors that create
     dependencies between stimuli, as failing to do so can lead to
     inaccurate conclusions about a trait’s reliability and, by
     extension, its validity. For instance, neglecting additional traits
     relevant to the stimuli, such as judges’ biases, often leads to a
-    dimensional mismatch in the model. This mismatch can potentially
-    inflate the reliability of the trait
+    dimensional mismatch in the statistical model used for analysis.
+    This mismatch can potentially inflate the reliability of the trait
     (<xref alt="Hoyle 2023, 341" rid="ref-Hoyle_et_al_2023" ref-type="bibr">Hoyle
     2023, 341</xref>) or, worse, introduce bias into the trait’s
     estimates
@@ -597,26 +623,26 @@ the University of Antwerp (BOF).</funding-statement>
     estimates, further amplifying the overestimation of reliability
     (<xref alt="Hoyle 2023, 482" rid="ref-Hoyle_et_al_2023" ref-type="bibr">Hoyle
     2023, 482</xref>). These issues collectively undermine the trait’s
-    reliability, and because “validity cannot exist without reliability”
+    reliability and ultimately compromise the validity of the trait’s
+    estimates
     (<xref alt="Perron and Gillespie 2015, 2" rid="ref-Perron_et_al_2015" ref-type="bibr">Perron
-    and Gillespie 2015, 2</xref>), they ultimately compromise the
-    validity of results derived from the data modeling.</p>
+    and Gillespie 2015, 2</xref>).</p>
     <p>Fortunately, the same literature offers solutions for addressing
-    the factors that create these dependencies between stimuli. Andrich
+    these issues. Andrich
     (<xref alt="1978" rid="ref-Andrich_1978" ref-type="bibr">1978</xref>)
     and Wainer, TimbersFairbank, and Hough
     (<xref alt="1978" rid="ref-Wainer_et_al_1978" ref-type="bibr">1978</xref>)
-    recommend integrating judges’ biases into the BTL model.
-    Furthermore, the literature advocates for incorporating relevant
-    hierarchical structures into the data model to account for these
-    dependencies. Taken together, these additions can result in a model
-    that combines a Multilevel Structural Equation Model (MSEM)
+    recommend integrating judges’ biases into the BTL model. Moreover,
+    the literature advocates for the incorporation of relevant
+    hierarchical structures into the statistical model to account for
+    these dependencies. Together, these additions can result in a model
+    resembling a Multilevel Structural Equation Model (MSEM)
     (<xref alt="Hoyle 2023, chap. 26" rid="ref-Hoyle_et_al_2023" ref-type="bibr">Hoyle
-    2023, chap. 26</xref>) with a multidimensional or two-parameter
-    logistic IRT model
+    2023, chap. 26</xref>) combined with a multidimensional or
+    two-parameter logistic IRT model
     (<xref alt="Hoyle 2023, chap. 15" rid="ref-Hoyle_et_al_2023" ref-type="bibr">Hoyle
-    2023, chap. 15</xref>), depending on the theoretical assumptions a
-    researcher makes about the judges’ biases.</p>
+    2023, chap. 15</xref>), depending on the theoretical and statistical
+    treatment of judges’ biases.</p>
   </sec>
   <sec id="sec-theory-issue2">
     <title>The disconnect between trait measurement and hypothesis
@@ -1349,6 +1375,16 @@ the University of Antwerp (BOF).</funding-statement>
       <publisher-name>University of Antwerp</publisher-name>
       <year iso-8601-date="2018">2018</year>
       <uri>https://hdl.handle.net/10067/1548280151162165141</uri>
+    </element-citation>
+  </ref>
+  <ref id="ref-vanDaal_2020">
+    <element-citation publication-type="thesis">
+      <person-group person-group-type="author">
+        <name><surname>van Daal</surname><given-names>T.</given-names></name>
+      </person-group>
+      <article-title>Making a choice is not easy?!: Unravelling the task difficulty of comparative judgement to assess student work</article-title>
+      <publisher-name>University of Antwerp</publisher-name>
+      <year iso-8601-date="2020">2020</year>
     </element-citation>
   </ref>
   <ref id="ref-Bramley_2008">

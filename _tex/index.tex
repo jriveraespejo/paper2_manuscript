@@ -470,27 +470,49 @@ which it was created. Thurstone himself cautioned that its use ``should
 not be made without (an) experimental test''
 \citep[pp.~270]{Thurstone_1927b}, acknowledging that some assumptions
 could prove problematic in the presence of complex traits or
-heterogeneous stimuli, such as handwriting or English compositions
-\citep[pp.~374]{Thurstone_1927a}. Consequently, given that modern CJ
-applications frequently involve these traits and stimuli, two main
-assumptions of Case V and, by extension, of the BTL model may not
-consistently hold in theory or practice: the zero correlation and equal
-dispersion between stimuli.
+heterogeneous stimuli \citep[pp.~376]{Thurstone_1927a}. Consequently,
+given that modern CJ applications frequently involve these traits and
+stimuli, two main assumptions of Case V and, by extension, of the BTL
+model may not consistently hold in theory or practice: the equal
+dispersion and zero correlation between stimuli.
 
-As outlined in Section~\ref{sec-thurstone_theory}, the assumption of
-\emph{zero correlation between stimuli} implies that, during a pairwise
-comparison, a judge's perception of quality in one text does not
-influence his perception of the same trait in another text. Thurstone
-attributed this independence to the cancellation of potential judges'
-biases, driven by two opposing and equally weighted effects occurring
-during the pairwise comparisons \citep[pp.~268]{Thurstone_1927b}.
-\citet{Andrich_1978} mathematically demonstrated this cancellation using
-the BTL model under the assumption of discriminal processes with
-additive biases. However, it is easy to imagine at least two scenarios
-where the zero correlation assumption almost certainly does not hold:
-when the pairwise comparison involves multidimensional, complex traits
-with heterogeneous stimuli and when an additional hierarchical structure
-is relevant to the stimuli.
+On the one hand, the assumption of \emph{equal dispersion between
+stimuli} asserts that the variability in perceived trait levels remains
+consistent across all stimuli. However, Thurstone noted that this
+assumption may fail when researchers assess complex traits or
+heterogeneous stimuli \citep[pp.~376]{Thurstone_1927a}, as these can
+introduce greater discrepancies into judgments due to their unique
+characteristics. One example of this is the evaluation of creativity. In
+this context, for instance, it is plausible that a student completes an
+assignment in a highly creative yet unexpected way. Judges, unprepared
+for such originality, may experience greater discrepancies in their
+judgments of the assignment. As a result, the discriminal difference
+associated with this assignment is expected to show a broader
+dispersion, reflecting the larger variation in its discriminal process
+compared to others. Although direct evidence for this specific scenario
+is lacking, {studies such as \citet[chap.~8]{vanDaal_2020} suggest that
+misfitting texts tend to exhibit larger dispersion, likely due to
+increased confusion among judges regarding the texts.}
+
+{what are the challenges when the equal dispersion assumption is
+violated?}
+
+{how do we mitigate these risks?}
+
+On the other hand hand, the assumption of \emph{zero correlation between
+stimuli} implies that, during a pairwise comparison, a judge's
+perception of quality in one text does not influence his perception of
+the same trait in another text (see Section~\ref{sec-thurstone_theory}).
+Thurstone attributed this independence to the cancellation of potential
+judges' biases, driven by two opposing and equally weighted effects
+occurring during the pairwise comparisons
+\citep[pp.~268]{Thurstone_1927b}. \citet{Andrich_1978} mathematically
+demonstrated this cancellation using the BTL model under the assumption
+of discriminal processes with additive biases. However, it is easy to
+imagine at least two scenarios where the zero correlation assumption
+almost certainly does not hold: when the pairwise comparison involves
+multidimensional, complex traits with heterogeneous stimuli and when an
+additional hierarchical structure is relevant to the stimuli.
 
 In the first scenario, the intricate aspects of multidimensional,
 complex traits may introduce dependencies between the stimuli due to
@@ -517,9 +539,9 @@ created by additional hierarchical structures may further introduce
 dependencies between stimuli, a statistical phenomenon commonly known as
 clustering \citep{Everitt_et_al_2010}. Although the CJ literature
 acknowledges the presence of such hierarchical structures, the
-statistical handling of this extra source of dependency between the
-stimuli has been inadequate. For example, when CJ data includes multiple
-samples of stimuli from the same individuals, researchers often rely on
+statistical handling of this extra source of dependency between stimuli
+has been inadequate. For example, when CJ data includes multiple samples
+of stimuli from the same individuals, researchers often rely on
 (average) estimated BTL scores to conduct subsequent analyses and tests
 at the individual hierarchical level
 \citep{Bramley_et_al_2019, Boonen_et_al_2020, Bouwer_et_al_2023, vanDaal_et_al_2017, Jones_et_al_2019, Gijsen_et_al_2021}.
@@ -529,32 +551,30 @@ statistical and measurement issues, as discussed in section
 Section~\ref{sec-theory-issue2}.
 
 In any case, the psychometric and statistical literature emphasizes the
-importance of addressing factors that create dependencies between
+importance of addressing the factors that create dependencies between
 stimuli, as failing to do so can lead to inaccurate conclusions about a
 trait's reliability and, by extension, its validity. For instance,
 neglecting additional traits relevant to the stimuli, such as judges'
-biases, often leads to a dimensional mismatch in the model. This
-mismatch can potentially inflate the reliability of the trait
-\citep[pp.~341]{Hoyle_et_al_2023} or, worse, introduce bias into the
-trait's estimates \citep{Ackerman_1989}. Similarly, failing to account
-for hierarchical (grouping) structures reduces the precision of model
-parameter estimates, further amplifying the overestimation of
+biases, often leads to a dimensional mismatch in the statistical model
+used for analysis. This mismatch can potentially inflate the reliability
+of the trait \citep[pp.~341]{Hoyle_et_al_2023} or, worse, introduce bias
+into the trait's estimates \citep{Ackerman_1989}. Similarly, failing to
+account for hierarchical (grouping) structures reduces the precision of
+model parameter estimates, further amplifying the overestimation of
 reliability \citep[pp.~482]{Hoyle_et_al_2023}. These issues collectively
-undermine the trait's reliability, and because ``validity cannot exist
-without reliability'' \citep[pp.~2]{Perron_et_al_2015}, they ultimately
-compromise the validity of results derived from the data modeling.
+undermine the trait's reliability and ultimately compromise the validity
+of the trait's estimates \citep[pp.~2]{Perron_et_al_2015}.
 
-Fortunately, the same literature offers solutions for addressing the
-factors that create these dependencies between stimuli.
-\citet{Andrich_1978} and \citet{Wainer_et_al_1978} recommend integrating
-judges' biases into the BTL model. Furthermore, the literature advocates
-for incorporating relevant hierarchical structures into the data model
-to account for these dependencies. Taken together, these additions can
-result in a model that combines a Multilevel Structural Equation Model
-(MSEM) \citep[chap.~26]{Hoyle_et_al_2023} with a multidimensional or
-two-parameter logistic IRT model \citep[chap.~15]{Hoyle_et_al_2023},
-depending on the theoretical assumptions a researcher makes about the
-judges' biases.
+Fortunately, the same literature offers solutions for addressing these
+issues. \citet{Andrich_1978} and \citet{Wainer_et_al_1978} recommend
+integrating judges' biases into the BTL model. Moreover, the literature
+advocates for the incorporation of relevant hierarchical structures into
+the statistical model to account for these dependencies. Together, these
+additions can result in a model resembling a Multilevel Structural
+Equation Model (MSEM) \citep[chap.~26]{Hoyle_et_al_2023} combined with a
+multidimensional or two-parameter logistic IRT model
+\citep[chap.~15]{Hoyle_et_al_2023}, depending on the theoretical and
+statistical treatment of judges' biases.
 
 \subsection{The disconnect between trait measurement and hypothesis
 testing}\label{sec-theory-issue2}
