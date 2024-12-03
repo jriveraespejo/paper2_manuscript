@@ -504,8 +504,9 @@ the University of Antwerp (BOF).</funding-statement>
     (<xref alt="Thurstone 1927b, 374" rid="ref-Thurstone_1927a" ref-type="bibr">Thurstone
     1927b, 374</xref>). Consequently, given that modern CJ applications
     frequently involve these traits and stimuli, two main assumptions of
-    Case V may not consistently hold in theory or practice: the zero
-    correlation and equal dispersion between stimuli.</p>
+    Case V and, by extension, of the BTL model may not consistently hold
+    in theory or practice: the zero correlation and equal dispersion
+    between stimuli.</p>
     <p>As outlined in
     <xref alt="Section 2" rid="sec-thurstone_theory">Section 2</xref>,
     the assumption of <italic>zero correlation between stimuli</italic>
@@ -538,8 +539,8 @@ the University of Antwerp (BOF).</funding-statement>
     and Cunningham 2022</xref>). These additional relevant
     characteristics, which are unlikely to be equally weighted or
     opposing, can unevenly influence judges’ perceptions, creating
-    biases in their judgments and, consequently, introducing
-    dependencies between stimuli
+    biases in their judgments and, ultimately, introducing dependencies
+    between stimuli
     (<xref alt="van der Linden 2017b, 2:346" rid="ref-vanderLinden_et_al_2017_II" ref-type="bibr">van
     der Linden 2017b, 2:346</xref>). For example, this could occur when
     a judge assessing the argumentative quality of a text places
@@ -557,10 +558,10 @@ the University of Antwerp (BOF).</funding-statement>
     phenomenon commonly known as clustering
     (<xref alt="Everitt and Skrondal 2010" rid="ref-Everitt_et_al_2010" ref-type="bibr">Everitt
     and Skrondal 2010</xref>). Although the CJ literature acknowledges
-    the presence of such hierarchical structures in CJ data, the
-    statistical handling of this extra source of dependency has been
-    inadequate. For example, when CJ data includes multiple samples of
-    stimuli from the same individuals, researchers often rely on
+    the presence of such hierarchical structures, the statistical
+    handling of this extra source of dependency between the stimuli has
+    been inadequate. For example, when CJ data includes multiple samples
+    of stimuli from the same individuals, researchers often rely on
     (average) estimated BTL scores to conduct subsequent analyses and
     tests at the individual hierarchical level
     (<xref alt="Bramley and Vitello 2019" rid="ref-Bramley_et_al_2019" ref-type="bibr">Bramley
@@ -599,25 +600,23 @@ the University of Antwerp (BOF).</funding-statement>
     reliability, and because “validity cannot exist without reliability”
     (<xref alt="Perron and Gillespie 2015, 2" rid="ref-Perron_et_al_2015" ref-type="bibr">Perron
     and Gillespie 2015, 2</xref>), they ultimately compromise the
-    validity of results derived from the the data modeling.</p>
-    <p>Fortunately, the same literature provides solutions for
-    addressing the factors that create dependencies between stimuli.
-    Andrich
+    validity of results derived from the data modeling.</p>
+    <p>Fortunately, the same literature offers solutions for addressing
+    the factors that create these dependencies between stimuli. Andrich
     (<xref alt="1978" rid="ref-Andrich_1978" ref-type="bibr">1978</xref>)
     and Wainer, TimbersFairbank, and Hough
     (<xref alt="1978" rid="ref-Wainer_et_al_1978" ref-type="bibr">1978</xref>)
-    propose integrating judges’ biases into the CJ model. This
-    integration would produce a model similar to a multidimensional or
-    two-parameter logistic IRT model
+    recommend integrating judges’ biases into the BTL model.
+    Furthermore, the literature advocates for incorporating relevant
+    hierarchical structures into the data model to account for these
+    dependencies. Taken together, these additions can result in a model
+    that combines a Multilevel Structural Equation Model (MSEM)
+    (<xref alt="Hoyle 2023, chap. 26" rid="ref-Hoyle_et_al_2023" ref-type="bibr">Hoyle
+    2023, chap. 26</xref>) with a multidimensional or two-parameter
+    logistic IRT model
     (<xref alt="Hoyle 2023, chap. 15" rid="ref-Hoyle_et_al_2023" ref-type="bibr">Hoyle
     2023, chap. 15</xref>), depending on the theoretical assumptions a
-    researcher is willing to make regarding the judges’ biases. The
-    literature also suggests incorporating relevant hierarchical
-    structures into the model to account for dependencies in the
-    stimuli, resulting in a model resembling a Multilevel Structural
-    Equation Model (MSEM)
-    (<xref alt="Hoyle 2023, chap. 26" rid="ref-Hoyle_et_al_2023" ref-type="bibr">Hoyle
-    2023, chap. 26</xref>).</p>
+    researcher makes about the judges’ biases.</p>
   </sec>
   <sec id="sec-theory-issue2">
     <title>The disconnect between trait measurement and hypothesis
