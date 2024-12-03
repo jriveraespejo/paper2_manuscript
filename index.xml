@@ -104,10 +104,10 @@ sciences</institution>
 <corresp id="cor-1">JoseManuel.RiveraEspejo@uantwerpen.be</corresp>
 </author-notes>
 
-<pub-date date-type="pub" publication-format="electronic" iso-8601-date="2024-12-02">
+<pub-date date-type="pub" publication-format="electronic" iso-8601-date="2024-12-03">
 <year>2024</year>
 <month>12</month>
-<day>2</day>
+<day>3</day>
 </pub-date>
 
 
@@ -251,9 +251,9 @@ the University of Antwerp (BOF).</funding-statement>
   impact each stimulus has on judges or, more simply, their underlying
   perception of the stimulus’ trait level. According to the theory, the
   discriminal process for each stimulus follows a Normal distribution,
-  where its mode (or the mean), referred to as the <italic>modal
-  discriminal process</italic>, indicates the stimulus’ position on the
-  trait continuum, and its dispersion, known as the <italic>discriminal
+  where its mode (mean), referred to as the <italic>modal discriminal
+  process</italic>, indicates the stimulus’ position on the trait
+  continuum, and its dispersion, known as the <italic>discriminal
   dispersion</italic>, reflects the variability in the perceived trait
   level of the stimulus.</p>
   <p>For instance,
@@ -299,9 +299,9 @@ the University of Antwerp (BOF).</funding-statement>
   a Normal distribution, their difference also follows a Normal
   distribution
   (<xref alt="Andrich 1978" rid="ref-Andrich_1978" ref-type="bibr">Andrich
-  1978</xref>). The mode (or the mean) of this distribution,
-  representing the (average) relative separation, is given by the
-  difference between the modal discriminal processes of the stimuli
+  1978</xref>). The mode (mean) of this distribution, representing the
+  (average) relative separation, is given by the difference between the
+  modal discriminal processes of the stimuli
   <inline-formula><alternatives>
   <tex-math><![CDATA[S_{BA} = S_{B} - S_{A}]]></tex-math>
   <mml:math display="inline" xmlns:mml="http://www.w3.org/1998/Math/MathML"><mml:mrow><mml:msub><mml:mi>S</mml:mi><mml:mrow><mml:mi>B</mml:mi><mml:mi>A</mml:mi></mml:mrow></mml:msub><mml:mo>=</mml:mo><mml:msub><mml:mi>S</mml:mi><mml:mi>B</mml:mi></mml:msub><mml:mo>−</mml:mo><mml:msub><mml:mi>S</mml:mi><mml:mi>A</mml:mi></mml:msub></mml:mrow></mml:math></alternatives></inline-formula>.
@@ -323,7 +323,7 @@ the University of Antwerp (BOF).</funding-statement>
   measures the correlation between the discriminal processes of the
   stimuli. This correlation quantifies the dependence of the judge’s
   perception of the trait in one stimulus on his perception of the same
-  trait in the other.</p>
+  trait in another.</p>
   <p><xref alt="Figure 2" rid="fig-discriminal_difference">Figure 2</xref>
   shows the distribution of the discriminal difference for the texts
   depicted in
@@ -364,8 +364,8 @@ the University of Antwerp (BOF).</funding-statement>
   <xref alt="Figure 1" rid="fig-discriminal_process">Figure 1</xref>.
   Since the texts differ in quality, higher correlations increase the
   likelihood that the discriminal difference distinctly favors text B
-  over text A. This is evident from the larger proportion of the area
-  under the curve, <inline-formula><alternatives>
+  over text A. This is evident from the larger proportion of area under
+  the curve, <inline-formula><alternatives>
   <tex-math><![CDATA[P(B > A)]]></tex-math>
   <mml:math display="inline" xmlns:mml="http://www.w3.org/1998/Math/MathML"><mml:mrow><mml:mi>P</mml:mi><mml:mrow><mml:mo stretchy="true" form="prefix">(</mml:mo><mml:mi>B</mml:mi><mml:mo>&gt;</mml:mo><mml:mi>A</mml:mi><mml:mo stretchy="true" form="postfix">)</mml:mo></mml:mrow></mml:mrow></mml:math></alternatives></inline-formula>,
   that lies above zero (shaded gray area in
@@ -394,11 +394,11 @@ the University of Antwerp (BOF).</funding-statement>
     form, where each successive case incorporates additional simplifying
     assumptions. Case I represents the general form of the theory. Case
     II extends this by allowing multiple judges to make comparisons
-    rather than restricting them to a single judge. Case III introduces
-    the assumption of zero correlation between stimuli. Case IV builds
-    on this by assuming that the stimuli have similar dispersions.
-    Finally, Case V replaces this assumption with the condition that the
-    stimuli have equal discriminal dispersions.
+    rather than restricting the comparisons to a single judge. Case III
+    introduces the assumption of zero correlation between stimuli. Case
+    IV builds on this by assuming that the stimuli have similar
+    dispersions. Finally, Case V replaces this assumption with the
+    condition that the stimuli have equal discriminal dispersions.
     <xref alt="Table 1" rid="tbl-thurstone_cases">Table 1</xref>
     summarizes these cases and their assumptions. For a detailed
     discussion of this progression, refer to Thurstone
@@ -527,8 +527,9 @@ the University of Antwerp (BOF).</funding-statement>
     <p>In the first scenario, the intricate aspects of multidimensional,
     complex traits may introduce dependencies between the stimuli due to
     certain judges’ biases that resist cancellation. Research on text
-    quality suggests that when judges evaluating these traits, they
-    often rely on various intricate characteristics of the stimuli
+    quality suggests that when judges evaluate these traits, they often
+    rely on various intricate characteristics of the stimuli to form
+    their judgments
     (<xref alt="van Daal et al. 2016" rid="ref-vanDaal_et_al_2016" ref-type="bibr">van
     Daal et al. 2016</xref>;
     <xref alt="Lesterhuis 2018b" rid="ref-Lesterhuis_2018" ref-type="bibr">Lesterhuis
@@ -579,33 +580,42 @@ the University of Antwerp (BOF).</funding-statement>
     issues, as discussed in section
     <xref alt="Section 3.2" rid="sec-theory-issue2">Section 3.2</xref>.</p>
     <p>In any case, the psychometric and statistical literature
-    underscores the importance of incorporating additional relevant
-    traits and clustering (grouping) structures into the modeling of CJ
-    data to address potential dependencies between stimuli. Oversights
-    in these areas can lead to misleading conclusions about the trait’s
-    reliability and ultimately compromise its validity
-    (<xref alt="Perron and Gillespie 2015, 2" rid="ref-Perron_et_al_2015" ref-type="bibr">Perron
-    and Gillespie 2015, 2</xref>). Neglecting additional traits relevant
-    to the stimuli or the trait of interest, such as judges’ biases,
-    introduces a dimensional mismatch in the modeling process of the CJ
-    data. This mismatch often results in an overestimation of the
-    trait’s reliability
+    emphasizes the importance of addressing factors that create
+    dependencies between stimuli, as failing to do so can lead to
+    inaccurate conclusions about a trait’s reliability and, by
+    extension, its validity. For instance, neglecting additional traits
+    relevant to the stimuli, such as judges’ biases, often leads to a
+    dimensional mismatch in the model. This mismatch can potentially
+    inflate the reliability of the trait
     (<xref alt="Hoyle 2023, 341" rid="ref-Hoyle_et_al_2023" ref-type="bibr">Hoyle
-    2023, 341</xref>) or, worse, introduces biases into the estimated
-    trait
+    2023, 341</xref>) or, worse, introduce bias into the trait’s
+    estimates
     (<xref alt="Ackerman 1989" rid="ref-Ackerman_1989" ref-type="bibr">Ackerman
-    1989</xref>). Therefore, these traits must be incorporated into the
-    modeling of CJ data, as demonstrated by Andrich
+    1989</xref>). Similarly, failing to account for hierarchical
+    (grouping) structures reduces the precision of model parameter
+    estimates, further amplifying the overestimation of reliability
+    (<xref alt="Hoyle 2023, 482" rid="ref-Hoyle_et_al_2023" ref-type="bibr">Hoyle
+    2023, 482</xref>). These issues collectively undermine the trait’s
+    reliability, and because “validity cannot exist without reliability”
+    (<xref alt="Perron and Gillespie 2015, 2" rid="ref-Perron_et_al_2015" ref-type="bibr">Perron
+    and Gillespie 2015, 2</xref>), they ultimately compromise the
+    validity of results derived from the the data modeling.</p>
+    <p>Fortunately, the same literature provides solutions for
+    addressing the factors that create dependencies between stimuli.
+    Andrich
     (<xref alt="1978" rid="ref-Andrich_1978" ref-type="bibr">1978</xref>)
     and Wainer, TimbersFairbank, and Hough
-    (<xref alt="1978" rid="ref-Wainer_et_al_1978" ref-type="bibr">1978</xref>).
-    Similarly, ignoring hierarchical (grouping) structures reduces the
-    accuracy of model parameter estimates and further exacerbates the
-    overestimation of reliability
-    (<xref alt="Hoyle 2023, 482" rid="ref-Hoyle_et_al_2023" ref-type="bibr">Hoyle
-    2023, 482</xref>). To address this, any additional hierarchical
-    structure relevant to the stimuli should also be included in the
-    model, as in Multilevel Structural Equation models (MSEM)
+    (<xref alt="1978" rid="ref-Wainer_et_al_1978" ref-type="bibr">1978</xref>)
+    propose integrating judges’ biases into the CJ model. This
+    integration would produce a model similar to a multidimensional or
+    two-parameter logistic IRT model
+    (<xref alt="Hoyle 2023, chap. 15" rid="ref-Hoyle_et_al_2023" ref-type="bibr">Hoyle
+    2023, chap. 15</xref>), depending on the theoretical assumptions a
+    researcher is willing to make regarding the judges’ biases. The
+    literature also suggests incorporating relevant hierarchical
+    structures into the model to account for dependencies in the
+    stimuli, resulting in a model resembling a Multilevel Structural
+    Equation Model (MSEM)
     (<xref alt="Hoyle 2023, chap. 26" rid="ref-Hoyle_et_al_2023" ref-type="bibr">Hoyle
     2023, chap. 26</xref>).</p>
   </sec>
