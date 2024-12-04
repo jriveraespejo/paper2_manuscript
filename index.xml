@@ -104,10 +104,10 @@ sciences</institution>
 <corresp id="cor-1">JoseManuel.RiveraEspejo@uantwerpen.be</corresp>
 </author-notes>
 
-<pub-date date-type="pub" publication-format="electronic" iso-8601-date="2024-12-03">
+<pub-date date-type="pub" publication-format="electronic" iso-8601-date="2024-12-04">
 <year>2024</year>
 <month>12</month>
-<day>3</day>
+<day>4</day>
 </pub-date>
 
 
@@ -159,8 +159,8 @@ the University of Antwerp (BOF).</funding-statement>
   trait)
   (<xref alt="Laming 2004" rid="ref-Laming_2004" ref-type="bibr">Laming
   2004</xref>;
-  <xref alt="Pollitt 2012" rid="ref-Pollitt_2012b" ref-type="bibr">Pollitt
-  2012</xref>;
+  <xref alt="Pollitt 2012b" rid="ref-Pollitt_2012b" ref-type="bibr">Pollitt
+  2012b</xref>;
   <xref alt="Whitehouse 2012" rid="ref-Whitehouse_2012" ref-type="bibr">Whitehouse
   2012</xref>;
   <xref alt="van Daal et al. 2016" rid="ref-vanDaal_et_al_2016" ref-type="bibr">van
@@ -193,8 +193,8 @@ the University of Antwerp (BOF).</funding-statement>
   reliability and time efficiency of CJ are comparable, if not superior,
   to those of other assessment methods when employing adaptive
   comparison algorithms
-  (<xref alt="Pollitt 2012" rid="ref-Pollitt_2012b" ref-type="bibr">Pollitt
-  2012</xref>;
+  (<xref alt="Pollitt 2012b" rid="ref-Pollitt_2012b" ref-type="bibr">Pollitt
+  2012b</xref>;
   <xref alt="Verhavert, Furlong, and Bouwer 2022" rid="ref-Verhavert_et_al_2022" ref-type="bibr">Verhavert,
   Furlong, and Bouwer 2022</xref>;
   <xref alt="Mikhailiuk et al. 2021" rid="ref-Mikhailiuk_et_al_2021" ref-type="bibr">Mikhailiuk
@@ -316,14 +316,14 @@ the University of Antwerp (BOF).</funding-statement>
   and <inline-formula><alternatives>
   <tex-math><![CDATA[\sigma_{A}]]></tex-math>
   <mml:math display="inline" xmlns:mml="http://www.w3.org/1998/Math/MathML"><mml:msub><mml:mi>σ</mml:mi><mml:mi>A</mml:mi></mml:msub></mml:math></alternatives></inline-formula>
-  are the previously defined discriminal dispersions, while
+  denote the discriminal dispersions of the stimuli, while
   <inline-formula><alternatives>
   <tex-math><![CDATA[\rho]]></tex-math>
   <mml:math display="inline" xmlns:mml="http://www.w3.org/1998/Math/MathML"><mml:mi>ρ</mml:mi></mml:math></alternatives></inline-formula>
-  measures the correlation between the discriminal processes of the
-  stimuli. This correlation quantifies the dependence of the judge’s
-  perception of the trait in one stimulus on his perception of the same
-  trait in another.</p>
+  represents the correlation between their discriminal processes. This
+  correlation quantifies the dependence of the judge’s perception of the
+  trait in one stimulus on his perception of the same trait in
+  another.</p>
   <p><xref alt="Figure 2" rid="fig-discriminal_difference">Figure 2</xref>
   shows the distribution of the discriminal difference for the texts
   depicted in
@@ -350,8 +350,8 @@ the University of Antwerp (BOF).</funding-statement>
   <inline-formula><alternatives>
   <tex-math><![CDATA[\rho]]></tex-math>
   <mml:math display="inline" xmlns:mml="http://www.w3.org/1998/Math/MathML"><mml:mi>ρ</mml:mi></mml:math></alternatives></inline-formula>,
-  plays a pivotal role in determining comparison outcomes by shaping the
-  distribution of the discriminal difference between the stimuli.
+  plays a pivotal role in determining the comparison outcome by shaping
+  the distribution of the discriminal difference between the stimuli.
   Specifically, as the correlation increases, reflecting a stronger
   dependence of the judge’s perception of quality in one stimulus on his
   perception of the other, the distribution of the discriminal
@@ -360,22 +360,23 @@ the University of Antwerp (BOF).</funding-statement>
   the conclusions drawn from this outcome.</p>
   <p><xref alt="Figure 3" rid="fig-correlation">Figure 3</xref>
   illustrates how varying correlations influence the distribution of the
-  discriminal difference for the two texts depicted in
+  discriminal difference for the texts depicted in
   <xref alt="Figure 1" rid="fig-discriminal_process">Figure 1</xref>.
   Since the texts differ in quality, higher correlations increase the
   likelihood that the discriminal difference distinctly favors text B
-  over text A. This is evident from the larger proportion of area under
-  the curve, <inline-formula><alternatives>
+  over text A. This is evident from the larger proportion of the area
+  under the curve, <inline-formula><alternatives>
   <tex-math><![CDATA[P(B > A)]]></tex-math>
   <mml:math display="inline" xmlns:mml="http://www.w3.org/1998/Math/MathML"><mml:mrow><mml:mi>P</mml:mi><mml:mrow><mml:mo stretchy="true" form="prefix">(</mml:mo><mml:mi>B</mml:mi><mml:mo>&gt;</mml:mo><mml:mi>A</mml:mi><mml:mo stretchy="true" form="postfix">)</mml:mo></mml:mrow></mml:mrow></mml:math></alternatives></inline-formula>,
   that lies above zero (shaded gray area in
-  <xref alt="Figure 3" rid="fig-correlation">Figure 3</xref>).
-  Conversely, it is not hard to infer that if the texts had similar or
-  identical quality levels, higher correlations would likely reduce the
-  chance that the discriminal difference distinctly favors one text over
-  the other. This probability reduction occurs because the distribution
-  of the discriminal difference would become more narrowly centered
-  around zero (not illustrated).</p>
+  <xref alt="Figure 3" rid="fig-correlation">Figure 3</xref>) compared
+  to curves with lower correlations. Moreover, although the figure does
+  not illustrate this scenario, it is reasonable to infer that if the
+  texts had similar or identical quality levels, higher correlations
+  would likely reduce the chance of the discriminal difference
+  distinctly favoring one text over the other. This probability
+  reduction occurs because the distribution of the discriminal
+  difference would become more narrowly centered around zero.</p>
   <fig id="fig-correlation">
     <caption><p>Figure 3: The effect of correlation on the distribution
     of the discriminal difference of the same two written
@@ -508,27 +509,35 @@ the University of Antwerp (BOF).</funding-statement>
     in theory or practice: the equal dispersion and zero correlation
     between stimuli.</p>
     <p>On the one hand, the assumption of <italic>equal dispersion
-    between stimuli</italic> asserts that the variability in perceived
-    trait levels remains consistent across all stimuli. However,
-    Thurstone noted that this assumption may fail when researchers
-    assess complex traits or heterogeneous stimuli
+    between stimuli</italic> suggests that variability in perceived
+    trait levels is consistent across all stimuli. However, Thurstone
+    observed that this assumption may not hold when researchers assess
+    complex traits or heterogeneous stimuli
     (<xref alt="Thurstone 1927b, 376" rid="ref-Thurstone_1927a" ref-type="bibr">Thurstone
-    1927b, 376</xref>), as these can introduce greater discrepancies
-    into judgments due to their unique characteristics. One example of
-    this is the evaluation of creativity. In this context, for instance,
-    it is plausible that a student completes an assignment in a highly
-    creative yet unexpected way. Judges, unprepared for such
-    originality, may experience greater discrepancies in their judgments
-    of the assignment. As a result, the discriminal difference
-    associated with this assignment is expected to show a broader
-    dispersion, reflecting the larger variation in its discriminal
-    process compared to others. Although direct evidence for this
-    specific scenario is lacking,
-    <styled-content style="color:red;">studies such as van Daal
-    (<xref alt="2020, chap. 8" rid="ref-vanDaal_2020" ref-type="bibr">2020,
-    chap. 8</xref>) suggest that misfitting texts tend to exhibit larger
-    dispersion, likely due to increased confusion among judges regarding
-    the texts.</styled-content></p>
+    1927b, 376</xref>), as these traits and stimuli can introduce
+    greater judgment discrepancies due to their unique characteristics.
+    In fact, research on text quality may already provide evidence of
+    the violation of this assumption, particularly through the use of
+    misfit statistics
+    (<xref alt="Pollitt 2012a" rid="ref-Pollitt_2012a" ref-type="bibr">Pollitt
+    2012a</xref>,
+    <xref alt="2012b" rid="ref-Pollitt_2012b" ref-type="bibr">2012b</xref>;
+    <xref alt="van Daal et al. 2016" rid="ref-vanDaal_et_al_2016" ref-type="bibr">van
+    Daal et al. 2016</xref>;
+    <xref alt="Goossens and De Maeyer 2018" rid="ref-Goossens_et_al_2018" ref-type="bibr">Goossens
+    and De Maeyer 2018</xref>). Misfit statistics quantify the judgment
+    discrepancies associated with a given stimulus
+    (<xref alt="Pollitt 2004, 12" rid="ref-Pollitt_2004" ref-type="bibr">Pollitt
+    2004, 12</xref>;
+    <xref alt="Goossens and De Maeyer 2018, 20" rid="ref-Goossens_et_al_2018" ref-type="bibr">Goossens
+    and De Maeyer 2018, 20</xref>). In this context, texts identified as
+    “misfits” display greater judgment discrepancies than other texts.
+    This implies that the discriminal difference associated with these
+    texts shows a broader dispersion, suggesting that their discriminal
+    processes also exhibit greater variation than other texts. This
+    reasoning also applies to “misfit” judges, whose evaluations reflect
+    substantial deviations due to the unique or extreme characteristics
+    of the stimuli.</p>
     <p><styled-content style="color:red;">what are the challenges when
     the equal dispersion assumption is violated?</styled-content></p>
     <p><styled-content style="color:red;">how do we mitigate these
@@ -663,8 +672,8 @@ the University of Antwerp (BOF).</funding-statement>
     level of texts (the latent variable)
     (<xref alt="Laming 2004" rid="ref-Laming_2004" ref-type="bibr">Laming
     2004</xref>;
-    <xref alt="Pollitt 2012" rid="ref-Pollitt_2012b" ref-type="bibr">Pollitt
-    2012</xref>;
+    <xref alt="Pollitt 2012b" rid="ref-Pollitt_2012b" ref-type="bibr">Pollitt
+    2012b</xref>;
     <xref alt="Whitehouse 2012" rid="ref-Whitehouse_2012" ref-type="bibr">Whitehouse
     2012</xref>;
     <xref alt="van Daal et al. 2016" rid="ref-vanDaal_et_al_2016" ref-type="bibr">van
@@ -681,16 +690,16 @@ the University of Antwerp (BOF).</funding-statement>
     transformations, to conduct additional analyses or hypothesis tests.
     For example, these scores have been used to identify ‘misfit’ judges
     and stimuli
-    (<xref alt="Pollitt 2012" rid="ref-Pollitt_2012b" ref-type="bibr">Pollitt
-    2012</xref>;
-    <xref alt="van Daal et al. 2017" rid="ref-vanDaal_et_al_2017" ref-type="bibr">van
-    Daal et al. 2017</xref>;
+    (<xref alt="Pollitt 2012b" rid="ref-Pollitt_2012b" ref-type="bibr">Pollitt
+    2012b</xref>;
+    <xref alt="van Daal et al. 2016" rid="ref-vanDaal_et_al_2016" ref-type="bibr">van
+    Daal et al. 2016</xref>;
     <xref alt="Goossens and De Maeyer 2018" rid="ref-Goossens_et_al_2018" ref-type="bibr">Goossens
     and De Maeyer 2018</xref>), detect biases in judges’ ratings
     (<xref alt="Pollitt and Elliott 2003" rid="ref-Pollitt_et_al_2003" ref-type="bibr">Pollitt
     and Elliott 2003</xref>;
-    <xref alt="Pollitt 2012" rid="ref-Pollitt_2012b" ref-type="bibr">Pollitt
-    2012</xref>), calculate correlations with other assessment methods
+    <xref alt="Pollitt 2012b" rid="ref-Pollitt_2012b" ref-type="bibr">Pollitt
+    2012b</xref>), calculate correlations with other assessment methods
     (<xref alt="Goossens and De Maeyer 2018" rid="ref-Goossens_et_al_2018" ref-type="bibr">Goossens
     and De Maeyer 2018</xref>;
     <xref alt="Bouwer et al. 2023" rid="ref-Bouwer_et_al_2023" ref-type="bibr">Bouwer
@@ -940,6 +949,22 @@ the University of Antwerp (BOF).</funding-statement>
       <pub-id pub-id-type="doi">10.2304/plat.2003.3.2.89</pub-id>
       <fpage>89</fpage>
       <lpage>96</lpage>
+    </element-citation>
+  </ref>
+  <ref id="ref-Pollitt_2012a">
+    <element-citation publication-type="article-journal">
+      <person-group person-group-type="author">
+        <name><surname>Pollitt</surname><given-names>A.</given-names></name>
+      </person-group>
+      <article-title>Comparative judgement for assessment</article-title>
+      <source>International Journal of Technology and Design Education</source>
+      <year iso-8601-date="2012">2012</year>
+      <volume>22</volume>
+      <issue>2</issue>
+      <uri></uri>
+      <pub-id pub-id-type="doi">10.1007/s10798-011-9189-x</pub-id>
+      <fpage>157</fpage>
+      <lpage>170</lpage>
     </element-citation>
   </ref>
   <ref id="ref-Pollitt_2012b">
@@ -1377,16 +1402,6 @@ the University of Antwerp (BOF).</funding-statement>
       <uri>https://hdl.handle.net/10067/1548280151162165141</uri>
     </element-citation>
   </ref>
-  <ref id="ref-vanDaal_2020">
-    <element-citation publication-type="thesis">
-      <person-group person-group-type="author">
-        <name><surname>van Daal</surname><given-names>T.</given-names></name>
-      </person-group>
-      <article-title>Making a choice is not easy?!: Unravelling the task difficulty of comparative judgement to assess student work</article-title>
-      <publisher-name>University of Antwerp</publisher-name>
-      <year iso-8601-date="2020">2020</year>
-    </element-citation>
-  </ref>
   <ref id="ref-Bramley_2008">
     <element-citation publication-type="chapter">
       <person-group person-group-type="author">
@@ -1442,6 +1457,22 @@ the University of Antwerp (BOF).</funding-statement>
       <pub-id pub-id-type="doi">10.1007/978-3-030-52229-2_18</pub-id>
       <fpage>331</fpage>
       <lpage>349</lpage>
+    </element-citation>
+  </ref>
+  <ref id="ref-Pollitt_2004">
+    <element-citation publication-type="paper-conference">
+      <person-group person-group-type="author">
+        <name><surname>Pollitt</surname><given-names>A.</given-names></name>
+      </person-group>
+      <article-title>Let’s stop marking exams</article-title>
+      <source>Proceedings of the IAEA conference</source>
+      <publisher-name>University of Cambridge Local Examinations Syndicate</publisher-name>
+      <publisher-loc>Philadelphia</publisher-loc>
+      <year iso-8601-date="2004">2004</year>
+      <volume></volume>
+      <uri>https://www.cambridgeassessment.org.uk/images/109719-let-s-stop-marking-exams.pdf</uri>
+      <fpage></fpage>
+      <lpage></lpage>
     </element-citation>
   </ref>
   <ref id="ref-Goossens_et_al_2018">
