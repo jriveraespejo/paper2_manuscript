@@ -116,7 +116,7 @@ Nevertheless, despite the increasing number of CJ studies, unsystematic and frag
 <!-- recording: Sven and Tine 24.11.25; time: 00:30:35 - 00:35:10 -->
 
 <!-- 1. Thurstone's Theory of CJ: discriminal process -->
-In its most general form, Thurstone's theory deals with pairwise comparisons of stimuli made by a single judge [@Thurstone_1927b, pp. 267]. The theory proposes that two key factors determine the dichotomous outcome of these comparisons: the discriminal process of each stimulus and their discriminal difference. The *discriminal process* represents the psychological impact each stimulus has on judges or, more simply, their underlying perception of the stimulus' trait level. According to the theory, the discriminal process for each stimulus follows a Normal distribution, where its mode (mean), referred to as the *modal discriminal process*, indicates the stimulus' position on the trait continuum, and its dispersion, known as the *discriminal dispersion*, reflects the variability in the perceived trait level of the stimulus.
+In its most general form, Thurstone's theory deals with pairwise comparisons of stimuli made by a single judge [@Thurstone_1927b, pp. 267]. The theory proposes that two key factors determine the dichotomous outcome of these comparisons: the discriminal process of each stimulus and their discriminal difference. The *discriminal process* represents the psychological impact each stimulus has on judges or, more simply, their underlying perception of the stimulus' trait level. According to the theory, the discriminal process for each stimulus follows a Normal distribution, where its mode (mean), referred to as the *modal discriminal process*, indicates the stimulus' position on the trait continuum, and its dispersion, known as the *discriminal dispersion*, reflects the perceived trait variability of the stimulus.
 
 <!-- 2. Example of discriminal processes -->
 For instance, @fig-discriminal_process illustrates the discriminal process distributions along a quality trait continuum for two written texts. The figure shows that these processes follow a Normal distribution. Moreover, it depicts differences in the texts' positions along the quality trait continuum, where text B is positioned further along the continuum than text A, as indicated by their modal discriminal processes ($S_{B}$ and $S_{A}$). Finally, it highlights differences in the texts' discriminal dispersions ($\sigma_{B}$ and $\sigma_{A}$), showing that text B exhibits a greater variability in its perceived quality than text A, as reflected by its wider distribution.
@@ -166,6 +166,9 @@ Despite its reliance on the largest number of simplifying assumptions [@Bramley_
 
 <!-- the mathematical function linking dichotomous outcomes to trait scores -->
 
+<!-- Model misspecification happens when the set of probability distributions considered by the statistician does not include the distribution that generated the observed data. -->
+
+
 ::: {#fig-logistic_vs_normal layout-nrow=2}
 
 ![Probability density](/images/figures/density.png){#fig-density width=70%}
@@ -181,19 +184,17 @@ However, Thurstone originally developed Case V to provide a "rather coarse scali
 <!-- Adding assumptions simplifies the formula and improves its tractability, but one cannot place as much confidence in the outputs of the formula if those assumptions are not met [@Kelly_et_al_2022, pp. 677]. -->
 
 <!-- 4. What does the equal dispersion between stimuli imply? and does it hold? -->
-On the one hand, the assumption of *equal dispersion between stimuli* suggests that variability in perceived trait levels is consistent across all stimuli. However, Thurstone observed that this assumption may not hold when researchers assess complex traits or heterogeneous stimuli [@Thurstone_1927a, pp. 376], as these traits and stimuli can introduce greater judgment discrepancies due to their unique characteristics. In fact, research on text quality may already provide evidence of the violation of this assumption, particularly through the use of misfit statistics [@Pollitt_2012a; @Pollitt_2012b; @vanDaal_et_al_2016; @Goossens_et_al_2018]. Misfit statistics quantify the judgment discrepancies associated with a given stimulus [@Pollitt_2004, pp. 12; @Goossens_et_al_2018, pp. 20]. In this context, texts identified as "misfits" display greater judgment discrepancies than other texts. This implies that the discriminal difference associated with these texts shows a broader dispersion, suggesting that their discriminal processes also exhibit greater variation than other texts. This reasoning also applies to "misfit" judges, whose evaluations reflect substantial deviations due to the unique or extreme characteristics of the stimuli.
-
-<!-- It is probably true that this variability of the discriminal dispersion on the psychological continuum is of relatively less serious importance in dealing with strictly homogeneous stimulus series, but it becomes a serious factor in dealing with less conspicuous attributes or with less homogeneous stimulus series, such as handwriting specimens, English compositions, sewing samples, oriental rugs. [@Thurstone_1927a, pp. 376] -->
+On the one hand, the assumption of *equal dispersion between stimuli* suggests that the perceived trait variability is consistent across all stimuli. However, Thurstone observed that this assumption may not hold when researchers assess complex traits or heterogeneous stimuli [@Thurstone_1927a, pp. 376], as these traits and stimuli can introduce judgment discrepancies due to their unique characteristics. Research on text quality may already provide evidence of this assumption's violation, particularly when considering the role of misfit statistics in the analysis of CJ data [@Pollitt_2012a; @Pollitt_2012b; @vanDaal_et_al_2016; @Goossens_et_al_2018]. Misfit statistics quantify the judgment discrepancies associated with a given stimulus [@Pollitt_2004, pp. 12; @Goossens_et_al_2018, pp. 20]. For instance, texts identified as "misfits" usually exhibit more judgment discrepancies than others. This, in turn, implies that the discriminal difference associated with these texts shows a broader dispersion, ultimately suggesting that their discriminal processes also exhibit more variation than other texts. Notably, this reasoning also applies to "misfit" judges, whose evaluations reflect substantial deviations due to the unique characteristics of the stimuli or the judges themselves.
 
 <!-- Of these, the most questionable is the one that the discriminal dispersions of all the objects are equal. Thurstone clearly did not expect this to hold for any but the most simple stimuli. The scripts used in cross-moderation exercises are obviously far more complex than any used by Thurstone, so it seems naive to expect this assumption to hold here [@Bramley_2008]. -->
+
+<!-- It is probably true that this variability of the discriminal dispersion on the psychological continuum is of relatively less serious importance in dealing with strictly homogeneous stimulus series, but it becomes a serious factor in dealing with less conspicuous attributes or with less homogeneous stimulus series, such as handwriting specimens, English compositions, sewing samples, oriental rugs. [@Thurstone_1927a, pp. 376] -->
 
 <!-- For instance, in evaluating creativity, a student might complete an assignment in a highly creative but unexpected manner. Judges, unprepared for such originality, may produce more divergent evaluations of the assignment. These increased discrepancies in judgments suggest that the discriminal difference associated with the assignment has a broader dispersion, indicating greater variation in the discriminal process for this assignment compared to others. -->
 
 <!-- "weak" writers consistently produce texts of low quality in all aspects that determine the quality of a text, such as grammatical accuracy, organization, and language use. In such cases, judges typically agree on their inferior quality, leading to a clear disfavoring of these texts compared to others. This agreement ultimately imply narrow dispersions for the discriminal differences related to these texts and, by extension, narrow discriminal processes for them. However, as texts improve along the trait continuum, with certain aspects showing improvement and others reaming unaltered, these variations introduce uncertainty into the judgments. Now, since judges often rely on various intricate characteristics of the texts to form their judgments [@vanDaal_et_al_2016; @Lesterhuis_2018; @Chambers_et_al_2022], these changes lead to greater discrepancies in their evaluations. This divergence ultimately imply broader discriminal differences and, by extension, more varied discriminal processes for the texts. -->
 
 <!-- So it seem that the extreme of the discriminal process distribution of the stimuli have higher reliability than the center? -->
-
-<!-- Misfiting assignments might be assignments with larger dispersion, because there is a lot of confusion about them. When assessing creativity, for instance, a student might complete an assignment in a highly creative but unexpected way. Judges, unprepared for such originality, may experience uncertainty, leading to greater variability in their judgments about the assignment. Then the discriminal difference is all over the place. -->
 
 <!-- If a portfolio’s WMS exceeds the criterion of mean plus two standard deviations, this means the judges did not judge it consistently, some considering it ‘better’ than others did. [@Pollitt_2012a, pp. 165] -->
 
@@ -202,25 +203,19 @@ On the one hand, the assumption of *equal dispersion between stimuli* suggests t
 <!-- a misfit statistic. Essentially this reports the amount of inconsistency in the various judgements that have been made of that script. It can act as a flag identifying scripts that judges find difficult to judge [@Pollitt_2004, pp. 12] -->
 
 
-
 <!-- 5. But what are the challenges when these assumptions are violated? -->
-[what are the challenges when the equal dispersion assumption is violated?]{style="color:red;"}
-
-<!-- But the statistical literature warns against mis-specifying the trait’s measurement model. When mis-specifying the measurement model by assuming, for example, equal discriminal dispersions across stimuli, the model can overlook meaningful differences in the reliability of the trait. Taken together, these mis-specifications and oversights can lead to misleading conclusions about the trait measurement, ultimately casting doubts about the validity of the trait, as validity cannot exist without reliability [@Perron_et_al_2015, pp. 2]. -->
+Moreover, assuming equal dispersion between stimuli despite its violation causes Case V (and the BTL model) to overlook critical differences in the reliability of the trait across stimuli. Moreover, if researchers recognize that misfit statistics help to identify such violations, the usual practice in the CJ literature of excluding stimuli based on these statistics [@Pollitt_2012b; @vanDaal_et_al_2017; @Goossens_et_al_2018] risks discarding valuable information and introducing bias into the trait's estimates [@Zimmerman_1994; @McElreath_2020]. The direction and magnitude of these biases remain unpredictable because they depend on which stimuli researchers exclude from the analysis. Together, these oversights undermine the reliability of the trait and ultimately compromise its validity [@Perron_et_al_2015, pp. 2].
 
 <!-- Reliability is a necessary but not sufficient condition for validity. Reliability can exist without validity but validity cannot exist without reliability [@Perron_et_al_2015, pp. 2] -->
 
-<!-- If your scores are not reliable they cannot be valid. People have been employing a model with assumptions that they do not know if those assumptions apply for their cases. And when you do that, the scores you produce most likely will not be reliable, which, in turn, renders them invalid. -->
-
-
+<!-- People have been employing a model with assumptions that they do not know if those assumptions apply for their cases. -->
 
 <!-- 6. So, how do we mitigate these risks? -->
 [how do we mitigate these risks?]{style="color:red;"}
 
+<!-- Although no CJ literature offer solutions to mitigate the aforementioned issues, we can take lesson from the Structural Equation Model (SEM) literature. More specifically, from @Depaoli_2021. -->
+
 <!-- Remember: the "mitigate" paragraph have the purpose of being the design principles that will guide the development of the theoretical and statistical model. -->
-
-<!-- This has been considered in the literature as a (see https://doi.org/10.1177/1471082X15571817) or a multilevel BTL model (find sources) -->
-
 
 
 <!-- 7. What does the zero correlation between stimuli imply? and does it hold? -->
@@ -247,7 +242,7 @@ In any case, the psychometric and statistical literature emphasizes the importan
 
 <!-- Accounting for measurement error in defining latent variables improves the accuracy of the model’s estimated structural parameters between the latent constructs, which in turn can provide a stronger test of a proposed theoretical model. [@Hoyle_et_al_2023, pp. 482] -->
 
-<!-- Reliability is a necessary but not sufficient condition for validity. Reliability can exist without validity but validity cannot exist without reliability [@Perron_et_al_2015, pp. 2]. If your scores are not reliable they cannot be valid. People have been employing a model with assumptions that they do not know if those assumptions apply for their cases. And when you do that, the scores you produce most likely will not be reliable, which, in turn, renders them invalid. -->
+<!-- Reliability is a necessary but not sufficient condition for validity. Reliability can exist without validity but validity cannot exist without reliability [@Perron_et_al_2015, pp. 2]. -->
 
 <!-- 11. How to solve the violation of the assumption? -->
 Fortunately, the same literature offers solutions for addressing these issues. @Andrich_1978 and @Wainer_et_al_1978 recommend integrating judges' biases into the BTL model. Moreover, the literature advocates for the incorporation of relevant hierarchical structures into the statistical model to account for these dependencies. Together, these additions can result in a model resembling a Multilevel Structural Equation Model (MSEM) [@Hoyle_et_al_2023, chap. 26] combined with a multidimensional or two-parameter logistic IRT model [@Hoyle_et_al_2023, chap. 15], depending on the theoretical and statistical treatment of judges' biases.
@@ -319,6 +314,9 @@ To mitigate these risks, principles from Structural Equation Modeling (SEM) [@Ho
 
 
 <!-- The correlation $\rho$, considered above is not the kind of correlation considered by Bock (1958) in studies of preference and choice of objects. The Bock correlation arises from a specific interaction between a subject and an item because the subject has a particular "preference", such as a taste preference, for the object. This preference for the object is then reflected in its comparisons with all other objects. However, it is less likely that subjects would have such particular preferences for some items in a test and, in any case, the assumption is open to empirical checking [@Andrich_1978, pp. 455]. -->
+
+
+<!-- include subject specific covariates [@Casalicchio_et_al_2015] -->
 
 ## From theory to statistics {#sec-theory-statistics}
 
