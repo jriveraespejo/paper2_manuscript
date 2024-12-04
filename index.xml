@@ -254,8 +254,8 @@ the University of Antwerp (BOF).</funding-statement>
   where its mode (mean), referred to as the <italic>modal discriminal
   process</italic>, indicates the stimulus’ position on the trait
   continuum, and its dispersion, known as the <italic>discriminal
-  dispersion</italic>, reflects the variability in the perceived trait
-  level of the stimulus.</p>
+  dispersion</italic>, reflects the perceived trait variability of the
+  stimulus.</p>
   <p>For instance,
   <xref alt="Figure 1" rid="fig-discriminal_process">Figure 1</xref>
   illustrates the discriminal process distributions along a quality
@@ -509,16 +509,16 @@ the University of Antwerp (BOF).</funding-statement>
     in theory or practice: the equal dispersion and zero correlation
     between stimuli.</p>
     <p>On the one hand, the assumption of <italic>equal dispersion
-    between stimuli</italic> suggests that variability in perceived
-    trait levels is consistent across all stimuli. However, Thurstone
+    between stimuli</italic> suggests that the perceived trait
+    variability is consistent across all stimuli. However, Thurstone
     observed that this assumption may not hold when researchers assess
     complex traits or heterogeneous stimuli
     (<xref alt="Thurstone 1927b, 376" rid="ref-Thurstone_1927a" ref-type="bibr">Thurstone
     1927b, 376</xref>), as these traits and stimuli can introduce
-    greater judgment discrepancies due to their unique characteristics.
-    In fact, research on text quality may already provide evidence of
-    the violation of this assumption, particularly through the use of
-    misfit statistics
+    judgment discrepancies due to their unique characteristics. Research
+    on text quality may already provide evidence of this assumption’s
+    violation, particularly when considering the role of misfit
+    statistics in the analysis of CJ data
     (<xref alt="Pollitt 2012a" rid="ref-Pollitt_2012a" ref-type="bibr">Pollitt
     2012a</xref>,
     <xref alt="2012b" rid="ref-Pollitt_2012b" ref-type="bibr">2012b</xref>;
@@ -530,16 +530,36 @@ the University of Antwerp (BOF).</funding-statement>
     (<xref alt="Pollitt 2004, 12" rid="ref-Pollitt_2004" ref-type="bibr">Pollitt
     2004, 12</xref>;
     <xref alt="Goossens and De Maeyer 2018, 20" rid="ref-Goossens_et_al_2018" ref-type="bibr">Goossens
-    and De Maeyer 2018, 20</xref>). In this context, texts identified as
-    “misfits” display greater judgment discrepancies than other texts.
-    This implies that the discriminal difference associated with these
-    texts shows a broader dispersion, suggesting that their discriminal
-    processes also exhibit greater variation than other texts. This
-    reasoning also applies to “misfit” judges, whose evaluations reflect
-    substantial deviations due to the unique or extreme characteristics
-    of the stimuli.</p>
-    <p><styled-content style="color:red;">what are the challenges when
-    the equal dispersion assumption is violated?</styled-content></p>
+    and De Maeyer 2018, 20</xref>). For instance, texts identified as
+    “misfits” usually exhibit more judgment discrepancies than others.
+    This, in turn, implies that the discriminal difference associated
+    with these texts shows a broader dispersion, ultimately suggesting
+    that their discriminal processes also exhibit more variation than
+    other texts. Notably, this reasoning also applies to “misfit”
+    judges, whose evaluations reflect substantial deviations due to the
+    unique characteristics of the stimuli or the judges themselves.</p>
+    <p>Moreover, assuming equal dispersion between stimuli despite its
+    violation causes Case V (and the BTL model) to overlook critical
+    differences in the reliability of the trait across stimuli.
+    Moreover, if researchers recognize that misfit statistics help to
+    identify such violations, the usual practice in the CJ literature of
+    excluding stimuli based on these statistics
+    (<xref alt="Pollitt 2012b" rid="ref-Pollitt_2012b" ref-type="bibr">Pollitt
+    2012b</xref>;
+    <xref alt="van Daal et al. 2017" rid="ref-vanDaal_et_al_2017" ref-type="bibr">van
+    Daal et al. 2017</xref>;
+    <xref alt="Goossens and De Maeyer 2018" rid="ref-Goossens_et_al_2018" ref-type="bibr">Goossens
+    and De Maeyer 2018</xref>) risks discarding valuable information and
+    introducing bias into the trait’s estimates
+    (<xref alt="Zimmerman 1994" rid="ref-Zimmerman_1994" ref-type="bibr">Zimmerman
+    1994</xref>;
+    <xref alt="McElreath 2020" rid="ref-McElreath_2020" ref-type="bibr">McElreath
+    2020</xref>). The direction and magnitude of these biases remain
+    unpredictable because they depend on which stimuli researchers
+    exclude from the analysis. Together, these oversights undermine the
+    reliability of the trait and ultimately compromise its validity
+    (<xref alt="Perron and Gillespie 2015, 2" rid="ref-Perron_et_al_2015" ref-type="bibr">Perron
+    and Gillespie 2015, 2</xref>).</p>
     <p><styled-content style="color:red;">how do we mitigate these
     risks?</styled-content></p>
     <p>On the other hand hand, the assumption of <italic>zero
@@ -933,6 +953,23 @@ the University of Antwerp (BOF).</funding-statement>
       <pub-id pub-id-type="doi">10.1177/014662168901300201</pub-id>
       <fpage>113</fpage>
       <lpage>127</lpage>
+    </element-citation>
+  </ref>
+  <ref id="ref-Zimmerman_1994">
+    <element-citation publication-type="article-journal">
+      <person-group person-group-type="author">
+        <name><surname>Zimmerman</surname><given-names>D.</given-names></name>
+      </person-group>
+      <article-title>A note on the influence of outliers on parametric and nonparametric tests</article-title>
+      <source>The Journal of General Psychology</source>
+      <publisher-name>Routledge</publisher-name>
+      <year iso-8601-date="1994">1994</year>
+      <volume>121</volume>
+      <issue>4</issue>
+      <uri></uri>
+      <pub-id pub-id-type="doi">10.1080/00221309.1994.9921213</pub-id>
+      <fpage>391</fpage>
+      <lpage>401</lpage>
     </element-citation>
   </ref>
   <ref id="ref-Laming_2004">
