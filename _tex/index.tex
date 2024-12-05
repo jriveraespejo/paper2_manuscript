@@ -260,12 +260,12 @@ factors determine the dichotomous outcome of these comparisons: the
 discriminal process of each stimulus and their discriminal difference.
 The \emph{discriminal process} represents the psychological impact each
 stimulus has on judges or, more simply, their underlying perception of
-the stimulus' trait level. According to the theory, the discriminal
-process for each stimulus follows a Normal distribution, where its mode
-(mean), referred to as the \emph{modal discriminal process}, indicates
-the stimulus' position on the trait continuum, and its dispersion, known
-as the \emph{discriminal dispersion}, reflects the perceived trait
-variability of the stimulus.
+the stimulus' trait. According to the theory, the discriminal process
+for each stimulus follows a Normal distribution, where its mode (mean),
+referred to as the \emph{modal discriminal process}, indicates the
+stimulus' position on the trait continuum, and its dispersion, known as
+the \emph{discriminal dispersion}, reflects the variability of the
+stimulus' perceived trait.
 
 For instance, Figure~\ref{fig-discriminal_process} illustrates the
 discriminal process distributions along a quality trait continuum for
@@ -296,10 +296,9 @@ However, because the discriminal process of a single stimulus is not
 directly observable, the theory introduces the \emph{law of comparative
 judgment}. This law posits that in pairwise comparisons, a judge
 perceives the stimulus positioned further along the trait continuum as
-having a higher level of that trait. This principle highlights that the
-outcome of a pairwise comparison likely depends on the relative distance
-between stimuli rather than their absolute positions on the trait
-continuum.
+having a higher level of that trait. This emphasizes that the outcome of
+a pairwise comparison likely depends on the relative distance between
+stimuli rather than their absolute positions on the trait continuum.
 
 Indeed, the theory assumes that the observed dichotomous outcome arises
 from the distribution of the difference between the underlying
@@ -325,7 +324,7 @@ Figure~\ref{fig-discriminal_process}, assuming a correlation of
 \(\rho = 0.6\). The figure reveals that, under these conditions, the
 judge perceives text B as having significantly higher quality than text
 A, as indicated by the shaded gray area under the curve \(P(B > A)\). As
-a result, the dichotomous outcome of this comparison would mostly favor
+a result, the dichotomous outcome of this comparison would likely favor
 text B over text A.
 
 \begin{figure}
@@ -358,8 +357,7 @@ depicted in Figure~\ref{fig-discriminal_process}. Since the texts differ
 in quality, higher correlations increase the likelihood that the
 discriminal difference distinctly favors text B over text A. This is
 evident from the larger proportion of the area under the curve,
-\(P(B > A)\), that lies above zero (shaded gray area in
-Figure~\ref{fig-correlation}) compared to curves with lower
+\(P(B > A)\), that lies above zero compared to curves with lower
 correlations. Moreover, although the figure does not illustrate this
 scenario, it is reasonable to infer that if the texts had similar or
 identical quality levels, higher correlations would likely reduce the
@@ -479,40 +477,39 @@ model may not consistently hold in theory or practice: the equal
 dispersion and zero correlation between stimuli.
 
 On the one hand, the assumption of \emph{equal dispersion between
-stimuli} suggests that the perceived trait variability is consistent
-across all stimuli. However, Thurstone observed that this assumption may
-not hold when researchers assess complex traits or heterogeneous stimuli
-\citep[pp.~376]{Thurstone_1927a}, as these traits and stimuli can
-introduce judgment discrepancies due to their unique characteristics.
-Research on text quality may already provide evidence of this
-assumption's violation, particularly when considering the role of misfit
-statistics in the analysis of CJ data
-\citep{Pollitt_2012a, Pollitt_2012b, vanDaal_et_al_2016, Goossens_et_al_2018}.
-Misfit statistics quantify the judgment discrepancies associated with a
-given stimulus
+stimuli} suggests that the variability of the perceived trait remains
+consistent across all stimuli. However, Thurstone contended that this
+assumption may not hold when researchers assess complex traits or
+heterogeneous stimuli \citep[pp.~376]{Thurstone_1927a}, as these traits
+and stimuli can introduce judgment discrepancies due to their unique
+features. Indeed, evidence of such violation may already exist in the CJ
+literature as misfit statistics. These statistics measure the judgment
+discrepancies associated with a given stimulus
 \citetext{\citealp[pp.~12]{Pollitt_2004}; \citealp[pp.~20]{Goossens_et_al_2018}}.
-For instance, texts identified as ``misfits'' usually exhibit more
-judgment discrepancies than others. This, in turn, implies that the
-discriminal difference associated with these texts shows a broader
-dispersion, ultimately suggesting that their discriminal processes also
-exhibit more variation than other texts. Notably, this reasoning also
-applies to ``misfit'' judges, whose evaluations reflect substantial
-deviations due to the unique characteristics of the stimuli or the
-judges themselves.
+For instance, labeling texts as ``misfits'' indicates that comparisons
+involving these texts result in more judgment discrepancies than
+comparisons involving other texts
+\citep{Pollitt_2012a, Pollitt_2012b, vanDaal_et_al_2016, Goossens_et_al_2018}.
+This finding implies that the discriminal differences associated with
+``misfits'' texts usually display a broader dispersion, suggesting that
+their discriminal processes also exhibit more variation than other
+texts. Notably, this reasoning also applies to ``misfit'' judges, whose
+evaluations reflect substantial deviations from the shared consensus due
+to the unique characteristics of the stimuli or the judges themselves.
 
-Moreover, assuming equal dispersion between stimuli despite its
-violation causes Case V (and the BTL model) to overlook critical
-differences in the reliability of the trait across stimuli. Moreover, if
-researchers recognize that misfit statistics help to identify such
-violations, the usual practice in the CJ literature of excluding stimuli
-based on these statistics
+However, assuming equal dispersions between stimuli despite its
+violation can lead Case V (and the BTL model) to overlook critical
+differences in the reliability of the trait across stimuli. Furthermore,
+if researchers acknowledge that misfit statistics help identify these
+critical differences, the common practice in the CJ literature of
+excluding stimuli based on these statistics
 \citep{Pollitt_2012b, vanDaal_et_al_2017, Goossens_et_al_2018} risks
 discarding valuable information and introducing bias into the trait's
-estimates \citep{Zimmerman_1994, McElreath_2020}. The direction and
-magnitude of these biases remain unpredictable because they depend on
-which stimuli researchers exclude from the analysis. Together, these
-oversights undermine the reliability of the trait and ultimately
-compromise its validity \citep[pp.~2]{Perron_et_al_2015}.
+estimates \citep[chap.~12]{Zimmerman_1994, McElreath_2020}. The
+direction and magnitude of these biases are unpredictable, as they
+depend on the particular stimuli researchers exclude from the analysis.
+Taken together, these oversights undermine the reliability of the trait
+and ultimately compromise its validity \citep[pp.~2]{Perron_et_al_2015}.
 
 {how do we mitigate these risks?}
 
@@ -589,22 +586,22 @@ advocates for the incorporation of relevant hierarchical structures into
 the statistical model to account for these dependencies. Together, these
 additions can result in a model resembling a Multilevel Structural
 Equation Model (MSEM) \citep[chap.~26]{Hoyle_et_al_2023} combined with a
-multidimensional or two-parameter logistic IRT model
-\citep[chap.~15]{Hoyle_et_al_2023}, depending on the theoretical and
-statistical treatment of judges' biases.
+multidimensional or two-parameter logistic Item Response Theory (IRT)
+model \citep[chap.~15]{Hoyle_et_al_2023}, depending on the theoretical
+and statistical treatment of judges' biases.
 
 \subsection{The disconnect between trait measurement and hypothesis
 testing}\label{sec-theory-issue2}
 
-Building on the previous section, it is evident that the BTL model
-commonly functions as the trait's measurement model in CJ experiments
-\citep{Andrich_1978, Bramley_2008}. A measurement model specifies how
-manifest variables contribute to the estimation of latent variables
-\citep{Everitt_et_al_2010}. For example, when evaluating text quality,
-researchers use the BTL model to process the dichotomous outcomes
-resulting from the pairwise comparisons (the manifest variables) to
-estimate scores that reflect the underlying quality level of texts (the
-latent variable)
+Building on the previous section, it is evident that, besides its
+inconveniences, the BTL model commonly functions as the trait's
+measurement model for CJ data \citep{Andrich_1978, Bramley_2008}. A
+measurement model specifies how manifest variables contribute to the
+estimation of latent variables \citep{Everitt_et_al_2010}. For example,
+when evaluating text quality, researchers use the BTL model to process
+the dichotomous outcomes resulting from the pairwise comparisons (the
+manifest variables) to estimate scores that reflect the underlying
+quality level of texts (the latent variable)
 \citep{Laming_2004, Pollitt_2012b, Whitehouse_2012, vanDaal_et_al_2016, Lesterhuis_2018_thesis, Coertjens_et_al_2017, Goossens_et_al_2018, Bouwer_et_al_2023}.
 
 Researchers then typically use the estimated BTL scores, or their
@@ -638,8 +635,7 @@ A structural model specifies how different manifest or latent variables
 influence the latent variable of interest \citep{Everitt_et_al_2010}.
 This approach allows analyses that can account for both the BTL scores
 and their uncertainties simultaneously, rather than treating them as
-separate elements. Therefore, an integrated approach that combines CJ's
-measurement and structural models can offer significant advantages.
+separate elements.
 
 \section{An updated theoretical and statistical model for
 CJ}\label{sec-theory}

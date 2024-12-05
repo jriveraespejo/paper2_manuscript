@@ -104,10 +104,10 @@ sciences</institution>
 <corresp id="cor-1">JoseManuel.RiveraEspejo@uantwerpen.be</corresp>
 </author-notes>
 
-<pub-date date-type="pub" publication-format="electronic" iso-8601-date="2024-12-04">
+<pub-date date-type="pub" publication-format="electronic" iso-8601-date="2024-12-05">
 <year>2024</year>
 <month>12</month>
-<day>4</day>
+<day>5</day>
 </pub-date>
 
 
@@ -249,13 +249,13 @@ the University of Antwerp (BOF).</funding-statement>
   of each stimulus and their discriminal difference. The
   <italic>discriminal process</italic> represents the psychological
   impact each stimulus has on judges or, more simply, their underlying
-  perception of the stimulus’ trait level. According to the theory, the
+  perception of the stimulus’ trait. According to the theory, the
   discriminal process for each stimulus follows a Normal distribution,
   where its mode (mean), referred to as the <italic>modal discriminal
   process</italic>, indicates the stimulus’ position on the trait
   continuum, and its dispersion, known as the <italic>discriminal
-  dispersion</italic>, reflects the perceived trait variability of the
-  stimulus.</p>
+  dispersion</italic>, reflects the variability of the stimulus’
+  perceived trait.</p>
   <p>For instance,
   <xref alt="Figure 1" rid="fig-discriminal_process">Figure 1</xref>
   illustrates the discriminal process distributions along a quality
@@ -289,9 +289,9 @@ the University of Antwerp (BOF).</funding-statement>
   comparative judgment</italic>. This law posits that in pairwise
   comparisons, a judge perceives the stimulus positioned further along
   the trait continuum as having a higher level of that trait. This
-  principle highlights that the outcome of a pairwise comparison likely
-  depends on the relative distance between stimuli rather than their
-  absolute positions on the trait continuum.</p>
+  emphasizes that the outcome of a pairwise comparison likely depends on
+  the relative distance between stimuli rather than their absolute
+  positions on the trait continuum.</p>
   <p>Indeed, the theory assumes that the observed dichotomous outcome
   arises from the distribution of the difference between the underlying
   discriminal processes of the stimuli, known as the <italic>discriminal
@@ -337,7 +337,7 @@ the University of Antwerp (BOF).</funding-statement>
   <inline-formula><alternatives>
   <tex-math><![CDATA[P(B > A)]]></tex-math>
   <mml:math display="inline" xmlns:mml="http://www.w3.org/1998/Math/MathML"><mml:mrow><mml:mi>P</mml:mi><mml:mrow><mml:mo stretchy="true" form="prefix">(</mml:mo><mml:mi>B</mml:mi><mml:mo>&gt;</mml:mo><mml:mi>A</mml:mi><mml:mo stretchy="true" form="postfix">)</mml:mo></mml:mrow></mml:mrow></mml:math></alternatives></inline-formula>.
-  As a result, the dichotomous outcome of this comparison would mostly
+  As a result, the dichotomous outcome of this comparison would likely
   favor text B over text A.</p>
   <fig id="fig-discriminal_difference">
     <caption><p>Figure 2: Example distribution of the discriminal
@@ -368,15 +368,14 @@ the University of Antwerp (BOF).</funding-statement>
   under the curve, <inline-formula><alternatives>
   <tex-math><![CDATA[P(B > A)]]></tex-math>
   <mml:math display="inline" xmlns:mml="http://www.w3.org/1998/Math/MathML"><mml:mrow><mml:mi>P</mml:mi><mml:mrow><mml:mo stretchy="true" form="prefix">(</mml:mo><mml:mi>B</mml:mi><mml:mo>&gt;</mml:mo><mml:mi>A</mml:mi><mml:mo stretchy="true" form="postfix">)</mml:mo></mml:mrow></mml:mrow></mml:math></alternatives></inline-formula>,
-  that lies above zero (shaded gray area in
-  <xref alt="Figure 3" rid="fig-correlation">Figure 3</xref>) compared
-  to curves with lower correlations. Moreover, although the figure does
-  not illustrate this scenario, it is reasonable to infer that if the
-  texts had similar or identical quality levels, higher correlations
-  would likely reduce the chance of the discriminal difference
-  distinctly favoring one text over the other. This probability
-  reduction occurs because the distribution of the discriminal
-  difference would become more narrowly centered around zero.</p>
+  that lies above zero compared to curves with lower correlations.
+  Moreover, although the figure does not illustrate this scenario, it is
+  reasonable to infer that if the texts had similar or identical quality
+  levels, higher correlations would likely reduce the chance of the
+  discriminal difference distinctly favoring one text over the other.
+  This probability reduction occurs because the distribution of the
+  discriminal difference would become more narrowly centered around
+  zero.</p>
   <fig id="fig-correlation">
     <caption><p>Figure 3: The effect of correlation on the distribution
     of the discriminal difference of the same two written
@@ -509,41 +508,41 @@ the University of Antwerp (BOF).</funding-statement>
     in theory or practice: the equal dispersion and zero correlation
     between stimuli.</p>
     <p>On the one hand, the assumption of <italic>equal dispersion
-    between stimuli</italic> suggests that the perceived trait
-    variability is consistent across all stimuli. However, Thurstone
-    observed that this assumption may not hold when researchers assess
-    complex traits or heterogeneous stimuli
+    between stimuli</italic> suggests that the variability of the
+    perceived trait remains consistent across all stimuli. However,
+    Thurstone contended that this assumption may not hold when
+    researchers assess complex traits or heterogeneous stimuli
     (<xref alt="Thurstone 1927b, 376" rid="ref-Thurstone_1927a" ref-type="bibr">Thurstone
     1927b, 376</xref>), as these traits and stimuli can introduce
-    judgment discrepancies due to their unique characteristics. Research
-    on text quality may already provide evidence of this assumption’s
-    violation, particularly when considering the role of misfit
-    statistics in the analysis of CJ data
+    judgment discrepancies due to their unique features. Indeed,
+    evidence of such violation may already exist in the CJ literature as
+    misfit statistics. These statistics measure the judgment
+    discrepancies associated with a given stimulus
+    (<xref alt="Pollitt 2004, 12" rid="ref-Pollitt_2004" ref-type="bibr">Pollitt
+    2004, 12</xref>;
+    <xref alt="Goossens and De Maeyer 2018, 20" rid="ref-Goossens_et_al_2018" ref-type="bibr">Goossens
+    and De Maeyer 2018, 20</xref>). For instance, labeling texts as
+    “misfits” indicates that comparisons involving these texts result in
+    more judgment discrepancies than comparisons involving other texts
     (<xref alt="Pollitt 2012a" rid="ref-Pollitt_2012a" ref-type="bibr">Pollitt
     2012a</xref>,
     <xref alt="2012b" rid="ref-Pollitt_2012b" ref-type="bibr">2012b</xref>;
     <xref alt="van Daal et al. 2016" rid="ref-vanDaal_et_al_2016" ref-type="bibr">van
     Daal et al. 2016</xref>;
     <xref alt="Goossens and De Maeyer 2018" rid="ref-Goossens_et_al_2018" ref-type="bibr">Goossens
-    and De Maeyer 2018</xref>). Misfit statistics quantify the judgment
-    discrepancies associated with a given stimulus
-    (<xref alt="Pollitt 2004, 12" rid="ref-Pollitt_2004" ref-type="bibr">Pollitt
-    2004, 12</xref>;
-    <xref alt="Goossens and De Maeyer 2018, 20" rid="ref-Goossens_et_al_2018" ref-type="bibr">Goossens
-    and De Maeyer 2018, 20</xref>). For instance, texts identified as
-    “misfits” usually exhibit more judgment discrepancies than others.
-    This, in turn, implies that the discriminal difference associated
-    with these texts shows a broader dispersion, ultimately suggesting
-    that their discriminal processes also exhibit more variation than
-    other texts. Notably, this reasoning also applies to “misfit”
-    judges, whose evaluations reflect substantial deviations due to the
+    and De Maeyer 2018</xref>). This finding implies that the
+    discriminal differences associated with “misfits” texts usually
+    display a broader dispersion, suggesting that their discriminal
+    processes also exhibit more variation than other texts. Notably,
+    this reasoning also applies to “misfit” judges, whose evaluations
+    reflect substantial deviations from the shared consensus due to the
     unique characteristics of the stimuli or the judges themselves.</p>
-    <p>Moreover, assuming equal dispersion between stimuli despite its
-    violation causes Case V (and the BTL model) to overlook critical
+    <p>However, assuming equal dispersions between stimuli despite its
+    violation can lead Case V (and the BTL model) to overlook critical
     differences in the reliability of the trait across stimuli.
-    Moreover, if researchers recognize that misfit statistics help to
-    identify such violations, the usual practice in the CJ literature of
-    excluding stimuli based on these statistics
+    Furthermore, if researchers acknowledge that misfit statistics help
+    identify these critical differences, the common practice in the CJ
+    literature of excluding stimuli based on these statistics
     (<xref alt="Pollitt 2012b" rid="ref-Pollitt_2012b" ref-type="bibr">Pollitt
     2012b</xref>;
     <xref alt="van Daal et al. 2017" rid="ref-vanDaal_et_al_2017" ref-type="bibr">van
@@ -553,11 +552,12 @@ the University of Antwerp (BOF).</funding-statement>
     introducing bias into the trait’s estimates
     (<xref alt="Zimmerman 1994" rid="ref-Zimmerman_1994" ref-type="bibr">Zimmerman
     1994</xref>;
-    <xref alt="McElreath 2020" rid="ref-McElreath_2020" ref-type="bibr">McElreath
-    2020</xref>). The direction and magnitude of these biases remain
-    unpredictable because they depend on which stimuli researchers
-    exclude from the analysis. Together, these oversights undermine the
-    reliability of the trait and ultimately compromise its validity
+    <xref alt="McElreath 2020, chap. 12" rid="ref-McElreath_2020" ref-type="bibr">McElreath
+    2020, chap. 12</xref>). The direction and magnitude of these biases
+    are unpredictable, as they depend on the particular stimuli
+    researchers exclude from the analysis. Taken together, these
+    oversights undermine the reliability of the trait and ultimately
+    compromise its validity
     (<xref alt="Perron and Gillespie 2015, 2" rid="ref-Perron_et_al_2015" ref-type="bibr">Perron
     and Gillespie 2015, 2</xref>).</p>
     <p><styled-content style="color:red;">how do we mitigate these
@@ -668,7 +668,7 @@ the University of Antwerp (BOF).</funding-statement>
     resembling a Multilevel Structural Equation Model (MSEM)
     (<xref alt="Hoyle 2023, chap. 26" rid="ref-Hoyle_et_al_2023" ref-type="bibr">Hoyle
     2023, chap. 26</xref>) combined with a multidimensional or
-    two-parameter logistic IRT model
+    two-parameter logistic Item Response Theory (IRT) model
     (<xref alt="Hoyle 2023, chap. 15" rid="ref-Hoyle_et_al_2023" ref-type="bibr">Hoyle
     2023, chap. 15</xref>), depending on the theoretical and statistical
     treatment of judges’ biases.</p>
@@ -676,9 +676,9 @@ the University of Antwerp (BOF).</funding-statement>
   <sec id="sec-theory-issue2">
     <title>The disconnect between trait measurement and hypothesis
     testing</title>
-    <p>Building on the previous section, it is evident that the BTL
-    model commonly functions as the trait’s measurement model in CJ
-    experiments
+    <p>Building on the previous section, it is evident that, besides its
+    inconveniences, the BTL model commonly functions as the trait’s
+    measurement model for CJ data
     (<xref alt="Andrich 1978" rid="ref-Andrich_1978" ref-type="bibr">Andrich
     1978</xref>;
     <xref alt="Bramley 2008" rid="ref-Bramley_2008" ref-type="bibr">Bramley
@@ -768,9 +768,7 @@ the University of Antwerp (BOF).</funding-statement>
     (<xref alt="Everitt and Skrondal 2010" rid="ref-Everitt_et_al_2010" ref-type="bibr">Everitt
     and Skrondal 2010</xref>). This approach allows analyses that can
     account for both the BTL scores and their uncertainties
-    simultaneously, rather than treating them as separate elements.
-    Therefore, an integrated approach that combines CJ’s measurement and
-    structural models can offer significant advantages.</p>
+    simultaneously, rather than treating them as separate elements.</p>
   </sec>
 </sec>
 <sec id="sec-theory">
