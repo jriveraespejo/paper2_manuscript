@@ -461,8 +461,8 @@ Extracted from \citet[pp.~254-255]{Bramley_2008}.}
 
 \end{figure}%
 
-However, Thurstone originally developed Case V to provide a ``rather
-coarse scaling'' of traits \citep[pp.~269]{Thurstone_1927b},
+Nevertheless, Thurstone originally developed Case V to provide a
+``rather coarse scaling'' of traits \citep[pp.~269]{Thurstone_1927b},
 prioritizing statistical simplicity over precision in trait measurement
 \citep[pp.~677]{Kelly_et_al_2022}. As a result, its assumptions may not
 be suitable for applications beyond the psycho-physical contexts for
@@ -497,23 +497,29 @@ texts. Notably, this reasoning also applies to ``misfit'' judges, whose
 evaluations reflect substantial deviations from the shared consensus due
 to the unique characteristics of the stimuli or the judges themselves.
 
-However, assuming equal dispersions between stimuli despite its
+Nonetheless, assuming equal dispersions between stimuli despite its
 violation can lead Case V (and the BTL model) to overlook critical
-differences in the reliability of the trait across stimuli. Furthermore,
-if researchers acknowledge that misfit statistics help identify these
-critical differences, the common practice in the CJ literature of
-excluding stimuli based on these statistics
+differences in the reliability of the trait across stimuli, resulting in
+inaccurate conclusions about the trait's estimates
+\citep[pp.~370]{McElreath_2020}. Furthermore, if researchers acknowledge
+that misfit statistics help identify these critical differences, the
+common practice in the CJ literature of excluding stimuli based on these
+statistics
 \citep{Pollitt_2012b, vanDaal_et_al_2017, Goossens_et_al_2018} risks
 discarding valuable information and introducing bias into the trait's
 estimates \citep[chap.~12]{Zimmerman_1994, McElreath_2020}. The
 direction and magnitude of these biases are unpredictable, as they
-depend on the particular stimuli researchers exclude from the analysis.
+depend on the specific stimuli researchers exclude from the analysis.
 Taken together, these oversights undermine the reliability of the trait
 and ultimately compromise its validity \citep[pp.~2]{Perron_et_al_2015}.
 
-{how do we mitigate these risks?}
+Fortunately, the statistical literature offers a solution to address the
+abovementioned issues. This solution involves using models that extend
+traditional approaches to account for the different variability in the
+stimuli, referred to as over-dispersed models
+\citep[chap.~12]{McElreath_2020}.
 
-On the other hand hand, the assumption of \emph{zero correlation between
+On the other hand, the assumption of \emph{zero correlation between
 stimuli} implies that, during a pairwise comparison, a judge's
 perception of quality in one text does not influence his perception of
 the same trait in another text (see Section~\ref{sec-thurstone_theory}).
@@ -541,9 +547,9 @@ creating biases in their judgments and, ultimately, introducing
 dependencies between stimuli
 \citep[pp.~346]{vanderLinden_et_al_2017_II}. For example, this could
 occur when a judge assessing the argumentative quality of a text places
-disproportionate emphasis on grammatical accuracy, ultimately favoring
-texts with fewer errors but weaker arguments. While direct evidence for
-this specific scenario is lacking, studies such as
+more weight on grammatical accuracy than other judges, ultimately
+favoring texts with fewer errors but weaker arguments. While direct
+evidence for this specific scenario is lacking, studies such as
 \citet{Pollitt_et_al_2003} demonstrate the presence of such biases,
 supporting the idea that the factors influencing pairwise comparisons
 may not always cancel out.
@@ -576,8 +582,8 @@ into the trait's estimates \citep{Ackerman_1989}. Similarly, failing to
 account for hierarchical (grouping) structures reduces the precision of
 model parameter estimates, further amplifying the overestimation of
 reliability \citep[pp.~482]{Hoyle_et_al_2023}. These issues collectively
-undermine the trait's reliability and ultimately compromise the validity
-of the trait's estimates \citep[pp.~2]{Perron_et_al_2015}.
+also undermine the trait's reliability and ultimately compromise the
+validity of the trait's estimates \citep[pp.~2]{Perron_et_al_2015}.
 
 Fortunately, the same literature offers solutions for addressing these
 issues. \citet{Andrich_1978} and \citet{Wainer_et_al_1978} recommend
@@ -595,16 +601,16 @@ testing}\label{sec-theory-issue2}
 
 Building on the previous section, it is evident that, besides its
 inconveniences, the BTL model commonly functions as the trait's
-measurement model for CJ data \citep{Andrich_1978, Bramley_2008}. A
-measurement model specifies how manifest variables contribute to the
-estimation of latent variables \citep{Everitt_et_al_2010}. For example,
-when evaluating text quality, researchers use the BTL model to process
-the dichotomous outcomes resulting from the pairwise comparisons (the
-manifest variables) to estimate scores that reflect the underlying
-quality level of texts (the latent variable)
+measurement model in CJ assessments. A measurement model specifies how
+manifest variables contribute to the estimation of latent variables
+\citep{Everitt_et_al_2010}. For example, when evaluating text quality,
+researchers use the BTL model to process the dichotomous outcomes
+resulting from the pairwise comparisons (the manifest variables) to
+estimate scores that reflect the underlying quality level of texts (the
+latent variable)
 \citep{Laming_2004, Pollitt_2012b, Whitehouse_2012, vanDaal_et_al_2016, Lesterhuis_2018_thesis, Coertjens_et_al_2017, Goossens_et_al_2018, Bouwer_et_al_2023}.
 
-Researchers then typically use the estimated BTL scores, or their
+Researchers then typically use these estimated BTL scores, or their
 transformations, to conduct additional analyses or hypothesis tests. For
 example, these scores have been used to identify `misfit' judges and
 stimuli \citep{Pollitt_2012b, vanDaal_et_al_2016, Goossens_et_al_2018},
@@ -628,7 +634,7 @@ statistical power, increasing the likelihood of committing type-I or
 type-II errors \citep{McElreath_2020}.
 
 To mitigate these risks, principles from Structural Equation Modeling
-(SEM) \citep[pp.~138]{Hoyle_et_al_2023} and Item Response Theory (IRT)
+(SEM) \citep[pp.~138]{Hoyle_et_al_2023} and IRT
 \citetext{\citealp[chap.~6]{Fox_2010}; \citealp[chap.~24]{vanderLinden_et_al_2017_I}}
 recommend conducting these analyses and tests within a structural model.
 A structural model specifies how different manifest or latent variables

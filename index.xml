@@ -486,7 +486,7 @@ the University of Antwerp (BOF).</funding-statement>
         </table>
       </table-wrap>
     </fig>
-    <p>However, Thurstone originally developed Case V to provide a
+    <p>Nevertheless, Thurstone originally developed Case V to provide a
     “rather coarse scaling” of traits
     (<xref alt="Thurstone 1927a, 269" rid="ref-Thurstone_1927b" ref-type="bibr">Thurstone
     1927a, 269</xref>), prioritizing statistical simplicity over
@@ -537,12 +537,15 @@ the University of Antwerp (BOF).</funding-statement>
     this reasoning also applies to “misfit” judges, whose evaluations
     reflect substantial deviations from the shared consensus due to the
     unique characteristics of the stimuli or the judges themselves.</p>
-    <p>However, assuming equal dispersions between stimuli despite its
-    violation can lead Case V (and the BTL model) to overlook critical
-    differences in the reliability of the trait across stimuli.
-    Furthermore, if researchers acknowledge that misfit statistics help
-    identify these critical differences, the common practice in the CJ
-    literature of excluding stimuli based on these statistics
+    <p>Nonetheless, assuming equal dispersions between stimuli despite
+    its violation can lead Case V (and the BTL model) to overlook
+    critical differences in the reliability of the trait across stimuli,
+    resulting in inaccurate conclusions about the trait’s estimates
+    (<xref alt="McElreath 2020, 370" rid="ref-McElreath_2020" ref-type="bibr">McElreath
+    2020, 370</xref>). Furthermore, if researchers acknowledge that
+    misfit statistics help identify these critical differences, the
+    common practice in the CJ literature of excluding stimuli based on
+    these statistics
     (<xref alt="Pollitt 2012b" rid="ref-Pollitt_2012b" ref-type="bibr">Pollitt
     2012b</xref>;
     <xref alt="van Daal et al. 2017" rid="ref-vanDaal_et_al_2017" ref-type="bibr">van
@@ -554,18 +557,23 @@ the University of Antwerp (BOF).</funding-statement>
     1994</xref>;
     <xref alt="McElreath 2020, chap. 12" rid="ref-McElreath_2020" ref-type="bibr">McElreath
     2020, chap. 12</xref>). The direction and magnitude of these biases
-    are unpredictable, as they depend on the particular stimuli
+    are unpredictable, as they depend on the specific stimuli
     researchers exclude from the analysis. Taken together, these
     oversights undermine the reliability of the trait and ultimately
     compromise its validity
     (<xref alt="Perron and Gillespie 2015, 2" rid="ref-Perron_et_al_2015" ref-type="bibr">Perron
     and Gillespie 2015, 2</xref>).</p>
-    <p><styled-content style="color:red;">how do we mitigate these
-    risks?</styled-content></p>
-    <p>On the other hand hand, the assumption of <italic>zero
-    correlation between stimuli</italic> implies that, during a pairwise
-    comparison, a judge’s perception of quality in one text does not
-    influence his perception of the same trait in another text (see
+    <p>Fortunately, the statistical literature offers a solution to
+    address the abovementioned issues. This solution involves using
+    models that extend traditional approaches to account for the
+    different variability in the stimuli, referred to as over-dispersed
+    models
+    (<xref alt="McElreath 2020, chap. 12" rid="ref-McElreath_2020" ref-type="bibr">McElreath
+    2020, chap. 12</xref>).</p>
+    <p>On the other hand, the assumption of <italic>zero correlation
+    between stimuli</italic> implies that, during a pairwise comparison,
+    a judge’s perception of quality in one text does not influence his
+    perception of the same trait in another text (see
     <xref alt="Section 2" rid="sec-thurstone_theory">Section 2</xref>).
     Thurstone attributed this independence to the cancellation of
     potential judges’ biases, driven by two opposing and equally
@@ -598,8 +606,8 @@ the University of Antwerp (BOF).</funding-statement>
     between stimuli
     (<xref alt="van der Linden 2017b, 2:346" rid="ref-vanderLinden_et_al_2017_II" ref-type="bibr">van
     der Linden 2017b, 2:346</xref>). For example, this could occur when
-    a judge assessing the argumentative quality of a text places
-    disproportionate emphasis on grammatical accuracy, ultimately
+    a judge assessing the argumentative quality of a text places more
+    weight on grammatical accuracy than other judges, ultimately
     favoring texts with fewer errors but weaker arguments. While direct
     evidence for this specific scenario is lacking, studies such as
     Pollitt and Elliott
@@ -651,9 +659,9 @@ the University of Antwerp (BOF).</funding-statement>
     (grouping) structures reduces the precision of model parameter
     estimates, further amplifying the overestimation of reliability
     (<xref alt="Hoyle 2023, 482" rid="ref-Hoyle_et_al_2023" ref-type="bibr">Hoyle
-    2023, 482</xref>). These issues collectively undermine the trait’s
-    reliability and ultimately compromise the validity of the trait’s
-    estimates
+    2023, 482</xref>). These issues collectively also undermine the
+    trait’s reliability and ultimately compromise the validity of the
+    trait’s estimates
     (<xref alt="Perron and Gillespie 2015, 2" rid="ref-Perron_et_al_2015" ref-type="bibr">Perron
     and Gillespie 2015, 2</xref>).</p>
     <p>Fortunately, the same literature offers solutions for addressing
@@ -678,12 +686,9 @@ the University of Antwerp (BOF).</funding-statement>
     testing</title>
     <p>Building on the previous section, it is evident that, besides its
     inconveniences, the BTL model commonly functions as the trait’s
-    measurement model for CJ data
-    (<xref alt="Andrich 1978" rid="ref-Andrich_1978" ref-type="bibr">Andrich
-    1978</xref>;
-    <xref alt="Bramley 2008" rid="ref-Bramley_2008" ref-type="bibr">Bramley
-    2008</xref>). A measurement model specifies how manifest variables
-    contribute to the estimation of latent variables
+    measurement model in CJ assessments. A measurement model specifies
+    how manifest variables contribute to the estimation of latent
+    variables
     (<xref alt="Everitt and Skrondal 2010" rid="ref-Everitt_et_al_2010" ref-type="bibr">Everitt
     and Skrondal 2010</xref>). For example, when evaluating text
     quality, researchers use the BTL model to process the dichotomous
@@ -706,10 +711,10 @@ the University of Antwerp (BOF).</funding-statement>
     and De Maeyer 2018</xref>;
     <xref alt="Bouwer et al. 2023" rid="ref-Bouwer_et_al_2023" ref-type="bibr">Bouwer
     et al. 2023</xref>).</p>
-    <p>Researchers then typically use the estimated BTL scores, or their
-    transformations, to conduct additional analyses or hypothesis tests.
-    For example, these scores have been used to identify ‘misfit’ judges
-    and stimuli
+    <p>Researchers then typically use these estimated BTL scores, or
+    their transformations, to conduct additional analyses or hypothesis
+    tests. For example, these scores have been used to identify ‘misfit’
+    judges and stimuli
     (<xref alt="Pollitt 2012b" rid="ref-Pollitt_2012b" ref-type="bibr">Pollitt
     2012b</xref>;
     <xref alt="van Daal et al. 2016" rid="ref-vanDaal_et_al_2016" ref-type="bibr">van
@@ -757,7 +762,7 @@ the University of Antwerp (BOF).</funding-statement>
     <p>To mitigate these risks, principles from Structural Equation
     Modeling (SEM)
     (<xref alt="Hoyle 2023, 138" rid="ref-Hoyle_et_al_2023" ref-type="bibr">Hoyle
-    2023, 138</xref>) and Item Response Theory (IRT)
+    2023, 138</xref>) and IRT
     (<xref alt="Fox 2010, chap. 6" rid="ref-Fox_2010" ref-type="bibr">Fox
     2010, chap. 6</xref>;
     <xref alt="van der Linden 2017a, vol. 1, chap. 24" rid="ref-vanderLinden_et_al_2017_I" ref-type="bibr">van
