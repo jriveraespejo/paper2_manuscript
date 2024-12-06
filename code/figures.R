@@ -14,12 +14,12 @@ colorArea <- function(from, to, density, ..., col="lightgray", dens=NULL){
 
 
 
-# figure 1a ####
+# figure 1 ####
 
 # distributional parameters
 dpA = c(0, 0.5) # distribution text A (mean, sd)
 dpB = c(1, 1) # distribution text B (mean, sd)
-rAB = 0.6 # correlation between discriminal processes
+rAB = 0 # correlation between discriminal processes
 
 # figure
 png( filename=file.path(main_dir, 'discriminal_process.png'), 
@@ -63,11 +63,10 @@ dev.off()
 
 
 
-# figure 1b ####
+# figure 2 ####
 
 # distributional parameters
-dd = c( dpB[1]-dpA[1], sqrt( dpB[2]^2 + dpA[2]^2 - 2*rAB*dpB[2]*dpA[2] )) 
-dd_alt = c( dpB[1]-dpA[1], sqrt( dpB[2]^2 + dpA[2]^2 )) 
+dd = c( dpB[1]-dpA[1], sqrt( dpB[2]^2 + dpA[2]^2 - 2*rAB*dpB[2]*dpA[2] ) )
 
 # figure
 png( filename=file.path(main_dir, 'discriminal_difference.png'), 
@@ -75,17 +74,17 @@ png( filename=file.path(main_dir, 'discriminal_difference.png'),
 
 # initial figure
 par( mar=c(2,0,0.5,0) )
-plot( NULL, xlim=c(-2,5), ylim=c(0,0.5), 
+plot( NULL, xlim=c(-2,5), ylim=c(0,0.4), 
       xaxt='n', yaxt='n', xlab='', ylab='', axes=F )
 axis( side=1, labels=F, lwd.ticks=0 )
 axis( side=1, at=c(0, dd[1]), tick=F, 
-      label=c(0, expression( S[BA] ) ) )
+      label=c(0, expression( S[B] - S[A] ) ) )
 
 # figure parameters
 pplotD = c( dnorm( dd[1], mean=dd[1], sd=dd[2] ),
             dnorm( dd[1], mean=dd[1], sd=dd[2] ) + 0.05,
             dnorm( dd[1] + dd[2], mean=dd[1], sd=dd[2]),
-            dnorm( dd[1]+0.4, mean=dd[1], sd=dd[2] )-0.16,
+            dnorm( dd[1]+0.4, mean=dd[1], sd=dd[2] )-0.14,
             dnorm( 0, mean=dd[1], sd=dd[2] ) )
 
 # discriminal difference
@@ -94,67 +93,23 @@ curve( dnorm(x, mean=dd[1], sd=dd[2]), lwd=1.5, add=T )
 # text( x=dd[1], y=pplotD[2], cex=0.8, 'Text B' ) 
 lines( x=c(dd[1], dd[1]), y=c(pplotD[1], -0.1), lty=2, lwd=0.7 )
 lines( x=c(dd[1], dd[1]+dd[2]), y=rep( pplotD[3], 2), lty=2, lwd=0.7 )
-text( x=dd[1]+0.4, y=pplotD[4], cex=0.8, expression( sigma[AB] ) ) 
-text( x=dd[1]+1.65, y=0.32, cex=0.8, 'where:' )
-text( x=dd[1]+2, y=pplotD[4], cex=0.8,
-      expression( S[BA] == S[B] - S[A]) ) 
-text( x=dd[1]+2.45, y=pplotD[4]-0.04, cex=0.8,
-      expression( sigma[BA] == sqrt( sigma[B]^2 + sigma[A]^2 - rho*sigma[B]*sigma[A]) ) )
+text( x=dd[1]+0.5, y=pplotD[4], cex=0.8, expression( sigma[AB] ) ) 
+# text( x=dd[1]+1.65, y=0.32, cex=0.8, 'where:' )
+# text( x=dd[1]+2, y=pplotD[4], cex=0.8,
+#       expression( S[BA] == S[B] - S[A]) )
+# text( x=dd[1]+2.45, y=pplotD[4]-0.04, cex=0.8,
+#       expression( sigma[BA] == sqrt( sigma[B]^2 + sigma[A]^2 - rho*sigma[B]*sigma[A]) ) )
 lines( x=c(0,0), y=c(pplotD[5],-0.1), lty=2, lwd=0.7 )
 # text( x=-0.5, y=0.05, cex=0.8, expression( P(B<A) ) ) 
 text( x=0.5, y=0.05, cex=0.8, expression( P(B>A) ) ) 
 
-# # alternative distribution when there is no correlation
-# curve( dnorm(x, mean=dd_alt[1], sd=dd_alt[2]), lwd=0.5, lty=2, add=T )
-# legend('topleft', lwd=c(1.5,0.5), lty=c(1,2), bty='n', col=rep('black',2), cex=0.8,
-#        legend=c( expression( 'Discriminal difference when ' (rho>0) ), 
-#                  expression( 'Discriminal difference when ' (rho==0) ) ) )
-
-dev.off()
-
-
-
-
-# figure 1c ####
-# distributional parameters
-rAB = round( seq(-0.6, 0.6, by=0.2), 2 ) # correlation between discriminal processes
-dd = list()
-dd[[1]] = dpB[1]-dpA[1]
-dd[[2]] = round( sqrt( dpB[2]^2 + dpA[2]^2 - 2*rAB*dpB[2]*dpA[2] ), 2 )
-
-
-png( filename=file.path(main_dir, 'correlation.png'),
-     height=10, width=15, units='cm', res=400  )
-
-# initial figure
-par( mar=c(2,0,0.5,0) )
-plot( NULL, xlim=c(-2,5), ylim=c(0,0.5),
-      xaxt='n', yaxt='n', xlab='', ylab='', axes=F )
-axis( side=1, labels=F, lwd.ticks=0 )
-axis( side=1, at=0, tick=F, label='0' )
-
-# distributions
-l_ty = c( rep(2,3),1,rep(2,2),1 )
-text = paste0( ' ~ rho == ', rAB )
-colorArea( from=0, to=7, density=dnorm, mean=dd[[1]], sd=dd[[2]][7], col=rgb(0,0,0,0.05) )
-for(i in 1:length(dd[[2]])){
-  # colorArea( from=0, to=7, density=dnorm, mean=dd[[1]], sd=dd[[2]][i], col=rgb(0,0,0,0.05) )
-  curve( dnorm(x, mean=dd[[1]], sd=dd[[2]][i]), lwd=0.214*i, lty=l_ty[i], add=T )
-}
-lines( x=c(0,0), y=c(pplotD[5],-0.1), lty=2, lwd=0.7 )
-text( x=0.5, y=0.05, cex=0.8, expression( P(B>A) ) ) 
-legend('topleft', lwd=0.214*(1:length(rAB)), lty=l_ty, bty='n',
-       legend=parse(text=text) )
-
 dev.off()
 
 
 
 
 
-
-
-# figure 2a ####
+# figure 3a ####
 png( filename=file.path(main_dir, 'density.png'), 
      height=10, width=15, units='cm', res=400  )
 
@@ -174,7 +129,7 @@ dev.off()
 
 
 
-# figure 2b ####
+# figure 3b ####
 png( filename=file.path(main_dir, 'cummulative.png'), 
      height=10, width=15, units='cm', res=400  )
 
@@ -189,5 +144,77 @@ curve( plogis(x, location=0, scale=1), lwd=1.5, add=T )
 curve( pnorm(x, mean=0, sd=1.7), lwd=1.5, lty=2, add=T ) 
 legend('topleft', lwd=rep(1.5,2), lty=c(1,2), bty='n',
        legend=c('Logistic', expression('Normal ' (sigma== 1.7) ) ) )
+
+dev.off()
+
+
+
+
+# figure 4 ####
+# distributional parameters
+dpB_d = round( seq(0.5, 1.5, by=0.25), 2 ) # correlation between discriminal processes
+dd = list()
+dd[[1]] = dpB[1]-dpA[1]
+dd[[2]] = round( sqrt( dpB_d^2 + dpA[2]^2 - 2*rAB*dpB_d*dpA[2] ), 2 )
+
+
+png( filename=file.path(main_dir, 'dispersion.png'),
+     height=10, width=15, units='cm', res=400  )
+
+# initial figure
+par( mar=c(2,0,0.5,0) )
+plot( NULL, xlim=c(-2,5), ylim=c(0,0.6),
+      xaxt='n', yaxt='n', xlab='', ylab='', axes=F )
+axis( side=1, labels=F, lwd.ticks=0 )
+axis( side=1, at=0, tick=F, label='0' )
+
+# distributions
+l_ty = c( 1, rep(2,2), rep(3,2) )
+l_wd = c( 1.5, seq(1,0.5,length.out=4) )
+text = paste0( ' ~ sigma[B] - sigma[A] == ', dpB_d - dpA[2] )
+colorArea( from=0, to=7, density=dnorm, mean=dd[[1]], sd=dd[[2]][1], col=rgb(0,0,0,0.05) )
+for(i in 1:length(dd[[2]])){
+  # colorArea( from=0, to=7, density=dnorm, mean=dd[[1]], sd=dd[[2]][i], col=rgb(0,0,0,0.05) )
+  curve( dnorm(x, mean=dd[[1]], sd=dd[[2]][i]), lwd=l_wd[i], lty=l_ty[i], add=T )
+}
+lines( x=c(0,0), y=c(0.21,-0.1), lty=2, lwd=0.7 )
+text( x=0.5, y=0.05, cex=0.8, expression( P(B>A) ) ) 
+legend('topleft', lwd=l_wd, lty=l_ty, bty='n', legend=parse(text=text) )
+
+dev.off()
+
+
+
+
+# figure 5 ####
+# distributional parameters
+rAB = round( seq(-0.5, 0.5, by=0.25), 2 ) # correlation between discriminal processes
+dd = list()
+dd[[1]] = dpB[1]-dpA[1]
+dd[[2]] = round( sqrt( dpB[2]^2 + dpA[2]^2 - 2*rAB*dpB[2]*dpA[2] ), 2 )
+
+
+png( filename=file.path(main_dir, 'correlation.png'),
+     height=10, width=15, units='cm', res=400  )
+
+# initial figure
+par( mar=c(2,0,0.5,0) )
+plot( NULL, xlim=c(-2,5), ylim=c(0,0.5),
+      xaxt='n', yaxt='n', xlab='', ylab='', axes=F )
+axis( side=1, labels=F, lwd.ticks=0 )
+axis( side=1, at=0, tick=F, label='0' )
+
+# distributions
+l_ty = c( rep(3,2), 1, rep(2,2) )
+l_wd = c(seq(0.5,1,length.out=2), 1.5, seq(1,0.5,length.out=2) )
+text = paste0( ' ~ rho == ', rAB )
+colorArea( from=0, to=7, density=dnorm, mean=dd[[1]], sd=dd[[2]][3], col=rgb(0,0,0,0.05) )
+for(i in 1:length(dd[[2]])){
+  # colorArea( from=0, to=7, density=dnorm, mean=dd[[1]], sd=dd[[2]][i], col=rgb(0,0,0,0.05) )
+  curve( dnorm(x, mean=dd[[1]], sd=dd[[2]][i]), lwd=l_wd[i], lty=l_ty[i], add=T )
+}
+lines( x=c(0,0), y=c(0.24,-0.1), lty=2, lwd=0.7 )
+text( x=0.5, y=0.05, cex=0.8, expression( P(B>A) ) ) 
+legend('topleft', lwd=l_wd, lty=l_ty, bty='n', legend=parse(text=text) )
 
 dev.off()

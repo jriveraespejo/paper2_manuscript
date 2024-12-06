@@ -104,10 +104,10 @@ sciences</institution>
 <corresp id="cor-1">JoseManuel.RiveraEspejo@uantwerpen.be</corresp>
 </author-notes>
 
-<pub-date date-type="pub" publication-format="electronic" iso-8601-date="2024-12-05">
+<pub-date date-type="pub" publication-format="electronic" iso-8601-date="2024-12-06">
 <year>2024</year>
 <month>12</month>
-<day>5</day>
+<day>6</day>
 </pub-date>
 
 
@@ -230,161 +230,94 @@ the University of Antwerp (BOF).</funding-statement>
   <p>Nevertheless, despite the increasing number of CJ studies,
   unsystematic and fragmented research approaches have left several
   critical issues unaddressed. The present study primarily focuses on
-  two: the over-reliance on the assumptions of Thurstone’s Case V in the
+  two: the overreliance on the assumptions of Thurstone’s Case V in the
   statistical analysis of CJ data, and the apparent disconnect between
-  CJ’s trait measurement and hypothesis testing. The following sections
-  begin with a brief overview of Thurstone’s theory and a detailed
-  discussion of these issues. Subsequently, the study introduces a
-  theoretical model for CJ that builds upon Thurstone’s theory,
-  alongside its statistical translation, designed to address the two
-  concerns simultaneously.</p>
+  CJ’s approach to trait measurement and hypothesis testing. The
+  following sections begin with a brief overview of Thurstone’s theory
+  and a detailed examination of these issues. Subsequently, the study
+  introduces a theoretical model for CJ that builds upon Thurstone’s
+  theory, alongside its statistical translation, designed to address the
+  two concerns simultaneously.</p>
 </sec>
 <sec id="sec-thurstone_theory">
   <title>Thurstone’s theory</title>
-  <p>In its most general form, Thurstone’s theory deals with pairwise
+  <p>In its most general form, Thurstone’s theory addresses pairwise
   comparisons of stimuli made by a single judge
   (<xref alt="Thurstone 1927a, 267" rid="ref-Thurstone_1927b" ref-type="bibr">Thurstone
-  1927a, 267</xref>). The theory proposes that two key factors determine
+  1927a, 267</xref>). The theory posits that two key factors determine
   the dichotomous outcome of these comparisons: the discriminal process
   of each stimulus and their discriminal difference. The
   <italic>discriminal process</italic> represents the psychological
-  impact each stimulus has on judges or, more simply, their underlying
-  perception of the stimulus’ trait. According to the theory, the
-  discriminal process for each stimulus follows a Normal distribution,
-  where its mode (mean), referred to as the <italic>modal discriminal
-  process</italic>, indicates the stimulus’ position on the trait
-  continuum, and its dispersion, known as the <italic>discriminal
-  dispersion</italic>, reflects the variability of the stimulus’
-  perceived trait.</p>
-  <p>For instance,
-  <xref alt="Figure 1" rid="fig-discriminal_process">Figure 1</xref>
-  illustrates the discriminal process distributions along a quality
-  trait continuum for two written texts. The figure shows that these
-  processes follow a Normal distribution. Moreover, it depicts
-  differences in the texts’ positions along the quality trait continuum,
-  where text B is positioned further along the continuum than text A, as
-  indicated by their modal discriminal processes
-  (<inline-formula><alternatives>
-  <tex-math><![CDATA[S_{B}]]></tex-math>
-  <mml:math display="inline" xmlns:mml="http://www.w3.org/1998/Math/MathML"><mml:msub><mml:mi>S</mml:mi><mml:mi>B</mml:mi></mml:msub></mml:math></alternatives></inline-formula>
-  and <inline-formula><alternatives>
-  <tex-math><![CDATA[S_{A}]]></tex-math>
-  <mml:math display="inline" xmlns:mml="http://www.w3.org/1998/Math/MathML"><mml:msub><mml:mi>S</mml:mi><mml:mi>A</mml:mi></mml:msub></mml:math></alternatives></inline-formula>).
-  Finally, it highlights differences in the texts’ discriminal
-  dispersions (<inline-formula><alternatives>
-  <tex-math><![CDATA[\sigma_{B}]]></tex-math>
-  <mml:math display="inline" xmlns:mml="http://www.w3.org/1998/Math/MathML"><mml:msub><mml:mi>σ</mml:mi><mml:mi>B</mml:mi></mml:msub></mml:math></alternatives></inline-formula>
-  and <inline-formula><alternatives>
-  <tex-math><![CDATA[\sigma_{A}]]></tex-math>
-  <mml:math display="inline" xmlns:mml="http://www.w3.org/1998/Math/MathML"><mml:msub><mml:mi>σ</mml:mi><mml:mi>A</mml:mi></mml:msub></mml:math></alternatives></inline-formula>),
-  showing that text B exhibits a greater variability in its perceived
-  quality than text A, as reflected by its wider distribution.</p>
+  impact each stimulus has on judges or, more simply, their perception
+  of the stimulus trait. According to the theory, the discriminal
+  process for each stimulus follows a Normal distribution, where its
+  mode (mean), called the <italic>modal discriminal process</italic>,
+  indicates the stimulus position on the trait continuum, while its
+  dispersion, known as the <italic>discriminal dispersion</italic>,
+  reflects variability in the perceived trait of the stimulus.</p>
+  <p><xref alt="Figure 1" rid="fig-discriminal_process">Figure 1</xref>
+  illustrates the discriminal processes along a quality trait continuum
+  for two written texts. The figure shows that these processes
+  individually follow a Normal distribution. Furthermore, it shows that
+  the modal discriminal process for Text B is positioned further along
+  the continuum than Text A <inline-formula><alternatives>
+  <tex-math><![CDATA[(S_{B} > S_{A})]]></tex-math>
+  <mml:math display="inline" xmlns:mml="http://www.w3.org/1998/Math/MathML"><mml:mrow><mml:mo stretchy="true" form="prefix">(</mml:mo><mml:msub><mml:mi>S</mml:mi><mml:mi>B</mml:mi></mml:msub><mml:mo>&gt;</mml:mo><mml:msub><mml:mi>S</mml:mi><mml:mi>A</mml:mi></mml:msub><mml:mo stretchy="true" form="postfix">)</mml:mo></mml:mrow></mml:math></alternatives></inline-formula>.
+  Additionally, the figure highlights the broader distribution of Text B
+  compared to Text A as a result of its larger discriminal dispersion
+  <inline-formula><alternatives>
+  <tex-math><![CDATA[(\sigma_{B} > \sigma_{A})]]></tex-math>
+  <mml:math display="inline" xmlns:mml="http://www.w3.org/1998/Math/MathML"><mml:mrow><mml:mo stretchy="true" form="prefix">(</mml:mo><mml:msub><mml:mi>σ</mml:mi><mml:mi>B</mml:mi></mml:msub><mml:mo>&gt;</mml:mo><mml:msub><mml:mi>σ</mml:mi><mml:mi>A</mml:mi></mml:msub><mml:mo stretchy="true" form="postfix">)</mml:mo></mml:mrow></mml:math></alternatives></inline-formula>.</p>
   <fig id="fig-discriminal_process">
-    <caption><p>Figure 1: Example distributions of the discriminal
-    processes for two written texts</p></caption>
+    <caption><p>Figure 1: Discriminal processes for two written
+    texts</p></caption>
     <graphic mimetype="image" mime-subtype="png" xlink:href="./images/figures/discriminal_process.png" />
   </fig>
-  <p>However, because the discriminal process of a single stimulus is
-  not directly observable, the theory introduces the <italic>law of
+  <p>However, since the discriminal processes of the stimuli are not
+  directly observable, the theory introduces the <italic>law of
   comparative judgment</italic>. This law posits that in pairwise
   comparisons, a judge perceives the stimulus positioned further along
   the trait continuum as having a higher level of that trait. This
-  emphasizes that the outcome of a pairwise comparison likely depends on
-  the relative distance between stimuli rather than their absolute
-  positions on the trait continuum.</p>
-  <p>Indeed, the theory assumes that the observed dichotomous outcome
-  arises from the distribution of the difference between the underlying
-  discriminal processes of the stimuli, known as the <italic>discriminal
-  difference</italic>. Since the individual discriminal processes follow
-  a Normal distribution, their difference also follows a Normal
-  distribution
+  emphasizes that the relative distance between stimuli, rather than
+  their absolute positions on the continuum, determines the outcome of
+  the pairwise comparison. Indeed, the theory assumes that the observed
+  dichotomous outcome arises from the difference between the underlying
+  discriminal processes of the stimuli, referred to as the
+  <italic>discriminal difference</italic>. Since the individual
+  discriminal processes follow a Normal distribution, the discriminal
+  difference also follows a Normal distribution
   (<xref alt="Andrich 1978" rid="ref-Andrich_1978" ref-type="bibr">Andrich
-  1978</xref>). The mode (mean) of this distribution, representing the
-  (average) relative separation, is given by the difference between the
-  modal discriminal processes of the stimuli
-  <inline-formula><alternatives>
-  <tex-math><![CDATA[S_{BA} = S_{B} - S_{A}]]></tex-math>
-  <mml:math display="inline" xmlns:mml="http://www.w3.org/1998/Math/MathML"><mml:mrow><mml:msub><mml:mi>S</mml:mi><mml:mrow><mml:mi>B</mml:mi><mml:mi>A</mml:mi></mml:mrow></mml:msub><mml:mo>=</mml:mo><mml:msub><mml:mi>S</mml:mi><mml:mi>B</mml:mi></mml:msub><mml:mo>−</mml:mo><mml:msub><mml:mi>S</mml:mi><mml:mi>A</mml:mi></mml:msub></mml:mrow></mml:math></alternatives></inline-formula>.
-  Meanwhile, the dispersion of the distribution, reflecting the
-  variability in the relative separation, is calculated as
-  <inline-formula><alternatives>
-  <tex-math><![CDATA[\sigma_{BA} = \sqrt{\sigma_{B}^{2} + \sigma_{A}^{2} - \rho\sigma_{B}\sigma_{A}}]]></tex-math>
-  <mml:math display="inline" xmlns:mml="http://www.w3.org/1998/Math/MathML"><mml:mrow><mml:msub><mml:mi>σ</mml:mi><mml:mrow><mml:mi>B</mml:mi><mml:mi>A</mml:mi></mml:mrow></mml:msub><mml:mo>=</mml:mo><mml:msqrt><mml:mrow><mml:msubsup><mml:mi>σ</mml:mi><mml:mi>B</mml:mi><mml:mn>2</mml:mn></mml:msubsup><mml:mo>+</mml:mo><mml:msubsup><mml:mi>σ</mml:mi><mml:mi>A</mml:mi><mml:mn>2</mml:mn></mml:msubsup><mml:mo>−</mml:mo><mml:mi>ρ</mml:mi><mml:msub><mml:mi>σ</mml:mi><mml:mi>B</mml:mi></mml:msub><mml:msub><mml:mi>σ</mml:mi><mml:mi>A</mml:mi></mml:msub></mml:mrow></mml:msqrt></mml:mrow></mml:math></alternatives></inline-formula>.
-  Here, <inline-formula><alternatives>
-  <tex-math><![CDATA[\sigma_{B}]]></tex-math>
-  <mml:math display="inline" xmlns:mml="http://www.w3.org/1998/Math/MathML"><mml:msub><mml:mi>σ</mml:mi><mml:mi>B</mml:mi></mml:msub></mml:math></alternatives></inline-formula>
-  and <inline-formula><alternatives>
-  <tex-math><![CDATA[\sigma_{A}]]></tex-math>
-  <mml:math display="inline" xmlns:mml="http://www.w3.org/1998/Math/MathML"><mml:msub><mml:mi>σ</mml:mi><mml:mi>A</mml:mi></mml:msub></mml:math></alternatives></inline-formula>
-  denote the discriminal dispersions of the stimuli, while
-  <inline-formula><alternatives>
-  <tex-math><![CDATA[\rho]]></tex-math>
-  <mml:math display="inline" xmlns:mml="http://www.w3.org/1998/Math/MathML"><mml:mi>ρ</mml:mi></mml:math></alternatives></inline-formula>
-  represents the correlation between their discriminal processes. This
-  correlation quantifies the dependence of the judge’s perception of the
-  trait in one stimulus on his perception of the same trait in
-  another.</p>
+  1978</xref>), with its mode (mean) representing the relative
+  separation between the stimuli, while its dispersion reflects the
+  variability in that relative separation.</p>
   <p><xref alt="Figure 2" rid="fig-discriminal_difference">Figure 2</xref>
   shows the distribution of the discriminal difference for the texts
   depicted in
-  <xref alt="Figure 1" rid="fig-discriminal_process">Figure 1</xref>,
-  assuming a correlation of <inline-formula><alternatives>
-  <tex-math><![CDATA[\rho = 0.6]]></tex-math>
-  <mml:math display="inline" xmlns:mml="http://www.w3.org/1998/Math/MathML"><mml:mrow><mml:mi>ρ</mml:mi><mml:mo>=</mml:mo><mml:mn>0.6</mml:mn></mml:mrow></mml:math></alternatives></inline-formula>.
-  The figure reveals that, under these conditions, the judge perceives
-  text B as having significantly higher quality than text A, as
-  indicated by the shaded gray area under the curve
+  <xref alt="Figure 1" rid="fig-discriminal_process">Figure 1</xref>.
+  The figure illustrates that the judge perceives Text B as having
+  significantly higher quality than Text A, as indicated by their
+  discriminal difference <inline-formula><alternatives>
+  <tex-math><![CDATA[(S_{B} - S_{A} > 0)]]></tex-math>
+  <mml:math display="inline" xmlns:mml="http://www.w3.org/1998/Math/MathML"><mml:mrow><mml:mo stretchy="true" form="prefix">(</mml:mo><mml:msub><mml:mi>S</mml:mi><mml:mi>B</mml:mi></mml:msub><mml:mo>−</mml:mo><mml:msub><mml:mi>S</mml:mi><mml:mi>A</mml:mi></mml:msub><mml:mo>&gt;</mml:mo><mml:mn>0</mml:mn><mml:mo stretchy="true" form="postfix">)</mml:mo></mml:mrow></mml:math></alternatives></inline-formula>
+  and the shaded gray area under the curve
   <inline-formula><alternatives>
   <tex-math><![CDATA[P(B > A)]]></tex-math>
   <mml:math display="inline" xmlns:mml="http://www.w3.org/1998/Math/MathML"><mml:mrow><mml:mi>P</mml:mi><mml:mrow><mml:mo stretchy="true" form="prefix">(</mml:mo><mml:mi>B</mml:mi><mml:mo>&gt;</mml:mo><mml:mi>A</mml:mi><mml:mo stretchy="true" form="postfix">)</mml:mo></mml:mrow></mml:mrow></mml:math></alternatives></inline-formula>.
-  As a result, the dichotomous outcome of this comparison would likely
-  favor text B over text A.</p>
+  Therefore, the dichotomous outcome of this comparison would likely
+  favor Text B over Text A.</p>
   <fig id="fig-discriminal_difference">
-    <caption><p>Figure 2: Example distribution of the discriminal
-    difference for the two texts shown in
-    <xref alt="Figure 1" rid="fig-discriminal_process">Figure 1</xref>,
-    assuming a correlation of 0.6</p></caption>
+    <caption><p>Figure 2: Discriminal difference for two written
+    texts</p></caption>
     <graphic mimetype="image" mime-subtype="png" xlink:href="./images/figures/discriminal_difference.png" />
-  </fig>
-  <p>Notably, the correlation between the discriminal processes,
-  <inline-formula><alternatives>
-  <tex-math><![CDATA[\rho]]></tex-math>
-  <mml:math display="inline" xmlns:mml="http://www.w3.org/1998/Math/MathML"><mml:mi>ρ</mml:mi></mml:math></alternatives></inline-formula>,
-  plays a pivotal role in determining the comparison outcome by shaping
-  the distribution of the discriminal difference between the stimuli.
-  Specifically, as the correlation increases, reflecting a stronger
-  dependence of the judge’s perception of quality in one stimulus on his
-  perception of the other, the distribution of the discriminal
-  difference narrows. This narrowing ultimately impacts the area under
-  the curve that determines the comparison outcome and, consequently,
-  the conclusions drawn from this outcome.</p>
-  <p><xref alt="Figure 3" rid="fig-correlation">Figure 3</xref>
-  illustrates how varying correlations influence the distribution of the
-  discriminal difference for the texts depicted in
-  <xref alt="Figure 1" rid="fig-discriminal_process">Figure 1</xref>.
-  Since the texts differ in quality, higher correlations increase the
-  likelihood that the discriminal difference distinctly favors text B
-  over text A. This is evident from the larger proportion of the area
-  under the curve, <inline-formula><alternatives>
-  <tex-math><![CDATA[P(B > A)]]></tex-math>
-  <mml:math display="inline" xmlns:mml="http://www.w3.org/1998/Math/MathML"><mml:mrow><mml:mi>P</mml:mi><mml:mrow><mml:mo stretchy="true" form="prefix">(</mml:mo><mml:mi>B</mml:mi><mml:mo>&gt;</mml:mo><mml:mi>A</mml:mi><mml:mo stretchy="true" form="postfix">)</mml:mo></mml:mrow></mml:mrow></mml:math></alternatives></inline-formula>,
-  that lies above zero compared to curves with lower correlations.
-  Moreover, although the figure does not illustrate this scenario, it is
-  reasonable to infer that if the texts had similar or identical quality
-  levels, higher correlations would likely reduce the chance of the
-  discriminal difference distinctly favoring one text over the other.
-  This probability reduction occurs because the distribution of the
-  discriminal difference would become more narrowly centered around
-  zero.</p>
-  <fig id="fig-correlation">
-    <caption><p>Figure 3: The effect of correlation on the distribution
-    of the discriminal difference of the same two written
-    text</p></caption>
-    <graphic mimetype="image" mime-subtype="png" xlink:href="./images/figures/correlation.png" />
   </fig>
 </sec>
 <sec id="sec-theory-issues">
-  <title>Three critical issues in CJ literature</title>
+  <title>The two critical issues in CJ literature</title>
+  <p>This section examines the two critical issues in the CJ literature
+  that serve as the primary focus of this study. The first is the
+  overreliance on Thurstone’s Case V assumptions in the statistical
+  analysis of CJ data. The second is the apparent disconnect between
+  CJ’s approach to trait measurement and hypothesis testing.</p>
   <sec id="sec-theory-issue1">
     <title>The Case V and the statistical analysis of CJ data</title>
     <p>The previous section outlines the general form of Thurstone’s
@@ -439,9 +372,9 @@ the University of Antwerp (BOF).</funding-statement>
     <mml:math display="inline" xmlns:mml="http://www.w3.org/1998/Math/MathML"><mml:mn>1.7</mml:mn></mml:math></alternatives></inline-formula>
     (<xref alt="van der Linden 2017a, 1:16" rid="ref-vanderLinden_et_al_2017_I" ref-type="bibr">van
     der Linden 2017a, 1:16</xref>) (see
-    <xref alt="Figure 4" rid="fig-logistic_vs_normal">Figure 4</xref>).</p>
+    <xref alt="Figure 3" rid="fig-logistic_vs_normal">Figure 3</xref>).</p>
     <fig id="fig-logistic_vs_normal">
-      <caption><p>Figure 4: Probability density and cumulative
+      <caption><p>Figure 3: Probability density and cumulative
       probability of the logistic and Normal distributions. Extracted
       from Bramley
       (<xref alt="2008, 254–55" rid="ref-Bramley_2008" ref-type="bibr">2008,
@@ -492,194 +425,173 @@ the University of Antwerp (BOF).</funding-statement>
     1927a, 269</xref>), prioritizing statistical simplicity over
     precision in trait measurement
     (<xref alt="Kelly, Richardson, and Isaacs 2022, 677" rid="ref-Kelly_et_al_2022" ref-type="bibr">Kelly,
-    Richardson, and Isaacs 2022, 677</xref>). As a result, its
-    assumptions may not be suitable for applications beyond the
-    psycho-physical contexts for which it was created. Thurstone himself
-    cautioned that its use “should not be made without (an) experimental
-    test”
+    Richardson, and Isaacs 2022, 677</xref>). Moreover, he warned
+    against its untested application, stating that its use “should not
+    be made without (an) experimental test”
     (<xref alt="Thurstone 1927a, 270" rid="ref-Thurstone_1927b" ref-type="bibr">Thurstone
-    1927a, 270</xref>), acknowledging that some assumptions could prove
-    problematic in the presence of complex traits or heterogeneous
-    stimuli
+    1927a, 270</xref>), acknowledging that some assumptions might be
+    problematic when complex traits or heterogeneous stimuli are
+    involved
     (<xref alt="Thurstone 1927b, 376" rid="ref-Thurstone_1927a" ref-type="bibr">Thurstone
     1927b, 376</xref>). Consequently, given that modern CJ applications
-    frequently involve these traits and stimuli, two main assumptions of
+    frequently involve such traits and stimuli, two main assumptions of
     Case V and, by extension, of the BTL model may not consistently hold
-    in theory or practice: the equal dispersion and zero correlation
-    between stimuli.</p>
-    <p>On the one hand, the assumption of <italic>equal dispersion
-    between stimuli</italic> suggests that the variability of the
-    perceived trait remains consistent across all stimuli. However,
-    Thurstone contended that this assumption may not hold when
-    researchers assess complex traits or heterogeneous stimuli
-    (<xref alt="Thurstone 1927b, 376" rid="ref-Thurstone_1927a" ref-type="bibr">Thurstone
-    1927b, 376</xref>), as these traits and stimuli can introduce
-    judgment discrepancies due to their unique features. Indeed,
-    evidence of such violation may already exist in the CJ literature as
-    misfit statistics. These statistics measure the judgment
-    discrepancies associated with a given stimulus
-    (<xref alt="Pollitt 2004, 12" rid="ref-Pollitt_2004" ref-type="bibr">Pollitt
-    2004, 12</xref>;
-    <xref alt="Goossens and De Maeyer 2018, 20" rid="ref-Goossens_et_al_2018" ref-type="bibr">Goossens
-    and De Maeyer 2018, 20</xref>). For instance, labeling texts as
-    “misfits” indicates that comparisons involving these texts result in
-    more judgment discrepancies than comparisons involving other texts
-    (<xref alt="Pollitt 2012a" rid="ref-Pollitt_2012a" ref-type="bibr">Pollitt
-    2012a</xref>,
-    <xref alt="2012b" rid="ref-Pollitt_2012b" ref-type="bibr">2012b</xref>;
-    <xref alt="van Daal et al. 2016" rid="ref-vanDaal_et_al_2016" ref-type="bibr">van
-    Daal et al. 2016</xref>;
-    <xref alt="Goossens and De Maeyer 2018" rid="ref-Goossens_et_al_2018" ref-type="bibr">Goossens
-    and De Maeyer 2018</xref>). This finding implies that the
-    discriminal differences associated with “misfits” texts usually
-    display a broader dispersion, suggesting that their discriminal
-    processes also exhibit more variation than other texts. Notably,
-    this reasoning also applies to “misfit” judges, whose evaluations
-    reflect substantial deviations from the shared consensus due to the
-    unique characteristics of the stimuli or the judges themselves.</p>
-    <p>Nonetheless, assuming equal dispersions between stimuli despite
-    its violation can lead Case V (and the BTL model) to overlook
-    critical differences in the reliability of the trait across stimuli,
-    resulting in inaccurate conclusions about the trait’s estimates
-    (<xref alt="McElreath 2020, 370" rid="ref-McElreath_2020" ref-type="bibr">McElreath
-    2020, 370</xref>). Furthermore, if researchers acknowledge that
-    misfit statistics help identify these critical differences, the
-    common practice in the CJ literature of excluding stimuli based on
-    these statistics
-    (<xref alt="Pollitt 2012b" rid="ref-Pollitt_2012b" ref-type="bibr">Pollitt
-    2012b</xref>;
-    <xref alt="van Daal et al. 2017" rid="ref-vanDaal_et_al_2017" ref-type="bibr">van
-    Daal et al. 2017</xref>;
-    <xref alt="Goossens and De Maeyer 2018" rid="ref-Goossens_et_al_2018" ref-type="bibr">Goossens
-    and De Maeyer 2018</xref>) risks discarding valuable information and
-    introducing bias into the trait’s estimates
-    (<xref alt="Zimmerman 1994" rid="ref-Zimmerman_1994" ref-type="bibr">Zimmerman
-    1994</xref>;
-    <xref alt="McElreath 2020, chap. 12" rid="ref-McElreath_2020" ref-type="bibr">McElreath
-    2020, chap. 12</xref>). The direction and magnitude of these biases
-    are unpredictable, as they depend on the specific stimuli
-    researchers exclude from the analysis. Taken together, these
-    oversights undermine the reliability of the trait and ultimately
-    compromise its validity
-    (<xref alt="Perron and Gillespie 2015, 2" rid="ref-Perron_et_al_2015" ref-type="bibr">Perron
-    and Gillespie 2015, 2</xref>).</p>
-    <p>Fortunately, the statistical literature offers a solution to
-    address the abovementioned issues. This solution involves using
-    models that extend traditional approaches to account for the
-    different variability in the stimuli, referred to as over-dispersed
-    models
-    (<xref alt="McElreath 2020, chap. 12" rid="ref-McElreath_2020" ref-type="bibr">McElreath
-    2020, chap. 12</xref>).</p>
-    <p>On the other hand, the assumption of <italic>zero correlation
-    between stimuli</italic> implies that, during a pairwise comparison,
-    a judge’s perception of quality in one text does not influence his
-    perception of the same trait in another text (see
-    <xref alt="Section 2" rid="sec-thurstone_theory">Section 2</xref>).
-    Thurstone attributed this independence to the cancellation of
-    potential judges’ biases, driven by two opposing and equally
-    weighted effects occurring during the pairwise comparisons
-    (<xref alt="Thurstone 1927a, 268" rid="ref-Thurstone_1927b" ref-type="bibr">Thurstone
-    1927a, 268</xref>). Andrich
-    (<xref alt="1978" rid="ref-Andrich_1978" ref-type="bibr">1978</xref>)
-    mathematically demonstrated this cancellation using the BTL model
-    under the assumption of discriminal processes with additive biases.
-    However, it is easy to imagine at least two scenarios where the zero
-    correlation assumption almost certainly does not hold: when the
-    pairwise comparison involves multidimensional, complex traits with
-    heterogeneous stimuli and when an additional hierarchical structure
-    is relevant to the stimuli.</p>
-    <p>In the first scenario, the intricate aspects of multidimensional,
-    complex traits may introduce dependencies between the stimuli due to
-    certain judges’ biases that resist cancellation. Research on text
-    quality suggests that when judges evaluate these traits, they often
-    rely on various intricate characteristics of the stimuli to form
-    their judgments
-    (<xref alt="van Daal et al. 2016" rid="ref-vanDaal_et_al_2016" ref-type="bibr">van
-    Daal et al. 2016</xref>;
-    <xref alt="Lesterhuis 2018b" rid="ref-Lesterhuis_2018" ref-type="bibr">Lesterhuis
-    2018b</xref>;
-    <xref alt="Chambers and Cunningham 2022" rid="ref-Chambers_et_al_2022" ref-type="bibr">Chambers
-    and Cunningham 2022</xref>). These additional relevant
-    characteristics, which are unlikely to be equally weighted or
-    opposing, can unevenly influence judges’ perceptions, creating
-    biases in their judgments and, ultimately, introducing dependencies
-    between stimuli
-    (<xref alt="van der Linden 2017b, 2:346" rid="ref-vanderLinden_et_al_2017_II" ref-type="bibr">van
-    der Linden 2017b, 2:346</xref>). For example, this could occur when
-    a judge assessing the argumentative quality of a text places more
-    weight on grammatical accuracy than other judges, ultimately
-    favoring texts with fewer errors but weaker arguments. While direct
-    evidence for this specific scenario is lacking, studies such as
-    Pollitt and Elliott
-    (<xref alt="2003" rid="ref-Pollitt_et_al_2003" ref-type="bibr">2003</xref>)
-    demonstrate the presence of such biases, supporting the idea that
-    the factors influencing pairwise comparisons may not always cancel
-    out.</p>
-    <p>In the second scenario, the shared context or inherent
-    connections created by additional hierarchical structures may
-    further introduce dependencies between stimuli, a statistical
-    phenomenon commonly known as clustering
-    (<xref alt="Everitt and Skrondal 2010" rid="ref-Everitt_et_al_2010" ref-type="bibr">Everitt
-    and Skrondal 2010</xref>). Although the CJ literature acknowledges
-    the presence of such hierarchical structures, the statistical
-    handling of this extra source of dependency between stimuli has been
-    inadequate. For example, when CJ data includes multiple samples of
-    stimuli from the same individuals, researchers often rely on
-    (average) estimated BTL scores to conduct subsequent analyses and
-    tests at the individual hierarchical level
-    (<xref alt="Bramley and Vitello 2019" rid="ref-Bramley_et_al_2019" ref-type="bibr">Bramley
-    and Vitello 2019</xref>;
-    <xref alt="Boonen, Kloots, and Gillis 2020" rid="ref-Boonen_et_al_2020" ref-type="bibr">Boonen,
-    Kloots, and Gillis 2020</xref>;
-    <xref alt="Bouwer et al. 2023" rid="ref-Bouwer_et_al_2023" ref-type="bibr">Bouwer
-    et al. 2023</xref>;
-    <xref alt="van Daal et al. 2017" rid="ref-vanDaal_et_al_2017" ref-type="bibr">van
-    Daal et al. 2017</xref>;
-    <xref alt="Jones et al. 2019" rid="ref-Jones_et_al_2019" ref-type="bibr">Jones
-    et al. 2019</xref>;
-    <xref alt="Gijsen et al. 2021" rid="ref-Gijsen_et_al_2021" ref-type="bibr">Gijsen
-    et al. 2021</xref>). This approach, however, has the significant
-    limitation of ignoring the uncertainty associated with the BTL
-    scores, which generates additional statistical and measurement
-    issues, as discussed in section
-    <xref alt="Section 3.2" rid="sec-theory-issue2">Section 3.2</xref>.</p>
-    <p>In any case, the psychometric and statistical literature
-    emphasizes the importance of addressing the factors that create
-    dependencies between stimuli, as failing to do so can lead to
-    inaccurate conclusions about a trait’s reliability and, by
-    extension, its validity. For instance, neglecting additional traits
-    relevant to the stimuli, such as judges’ biases, often leads to a
-    dimensional mismatch in the statistical model used for analysis.
-    This mismatch can potentially inflate the reliability of the trait
-    (<xref alt="Hoyle 2023, 341" rid="ref-Hoyle_et_al_2023" ref-type="bibr">Hoyle
-    2023, 341</xref>) or, worse, introduce bias into the trait’s
-    estimates
-    (<xref alt="Ackerman 1989" rid="ref-Ackerman_1989" ref-type="bibr">Ackerman
-    1989</xref>). Similarly, failing to account for hierarchical
-    (grouping) structures reduces the precision of model parameter
-    estimates, further amplifying the overestimation of reliability
-    (<xref alt="Hoyle 2023, 482" rid="ref-Hoyle_et_al_2023" ref-type="bibr">Hoyle
-    2023, 482</xref>). These issues collectively also undermine the
-    trait’s reliability and ultimately compromise the validity of the
-    trait’s estimates
-    (<xref alt="Perron and Gillespie 2015, 2" rid="ref-Perron_et_al_2015" ref-type="bibr">Perron
-    and Gillespie 2015, 2</xref>).</p>
-    <p>Fortunately, the same literature offers solutions for addressing
-    these issues. Andrich
-    (<xref alt="1978" rid="ref-Andrich_1978" ref-type="bibr">1978</xref>)
-    and Wainer, TimbersFairbank, and Hough
-    (<xref alt="1978" rid="ref-Wainer_et_al_1978" ref-type="bibr">1978</xref>)
-    recommend integrating judges’ biases into the BTL model. Moreover,
-    the literature advocates for the incorporation of relevant
-    hierarchical structures into the statistical model to account for
-    these dependencies. Together, these additions can result in a model
-    resembling a Multilevel Structural Equation Model (MSEM)
-    (<xref alt="Hoyle 2023, chap. 26" rid="ref-Hoyle_et_al_2023" ref-type="bibr">Hoyle
-    2023, chap. 26</xref>) combined with a multidimensional or
-    two-parameter logistic Item Response Theory (IRT) model
-    (<xref alt="Hoyle 2023, chap. 15" rid="ref-Hoyle_et_al_2023" ref-type="bibr">Hoyle
-    2023, chap. 15</xref>), depending on the theoretical and statistical
-    treatment of judges’ biases.</p>
+    in theory or practice: the assumption of equal dispersion and zero
+    correlation between stimuli.</p>
+    <sec id="the-assumption-of-equal-dispersions-between-stimuli">
+      <title>The assumption of equal dispersions between stimuli</title>
+      <p>The discriminal dispersions of stimuli are crucial in
+      determining the dichotomous outcomes of pairwise comparisons.
+      Discrepancies in these dispersions shape the distribution of the
+      discriminal difference, directly influencing the comparison
+      outcome. For instance,
+      <xref alt="Figure 4" rid="fig-dispersion">Figure 4</xref>
+      illustrates how more uncertainty in the trait perception of a text
+      over another broadens the distribution of their discriminal
+      difference. This broadening affects the area under the curve,
+      <inline-formula><alternatives>
+      <tex-math><![CDATA[P(B>A)]]></tex-math>
+      <mml:math display="inline" xmlns:mml="http://www.w3.org/1998/Math/MathML"><mml:mrow><mml:mi>P</mml:mi><mml:mrow><mml:mo stretchy="true" form="prefix">(</mml:mo><mml:mi>B</mml:mi><mml:mo>&gt;</mml:mo><mml:mi>A</mml:mi><mml:mo stretchy="true" form="postfix">)</mml:mo></mml:mrow></mml:mrow></mml:math></alternatives></inline-formula>,
+      determining the comparison outcome. Additionally, the figure shows
+      that when there are no discrepancies in the texts’ discriminal
+      dispersions, meaning the <italic>texts have equal
+      dispersions</italic> <inline-formula><alternatives>
+      <tex-math><![CDATA[(\sigma_{B}-\sigma_{A}=0)]]></tex-math>
+      <mml:math display="inline" xmlns:mml="http://www.w3.org/1998/Math/MathML"><mml:mrow><mml:mo stretchy="true" form="prefix">(</mml:mo><mml:msub><mml:mi>σ</mml:mi><mml:mi>B</mml:mi></mml:msub><mml:mo>−</mml:mo><mml:msub><mml:mi>σ</mml:mi><mml:mi>A</mml:mi></mml:msub><mml:mo>=</mml:mo><mml:mn>0</mml:mn><mml:mo stretchy="true" form="postfix">)</mml:mo></mml:mrow></mml:math></alternatives></inline-formula>,
+      the likelihood that the discriminal difference distinctly favors
+      one text over another increases.</p>
+      <fig id="fig-dispersion">
+        <caption><p>Figure 4: The effect of different dispersions
+        between stimuli on the distribution of the discriminal
+        difference</p></caption>
+        <graphic mimetype="image" mime-subtype="png" xlink:href="./images/figures/dispersion.png" />
+      </fig>
+      <p>However, Thurstone contended that this assumption may not hold
+      when researchers assess complex traits or heterogeneous stimuli
+      (<xref alt="Thurstone 1927b, 376" rid="ref-Thurstone_1927a" ref-type="bibr">Thurstone
+      1927b, 376</xref>), as these traits and stimuli can introduce
+      judgment discrepancies due to their unique features. Indeed,
+      evidence of such violation may already exist in the CJ literature
+      as misfit statistics. These statistics measure the judgment
+      discrepancies associated with a given stimulus
+      (<xref alt="Pollitt 2004, 12" rid="ref-Pollitt_2004" ref-type="bibr">Pollitt
+      2004, 12</xref>;
+      <xref alt="Goossens and De Maeyer 2018, 20" rid="ref-Goossens_et_al_2018" ref-type="bibr">Goossens
+      and De Maeyer 2018, 20</xref>). For instance, labeling texts as
+      “misfits” indicates that comparisons involving these texts result
+      in more judgment discrepancies than comparisons involving other
+      texts
+      (<xref alt="Pollitt 2012a" rid="ref-Pollitt_2012a" ref-type="bibr">Pollitt
+      2012a</xref>,
+      <xref alt="2012b" rid="ref-Pollitt_2012b" ref-type="bibr">2012b</xref>;
+      <xref alt="van Daal et al. 2016" rid="ref-vanDaal_et_al_2016" ref-type="bibr">van
+      Daal et al. 2016</xref>;
+      <xref alt="Goossens and De Maeyer 2018" rid="ref-Goossens_et_al_2018" ref-type="bibr">Goossens
+      and De Maeyer 2018</xref>). This finding implies that the
+      discriminal differences associated with “misfits” texts usually
+      display a broader dispersion, suggesting that their discriminal
+      processes also exhibit more variation than other texts. Notably,
+      this reasoning also applies to “misfit” judges, whose evaluations
+      reflect substantial deviations from the shared consensus due to
+      the unique characteristics of the stimuli or the judges
+      themselves.</p>
+    </sec>
+    <sec id="the-assumption-of-zero-correlation-between-stimuli">
+      <title>The assumption of zero correlation between stimuli</title>
+      <p>Similar to the discriminal dispersions, the correlation between
+      the discriminal processes is also crucial in determining the
+      dichotomous outcomes of pairwise comparisons. This correlation
+      shapes the distribution of the discriminal difference, directly
+      influencing the comparison outcome. For instance,
+      <xref alt="Figure 5" rid="fig-correlation">Figure 5</xref>
+      illustrates how the stronger dependence of the trait perception in
+      one text over another narrows the distribution of their
+      discriminal difference. This narrowing impacts the area under the
+      curve, <inline-formula><alternatives>
+      <tex-math><![CDATA[P(B>A)]]></tex-math>
+      <mml:math display="inline" xmlns:mml="http://www.w3.org/1998/Math/MathML"><mml:mrow><mml:mi>P</mml:mi><mml:mrow><mml:mo stretchy="true" form="prefix">(</mml:mo><mml:mi>B</mml:mi><mml:mo>&gt;</mml:mo><mml:mi>A</mml:mi><mml:mo stretchy="true" form="postfix">)</mml:mo></mml:mrow></mml:mrow></mml:math></alternatives></inline-formula>,
+      determining the comparison outcome. Additionally, the figure shows
+      that when the trait perception in one text is independent of
+      another, meaning the <italic>texts have zero correlation</italic>,
+      the likelihood that the discriminal difference distinctly favors
+      one text over another is lower compared to when the texts are
+      highly correlated.</p>
+      <fig id="fig-correlation">
+        <caption><p>Figure 5: The effect of correlation on the
+        distribution of the discriminal difference</p></caption>
+        <graphic mimetype="image" mime-subtype="png" xlink:href="./images/figures/correlation.png" />
+      </fig>
+      <p>Notably, Thurstone’s Case V and the BTL model assume
+      independent trait perceptions across stimuli. Thurstone attributed
+      this independence to the cancellation of potential judges’ biases,
+      driven by two opposing and equally weighted effects occurring
+      during the pairwise comparisons
+      (<xref alt="Thurstone 1927a, 268" rid="ref-Thurstone_1927b" ref-type="bibr">Thurstone
+      1927a, 268</xref>). Andrich
+      (<xref alt="1978" rid="ref-Andrich_1978" ref-type="bibr">1978</xref>)
+      mathematically demonstrated this cancellation using the BTL model
+      under the assumption of discriminal processes with additive
+      biases. However, it is easy to imagine at least two scenarios
+      where the zero correlation assumption almost certainly does not
+      hold: when the pairwise comparison involves multidimensional,
+      complex traits with heterogeneous stimuli and when an additional
+      hierarchical structure is relevant to the stimuli.</p>
+      <p>In the first scenario, the intricate aspects of
+      multidimensional, complex traits may introduce dependencies
+      between the stimuli due to certain judges’ biases that resist
+      cancellation. Research on text quality suggests that when judges
+      evaluate these traits, they often rely on various intricate
+      characteristics of the stimuli to form their judgments
+      (<xref alt="van Daal et al. 2016" rid="ref-vanDaal_et_al_2016" ref-type="bibr">van
+      Daal et al. 2016</xref>;
+      <xref alt="Lesterhuis 2018b" rid="ref-Lesterhuis_2018" ref-type="bibr">Lesterhuis
+      2018b</xref>;
+      <xref alt="Chambers and Cunningham 2022" rid="ref-Chambers_et_al_2022" ref-type="bibr">Chambers
+      and Cunningham 2022</xref>). These additional relevant
+      characteristics, which are unlikely to be equally weighted or
+      opposing, can unevenly influence judges’ perceptions, creating
+      biases in their judgments and, ultimately, introducing
+      dependencies between stimuli
+      (<xref alt="van der Linden 2017b, 2:346" rid="ref-vanderLinden_et_al_2017_II" ref-type="bibr">van
+      der Linden 2017b, 2:346</xref>). For example, this could occur
+      when a judge assessing the argumentative quality of a text places
+      more weight on grammatical accuracy than other judges, ultimately
+      favoring texts with fewer errors but weaker arguments. While
+      direct evidence for this specific scenario is lacking, studies
+      such as Pollitt and Elliott
+      (<xref alt="2003" rid="ref-Pollitt_et_al_2003" ref-type="bibr">2003</xref>)
+      demonstrate the presence of such biases, supporting the idea that
+      the factors influencing pairwise comparisons may not always cancel
+      out.</p>
+      <p>In the second scenario, the shared context or inherent
+      connections created by additional hierarchical structures may
+      further introduce dependencies between stimuli, a statistical
+      phenomenon commonly known as clustering
+      (<xref alt="Everitt and Skrondal 2010" rid="ref-Everitt_et_al_2010" ref-type="bibr">Everitt
+      and Skrondal 2010</xref>). Although the CJ literature acknowledges
+      the presence of such hierarchical structures, the statistical
+      handling of this extra source of dependency between stimuli has
+      been inadequate. For example, when CJ data includes multiple
+      samples of stimuli from the same individuals, researchers often
+      rely on (average) estimated BTL scores to conduct subsequent
+      analyses and tests at the individual hierarchical level
+      (<xref alt="Bramley and Vitello 2019" rid="ref-Bramley_et_al_2019" ref-type="bibr">Bramley
+      and Vitello 2019</xref>;
+      <xref alt="Boonen, Kloots, and Gillis 2020" rid="ref-Boonen_et_al_2020" ref-type="bibr">Boonen,
+      Kloots, and Gillis 2020</xref>;
+      <xref alt="Bouwer et al. 2023" rid="ref-Bouwer_et_al_2023" ref-type="bibr">Bouwer
+      et al. 2023</xref>;
+      <xref alt="van Daal et al. 2017" rid="ref-vanDaal_et_al_2017" ref-type="bibr">van
+      Daal et al. 2017</xref>;
+      <xref alt="Jones et al. 2019" rid="ref-Jones_et_al_2019" ref-type="bibr">Jones
+      et al. 2019</xref>;
+      <xref alt="Gijsen et al. 2021" rid="ref-Gijsen_et_al_2021" ref-type="bibr">Gijsen
+      et al. 2021</xref>). This approach, however, has the significant
+      limitation of ignoring the uncertainty associated with the BTL
+      scores, which generates additional statistical and measurement
+      issues, as discussed in section
+      <xref alt="Section 3.2" rid="sec-theory-issue2">Section 3.2</xref>.</p>
+    </sec>
   </sec>
   <sec id="sec-theory-issue2">
     <title>The disconnect between trait measurement and hypothesis
@@ -759,21 +671,6 @@ the University of Antwerp (BOF).</funding-statement>
     of committing type-I or type-II errors
     (<xref alt="McElreath 2020" rid="ref-McElreath_2020" ref-type="bibr">McElreath
     2020</xref>).</p>
-    <p>To mitigate these risks, principles from Structural Equation
-    Modeling (SEM)
-    (<xref alt="Hoyle 2023, 138" rid="ref-Hoyle_et_al_2023" ref-type="bibr">Hoyle
-    2023, 138</xref>) and IRT
-    (<xref alt="Fox 2010, chap. 6" rid="ref-Fox_2010" ref-type="bibr">Fox
-    2010, chap. 6</xref>;
-    <xref alt="van der Linden 2017a, vol. 1, chap. 24" rid="ref-vanderLinden_et_al_2017_I" ref-type="bibr">van
-    der Linden 2017a, vol. 1, chap. 24</xref>) recommend conducting
-    these analyses and tests within a structural model. A structural
-    model specifies how different manifest or latent variables influence
-    the latent variable of interest
-    (<xref alt="Everitt and Skrondal 2010" rid="ref-Everitt_et_al_2010" ref-type="bibr">Everitt
-    and Skrondal 2010</xref>). This approach allows analyses that can
-    account for both the BTL scores and their uncertainties
-    simultaneously, rather than treating them as separate elements.</p>
   </sec>
 </sec>
 <sec id="sec-theory">
@@ -922,57 +819,6 @@ the University of Antwerp (BOF).</funding-statement>
       <pub-id pub-id-type="doi">10.1177/014662167800200319</pub-id>
       <fpage>451</fpage>
       <lpage>462</lpage>
-    </element-citation>
-  </ref>
-  <ref id="ref-Wainer_et_al_1978">
-    <element-citation publication-type="article-journal">
-      <person-group person-group-type="author">
-        <name><surname>Wainer</surname><given-names>H.</given-names></name>
-        <name><surname>TimbersFairbank</surname><given-names>D.</given-names></name>
-        <name><surname>Hough</surname><given-names>R.</given-names></name>
-      </person-group>
-      <article-title>Predicting the impact of simple and compound life change events</article-title>
-      <source>Applied Psychological Measurement</source>
-      <year iso-8601-date="1978">1978</year>
-      <volume>2</volume>
-      <issue>3</issue>
-      <uri></uri>
-      <pub-id pub-id-type="doi">10.1177/014662167800200301</pub-id>
-      <fpage>313</fpage>
-      <lpage>322</lpage>
-    </element-citation>
-  </ref>
-  <ref id="ref-Ackerman_1989">
-    <element-citation publication-type="article-journal">
-      <person-group person-group-type="author">
-        <name><surname>Ackerman</surname><given-names>T.</given-names></name>
-      </person-group>
-      <article-title>Unidimensional IRT calibration of compensatory and noncompensatory multidimensional items</article-title>
-      <source>Applied Psychological Measurement</source>
-      <year iso-8601-date="1989">1989</year>
-      <volume>13</volume>
-      <issue>2</issue>
-      <uri></uri>
-      <pub-id pub-id-type="doi">10.1177/014662168901300201</pub-id>
-      <fpage>113</fpage>
-      <lpage>127</lpage>
-    </element-citation>
-  </ref>
-  <ref id="ref-Zimmerman_1994">
-    <element-citation publication-type="article-journal">
-      <person-group person-group-type="author">
-        <name><surname>Zimmerman</surname><given-names>D.</given-names></name>
-      </person-group>
-      <article-title>A note on the influence of outliers on parametric and nonparametric tests</article-title>
-      <source>The Journal of General Psychology</source>
-      <publisher-name>Routledge</publisher-name>
-      <year iso-8601-date="1994">1994</year>
-      <volume>121</volume>
-      <issue>4</issue>
-      <uri></uri>
-      <pub-id pub-id-type="doi">10.1080/00221309.1994.9921213</pub-id>
-      <fpage>391</fpage>
-      <lpage>401</lpage>
     </element-citation>
   </ref>
   <ref id="ref-Laming_2004">
@@ -1353,19 +1199,6 @@ the University of Antwerp (BOF).</funding-statement>
       <pub-id pub-id-type="doi"></pub-id>
     </element-citation>
   </ref>
-  <ref id="ref-Fox_2010">
-    <element-citation publication-type="book">
-      <person-group person-group-type="author">
-        <name><surname>Fox</surname><given-names>J. P.</given-names></name>
-      </person-group>
-      <source>Bayesian item response modeling, theory and applications</source>
-      <publisher-name>Springer</publisher-name>
-      <year iso-8601-date="2010">2010</year>
-      <volume></volume>
-      <uri></uri>
-      <pub-id pub-id-type="doi"></pub-id>
-    </element-citation>
-  </ref>
   <ref id="ref-vanderLinden_et_al_2017_I">
     <element-citation publication-type="book">
       <source>Handbook of item response theory: models</source>
@@ -1462,20 +1295,6 @@ the University of Antwerp (BOF).</funding-statement>
       <pub-id pub-id-type="doi"></pub-id>
       <fpage>246</fpage>
       <lpage>300</lpage>
-    </element-citation>
-  </ref>
-  <ref id="ref-Perron_et_al_2015">
-    <element-citation publication-type="chapter">
-      <person-group person-group-type="author">
-        <name><surname>Perron</surname><given-names>B.</given-names></name>
-        <name><surname>Gillespie</surname><given-names>D.</given-names></name>
-      </person-group>
-      <article-title>Reliability and Measurement Error</article-title>
-      <source>Key Concepts in Measurement</source>
-      <publisher-name>Oxford University Press</publisher-name>
-      <year iso-8601-date="2015-04">2015</year><month>04</month>
-      <uri></uri>
-      <pub-id pub-id-type="doi">10.1093/acprof:oso/9780199855483.003.0004</pub-id>
     </element-citation>
   </ref>
   <ref id="ref-Bartholomew_et_al_2020">
