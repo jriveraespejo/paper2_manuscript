@@ -462,8 +462,8 @@ the University of Antwerp (BOF).</funding-statement>
       the other than when their dispersions differ (shaded gray
       area).</p>
       <fig id="fig-dispersion">
-        <caption><p>Figure 4: The effect of different dispersions
-        between stimuli on the distribution of the discriminal
+        <caption><p>Figure 4: Discrepancies in the stimuli dispersions
+        and tehir effect on the distribution of the discriminal
         difference</p></caption>
         <graphic mimetype="image" mime-subtype="png" xlink:href="./images/figures/dispersion.png" />
       </fig>
@@ -557,8 +557,9 @@ the University of Antwerp (BOF).</funding-statement>
       the other than when the texts are highly correlated (shaded gray
       area).</p>
       <fig id="fig-correlation">
-        <caption><p>Figure 5: The effect of correlation on the
-        distribution of the discriminal difference</p></caption>
+        <caption><p>Figure 5: The correlation between stimuli and its
+        effect on the distribution of the discriminal
+        difference</p></caption>
         <graphic mimetype="image" mime-subtype="png" xlink:href="./images/figures/correlation.png" />
       </fig>
       <p>Notably, Thurstone’s Case V and the BTL model assume
