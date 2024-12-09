@@ -83,7 +83,7 @@ axis( side=1, at=c(0, dd[1]), tick=F,
 # figure parameters
 pplotD = c( dnorm( 0, mean=dd[1], sd=dd[2] ),
             dnorm( dd[1], mean=dd[1], sd=dd[2] ),
-            dnorm( dd[1]+dd[2], mean=dd[1], sd=dd[2]),
+            dnorm( dd[1]+2*dd[2], mean=dd[1], sd=dd[2]),
             dnorm( dd[1], mean=dd[1], sd=dd[2] ) + 0.05,
             dnorm( dd[1]+0.4, mean=dd[1], sd=dd[2] )-0.14 )
 
@@ -93,10 +93,10 @@ curve( dnorm(x, mean=dd[1], sd=dd[2]), lwd=1.5, add=T )
 lines( x=c(0,0), y=c(pplotD[1],-0.1), lty=2, lwd=0.7 )
 text( x=0.45, y=0.03, cex=0.8, expression( P(B>A) ) ) 
 lines( x=c(dd[1], dd[1]), y=c(pplotD[2], -0.1), lty=2, lwd=0.7 )
-lines( x=c(dd[1], dd[1]+dd[2]), y=rep( pplotD[3], 2), lty=2, lwd=0.7 )
-text( x=dd[1]+0.6, y=pplotD[3]-0.02, cex=0.8, expression( sigma[AB] ) ) 
+lines( x=c(dd[1], dd[1]+2*dd[2]), y=rep( pplotD[3], 2), lty=2, lwd=0.7 )
+text( x=dd[1]+1, y=pplotD[3]-0.02, cex=0.8, expression( sigma[BA] ) ) 
 text( x=dd[1]+1.7, y=0.25, cex=0.8, 'where:' )
-text( x=dd[[1]]+2.4, y=0.22, cex=0.8,
+text( x=dd[1]+2.4, y=0.22, cex=0.8,
       expression( sigma[BA] == sqrt( sigma[B]^2 + sigma[A]^2 - rho*sigma[B]*sigma[A]) ) )
 
 dev.off()
