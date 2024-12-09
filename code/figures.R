@@ -163,14 +163,16 @@ plot( NULL, xlim=c(-2,5), ylim=c(0,0.6),
       xaxt='n', yaxt='n', xlab='', ylab='', axes=F )
 axis( side=1, labels=F, lwd.ticks=0 )
 axis( side=1, at=0, tick=F, label='0' )
+axis( side=1, at=c(0, dd[1]), tick=F, 
+      label=c(0, expression( S[B] - S[A] ) ) )
 
 # figure parameters
 l_ty = c( 1, rep(2,2), rep(3,2) )
 l_wd = c( 1.5, seq(1,0.5,length.out=4) )
-text = paste0( ' ~ sigma[B] - sigma[A] == ', dpB_d - dpA )
+text = paste0( ' ~ sigma[B] - sigma[A] == ', dpB_d - dpA[2] )
 pplotD = c( dnorm( 0, mean=dd[[1]], sd=dd[[2]][1] ),
             dnorm( dd[[1]], mean=dd[[1]], sd=dd[[2]][1] ),
-            dnorm( dd[[1]] + 2*dd[[2]][1], mean=dd[[1]], sd=dd[[2]][1] ),
+            dnorm( dd[[1]]+2*dd[[2]][1], mean=dd[[1]], sd=dd[[2]][1] ),
             dnorm( dd[[1]]+0.4, mean=dd[[1]], sd=dd[[2]][1] )-0.14 )
 
 
@@ -182,9 +184,17 @@ for(i in 1:length(dd[[2]])){
 }
 lines( x=c(0,0), y=c(pplotD[1],-0.1), lty=2, lwd=0.7 )
 text( x=0.45, y=0.03, cex=0.8, expression( P(B>A) ) ) 
+lines( x=c(dd[[1]], dd[[1]]), y=c(pplotD[2], -0.1), lty=2, lwd=0.7 )
+lines( x=c(dd[[1]], dd[[1]]+2*dd[[2]][1]), y=rep(pplotD[3], 2), lty=2, lwd=0.7 )
+text( x=dd[[1]]+0.65, y=0.05, cex=0.8, expression( sigma[BA] ) ) 
+text( x=dd[[1]]+1.7, y=0.26, cex=0.8, 'where:' )
+text( x=dd[[1]]+2.45, y=0.22, cex=0.8,
+      expression( sigma[BA] == sqrt( sigma[B]^2 + sigma[A]^2 - 2*rho*sigma[B]*sigma[A]) ) )
 legend('topleft', lwd=l_wd, lty=l_ty, bty='n', legend=parse(text=text) )
 
 dev.off()
+
+
 
 
 # figure 5 ####
@@ -204,18 +214,32 @@ plot( NULL, xlim=c(-2,5), ylim=c(0,0.5),
       xaxt='n', yaxt='n', xlab='', ylab='', axes=F )
 axis( side=1, labels=F, lwd.ticks=0 )
 axis( side=1, at=0, tick=F, label='0' )
+axis( side=1, at=c(0, dd[1]), tick=F, 
+      label=c(0, expression( S[B] - S[A] ) ) )
 
-# distributions
+# figure parameters
 l_ty = c( rep(3,2), 1, rep(2,2) )
 l_wd = c(seq(0.5,1,length.out=2), 1.5, seq(1,0.5,length.out=2) )
 text = paste0( ' ~ rho == ', rAB )
+pplotD = c( dnorm( 0, mean=dd[[1]], sd=dd[[2]][3] ),
+            dnorm( dd[[1]], mean=dd[[1]], sd=dd[[2]][5] ),
+            dnorm( dd[[1]]+2*dd[[2]][3], mean=dd[[1]], sd=dd[[2]][3] ),
+            dnorm( dd[[1]]+0.4, mean=dd[[1]], sd=dd[[2]][1] )-0.14 )
+
+# distributions
 colorArea( from=0, to=7, density=dnorm, mean=dd[[1]], sd=dd[[2]][3], col=rgb(0,0,0,0.05) )
 for(i in 1:length(dd[[2]])){
   # colorArea( from=0, to=7, density=dnorm, mean=dd[[1]], sd=dd[[2]][i], col=rgb(0,0,0,0.05) )
   curve( dnorm(x, mean=dd[[1]], sd=dd[[2]][i]), lwd=l_wd[i], lty=l_ty[i], add=T )
 }
-lines( x=c(0,0), y=c(0.24,-0.1), lty=2, lwd=0.7 )
-text( x=0.5, y=0.05, cex=0.8, expression( P(B>A) ) ) 
+lines( x=c(0,0), y=c(pplotD[1],-0.1), lty=2, lwd=0.7 )
+text( x=0.45, y=0.03, cex=0.8, expression( P(B>A) ) ) 
+lines( x=c(dd[[1]], dd[[1]]), y=c(pplotD[2], -0.1), lty=2, lwd=0.7 )
+lines( x=c(dd[[1]], dd[[1]]+2*dd[[2]][3]), y=rep(pplotD[3], 2), lty=2, lwd=0.7 )
+text( x=dd[[1]]+0.8, y=0.025, cex=0.8, expression( sigma[BA] ) ) 
+text( x=dd[[1]]+1.7, y=0.26, cex=0.8, 'where:' )
+text( x=dd[[1]]+2.45, y=0.22, cex=0.8,
+      expression( sigma[BA] == sqrt( sigma[B]^2 + sigma[A]^2 - 2*rho*sigma[B]*sigma[A]) ) )
 legend('topleft', lwd=l_wd, lty=l_ty, bty='n', legend=parse(text=text) )
 
 dev.off()
