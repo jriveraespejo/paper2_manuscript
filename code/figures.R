@@ -105,7 +105,7 @@ dev.off()
 
 
 
-# figure 3a ####
+# figure XX ####
 png( filename=file.path(main_dir, 'density.png'), 
      height=10, width=15, units='cm', res=400  )
 
@@ -125,7 +125,7 @@ dev.off()
 
 
 
-# figure 3b ####
+# figure XX ####
 png( filename=file.path(main_dir, 'cummulative.png'), 
      height=10, width=15, units='cm', res=400  )
 
@@ -146,7 +146,7 @@ dev.off()
 
 
 
-# figure 4 ####
+# figure 3 ####
 # distributional parameters
 dpB_d = round( seq(0.5, 1.5, by=0.25), 2 ) # correlation between discriminal processes
 dd = list()
@@ -197,7 +197,7 @@ dev.off()
 
 
 
-# figure 5 ####
+# figure 4 ####
 # distributional parameters
 rAB = round( seq(-0.5, 0.5, by=0.25), 2 ) # correlation between discriminal processes
 dd = list()
