@@ -2,13 +2,13 @@ project:
   type: manuscript
 
 manuscript:
-  article: index.qmd 
+  article: paper2.qmd 
   meca-bundle: "manuscript-meca.zip"
   code-links:
      - text: Github repository
        icon: filetype-html
        href: https://github.com/jriveraespejo/paper2_manuscript.git
-     - text: figures code
+     - text: figures
        icon: file-code-fill
        href: code/figures.R
   #   - text: Submission Manuscript
@@ -42,6 +42,7 @@ format:
   jats: default
   elsevier-pdf:
     keep-tex: true
+    linestretch: 2
     journal:
       name: Psychometrika
       formatting: preprint
