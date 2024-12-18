@@ -1,7 +1,7 @@
 # working area ####
 rm(list=ls())
 
-main_dir = '/home/josema/Desktop/1. Work/1 research/PhD Antwerp/#thesis/paper2/paper2_manuscript/images/figures/'
+main_dir = '/home/josema/Desktop/1. Work/1 research/PhD Antwerp/#thesis/paper2/paper2_manuscript/images/png/'
 
 
 
@@ -31,7 +31,7 @@ plot( NULL, xlim=c(-2,5), ylim=c(0,0.9),
       xaxt='n', yaxt='n', xlab='', ylab='', axes=F )
 axis( side=1, labels=F, lwd.ticks=0 )
 axis( side=1, at=c(dpA[1], dpB[1]), tick=F, 
-      label=c( expression( S[A] ), expression( S[B] ) ) )
+      label=c( expression( T[A] ), expression( T[B] ) ) )
 
 # figure parameters
 pplotA = c( dnorm( dpA[1], mean=dpA[1], sd=dpA[2] ),
@@ -78,7 +78,7 @@ plot( NULL, xlim=c(-2,5), ylim=c(0,0.4),
       xaxt='n', yaxt='n', xlab='', ylab='', axes=F )
 axis( side=1, labels=F, lwd.ticks=0 )
 axis( side=1, at=c(0, dd[1]), tick=F, 
-      label=c(0, expression( S[B] - S[A] ) ) )
+      label=c(0, expression( T[B] - T[A] ) ) )
 
 # figure parameters
 pplotD = c( dnorm( 0, mean=dd[1], sd=dd[2] ),
@@ -164,7 +164,7 @@ plot( NULL, xlim=c(-2,5), ylim=c(0,0.6),
 axis( side=1, labels=F, lwd.ticks=0 )
 axis( side=1, at=0, tick=F, label='0' )
 axis( side=1, at=c(0, dd[1]), tick=F, 
-      label=c(0, expression( S[B] - S[A] ) ) )
+      label=c(0, expression( T[B] - T[A] ) ) )
 
 # figure parameters
 l_ty = c( 1, rep(2,2), rep(3,2) )
@@ -215,7 +215,7 @@ plot( NULL, xlim=c(-2,5), ylim=c(0,0.5),
 axis( side=1, labels=F, lwd.ticks=0 )
 axis( side=1, at=0, tick=F, label='0' )
 axis( side=1, at=c(0, dd[1]), tick=F, 
-      label=c(0, expression( S[B] - S[A] ) ) )
+      label=c(0, expression( T[B] - T[A] ) ) )
 
 # figure parameters
 l_ty = c( rep(3,2), 1, rep(2,2) )

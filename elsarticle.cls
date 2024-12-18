@@ -70,7 +70,7 @@
    \AtBeginDocument{\@twosidefalse\@mparswitchfalse}}
 \DeclareOption{nopreprintline}{\global\nopreprintlinetrue}
 \DeclareOption{final}{\gdef\@blstr{1}\global\preprintfalse}
-\DeclareOption{review}{\global\preprinttrue\gdef\@blstr{1.5}}
+\DeclareOption{review}{\global\preprinttrue\gdef\@blstr{1.7}} % original: 1.5
 \DeclareOption{authoryear}{\xdef\@biboptions{round,authoryear}}
 \DeclareOption{number}{\xdef\@biboptions{numbers}}
 \DeclareOption{numbers}{\xdef\@biboptions{numbers}}
@@ -1224,12 +1224,14 @@
  \geometry{twoside,
   paperwidth=210mm,
   paperheight=297mm,
-  textheight=562pt,
-  textwidth=384pt,
+  % url1: https://github.com/quarto-journals/elsevier
+  % url2: https://www.overleaf.com/learn/latex/Page_size_and_margins
+  textheight=670pt, % original: 562pt, maximum: 674pt
+  textwidth=430pt, % original: 384pt, maximum: 426pt
   centering,
-  headheight=50pt,
-  headsep=12pt,
-  footskip=12pt,
+  headheight=12pt, % original: 50pt, maximum: 12pt
+  headsep=12pt, % original: 12pt, maximum: 25pt
+  footskip=12pt, % original: 384pt, maximum: 30pt
   footnotesep=24pt plus 2pt minus 12pt,
  }
  \global\let\bibfont=\footnotesize

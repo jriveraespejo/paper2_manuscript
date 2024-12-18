@@ -18,9 +18,24 @@ manuscript:
     
 execute:
   freeze: auto
+  cache: true
+  # eval: true
+  echo: false
+  # output: true
+  # include: true
+  warning: false
+  error: false
+  message: false
 
 format:
   html:
+    notebook-links: global
+    lightbox: true
+    citation: true
+        #type: article-journal
+        #container-title: "Psychometrika"
+        #doi: ""
+        #url: https://example.com/summarizing-output
     comments:
       hypothesis: true
     google-scholar: true
@@ -42,10 +57,9 @@ format:
   jats: default
   elsevier-pdf:
     keep-tex: true
-    linestretch: 2
     journal:
       name: Psychometrika
-      formatting: preprint
+      formatting: review
       model: 1p
       cite-style: authoryear
 
