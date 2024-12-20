@@ -250,9 +250,8 @@ the University of Antwerp (BOF).</funding-statement>
   of each stimulus and their discriminal difference. The
   <italic>discriminal process</italic> captures the psychological impact
   each stimulus exerts on the judge or, more simply, his perception of
-  the stimulus trait. The theory assumes that the discriminal process
-  for any given stimulus forms a Normal distribution along the trait
-  continuum
+  the stimulus trait. The theory assumes that the DP for any given
+  stimulus forms a Normal distribution along the trait continuum
   (<xref alt="Thurstone 1927a, 266" rid="ref-Thurstone_1927b" ref-type="bibr">Thurstone
   1927a, 266</xref>). The mode (mean) of this distribution, known as the
   <italic>modal discriminal process</italic>, indicates the stimulus
@@ -262,8 +261,8 @@ the University of Antwerp (BOF).</funding-statement>
   <p><xref alt="Figure 1 (a)" rid="fig-discriminal_process">Figure 1
   (a)</xref> illustrates hypothetical discriminal processes along a
   quality trait continuum for two written texts. The figure indicates
-  that the modal discriminal process for Text B is positioned further
-  along the continuum than that of Text A <inline-formula><alternatives>
+  that the mDP for Text B is positioned further along the continuum than
+  that of Text A <inline-formula><alternatives>
   <tex-math><![CDATA[(T_{B} > T_{A})]]></tex-math>
   <mml:math display="inline" xmlns:mml="http://www.w3.org/1998/Math/MathML"><mml:mrow><mml:mo stretchy="true" form="prefix">(</mml:mo><mml:msub><mml:mi>T</mml:mi><mml:mi>B</mml:mi></mml:msub><mml:mo>&gt;</mml:mo><mml:msub><mml:mi>T</mml:mi><mml:mi>A</mml:mi></mml:msub><mml:mo stretchy="true" form="postfix">)</mml:mo></mml:mrow></mml:math></alternatives></inline-formula>,
   suggesting that Text B exhibits higher quality. Additionally, the
@@ -473,13 +472,15 @@ the University of Antwerp (BOF).</funding-statement>
       (<xref alt="Thurstone 1927b, 373" rid="ref-Thurstone_1927a" ref-type="bibr">Thurstone
       1927b, 373</xref>). Therefore, it is reasonable to assume that the
       outcome’s ability to reflect the “true” differences between
-      stimuli largely depends on the validity of the model’s
-      assumptions, particularly the assumption of equal dispersions. For
-      instance, when researchers observe a sample of outcomes favoring
-      Text B over Text A and correctly assume equal dispersions between
-      the texts, the BTL model estimates a discriminal difference
-      distribution that accurately represents the “true” discriminal
-      difference of the texts. This scenario is illustrated in
+      stimuli largely depends on the validity of the model’s assumptions
+      (<xref alt="Kohler, Kreuter, and Stuart 2019, 150" rid="ref-Kohler_et_al_2019" ref-type="bibr">Kohler,
+      Kreuter, and Stuart 2019, 150</xref>), particularly the assumption
+      of equal dispersions. For instance, when researchers observe a
+      sample of outcomes favoring Text B over Text A and correctly
+      assume equal dispersions between the texts, the BTL model
+      estimates a discriminal difference distribution that accurately
+      represents the “true” discriminal difference of the texts. This
+      scenario is illustrated in
       <xref alt="Figure 2 (a)" rid="fig-dispersion">Figure 2 (a)</xref>,
       where the model’s discriminal difference distribution aligns with
       the “true” distribution, represented by the thick continuous line
@@ -634,10 +635,10 @@ the University of Antwerp (BOF).</funding-statement>
       their discriminal difference is less likely to favor Text B over
       Text A (shaded gray area) compared to scenarios where the texts
       are highly correlated.</p>
-      <p>However, in practice, researchers approach this process in
-      reverse. They begin by observing the sample of outcomes favoring
-      Text B over Text A and then use the BTL model to estimate the
-      discriminal difference and the discriminal processes of the
+      <p>Off course, in experimental practice, researchers approach this
+      process in reverse. They begin by observing the sample of outcomes
+      favoring Text B over Text A and then use the BTL model to estimate
+      the discriminal difference and the discriminal processes of the
       stimuli. Given that the BTL model assumes independent discriminal
       processes across comparisons, if this assumption holds, then the
       model estimates a discriminal difference distribution that
@@ -857,11 +858,29 @@ the University of Antwerp (BOF).</funding-statement>
 </sec>
 <sec id="sec-theory">
   <title>An updated theoretical and statistical model for CJ</title>
-  <p>This section introduces a theoretical model for Comparative
-  Judgment (CJ) that builds upon Thurstone’s theory. The model
-  systematically accounts for the factors influencing judges during CJ
-  experiments. These theoretical and practical insights are then
-  translated into a statistical model.</p>
+  <p>This section presents a theoretical model for CJ that extends
+  Thurstone’s theory. It uses causal analysis
+  (<xref alt="Pearl 2009" rid="ref-Pearl_2009" ref-type="bibr">Pearl
+  2009</xref>;
+  <xref alt="Pearl, Glymour, and Jewell 2016" rid="ref-Pearl_et_al_2016" ref-type="bibr">Pearl,
+  Glymour, and Jewell 2016</xref>;
+  <xref alt="Morgan and Winship 2014" rid="ref-Morgan_et_al_2014" ref-type="bibr">Morgan
+  and Winship 2014</xref>;
+  <xref alt="Hernán and Robins 2020" rid="ref-Hernan_et_al_2020" ref-type="bibr">Hernán
+  and Robins 2020</xref>) and, in particular, directed acyclic graphs
+  (DAGs)
+  (<xref alt="Gross, Yellen, and Anderson 2018" rid="ref-Gross_et_al_2018" ref-type="bibr">Gross,
+  Yellen, and Anderson 2018</xref>;
+  <xref alt="Neal 2020" rid="ref-Neal_2020" ref-type="bibr">Neal
+  2020</xref>), to articulate the core theoretical principles of CJ
+  theory. The model also incorporates several practical factors that
+  influence judges in CJ experiments, such as the selection of judges,
+  stimuli, and the number of comparisons. In addition, the study uses
+  Bayesian statistical methods
+  (<xref alt="McElreath 2020" rid="ref-McElreath_2020" ref-type="bibr">McElreath
+  2020</xref>) to translate these theoretical and practical elements
+  into a statistical model that facilitates the analysis of pairwise
+  comparison data.</p>
   <sec id="sec-theory-theoretical">
     <title>The theoretical model</title>
     <p>The (latent) discriminal difference of the stimuli directly
@@ -873,28 +892,31 @@ the University of Antwerp (BOF).</funding-statement>
     discriminal processes</p>
     <boxed-text>
       <sec>
-        <title>Figure 3</title>
+        <title>Figure</title>
+      </sec>
+      <sec>
+        <title>3</title>
         <fig id="fig-CJ_TM_A1">
           <caption><p>Figure 3</p></caption>
           <graphic id="fig-CJ_TM_A1" mimetype="image" mime-subtype="png" xlink:href="./images/png/CJ_TM_A1.png" />
         </fig>
       </sec>
       <sec>
-        <title>Figure 4</title>
+        <title>4</title>
         <fig id="fig-CJ_TM_A2">
           <caption><p>Figure 4</p></caption>
           <graphic id="fig-CJ_TM_A2" mimetype="image" mime-subtype="png" xlink:href="./images/png/CJ_TM_A2.png" />
         </fig>
       </sec>
       <sec>
-        <title>Figure 5</title>
+        <title>5</title>
         <fig id="fig-CJ_TM_A3">
           <caption><p>Figure 5</p></caption>
           <graphic id="fig-CJ_TM_A3" mimetype="image" mime-subtype="png" xlink:href="./images/png/CJ_TM_A3.png" />
         </fig>
       </sec>
       <sec>
-        <title>Figure 6</title>
+        <title>6</title>
         <fig id="fig-CJ_TM_A4">
           <caption><p>Figure 6</p></caption>
           <graphic id="fig-CJ_TM_A4" mimetype="image" mime-subtype="png" xlink:href="./images/png/CJ_TM_A4.png" />
@@ -906,66 +928,72 @@ the University of Antwerp (BOF).</funding-statement>
     for each judge, as in</p>
     <boxed-text>
       <sec>
-        <title>Figure 7</title>
+        <title>Figure</title>
+      </sec>
+      <sec>
+        <title>7</title>
         <fig id="fig-CJ_TM_B1">
           <caption><p>Figure 7</p></caption>
           <graphic id="fig-CJ_TM_B1" mimetype="image" mime-subtype="png" xlink:href="./images/png/CJ_TM_B1.png" />
         </fig>
       </sec>
       <sec>
-        <title>Figure 8</title>
+        <title>8</title>
         <fig id="fig-CJ_TM_B2">
           <caption><p>Figure 8</p></caption>
           <graphic id="fig-CJ_TM_B2" mimetype="image" mime-subtype="png" xlink:href="./images/png/CJ_TM_B2.png" />
         </fig>
       </sec>
       <sec>
-        <title>Figure 9</title>
+        <title>9</title>
         <fig id="fig-CJ_TM_B3">
           <caption><p>Figure 9</p></caption>
           <graphic id="fig-CJ_TM_B3" mimetype="image" mime-subtype="png" xlink:href="./images/png/CJ_TM_B3.png" />
         </fig>
       </sec>
       <sec>
-        <title>Figure 10</title>
+        <title>10</title>
         <fig id="fig-CJ_TM_B4">
           <caption><p>Figure 10</p></caption>
           <graphic id="fig-CJ_TM_B4" mimetype="image" mime-subtype="png" xlink:href="./images/png/CJ_TM_B4.png" />
         </fig>
       </sec>
       <sec>
-        <title>Figure 11</title>
+        <title>11</title>
         <fig id="fig-CJ_TM_B5">
           <caption><p>Figure 11</p></caption>
           <graphic id="fig-CJ_TM_B5" mimetype="image" mime-subtype="png" xlink:href="./images/png/CJ_TM_B5.png" />
         </fig>
       </sec>
       <sec>
-        <title>Figure 12</title>
+        <title>12</title>
         <fig id="fig-CJ_TM_B6">
           <caption><p>Figure 12</p></caption>
           <graphic id="fig-CJ_TM_B6" mimetype="image" mime-subtype="png" xlink:href="./images/png/CJ_TM_B6.png" />
         </fig>
       </sec>
     </boxed-text>
-    <p>Considering the sampling process</p>
+    <p>Considering the sampling and comparison mechanisms</p>
     <boxed-text>
       <sec>
-        <title>Figure 13</title>
+        <title>Figure</title>
+      </sec>
+      <sec>
+        <title>13</title>
         <fig id="fig-CJ_TM_B7">
           <caption><p>Figure 13</p></caption>
           <graphic id="fig-CJ_TM_B7" mimetype="image" mime-subtype="png" xlink:href="./images/png/CJ_TM_B7.png" />
         </fig>
       </sec>
       <sec>
-        <title>Figure 14</title>
+        <title>14</title>
         <fig id="fig-CJ_TM_B8">
           <caption><p>Figure 14</p></caption>
           <graphic id="fig-CJ_TM_B8" mimetype="image" mime-subtype="png" xlink:href="./images/png/CJ_TM_B8.png" />
         </fig>
       </sec>
       <sec>
-        <title>Figure 15</title>
+        <title>15</title>
         <fig id="fig-CJ_TM_B9">
           <caption><p>Figure 15</p></caption>
           <graphic id="fig-CJ_TM_B9" mimetype="image" mime-subtype="png" xlink:href="./images/png/CJ_TM_B9.png" />
@@ -1341,6 +1369,25 @@ the University of Antwerp (BOF).</funding-statement>
       <lpage>680</lpage>
     </element-citation>
   </ref>
+  <ref id="ref-Kohler_et_al_2019">
+    <element-citation publication-type="article-journal">
+      <person-group person-group-type="author">
+        <name><surname>Kohler</surname><given-names>U.</given-names></name>
+        <name><surname>Kreuter</surname><given-names>F.</given-names></name>
+        <name><surname>Stuart</surname><given-names>E.</given-names></name>
+      </person-group>
+      <article-title>Nonprobability sampling and causal analysis</article-title>
+      <source>Annual Review of Statistics and Its Application</source>
+      <publisher-name>Annual Reviews</publisher-name>
+      <year iso-8601-date="2019">2019</year>
+      <volume>6</volume>
+      <issue></issue>
+      <uri>https://www.annualreviews.org/content/journals/10.1146/annurev-statistics-030718-104951</uri>
+      <pub-id pub-id-type="doi">https://doi.org/10.1146/annurev-statistics-030718-104951</pub-id>
+      <fpage>149</fpage>
+      <lpage>172</lpage>
+    </element-citation>
+  </ref>
   <ref id="ref-Bramley_et_al_2019">
     <element-citation publication-type="article-journal">
       <person-group person-group-type="author">
@@ -1513,6 +1560,19 @@ the University of Antwerp (BOF).</funding-statement>
       <lpage>518</lpage>
     </element-citation>
   </ref>
+  <ref id="ref-Pearl_2009">
+    <element-citation publication-type="book">
+      <person-group person-group-type="author">
+        <name><surname>Pearl</surname><given-names>J.</given-names></name>
+      </person-group>
+      <source>Causality: Models, reasoning and inference</source>
+      <publisher-name>Cambrige University Press</publisher-name>
+      <year iso-8601-date="2009">2009</year>
+      <isbn></isbn>
+      <uri></uri>
+      <pub-id pub-id-type="doi"></pub-id>
+    </element-citation>
+  </ref>
   <ref id="ref-Everitt_et_al_2010">
     <element-citation publication-type="book">
       <person-group person-group-type="author">
@@ -1523,6 +1583,36 @@ the University of Antwerp (BOF).</funding-statement>
       <publisher-name>Cambridge University Press</publisher-name>
       <year iso-8601-date="2010">2010</year>
       <isbn>978-0521766999</isbn>
+      <uri></uri>
+      <pub-id pub-id-type="doi"></pub-id>
+    </element-citation>
+  </ref>
+  <ref id="ref-Morgan_et_al_2014">
+    <element-citation publication-type="book">
+      <person-group person-group-type="author">
+        <name><surname>Morgan</surname><given-names>S.</given-names></name>
+        <name><surname>Winship</surname><given-names>C.</given-names></name>
+      </person-group>
+      <source>Counterfactuals and causal inference: Methods and principles for social research</source>
+      <publisher-name>Cambridge University Press</publisher-name>
+      <year iso-8601-date="2014">2014</year>
+      <edition>2</edition>
+      <uri></uri>
+      <pub-id pub-id-type="doi"></pub-id>
+    </element-citation>
+  </ref>
+  <ref id="ref-Pearl_et_al_2016">
+    <element-citation publication-type="book">
+      <person-group person-group-type="author">
+        <name><surname>Pearl</surname><given-names>J.</given-names></name>
+        <name><surname>Glymour</surname><given-names>M.</given-names></name>
+        <name><surname>Jewell</surname><given-names>N.</given-names></name>
+      </person-group>
+      <source>Causal inference in statistics: A primer</source>
+      <publisher-name>John Wiley &amp; Sons, Inc.</publisher-name>
+      <year iso-8601-date="2016">2016</year>
+      <edition></edition>
+      <isbn>978-1-119-18686-1</isbn>
       <uri></uri>
       <pub-id pub-id-type="doi"></pub-id>
     </element-citation>
@@ -1553,6 +1643,21 @@ the University of Antwerp (BOF).</funding-statement>
       <pub-id pub-id-type="doi"></pub-id>
     </element-citation>
   </ref>
+  <ref id="ref-Gross_et_al_2018">
+    <element-citation publication-type="book">
+      <person-group person-group-type="author">
+        <name><surname>Gross</surname><given-names>J.</given-names></name>
+        <name><surname>Yellen</surname><given-names>J.</given-names></name>
+        <name><surname>Anderson</surname><given-names>M.</given-names></name>
+      </person-group>
+      <source>Graph theory and its applications</source>
+      <publisher-name>Chapman; Hall/CRC</publisher-name>
+      <year iso-8601-date="2018">2018</year>
+      <isbn>9780429425134</isbn>
+      <uri></uri>
+      <pub-id pub-id-type="doi">https://doi.org/10.1201/9780429425134 </pub-id>
+    </element-citation>
+  </ref>
   <ref id="ref-McElreath_2020">
     <element-citation publication-type="book">
       <person-group person-group-type="author">
@@ -1563,6 +1668,21 @@ the University of Antwerp (BOF).</funding-statement>
       <year iso-8601-date="2020">2020</year>
       <isbn>9780367139919</isbn>
       <uri></uri>
+      <pub-id pub-id-type="doi"></pub-id>
+    </element-citation>
+  </ref>
+  <ref id="ref-Hernan_et_al_2020">
+    <element-citation publication-type="book">
+      <person-group person-group-type="author">
+        <name><surname>Hernán</surname><given-names>M.</given-names></name>
+        <name><surname>Robins</surname><given-names>J.</given-names></name>
+      </person-group>
+      <source>Causal inference: What if</source>
+      <publisher-name>Chapman; Hall/CRC</publisher-name>
+      <year iso-8601-date="2020">2020</year>
+      <volume></volume>
+      <edition>1</edition>
+      <uri>https://www.hsph.harvard.edu/miguel-hernan/causal-inference-book</uri>
       <pub-id pub-id-type="doi"></pub-id>
     </element-citation>
   </ref>
@@ -1736,6 +1856,16 @@ the University of Antwerp (BOF).</funding-statement>
       <publisher-name>Centre for Education Research &amp; Policy</publisher-name>
       <year iso-8601-date="2012">2012</year>
       <uri>https://filestore.aqa.org.uk/content/research/CERP_RP_CW_24102012_0.pdf?download=1</uri>
+    </element-citation>
+  </ref>
+  <ref id="ref-Neal_2020">
+    <element-citation>
+      <person-group person-group-type="author">
+        <name><surname>Neal</surname><given-names>B.</given-names></name>
+      </person-group>
+      <article-title>Introduction to causal inference from a machine learning perspective</article-title>
+      <year iso-8601-date="2020">2020</year>
+      <uri>https://www.bradyneal.com/Introduction_to_Causal_Inference-Dec17_2020-Neal.pdf</uri>
     </element-citation>
   </ref>
 </ref-list>
