@@ -53,8 +53,8 @@ format:
     tbl-cap-location: top
     fig-cap-location: top
     default image extension: png
-  docx: default
-  jats: default
+  #docx: default
+  #jats: default
   elsevier-pdf:
     keep-tex: true
     journal:
