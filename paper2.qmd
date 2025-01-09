@@ -549,7 +549,7 @@ The structural approach to causal inference, however, offers a notable advantage
 <!-- A heuristic is a strategy that simplifies information to make decisions more quickly, efficiently, and sometimes more accurately than complex methods [@Chow_2015]. -->
 
 <!-- 2. What are the advantages of SCMs and DAGs? -->
-SCMs and DAGs offer three key advantages for modeling causal structures. First, they enable researchers to represent causal relations in a non-parametric and fully interactive manner. This feature allows for feasible ACE identification strategies without specifying the data type or the nature of the functional dependence among variables [@Morgan_et_al_2014]. Second, regardless of complexity, they can represent a wide range of causal structures using only five fundamental building blocks [@Neal_2020; @McElreath_2020]. This feature allows researchers to decompose complex structures, facilitating their analysis by focusing on the causal assumptions associated with each building block [@McElreath_2020]. Finally, they help to formalize (causal) theoretical models into (probabilistic) statistical models for identification purposes [@McElreath_2020] [@McElreath_2020].
+SCMs and DAGs offer two key advantages for modeling causal structures. First, they enable researchers to represent causal relations in a non-parametric and fully interactive manner. This feature allows for feasible ACE identification strategies without specifying the data type or the nature of the functional dependence among variables [@Morgan_et_al_2014]. Second, regardless of complexity, they can represent a wide range of causal structures using only five fundamental building blocks [@Neal_2020; @McElreath_2020]. This feature allows researchers to decompose complex structures, facilitating their analysis by focusing on the causal assumptions associated with each building block [@McElreath_2020].
 
 <!-- 3. the SCMs -->
 Figures [-@fig-dags_scms1], [-@fig-dags_scms2], [-@fig-dags_scms3], [-@fig-dags_scms4], and [-@fig-dags_scms5] display the five fundamental building blocks of SCMs and DAGs. The left panels of the figures show the formal mathematical models, represented by the SCMs, defined in terms of a set of *endogenous* variables $V=\{X,Z,Y\}$, a set of *exogenous* variables $E=\{e_{X},e_{Z},e_{Y}\}$, and a set of functions $F=\{f_{X},f_{Z},f_{Y}\}$ [@Pearl_2009; @Cinelli_et_al_2020; @Neal_2020]. Endogenous variables are those whose causal mechanisms a researchers chooses to model [@Neal_2020]. In contrast, exogenous variables represent *errors* or *disturbances* arising from omitted factors that the investigator chooses not to model explicitly [@Pearl_2009, pp. 27,68]. Lastly, the functions, referred to as *structural equations*, express the endogenous variables as non-parametric functions of other variables. These functions use the symbol '$:=$' to denote the asymmetrical causal dependence of the variables and the symbol '$\dsep$' to represent *d-separation*, a concept akin to (conditional) independence.
@@ -706,13 +706,15 @@ SCM
 
 <!-- ![Standard representation](images/png/sdag_example1.png){#fig-sdag_example1 fig-align="center" width=55%} -->
 
-Plausible causal structure of the example.
+Plausible causal structure for the example.
 :::
 
 
 ## The flow of association and causation in DAGs {#sec-appendix-D .appendix appendix-style=plain}
 
 <!-- 1. But what does the building blocks mean? -->
+<!-- Ultimately, SCMs and DAGS help to formalize (causal) theoretical models into (probabilistic) statistical models for identification purposes [@McElreath_2020]. -->
+
 <!-- [The advantages of SCMs and DAGs to identify causal quantities are realized after researchers examine the causal and probabilistic assumptions underlying these building blocks.]{style="color:red;"} -->
 
 <!-- The main assumption we’ve seen that relates the graph to the distribution -->
