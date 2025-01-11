@@ -300,11 +300,13 @@ In aggregate, researchers' inadequate handling of violations to the assumptions 
 
 # Updating the theoretical and statistical model {#sec-theory}
 
-This section uses the structural approach to causal inference [@Pearl_2009; @Pearl_et_al_2016] to articulate a theoretical model that captures the core principles of Thurstone's theory. The model also incorporates various assessment design features relevant to CJ experiments, such as the selection of judges, stimuli, and comparisons. Finally, the section employs Bayesian statistical methods to transform these theoretical and practical elements into a statistical model that facilitates the analysis of pairwise comparison data. See @sec-appendix for an overview of the statistical and causal inference concepts required for the development of this section.
+This section uses the structural approach to causal inference [@Pearl_2009; @Pearl_et_al_2016] to articulate a theoretical model that captures the core principles of Thurstone's theory. The model also incorporates various assessment design features relevant to CJ experiments, such as the selection of judges, stimuli, and comparisons. Finally, the section employs Bayesian inference methods to transform these theoretical and practical elements into a statistical model that facilitates the analysis of pairwise comparison data. See @sec-appendix for an overview of the statistical and causal inference concepts required for the development of this section.
+
 
 ## The theoretical model {#sec-theory-theoretical}
 
 The theoretical model uses structural causal models (SCMs) and directed acyclic graphs (DAGs) [@Pearl_2009; @Pearl_et_al_2016; @Gross_et_al_2018; @Neal_2020] to formally and graphically represent the assumed causal structure of the CJ system. First, *the population model* is created to represent a conceptual population of CJ experiments. The model then integrates various assessment design features relevant to CJ experiments, leading to the development of *the sample-comparison model*.
+
 
 ### The population model {#sec-theory-theoretical_P}
 <!-- []{style="color:red;"} -->
@@ -392,6 +394,10 @@ Considering comparison mechanisms
 <!-- recording: Sven 24.10.04; time: 00:46:00 - 01:01:00 -->
 <!-- recording: Sven and Tine 24.11.25; time: 00:24:50 - 00:30:35 -->
 <!-- recording: Sven and Tine 24.11.25; time: 00:49:30 - 00:53:30 -->
+
+<!-- 2. What are the benefits of Bayesian inference?-->
+Bayesian inference procedures offer three key advantages. First, they are well-suited to handling complex and overparameterized models, enabling researchers to estimate models where the number of parameters exceeds the number of observations for estimation [@Baker_1998; @Kim_et_al_1999]. Second, they allow researchers to incorporate prior information, which helps constrain parameters within specified bounds. This capability addresses challenges such as non-convergence or improper parameter estimation that often arise in complex models when analyzed with frequentist methods [@Martin_et_al_1975; @Seaman_et_al_2011]. Finally, Bayesian methods are particularly effective at drawing inferences from small sample sizes, where relying on the asymptotic properties of frequentist approaches may not be justified [@Baldwin_et_al_2013; @Lambert_et_al_2006; @Depaoli_2014].
+
 
 <!-- Statements about the real world from observed data require assumptions. This is true no matter what kind of data we have, and it is explicitly also true for statements based on data stemming from SRSg. The validity of our statements therefore critically hinges on the validity of those assumptions. If our statistical assumptions are wrong for the analysis at hand, the inferential statements will be incorrect no matter how sophisticated the statistical methods are [@Kohler_et_al_2019, pp. 150] -->
 
@@ -519,20 +525,20 @@ Randomized experiments are widely recognized as the gold standard in evidence-ba
 Nevertheless, researchers often face constraints that limit their ability to conduct randomized experiments. These constraints include ethical concerns, such as the assignment of individuals to potentially harmful interventions, and practical limitations, such as the infeasibility of, for example, assigning individuals to genetic modifications or physical impairments [@Neal_2020]. In these cases, causal inference offers a valuable alternative for generating causal estimates and understanding the mechanisms underlying specific data. In addition, the framework can provide significant theoretical insights that can enhance the design of experimental and observational studies [@McElreath_2020]. 
 
 
-## Empirical research under causal inference {#sec-appendix-B .appendix appendix-style=plain}
+## Identification under causal inference {#sec-appendix-B .appendix appendix-style=plain}
 
 <!-- 1. What is causal inference? -->
-Unlike classical statistical modeling, which focuses primarily on summarizing data and inferring associations, the *causal inference* framework is designed to identify causes and estimate their effects using data [@Shaughnessy_et_al_2010; @Neal_2020]. The framework uses rigorous mathematical techniques to address the *fundamental problem of causality* [@Pearl_2009; @Pearl_et_al_2016; @Morgan_et_al_2014]. This problem revolves around the question, "What would have happened 'in the world' under different circumstances?" This question introduces the concept of counterfactuals, which are instrumental in understanding and defining causal effects.
+Unlike classical statistical modeling, which focuses primarily on summarizing data and inferring associations, the *causal inference* framework is designed to identify causes and estimate their effects using data [@Shaughnessy_et_al_2010; @Neal_2020]. The framework uses rigorous mathematical techniques to address the *fundamental problem of causality* [@Pearl_2009; @Pearl_et_al_2016; @Morgan_et_al_2014]. This problem revolves around the question, "What would have happened 'in the world' under different circumstances?" This question introduces the concept of counterfactuals, which are instrumental in defining and identifying causal effects.
 
 <!-- 2. What are counterfactuals? -->
-*Counterfactuals* are hypothetical scenarios that are *contrary to fact*, where alternative outcomes resulting from a given cause are neither observed nor observable [@Neal_2020; @Counterfactual_2024]. The structural approach to causal inference [@Pearl_2009; @Pearl_et_al_2016] provides a formal framework for defining counterfactuals. For instance, in the scenario described in @sec-appendix-A, the approach begins by defining the *individual causal effect* (ICE) as the difference between each student's potential outcomes: $\tau_{i} = Y_{i}|do(T_{i}=1) - Y_{i}|do(T_{i}=2)$. Here, $do(T_{i}=t)$ represents the intervention operator, $Y_{i}|do(T_{i}=1)$ represents the potential outcome under intervention $T_{i}=1$, and $Y_{i}|do(T_{i}=1)$ represents the potential outcome under intervention $T_{i}=2$. Note that if a student is assigned to intervention $T_{i}=1$, the potential outcome under $T_{i}=2$ becomes a counterfactual, as it is no longer observed nor observable. To address the challenge of unobserved counterfactuals, the approach extends the ICE to the *average causal effect* (ACE): $\tau = E[\tau_{i}] = E[Y_{i}|do(T_{i}=1)]- E[Y_{i}|do(T_{i}=2)]$, representing the average difference between observed potential outcomes and their counterfactual counterparts. Notably, the approach extends the ACEs for categorical and continuous variables $T$, ensuring broad applicability across different causal scenarios.
+*Counterfactuals* are hypothetical scenarios that are *contrary to fact*, where alternative outcomes resulting from a given cause are neither observed nor observable [@Neal_2020; @Counterfactual_2024]. The structural approach to causal inference [@Pearl_2009; @Pearl_et_al_2016] provides a formal framework for defining counterfactuals. For instance, in the scenario described in @sec-appendix-A, the approach begins by defining the *individual causal effect* (ICE) as the difference between each student's potential outcomes: $\tau_{i} = Y_{i}|do(T_{i}=1) - Y_{i}|do(T_{i}=2)$. Here, $do(T_{i}=t)$ represents the intervention operator, $Y_{i}|do(T_{i}=1)$ represents the potential outcome under intervention $T_{i}=1$, and $Y_{i}|do(T_{i}=1)$ represents the potential outcome under intervention $T_{i}=2$. Note that if a student is assigned to intervention $T_{i}=1$, the potential outcome under $T_{i}=2$ becomes a counterfactual, as it is no longer observed nor observable. To address the challenge of unobserved counterfactuals, the approach extends the ICE to the *average causal effect* (ACE): $\tau = E[\tau_{i}] = E[Y_{i}|do(T_{i}=1)]- E[Y_{i}|do(T_{i}=2)]$, representing the average difference between observed potential outcomes and their counterfactual counterparts.
 
 <!-- [^1]: The potential outcomes approach [@Neyman_et_al_1923; @Rubin_1974] defines the ICE as $\tau_{i} = Y^{1}_{i} - Y^{2}_{i}$, while it defines the ACE as $\tau = E[\tau_{i}] = E[Y^{1}_{i}]- E[Y^{2}_{i}]$. -->
 
 <!-- 3. But how does it work? -->
 Even when data originates from an observational study, researchers can identify the ACE from associational estimates using the structural approach. They achieve this by performing statistical conditioning on a *sufficient adjustment set* of variables $X$ [@Pearl_2009; @Pearl_et_al_2016; @Morgan_et_al_2014]. This *sufficient* set (potentially empty) must block all non-causal paths between $T$ to $Y$ without opening new ones, ensuring the ACE estimator satisfies several key properties, including confounding elimination. If such a set exists, then $T$ and $Y$ are *d-separated* by $X$ [@Pearl_2009], meaning researchers can estimate the ACE from associational random quantities [@Morgan_et_al_2014]. Naturally, the validity of claims about the effects of $T$ on $Y$ now hinges on the assumption that $X$ serves as a sufficient adjustment set. However, as @Kohler_et_al_2019 [pp. 150] observed, drawing conclusions about the real world from observed data inevitably requires assumptions. This holds true for both observational and experimental data.
 
-For instance, if researchers are unable to conduct the randomized experiments described in @sec-appendix-A and instead rely on observational data, they can still estimate the ACE provided a variable $X$, such as the socio-economic status of the school, blocks all non-causal paths between the teaching method $T$ to the outcome $Y$  without opening any new ones. Under these conditions, the ACE can be estimated from associational quantities as $\tau = E_{X}\left[ E[Y_{i}| T_{i}=1, X] - E[Y_{i}| T_{i}=2, X] \right]$, where $E_{X}[\cdot]$ represents the marginal expected value over $X$ [@Morgan_et_al_2014]. 
+For instance, if researchers are unable to conduct the randomized experiments described in @sec-appendix-A and instead rely on observational data, they can still estimate the ACE provided a variable $X$, such as the socio-economic status of the school, blocks all non-causal paths between the teaching method $T$ to the outcome $Y$  without opening any new ones. Under these conditions, the ACE can be estimated from associational quantities as $\tau =$ $E[Y_{i}|do(T_{i}=1)]- E[Y_{i}|do(T_{i}=2)] =$ $E_{X}\left[ E[Y_{i}| T_{i}=1, X] - E[Y_{i}| T_{i}=2, X] \right]$, where $E_{X}[\cdot]$ represents the marginal expected value over $X$ [@Morgan_et_al_2014]. Notably, the approach extends the ACE for a continuous variable $T$ as $\tau =$ $E[Y_{i}|do(T_{i}=t)] =$ $d E_{X}\left[ E[Y_{i}| T_{i}=t, X]\right]/ dt$, ensuring broad applicability across different causal scenarios [@Neal_2020, pp. 45].
 
 <!-- Statements about the real world from observed data require assumptions. This is true no matter what kind of data we have, and it is explicitly also true for statements based on data stemming from SRSg. The validity of our statements therefore critically hinges on the validity of those assumptions. If our statistical assumptions are wrong for the analysis at hand, the inferential statements will be incorrect no matter how sophisticated the statistical methods are. [@Kohler_et_al_2019, pp. 150] -->
 
@@ -552,7 +558,7 @@ The structural approach to causal inference uses SCMs and DAGs to formally and g
 SCMs and DAGs offer two key advantages for modeling causal structures. First, they enable the representation of causal relations in a non-parametric and fully interactive manner. This feature allows for feasible ACE identification strategies without specifying the data type or the nature of the functional dependence among variables [@Morgan_et_al_2014]. Second, regardless of complexity, they can represent a wide range of causal structures using only five fundamental building blocks [@Neal_2020; @McElreath_2020]. This feature allows researchers to decompose complex structures, facilitating their analysis by focusing on the causal assumptions associated with each building block [@McElreath_2020].
 
 <!-- 3. the SCMs -->
-Figures [-@fig-dags_scms1], [-@fig-dags_scms2], [-@fig-dags_scms3], [-@fig-dags_scms4], and [-@fig-dags_scms5] display these five fundamental building blocks. The left panels of the figures show the formal mathematical models, represented by the SCMs, defined in terms of a set of *endogenous* variables $V=\{X,Z,Y\}$, a set of *exogenous* variables $E=\{e_{X},e_{Z},e_{Y}\}$, and a set of functions $F=\{f_{X},f_{Z},f_{Y}\}$ [@Pearl_2009; @Cinelli_et_al_2020; @Neal_2020]. Endogenous variables are those whose causal mechanisms a researcher chooses to model [@Neal_2020]. In contrast, exogenous variables represent *errors* or *disturbances* arising from omitted factors that the investigator chooses not to model explicitly [@Pearl_2009, pp. 27,68]. Lastly, the functions, referred to as *structural equations*, express the endogenous variables as non-parametric functions of other variables. These functions use the symbol '$:=$' to denote the asymmetrical causal dependence of the variables and the symbol '$\dsep$' to represent *d-separation*, a concept akin to (conditional) independence.
+Figures [-@fig-dags_scms1], [-@fig-dags_scms2], [-@fig-dags_scms3], [-@fig-dags_scms4], and [-@fig-dags_scms5] display these five fundamental building blocks. The left panels of the figures show the formal mathematical models, represented by the SCMs, defined in terms of a set of *endogenous* variables $V=\{X_{1},X_{2},X_{3}\}$, a set of *exogenous* variables $E=\{e_{X1},e_{X2},e_{X3}\}$, and a set of functions $F=\{f_{X1},f_{X2},f_{X3}\}$ [@Pearl_2009; @Cinelli_et_al_2020; @Neal_2020]. Endogenous variables are those whose causal mechanisms a researcher chooses to model [@Neal_2020]. In contrast, exogenous variables represent *errors* or *disturbances* arising from omitted factors that the investigator chooses not to model explicitly [@Pearl_2009, pp. 27,68]. Lastly, the functions, referred to as *structural equations*, express the endogenous variables as non-parametric functions of other variables. These functions use the symbol '$:=$' to denote the asymmetrical causal dependence of the variables and the symbol '$\dsep$' to represent *d-separation*, a concept akin to (conditional) independence.
 
 <!-- 4. The DAGs -->
 The right panels of the figures display the complementary DAGs. A DAG consists of nodes connected by edges, where nodes represent random variables. The term *directed* means the edges extend from one node to another, with arrows indicating the direction of causal influence. The term *acyclic* signifies that the causal influences do not form loops, ensuring the influences do not cycle back on themselves [@McElreath_2020]. DAGs represent observed variables as solid black circles, while they use open circles for unobserved (latent) variables [@Morgan_et_al_2014]. Finally, the arrows in the graphs show the expected direction of causal influences among these variables. While DAGs often omit exogenous variables for simplicity (the *standard* representation), including these variables is advantageous (the *magnified* representation shown in the figures), as their inclusion helps to identify potential issues related to conditioning and confounding [@Cinelli_et_al_2020].
@@ -563,9 +569,9 @@ The right panels of the figures display the complementary DAGs. A DAG consists o
 ::: {#fig-scm_bb1 fig-align="center" fig-pos="H"}
 $$
 \begin{aligned}
-  X & := f_{X}(e_{X}) \\
-  Y & := f_{Y}(e_{Y}) \\
-  e_{X} & \dsep e_{Y}
+  X_{1} & := f_{X1}(e_{X1}) \\
+  X_{3} & := f_{X3}(e_{X3}) \\
+  e_{X1} & \dsep e_{X3}
 \end{aligned}
 $$
 
@@ -573,8 +579,6 @@ SCM
 :::
 
 ![DAG](images/png/mdag_bb1.png){#fig-mdag_bb1 fig-align="center" fig-pos="H" width=50%}
-
-<!-- ![Two unconnected nodes](images/png/sdag_bb1.png){#fig-sdag_bb1 fig-align="center" fig-pos="H" width=35%} -->
 
 Two unconnected nodes
 :::
@@ -585,9 +589,9 @@ Two unconnected nodes
 ::: {#fig-scm_bb2 fig-align="center" fig-pos="H"}
 $$
 \begin{aligned}
-  X & := f_{X}(e_{X}) \\
-  Y & := f_{Y}(X,e_{Y}) \\
-  e_{X} & \dsep e_{Y}
+  X_{1} & := f_{X1}(e_{X1}) \\
+  X_{3} & := f_{X3}(X_{1},e_{X3}) \\
+  e_{X1} & \dsep e_{X3}
 \end{aligned}
 $$
 
@@ -595,8 +599,6 @@ SCM
 :::
 
 ![DAG](images/png/mdag_bb2.png){#fig-mdag_bb2 fig-align="center" fig-pos="H" width=50%}
-
-<!-- ![Two connected nodes or descendant](images/png/sdag_bb2.png){#fig-sdag_bb2 fig-align="center" fig-pos="H" width=35%} -->
 
 Two connected nodes or descendant
 :::
@@ -607,12 +609,12 @@ Two connected nodes or descendant
 ::: {#fig-scm_bb3 fig-align="center" fig-pos="H"}
 $$
 \begin{aligned}
-  X & := f_{X}(e_{X}) \\
-  Z & := f_{Z}(X,e_{Z}) \\
-  Y & := f_{Y}(Z,e_{Y}) \\
-  e_{X} & \dsep e_{Y} \\
-  e_{X} & \dsep e_{Z} \\
-  e_{Z} & \dsep e_{Y}
+  X_{1} & := f_{X1}(e_{X1}) \\
+  X_{2} & := f_{X2}(X_{1},e_{X2}) \\
+  X_{3} & := f_{X3}(X_{2},e_{X3}) \\
+  e_{X1} & \dsep e_{X2} \\
+  e_{X1} & \dsep e_{X3} \\
+  e_{X2} & \dsep e_{X3}
 \end{aligned}
 $$
 
@@ -620,8 +622,6 @@ SCM
 :::
 
 ![DAG](images/png/mdag_bb3.png){#fig-mdag_bb3 fig-align="center" fig-pos="H" width=60%}
-
-<!-- ![Chain or pipe](images/png/sdag_bb3.png){#fig-sdag_bb3 fig-align="center" fig-pos="H" width=55%} -->
 
 Chain or mediator
 :::
@@ -632,12 +632,12 @@ Chain or mediator
 ::: {#fig-scm_bb4 fig-align="center" fig-pos="H"}
 $$
 \begin{aligned}
-  X & := f_{X}(Z,e_{X}) \\
-  Z & := f_{Z}(e_{Z}) \\
-  Y & := f_{Y}(Z,e_{Y}) \\
-  e_{X} & \dsep e_{Y} \\
-  e_{X} & \dsep e_{Z} \\
-  e_{Z} & \dsep e_{Y}
+  X_{1} & := f_{X1}(X_{2},e_{X1}) \\
+  X_{2} & := f_{X2}(e_{X2}) \\
+  X_{3} & := f_{X3}(X_{2},e_{X3}) \\
+  e_{X1} & \dsep e_{X2} \\
+  e_{X1} & \dsep e_{X3} \\
+  e_{X2} & \dsep e_{X3}
 \end{aligned}
 $$
 
@@ -645,8 +645,6 @@ SCM
 :::
 
 ![DAG](images/png/mdag_bb4.png){#fig-mdag_bb4 fig-align="center" fig-pos="H" width=60%}
-
-<!-- ![Fork](images/png/sdag_bb4.png){#fig-sdag_bb4 fig-align="center" fig-pos="H" width=55%} -->
 
 Fork or confounder
 :::
@@ -657,12 +655,12 @@ Fork or confounder
 ::: {#fig-scm_bb5 fig-align="center" fig-pos="H"}
 $$
 \begin{aligned}
-  X & := f_{X}(e_{X}) \\
-  Z & := f_{Z}(X,Y,e_{Z}) \\
-  Y & := f_{Y}(e_{Y}) \\
-  e_{X} & \dsep e_{Y} \\
-  e_{X} & \dsep e_{Z} \\
-  e_{Z} & \dsep e_{Y}
+  X_{1} & := f_{X1}(e_{X1}) \\
+  X_{2} & := f_{X2}(X_{1},X_{3},e_{X2}) \\
+  X_{3} & := f_{X3}(e_{X3}) \\
+  e_{X1} & \dsep e_{X2} \\
+  e_{X1} & \dsep e_{X3} \\
+  e_{X2} & \dsep e_{X3}
 \end{aligned}
 $$
 
@@ -671,14 +669,12 @@ SCM
 
 ![DAG](images/png/mdag_bb5.png){#fig-mdag_bb5 fig-align="center" fig-pos="H" width=60%}
 
-<!-- ![Collider or inmorality](images/png/sdag_bb5.png){#fig-sdag_bb5 fig-align="center" fig-pos="H" width=55%} -->
-
 Collider or inmorality
 :::
 
 
 <!-- 5. Implications of the basic building block of the SCMS and DAGs -->
-A careful examination of the figures highlights the assumptions underlying these building blocks. Figures [-@fig-scm_bb1] and [-@fig-mdag_bb1] depict two unconnected nodes, representing a scenario where variables $X$ and $Y$ are not causally related. Figures [-@fig-scm_bb2] and [-@fig-mdag_bb2] illustrate two connected nodes, representing a scenario where a *parent* node $X$ exerts a causal influence on a *child* node $Y$. Consequently, $Y$ is considered a *descendant* of $X$. Figures [-@fig-scm_bb3] and [-@fig-mdag_bb3] depict a *chain*, where $X$ influences $Z$, and $Z$ influences $Y$. In this configuration, $X$ is a parent node of $Z$, which is a parent node of $Y$. This structure creates a *directed path* between $X$ and $Y$. Consequently, $X$ is an *ancestor* of $Y$, and $Z$ fully *mediates* the relationship between the two. Figures [-@fig-scm_bb4] and [-@fig-mdag_bb4] illustrate a *fork*, where variables $X$ and $Y$ are both influenced by $Z$. Here, $Z$ is a parent node that *confounds* the relationship between $X$ and $Y$. Finally, Figures [-@fig-scm_bb5] and [-@fig-mdag_bb5] show a *collider*, where variables $X$ and $Y$ are concurrent causes of $Z$. In this configuration, $X$ and $Y$ are not causally related to each other but both influence $Z$ (an *inmorality*). Notably, in all SCMs, the errors are assumed to be independent of each other and from all other variables in the graph, as evidenced by the pairwise relations $e_{X} \dsep e_{Y}$, $e_{X} \dsep e_{Z}$, and $e_{Z} \dsep e_{Y}$.
+A careful examination of the figures highlights the assumptions underlying these building blocks. Figures [-@fig-scm_bb1] and [-@fig-mdag_bb1] depict two unconnected nodes, representing a scenario where variables $X_{1}$ and $X_{3}$ are not causally related. Figures [-@fig-scm_bb2] and [-@fig-mdag_bb2] illustrate two connected nodes, representing a scenario where a *parent* node $X_{1}$ exerts a causal influence on a *child* node $X_{3}$. In this setup, $X_{3}$ is considered a *descendant* of $X_{1}$. Additionally, $X_{1}$ and $X_{3}$ are described as *adjacent* because an edge directly connects them. Figures [-@fig-scm_bb3] and [-@fig-mdag_bb3] depict a *chain*, where $X_{1}$ influences $X_{2}$, and $X_{2}$ influences $X_{3}$. In this configuration, $X_{1}$ is a parent node of $X_{2}$, which is a parent node of $X_{3}$. This structure creates a *directed path* between $X_{1}$ and $X_{3}$. Consequently, $X_{1}$ is an *ancestor* of $X_{3}$, and $X_{2}$ fully *mediates* the relationship between the two. Figures [-@fig-scm_bb4] and [-@fig-mdag_bb4] illustrate a *fork*, where variables $X_{1}$ and $X_{3}$ are both influenced by $X_{2}$. Here, $X_{2}$ is a parent node that *confounds* the relationship between $X_{1}$ and $X_{3}$. Finally, Figures [-@fig-scm_bb5] and [-@fig-mdag_bb5] show a *collider*, where variables $X_{1}$ and $X_{3}$ are concurrent causes of $X_{2}$. In this configuration, $X_{1}$ and $X_{3}$ are not causally related to each other but both influence $X_{2}$ (an *inmorality*). Notably, in all SCMs, the errors are assumed to be independent of each other and from all other variables in the graph, as evidenced by the pairwise relations $e_{X1} \dsep e_{X2}$, $e_{X1} \dsep e_{X3}$, and $e_{X2} \dsep e_{X3}$.
 
 <!-- 6. continuing with the motivating example -->
 Researchers can use these building blocks to represent the scenario outlined in @sec-appendix-B. Figures [-@fig-scm_example1] and [-@fig-mdag_example1] depict the plausible causal structure for this example, assuming that the variable $X$ (socio-economic status of the school) acts as a confounder in the relationship between the teaching method $T$ and the outcome $Y$. The figures show several descendant, such as $X \rightarrow T$, $X \rightarrow Y$, and $T \rightarrow Y$, and also highlight multiple pairs of unconnected nodes, evident from the relationships $e_{T} \dsep e_{X}$, $e_{T} \dsep e_{Y}$, and $e_{X} \dsep e_{Y}$. Additional, the figures depict one fork, $X \rightarrow \{T, Y\}$, and two colliders: $\{X, e_{T}\} \rightarrow T$ and $\{X, T, e_{Y}\} \rightarrow Y$.
@@ -703,65 +699,55 @@ SCM
 
 ![DAG](images/png/mdag_example1.png){#fig-mdag_example1 fig-align="center" width=60%}
 
-<!-- ![Standard representation](images/png/sdag_example1.png){#fig-sdag_example1 fig-align="center" width=55%} -->
-
 Plausible causal structure the scenario outlined in @sec-appendix-B.
 :::
 
 
-## The flow of association and causation in DAGs {#sec-appendix-D .appendix appendix-style=plain}
+## The probabilistic implications of DAGs {#sec-appendix-D .appendix appendix-style=plain}
 
-<!-- 1. The general probabilistic description of data -->
+<!-- 1. How do we use Bayesian inference? -->
+After completing the identification process outlined in @sec-appendix-B, researchers estimate the ACE using Bayesian inference methods. Bayesian inference calculates the probability of a set of parameters $\theta$, enabling researchers to use their distributions to represent the ACE. The approach begins by defining two probability distributions: the likelihood of the data, $P(X_{1}, X_{2}, \dots, X_{n} | \theta)$, and the prior distribution, $P(\theta)$ [@Everitt_et_al_2010]. Here, $X_{n}$ represents a random variable, and for simplicity, $\theta$ denotes a parameter space of dimension one. After observing empirical data, researchers update these priors to posterior distributions using Bayes' rule [@Jeffreys_1998]:
 
-<!-- Maximum a posteriori (MAP) estimates are the set of parameters that maximizes the probability of $\theta$ given the data. By Bayes theorem the MAP estimate can be obtained by maximizing the following conditional distribution: -->
-
-<!-- $$ -->
-<!-- P(\theta| X_{1}, X_{2}, \dots, X_{n}) = \frac{P(X_{1}, X_{2}, \dots, X_{n} | \theta) \cdot P(\theta)}{P(X_{1}, X_{2}, \dots, X_{n})} -->
-<!-- $$ -->
-<!-- where $P(\theta)$ is the prior distribution for the parameters $\theta$ and $P(X_{1}, X_{2}, \dots, X_{n})$ is the probability of the data averaged over all parameters. Since the denominator is independent of $\theta$, the Bayesian estimator is obtained by maximizing $P(X_{1}, X_{2}, \dots, X_{n} | \theta)$ with respect to $\theta$. This indicates that when researchers model association, they generally model the joint probability of the data given the parameters $\theta$. -->
-
-<!-- This join probability can be further re-expressed using the chain rule of probability as $P(X_{1}, X_{2}, \dots, X_{n}|\theta) = P(X_{1}|\theta) \prod^{n}_{i=2} P(X_{i} | X_{i-1}, \dots, X_{1}, \theta )$. However, from this description, it is easy to see how quickly the parametrization becomes intractable as the number of observed variables $n$ grows [@Neal_2020]. To deal with this complexity, researchers typically simplify the modeling process by assuming local (in)dependencies between variables.  -->
+$$
+P(\theta| X_{1}, X_{2}, \dots, X_{n}) = \frac{P(X_{1}, X_{2}, \dots, X_{n} | \theta) \cdot P(\theta)}{P(X_{1}, X_{2}, \dots, X_{n})}
+$$ {#eq-bayes_rule}
 
 
+Researchers can further simplify the posterior updating process in @eq-bayes_rule into two steps: integrating new empirical data, which is defined by the likelihood, with the parameter update, which is determined by the priors, as demonstrated in equation @eq-prop_rule. This simplification is possible because the denominator on the right-hand side of @eq-bayes_rule acts as a normalizing constant, independent of $\theta$.
 
-<!-- 2. But what does the building blocks mean? -->
-<!-- The five building blocks help to express joint distributions very efficiently, by formalizing local (in)dependencies into (probabilistic) statistical models [@Neal_2020]. Notably, this formalization rest on two key assumptions: the local Markov and causal edges assumptions. The local Markov assumption states that given its parents in the DAG, a node is independent of all its non-descendants. This lead to the Bayesian Network factorization. However, this assumption only give us information about independencias in the distribution that the DAG implies, we need also to know about the dependencies. The causal edges assumption states that in a DAG, every parent is a direct cause of all its children. In this sense this assumption is indicating that parents and their children are dependent, and more precisely, they are causally dependent [@Neal_2020].  -->
+$$
+P(\theta| X_{1}, X_{2}, \dots, X_{n}) \propto P(X_{1}, X_{2}, \dots, X_{n} | \theta) \cdot P(\theta)
+$$ {#eq-prop_rule}
+
+<!-- check: -->
+<!-- https://en.wikipedia.org/wiki/Maximum_a_posteriori_estimation -->
+<!-- https://en.wikipedia.org/wiki/Bayesian_inference -->
+
+<!-- 2. But what is the problem? -->
+Temporarily setting aside the definition of prior distributions, it is important to note that the posterior updating process depends on the assumptions underlying the likelihood of the data. However, as the number of random variables, $n$, increases, this joint distribution becomes quickly intractable [@Neal_2020]. This is evident from @eq-like_chain, where the likelihood distribution is re-expressed in terms of chained conditional distributions. 
+
+$$
+P(X_{1}, X_{2}, \dots, X_{n}|\theta) = P(X_{1}|\theta) \prod^{n}_{i=2} P(X_{i} | X_{i-1}, \dots, X_{1}, \theta )
+$$ {#eq-like_chain}
 
 
+<!-- 3. How do DAGs can help? -->
+To address the complexity of the likelihood, researchers simplify the distribution by assuming that variables exhibit specific local (in)dependencies. These assumptions improve model tractability and streamline the estimation process. Researchers formalize these local (in)dependencies using directed acyclic graphs (DAGs). DAGs represent the probabilistic implications of these assumptions by relying on three key principles: the local Markov assumption, the minimality assumption, and the causal edges assumption. The *local Markov assumption* defines the statistical independencies implied by a DAG. It states that a variable is independent of all its non-descendants, given its parents [@Neal_2020]. The *minimality assumption* identifies the statistical dependencies implied by a DAG. It asserts that every pair of adjacent variables are dependent [@Neal_2020]. Finally, the *causal edges assumption* establishes causal relationships between parents and their children in a DAG by stating that every parent is a direct cause of their children [@Neal_2020]. Figure @fig-ACflow illustrates the flow of association and causation in graphs.
 
+![ The flow of association and causation in graphs. Extracted and slightly modified from @Neal_2020 [pp. 31] ](images/png/ACflow.png){#fig-ACflow fig-align="center" width=80%}
 
-<!-- Another advantage of graphical models is that they allow us to express joint distributions very efficiently. -->
+<!-- 4. What are the implications of this? -->
+This lead to the *Bayesian Network factorization* of @eq-like_chain. 
+
+$$
+P(X_{1}, X_{2}, \dots, X_{n}|\theta) = P(X_{1}|\theta) \prod^{n}_{i=2} P(X_{i} | pa(X_{i}), \theta )
+$$ {#eq-net_factor}
 
 <!-- Second, in a fully specified SCM, we can represent the joint distributions of n variables -->
 <!-- with greater efficiency: We need only to specify the n functions that govern the relationships between the variables, and then from the probabilities of the error terms, we can discover all the probabilities that govern the joint distribution. -->
 
 
-<!-- [The advantages of SCMs and DAGs to identify causal quantities are realized after researchers examine the causal and probabilistic assumptions underlying these building blocks.]{style="color:red;"} -->
-
-<!-- The main assumption we’ve seen that relates the graph to the distribution -->
-<!-- is the Markov assumption. The Markov assumption tells us if variables are -->
-<!-- d-separated in the graph 𝐺 , then they are independent in the distribution -->
-<!-- 𝑃 (Theorem 3.1): -->
-<!-- Maybe we can detect independencies in the data and then use that -->
-<!-- to infer the causal graph. However, going from independencies in the -->
-<!-- distribution 𝑃 to d-separations in the graph 𝐺 isn’t something that the -->
-<!-- Markov assumption gives us (see Equation 3.20 above). Rather, we need -->
-<!-- the converse of the Markov assumption. This is known as the faithfulness -->
-<!-- assumption. -->
-<!-- Assumption 11.1 (Faithfulness) -->
-
-
-<!-- 2. What is the local markov assumption? and where does it lead? -->
-<!-- 2.1 Bayesian network factorization -->
-
-<!-- 3. What is the causal edges assumption? and where does it lead? -->
-
-<!-- 4. Combined they are known as the minimality assumption? -->
-
-
 <!-- 5. Now, what are those mysterious functions?, and how do they become statistical quantities? -->
-
-
 
 
 <!-- 6. What is the modularity assumption? and where does it lead? -->
@@ -788,16 +774,6 @@ Plausible causal structure the scenario outlined in @sec-appendix-B.
 <!-- After detailing how to build graphs and what they imply, Include steps to draw dags using a motivating example -->
 
 <!-- point out that the disturbances are usually stochastic in nature -->
-
-<!-- Causal mechanism as a result of markov and minimality assumption -->
-<!-- Modularity assumption also -->
-
-
-<!-- 4. But how do we move from targets of inference to estimates -->
-<!-- But how can we move from heuristics and vague mathematic notation, to probabilistic causal analysis. -->
-
-
-![ The flow of association and causation in graphs. Extracted and slightly modified from @Neal_2020 [pp. 31] ](images/png/ACflow.png){#fig-ACflow fig-align="center" width=80%}
 
 
 <!-- For instance, in the example outlined in @sec-appendix-C, the collected observational data can be expressed as joint probability $P(X,T,Y)$. Using the chain rule, this probability can be further factorized in $P(X,T,Y) = P(X) P(T|X) P(Y|T,X)$. Although this description of this data does not seem hard   -->
