@@ -735,6 +735,14 @@ to the development of \emph{the sample-comparison model}.
 
 \subsection{The population model}\label{sec-theory-theoretical_P}
 
+In this section we focus on the identification of several parameters of
+interest from the theoretical model, together with various assessment
+design features relevant to CJ experiments. The main reason to focus on
+identification is that if these parameters cannot be identified using
+``infinite'' and error free data, we certainly cannot learn anything
+about it using finite data. So, for the time being, we assume large
+samples and error-free measurements \citep[pp.~5]{Schuessler_et_al_2023}
+
 Assuming population data or more commonly known as census data, we
 \ldots{}
 
@@ -752,6 +760,42 @@ discriminal processes
 
 \centering{
 
+\includegraphics[width=0.23\linewidth,height=\textheight,keepaspectratio]{./images/png/CJ_TM_01.png}
+
+}
+
+\caption{\label{fig-CJ_TM_01}}
+
+\end{figure}%
+
+\begin{figure}
+
+\centering{
+
+\includegraphics[width=0.32\linewidth,height=\textheight,keepaspectratio]{./images/png/CJ_TM_02.png}
+
+}
+
+\caption{\label{fig-CJ_TM_02}}
+
+\end{figure}%
+
+\begin{figure}
+
+\centering{
+
+\includegraphics[width=0.45\linewidth,height=\textheight,keepaspectratio]{./images/png/CJ_TM_03.png}
+
+}
+
+\caption{\label{fig-CJ_TM_03}}
+
+\end{figure}%
+
+\begin{figure}
+
+\centering{
+
 \includegraphics[width=0.45\linewidth,height=\textheight,keepaspectratio]{./images/png/CJ_TM_04.png}
 
 }
@@ -763,6 +807,66 @@ discriminal processes
 without loosing generality, the (latent) ``perceived'' and ``true''
 discriminal processes for the stimuli can be depicted in a vector for
 each judge, as in
+
+\begin{figure}
+
+\centering{
+
+\includegraphics[width=0.44\linewidth,height=\textheight,keepaspectratio]{./images/png/CJ_TM_05.png}
+
+}
+
+\caption{\label{fig-CJ_TM_05}}
+
+\end{figure}%
+
+\begin{figure}
+
+\centering{
+
+\includegraphics[width=0.59\linewidth,height=\textheight,keepaspectratio]{./images/png/CJ_TM_06.png}
+
+}
+
+\caption{\label{fig-CJ_TM_06}}
+
+\end{figure}%
+
+\begin{figure}
+
+\centering{
+
+\includegraphics[width=0.68\linewidth,height=\textheight,keepaspectratio]{./images/png/CJ_TM_07.png}
+
+}
+
+\caption{\label{fig-CJ_TM_07}}
+
+\end{figure}%
+
+\begin{figure}
+
+\centering{
+
+\includegraphics[width=0.68\linewidth,height=\textheight,keepaspectratio]{./images/png/CJ_TM_08.png}
+
+}
+
+\caption{\label{fig-CJ_TM_08}}
+
+\end{figure}%
+
+\begin{figure}
+
+\centering{
+
+\includegraphics[width=0.68\linewidth,height=\textheight,keepaspectratio]{./images/png/CJ_TM_09.png}
+
+}
+
+\caption{\label{fig-CJ_TM_09}}
+
+\end{figure}%
 
 \begin{figure}
 
@@ -785,6 +889,18 @@ Considering the sampling mechanism
 
 \centering{
 
+\includegraphics[width=0.8\linewidth,height=\textheight,keepaspectratio]{./images/png/CJ_TM_11.png}
+
+}
+
+\caption{\label{fig-CJ_TM_11}}
+
+\end{figure}%
+
+\begin{figure}
+
+\centering{
+
 \includegraphics[width=0.8\linewidth,height=\textheight,keepaspectratio]{./images/png/CJ_TM_12.png}
 
 }
@@ -799,11 +915,35 @@ Considering comparison mechanisms
 
 \centering{
 
+\includegraphics[width=0.9\linewidth,height=\textheight,keepaspectratio]{./images/png/CJ_TM_13.png}
+
+}
+
+\caption{\label{fig-CJ_TM_13}}
+
+\end{figure}%
+
+\begin{figure}
+
+\centering{
+
 \includegraphics[width=0.9\linewidth,height=\textheight,keepaspectratio]{./images/png/CJ_TM_14.png}
 
 }
 
 \caption{\label{fig-CJ_TM_14}}
+
+\end{figure}%
+
+\begin{figure}
+
+\centering{
+
+\includegraphics[width=0.9\linewidth,height=\textheight,keepaspectratio]{./images/png/CJ_TM_15.png}
+
+}
+
+\caption{\label{fig-CJ_TM_15}}
 
 \end{figure}%
 
@@ -920,15 +1060,17 @@ quantity \(E[Y_{i}| T_{i}=1] - E[Y_{i}| T_{i}=2]\), where \(E[\cdot]\)
 denotes the expected value.
 
 Researchers would then proceed to identify the estimands.
-\emph{Identification} refers to the process of accurately computing an
-estimand using an estimator. An \emph{estimator} is a method or function
-that transforms data into an estimate \citep{Neal_2020}.
-\emph{Estimates} are numerical values that approximate the estimand and
-are derived through \emph{estimation}, which refers to the process of
-integrating data with an estimator \citep{Everitt_et_al_2010}. The
-Identification-Estimation flowchart \citep{McElreath_2020, Neal_2020} in
-Figure~\ref{fig-IEflow} provides a visual representation of the process
-of transitioning from estimands to estimates.
+\emph{Identification} is concerned with determining whether an estimator
+can accurately compute an estimand based on its assumptions, regardless
+of random variability \citep[pp.~4]{Schuessler_et_al_2023}. An
+\emph{estimator} is a method or function that transforms data into an
+estimate \citep{Neal_2020}. \emph{Estimates} are numerical values that
+approximate the estimand and are derived through \emph{estimation},
+which refers to the process of integrating data with an estimator
+\citep{Everitt_et_al_2010}. The Identification-Estimation flowchart
+\citep{McElreath_2020, Neal_2020} in Figure~\ref{fig-IEflow} provides a
+visual representation of the process of transitioning from estimands to
+estimates.
 
 \begin{figure}
 
@@ -1070,26 +1212,22 @@ applicability across different causal scenarios
 The structural approach to causal inference uses SCMs and DAGs to
 formally and graphically represent the presumed causal structure
 underlying the ACE
-\citep{Pearl_2009, Pearl_et_al_2016, Gross_et_al_2018, Neal_2020}. In
-essence, SCMs and DAGs act as \emph{conceptual models} that guide
-researchers in determining which statistical models can yield valid
-causal inferences, assuming the depicted causal structure of the models
-is correct \citep{McElreath_2020}. Notably, every SCM has an associated
-DAG \citep{Cinelli_et_al_2020}. Figure~\ref{fig-IEflow} provides a
-visual representation of the role of theoretical models in the inference
-process.
-
-SCMs and DAGs offer two key advantages for modeling causal structures.
-First, they enable the representation of causal relations in a
-non-parametric and fully interactive manner. This feature allows for
-feasible ACE identification strategies without specifying the data type
-or the nature of the functional dependence among variables
-\citep{Morgan_et_al_2014}. Second, regardless of complexity, they can
-represent a wide range of causal structures using only five fundamental
-building blocks \citep{Neal_2020, McElreath_2020}. This feature allows
-researchers to decompose complex structures, facilitating their analysis
-by focusing on the causal assumptions associated with each building
-block \citep{McElreath_2020}.
+\citep{Pearl_2009, Pearl_et_al_2016, Gross_et_al_2018, Neal_2020}.
+Assuming the depicted causal structure is correct, SCMs and DAGs serve
+as \emph{conceptual (theoretical) models} that help researchers
+determine which statistical models can identify an estimand, thus
+enabling valid causal inference \citep{McElreath_2020}. They achieve
+this by representing various causal structures using only five
+fundamental building blocks, regardless of complexity
+\citep{Neal_2020, McElreath_2020}. This feature allows researchers to
+decompose complex structures into manageable components
+\citep{McElreath_2020}. Furthermore, SCMs and DAGs can depict causal
+relationships in a non-parametric and fully interactive way. This
+flexibility enables feasible ACE identification strategies without
+requiring detailed specifications of the functional relating the
+variables, their parameters, or their data types
+\citep{Pearl_et_al_2016}. Figure~\ref{fig-IEflow} shows how theoretical
+models guide the inference process.
 
 Figures \ref{fig-dags_scms1}, \ref{fig-dags_scms2},
 \ref{fig-dags_scms3}, \ref{fig-dags_scms4}, and \ref{fig-dags_scms5}
@@ -1098,12 +1236,11 @@ figures show the formal mathematical models, represented by the SCMs,
 defined in terms of a set of \emph{endogenous} variables
 \(V=\{X_{1},X_{2},X_{3}\}\), a set of \emph{exogenous} variables
 \(E=\{e_{X1},e_{X2},e_{X3}\}\), and a set of functions
-\(F=\{f_{X1},f_{X2},f_{X3}\}\)
-\citep{Pearl_2009, Cinelli_et_al_2020, Neal_2020}. Endogenous variables
-are those whose causal mechanisms a researcher chooses to model
-\citep{Neal_2020}. In contrast, exogenous variables represent
-\emph{errors} or \emph{disturbances} arising from omitted factors that
-the investigator chooses not to model explicitly
+\(F=\{f_{X1},f_{X2},f_{X3}\}\) \citep{Pearl_2009, Cinelli_et_al_2020}.
+Endogenous variables are those whose causal mechanisms a researcher
+chooses to model \citep{Neal_2020}. In contrast, exogenous variables
+represent \emph{errors} or \emph{disturbances} arising from omitted
+factors that the investigator chooses not to model explicitly
 \citep[pp.~27,68]{Pearl_2009}. Lastly, the functions, referred to as
 \emph{structural equations}, express the endogenous variables as
 non-parametric functions of other variables. These functions use the
@@ -1111,21 +1248,23 @@ symbol `\(:=\)' to denote the asymmetrical causal dependence of the
 variables and the symbol `\(\perp\!\!\!\perp\)' to represent
 \emph{d-separation}, a concept akin to (conditional) independence.
 
-The right panels of the figures display the complementary DAGs. A DAG
-consists of nodes connected by edges, where nodes represent random
-variables. The term \emph{directed} means the edges extend from one node
-to another, with arrows indicating the direction of causal influence.
-The term \emph{acyclic} signifies that the causal influences do not form
-loops, ensuring the influences do not cycle back on themselves
+Notably, every SCM has an associated DAG
+\citep{Pearl_et_al_2016, Cinelli_et_al_2020}. The right panels of the
+figures display these DAGs. A DAG is a graph consisting of nodes
+connected by edges, where the nodes represent random variables. The term
+\emph{directed} means that the edges extend from one node to another,
+with arrows indicating the direction of causal influence. The term
+\emph{acyclic} implies that the causal influences do not form loops,
+ensuring the influences do not cycle back on themselves
 \citep{McElreath_2020}. DAGs represent observed variables as solid black
 circles, while they use open circles for unobserved (latent) variables
-\citep{Morgan_et_al_2014}. Finally, the arrows in the graphs show the
-expected direction of causal influences among these variables. While
-DAGs often omit exogenous variables for simplicity (the \emph{standard}
-representation), including these variables is advantageous (the
-\emph{magnified} representation shown in the figures), as their
-inclusion helps to identify potential issues related to conditioning and
-confounding \citep{Cinelli_et_al_2020}.
+\citep{Morgan_et_al_2014}. Finally, the arrows in the graphs indicate
+the expected direction of causal influences between these variables.
+While DAGs often omit exogenous variables for simplicity (the
+\emph{standard} representation), including these variables is
+advantageous (the \emph{magnified} representation shown in the figures),
+as their inclusion helps to identify potential issues related to
+conditioning and confounding \citep{Cinelli_et_al_2020}.
 
 \begin{figure}[H]
 
@@ -1316,11 +1455,11 @@ confounding \citep{Cinelli_et_al_2020}.
 
 \end{figure}%
 
-A careful examination of the figures highlights the assumptions
-underlying these building blocks. Figures \ref{fig-scm_bb1} and
-\ref{fig-mdag_bb1} depict two unconnected nodes, representing a scenario
-where variables \(X_{1}\) and \(X_{3}\) are not causally related.
-Figures \ref{fig-scm_bb2} and \ref{fig-mdag_bb2} illustrate two
+A careful examination of the figures highlights the theoretical
+assumptions underlying these building blocks. Figures \ref{fig-scm_bb1}
+and \ref{fig-mdag_bb1} depict two unconnected nodes, representing a
+scenario where variables \(X_{1}\) and \(X_{3}\) are not causally
+related. Figures \ref{fig-scm_bb2} and \ref{fig-mdag_bb2} illustrate two
 connected nodes, representing a scenario where a \emph{parent} node
 \(X_{1}\) exerts a causal influence on a \emph{child} node \(X_{3}\). In
 this setup, \(X_{3}\) is considered a \emph{descendant} of \(X_{1}\).
@@ -1400,67 +1539,24 @@ outlined in Section~\ref{sec-appendix-B}.}
 
 \end{figure}%
 
-\section{The probabilistic implications of DAGs}\label{sec-appendix-D}
+\section{The probabilistic implications of SCMs and
+DAGs}\label{sec-appendix-D}
 
-After completing the identification process outlined in
-Section~\ref{sec-appendix-B}, researchers estimate the ACE using
-Bayesian inference methods. Bayesian inference calculates the
-probability of a set of parameters \(\theta\), enabling researchers to
-use their distributions to represent the ACE. The approach begins by
-defining two probability distributions: the likelihood of the data,
-\(P(X_{1}, X_{2}, \dots, X_{n} | \theta)\), and the prior distribution,
-\(P(\theta)\) \citep{Everitt_et_al_2010}. Here, \(X_{n}\) represents a
-random variable, and for simplicity, \(\theta\) denotes a parameter
-space of dimension one. After observing empirical data, researchers
-update these priors to posterior distributions using Bayes' rule
-\citep{Jeffreys_1998}:
-
-\begin{equation}\phantomsection\label{eq-bayes_rule}{
-P(\theta| X_{1}, X_{2}, \dots, X_{n}) = \frac{P(X_{1}, X_{2}, \dots, X_{n} | \theta) \cdot P(\theta)}{P(X_{1}, X_{2}, \dots, X_{n})}
-}\end{equation}
-
-Researchers can further simplify the posterior updating process in
-Equation~\ref{eq-bayes_rule} into two steps: integrating new empirical
-data, which is defined by the likelihood, with the parameter update,
-which is determined by the priors, as demonstrated in equation
-Equation~\ref{eq-prop_rule}. This simplification is possible because the
-denominator on the right-hand side of Equation~\ref{eq-bayes_rule} acts
-as a normalizing constant, independent of \(\theta\).
-
-\begin{equation}\phantomsection\label{eq-prop_rule}{
-P(\theta| X_{1}, X_{2}, \dots, X_{n}) \propto P(X_{1}, X_{2}, \dots, X_{n} | \theta) \cdot P(\theta)
-}\end{equation}
-
-Temporarily setting aside the definition of prior distributions, it is
-important to note that the posterior updating process depends on the
-assumptions underlying the likelihood of the data. However, as the
-number of random variables, \(n\), increases, this joint distribution
-becomes quickly intractable \citep{Neal_2020}. This is evident from
-Equation~\ref{eq-like_chain}, where the likelihood distribution is
-re-expressed in terms of chained conditional distributions.
-
-\begin{equation}\phantomsection\label{eq-like_chain}{
-P(X_{1}, X_{2}, \dots, X_{n}|\theta) = P(X_{1}|\theta) \prod^{n}_{i=2} P(X_{i} | X_{i-1}, \dots, X_{1}, \theta )
-}\end{equation}
-
-To address the complexity of the likelihood, researchers simplify the
-distribution by assuming that variables exhibit specific local
-(in)dependencies. These assumptions improve model tractability and
-streamline the estimation process. Researchers formalize these local
-(in)dependencies using directed acyclic graphs (DAGs). DAGs represent
-the probabilistic implications of these assumptions by relying on three
-key principles: the local Markov assumption, the minimality assumption,
-and the causal edges assumption. The \emph{local Markov assumption}
-defines the statistical independencies implied by a DAG. It states that
-a variable is independent of all its non-descendants, given its parents
-\citep{Neal_2020}. The \emph{minimality assumption} identifies the
-statistical dependencies implied by a DAG. It asserts that every pair of
-adjacent variables are dependent \citep{Neal_2020}. Finally, the
-\emph{causal edges assumption} establishes causal relationships between
-parents and their children in a DAG by stating that every parent is a
-direct cause of their children \citep{Neal_2020}. Figure
-Figure~\ref{fig-ACflow} illustrates the flow of association and
-causation in graphs.
+In addition to their graphical capabilities, SCMs and DAGs can encode
+probabilistic information about causal structures. They achieve this
+encoding by relying on three fundamental assumptions: the local Markov,
+the minimality, and the causal edges assumption. The \emph{local Markov
+assumption} encodes probabilistic independencies between variables by
+declaring that nodes in a graph are independent of all its
+non-descendants, given its parents \citep{Neal_2020}. Meanwhile, the
+\emph{minimality assumption} encodes probabilistic dependencies among
+variables by stating that every pair of adjacent nodes exhibits a
+dependency \citep{Neal_2020}. Finally, the \emph{causal edges
+assumption} encodes causal relationships between variables by declaring
+that each parent node acts as a direct cause of its children
+\citep{Neal_2020}. Figure~\ref{fig-ACflow} illustrates how these
+assumptions influence the statistical and causal interpretations of
+graphs.
 
 \begin{figure}
 
@@ -1475,12 +1571,36 @@ graphs. Extracted and slightly modified from \citet[pp.~31]{Neal_2020}}
 
 \end{figure}%
 
-This lead to the \emph{Bayesian Network factorization} of
-Equation~\ref{eq-like_chain}.
+The encoding of probabilistic information in SCMs and DAGs facilitates
+the efficient representation of the joint distribution of variables
+\citep[pp.~29]{Pearl_et_al_2016}. A notable implication of the
+assumptions underlying this encoding is that any conceptual model
+described by an SCM and DAG can express the joint distribution of
+variables as a product of conditional probability distributions (CPDs)
+in the form \(P(child \: | \: parents)\). This property is formally
+known as the \emph{Bayesian Network factorization}
+(Equation~\ref{eq-net_factor})
+\citetext{\citealp[pp.~29]{Pearl_et_al_2016}; \citealp[pp.~21]{Neal_2020}}.
+In this factorization, \(pa(X_{i})\) denotes the set of variables that
+are the parents of \(X_{i}\).
 
 \begin{equation}\phantomsection\label{eq-net_factor}{
-P(X_{1}, X_{2}, \dots, X_{n}|\theta) = P(X_{1}|\theta) \prod^{n}_{i=2} P(X_{i} | pa(X_{i}), \theta )
+P(X_{1}, X_{2}, \dots, X_{P}) = \prod^{P}_{p=1} P(X_{i} \: | \: pa(X_{i}) )
 }\end{equation}
+
+Ultimately, this encoding enables researchers with conceptual
+(theoretical) knowledge in the form of an SCM and DAG to predict
+patterns of (in)dependencies in the data. As highlighted by
+\citet[pp.~35]{Pearl_et_al_2016}, these predictions depend solely on the
+structure of these conceptual models without requiring the quantitative
+details of the equations or the distributions of the errors. Moreover,
+once researchers observe empirical data, the patterns of
+(in)dependencies in this data can provide significant insights into the
+validity of the proposed conceptual model.
+
+The concept of predicting patterns of (in)dependencies in the data is
+more clearly illustrated through the five fundamental building blocks
+outlined in Section~\ref{sec-appendix-C}.
 
 \newpage{}
 

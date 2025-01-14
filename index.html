@@ -10,7 +10,7 @@
 <meta name="author" content="Tine van van Daal">
 <meta name="author" content="Sven De De Maeyer">
 <meta name="author" content="Steven Gillis">
-<meta name="dcterms.date" content="2025-01-11">
+<meta name="dcterms.date" content="2025-01-14">
 <meta name="keywords" content="causal inference, directed acyclic graphs, structural causal models, bayesian statistical methods, thurstonian model, comparative judgement, probability, statistical modeling">
 
 <title>Let’s talk about Thurstone &amp; Co.: An information-theoretical model for comparative judgments, and its statistical translation</title>
@@ -108,10 +108,10 @@ window.Quarto = {
 <meta name="citation_author" content="Tine van van Daal">
 <meta name="citation_author" content="Sven De De Maeyer">
 <meta name="citation_author" content="Steven Gillis">
-<meta name="citation_publication_date" content="2025-01-11">
-<meta name="citation_cover_date" content="2025-01-11">
+<meta name="citation_publication_date" content="2025-01-14">
+<meta name="citation_cover_date" content="2025-01-14">
 <meta name="citation_year" content="2025">
-<meta name="citation_online_date" content="2025-01-11">
+<meta name="citation_online_date" content="2025-01-14">
 <meta name="citation_language" content="en">
 <meta name="citation_reference" content="citation_title=Correlation and causation;,citation_author=S. Wright;,citation_publication_date=1927;,citation_cover_date=1927;,citation_year=1927;,citation_fulltext_html_url=https://books.google.co.ao/books/about/Journal_of_Agricultural_Research.html?hl=pt-PT&amp;amp;amp;id=lNNdIV_qpwIC;,citation_issue=7;,citation_volume=20;,citation_journal_title=Correlation and causation;">
 <meta name="citation_reference" content="citation_title=On the interpretation of χ2 from contingency tables, and the calculation of p;,citation_author=R. Fisher;,citation_publication_date=1922;,citation_cover_date=1922;,citation_year=1922;,citation_fulltext_html_url=http://www.jstor.org/stable/2340521;,citation_issue=1;,citation_doi=10.2307/2340521;,citation_volume=85;,citation_journal_title=Journal of the Royal Statistical Society;,citation_publisher=[Wiley, Royal Statistical Society];">
@@ -439,7 +439,7 @@ window.Quarto = {
                 <div>
             <div class="quarto-title-meta-heading">Published</div>
             <div class="quarto-title-meta-contents">
-              <p class="date">January 11, 2025</p>
+              <p class="date">January 14, 2025</p>
             </div>
           </div>
           
@@ -751,39 +751,111 @@ Figure&nbsp;2: The effect of dispersion discrepancies and stimulus correlation o
 <!-- comparison mechanism as missing mechanism -->
 <!-- recording: Sven 24.10.04; time: 00:09:10 - 00:14:30 -->
 <!-- recording: Sven 24.10.04; time: 00:34:10 - 00:41:00 -->
+<p>In this section we focus on the identification of several parameters of interest from the theoretical model, together with various assessment design features relevant to CJ experiments. The main reason to focus on identification is that if these parameters cannot be identified using “infinite” and error free data, we certainly cannot learn anything about it using finite data. So, for the time being, we assume large samples and error-free measurements <span class="citation" data-cites="Schuessler_et_al_2023">(<a href="#ref-Schuessler_et_al_2023" role="doc-biblioref">Schuessler and Selb, 5</a>)</span></p>
 <!-- In general terms, causal graphs encode a researcher’s assumptions about the causal process that generated the data in a population of interest [@Schuessler_et_al_2023, pp. 4] -->
 <!-- The causal assumptions encoded in a DAG constitute the theoretical model on which identification analysis rests. Identification analysis is concerned with determining whether or not the true value of a parameter can be estimated using the assumptions in the model (graph), regardless of random variability in the data due to small samples [@Schuessler_et_al_2023, pp. 4]. -->
-<!-- The main reason to focus on identification as a first step is that if a parameter cannot be identified using “infinite” and error free data, we certainly cannot learn anything about it using finite data.1 So, for the time being, we assume large samples and error-free measurements [@Schuessler_et_al_2023, pp. 5] -->
 <p>Assuming population data or more commonly known as census data, we …</p>
 <p>The (latent) discriminal difference of the stimuli directly determines the (manifest) outcome of the pairwise comparisons</p>
 <p>The (latent) “perceived” discriminal processes for the stimuli directly determines their discriminal difference</p>
 <p>The (latent) “true” discriminal processes for the stimuli and the judges’ biases directly determines their (latent) “perceived” discriminal processes</p>
-<!-- ![](/images/png/CJ_TM_01.png){#fig-CJ_TM_01 width=23%} -->
-<!-- ![](/images/png/CJ_TM_02.png){#fig-CJ_TM_02 width=32%} -->
-<!-- ![](/images/png/CJ_TM_03.png){#fig-CJ_TM_03 width=45%} -->
+<div id="fig-CJ_TM_01" class="quarto-float quarto-figure quarto-figure-center anchored" width="23%">
+<figure class="quarto-float quarto-float-fig figure">
+<figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-fig quarto-uncaptioned" id="fig-CJ_TM_01-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;3
+</figcaption>
+<div aria-describedby="fig-CJ_TM_01-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<a href="./images/png/CJ_TM_01.png" class="lightbox" data-gallery="quarto-lightbox-gallery-6" title="Figure&nbsp;3: "><img src="./images/png/CJ_TM_01.png" id="fig-CJ_TM_01" class="img-fluid figure-img" style="width:23.0%"></a>
+</div>
+</figure>
+</div>
+<div id="fig-CJ_TM_02" class="quarto-float quarto-figure quarto-figure-center anchored" width="32%">
+<figure class="quarto-float quarto-float-fig figure">
+<figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-fig quarto-uncaptioned" id="fig-CJ_TM_02-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;4
+</figcaption>
+<div aria-describedby="fig-CJ_TM_02-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<a href="./images/png/CJ_TM_02.png" class="lightbox" data-gallery="quarto-lightbox-gallery-7" title="Figure&nbsp;4: "><img src="./images/png/CJ_TM_02.png" id="fig-CJ_TM_02" class="img-fluid figure-img" style="width:32.0%"></a>
+</div>
+</figure>
+</div>
+<div id="fig-CJ_TM_03" class="quarto-float quarto-figure quarto-figure-center anchored" width="45%">
+<figure class="quarto-float quarto-float-fig figure">
+<figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-fig quarto-uncaptioned" id="fig-CJ_TM_03-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;5
+</figcaption>
+<div aria-describedby="fig-CJ_TM_03-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<a href="./images/png/CJ_TM_03.png" class="lightbox" data-gallery="quarto-lightbox-gallery-8" title="Figure&nbsp;5: "><img src="./images/png/CJ_TM_03.png" id="fig-CJ_TM_03" class="img-fluid figure-img" style="width:45.0%"></a>
+</div>
+</figure>
+</div>
 <div id="fig-CJ_TM_04" class="quarto-float quarto-figure quarto-figure-center anchored" width="45%">
 <figure class="quarto-float quarto-float-fig figure">
 <figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-fig quarto-uncaptioned" id="fig-CJ_TM_04-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Figure&nbsp;3
+Figure&nbsp;6
 </figcaption>
 <div aria-describedby="fig-CJ_TM_04-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<a href="./images/png/CJ_TM_04.png" class="lightbox" data-gallery="quarto-lightbox-gallery-6" title="Figure&nbsp;3: "><img src="./images/png/CJ_TM_04.png" id="fig-CJ_TM_04" class="img-fluid figure-img" style="width:45.0%"></a>
+<a href="./images/png/CJ_TM_04.png" class="lightbox" data-gallery="quarto-lightbox-gallery-9" title="Figure&nbsp;6: "><img src="./images/png/CJ_TM_04.png" id="fig-CJ_TM_04" class="img-fluid figure-img" style="width:45.0%"></a>
 </div>
 </figure>
 </div>
 <p>without loosing generality, the (latent) “perceived” and “true” discriminal processes for the stimuli can be depicted in a vector for each judge, as in</p>
-<!-- ![](/images/png/CJ_TM_05.png){#fig-CJ_TM_05 width=44%} -->
-<!-- ![](/images/png/CJ_TM_06.png){#fig-CJ_TM_06 width=59%} -->
-<!-- ![](/images/png/CJ_TM_07.png){#fig-CJ_TM_07 width=68%} -->
-<!-- ![](/images/png/CJ_TM_08.png){#fig-CJ_TM_08 width=68%} -->
-<!-- ![](/images/png/CJ_TM_09.png){#fig-CJ_TM_09 width=68%} -->
+<div id="fig-CJ_TM_05" class="quarto-float quarto-figure quarto-figure-center anchored" width="44%">
+<figure class="quarto-float quarto-float-fig figure">
+<figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-fig quarto-uncaptioned" id="fig-CJ_TM_05-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;7
+</figcaption>
+<div aria-describedby="fig-CJ_TM_05-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<a href="./images/png/CJ_TM_05.png" class="lightbox" data-gallery="quarto-lightbox-gallery-10" title="Figure&nbsp;7: "><img src="./images/png/CJ_TM_05.png" id="fig-CJ_TM_05" class="img-fluid figure-img" style="width:44.0%"></a>
+</div>
+</figure>
+</div>
+<div id="fig-CJ_TM_06" class="quarto-float quarto-figure quarto-figure-center anchored" width="59%">
+<figure class="quarto-float quarto-float-fig figure">
+<figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-fig quarto-uncaptioned" id="fig-CJ_TM_06-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;8
+</figcaption>
+<div aria-describedby="fig-CJ_TM_06-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<a href="./images/png/CJ_TM_06.png" class="lightbox" data-gallery="quarto-lightbox-gallery-11" title="Figure&nbsp;8: "><img src="./images/png/CJ_TM_06.png" id="fig-CJ_TM_06" class="img-fluid figure-img" style="width:59.0%"></a>
+</div>
+</figure>
+</div>
+<div id="fig-CJ_TM_07" class="quarto-float quarto-figure quarto-figure-center anchored" width="68%">
+<figure class="quarto-float quarto-float-fig figure">
+<figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-fig quarto-uncaptioned" id="fig-CJ_TM_07-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;9
+</figcaption>
+<div aria-describedby="fig-CJ_TM_07-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<a href="./images/png/CJ_TM_07.png" class="lightbox" data-gallery="quarto-lightbox-gallery-12" title="Figure&nbsp;9: "><img src="./images/png/CJ_TM_07.png" id="fig-CJ_TM_07" class="img-fluid figure-img" style="width:68.0%"></a>
+</div>
+</figure>
+</div>
+<div id="fig-CJ_TM_08" class="quarto-float quarto-figure quarto-figure-center anchored" width="68%">
+<figure class="quarto-float quarto-float-fig figure">
+<figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-fig quarto-uncaptioned" id="fig-CJ_TM_08-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;10
+</figcaption>
+<div aria-describedby="fig-CJ_TM_08-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<a href="./images/png/CJ_TM_08.png" class="lightbox" data-gallery="quarto-lightbox-gallery-13" title="Figure&nbsp;10: "><img src="./images/png/CJ_TM_08.png" id="fig-CJ_TM_08" class="img-fluid figure-img" style="width:68.0%"></a>
+</div>
+</figure>
+</div>
+<div id="fig-CJ_TM_09" class="quarto-float quarto-figure quarto-figure-center anchored" width="68%">
+<figure class="quarto-float quarto-float-fig figure">
+<figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-fig quarto-uncaptioned" id="fig-CJ_TM_09-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;11
+</figcaption>
+<div aria-describedby="fig-CJ_TM_09-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<a href="./images/png/CJ_TM_09.png" class="lightbox" data-gallery="quarto-lightbox-gallery-14" title="Figure&nbsp;11: "><img src="./images/png/CJ_TM_09.png" id="fig-CJ_TM_09" class="img-fluid figure-img" style="width:68.0%"></a>
+</div>
+</figure>
+</div>
 <div id="fig-CJ_TM_10" class="quarto-float quarto-figure quarto-figure-center anchored" width="68%">
 <figure class="quarto-float quarto-float-fig figure">
 <figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-fig quarto-uncaptioned" id="fig-CJ_TM_10-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Figure&nbsp;4
+Figure&nbsp;12
 </figcaption>
 <div aria-describedby="fig-CJ_TM_10-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<a href="./images/png/CJ_TM_10.png" class="lightbox" data-gallery="quarto-lightbox-gallery-7" title="Figure&nbsp;4: "><img src="./images/png/CJ_TM_10.png" id="fig-CJ_TM_10" class="img-fluid figure-img" style="width:68.0%"></a>
+<a href="./images/png/CJ_TM_10.png" class="lightbox" data-gallery="quarto-lightbox-gallery-15" title="Figure&nbsp;12: "><img src="./images/png/CJ_TM_10.png" id="fig-CJ_TM_10" class="img-fluid figure-img" style="width:68.0%"></a>
 </div>
 </figure>
 </div>
@@ -792,31 +864,58 @@ Figure&nbsp;4
 <section id="sec-theory-theoretical_SC" class="level3" data-number="4.1.2">
 <h3 data-number="4.1.2" class="anchored" data-anchor-id="sec-theory-theoretical_SC"><span class="header-section-number">4.1.2</span> The sample-comparison model</h3>
 <p>Considering the sampling mechanism</p>
-<!-- ![](/images/png/CJ_TM_11.png){#fig-CJ_TM_11 width=80%} -->
+<div id="fig-CJ_TM_11" class="quarto-float quarto-figure quarto-figure-center anchored" width="80%">
+<figure class="quarto-float quarto-float-fig figure">
+<figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-fig quarto-uncaptioned" id="fig-CJ_TM_11-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;13
+</figcaption>
+<div aria-describedby="fig-CJ_TM_11-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<a href="./images/png/CJ_TM_11.png" class="lightbox" data-gallery="quarto-lightbox-gallery-16" title="Figure&nbsp;13: "><img src="./images/png/CJ_TM_11.png" id="fig-CJ_TM_11" class="img-fluid figure-img" style="width:80.0%"></a>
+</div>
+</figure>
+</div>
 <div id="fig-CJ_TM_12" class="quarto-float quarto-figure quarto-figure-center anchored" width="80%">
 <figure class="quarto-float quarto-float-fig figure">
 <figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-fig quarto-uncaptioned" id="fig-CJ_TM_12-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Figure&nbsp;5
+Figure&nbsp;14
 </figcaption>
 <div aria-describedby="fig-CJ_TM_12-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<a href="./images/png/CJ_TM_12.png" class="lightbox" data-gallery="quarto-lightbox-gallery-8" title="Figure&nbsp;5: "><img src="./images/png/CJ_TM_12.png" id="fig-CJ_TM_12" class="img-fluid figure-img" style="width:80.0%"></a>
+<a href="./images/png/CJ_TM_12.png" class="lightbox" data-gallery="quarto-lightbox-gallery-17" title="Figure&nbsp;14: "><img src="./images/png/CJ_TM_12.png" id="fig-CJ_TM_12" class="img-fluid figure-img" style="width:80.0%"></a>
 </div>
 </figure>
 </div>
 <!-- The condition of case selection to be independent from Y is always met in experiments because the Y is not realized before the experiment starts. [@Kohler_et_al_2019, pp. 160] -->
 <p>Considering comparison mechanisms</p>
-<!-- ![](/images/png/CJ_TM_13.png){#fig-CJ_TM_13 width=90%} -->
-<div id="fig-CJ_TM_14" class="quarto-float quarto-figure quarto-figure-center anchored" width="90%">
+<div id="fig-CJ_TM_13" class="quarto-float quarto-figure quarto-figure-center anchored" width="90%">
 <figure class="quarto-float quarto-float-fig figure">
-<figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-fig quarto-uncaptioned" id="fig-CJ_TM_14-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Figure&nbsp;6
+<figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-fig quarto-uncaptioned" id="fig-CJ_TM_13-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;15
 </figcaption>
-<div aria-describedby="fig-CJ_TM_14-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<a href="./images/png/CJ_TM_14.png" class="lightbox" data-gallery="quarto-lightbox-gallery-9" title="Figure&nbsp;6: "><img src="./images/png/CJ_TM_14.png" id="fig-CJ_TM_14" class="img-fluid figure-img" style="width:90.0%"></a>
+<div aria-describedby="fig-CJ_TM_13-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<a href="./images/png/CJ_TM_13.png" class="lightbox" data-gallery="quarto-lightbox-gallery-18" title="Figure&nbsp;15: "><img src="./images/png/CJ_TM_13.png" id="fig-CJ_TM_13" class="img-fluid figure-img" style="width:90.0%"></a>
 </div>
 </figure>
 </div>
-<!-- ![](/images/png/CJ_TM_15.png){#fig-CJ_TM_15 width=90%} -->
+<div id="fig-CJ_TM_14" class="quarto-float quarto-figure quarto-figure-center anchored" width="90%">
+<figure class="quarto-float quarto-float-fig figure">
+<figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-fig quarto-uncaptioned" id="fig-CJ_TM_14-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;16
+</figcaption>
+<div aria-describedby="fig-CJ_TM_14-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<a href="./images/png/CJ_TM_14.png" class="lightbox" data-gallery="quarto-lightbox-gallery-19" title="Figure&nbsp;16: "><img src="./images/png/CJ_TM_14.png" id="fig-CJ_TM_14" class="img-fluid figure-img" style="width:90.0%"></a>
+</div>
+</figure>
+</div>
+<div id="fig-CJ_TM_15" class="quarto-float quarto-figure quarto-figure-center anchored" width="90%">
+<figure class="quarto-float quarto-float-fig figure">
+<figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-fig quarto-uncaptioned" id="fig-CJ_TM_15-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;17
+</figcaption>
+<div aria-describedby="fig-CJ_TM_15-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<a href="./images/png/CJ_TM_15.png" class="lightbox" data-gallery="quarto-lightbox-gallery-20" title="Figure&nbsp;17: "><img src="./images/png/CJ_TM_15.png" id="fig-CJ_TM_15" class="img-fluid figure-img" style="width:90.0%"></a>
+</div>
+</figure>
+</div>
 <!-- It is assumed that the single observer compares each pair of stimuli a "sufficient number of times" so that a proportion, P(A>B), may be determined for each pair of stimuli [@Thurstone_1927b, pp. 267] -->
 </section>
 </section>
@@ -897,14 +996,15 @@ Figure&nbsp;6
 <!-- 1. What does empirical research do first? -->
 <p>Empirical research uses evidence from observation and experimentation to address real-world challenges. In this context, researchers typically formulate their research questions as <em>estimands</em> or <em>targets of inference</em>, i.e., the specific quantities they seek to determine <span class="citation" data-cites="Everitt_et_al_2010">(<a href="#ref-Everitt_et_al_2010" role="doc-biblioref">Everitt and Skrondal 2010</a>)</span>. For instance, researchers might be interested in answering the following question: “To what extent do different teaching methods <span class="math inline">\((T)\)</span> influence students’ ability to produce high-quality written texts <span class="math inline">\((Y)\)</span>?” To investigate this, researchers could randomly assign students to two groups, each exposed to a different teaching method <span class="math inline">\((T_{i} = \{1,2\})\)</span>. Then, they would perform pairwise comparisons, generating a dichotomous outcome <span class="math inline">\((Y_{i} = \{0,1\})\)</span> showing which student exhibits more of the ability. In this scenario, the research question can be rephrased as the estimand, “<em>On average</em>, is there a difference in the ability to produce high-quality written texts between the two groups of students?” and this estimand can be mathematically represented by the random quantity <span class="math inline">\(E[Y_{i}| T_{i}=1] - E[Y_{i}| T_{i}=2]\)</span>, where <span class="math inline">\(E[\cdot]\)</span> denotes the expected value.</p>
 <!-- 2. What do they do next? -->
-<p>Researchers would then proceed to identify the estimands. <em>Identification</em> refers to the process of accurately computing an estimand using an estimator. An <em>estimator</em> is a method or function that transforms data into an estimate <span class="citation" data-cites="Neal_2020">(<a href="#ref-Neal_2020" role="doc-biblioref">Neal 2020</a>)</span>. <em>Estimates</em> are numerical values that approximate the estimand and are derived through <em>estimation</em>, which refers to the process of integrating data with an estimator <span class="citation" data-cites="Everitt_et_al_2010">(<a href="#ref-Everitt_et_al_2010" role="doc-biblioref">Everitt and Skrondal 2010</a>)</span>. The Identification-Estimation flowchart <span class="citation" data-cites="McElreath_2020 Neal_2020">(<a href="#ref-McElreath_2020" role="doc-biblioref">McElreath 2020</a>; <a href="#ref-Neal_2020" role="doc-biblioref">Neal 2020</a>)</span> in <a href="#fig-IEflow" class="quarto-xref">Figure&nbsp;7</a> provides a visual representation of the process of transitioning from estimands to estimates.</p>
+<p>Researchers would then proceed to identify the estimands. <em>Identification</em> is concerned with determining whether an estimator can accurately compute an estimand based on its assumptions, regardless of random variability <span class="citation" data-cites="Schuessler_et_al_2023">(<a href="#ref-Schuessler_et_al_2023" role="doc-biblioref">Schuessler and Selb, 4</a>)</span>. An <em>estimator</em> is a method or function that transforms data into an estimate <span class="citation" data-cites="Neal_2020">(<a href="#ref-Neal_2020" role="doc-biblioref">Neal 2020</a>)</span>. <em>Estimates</em> are numerical values that approximate the estimand and are derived through <em>estimation</em>, which refers to the process of integrating data with an estimator <span class="citation" data-cites="Everitt_et_al_2010">(<a href="#ref-Everitt_et_al_2010" role="doc-biblioref">Everitt and Skrondal 2010</a>)</span>. The Identification-Estimation flowchart <span class="citation" data-cites="McElreath_2020 Neal_2020">(<a href="#ref-McElreath_2020" role="doc-biblioref">McElreath 2020</a>; <a href="#ref-Neal_2020" role="doc-biblioref">Neal 2020</a>)</span> in <a href="#fig-IEflow" class="quarto-xref">Figure&nbsp;18</a> provides a visual representation of the process of transitioning from estimands to estimates.</p>
+<!-- The causal assumptions encoded in a DAG constitute the theoretical model on which identification analysis rests. Identification analysis is concerned with determining whether or not the true value of a parameter can be estimated using the assumptions in the model (graph), regardless of random variability in the data due to small samples [@Schuessler_et_al_2023, pp. 4]. -->
 <div id="fig-IEflow" class="quarto-float quarto-figure quarto-figure-center anchored" data-fig-align="center">
 <figure class="quarto-float quarto-float-fig figure">
 <figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-fig" id="fig-IEflow-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Figure&nbsp;7: Identification-Estimation flowchart. Extracted and slightly modified from <span class="citation" data-cites="Neal_2020">Neal (<a href="#ref-Neal_2020" role="doc-biblioref">2020, 32</a>)</span>
+Figure&nbsp;18: Identification-Estimation flowchart. Extracted and slightly modified from <span class="citation" data-cites="Neal_2020">Neal (<a href="#ref-Neal_2020" role="doc-biblioref">2020, 32</a>)</span>
 </figcaption>
 <div aria-describedby="fig-IEflow-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<a href="images/png/IEflow.png" class="lightbox" data-gallery="quarto-lightbox-gallery-10" title="Figure&nbsp;7: Identification-Estimation flowchart. Extracted and slightly modified from @Neal_2020 [pp. 32]"><img src="images/png/IEflow.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:35.0%"></a>
+<a href="images/png/IEflow.png" class="lightbox" data-gallery="quarto-lightbox-gallery-21" title="Figure&nbsp;18: Identification-Estimation flowchart. Extracted and slightly modified from @Neal_2020 [pp. 32]"><img src="images/png/IEflow.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:35.0%"></a>
 </div>
 </figure>
 </div>
@@ -930,19 +1030,17 @@ Figure&nbsp;7: Identification-Estimation flowchart. Extracted and slightly modif
 </div></section><section id="sec-appendix-C" class="level2 appendix" data-appendix-style="plain" data-number="7.3"><h2 class="anchored quarto-appendix-heading"><span class="header-section-number">7.3</span> SCMs and DAGs</h2><div class="quarto-appendix-contents">
 
 <!-- commands for d-separation -->
-<!-- 1. What does the structural approach uses? -->
-<p>The structural approach to causal inference uses SCMs and DAGs to formally and graphically represent the presumed causal structure underlying the ACE <span class="citation" data-cites="Pearl_2009 Pearl_et_al_2016 Gross_et_al_2018 Neal_2020">(<a href="#ref-Pearl_2009" role="doc-biblioref">Pearl 2009</a>; <a href="#ref-Pearl_et_al_2016" role="doc-biblioref">Pearl, Glymour, and Jewell 2016</a>; <a href="#ref-Gross_et_al_2018" role="doc-biblioref">Gross, Yellen, and Anderson 2018</a>; <a href="#ref-Neal_2020" role="doc-biblioref">Neal 2020</a>)</span>. In essence, SCMs and DAGs act as <em>conceptual models</em> that guide researchers in determining which statistical models can yield valid causal inferences, assuming the depicted causal structure of the models is correct <span class="citation" data-cites="McElreath_2020">(<a href="#ref-McElreath_2020" role="doc-biblioref">McElreath 2020</a>)</span>. Notably, every SCM has an associated DAG <span class="citation" data-cites="Cinelli_et_al_2020">(<a href="#ref-Cinelli_et_al_2020" role="doc-biblioref">Cinelli, Forney, and Pearl 2020</a>)</span>. <a href="#fig-IEflow" class="quarto-xref">Figure&nbsp;7</a> provides a visual representation of the role of theoretical models in the inference process.</p>
+<!-- 1. The benefits of SCMs and DAGs -->
+<p>The structural approach to causal inference uses SCMs and DAGs to formally and graphically represent the presumed causal structure underlying the ACE <span class="citation" data-cites="Pearl_2009 Pearl_et_al_2016 Gross_et_al_2018 Neal_2020">(<a href="#ref-Pearl_2009" role="doc-biblioref">Pearl 2009</a>; <a href="#ref-Pearl_et_al_2016" role="doc-biblioref">Pearl, Glymour, and Jewell 2016</a>; <a href="#ref-Gross_et_al_2018" role="doc-biblioref">Gross, Yellen, and Anderson 2018</a>; <a href="#ref-Neal_2020" role="doc-biblioref">Neal 2020</a>)</span>. Assuming the depicted causal structure is correct, SCMs and DAGs serve as <em>conceptual (theoretical) models</em> that help researchers determine which statistical models can identify an estimand, thus enabling valid causal inference <span class="citation" data-cites="McElreath_2020">(<a href="#ref-McElreath_2020" role="doc-biblioref">McElreath 2020</a>)</span>. They achieve this by representing various causal structures using only five fundamental building blocks, regardless of complexity <span class="citation" data-cites="Neal_2020 McElreath_2020">(<a href="#ref-Neal_2020" role="doc-biblioref">Neal 2020</a>; <a href="#ref-McElreath_2020" role="doc-biblioref">McElreath 2020</a>)</span>. This feature allows researchers to decompose complex structures into manageable components <span class="citation" data-cites="McElreath_2020">(<a href="#ref-McElreath_2020" role="doc-biblioref">McElreath 2020</a>)</span>. Furthermore, SCMs and DAGs can depict causal relationships in a non-parametric and fully interactive way. This flexibility enables feasible ACE identification strategies without requiring detailed specifications of the functional relating the variables, their parameters, or their data types <span class="citation" data-cites="Pearl_et_al_2016">(<a href="#ref-Pearl_et_al_2016" role="doc-biblioref">Pearl, Glymour, and Jewell 2016</a>)</span>. <a href="#fig-IEflow" class="quarto-xref">Figure&nbsp;18</a> shows how theoretical models guide the inference process.</p>
 <!-- A heuristic is a strategy that simplifies information to make decisions more quickly, efficiently, and sometimes more accurately than complex methods [@Chow_2015]. -->
-<!-- 2. What are the advantages of SCMs and DAGs? -->
-<p>SCMs and DAGs offer two key advantages for modeling causal structures. First, they enable the representation of causal relations in a non-parametric and fully interactive manner. This feature allows for feasible ACE identification strategies without specifying the data type or the nature of the functional dependence among variables <span class="citation" data-cites="Morgan_et_al_2014">(<a href="#ref-Morgan_et_al_2014" role="doc-biblioref">Morgan and Winship 2014</a>)</span>. Second, regardless of complexity, they can represent a wide range of causal structures using only five fundamental building blocks <span class="citation" data-cites="Neal_2020 McElreath_2020">(<a href="#ref-Neal_2020" role="doc-biblioref">Neal 2020</a>; <a href="#ref-McElreath_2020" role="doc-biblioref">McElreath 2020</a>)</span>. This feature allows researchers to decompose complex structures, facilitating their analysis by focusing on the causal assumptions associated with each building block <span class="citation" data-cites="McElreath_2020">(<a href="#ref-McElreath_2020" role="doc-biblioref">McElreath 2020</a>)</span>.</p>
-<!-- 3. the SCMs -->
-<p>Figures <a href="#fig-dags_scms1" class="quarto-xref">8</a>, <a href="#fig-dags_scms2" class="quarto-xref">9</a>, <a href="#fig-dags_scms3" class="quarto-xref">10</a>, <a href="#fig-dags_scms4" class="quarto-xref">11</a>, and <a href="#fig-dags_scms5" class="quarto-xref">12</a> display these five fundamental building blocks. The left panels of the figures show the formal mathematical models, represented by the SCMs, defined in terms of a set of <em>endogenous</em> variables <span class="math inline">\(V=\{X_{1},X_{2},X_{3}\}\)</span>, a set of <em>exogenous</em> variables <span class="math inline">\(E=\{e_{X1},e_{X2},e_{X3}\}\)</span>, and a set of functions <span class="math inline">\(F=\{f_{X1},f_{X2},f_{X3}\}\)</span> <span class="citation" data-cites="Pearl_2009 Cinelli_et_al_2020 Neal_2020">(<a href="#ref-Pearl_2009" role="doc-biblioref">Pearl 2009</a>; <a href="#ref-Cinelli_et_al_2020" role="doc-biblioref">Cinelli, Forney, and Pearl 2020</a>; <a href="#ref-Neal_2020" role="doc-biblioref">Neal 2020</a>)</span>. Endogenous variables are those whose causal mechanisms a researcher chooses to model <span class="citation" data-cites="Neal_2020">(<a href="#ref-Neal_2020" role="doc-biblioref">Neal 2020</a>)</span>. In contrast, exogenous variables represent <em>errors</em> or <em>disturbances</em> arising from omitted factors that the investigator chooses not to model explicitly <span class="citation" data-cites="Pearl_2009">(<a href="#ref-Pearl_2009" role="doc-biblioref">Pearl 2009, 27, 68</a>)</span>. Lastly, the functions, referred to as <em>structural equations</em>, express the endogenous variables as non-parametric functions of other variables. These functions use the symbol ‘<span class="math inline">\(:=\)</span>’ to denote the asymmetrical causal dependence of the variables and the symbol ‘<span class="math inline">\(\perp\!\!\!\perp\)</span>’ to represent <em>d-separation</em>, a concept akin to (conditional) independence.</p>
-<!-- 4. The DAGs -->
-<p>The right panels of the figures display the complementary DAGs. A DAG consists of nodes connected by edges, where nodes represent random variables. The term <em>directed</em> means the edges extend from one node to another, with arrows indicating the direction of causal influence. The term <em>acyclic</em> signifies that the causal influences do not form loops, ensuring the influences do not cycle back on themselves <span class="citation" data-cites="McElreath_2020">(<a href="#ref-McElreath_2020" role="doc-biblioref">McElreath 2020</a>)</span>. DAGs represent observed variables as solid black circles, while they use open circles for unobserved (latent) variables <span class="citation" data-cites="Morgan_et_al_2014">(<a href="#ref-Morgan_et_al_2014" role="doc-biblioref">Morgan and Winship 2014</a>)</span>. Finally, the arrows in the graphs show the expected direction of causal influences among these variables. While DAGs often omit exogenous variables for simplicity (the <em>standard</em> representation), including these variables is advantageous (the <em>magnified</em> representation shown in the figures), as their inclusion helps to identify potential issues related to conditioning and confounding <span class="citation" data-cites="Cinelli_et_al_2020">(<a href="#ref-Cinelli_et_al_2020" role="doc-biblioref">Cinelli, Forney, and Pearl 2020</a>)</span>.</p>
+<!-- 2. the SCMs -->
+<p>Figures <a href="#fig-dags_scms1" class="quarto-xref">19</a>, <a href="#fig-dags_scms2" class="quarto-xref">20</a>, <a href="#fig-dags_scms3" class="quarto-xref">21</a>, <a href="#fig-dags_scms4" class="quarto-xref">22</a>, and <a href="#fig-dags_scms5" class="quarto-xref">23</a> display these five fundamental building blocks. The left panels of the figures show the formal mathematical models, represented by the SCMs, defined in terms of a set of <em>endogenous</em> variables <span class="math inline">\(V=\{X_{1},X_{2},X_{3}\}\)</span>, a set of <em>exogenous</em> variables <span class="math inline">\(E=\{e_{X1},e_{X2},e_{X3}\}\)</span>, and a set of functions <span class="math inline">\(F=\{f_{X1},f_{X2},f_{X3}\}\)</span> <span class="citation" data-cites="Pearl_2009 Cinelli_et_al_2020">(<a href="#ref-Pearl_2009" role="doc-biblioref">Pearl 2009</a>; <a href="#ref-Cinelli_et_al_2020" role="doc-biblioref">Cinelli, Forney, and Pearl 2020</a>)</span>. Endogenous variables are those whose causal mechanisms a researcher chooses to model <span class="citation" data-cites="Neal_2020">(<a href="#ref-Neal_2020" role="doc-biblioref">Neal 2020</a>)</span>. In contrast, exogenous variables represent <em>errors</em> or <em>disturbances</em> arising from omitted factors that the investigator chooses not to model explicitly <span class="citation" data-cites="Pearl_2009">(<a href="#ref-Pearl_2009" role="doc-biblioref">Pearl 2009, 27, 68</a>)</span>. Lastly, the functions, referred to as <em>structural equations</em>, express the endogenous variables as non-parametric functions of other variables. These functions use the symbol ‘<span class="math inline">\(:=\)</span>’ to denote the asymmetrical causal dependence of the variables and the symbol ‘<span class="math inline">\(\perp\!\!\!\perp\)</span>’ to represent <em>d-separation</em>, a concept akin to (conditional) independence.</p>
+<!-- 3. The DAGs -->
+<p>Notably, every SCM has an associated DAG <span class="citation" data-cites="Pearl_et_al_2016 Cinelli_et_al_2020">(<a href="#ref-Pearl_et_al_2016" role="doc-biblioref">Pearl, Glymour, and Jewell 2016</a>; <a href="#ref-Cinelli_et_al_2020" role="doc-biblioref">Cinelli, Forney, and Pearl 2020</a>)</span>. The right panels of the figures display these DAGs. A DAG is a graph consisting of nodes connected by edges, where the nodes represent random variables. The term <em>directed</em> means that the edges extend from one node to another, with arrows indicating the direction of causal influence. The term <em>acyclic</em> implies that the causal influences do not form loops, ensuring the influences do not cycle back on themselves <span class="citation" data-cites="McElreath_2020">(<a href="#ref-McElreath_2020" role="doc-biblioref">McElreath 2020</a>)</span>. DAGs represent observed variables as solid black circles, while they use open circles for unobserved (latent) variables <span class="citation" data-cites="Morgan_et_al_2014">(<a href="#ref-Morgan_et_al_2014" role="doc-biblioref">Morgan and Winship 2014</a>)</span>. Finally, the arrows in the graphs indicate the expected direction of causal influences between these variables. While DAGs often omit exogenous variables for simplicity (the <em>standard</em> representation), including these variables is advantageous (the <em>magnified</em> representation shown in the figures), as their inclusion helps to identify potential issues related to conditioning and confounding <span class="citation" data-cites="Cinelli_et_al_2020">(<a href="#ref-Cinelli_et_al_2020" role="doc-biblioref">Cinelli, Forney, and Pearl 2020</a>)</span>.</p>
 <div id="fig-dags_scms1" class="quarto-layout-panel">
 <figure class="quarto-float quarto-float-fig figure">
 <figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-fig" id="fig-dags_scms1-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Figure&nbsp;8: Two unconnected nodes
+Figure&nbsp;19: Two unconnected nodes
 </figcaption>
 <div aria-describedby="fig-dags_scms1-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <div class="quarto-layout-row">
@@ -971,7 +1069,7 @@ Figure&nbsp;8: Two unconnected nodes
 (b) DAG
 </figcaption>
 <div aria-describedby="fig-mdag_bb1-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<a href="images/png/mdag_bb1.png" class="lightbox" data-gallery="fig-dags_scms1" title="Figure&nbsp;8&nbsp;(b): DAG"><img src="images/png/mdag_bb1.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:50.0%" data-fig-pos="H" data-ref-parent="fig-dags_scms1"></a>
+<a href="images/png/mdag_bb1.png" class="lightbox" data-gallery="fig-dags_scms1" title="Figure&nbsp;19&nbsp;(b): DAG"><img src="images/png/mdag_bb1.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:50.0%" data-fig-pos="H" data-ref-parent="fig-dags_scms1"></a>
 </div>
 </figure>
 </div>
@@ -983,7 +1081,7 @@ Figure&nbsp;8: Two unconnected nodes
 <div id="fig-dags_scms2" class="quarto-layout-panel">
 <figure class="quarto-float quarto-float-fig figure">
 <figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-fig" id="fig-dags_scms2-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Figure&nbsp;9: Two connected nodes or descendant
+Figure&nbsp;20: Two connected nodes or descendant
 </figcaption>
 <div aria-describedby="fig-dags_scms2-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <div class="quarto-layout-row">
@@ -1012,7 +1110,7 @@ Figure&nbsp;9: Two connected nodes or descendant
 (b) DAG
 </figcaption>
 <div aria-describedby="fig-mdag_bb2-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<a href="images/png/mdag_bb2.png" class="lightbox" data-gallery="fig-dags_scms2" title="Figure&nbsp;9&nbsp;(b): DAG"><img src="images/png/mdag_bb2.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:50.0%" data-fig-pos="H" data-ref-parent="fig-dags_scms2"></a>
+<a href="images/png/mdag_bb2.png" class="lightbox" data-gallery="fig-dags_scms2" title="Figure&nbsp;20&nbsp;(b): DAG"><img src="images/png/mdag_bb2.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:50.0%" data-fig-pos="H" data-ref-parent="fig-dags_scms2"></a>
 </div>
 </figure>
 </div>
@@ -1024,7 +1122,7 @@ Figure&nbsp;9: Two connected nodes or descendant
 <div id="fig-dags_scms3" class="quarto-layout-panel">
 <figure class="quarto-float quarto-float-fig figure">
 <figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-fig" id="fig-dags_scms3-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Figure&nbsp;10: Chain or mediator
+Figure&nbsp;21: Chain or mediator
 </figcaption>
 <div aria-describedby="fig-dags_scms3-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <div class="quarto-layout-row">
@@ -1056,7 +1154,7 @@ Figure&nbsp;10: Chain or mediator
 (b) DAG
 </figcaption>
 <div aria-describedby="fig-mdag_bb3-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<a href="images/png/mdag_bb3.png" class="lightbox" data-gallery="fig-dags_scms3" title="Figure&nbsp;10&nbsp;(b): DAG"><img src="images/png/mdag_bb3.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:60.0%" data-fig-pos="H" data-ref-parent="fig-dags_scms3"></a>
+<a href="images/png/mdag_bb3.png" class="lightbox" data-gallery="fig-dags_scms3" title="Figure&nbsp;21&nbsp;(b): DAG"><img src="images/png/mdag_bb3.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:60.0%" data-fig-pos="H" data-ref-parent="fig-dags_scms3"></a>
 </div>
 </figure>
 </div>
@@ -1068,7 +1166,7 @@ Figure&nbsp;10: Chain or mediator
 <div id="fig-dags_scms4" class="quarto-layout-panel">
 <figure class="quarto-float quarto-float-fig figure">
 <figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-fig" id="fig-dags_scms4-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Figure&nbsp;11: Fork or confounder
+Figure&nbsp;22: Fork or confounder
 </figcaption>
 <div aria-describedby="fig-dags_scms4-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <div class="quarto-layout-row">
@@ -1100,7 +1198,7 @@ Figure&nbsp;11: Fork or confounder
 (b) DAG
 </figcaption>
 <div aria-describedby="fig-mdag_bb4-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<a href="images/png/mdag_bb4.png" class="lightbox" data-gallery="fig-dags_scms4" title="Figure&nbsp;11&nbsp;(b): DAG"><img src="images/png/mdag_bb4.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:60.0%" data-fig-pos="H" data-ref-parent="fig-dags_scms4"></a>
+<a href="images/png/mdag_bb4.png" class="lightbox" data-gallery="fig-dags_scms4" title="Figure&nbsp;22&nbsp;(b): DAG"><img src="images/png/mdag_bb4.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:60.0%" data-fig-pos="H" data-ref-parent="fig-dags_scms4"></a>
 </div>
 </figure>
 </div>
@@ -1112,7 +1210,7 @@ Figure&nbsp;11: Fork or confounder
 <div id="fig-dags_scms5" class="quarto-layout-panel">
 <figure class="quarto-float quarto-float-fig figure">
 <figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-fig" id="fig-dags_scms5-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Figure&nbsp;12: Collider or inmorality
+Figure&nbsp;23: Collider or inmorality
 </figcaption>
 <div aria-describedby="fig-dags_scms5-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <div class="quarto-layout-row">
@@ -1144,7 +1242,7 @@ Figure&nbsp;12: Collider or inmorality
 (b) DAG
 </figcaption>
 <div aria-describedby="fig-mdag_bb5-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<a href="images/png/mdag_bb5.png" class="lightbox" data-gallery="fig-dags_scms5" title="Figure&nbsp;12&nbsp;(b): DAG"><img src="images/png/mdag_bb5.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:60.0%" data-fig-pos="H" data-ref-parent="fig-dags_scms5"></a>
+<a href="images/png/mdag_bb5.png" class="lightbox" data-gallery="fig-dags_scms5" title="Figure&nbsp;23&nbsp;(b): DAG"><img src="images/png/mdag_bb5.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:60.0%" data-fig-pos="H" data-ref-parent="fig-dags_scms5"></a>
 </div>
 </figure>
 </div>
@@ -1153,14 +1251,14 @@ Figure&nbsp;12: Collider or inmorality
 </div>
 </figure>
 </div>
-<!-- 5. Implications of the basic building block of the SCMS and DAGs -->
-<p>A careful examination of the figures highlights the assumptions underlying these building blocks. Figures <a href="#fig-scm_bb1" class="quarto-xref">8 (a)</a> and <a href="#fig-mdag_bb1" class="quarto-xref">8 (b)</a> depict two unconnected nodes, representing a scenario where variables <span class="math inline">\(X_{1}\)</span> and <span class="math inline">\(X_{3}\)</span> are not causally related. Figures <a href="#fig-scm_bb2" class="quarto-xref">9 (a)</a> and <a href="#fig-mdag_bb2" class="quarto-xref">9 (b)</a> illustrate two connected nodes, representing a scenario where a <em>parent</em> node <span class="math inline">\(X_{1}\)</span> exerts a causal influence on a <em>child</em> node <span class="math inline">\(X_{3}\)</span>. In this setup, <span class="math inline">\(X_{3}\)</span> is considered a <em>descendant</em> of <span class="math inline">\(X_{1}\)</span>. Additionally, <span class="math inline">\(X_{1}\)</span> and <span class="math inline">\(X_{3}\)</span> are described as <em>adjacent</em> because an edge directly connects them. Figures <a href="#fig-scm_bb3" class="quarto-xref">10 (a)</a> and <a href="#fig-mdag_bb3" class="quarto-xref">10 (b)</a> depict a <em>chain</em>, where <span class="math inline">\(X_{1}\)</span> influences <span class="math inline">\(X_{2}\)</span>, and <span class="math inline">\(X_{2}\)</span> influences <span class="math inline">\(X_{3}\)</span>. In this configuration, <span class="math inline">\(X_{1}\)</span> is a parent node of <span class="math inline">\(X_{2}\)</span>, which is a parent node of <span class="math inline">\(X_{3}\)</span>. This structure creates a <em>directed path</em> between <span class="math inline">\(X_{1}\)</span> and <span class="math inline">\(X_{3}\)</span>. Consequently, <span class="math inline">\(X_{1}\)</span> is an <em>ancestor</em> of <span class="math inline">\(X_{3}\)</span>, and <span class="math inline">\(X_{2}\)</span> fully <em>mediates</em> the relationship between the two. Figures <a href="#fig-scm_bb4" class="quarto-xref">11 (a)</a> and <a href="#fig-mdag_bb4" class="quarto-xref">11 (b)</a> illustrate a <em>fork</em>, where variables <span class="math inline">\(X_{1}\)</span> and <span class="math inline">\(X_{3}\)</span> are both influenced by <span class="math inline">\(X_{2}\)</span>. Here, <span class="math inline">\(X_{2}\)</span> is a parent node that <em>confounds</em> the relationship between <span class="math inline">\(X_{1}\)</span> and <span class="math inline">\(X_{3}\)</span>. Finally, Figures <a href="#fig-scm_bb5" class="quarto-xref">12 (a)</a> and <a href="#fig-mdag_bb5" class="quarto-xref">12 (b)</a> show a <em>collider</em>, where variables <span class="math inline">\(X_{1}\)</span> and <span class="math inline">\(X_{3}\)</span> are concurrent causes of <span class="math inline">\(X_{2}\)</span>. In this configuration, <span class="math inline">\(X_{1}\)</span> and <span class="math inline">\(X_{3}\)</span> are not causally related to each other but both influence <span class="math inline">\(X_{2}\)</span> (an <em>inmorality</em>). Notably, in all SCMs, the errors are assumed to be independent of each other and from all other variables in the graph, as evidenced by the pairwise relations <span class="math inline">\(e_{X1} \perp\!\!\!\perp e_{X2}\)</span>, <span class="math inline">\(e_{X1} \perp\!\!\!\perp e_{X3}\)</span>, and <span class="math inline">\(e_{X2} \perp\!\!\!\perp e_{X3}\)</span>.</p>
-<!-- 6. continuing with the motivating example -->
-<p>Researchers can use these building blocks to represent the scenario outlined in <a href="#sec-appendix-B" class="quarto-xref">Section&nbsp;7.2</a>. Figures <a href="#fig-scm_example1" class="quarto-xref">13 (a)</a> and <a href="#fig-mdag_example1" class="quarto-xref">13 (b)</a> depict the plausible causal structure for this example, assuming that the variable <span class="math inline">\(X\)</span> (socio-economic status of the school) acts as a confounder in the relationship between the teaching method <span class="math inline">\(T\)</span> and the outcome <span class="math inline">\(Y\)</span>. The figures show several descendant, such as <span class="math inline">\(X \rightarrow T\)</span>, <span class="math inline">\(X \rightarrow Y\)</span>, and <span class="math inline">\(T \rightarrow Y\)</span>, and also highlight multiple pairs of unconnected nodes, evident from the relationships <span class="math inline">\(e_{T} \perp\!\!\!\perp e_{X}\)</span>, <span class="math inline">\(e_{T} \perp\!\!\!\perp e_{Y}\)</span>, and <span class="math inline">\(e_{X} \perp\!\!\!\perp e_{Y}\)</span>. Additional, the figures depict one fork, <span class="math inline">\(X \rightarrow \{T, Y\}\)</span>, and two colliders: <span class="math inline">\(\{X, e_{T}\} \rightarrow T\)</span> and <span class="math inline">\(\{X, T, e_{Y}\} \rightarrow Y\)</span>.</p>
+<!-- 4. Theoretical implications of the basic building block of the SCMS and DAGs -->
+<p>A careful examination of the figures highlights the theoretical assumptions underlying these building blocks. Figures <a href="#fig-scm_bb1" class="quarto-xref">19 (a)</a> and <a href="#fig-mdag_bb1" class="quarto-xref">19 (b)</a> depict two unconnected nodes, representing a scenario where variables <span class="math inline">\(X_{1}\)</span> and <span class="math inline">\(X_{3}\)</span> are not causally related. Figures <a href="#fig-scm_bb2" class="quarto-xref">20 (a)</a> and <a href="#fig-mdag_bb2" class="quarto-xref">20 (b)</a> illustrate two connected nodes, representing a scenario where a <em>parent</em> node <span class="math inline">\(X_{1}\)</span> exerts a causal influence on a <em>child</em> node <span class="math inline">\(X_{3}\)</span>. In this setup, <span class="math inline">\(X_{3}\)</span> is considered a <em>descendant</em> of <span class="math inline">\(X_{1}\)</span>. Additionally, <span class="math inline">\(X_{1}\)</span> and <span class="math inline">\(X_{3}\)</span> are described as <em>adjacent</em> because an edge directly connects them. Figures <a href="#fig-scm_bb3" class="quarto-xref">21 (a)</a> and <a href="#fig-mdag_bb3" class="quarto-xref">21 (b)</a> depict a <em>chain</em>, where <span class="math inline">\(X_{1}\)</span> influences <span class="math inline">\(X_{2}\)</span>, and <span class="math inline">\(X_{2}\)</span> influences <span class="math inline">\(X_{3}\)</span>. In this configuration, <span class="math inline">\(X_{1}\)</span> is a parent node of <span class="math inline">\(X_{2}\)</span>, which is a parent node of <span class="math inline">\(X_{3}\)</span>. This structure creates a <em>directed path</em> between <span class="math inline">\(X_{1}\)</span> and <span class="math inline">\(X_{3}\)</span>. Consequently, <span class="math inline">\(X_{1}\)</span> is an <em>ancestor</em> of <span class="math inline">\(X_{3}\)</span>, and <span class="math inline">\(X_{2}\)</span> fully <em>mediates</em> the relationship between the two. Figures <a href="#fig-scm_bb4" class="quarto-xref">22 (a)</a> and <a href="#fig-mdag_bb4" class="quarto-xref">22 (b)</a> illustrate a <em>fork</em>, where variables <span class="math inline">\(X_{1}\)</span> and <span class="math inline">\(X_{3}\)</span> are both influenced by <span class="math inline">\(X_{2}\)</span>. Here, <span class="math inline">\(X_{2}\)</span> is a parent node that <em>confounds</em> the relationship between <span class="math inline">\(X_{1}\)</span> and <span class="math inline">\(X_{3}\)</span>. Finally, Figures <a href="#fig-scm_bb5" class="quarto-xref">23 (a)</a> and <a href="#fig-mdag_bb5" class="quarto-xref">23 (b)</a> show a <em>collider</em>, where variables <span class="math inline">\(X_{1}\)</span> and <span class="math inline">\(X_{3}\)</span> are concurrent causes of <span class="math inline">\(X_{2}\)</span>. In this configuration, <span class="math inline">\(X_{1}\)</span> and <span class="math inline">\(X_{3}\)</span> are not causally related to each other but both influence <span class="math inline">\(X_{2}\)</span> (an <em>inmorality</em>). Notably, in all SCMs, the errors are assumed to be independent of each other and from all other variables in the graph, as evidenced by the pairwise relations <span class="math inline">\(e_{X1} \perp\!\!\!\perp e_{X2}\)</span>, <span class="math inline">\(e_{X1} \perp\!\!\!\perp e_{X3}\)</span>, and <span class="math inline">\(e_{X2} \perp\!\!\!\perp e_{X3}\)</span>.</p>
+<!-- 5. Continuing with the motivating example -->
+<p>Researchers can use these building blocks to represent the scenario outlined in <a href="#sec-appendix-B" class="quarto-xref">Section&nbsp;7.2</a>. Figures <a href="#fig-scm_example1" class="quarto-xref">24 (a)</a> and <a href="#fig-mdag_example1" class="quarto-xref">24 (b)</a> depict the plausible causal structure for this example, assuming that the variable <span class="math inline">\(X\)</span> (socio-economic status of the school) acts as a confounder in the relationship between the teaching method <span class="math inline">\(T\)</span> and the outcome <span class="math inline">\(Y\)</span>. The figures show several descendant, such as <span class="math inline">\(X \rightarrow T\)</span>, <span class="math inline">\(X \rightarrow Y\)</span>, and <span class="math inline">\(T \rightarrow Y\)</span>, and also highlight multiple pairs of unconnected nodes, evident from the relationships <span class="math inline">\(e_{T} \perp\!\!\!\perp e_{X}\)</span>, <span class="math inline">\(e_{T} \perp\!\!\!\perp e_{Y}\)</span>, and <span class="math inline">\(e_{X} \perp\!\!\!\perp e_{Y}\)</span>. Additional, the figures depict one fork, <span class="math inline">\(X \rightarrow \{T, Y\}\)</span>, and two colliders: <span class="math inline">\(\{X, e_{T}\} \rightarrow T\)</span> and <span class="math inline">\(\{X, T, e_{Y}\} \rightarrow Y\)</span>.</p>
 <div id="fig-example" class="quarto-layout-panel">
 <figure class="quarto-float quarto-float-fig figure">
 <figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-fig" id="fig-example-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Figure&nbsp;13: Plausible causal structure the scenario outlined in <a href="#sec-appendix-B" class="quarto-xref">Section&nbsp;7.2</a>.
+Figure&nbsp;24: Plausible causal structure the scenario outlined in <a href="#sec-appendix-B" class="quarto-xref">Section&nbsp;7.2</a>.
 </figcaption>
 <div aria-describedby="fig-example-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <div class="quarto-layout-row">
@@ -1192,7 +1290,7 @@ Figure&nbsp;13: Plausible causal structure the scenario outlined in <a href="#se
 (b) DAG
 </figcaption>
 <div aria-describedby="fig-mdag_example1-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<a href="images/png/mdag_example1.png" class="lightbox" data-gallery="fig-example" title="Figure&nbsp;13&nbsp;(b): DAG"><img src="images/png/mdag_example1.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:60.0%" data-ref-parent="fig-example"></a>
+<a href="images/png/mdag_example1.png" class="lightbox" data-gallery="fig-example" title="Figure&nbsp;24&nbsp;(b): DAG"><img src="images/png/mdag_example1.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:60.0%" data-ref-parent="fig-example"></a>
 </div>
 </figure>
 </div>
@@ -1201,44 +1299,79 @@ Figure&nbsp;13: Plausible causal structure the scenario outlined in <a href="#se
 </div>
 </figure>
 </div>
-</div></section><section id="sec-appendix-D" class="level2 appendix" data-appendix-style="plain" data-number="7.4"><h2 class="anchored quarto-appendix-heading"><span class="header-section-number">7.4</span> The probabilistic implications of DAGs</h2><div class="quarto-appendix-contents">
+</div></section><section id="sec-appendix-D" class="level2 appendix" data-appendix-style="plain" data-number="7.4"><h2 class="anchored quarto-appendix-heading"><span class="header-section-number">7.4</span> The probabilistic implications of SCMs and DAGs</h2><div class="quarto-appendix-contents">
 
-<!-- 1. How do we use Bayesian inference? -->
-<p>After completing the identification process outlined in <a href="#sec-appendix-B" class="quarto-xref">Section&nbsp;7.2</a>, researchers estimate the ACE using Bayesian inference methods. Bayesian inference calculates the probability of a set of parameters <span class="math inline">\(\theta\)</span>, enabling researchers to use their distributions to represent the ACE. The approach begins by defining two probability distributions: the likelihood of the data, <span class="math inline">\(P(X_{1}, X_{2}, \dots, X_{n} | \theta)\)</span>, and the prior distribution, <span class="math inline">\(P(\theta)\)</span> <span class="citation" data-cites="Everitt_et_al_2010">(<a href="#ref-Everitt_et_al_2010" role="doc-biblioref">Everitt and Skrondal 2010</a>)</span>. Here, <span class="math inline">\(X_{n}\)</span> represents a random variable, and for simplicity, <span class="math inline">\(\theta\)</span> denotes a parameter space of dimension one. After observing empirical data, researchers update these priors to posterior distributions using Bayes’ rule <span class="citation" data-cites="Jeffreys_1998">(<a href="#ref-Jeffreys_1998" role="doc-biblioref">Jeffreys 1998</a>)</span>:</p>
-<p><span id="eq-bayes_rule"><span class="math display">\[
-P(\theta| X_{1}, X_{2}, \dots, X_{n}) = \frac{P(X_{1}, X_{2}, \dots, X_{n} | \theta) \cdot P(\theta)}{P(X_{1}, X_{2}, \dots, X_{n})}
+<!-- 1. How the SCMS and DAGs encode probabilistic information? -->
+<p>In addition to their graphical capabilities, SCMs and DAGs can encode probabilistic information about causal structures. They achieve this encoding by relying on three fundamental assumptions: the local Markov, the minimality, and the causal edges assumption. The <em>local Markov assumption</em> encodes probabilistic independencies between variables by declaring that nodes in a graph are independent of all its non-descendants, given its parents <span class="citation" data-cites="Neal_2020">(<a href="#ref-Neal_2020" role="doc-biblioref">Neal 2020</a>)</span>. Meanwhile, the <em>minimality assumption</em> encodes probabilistic dependencies among variables by stating that every pair of adjacent nodes exhibits a dependency <span class="citation" data-cites="Neal_2020">(<a href="#ref-Neal_2020" role="doc-biblioref">Neal 2020</a>)</span>. Finally, the <em>causal edges assumption</em> encodes causal relationships between variables by declaring that each parent node acts as a direct cause of its children <span class="citation" data-cites="Neal_2020">(<a href="#ref-Neal_2020" role="doc-biblioref">Neal 2020</a>)</span>. <a href="#fig-ACflow" class="quarto-xref">Figure&nbsp;25</a> illustrates how these assumptions influence the statistical and causal interpretations of graphs.</p>
+<div id="fig-ACflow" class="quarto-float quarto-figure quarto-figure-center anchored" data-fig-align="center">
+<figure class="quarto-float quarto-float-fig figure">
+<figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-fig" id="fig-ACflow-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;25: The flow of association and causation in graphs. Extracted and slightly modified from <span class="citation" data-cites="Neal_2020">Neal (<a href="#ref-Neal_2020" role="doc-biblioref">2020, 31</a>)</span>
+</figcaption>
+<div aria-describedby="fig-ACflow-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<a href="images/png/ACflow.png" class="lightbox" data-gallery="quarto-lightbox-gallery-28" title="Figure&nbsp;25: The flow of association and causation in graphs. Extracted and slightly modified from @Neal_2020 [pp. 31]"><img src="images/png/ACflow.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:80.0%"></a>
+</div>
+</figure>
+</div>
+<!-- 2. What are the general implications of this? -->
+<p>The encoding of probabilistic information in SCMs and DAGs facilitates the efficient representation of the joint distribution of variables <span class="citation" data-cites="Pearl_et_al_2016">(<a href="#ref-Pearl_et_al_2016" role="doc-biblioref">Pearl, Glymour, and Jewell 2016, 29</a>)</span>. A notable implication of the assumptions underlying this encoding is that any conceptual model described by an SCM and DAG can express the joint distribution of variables as a product of conditional probability distributions (CPDs) in the form <span class="math inline">\(P(child \: | \: parents)\)</span>. This property is formally known as the <em>Bayesian Network factorization</em> (<a href="#eq-net_factor" class="quarto-xref">Equation&nbsp;1</a>) <span class="citation" data-cites="Pearl_et_al_2016 Neal_2020">(<a href="#ref-Pearl_et_al_2016" role="doc-biblioref">Pearl, Glymour, and Jewell 2016, 29</a>; <a href="#ref-Neal_2020" role="doc-biblioref">Neal 2020, 21</a>)</span>. In this factorization, <span class="math inline">\(pa(X_{i})\)</span> denotes the set of variables that are the parents of <span class="math inline">\(X_{i}\)</span>.</p>
+<p><span id="eq-net_factor"><span class="math display">\[
+P(X_{1}, X_{2}, \dots, X_{P}) = \prod^{P}_{p=1} P(X_{i} \: | \: pa(X_{i}) )
 \tag{1}\]</span></span></p>
-<p>Researchers can further simplify the posterior updating process in <a href="#eq-bayes_rule" class="quarto-xref">Equation&nbsp;1</a> into two steps: integrating new empirical data, which is defined by the likelihood, with the parameter update, which is determined by the priors, as demonstrated in equation <a href="#eq-prop_rule" class="quarto-xref">Equation&nbsp;2</a>. This simplification is possible because the denominator on the right-hand side of <a href="#eq-bayes_rule" class="quarto-xref">Equation&nbsp;1</a> acts as a normalizing constant, independent of <span class="math inline">\(\theta\)</span>.</p>
-<p><span id="eq-prop_rule"><span class="math display">\[
-P(\theta| X_{1}, X_{2}, \dots, X_{n}) \propto P(X_{1}, X_{2}, \dots, X_{n} | \theta) \cdot P(\theta)
-\tag{2}\]</span></span></p>
+<!-- 3. What is the net result of this? -->
+<p>Ultimately, this encoding enables researchers with conceptual (theoretical) knowledge in the form of an SCM and DAG to predict patterns of (in)dependencies in the data. As highlighted by <span class="citation" data-cites="Pearl_et_al_2016">Pearl, Glymour, and Jewell (<a href="#ref-Pearl_et_al_2016" role="doc-biblioref">2016, 35</a>)</span>, these predictions depend solely on the structure of these conceptual models without requiring the quantitative details of the equations or the distributions of the errors. Moreover, once researchers observe empirical data, the patterns of (in)dependencies in this data can provide significant insights into the validity of the proposed conceptual model.</p>
+<!-- The net result is that a researcher who has scientific knowledge in the form of a structural equation model is able to predict patterns of independencies in the data, based solely on the structure of the model’s graph, without relying on any quantitative information carried by the equations or by the distributions of the errors [@Pearl_et_al_2016, pp. 35]. -->
+<p>The concept of predicting patterns of (in)dependencies in the data is more clearly illustrated through the five fundamental building blocks outlined in <a href="#sec-appendix-C" class="quarto-xref">Section&nbsp;7.3</a>. <!-- For instance,the joint probability for the variables in the SCM [-@fig-scm_bb1] and DAG [-@fig-mdag_bb1] can be expressed in the following form: . Furthermore, the (in)dependencies shared by data sets generated by SCMs and DAGs with the same structure are the following: --></p>
+<!-- SCM [-@fig-scm_bb2] and DAG [-@fig-mdag_bb2] -->
+<!-- SCM [-@fig-scm_bb3] and DAG [-@fig-mdag_bb3] -->
+<!-- Chain: Ux -> X -> Y -> Z <- Uz [@Pearl_et_al_2016, pp. 37] -->
+<!-- 1. Z and Y are dependent -->
+<!-- For some z, y, P(Z = z|Y = y) ≠ P(Z = z) -->
+<!-- 2. Y and X are dependent -->
+<!-- For some y, x, P(Y = y|X = x) ≠ P(Y = y) -->
+<!-- 3. Z and X are likely dependent -->
+<!-- For some z, x, P(Z = z|X = x) ≠ P(Z = z) -->
+<!-- 4. Z and X are independent, conditional on Y -->
+<!-- For all x, y, z, P(Z = z|X = x, Y = y) = P(Z = z|Y = y)' -->
+<!-- SCM [-@fig-scm_bb4] and DAG [-@fig-mdag_bb4] -->
+<!-- Fork: Uy -> Y <- X -> Z <- Uz [@Pearl_et_al_2016, pp. 40] -->
+<!-- 1. X and Y are dependent. -->
+<!-- For some x, y, P(X = x|Y = y) ≠ P(X = x) -->
+<!-- 2. X and Z are dependent. -->
+<!-- For some x, z, P(X = x|Z = z) ≠ P(X = x) -->
+<!-- 3. Z and Y are likely dependent. -->
+<!-- For some z, y, P(Z = z|Y = y) ≠ P(Z = z) -->
+<!-- 4. Y and Z are independent, conditional on X. -->
+<!-- For all 4x, y, z, P(Y = y|Z = z, X = x) = P(Y = y|X = x) -->
+<!-- SCM [-@fig-scm_bb5] and DAG [-@fig-mdag_bb5] -->
+<!-- Collider: Ux -> X -> Z <- Y <- Uy [@Pearl_et_al_2016, pp. 31] -->
+<!-- 1. X and Z are dependent. -->
+<!-- For some x, z, P(X = x|Z = z) ≠ P(X = x) -->
+<!-- 2. Y and Z are dependent. -->
+<!-- For some y, z, P(Y = y|Z = z) ≠ P(Y = y) -->
+<!-- 3. X and Y are independent. -->
+<!-- For all x, y, P(X = x|Y = y) = P(X = x) -->
+<!-- 4. X and Y are dependent conditional on Z. -->
+<!-- For some x, y, z, P(X = x|Y = y, Z = z) ≠ P(X = x|Z = z) -->
+<!-- 1. How do we use Bayesian inference? -->
+<!-- Researchers can estimate the ACE using Bayesian inference methods. Bayesian inference calculates the probability of a set of parameters $\theta$, enabling researchers to use their distributions to represent the ACE. The approach begins by defining two probability distributions: the likelihood of the data, $P(X_{1}, X_{2}, \dots, X_{P} | \theta)$, and the prior distribution, $P(\theta)$ [@Everitt_et_al_2010]. Here, $X_{P}$ represents a random variable, and for simplicity, $\theta$ denotes a parameter space of dimension one. After observing empirical data, researchers update these priors to posterior distributions using Bayes' rule [@Jeffreys_1998]: -->
+<!-- $$ -->
+<!-- P(\theta \: | \: X_{1}, X_{2}, \dots, X_{P}) = \frac{P(X_{1}, X_{2}, \dots, X_{P} \: | \: \theta) \cdot P(\theta)}{P(X_{1}, X_{2}, \dots, X_{P})} -->
+<!-- $$ {#eq-bayes_rule} -->
+<!-- Researchers can further simplify the posterior updating process in @eq-bayes_rule into two steps: integrating new empirical data, which is defined by the likelihood, with the parameter update, which is determined by the priors, as demonstrated in equation @eq-prop_rule. This simplification is possible because the denominator on the right-hand side of @eq-bayes_rule acts as a normalizing constant, independent of $\theta$. -->
+<!-- $$ -->
+<!-- P(\theta \: | \: X_{1}, X_{2}, \dots, X_{P}) \propto P(X_{1}, X_{2}, \dots, X_{P}\: | \: \theta) \cdot P(\theta) -->
+<!-- $$ {#eq-prop_rule} -->
 <!-- check: -->
 <!-- https://en.wikipedia.org/wiki/Maximum_a_posteriori_estimation -->
 <!-- https://en.wikipedia.org/wiki/Bayesian_inference -->
 <!-- 2. But what is the problem? -->
-<p>Temporarily setting aside the definition of prior distributions, it is important to note that the posterior updating process depends on the assumptions underlying the likelihood of the data. However, as the number of random variables, <span class="math inline">\(n\)</span>, increases, this joint distribution becomes quickly intractable <span class="citation" data-cites="Neal_2020">(<a href="#ref-Neal_2020" role="doc-biblioref">Neal 2020</a>)</span>. This is evident from <a href="#eq-like_chain" class="quarto-xref">Equation&nbsp;3</a>, where the likelihood distribution is re-expressed in terms of chained conditional distributions.</p>
-<p><span id="eq-like_chain"><span class="math display">\[
-P(X_{1}, X_{2}, \dots, X_{n}|\theta) = P(X_{1}|\theta) \prod^{n}_{i=2} P(X_{i} | X_{i-1}, \dots, X_{1}, \theta )
-\tag{3}\]</span></span></p>
+<!-- Temporarily setting aside the definition of prior distributions, it is important to note that the posterior updating process depends on the assumptions underlying the likelihood of the data. However, as the number of random variables, $p$, increases, this joint distribution becomes quickly intractable [@Neal_2020]. This is evident from @eq-like_chain, where the likelihood distribution is re-expressed in terms of chained conditional distributions.  -->
+<!-- $$ -->
+<!-- P(X_{1}, X_{2}, \dots, X_{P} \: | \: \theta) = P(X_{1} \: | \: \theta) \prod^{P}_{p=2} P(X_{i} \: | \: X_{i-1}, \dots, X_{1}, \theta ) -->
+<!-- $$ {#eq-like_chain} -->
 <!-- 3. How do DAGs can help? -->
-<p>To address the complexity of the likelihood, researchers simplify the distribution by assuming that variables exhibit specific local (in)dependencies. These assumptions improve model tractability and streamline the estimation process. Researchers formalize these local (in)dependencies using directed acyclic graphs (DAGs). DAGs represent the probabilistic implications of these assumptions by relying on three key principles: the local Markov assumption, the minimality assumption, and the causal edges assumption. The <em>local Markov assumption</em> defines the statistical independencies implied by a DAG. It states that a variable is independent of all its non-descendants, given its parents <span class="citation" data-cites="Neal_2020">(<a href="#ref-Neal_2020" role="doc-biblioref">Neal 2020</a>)</span>. The <em>minimality assumption</em> identifies the statistical dependencies implied by a DAG. It asserts that every pair of adjacent variables are dependent <span class="citation" data-cites="Neal_2020">(<a href="#ref-Neal_2020" role="doc-biblioref">Neal 2020</a>)</span>. Finally, the <em>causal edges assumption</em> establishes causal relationships between parents and their children in a DAG by stating that every parent is a direct cause of their children <span class="citation" data-cites="Neal_2020">(<a href="#ref-Neal_2020" role="doc-biblioref">Neal 2020</a>)</span>. Figure <a href="#fig-ACflow" class="quarto-xref">Figure&nbsp;14</a> illustrates the flow of association and causation in graphs.</p>
-<div id="fig-ACflow" class="quarto-float quarto-figure quarto-figure-center anchored" data-fig-align="center">
-<figure class="quarto-float quarto-float-fig figure">
-<figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-fig" id="fig-ACflow-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Figure&nbsp;14: The flow of association and causation in graphs. Extracted and slightly modified from <span class="citation" data-cites="Neal_2020">Neal (<a href="#ref-Neal_2020" role="doc-biblioref">2020, 31</a>)</span>
-</figcaption>
-<div aria-describedby="fig-ACflow-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<a href="images/png/ACflow.png" class="lightbox" data-gallery="quarto-lightbox-gallery-17" title="Figure&nbsp;14: The flow of association and causation in graphs. Extracted and slightly modified from @Neal_2020 [pp. 31]"><img src="images/png/ACflow.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:80.0%"></a>
-</div>
-</figure>
-</div>
-<!-- 4. What are the implications of this? -->
-<p>This lead to the <em>Bayesian Network factorization</em> of <a href="#eq-like_chain" class="quarto-xref">Equation&nbsp;3</a>.</p>
-<p><span id="eq-net_factor"><span class="math display">\[
-P(X_{1}, X_{2}, \dots, X_{n}|\theta) = P(X_{1}|\theta) \prod^{n}_{i=2} P(X_{i} | pa(X_{i}), \theta )
-\tag{4}\]</span></span></p>
-<!-- Second, in a fully specified SCM, we can represent the joint distributions of n variables -->
-<!-- with greater efficiency: We need only to specify the n functions that govern the relationships between the variables, and then from the probabilities of the error terms, we can discover all the probabilities that govern the joint distribution. -->
+<!-- To address the complexity of the likelihood, researchers simplify the distribution by assuming that variables exhibit specific local (in)dependencies. These assumptions improve model tractability and streamline the estimation process. Researchers formalize these local (in)dependencies using directed acyclic graphs (DAGs).  -->
 <!-- 5. Now, what are those mysterious functions?, and how do they become statistical quantities? -->
 <!-- 6. What is the modularity assumption? and where does it lead? -->
 <!-- 6.1 the Truncated factorization -->
@@ -1336,9 +1469,6 @@ Hernán, M., and J. Robins. 2020. <em>Causal Inference: What If</em>. 1st ed. Ch
 <div id="ref-Hoyle_et_al_2023" class="csl-entry" role="listitem">
 Hoyle, R. (eds.). 2023. <em><a href="">Handbook of Structural Equation Modeling</a></em>. Guilford Press.
 </div>
-<div id="ref-Jeffreys_1998" class="csl-entry" role="listitem">
-Jeffreys, H. 1998. <em><a href="">Theory of Probability</a></em>. Oxford University Press.
-</div>
 <div id="ref-Jones_et_al_2019" class="csl-entry" role="listitem">
 Jones, I., M. Bisson, C. Gilmore, and M. Inglis. 2019. <span>“Measuring Conceptual Understanding in Randomised Controlled Trials: Can Comparative Judgement Help?”</span> <em>British Educational Research Journal</em> 45 (3): 662–80. <a href="https://doi.org/10.1002/berj.3519">https://doi.org/10.1002/berj.3519</a>.
 </div>
@@ -1435,6 +1565,9 @@ Rohrer, J. 2018. <span>“Thinking Clearly about Correlations and Causation: Gra
 <div id="ref-Rubin_1974" class="csl-entry" role="listitem">
 Rubin, D. 1974. <span>“Estimating Causal Effects of Treatments in Randomized and Nonrandomized Studies.”</span> <em>Journal of Educational Psychology</em> 66 (5): 688–701. <a href="https://doi.org/10.1037/h0037350">https://doi.org/10.1037/h0037350</a>.
 </div>
+<div id="ref-Schuessler_et_al_2023" class="csl-entry" role="listitem">
+Schuessler, J., and P Selb. <span>“Graphical Causal Models for Survey Inference.”</span> <em>Sociological Methods and Research</em> 0 (0). <a href="https://doi.org/10.1177/00491241231176851">https://doi.org/10.1177/00491241231176851</a>.
+</div>
 <div id="ref-Seaman_et_al_2011" class="csl-entry" role="listitem">
 Seaman III, J., J. Seaman Jr., and J. Stamey. 2011. <span>“Hidden Dangers of Specifying Noninformative Priors.”</span> <em>The American Statistician</em> 66 (2): 77–84. <a href="https://doi.org/10.1080/00031305.2012.695938">https://doi.org/10.1080/00031305.2012.695938</a>.
 </div>
@@ -1484,7 +1617,7 @@ Zimmerman, D. 1994. <span>“A Note on the Influence of Outliers on Parametric a
   title = {Let’s Talk about {Thurstone} \&amp; {Co.:} {An}
     Information-Theoretical Model for Comparative Judgments, and Its
     Statistical Translation},
-  date = {2025-01-11},
+  date = {2025-01-14},
   langid = {en},
   abstract = {This study revisits Thurstone’s law of comparative
     judgments (CJ) by addressing two key limitations in traditional
@@ -1509,7 +1642,7 @@ Zimmerman, D. 1994. <span>“A Note on the Influence of Outliers on Parametric a
 Rivera Espejo, Jose Manuel, Tine van van Daal, Sven De De Maeyer, and
 Steven Gillis. 2025. <span>“Let’s Talk about Thurstone &amp; Co.: An
 Information-Theoretical Model for Comparative Judgments, and Its
-Statistical Translation.”</span> January 11, 2025.
+Statistical Translation.”</span> January 14, 2025.
 </div></div></section></div></main>
 <!-- /main column -->
 <script id="quarto-html-after-body" type="application/javascript">
