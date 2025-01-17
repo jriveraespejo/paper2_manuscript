@@ -10,7 +10,7 @@
 \begin{tikzpicture}
 
     % dag_bb3
-    \node at (-2,0) {$e_{T}$};
+    \node at (-2,0) {$t$};
     \node at (-1,0) {$T$};
     \node[gray] at (-1,0.7) {$e_{X}$};
     \node[gray] at (0,0.8) {$X$};
@@ -20,7 +20,7 @@
     \draw[{Circle[open]}-{latex}{Circle}](-2,-0.27) to (-0.9,-0.27); % eT -> T (circle)
     %\draw[-{latex},gray](0,0.45) to (-0.9,-0.2); % X -> T
     \draw[{Circle[open]}-{latex},gray](-1,0.47) to (0,0.47); % eX -> X (circle)
-    \draw[-{latex}](-0.9,-0.27) to (0.9,-0.27); % T -> Y
+    \draw[{Circle}-{latex}](-1.05,-0.27) to (0.9,-0.27); % T -> Y
     \draw[{Circle}-{latex},gray](0,0.5) to (0.9,-0.2); % X -> Y
     \draw[{Circle[open]}-{latex}{Circle}](2,-0.27) to (0.9,-0.27); % eY -> Y (circle)
     
