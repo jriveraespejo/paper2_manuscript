@@ -1586,7 +1586,7 @@ unconnected node pairs, evident from the relationships
 
 \end{minipage}%
 
-\caption{\label{fig-example}Plausible causal structure the scenario
+\caption{\label{fig-example1}Plausible causal structure the scenario
 outlined in Section~\ref{sec-appendix-B1}.}
 
 \end{figure}%
@@ -1698,8 +1698,8 @@ mathematical proofs for these conclusions.
 
 Researchers can revisit the scenario in Section~\ref{sec-appendix-B1}
 using these insights. By applying the BNF to the SCM
-\ref{fig-scm_example1a} and DAG \ref{fig-mdag_example1a} structures,
-they can represent the joint probability of the observed variables as
+\ref{fig-scm_example2} and DAG \ref{fig-mdag_example2} structures, they
+can represent the joint probability of the observed variables as
 \(P(Y, T, X) =\) \(P(Y \:|\:T, X) P(T \:|\:X) P(X)\). From this
 expression, researchers can infer that the outcome \(Y\) is not
 unconditionally independent of the teaching method \(T\)
@@ -1714,7 +1714,7 @@ school \(X\), represented by the fork structure
 These probabilistic insights also indicate that narrowing the focus to a
 subset of the population defined by the socio-economic status of the
 school \(X\), achieved by conditioning on \(X\) and depicted by a square
-in DAG \ref{fig-mdag_example1a}, effectively blocks all confounding
+in DAG \ref{fig-mdag_example2}, effectively blocks all confounding
 non-causal path introduced by the fork structure. Nevertheless, since
 \(Y\) remains not d-separated from \(T\) even after conditioning
 \((Y \:\not\bot\:T \:|\:X)\), this lack of d-separation can only be
@@ -1739,7 +1739,7 @@ attributed to the direct causal effect \(T \rightarrow Y\).
 
 }
 
-\subcaption{\label{fig-scm_example1a}SCM}
+\subcaption{\label{fig-scm_example2}SCM}
 
 \end{minipage}%
 %
@@ -1751,11 +1751,11 @@ attributed to the direct causal effect \(T \rightarrow Y\).
 
 }
 
-\subcaption{\label{fig-mdag_example1a}Conditioned DAG}
+\subcaption{\label{fig-mdag_example2}Conditioned DAG}
 
 \end{minipage}%
 
-\caption{\label{fig-example}Plausible causal structure the scenario
+\caption{\label{fig-example2}Plausible causal structure the scenario
 outlined in Section~\ref{sec-appendix-B1}.}
 
 \end{figure}%
@@ -1821,8 +1821,8 @@ as:
 With these new insights, researchers revisiting the scenario in
 Section~\ref{sec-appendix-B22} can infer that the socio-economic status
 of the school, \(X\), satisfies the backdoor criterion, assuming the
-causal structure depicted by the SCM \ref{fig-scm_example1a} and DAG
-\ref{fig-mdag_example1a} is correct. This means that \(X\) serves as a
+causal structure depicted by the SCM \ref{fig-scm_example2} and DAG
+\ref{fig-mdag_example2} is correct. This means that \(X\) serves as a
 sufficient adjustment set, as it effectively blocks all confounding
 non-causal paths introduced by the fork structure. In this context,
 researchers can apply the \emph{backdoor adjustment} to identify the ACE
@@ -1831,9 +1831,8 @@ of \(T\) on \(Y\). They achieve this by first identifying the CACE of
 effect over \(X\) to obtain the ACE, as expressed in
 Equation~\ref{eq-mACE2} (see Section~\ref{sec-appendix-B}). Notably, for
 the purpose of identification, the conditioned DAG
-\ref{fig-mdag_example1a} is equivalent to the manipulated DAG
-\ref{fig-mdag_example1b}, because \(X\) satisfies the backdoor
-criterion.
+\ref{fig-mdag_example2} is equivalent to the manipulated DAG
+\ref{fig-mdag_example3}, because \(X\) satisfies the backdoor criterion.
 
 \begin{equation}\phantomsection\label{eq-mACE2}{
 \begin{aligned}
@@ -1861,7 +1860,7 @@ criterion.
 
 }
 
-\subcaption{\label{fig-scm_example1b}SCM}
+\subcaption{\label{fig-scm_example3}SCM}
 
 \end{minipage}%
 %
@@ -1873,11 +1872,11 @@ criterion.
 
 }
 
-\subcaption{\label{fig-mdag_example1b}Manipulated DAG}
+\subcaption{\label{fig-mdag_example3}Manipulated DAG}
 
 \end{minipage}%
 
-\caption{\label{fig-example}Plausible causal structure the scenario
+\caption{\label{fig-example3}Plausible causal structure the scenario
 outlined in Section~\ref{sec-appendix-B22}.}
 
 \end{figure}%
