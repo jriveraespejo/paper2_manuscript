@@ -1077,8 +1077,8 @@ variability \citep[pp.~4]{Schuessler_et_al_2023}. An \emph{estimator} is
 a method or function that transforms data into an estimate
 \citep{Neal_2020}. \emph{Estimates} are numerical values that
 approximate the estimand, and they are derived through
-\emph{estimation}, which refers to the process of integrating data with
-an estimator \citep{Everitt_et_al_2010}. The Identification-Estimation
+\emph{estimation}, referring to the process of integrating data with an
+estimator \citep{Everitt_et_al_2010}. The Identification-Estimation
 flowchart \citep{McElreath_2020, Neal_2020} in Figure~\ref{fig-IEflow}
 provides a visual representation of the process of transitioning from
 estimands to estimates.
@@ -1096,7 +1096,7 @@ Extracted and slightly modified from \citet[pp.~32]{Neal_2020}}
 
 \end{figure}%
 
-While numerous methods can approximate an estimand, researchers
+While numerous estimators can approximate an estimand, researchers
 prioritize estimators with desirable identification properties that
 ensure the accuracy of estimates. For instance, the Z-test is an
 estimator known for its effectiveness when comparing groups'
@@ -1114,9 +1114,10 @@ sample variability observed between the two groups.
 However, researchers often seek to uncover the mechanisms underlying
 specific data and establish causal relationships rather than simply
 estimate associations. In the example, researchers can interpret the
+associational estimand in Equation~\ref{eq-group_diff} and the
 associational estimate represented by the Z-statistic as causal. This
-interpretation relies on the data meeting the assumptions of the Z-test
-and being collected through a randomized experiment.
+interpretation is valid as long as the data satisfy the assumptions of
+the Z-test and are collected through a randomized experiment.
 
 Randomized experiments are widely recognized as the gold standard in
 evidence-based science \citep{Hariton_et_al_2018, Hansson_2014}. This
@@ -1183,8 +1184,9 @@ is assigned to intervention \(T_{i}=1\), the potential outcome under
 \(T_{i}=2\) becomes a counterfactual, as it is no longer observed nor
 observable. To address this challenge, the structural approach extends
 the ICE to the \emph{average causal effect} (ACE,
-Equation~\ref{eq-ACE}), representing the average difference between
-observed potential outcomes and their counterfactual counterparts.
+Equation~\ref{eq-ACE}), representing the average difference between the
+students' observed potential outcomes and their counterfactual
+counterparts.
 
 \begin{equation}\phantomsection\label{eq-ACE}{
 \begin{aligned}
@@ -1193,13 +1195,13 @@ observed potential outcomes and their counterfactual counterparts.
 \end{aligned}
 }\end{equation}
 
-Even though counterfactuals are unobserved and unobservable, researchers
-can still identify the ACE from associational estimates by leveraging
-the structural approach. The approach identifies the ACE by
-statistically conditioning data on a \emph{sufficient adjustment set} of
-variables \(X\) \citep{Pearl_2009, Pearl_et_al_2016, Morgan_et_al_2014}.
-This \emph{sufficient} set (potentially empty) must block all non-causal
-paths between \(T\) to \(Y\) without opening new ones. If such a set
+Even though counterfactuals are unobservable, researchers can still
+identify the ACE from associational estimates by leveraging the
+structural approach. The approach identifies the ACE by statistically
+conditioning data on a \emph{sufficient adjustment set} of variables
+\(X\) \citep{Pearl_2009, Pearl_et_al_2016, Morgan_et_al_2014}. This
+\emph{sufficient} set (potentially empty) must block all non-causal
+paths between \(T\) to \(Y\) without opening new ones. When such a set
 exists, then \(T\) and \(Y\) are \emph{d-separated} by \(X\)
 (\(T \:\bot\:Y \:|\:X\)) \citep{Pearl_2009}, and \(X\) satisfies the
 \emph{backdoor criterion} \citep[pp 37]{Neal_2020}. Here,
@@ -1220,20 +1222,21 @@ requirement holds true for both observational and experimental data.
 
 For instance, If researchers cannot conduct the randomized experiments
 described in Section~\ref{sec-appendix-A} and must instead rely on
-observational data, they can still identify the ACE as long as a
-variable \(X\), such as the socio-economic status of the school,
-satisfies the backdoor criterion. Under these circumstances, researchers
-first identify the \emph{conditional average causal effect} (CACE,
-Equation~\ref{eq-CACE})
+observational data, they can still identify the ACE as long as an
+observed variable \(X\), such as the socio-economic status of the
+school, satisfies the backdoor criterion. Under these circumstances,
+researchers first identify the \emph{conditional average causal effect}
+(CACE, Equation~\ref{eq-CACE})
 
 \begin{equation}\phantomsection\label{eq-CACE}{
 CACE_{t} = E[Y_{i} \:|\:T_{i}=t, X]
 }\end{equation}
 
-From the CACE, they identify the ACE from associational quantities as in
-Equation~\ref{eq-mACE1}. This identification process is commonly known
-as the \emph{backdoor adjustment}. Here, \(E_{X}[\cdot]\) represents the
-marginal expected value over \(X\) \citep{Morgan_et_al_2014}.
+From the CACE, researchers can identify the ACE from associational
+quantities as in Equation~\ref{eq-mACE1}. This identification process is
+commonly known as the \emph{backdoor adjustment}. Here, \(E_{X}[\cdot]\)
+represents the marginal expected value over \(X\)
+\citep{Morgan_et_al_2014}.
 
 \begin{equation}\phantomsection\label{eq-mACE1}{
 \begin{aligned}
@@ -1262,11 +1265,11 @@ formally and graphically represent the presumed causal structure
 underlying the ACE
 \citep{Pearl_2009, Pearl_et_al_2016, Gross_et_al_2018, Neal_2020}.
 Essentially, SCMs and DAGs serve as \emph{conceptual (theoretical)
-models} that facilitate valid causal inference by guiding researchers in
-determining which statistical models can identify an estimand (ACE,
-CACE, or other), assuming the depicted causal structure is correct
-\citep{McElreath_2020}. Figure~\ref{fig-IEflow} shows the role of
-theoretical models in the inference process.
+models} that facilitate valid causal inference. They achieve this by
+helping researchers to determine which statistical models can identify
+an estimand (ACE, CACE, or other), assuming the depicted causal
+structure is correct \citep{McElreath_2020}. Figure~\ref{fig-IEflow}
+shows the role of theoretical models in the inference process.
 
 SCMs and DAGs support causal inference through two key advantages.
 First, regardless of complexity, they can represent various causal
@@ -1278,11 +1281,13 @@ relationships in a non-parametric and fully interactive way. This
 flexibility enables feasible ACE identification strategies without
 defining the variables' data types, the functional form between them, or
 their parameters \citep[pp.~35]{Pearl_et_al_2016}.
+
 Section~\ref{sec-appendix-B21} and Section~\ref{sec-appendix-B22}
 elaborate on the first advantage, while Section~\ref{sec-appendix-B22}
 and Section~\ref{sec-appendix-B23} do so for the second.
 
-\paragraph{SCMs and DAGs}\label{sec-appendix-B21}
+\paragraph{The five fundamental block for SCMs and
+DAGs}\label{sec-appendix-B21}
 
 Figures \ref{fig-dags_scms1}, \ref{fig-dags_scms2},
 \ref{fig-dags_scms3}, \ref{fig-dags_scms4}, and \ref{fig-dags_scms5}
@@ -1315,8 +1320,8 @@ ensuring the influences do not cycle back on themselves
 circles, while they use open circles for unobserved (latent) variables
 \citep{Morgan_et_al_2014}. Although the \emph{standard representation}
 of DAGs typically omits exogenous variables for simplicity, the
-\emph{magnified representation} depicted in the figures offers some
-advantages: including exogenous variables can help to highlight
+\emph{magnified representation} depicted in the figures offers one key
+advantage: including exogenous variables can help researchers highlight
 potential issues related to conditioning and confounding
 \citep{Cinelli_et_al_2020}.
 
@@ -1509,9 +1514,9 @@ potential issues related to conditioning and confounding
 
 \end{figure}%
 
-A careful examination of the figures highlights the theoretical
-assumptions underlying the observed variables in these building blocks.
-SCM \ref{fig-scm_bb1} and DAG \ref{fig-mdag_bb1} depict two unconnected
+A careful examination of these building blocks highlights the
+theoretical assumptions underlying their observed variables. SCM
+\ref{fig-scm_bb1} and DAG \ref{fig-mdag_bb1} depict two unconnected
 nodes, representing a scenario where variables \(X_{1}\) and \(X_{3}\)
 are independent or not causally related. SCM \ref{fig-scm_bb2} and DAG
 \ref{fig-mdag_bb2} illustrate two connected nodes, representing a
@@ -1543,11 +1548,11 @@ Researchers can then use these building blocks to represent the scenario
 outlined in Section~\ref{sec-appendix-B}. SCM \ref{fig-scm_example1} and
 DAG \ref{fig-mdag_example1} depict the plausible causal structure for
 this example. In this context, the variable \(X\) (socio-economic status
-of the school) acts as a confounder in the relationship between the
-teaching method \(T\) and the outcome \(Y\). The figures display
-multiple descendant relationships such as \(X \rightarrow T\),
-\(X \rightarrow Y\), and \(T \rightarrow Y\). They also highlight
-unconnected node pairs, evident from the relationships
+of the school) is thought to be a confounder in the relationship between
+the teaching method \(T\) and the outcome \(Y\). In this scenario, the
+figures display multiple descendant relationships such as
+\(X \rightarrow T\), \(X \rightarrow Y\), and \(T \rightarrow Y\). They
+also highlight unconnected node pairs, evident from the relationships
 \(e_{T} \:\bot\:e_{X}\), \(e_{T} \:\bot\:e_{Y}\), and
 \(e_{X} \:\bot\:e_{Y}\). Additional, the figures show one fork,
 \(X \rightarrow \{T, Y\}\), and two colliders:
@@ -1593,8 +1598,8 @@ outlined in Section~\ref{sec-appendix-B}.}
 
 \end{figure}%
 
-\paragraph{The probabilistic implications of SCMs and
-DAGs}\label{sec-appendix-B22}
+\paragraph{The probabilistic implications of these
+blocks}\label{sec-appendix-B22}
 
 Beyond their graphical capabilities, SCMs and DAGs can encode the
 probabilistic information embedded within a causal structure. They
@@ -1638,7 +1643,10 @@ In this expression, \(pa(X_{i})\) denotes the set of variables that are
 the parents of \(X_{i}\).
 
 \begin{equation}\phantomsection\label{eq-net_factor}{
-P(X_{1}, X_{2}, \dots, X_{P}) = \prod^{P}_{p=1} P(X_{i} \:|\:pa(X_{i}) )
+\begin{aligned}
+P(X_{1}, X_{2}, \dots, X_{P}) & = X_{1} \cdot \prod^{P}_{p=2} P(X_{i} \:|\:X_{i-1}, \dots, X_{1}) & (\small{\text{by chain rule})}\\
+& = X_{1} \cdot \prod^{P}_{p=2} P(X_{i} \:|\:pa(X_{i}) ) & (\small{\text{by BNF}})
+\end{aligned}
 }\end{equation}
 
 This encoding enables researchers with conceptual (theoretical)
@@ -1652,15 +1660,15 @@ once researchers observe empirical data, the patterns of
 validity of the proposed conceptual model.
 
 The five fundamental building blocks described in
-Section~\ref{sec-appendix-B21} clearly illustrate which variables'
-(in)dependencies can SMCs and DAGs predict. For instance, applying the
-BNF to the causal structure shown in the SCM \ref{fig-scm_bb1} and DAG
-\ref{fig-mdag_bb1} supports the theoretical assumption that the observed
-variables \(X_{1}\) and \(X_{3}\) are unconditionally independent
-(\(X_{1} \:\bot\:X_{3}\)). This conclusion follows from expressing their
-joint probability distribution as
-\(P(X_{1}, X_{3}) = P(X_{1}) P(X_{3})\) \citep[pp.~24]{Neal_2020}.
-Conversely, when \(X_{3}\) is unconditionally dependent on \(X_{1}\)
+Section~\ref{sec-appendix-B21} clearly illustrate which (in)dependencies
+can SMCs and DAGs predict. For instance, applying the BNF to the causal
+structure shown in the SCM \ref{fig-scm_bb1} and DAG \ref{fig-mdag_bb1}
+enables researchers to express the joint probability distribution of the
+observed variables as \(P(X_{1}, X_{3}) = P(X_{1}) P(X_{3})\),
+supporting the theoretical assumption that the observed variables
+\(X_{1}\) and \(X_{3}\) are unconditionally independent
+(\(X_{1} \:\bot\:X_{3}\)) \citep[pp.~24]{Neal_2020}. Conversely, when
+\(X_{3}\) is unconditionally dependent on \(X_{1}\)
 (\(X_{1} \:\not\bot\:X_{3}\)), as depicted in the SCM \ref{fig-scm_bb2}
 and DAG \ref{fig-mdag_bb2}, the BNF express their joint probability
 distribution as \(P(X_{1}, X_{3}) = P(X_{3} \:|\:X_{1}) P(X_{1})\).
@@ -1669,12 +1677,14 @@ the structural equations illustrated in Section~\ref{sec-appendix-B21}
 and the CPDs.
 
 Beyond the insights gained from two-node structures, researchers can
-uncover more nuanced patterns of variables' (in)dependencies from
-chains, forks, and colliders. These (in)dependencies apply to any data
-generated by these structures. For instance, applying the BNF to the
-chain structure depicted in the SCM \ref{fig-scm_bb3} and DAG
-\ref{fig-mdag_bb3} allow researchers to represent the joint distribution
-for the observed variables as \(P(X_{1},X_{2},X_{3}) =\)
+uncover more nuanced patterns of(in)dependencies from chains, forks, and
+colliders. These (in)dependencies apply to any data set generated by a
+causal model with those structures, regardless of the specific functions
+attached to the SCM \citep[pp.~36]{Pearl_et_al_2016}. For instance,
+applying the BNF to the chain structure depicted in the SCM
+\ref{fig-scm_bb3} and DAG \ref{fig-mdag_bb3} allow researchers to
+represent the joint distribution for the observed variables as
+\(P(X_{1},X_{2},X_{3}) =\)
 \(P(X_{1}) P(X_{2} \:|\:X_{1}) P(X_{3} \:|\:X_{2})\). This expression
 implies that \(X_{1}\) and \(X_{3}\) are unconditionally dependent
 \((X_{1} \:\not\bot\:X_{3})\), but conditionally independent when
@@ -1682,14 +1692,14 @@ controlling for \(X_{2}\) \((X_{1} \:\bot\:X_{3} \:|\:X_{2})\).
 Moreover, in the fork structure shown in the SCM \ref{fig-scm_bb4} and
 DAG \ref{fig-mdag_bb4}, researchers can express the joint distribution
 of the observed variables as \(P(X_{1},X_{2},X_{3}) =\)
-\(P(X_{1} \:|\:X_{2}) P(X_{2}) P(X_{3} \:|\:X_{2})\). This expression
-allows researchers to further infer that \(X_{1}\) and \(X_{3}\) are
-unconditionally dependent \((X_{1} \:\not\bot\:X_{3})\), but
-conditionally independent when controlling for \(X_{2}\)
-\((X_{1} \:\bot\:X_{3} \:|\:X_{2})\). Finally, researchers analyzing the
-collider structure illustrated in the SCM \ref{fig-scm_bb5} and DAG
-\ref{fig-mdag_bb5} can express the joint distribution of the observed
-variables as \(P(X_{1},X_{2},X_{3}) =\)
+\(P(X_{1} \:|\:X_{2}) P(X_{2}) P(X_{3} \:|\:X_{2})\). Similar to the
+chain structure, this expression allows researchers to further infer
+that \(X_{1}\) and \(X_{3}\) are unconditionally dependent
+\((X_{1} \:\not\bot\:X_{3})\), but conditionally independent when
+controlling for \(X_{2}\) \((X_{1} \:\bot\:X_{3} \:|\:X_{2})\). Finally,
+researchers analyzing the collider structure illustrated in the SCM
+\ref{fig-scm_bb5} and DAG \ref{fig-mdag_bb5} can express the joint
+distribution of the observed variables as \(P(X_{1},X_{2},X_{3}) =\)
 \(P(X_{1}) P(X_{2} \:|\:X_{1}, X_{3}) P(X_{3})\). This representation
 allows researchers to infer that \(X_{1}\) and \(X_{3}\) are
 unconditionally independent \((X_{1} \:\bot\:X_{3})\), but conditionally
@@ -1698,29 +1708,21 @@ dependent when controlling for \(X_{2}\)
 41]{Pearl_et_al_2016} and \citet[pp.~25--26]{Neal_2020} provide the
 mathematical proofs for these conclusions.
 
-Then, researchers can revisit the scenario in
-Section~\ref{sec-appendix-B} using these insights. In this context,
-applying the BNF to the SCM \ref{fig-scm_example2} and DAG
-\ref{fig-mdag_example2} structures, can help researchers to represent
-the joint probability of the observed variables as \(P(Y, T, X) =\)
-\(P(Y \:|\:T, X) P(T \:|\:X) P(X)\). From this expression, researchers
-can infer that the outcome \(Y\) is not unconditionally independent of
-the teaching method \(T\) \((Y \:\bot\:T)\). This dependency arises from
-two key structures: a direct causal path from the teaching method \(T\)
-to the outcome \(Y\), represented by the two-connected-nodes structure
-\(T \rightarrow Y\) (black path), and a confounding non-causal path from
-the teaching method \(T\) to the outcome \(Y\) through the
-socio-economic status of the school \(X\), represented by the fork
-structure \(T \leftarrow X \rightarrow Y\) (gray path).
-
-These probabilistic insights also indicate that narrowing the focus to a
-subset of the population defined by the socio-economic status of the
-school \(X\), achieved by conditioning on the variable and depicted by a
-square in DAG \ref{fig-mdag_example2}, effectively blocks all
-confounding non-causal path introduced by the fork structure.
-Nevertheless, since \(Y\) remains dependent on \(T\) even after
-conditioning \((Y \:\not\bot\:T \:|\:X)\), this dependency can only be
-attributed to the direct causal effect \(T \rightarrow Y\).
+Using these additional probabilistic insights, researchers can revisit
+the scenario in Section~\ref{sec-appendix-B}. In this context, applying
+the BNF to the SCM \ref{fig-scm_example2} structure, enables the
+representation of the joint probability distribution of the observed
+variables as \(P(Y, T, X) =\) \(P(Y \:|\:T, X) P(T \:|\:X) P(X)\). From
+this expression, researchers can infer that the outcome \(Y\) is
+unconditionally dependent on the teaching method \(T\)
+\((Y \:\not\bot\:T)\). This dependency arises from two key structures: a
+direct causal path from the teaching method \(T\) to the outcome \(Y\),
+represented by the two-connected-nodes structure \(T \rightarrow Y\)
+(black path in DAG \ref{fig-mdag_example2}), and a confounding
+non-causal path from the teaching method \(T\) to the outcome \(Y\)
+through the socio-economic status of the school \(X\), represented by
+the fork structure \(T \leftarrow X \rightarrow Y\) (gray path in DAG
+\ref{fig-mdag_example2}).
 
 \begin{figure}
 
@@ -1766,25 +1768,24 @@ outlined in Section~\ref{sec-appendix-B}.}
 
 The structural approach to causal inference translate the probabilistic
 insights from Section~\ref{sec-appendix-B23} into actionable strategies
-for identifying the ACE from associational quantities. The approach
-achieve this by relying on the modularity assumption and by re-defining
-interventions in the form \(P(Y_{i} \:|\:do(T_{i}=t))\) (see
-Section~\ref{sec-appendix-B}). The \emph{modularity assumption} posits
-that intervening on a node alters only the causal mechanism of that
-node, leaving others unchanged \citep[pp.~34]{Neal_2020}.
+seeking to identify the ACE from associational quantities. It achieves
+this by relying on the \emph{modularity assumption}, which posits that
+intervening on a node alters only the causal mechanism of that node,
+leaving others unchanged \citep[pp.~34]{Neal_2020}.
 
 The modularity assumption underpins the concepts of manipulated graphs
 and Truncated Factorization, which are essential for representing
-interventions within SCMs and DAGs. \emph{Manipulated graphs} simulate
-physical interventions by removing specific edges from a DAG, while
-preserving the remaining structure unchanged \citep[pp.~34]{Neal_2020}.
-In parallel, \emph{Truncated Factorization} (TF) achieves a similar
-simulation by removing specific functions from the conceptual model and
-replacing them with constants, while keeping the rest of the structure
-unchanged \citep{Pearl_2010}. The probabilistic implications of this
-factorization are formalized in Equation~\ref{eq-trunc_factor}, where
-\(S\) represents the subset of variables \(X_{p}\) directly influenced
-by the intervention.
+interventions \(P(Y_{i} \:|\:do(T_{i}=t))\) within SCMs and DAGs.
+\emph{Manipulated graphs} simulate physical interventions by removing
+specific edges from a DAG, while preserving the remaining structure
+unchanged \citep[pp.~34]{Neal_2020}. In parallel, \emph{Truncated
+Factorization} (TF) achieves a similar simulation by removing specific
+functions from the conceptual model and replacing them with constants,
+while keeping the rest of the structure unchanged \citep{Pearl_2010}.
+The probabilistic implications of this factorization are formalized in
+Equation~\ref{eq-trunc_factor}, where \(S\) represents the subset of
+variables \(X_{p}\) directly influenced by the intervention, while an
+example illustrating these concepts follows below.
 
 \begin{equation}\phantomsection\label{eq-trunc_factor}{
 P(X_{1}, X_{2}, \dots, X_{P} \:|\:do(S)) =
@@ -1826,11 +1827,15 @@ of the school, \(X\), satisfies the backdoor criterion, assuming the
 causal structure depicted by the SCM \ref{fig-scm_example2} and DAG
 \ref{fig-mdag_example2} is correct. This means that \(X\) serves as a
 sufficient adjustment set, as it effectively blocks all confounding
-non-causal paths introduced by the fork structure. In this context,
-researchers can apply the \emph{backdoor adjustment} to identify the ACE
-of \(T\) on \(Y\). They achieve this by first identifying the CACE of
-\(T\) on \(Y\) by conditioning on \(X\), and then marginalizing this
-effect over \(X\) to obtain the ACE, as expressed in
+non-causal paths introduced by the fork structure. Nevertheless, since
+\(Y\) remains dependent on \(T\) even after conditioning
+\((Y \:\not\bot\:T \:|\:X)\), this dependency can only be attributed to
+the direct causal effect \(T \rightarrow Y\).
+
+Researchers can then apply the \emph{backdoor adjustment} to identify
+the ACE of \(T\) on \(Y\). They achieve this by first identifying the
+CACE of \(T\) on \(Y\) by conditioning on \(X\), and then marginalizing
+this effect over \(X\) to obtain the ACE. This process is expressed in
 Equation~\ref{eq-mACE2} (see Section~\ref{sec-appendix-B}). Notably, for
 the purpose of identification, the conditioned DAG
 \ref{fig-mdag_example2} is equivalent to the manipulated DAG
@@ -1884,7 +1889,7 @@ outlined in Section~\ref{sec-appendix-B22}.}
 
 \end{figure}%
 
-\subsection{The estimation process}\label{sec-appendix-C}
+\paragraph{The estimation process}\label{sec-appendix-C}
 
 Ultimately, researchers can use Bayesian inference methods to estimate
 the ACE. The approach begins by defining two probability distributions:
