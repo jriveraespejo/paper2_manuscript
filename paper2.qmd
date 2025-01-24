@@ -97,10 +97,11 @@ Numerous studies have documented the effectiveness of CJ in assessing traits and
 
 <!-- Adaptive comparison algorithms dynamically present stimuli to judges, based on the results of previous comparisons. They aim to enhance the informativeness of comparisons while optimizing judges' time [@Bramley_2015].  -->
 
-<!-- 3. But what critical issues remain in CJ Research?, what is the organization of the study? -->
-Nevertheless, despite the growing number of CJ studies, unsystematic and fragmented research approaches have left several critical issues unresolved. This study examines two such problems that can compromise the reliability and validity of CJ's trait estimates. The first issue concerns the overreliance on Thurstone's Case V assumptions in the statistical analysis of CJ data. The second involves the apparent disconnect between CJ's approach to trait measurement and hypothesis testing.
+<!-- 3. But what critical issues remain in CJ Research? -->
+Nevertheless, despite the growing number of CJ studies, unsystematic and fragmented research approaches have left several critical issues unresolved. This study addresses two such issues that can compromise the reliability and validity of CJ's trait estimates. The first concerns the overreliance on Thurstone's Case V assumptions in the statistical analysis of CJ data. The second focuses on the apparent disconnect between CJ's approach to trait measurement and hypothesis testing.
 
-The study has five main sections. It begins with a brief overview of Thurstone's theory in @sec-thurstone_theory, followed by a detailed examination of these issues in @sec-theory-issues. In @sec-theory, the study introduces a theoretical model for CJ that builds upon Thurstone's theory, along with its statistical translation, designed to address both issues simultaneously. Finally, @sec-discussion discusses the concepts developed in the study, their implications, and avenues for future exploration, while @sec-conclusion presents the conclusions.
+<!-- 4. what is the organization of the study? -->
+The study is organized into six main sections. It begins with an overview of Thurstone's theory in @sec-thurstone_theory, followed by a detailed examination of these issues in @sec-theory-issues. In @sec-theoretical, the study develops a theoretical model for CJ that simultaneously addresses these issues. The model integrates Thurstone's core principles with key assessment design features relevant to CJ experiments, such as the selection of judges, stimuli, and comparisons. @sec-statistical translates these theoretical and practical elements into a statistical model that supports the analysis of pairwise comparison data. Finally, @sec-discussion discusses the concepts developed in the study, their implications, and avenues for future exploration, while @sec-conclusion summarizes the findings.
 
 
 # Thurstone's theory {#sec-thurstone_theory}
@@ -138,7 +139,7 @@ However, since the individual discriminal processes of the stimuli are not direc
 
 # The two critical issues in CJ literature {#sec-theory-issues}
 
-This section examines the two critical issues in CJ's theory that can compromise the reliability and validity of CJ's trait estimates. In @sec-theory-issue1, the study examines the first issue: the overreliance on Thurstone's Case V assumptions in the statistical analysis of CJ data. In @sec-theory-issue2, the study explores the second issue: the apparent disconnect between CJ's approach to trait measurement and hypothesis testing.
+This section explores the two critical issues in CJ's theory that have the potential to compromise the reliability and validity of CJ's trait estimates. @sec-theory-issue1 inspects the overreliance on Thurstone's Case V assumptions in the statistical analysis of CJ data. @sec-theory-issue2 focuses on the apparent disconnect between CJ's approach to trait measurement and hypothesis testing.
 
 ## The Case V and the statistical analysis of CJ data {#sec-theory-issue1}
 
@@ -306,32 +307,34 @@ In aggregate, researchers' inadequate handling of violations to the assumptions 
 
 
 
-# Updating the theoretical and statistical model {#sec-theory}
+# Updating the theoretical model {#sec-theoretical}
 
-The objective of this section is twofold. First, it aims to refine CJ's theoretical model using the *structural approach* to causal inference. This approach, as outlined in @sec-theory-theoretical, defines a model that integrates the core principles of Thurstone's theory and key assessment design features relevant to CJ experiments. Second, @sec-theory-statistics uses *Bayesian inference methods* to convert these theoretical and practical elements into a statistical model that supports the analysis of paired comparison data.
+<!-- This study examines two such problems that can compromise the reliability and validity of CJ's trait estimates. -->
+
+<!-- This section aims to refine CJ's theoretical model using the *structural approach* to causal inference with the purpose of addressing the two.  -->
+
+<!-- This approach, as outlined in @sec-theory-theoretical, defines a model that integrates the core principles of Thurstone's theory, as well as other key assessment design features relevant to CJ experiments, such as the selection of judges, stimuli, and the number of comparisons.  -->
 
 <!-- See @sec-appendix for an overview of the statistical and causal inference concepts required for the development of this section. -->
 
 
-## The theoretical model {#sec-theory-theoretical}
-
 <!-- 1. The structural approach to causal inference -->
-The *structural approach* to causal inference provides a formal framework to identify causes and estimate their effects using data. The approach uses structural causal models (SCMs) and directed acyclic graphs (DAGs) [@Pearl_2009; @Pearl_et_al_2016; @Gross_et_al_2018; @Neal_2020] to formally and graphically represent the assumed causal structure of a system. Essentially, SCMs and DAGs serve as *conceptual (theoretical) models* that facilitate valid causal inference. They achieve this by helping researchers to determine which statistical models can identify an estimand, assuming the depicted causal structure is correct [@McElreath_2020]. *Identification* determines whether an estimator can accurately compute an estimand based on its assumptions, regardless of random variability [@Schuessler_et_al_2023, pp. 4].
+<!-- The *structural approach* to causal inference provides a formal framework to identify causes and estimate their effects using data. The approach uses structural causal models (SCMs) and directed acyclic graphs (DAGs) [@Pearl_2009; @Pearl_et_al_2016; @Gross_et_al_2018; @Neal_2020] to formally and graphically represent the assumed causal structure of a system. Essentially, SCMs and DAGs serve as *conceptual (theoretical) models* that facilitate valid causal inference. They achieve this by helping researchers to determine which statistical models can identify an estimand, assuming the depicted causal structure is correct [@McElreath_2020]. *Identification* determines whether an estimator can accurately compute an estimand based on its assumptions, regardless of random variability [@Schuessler_et_al_2023, pp. 4]. -->
 
 <!-- 2. The SCMs -->
-SCMs are formal mathematical models defined by a set of *endogenous* variables, a set of *exogenous* variables, and a set of functions [@Pearl_2009; @Cinelli_et_al_2020]. Endogenous variables are those whose causal mechanisms a researcher chooses to model [@Neal_2020]. In contrast, exogenous variables represent *errors* or *disturbances* arising from omitted factors that the investigator chooses not to model explicitly [@Pearl_2009, pp. 27,68]. Lastly, the functions, referred to as *structural equations*, express the endogenous variables as non-parametric functions of other variables. These functions use the symbol '$:=$' to denote the asymmetrical causal dependence between variables and the symbol '$\dsep$' to represent *d-separation*, a concept akin to (conditional) independence.
+<!-- SCMs are formal mathematical models defined by a set of *endogenous* variables, a set of *exogenous* variables, and a set of functions [@Pearl_2009; @Cinelli_et_al_2020]. Endogenous variables are those whose causal mechanisms a researcher chooses to model [@Neal_2020]. In contrast, exogenous variables represent *errors* or *disturbances* arising from omitted factors that the investigator chooses not to model explicitly [@Pearl_2009, pp. 27,68]. Lastly, the functions, referred to as *structural equations*, express the endogenous variables as non-parametric functions of other variables. These functions use the symbol '$:=$' to denote the asymmetrical causal dependence between variables and the symbol '$\dsep$' to represent *d-separation*, a concept akin to (conditional) independence. -->
 
 <!-- 3. The DAGs -->
-Notably, every SCM has an associated DAG [@Pearl_et_al_2016; @Cinelli_et_al_2020]. A DAG is a graph consisting of nodes connected by edges, where the nodes represent random variables. The term *directed* means that the edges extend from one node to another, with arrows indicating the direction of causal influence. The term *acyclic* implies that the causal influences do not form loops, ensuring the influences do not cycle back on themselves [@McElreath_2020]. DAGs represent observed variables as solid black circles, while they use open circles for unobserved (latent) variables [@Morgan_et_al_2014]. While the *standard representation* of DAGs typically omits exogenous variables for simplicity, the *magnified representation* includes them, offering offering the advantage of highlighting potential issues related to conditioning and confounding [@Cinelli_et_al_2020].
+<!-- Notably, every SCM has an associated DAG [@Pearl_et_al_2016; @Cinelli_et_al_2020]. A DAG is a graph consisting of nodes connected by edges, where the nodes represent random variables. The term *directed* means that the edges extend from one node to another, with arrows indicating the direction of causal influence. The term *acyclic* implies that the causal influences do not form loops, ensuring the influences do not cycle back on themselves [@McElreath_2020]. DAGs represent observed variables as solid black circles, while they use open circles for unobserved (latent) variables [@Morgan_et_al_2014]. While the *standard representation* of DAGs typically omits exogenous variables for simplicity, the *magnified representation* includes them, offering offering the advantage of highlighting potential issues related to conditioning and confounding [@Cinelli_et_al_2020]. -->
 
 <!-- 4. The benefits of SCMs and DAGs -->
-SCMs and DAGs support causal inference through two key advantages. First, regardless of complexity, they can represent various causal structures using only five fundamental building blocks [@Neal_2020; @McElreath_2020]. This feature allows researchers to decompose complex structures into manageable components, facilitating their analysis [@McElreath_2020]. Second, they depict causal relationships in a non-parametric and fully interactive way. This flexibility enables feasible ACE identification strategies without defining the variables' data types, the functional form between them, or their parameters [@Pearl_et_al_2016, pp. 35]. 
+<!-- SCMs and DAGs support causal inference through two key advantages. First, regardless of complexity, they can represent various causal structures using only five fundamental building blocks [@Neal_2020; @McElreath_2020]. This feature allows researchers to decompose complex structures into manageable components, facilitating their analysis [@McElreath_2020]. Second, they depict causal relationships in a non-parametric and fully interactive way. This flexibility enables feasible ACE identification strategies without defining the variables' data types, the functional form between them, or their parameters [@Pearl_et_al_2016, pp. 35].  -->
 
 <!-- 5. what are we doing with them? -->
-Therefore, this section leverages SCMs and DAGs to represent the conceptual population of CJ experiments, referred to as *the population model* in @sec-theory-theoretical_P, and later integrates various assessment design features relevant to CJ experiments. This process leads to the development of *the sample-comparison model* in @sec-theory-theoretical_SC.
+<!-- Therefore, this section leverages SCMs and DAGs to represent the conceptual population of CJ experiments, referred to as *the population model* in @sec-theory-theoretical_P, and later integrates various assessment design features relevant to CJ experiments. This process leads to the development of *the sample-comparison model* in @sec-theory-theoretical_SC. -->
 
 
-### The population model {#sec-theory-theoretical_P}
+## The population model {#sec-theory-theoretical_P}
 
 <!-- general development -->
 <!-- recording: Sven 24.10.04; time: 00:21:00 - 00:34:10 -->
@@ -345,11 +348,7 @@ Therefore, this section leverages SCMs and DAGs to represent the conceptual popu
 <!-- recording: Sven 24.10.04; time: 00:34:10 - 00:41:00 -->
 
 
-
-
 <!-- In general terms, causal graphs encode a researcher’s assumptions about the causal process that generated the data in a population of interest [@Schuessler_et_al_2023, pp. 4] -->
-
-<!-- The causal assumptions encoded in a DAG constitute the theoretical model on which identification analysis rests. Identification analysis is concerned with determining whether or not the true value of a parameter can be estimated using the assumptions in the model (graph), regardless of random variability in the data due to small samples [@Schuessler_et_al_2023, pp. 4]. -->
 
 
 Assuming population data or more commonly known as census data, we ...
@@ -361,11 +360,11 @@ The (latent) "perceived" discriminal processes for the stimuli directly determin
 The (latent) "true" discriminal processes for the stimuli and the judges' biases directly determines their (latent) "perceived" discriminal processes
 
 
-![](/images/png/CJ_TM_01.png){#fig-CJ_TM_01 width=23%}
+<!-- ![](/images/png/CJ_TM_01.png){#fig-CJ_TM_01 width=23%} -->
 
-![](/images/png/CJ_TM_02.png){#fig-CJ_TM_02 width=32%}
+<!-- ![](/images/png/CJ_TM_02.png){#fig-CJ_TM_02 width=32%} -->
 
-![](/images/png/CJ_TM_03.png){#fig-CJ_TM_03 width=45%}
+<!-- ![](/images/png/CJ_TM_03.png){#fig-CJ_TM_03 width=45%} -->
 
 ![](/images/png/CJ_TM_04.png){#fig-CJ_TM_04 width=45%}
 
@@ -375,13 +374,13 @@ without loosing generality, the (latent) "perceived" and "true" discriminal proc
 
 ![](/images/png/CJ_TM_05.png){#fig-CJ_TM_05 width=44%}
 
-![](/images/png/CJ_TM_06.png){#fig-CJ_TM_06 width=59%}
+<!-- ![](/images/png/CJ_TM_06.png){#fig-CJ_TM_06 width=59%} -->
 
-![](/images/png/CJ_TM_07.png){#fig-CJ_TM_07 width=68%}
+<!-- ![](/images/png/CJ_TM_07.png){#fig-CJ_TM_07 width=68%} -->
 
-![](/images/png/CJ_TM_08.png){#fig-CJ_TM_08 width=68%}
+<!-- ![](/images/png/CJ_TM_08.png){#fig-CJ_TM_08 width=68%} -->
 
-![](/images/png/CJ_TM_09.png){#fig-CJ_TM_09 width=68%}
+<!-- ![](/images/png/CJ_TM_09.png){#fig-CJ_TM_09 width=68%} -->
 
 ![](/images/png/CJ_TM_10.png){#fig-CJ_TM_10 width=68%}
 
@@ -389,11 +388,11 @@ without loosing generality, the (latent) "perceived" and "true" discriminal proc
 
 
 
-### The sample-comparison model {#sec-theory-theoretical_SC}
+## The sample-comparison model {#sec-theory-theoretical_SC}
 
 Considering the sampling mechanism
 
-![](/images/png/CJ_TM_11.png){#fig-CJ_TM_11 width=80%}
+<!-- ![](/images/png/CJ_TM_11.png){#fig-CJ_TM_11 width=80%} -->
 
 ![](/images/png/CJ_TM_12.png){#fig-CJ_TM_12 width=80%}
 
@@ -401,7 +400,7 @@ Considering the sampling mechanism
 
 Considering comparison mechanisms
 
-![](/images/png/CJ_TM_13.png){#fig-CJ_TM_13 width=90%}
+<!-- ![](/images/png/CJ_TM_13.png){#fig-CJ_TM_13 width=90%} -->
 
 ![](/images/png/CJ_TM_14.png){#fig-CJ_TM_14 width=90%}
 
@@ -412,14 +411,17 @@ Considering comparison mechanisms
 
 
 
-## From theory to statistics {#sec-theory-statistics}
+# From theory to statistics {#sec-statistical}
+
+<!-- Second, @sec-theory-statistics uses *Bayesian inference methods* to convert these theoretical and practical elements into a statistical model that supports the analysis of paired comparison data. -->
+
 
 <!-- recording: Sven 24.10.04; time: 00:46:00 - 01:01:00 -->
 <!-- recording: Sven and Tine 24.11.25; time: 00:24:50 - 00:30:35 -->
 <!-- recording: Sven and Tine 24.11.25; time: 00:49:30 - 00:53:30 -->
 
 <!-- 2. What are the benefits of Bayesian inference?-->
-Bayesian inference procedures offer three key advantages. First, they are well-suited to handling complex and overparameterized models, enabling researchers to estimate models where the number of parameters exceeds the number of observations for estimation [@Baker_1998; @Kim_et_al_1999]. Second, they allow researchers to incorporate prior information, which helps constrain parameters within specified bounds. This capability addresses challenges such as non-convergence or improper parameter estimation that often arise in complex models when analyzed with frequentist methods [@Martin_et_al_1975; @Seaman_et_al_2011]. Finally, Bayesian methods are particularly effective at drawing inferences from small sample sizes, where relying on the asymptotic properties of frequentist approaches may not be justified [@Baldwin_et_al_2013; @Lambert_et_al_2006; @Depaoli_2014].
+<!-- Bayesian inference procedures offer three key advantages. First, they are well-suited to handling complex and overparameterized models, enabling researchers to estimate models where the number of parameters exceeds the number of observations for estimation [@Baker_1998; @Kim_et_al_1999]. Second, they allow researchers to incorporate prior information, which helps constrain parameters within specified bounds. This capability addresses challenges such as non-convergence or improper parameter estimation that often arise in complex models when analyzed with frequentist methods [@Martin_et_al_1975; @Seaman_et_al_2011]. Finally, Bayesian methods are particularly effective at drawing inferences from small sample sizes, where relying on the asymptotic properties of frequentist approaches may not be justified [@Baldwin_et_al_2013; @Lambert_et_al_2006; @Depaoli_2014]. -->
 
 
 <!-- Statements about the real world from observed data require assumptions. This is true no matter what kind of data we have, and it is explicitly also true for statements based on data stemming from SRSg. The validity of our statements therefore critically hinges on the validity of those assumptions. If our statistical assumptions are wrong for the analysis at hand, the inferential statements will be incorrect no matter how sophisticated the statistical methods are [@Kohler_et_al_2019, pp. 150] -->
@@ -535,26 +537,27 @@ E[Y_{i} \cond T_{i}=1] - E[Y_{i} \cond T_{i}=2]
 $$ {#eq-group_diff}
 
 <!-- 2. What do they do next? -->
-Researchers would then proceed to identify the estimands. *Identification* determines whether an estimator can accurately compute an estimand based on its assumptions, regardless of random variability [@Schuessler_et_al_2023, pp. 4]. An *estimator* is a method or function that transforms data into an estimate [@Neal_2020]. *Estimates* are numerical values that approximate the estimand, and they are derived through *estimation*, referring to the process of integrating data with an estimator [@Everitt_et_al_2010]. The Identification-Estimation flowchart [@McElreath_2020; @Neal_2020] in @fig-IEflow provides a visual representation of the process of transitioning from estimands to estimates. 
+Ideally, researchers then proceed to identify the estimands. *Identification* determines whether an estimator can accurately compute the estimand based solely on its assumptions, regardless of random variability [@Schuessler_et_al_2023, pp. 4]. Identification is crucial because if an estimator cannot reliably compute an estimand using "infinite" and error-free data, it is impossible to gain meaningful insights about that estimand using finite data [@Schuessler_et_al_2023, pp. 5]. An *estimator* refers to a method or function that transforms data into an estimate [@Neal_2020]. *Estimates* are numerical values that approximate the estimand derived through the process of *estimation*, which integrates data with an estimator [@Everitt_et_al_2010]. The Identification-Estimation flowchart [@McElreath_2020; @Neal_2020], shown in @fig-IEflow, visually represents the transition from estimands to estimates.
 
 <!-- The main reason to focus on identification is that if these parameters cannot be identified using "infinite" and error free data, we certainly cannot learn anything about it using finite data. So, for the time being, we assume large samples and error-free measurements [@Schuessler_et_al_2023, pp. 5]. -->
 
 <!-- The causal assumptions encoded in a DAG constitute the theoretical model on which identification analysis rests. Identification analysis is concerned with determining whether or not the true value of a parameter can be estimated using the assumptions in the model (graph), regardless of random variability in the data due to small samples [@Schuessler_et_al_2023, pp. 4]. -->
 
-<!-- The main reason to focus on identification is that if these parameters cannot be identified using "infinite" and error free data, we certainly cannot learn anything about it using finite data. So, for the time being, we assume large samples and error-free measurements [@Schuessler_et_al_2023, pp. 5].  -->
-
 
 ![ Identification-Estimation flowchart. Extracted and slightly modified from @Neal_2020 [pp. 32] ](images/png/IEflow.png){#fig-IEflow fig-align="center" width=35%}
 
+
 <!-- 3. But, what do we need to produce a good estimate? -->
-While numerous estimators can approximate an estimand, researchers prioritize estimators with desirable identification properties that ensure the accuracy of estimates. For instance, the Z-test is an estimator known for its effectiveness when comparing groups' proportions, yielding accurate estimates when the underlying assumptions of the statistic are met [@Kanji_2006]. If this is the case, the Z-test is expressed as a signal-to-noise statistic $Z = (\hat{p}_{1} - \hat{p}_{2})/ \hat{s}_{p}$. The signal is defined as the difference between the groups' sample proportions, $\hat{p}_{1} = \sum_{i=1}^{n_{1}}{Y_{i}/n_{1}}$ and $\hat{p}_{2} = \sum_{i=1}^{n_{2}}{Y_{i}/n_{2}}$, analogous to $E[Y_{i} \cond T_{i}=1]$ and $E[Y_{i} \cond T_{i}=2]$, respectively. The noise, represented by $\hat{s}_{p}$, is defined as the unpooled sample variability observed between the two groups. 
+Consequently, although many estimators can approximate an estimand, researchers prioritize those with desirable identification properties to ensure accurate and reliable estimates. For instance, the Z-test is a widely used estimator for comparing group proportions, providing accurate estimates when its underlying assumptions are satisfied [@Kanji_2006]. Moreover, researchers can interpret the Z-test estimates as causal, provided they collect the data through a randomized experiment.
+
+<!-- If both assumptions are met, the Z-test is expressed as a signal-to-noise statistic $Z = (\hat{p}_{1} - \hat{p}_{2})/ \hat{s}_{p}$. The signal is defined as the difference between the groups' sample proportions, $\hat{p}_{1} = \sum_{i=1}^{n_{1}}{Y_{i}/n_{1}}$ and $\hat{p}_{2} = \sum_{i=1}^{n_{2}}{Y_{i}/n_{2}}$, analogous to $E[Y_{i} \cond T_{i}=1]$ and $E[Y_{i} \cond T_{i}=2]$, respectively. The noise, represented by $\hat{s}_{p}$, is defined as the unpooled sample variability observed between the two groups.  -->
 
 <!-- the BTL model [@Bradley_et_al_1952; @Luce_1959] is an estimator known for its effectiveness in modeling pairwise comparisons, yielding accurate estimates for the comparison of two groups, as long as the assumptions of the model are met. Usually these estimates are expressed in terms of the proportions of groups  -->
 
-<!-- 4. But we want these estimands to be causal -->
-However, researchers often seek to uncover the mechanisms underlying specific data and establish causal relationships rather than simply estimate associations. In the example, researchers can interpret the associational estimand in @eq-group_diff and the associational estimate represented by the Z-statistic as causal. This interpretation is valid as long as the data satisfy the assumptions of the Z-test and are collected through a randomized experiment.
+<!-- However, researchers often seek to uncover the mechanisms underlying specific data and establish causal relationships rather than simply estimate associations. -->
 
-Randomized experiments are widely recognized as the gold standard in evidence-based science [@Hariton_et_al_2018; @Hansson_2014]. This recognition stems from their ability to enable researchers interpret associational estimates as causal. They achieve this by ensuring data, and by extension an estimator, satisfies several key properties, such as common support, no interference, and consistency [@Morgan_et_al_2014; @Neal_2020]. The most critical property, however, is the elimination of confounding. *Confounding* occurs when an external variable $X$ simultaneously influences the outcome $Y$ and the variable of interest $T$, resulting in spurious associations [@Everitt_et_al_2010]. Randomization addresses this issue by decoupling the association between the intervention allocation $T$ from any other variable $X$ [@Morgan_et_al_2014; @Neal_2020].
+<!-- 4. Why does causality stem from randomize experiments? -->
+Randomized experiments are widely recognized as the gold standard in evidence-based science [@Hariton_et_al_2018; @Hansson_2014]. This recognition stems from their ability to enable researchers interpret associational estimates as causal. They achieve this by ensuring data, and by extension an estimator, satisfies several key identification properties, such as common support, no interference, and consistency [@Morgan_et_al_2014; @Neal_2020]. The most critical property, however, is the elimination of confounding. *Confounding* occurs when an external variable $X$ simultaneously influences the outcome $Y$ and the variable of interest $T$, resulting in spurious associations [@Everitt_et_al_2010]. Randomization addresses this issue by decoupling the association between the intervention allocation $T$ from any other variable $X$ [@Morgan_et_al_2014; @Neal_2020].
 
 <!-- 5. Experiments are not available to everyone, then causal inference comes to the rescue -->
 Nevertheless, researchers often face constraints that limit their ability to conduct randomized experiments. These constraints include ethical concerns, such as the assignment of individuals to potentially harmful interventions, and practical limitations, such as the infeasibility of, for example, assigning individuals to genetic modifications or physical impairments [@Neal_2020]. In these cases, causal inference offers a valuable alternative for generating causal estimates and understanding the mechanisms underlying specific data. In addition, the framework can provide significant theoretical insights that can enhance the design of experimental and observational studies [@McElreath_2020]. 
@@ -624,7 +627,10 @@ $$ {#eq-mACE_cont}
 ### Diving into the specifics {#sec-appendix-B2 .appendix appendix-style=plain}
 
 <!-- 1. The benefits of SCMs and DAGs -->
-The structural approach to causal inference uses SCMs and DAGs to formally and graphically represent the presumed causal structure underlying the ACE [@Pearl_2009; @Pearl_et_al_2016; @Gross_et_al_2018; @Neal_2020]. Essentially, SCMs and DAGs serve as *conceptual (theoretical) models* that facilitate valid causal inference. They achieve this by helping researchers to determine which statistical models can identify an estimand (ACE, CACE, or other), assuming the depicted causal structure is correct [@McElreath_2020]. @fig-IEflow shows the role of theoretical models in the inference process.
+The structural approach to causal inference uses SCMs and DAGs to formally and graphically represent the presumed causal structure underlying the ACE [@Pearl_2009; @Pearl_et_al_2016; @Gross_et_al_2018; @Neal_2020]. Essentially, these tools serve as *conceptual (theoretical) models* on which identification analysis rests [@Schuessler_et_al_2023, pp. 4]. Specifically, they guide researchers in determining which statistical models can identify an estimand (ACE, CACE, or other), assuming the depicted causal structure is correct [@McElreath_2020], thus enabling valid causal inference. @fig-IEflow shows the role of theoretical models in the inference process.
+
+<!-- The causal assumptions encoded in a DAG constitute the theoretical model on which identification analysis rests. Identification analysis is concerned with determining whether or not the true value of a parameter can be estimated using the assumptions in the model (graph), regardless of random variability in the data due to small samples [@Schuessler_et_al_2023, pp. 4]. -->
+
 
 SCMs and DAGs support causal inference through two key advantages. First, regardless of complexity, they can represent various causal structures using only five fundamental building blocks [@Neal_2020; @McElreath_2020]. This feature allows researchers to decompose complex structures into manageable components, facilitating their analysis [@McElreath_2020]. Second, they depict causal relationships in a non-parametric and fully interactive way. This flexibility enables feasible ACE identification strategies without defining the variables' data types, the functional form between them, or their parameters [@Pearl_et_al_2016, pp. 35]. 
 
