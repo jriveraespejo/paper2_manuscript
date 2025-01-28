@@ -83,6 +83,8 @@ bibliography: references.bib
 <!-- recording: Sven 24.10.04; time: 00:14:30 - 00:21:00 -->
 <!-- recording: Sven and Tine 24.10.18; time: 00:04:05 - 00:08:30 -->
 <!-- recording: Sven and Tine 24.10.25; time: 00:00:00 - 00:17:00 -->
+<!-- recording: Sven and Tine 24.10.25; time: 00:00:00 - 00:17:00 -->
+<!-- recording: Sven and Tine 25.01.22; time: 00:06:30 - 00:08:25 -->
 
 <!-- 1. Overview of CJ method in assessing traits -->
 In *comparative judgment* (CJ) studies, judges assess a specific trait or attribute across different stimuli by performing pairwise comparisons [@Thurstone_1927a; @Thurstone_1927b]. Each comparison produces a dichotomous outcome, indicating which stimulus is perceived to have a higher trait level. For example, when assessing writing quality, judges compare pairs of written texts (the stimuli) to determine the relative writing quality each text exhibit (the trait) [@Laming_2004; @Pollitt_2012b; @Whitehouse_2012; @vanDaal_et_al_2016; @Lesterhuis_2018_thesis; @Coertjens_et_al_2017; @Goossens_et_al_2018; @Bouwer_et_al_2023].
@@ -98,10 +100,11 @@ Numerous studies have documented the effectiveness of CJ in assessing traits and
 <!-- Adaptive comparison algorithms dynamically present stimuli to judges, based on the results of previous comparisons. They aim to enhance the informativeness of comparisons while optimizing judges' time [@Bramley_2015].  -->
 
 <!-- 3. But what critical issues remain in CJ Research? -->
-Nevertheless, despite the increasing number of studies on CJ, research in this domain remains unsystematic and fragmented, leaving several critical issues unresolved. This study addresses two prominent issues in CJ literature that can undermine the reliability and validity of CJ's trait estimates. The first problem concerns the overreliance on Thurstone's Case V assumptions in the statistical analysis of CJ data. The second involves the apparent disconnect between CJ's approach to trait measurement and hypothesis testing.
+Nevertheless, despite the increasing number of CJ studies, research in this domain remains unsystematic and fragmented, leaving several critical issues unresolved. This study discusses two prominent issues that can compromise the reliability and validity of CJ's trait estimates. The first issue concerns the overreliance on Thurstone's Case V assumptions in the statistical analysis of CJ data. The second involves the apparent disconnect between CJ's approach to trait measurement and hypothesis testing. The study then addresses these challenges by adopting a more systematic and integrated approach grounded in causal inference and Bayesian inference methods.
 
 <!-- 4. what is the organization of the study? -->
-The study is organized into six main sections. An overview of Thurstone's theory is presented in @sec-thurstone_theory, followed by a detailed examination of the identified issues in @sec-theory-issues. In @sec-theoretical, the study proposes a theoretical model for CJ that addresses these challenges. The model incorporates Thurstone's core principles alongside key assessment design features relevant to CJ experiments, such as judges, stimuli, and comparison selections. In @sec-statistical, these practical and theoretical considerations are translated into a statistical model for the analysis of pairwise comparison data. Finally, @sec-discussion explores the implications of the study's findings and the avenues for future exploration, and @sec-conclusion provides a summary of the key insights.
+As a result, the study divides its content into six main sections. @sec-thurstone_theory provides an overview of Thurstone's theory. @sec-theory-issues discusses the identified issues in detail. @sec-theoretical updates the Thurstonian model to address these challenges. The model integrates the theoretical core principles alongside key assessment design features relevant to CJ experiments, such as the selection of judges, stimuli, and comparisons. @sec-statistical translates these theoretical and practical elements into a probabilistic statistical model for the analysis of pairwise comparison data. @sec-discussion discusses the implications of the findings and explores avenues for future research. Finally, @sec-conclusion summarizes the study's key insights.
+
 
 
 # Thurstone's theory {#sec-thurstone_theory}
@@ -139,7 +142,7 @@ However, since the individual discriminal processes of the stimuli are not direc
 
 # Two prominent issues in CJ literature {#sec-theory-issues}
 
-This section discusses the two prominent issues in CJ literature that can undermine the reliability and validity of CJ's trait estimates. @sec-theory-issue1 examines the overreliance on Thurstone's Case V assumptions in the statistical analysis of CJ data. @sec-theory-issue2 focuses on the apparent disconnect between CJ's approach to trait measurement and hypothesis testing.
+This section discusses the two prominent issues that can undermine the reliability and validity of CJ's trait estimates. @sec-theory-issue1 examines the overreliance on Thurstone's Case V assumptions in the statistical analysis of CJ data. @sec-theory-issue2 focuses on the apparent disconnect between CJ's approach to trait measurement and hypothesis testing.
 
 ## The Case V and the statistical analysis of CJ data {#sec-theory-issue1}
 
@@ -191,7 +194,7 @@ However, Thurstone originally developed Case V to provide a "rather coarse scali
 <!-- recording: Sven and Tine 24.12.17; time: 00:06:10 - 00:08:50 -->
 
 <!-- 1. What does the equal dispersion between stimuli imply? -->
-According to the theory, discrepancies in the discriminal dispersions of stimuli shape the distribution of the discriminal difference, exerting a direct influence on the outcome of pairwise comparisons. A thought experiment can illustrate this idea. In this experiment, the researcher can observe the discriminal processes for the texts depicted in @fig-discriminal_process. Furthermore, the experiment assumes that the discriminal dispersion for Text A remains constant and that the texts are uncorrelated $(\rho=0)$. In this scenario, @fig-dispersion reveals that an increase in the uncertainty associated with the perception of Text B in comparison to Text A, $(\sigma_{B}-\sigma_{A})$, broadens the distribution of their discriminal difference. This broadening affects the probability area where the discriminal difference distinctly favors Text B over Text A, expressed as $P(B > A)$, ultimately influencing the comparison outcome. Additionally, the figure reveals that when the discriminal dispersions of the texts are equal $(\sigma_{B}-\sigma_{A}=0)$, the discriminal difference is more likely to favor Text B over Text A (shaded gray area), compared to situations where their dispersions differ.
+According to the theory, discrepancies in the discriminal dispersions of stimuli shape the distribution of the discriminal difference, exerting a direct influence on the outcome of pairwise comparisons. A thought experiment can illustrate this concept. In this experiment, the researcher observes the discriminal processes for the texts depicted in @fig-discriminal_process. Furthermore, the experiment assumes that the discriminal dispersion for Text A remains constant and that the texts are uncorrelated $(\rho=0)$. In this scenario, @fig-dispersion reveals that an increase in the uncertainty associated with the perception of Text B in comparison to Text A, $(\sigma_{B}-\sigma_{A})$, broadens the distribution of their discriminal difference. This broadening affects the probability area where the discriminal difference distinctly favors Text B over Text A, expressed as $P(B > A)$, ultimately influencing the comparison outcome. Additionally, the figure reveals that when the discriminal dispersions of the texts are equal $(\sigma_{B}-\sigma_{A}=0)$, the discriminal difference is more narrow compared to situations where their dispersions differ. Consequently, the discriminal difference is more likely to favor Text B over Text A (shaded gray area)
 
 ::: {#fig-caseV_issues layout-ncol=2}
 
@@ -229,7 +232,7 @@ However, Thurstone argued that the assumption of equal dispersions may not be ap
 <!-- a misfit statistic. Essentially this reports the amount of inconsistency in the various judgements that have been made of that script. It can act as a flag identifying scripts that judges find difficult to judge [@Pollitt_2004, pp. 12] -->
 
 <!-- 4. So, what happens when the assumption does not hold? -->
-Thus, model misspecification, in the form of an erroneous assumption of equal dispersions between stimuli, can give rise to significant statistical and measurement issues. For instance, the model may overestimate the degree to which the outcome accurately reflects the "true" discriminal differences between stimuli. This overestimation can result in researchers drawing spurious conclusions about these differences [@McElreath_2020, pp. 370] and, by extension, about the underlying discriminal processes of stimuli. @fig-dispersion also illustrates this issue when the model's discriminal difference distribution aligns with the thick continuous line for $\sigma_{B}-\sigma_{A}=0$, while the "true" discriminal difference follows any discontinuous line where $\sigma_{B}-\sigma_{A} \neq 0$. Additionally, if researchers recognize that misfit statistics highlight these critical differences in dispersions, the conventional CJ practice of excluding stimuli based on these statistics [@Pollitt_2012a; @Pollitt_2012b; @vanDaal_et_al_2016; @Goossens_et_al_2018] can unintentionally discard valuable information, introducing bias into trait estimates [@Zimmerman_1994; @McElreath_2020, chap. 12]. The direction and magnitude of these biases are often unpredictable, as they depend on which stimuli are excluded from the analysis.
+Thus, erroneously assuming equal dispersions between stimuli, can give rise to significant statistical and measurement issues. For instance, the model may overestimate the degree to which the outcome accurately reflects the "true" discriminal differences between stimuli. This overestimation can result in researchers drawing spurious conclusions about these differences [@McElreath_2020, pp. 370] and, by extension, about the underlying discriminal processes of stimuli. @fig-dispersion also illustrates this issue when the model's discriminal difference distribution aligns with the thick continuous line for $\sigma_{B}-\sigma_{A}=0$, while the "true" discriminal difference follows any discontinuous line where $\sigma_{B}-\sigma_{A} \neq 0$. Additionally, if researchers recognize that misfit statistics highlight these critical differences in dispersions, the conventional CJ practice of excluding stimuli based on these statistics [@Pollitt_2012a; @Pollitt_2012b; @vanDaal_et_al_2016; @Goossens_et_al_2018] can unintentionally discard valuable information, introducing bias into trait estimates [@Zimmerman_1994; @McElreath_2020, chap. 12]. The direction and magnitude of these biases are often unpredictable, as they depend on which stimuli are excluded from the analysis.
 
 <!-- Moreover, excluding data using ad hoc univariate procedures can compound these issues by discarding potentially valuable information, further exacerbating the bias [@Zimmerman_1994; @McElreath_2020] -->
 
@@ -241,17 +244,17 @@ Thus, model misspecification, in the form of an erroneous assumption of equal di
 <!-- recording: Sven and Tine 24.12.17; time: 00:08:50 - 00:10:30 -->
 
 <!-- 1. What does the zero correlation between stimuli imply? -->
-The correlation, represented by the symbol $\rho$, measures how much a judge's perception of a specific trait in one stimulus depends on their perception of the same trait in another. As with the discriminal dispersions, this correlation shapes the distribution of the discriminal difference, directly impacting the outcomes of pairwise comparisons. A similar thought experiment, as the one in @sec-theory-issue1a, can illustrate this idea. The experiment now assumes that the discriminal dispersions for both texts remain constant. @fig-correlation reveals that as the correlation between the texts increases, the distribution of their discriminal difference becomes narrower. This narrowing affects the area under the curve where the discriminal difference distinctly favors Text B over Text A, denoted as $P(B > A)$, thus influencing the comparison outcome. Furthermore, the figure shows that when two texts are independent or uncorrelated $(\rho=0)$, their discriminal difference is less likely to favor Text B over Text A (shaded gray area) compared to scenarios where the texts are highly correlated.
+The correlation, represented by the symbol $\rho$, measures how much a judge's perception of a specific trait in one stimulus depends on their perception of the same trait in another. As with the discriminal dispersions, this correlation shapes the distribution of the discriminal difference, directly impacting the outcomes of pairwise comparisons. A similar thought experiment, as the one in @sec-theory-issue1a, can illustrate this concept. The experiment now assumes that the discriminal dispersions for both texts remain constant. @fig-correlation reveals that as the correlation between the texts increases, the distribution of their discriminal difference becomes narrower. This narrowing affects the area under the curve where the discriminal difference distinctly favors Text B over Text A, denoted as $P(B > A)$, thus influencing the comparison outcome. Furthermore, the figure shows that when two texts are independent or uncorrelated $(\rho=0)$, their discriminal difference is less narrow compared to scenarios where the texts are highly correlated. Consequently, the discriminal difference is less likely to favor Text B over Text A (shaded gray area).
 
 <!-- "It is a safe assumption that when the stimulus series is very homogeneous with no distracting attributes, the correlation between discriminal deviations is low and possible even zero" [@Thurstone_1927b, pp. 268]. -->
 
 <!-- 2. But this is not the scenario we observe -->
-Off course, in experimental practice, researchers approach this process in reverse. They begin by observing the sample of outcomes favoring Text B over Text A and then use the BTL model to estimate the discriminal difference and the discriminal processes of the stimuli. Given that the BTL model assumes independent discriminal processes across comparisons, if this assumption holds, then the model estimates a discriminal difference distribution that accurately reflects the "true" discriminal difference of the texts. This scenario is also illustrated in @fig-correlation when the discriminal difference distribution of the model aligns with the "true" distribution, represented by the thick continuous line corresponding to $\rho=0$. Once more, the estimation accuracy of the discriminal difference ensures reliable estimates for the discriminal processes of the texts [(citation needed?)]{style="color:red;"}.
+Again, in experimental practice, researchers approach this process in reverse. They begin by observing the sample of outcomes favoring Text B over Text A and then use the BTL model to estimate the discriminal difference and the discriminal processes of the stimuli. Given that the BTL model assumes independent discriminal processes across comparisons, if this assumption holds, then the model estimates a discriminal difference distribution that accurately reflects the "true" discriminal difference of the texts. This scenario is also illustrated in @fig-correlation when the discriminal difference distribution of the model aligns with the "true" distribution, represented by the thick continuous line corresponding to $\rho=0$. Once more, the accuracy of the discriminal difference ensures reliable estimates for the discriminal processes of the texts [(citation needed?)]{style="color:red;"}.
 
 <!-- It then follows that the outcome's ability to represent the "true" differences between stimuli largely depends on the validity of the assumption of zero correlation. -->
 
 <!-- 2. But does it hold?  -->
-Notably, Thurstone attributed the lack of correlation (independence) between stimuli to the cancellation of potential judges' biases. He argued that this cancellation resulted from two opposing and equally weighted effects occurring during pairwise comparisons [@Thurstone_1927b, pp. 268]. @Andrich_1978 provided a mathematical demonstration of this cancellation using the BTL model under the assumption of discriminal processes with additive biases. However, it is easy to imagine at least two scenarios in which the zero correlation assumption is almost certainly invalid: when the pairwise comparison involves multidimensional, complex traits with heterogeneous stimuli and when an additional hierarchical structure is relevant to the stimuli.
+Notably, Thurstone attributed the lack of correlation between stimuli to the cancellation of potential judges' biases. He argued that this cancellation resulted from two opposing and equally weighted effects occurring during pairwise comparisons [@Thurstone_1927b, pp. 268]. @Andrich_1978 provided a mathematical demonstration of this cancellation using the BTL model under the assumption of discriminal processes with additive biases. However, it is easy to imagine at least two scenarios in which the zero correlation assumption is almost certainly invalid: when the pairwise comparison involves multidimensional, complex traits with heterogeneous stimuli and when an additional hierarchical structure is relevant to the stimuli.
 
 <!-- 3. The first scenario where the assumption does not hold -->
 In the first scenario, the intricate aspects of multidimensional, complex traits may introduce dependencies between the stimuli due to certain judges' biases that resist cancellation. Research on text quality suggests that when judges evaluate these traits, they often rely on various intricate characteristics of the stimuli to form their judgments [@vanDaal_et_al_2016; @Lesterhuis_2018; @Chambers_et_al_2022]. These additional relevant characteristics, which are unlikely to be equally weighted or opposing, can exert an uneven influence on judges' perceptions, creating biases in their judgments and, ultimately, introducing dependencies between stimuli [@vanderLinden_et_al_2017_II, pp. 346]. For example, this could occur when a judge assessing the argumentative quality of a text places more weight on its grammatical accuracy than other judges, thereby favoring texts with fewer errors but weaker arguments. While direct evidence for this particular scenario is lacking, studies such as @Pollitt_et_al_2003 demonstrate the presence of such biases, supporting the notion that the factors influencing pairwise comparisons may not always cancel out.
@@ -266,9 +269,9 @@ In the second scenario, the shared context or inherent connections created by ad
 <!-- no study explicitly proposes that this assumption could also be violated due to the presence of an additional hierarchical (grouping) structure relevant to the texts. One such scenario might arise, for example, when comparing texts produced by university and secondary school students. In this case, university students may consistently (or more precisely) produce higher-quality texts, while secondary school students, who exhibit a broader range of writing abilities, would show greater variability in the quality of their texts. Although this example is somewhat contrived, it effectively illustrates how assuming equal dispersions across texts can overlook meaningful differences in the reliability of text quality across groups or individuals. -->
 
 <!-- 5. But what are the challenges when this assumption is violated? -->
-In any case, similar to @sec-theory-issue1a, model misspecification due to an erroneous assumption of zero correlation between stimuli can lead to significant statistical and measurement issues. For instance, the model may over- or underestimate how accurately the outcome reflects the "true" discriminal differences between stimuli. Such inaccuracies can result in spurious inferences about these differences and, by extension, about the stimuli's discriminal processes. This scenario is also illustrated by @fig-correlation, when the model's discriminal difference distribution aligns with the thick continuous line for $\rho=0$, while the "true" discriminal difference follows any discontinuous line where $\rho \neq 0$.
+In any case, similar to @sec-theory-issue1a, assuming zero correlation between stimuli by neglecting additional relevant traits, excluding judges based on misfit statistics, or ignoring hierarchical (grouping) structures can cause significant statistical and measurement issues. In general, the model may over- or underestimate how accurately the outcome reflects the "true" discriminal differences between stimuli. Such inaccuracies can result in spurious inferences about these differences and, by extension, about the stimuli's discriminal processes. This scenario is illustrated by @fig-correlation, when the model's discriminal difference distribution aligns with the thick continuous line for $\rho=0$, while the "true" discriminal difference follows any discontinuous line where $\rho \neq 0$. 
 
-The model misspecification may arise from neglecting additional relevant traits, excluding judges based on misfit statistics, or ignoring hierarchical (grouping) structures. Neglecting relevant traits, such as judges' biases, can cause dimensional mismatches in the BTL model, artificially inflating the trait's reliability [@Hoyle_et_al_2023, pp. 341] or, worse, introducing bias into the trait's estimates [@Ackerman_1989]. Excluding judges based on misfit statistics risks discarding valuable information, which may further bias the trait's estimates [@Zimmerman_1994; @McElreath_2020, chap. 12]. Finally, ignoring hierarchical structures may reduce the precision of model parameter estimates, potentially overestimating the trait's reliability [@Hoyle_et_al_2023, pp. 482].
+In particular, neglecting relevant traits, such as judges' biases, can cause dimensional mismatches in the BTL model, artificially inflating the trait's reliability [@Hoyle_et_al_2023, pp. 341] or, worse, introducing bias into the trait's estimates [@Ackerman_1989]. Excluding judges based on misfit statistics risks discarding valuable information, which may further bias the trait's estimates [@Zimmerman_1994; @McElreath_2020, chap. 12]. Finally, ignoring hierarchical structures may reduce the precision of model parameter estimates, potentially overestimating the trait's reliability [@Hoyle_et_al_2023, pp. 482].
 
 <!-- To show the practical consequences, in Figure 18.1, we present the test information for the two models; clearly, the information is positively biased when the multidimensional data are forced into a unidimensional IRT model. Moreover, in this same figure, we show the test response curves (how expected scores change as a function of trait level) for the two models; again, they, clearly, are not overlapping. The estimated implication is that if one applied a unidimensional IRT model, psychometric information is inflated due to the multidimensionality and examinee standard errors, which are the inverse square root of information, are too small. [@Hoyle_et_al_2023, pp. 340-341] -->
 
@@ -293,7 +296,7 @@ However, the statistical literature advises caution when using estimated scores 
 <!-- A type-I error occurs when a *true* null hypothesis is incorrectly rejected, while a type-II error occurs when a *false* null hypothesis is incorrectly accepted [@Everitt_et_al_2010]. -->
 
 <!-- 4. segway for next section -->
-In aggregate, researchers' overreliance on Thurstone's Case V assumptions in the statistical analysis of CJ data can compromise the reliability of CJ's trait estimates. This overreliance, coupled with the apparent disconnect between CJ's approach to trait measurement and hypothesis testing, may also undermine the validity of these estimates [@Perron_et_al_2015, pp. 2]. Consequently, addressing these issues and examining the factors influencing CJ experiments by adopting a more systematic and integrated approach could offer several statistical and measurement benefits.
+In aggregate, the overreliance on Thurstone's Case V assumptions in the statistical analysis of CJ data can compromise the reliability of CJ's trait estimates. This overreliance, coupled with the apparent disconnect between CJ's approach to trait measurement and hypothesis testing, may also undermine the validity of these estimates [@Perron_et_al_2015, pp. 2]. Consequently, addressing these issues by adopting a more systematic and integrated approach could offer several statistical and measurement benefits.
 
 
 <!-- Reliability is a necessary but not sufficient condition for validity. Reliability can exist without validity but validity cannot exist without reliability [@Perron_et_al_2015, pp. 2]. -->
@@ -309,34 +312,42 @@ In aggregate, researchers' overreliance on Thurstone's Case V assumptions in the
 
 
 
-# Updating the theoretical model {#sec-theoretical}
+# Extending Thurstone's model {#sec-theoretical}
 
-<!-- This study examines two such problems that can compromise the reliability and validity of CJ's trait estimates. -->
+<!-- recording: Sven and Tine 25.01.22; time: 00:05:40 - 00:06:30 -->
+<!-- recording: Sven and Tine 25.01.22; time: 00:08:25 - 00:31:56 -->
 
-<!-- This section aims to refine CJ's theoretical model using the *structural approach* to causal inference with the purpose of addressing the two.  -->
+<!-- 1. What the section will do? -->
+This section addresses the challenges outlined in @sec-theory-issues by leveraging the structural approach to causal inference to extend Thurstone's model. The extension combines the core theoretical principles from @sec-thurstone_theory with several key assessment design features relevant to CJ experiments, such as the selection of judges, stimuli, and comparisons. Specifically, @sec-theory-theoretical_P incorporates the theoretical principles into a *conceptual-population model*. Conversely, @sec-theory-theoretical_SC integrates the assessment design features into a *sample-comparison model*. Combining these elements helps to elucidate how all actors and processes interact during CJ experiments.
 
-<!-- This approach, as outlined in @sec-theory-theoretical, defines a model that integrates the core principles of Thurstone's theory, as well as other key assessment design features relevant to CJ experiments, such as the selection of judges, stimuli, and the number of comparisons.  -->
+<!-- Generalizability is the degree to which you can apply the results of your study to a broader context.  -->
+<!-- https://www.scribbr.com/research-bias/generalizability/ -->
+
+<!-- A theoretical model is a framework that researchers create to structure a study process and plan how to approach a specific research inquiry. It can allow you to define the purpose of your research and develop an informed perspective. Creating a theoretical model typically involves analyzing a subject's literature, including previous research studies and journal articles. Researchers often include a written description of a theoretical model in a beginning section of a dissertation or similar document so a reader can gain more context. -->
+<!-- url: https://www.indeed.com/career-advice/career-development/theoretical-model -->
+
+
+<!-- 2. The structural approach to causal inference -->
+The *structural approach* to causal inference provides a formal framework for identifying causes and estimating their effects using data. This approach uses structural causal models (SCMs) and directed acyclic graphs (DAGs) [@Pearl_2009; @Pearl_et_al_2016; @Gross_et_al_2018; @Neal_2020] to formally and graphically represent the assumed causal structure of a system, such as the one found in CJ experiments. Essentially, SCMs and DAGs function as *conceptual models* on which identification analysis rests [@Schuessler_et_al_2023, pp. 4]. Identification analysis helps researchers determine whether an estimator can accurately compute an estimand based solely on its (causal) assumptions, regardless of random variability [@Schuessler_et_al_2023, pp. 4]. Here, *estimands* represent the specific quantities researchers aim to determine [@Everitt_et_al_2010]. *Estimators* denote the methods or functions that transform data into an estimate [@Neal_2020], while *estimates* are the numerical values approximating the estimand. These estimates are obtained through *estimation*, which is the process that integrates data with an estimator [@Everitt_et_al_2010].
+
+<!-- The causal assumptions encoded in a DAG constitute the theoretical model on which identification analysis rests. Identification analysis is concerned with determining whether or not the true value of a parameter can be estimated using the assumptions in the model (graph), regardless of random variability in the data due to small samples [@Schuessler_et_al_2023, pp. 4]. -->
+
+<!-- 4. example of an estimand and an estimator in CJ -->
+For instance, researchers might aim to answer the question: "To what extent do different teaching methods influence students' ability to produce high-quality written texts?" To investigate this, they could design a CJ experiment by randomly assigning students to two groups, each exposed to a different teaching method. Afterward, judges would compare pairs of written texts, generating a dichotomous outcome that reflects the relative quality of each text. In this scenario, researchers can rephrase the research question as the estimand: "*On average*, is there a difference in the ability to produce high-quality written texts between the two groups of students?". Researchers would then use estimates from the BTL model, or its transformations, to approximate this estimand.
+
+<!-- 5. But the estimator does not satisfy minimum identification properties -->
+However, @sec-theory-issues provides compelling evidence that the BTL model suffers from several statistical and measurement issues, including identification problems. These issues ultimately raise concerns about the consistency of the model's estimates. An estimator is *consistent* if it converges to the "true" value of an estimand as the data size approaches infinity [@Everitt_et_al_2010]. Since identification is a prerequisite for consistency, the absence of proper identification means that researchers cannot achieve consistency, even with "infinite" and error-free data. As a result, deriving meaningful insights from finite data also becomes impossible [@Schuessler_et_al_2023, pp. 5].
+
+<!-- The main reason to focus on identification is that if these parameters cannot be identified using "infinite" and error free data, we certainly cannot learn anything about it using finite data. So, for the time being, we assume large samples and error-free measurements [@Schuessler_et_al_2023, pp. 5]. -->
+
+<!-- 5. So, how do SCMs and DAGs support identification? -->
+Luckily, SCMs and DAGs support identification analysis through two key advantages. First, regardless of complexity, they can represent various causal structures using only five fundamental building blocks [@Neal_2020; @McElreath_2020]. This feature allows researchers to decompose complex structures into manageable components, facilitating their analysis [@McElreath_2020]. Second, they depict causal relationships in an interactive, non-parametric manner. This flexibility enables feasible identification strategies without defining the variables' data types, the functional forms, or their parameters [@Pearl_et_al_2016, pp. 35].
 
 <!-- See @sec-appendix for an overview of the statistical and causal inference concepts required for the development of this section. -->
 
 
-<!-- 1. The structural approach to causal inference -->
-<!-- The *structural approach* to causal inference provides a formal framework to identify causes and estimate their effects using data. The approach uses structural causal models (SCMs) and directed acyclic graphs (DAGs) [@Pearl_2009; @Pearl_et_al_2016; @Gross_et_al_2018; @Neal_2020] to formally and graphically represent the assumed causal structure of a system. Essentially, SCMs and DAGs serve as *conceptual (theoretical) models* that facilitate valid causal inference. They achieve this by helping researchers to determine which statistical models can identify an estimand, assuming the depicted causal structure is correct [@McElreath_2020]. *Identification* determines whether an estimator can accurately compute an estimand based on its assumptions, regardless of random variability [@Schuessler_et_al_2023, pp. 4]. -->
 
-<!-- 2. The SCMs -->
-<!-- SCMs are formal mathematical models defined by a set of *endogenous* variables, a set of *exogenous* variables, and a set of functions [@Pearl_2009; @Cinelli_et_al_2020]. Endogenous variables are those whose causal mechanisms a researcher chooses to model [@Neal_2020]. In contrast, exogenous variables represent *errors* or *disturbances* arising from omitted factors that the investigator chooses not to model explicitly [@Pearl_2009, pp. 27,68]. Lastly, the functions, referred to as *structural equations*, express the endogenous variables as non-parametric functions of other variables. These functions use the symbol '$:=$' to denote the asymmetrical causal dependence between variables and the symbol '$\dsep$' to represent *d-separation*, a concept akin to (conditional) independence. -->
-
-<!-- 3. The DAGs -->
-<!-- Notably, every SCM has an associated DAG [@Pearl_et_al_2016; @Cinelli_et_al_2020]. A DAG is a graph consisting of nodes connected by edges, where the nodes represent random variables. The term *directed* means that the edges extend from one node to another, with arrows indicating the direction of causal influence. The term *acyclic* implies that the causal influences do not form loops, ensuring the influences do not cycle back on themselves [@McElreath_2020]. DAGs represent observed variables as solid black circles, while they use open circles for unobserved (latent) variables [@Morgan_et_al_2014]. While the *standard representation* of DAGs typically omits exogenous variables for simplicity, the *magnified representation* includes them, offering offering the advantage of highlighting potential issues related to conditioning and confounding [@Cinelli_et_al_2020]. -->
-
-<!-- 4. The benefits of SCMs and DAGs -->
-<!-- SCMs and DAGs support causal inference through two key advantages. First, regardless of complexity, they can represent various causal structures using only five fundamental building blocks [@Neal_2020; @McElreath_2020]. This feature allows researchers to decompose complex structures into manageable components, facilitating their analysis [@McElreath_2020]. Second, they depict causal relationships in a non-parametric and fully interactive way. This flexibility enables feasible ACE identification strategies without defining the variables' data types, the functional form between them, or their parameters [@Pearl_et_al_2016, pp. 35].  -->
-
-<!-- 5. what are we doing with them? -->
-<!-- Therefore, this section leverages SCMs and DAGs to represent the conceptual population of CJ experiments, referred to as *the population model* in @sec-theory-theoretical_P, and later integrates various assessment design features relevant to CJ experiments. This process leads to the development of *the sample-comparison model* in @sec-theory-theoretical_SC. -->
-
-
-## The conceptual population model {#sec-theory-theoretical_P}
+## The conceptual-population model {#sec-theory-theoretical_P}
 
 <!-- general development -->
 <!-- recording: Sven 24.10.04; time: 00:21:00 - 00:34:10 -->
@@ -345,30 +356,103 @@ In aggregate, researchers' overreliance on Thurstone's Case V assumptions in the
 <!-- recording: Sven and Tine 24.11.25; time: 01:00:00 - 01:08:40 -->
 <!-- recording: Sven and Tine 24.12.17; time: 00:26:10 - 00:54:00 -->
 
-<!-- comparison mechanism as missing mechanism -->
-<!-- recording: Sven 24.10.04; time: 00:09:10 - 00:14:30 -->
-<!-- recording: Sven 24.10.04; time: 00:34:10 - 00:41:00 -->
+<!-- 1. The SCMs -->
+Before integrating the theoretical principles from @sec-thurstone_theory, it is important to define SCMs and DAGs. SCMs are formal mathematical models defined by a set of *endogenous* variables, a set of *exogenous* variables, and a set of functions [@Pearl_2009; @Cinelli_et_al_2020]. Endogenous variables are those whose causal mechanisms a researcher chooses to model [@Neal_2020]. In contrast, exogenous variables represent *errors* or *disturbances* arising from omitted factors that the investigator chooses not to model explicitly [@Pearl_2009, pp. 27,68]. Lastly, the functions, referred to as *structural equations*, express the endogenous variables as non-parametric functions of other variables. These function use the symbol '$:=$' to denote the asymmetrical causal dependence between variables and the symbol '$\dsep$' to represent *d-separation*, a concept akin to (conditional) independence.
 
+<!-- 2. The DAGs -->
+Notably, every SCM has an associated DAG [@Pearl_et_al_2016; @Cinelli_et_al_2020]. A DAG is a graph consisting of nodes connected by edges, where the nodes represent random variables. The term *directed* means that the edges extend from one node to another, with arrows indicating the direction of causal influence. The term *acyclic* implies that the causal influences do not form loops, ensuring the influences do not cycle back on themselves [@McElreath_2020]. DAGs represent observed variables as solid black circles, while they use open circles for unobserved (latent) variables [@Morgan_et_al_2014]. While the *standard representation* of DAGs typically omits exogenous variables for simplicity, the *magnified representation* includes them, offering offering the advantage of highlighting potential issues related to conditioning and confounding [@Cinelli_et_al_2020]. 
 
 <!-- In general terms, causal graphs encode a researcher’s assumptions about the causal process that generated the data in a population of interest [@Schuessler_et_al_2023, pp. 4] -->
 
 
-Assuming population data or more commonly known as census data, we ...
+<!-- 3. The begining -->
+@fig-CJ1 displays CJ's outcome, discriminal difference, discriminal processes and judges' biases assumed by the Thurstone's theory. Notice that in the figure, the structural 
 
-The (latent) discriminal difference of the stimuli directly determines the (manifest) outcome of the pairwise comparisons
 
-The (latent) "perceived" discriminal processes for the stimuli directly determines their discriminal difference
+<!-- Assuming population data or more commonly known as census data, we ... -->
 
-The (latent) "true" discriminal processes for the stimuli and the judges' biases directly determines their (latent) "perceived" discriminal processes
+<!-- The (latent) discriminal difference of the stimuli directly determines the (manifest) outcome of the pairwise comparisons -->
 
+<!-- The (latent) "perceived" discriminal processes for the stimuli directly determines their discriminal difference -->
+
+<!-- The (latent) "true" discriminal processes for the stimuli and the judges' biases directly determines their (latent) "perceived" discriminal processes -->
+
+::: {#fig-CJ1 layout-nrow=2}
+
+::: {#fig-CJ1_scm fig-align="center" fig-pos="H"}
+$$
+\begin{aligned}
+  O_{kjabi_{1}i_{2}} & := f_{O}(D_{kjabi_{1}i_{2}}) \\
+  D_{kjabi_{1}i_{2}} & := f_{D}(PT_{kjai_{1}}, PT_{kjbi_{2}}) \\
+  PT_{kjai_{1}} & := f_{PT}(T_{ai_{1}}, T_{bi_{2}}, B_{kj})
+\end{aligned}
+$$
+
+SCM
+:::
+
+
+![DAG](/images/png/CJ_TM_04.png){#fig-CJ1_DAG fig-align="center" fig-pos="H" width=45%}
+
+CJ's outcome, discriminal difference, discriminal processes and judges' biases
+:::
+
+<!-- To declare a matrix \( P \) in \( \mathbb{N}^2 \) that represents the paired combinations of elements in \( I \), follow these steps: -->
+
+<!-- ### Definitions: -->
+<!-- 1. \( I \) is a subset of the natural numbers, \( I \subseteq \mathbb{N} \). -->
+<!-- 2. The paired combination of elements in \( I \) can be written as \( (i, j) \) for \( i, j \in I \). -->
+
+<!-- ### Constructing the Matrix \( P \): -->
+<!-- 1. Each row of \( P \) represents one pairing \( (i, j) \). -->
+<!-- 2. If \( I = \{a_1, a_2, \ldots, a_n\} \), then \( P \) contains \( n^2 \) rows for all pairs \( (i, j) \), including repetitions where \( i = j \). -->
+<!-- 3. Specifically, the matrix \( P \) is structured as: -->
+<!--    \[ -->
+<!--    P = \begin{bmatrix} -->
+<!--    i_1 & j_1 \\ -->
+<!--    i_2 & j_2 \\ -->
+<!--    \vdots & \vdots \\ -->
+<!--    i_{n^2} & j_{n^2} -->
+<!--    \end{bmatrix}, -->
+<!--    \] -->
+<!--    where \( i_k, j_k \in I \) for all \( k \), and each pair \( (i_k, j_k) \) corresponds to a combination of elements in \( I \). -->
+
+<!-- ### Algorithm to Generate \( P \): -->
+<!-- Given \( I = \{a_1, a_2, \ldots, a_n\} \): -->
+<!-- 1. Loop over all \( i \in I \) (outer loop). -->
+<!-- 2. For each \( i \), loop over all \( j \in I \) (inner loop). -->
+<!-- 3. Append the pair \( (i, j) \) as a new row in \( P \). -->
+
+<!-- ### Example: -->
+<!-- If \( I = \{1, 2, 3\} \), then the matrix \( P \) is: -->
+<!-- \[ -->
+<!-- P = \begin{bmatrix} -->
+<!-- 1 & 1 \\ -->
+<!-- 1 & 2 \\ -->
+<!-- 1 & 3 \\ -->
+<!-- 2 & 1 \\ -->
+<!-- 2 & 2 \\ -->
+<!-- 2 & 3 \\ -->
+<!-- 3 & 1 \\ -->
+<!-- 3 & 2 \\ -->
+<!-- 3 & 3 -->
+<!-- \end{bmatrix}. -->
+<!-- \] -->
+
+<!-- ### Mathematical Notation: -->
+<!-- 1. The matrix \( P \) can be defined as: -->
+<!--    \[ -->
+<!--    P = \{(i, j) \mid i \in I, j \in I\}. -->
+<!--    \] -->
+<!-- 2. In terms of dimensions, \( P \) has \( |I|^2 \) rows and 2 columns. -->
+
+<!-- This formalization ensures that \( P \) represents all paired combinations of elements from \( I \) in \( \mathbb{N}^2 \). -->
 
 <!-- ![](/images/png/CJ_TM_01.png){#fig-CJ_TM_01 width=23%} -->
 
 <!-- ![](/images/png/CJ_TM_02.png){#fig-CJ_TM_02 width=32%} -->
 
 <!-- ![](/images/png/CJ_TM_03.png){#fig-CJ_TM_03 width=45%} -->
-
-![](/images/png/CJ_TM_04.png){#fig-CJ_TM_04 width=45%}
 
 
 without loosing generality, the (latent) "perceived" and "true" discriminal processes for the stimuli can be depicted in a vector for each judge, as in  
@@ -392,6 +476,11 @@ without loosing generality, the (latent) "perceived" and "true" discriminal proc
 
 ## The sample-comparison model {#sec-theory-theoretical_SC}
 
+<!-- comparison mechanism as missing mechanism -->
+<!-- recording: Sven 24.10.04; time: 00:09:10 - 00:14:30 -->
+<!-- recording: Sven 24.10.04; time: 00:34:10 - 00:41:00 -->
+
+
 Considering the sampling mechanism
 
 <!-- ![](/images/png/CJ_TM_11.png){#fig-CJ_TM_11 width=80%} -->
@@ -413,7 +502,7 @@ Considering comparison mechanisms
 
 
 
-# From theory to statistics {#sec-statistical}
+# Extending the BTL model {#sec-statistical}
 
 <!-- Second, @sec-theory-statistics uses *Bayesian inference methods* to convert these theoretical and practical elements into a statistical model that supports the analysis of paired comparison data. -->
 
@@ -526,13 +615,15 @@ Considering comparison mechanisms
 
 # Appendix {#sec-appendix .appendix appendix-style=plain}
 
+<!-- recording: Sven and Tine 25.01.22; time: 00:00:00 - 00:05:40 -->
+
 This section introduces fundamental statistical and causal inference concepts necessary for understanding the core theoretical principles described in this document. It does not, however, offer a comprehensive overview of causal inference methods. Readers seeking more in-depth understanding may wish to explore introductory papers such as @Pearl_2010, @Rohrer_2018, @Pearl_2019, and @Cinelli_et_al_2020. They may also find it helpful to consult introductory books like @Pearl_et_al_2018, @Neal_2020, and @McElreath_2020. For more advanced study, readers may refer to seminal intermediate papers such as @Neyman_et_al_1923, @Rubin_1974, @Spirtes_et_al_1991, and @Sekhon_2009, as well as books such as @Pearl_2009, @Morgan_et_al_2014, and @Hernan_et_al_2020.
 
 
 ## Empirical research and randomized experiments {#sec-appendix-A .appendix appendix-style=plain}
 
 <!-- 1. What does empirical research do first? -->
-Empirical research uses evidence from observation and experimentation to address real-world challenges. In this context, researchers typically formulate their research questions as *estimands* or *targets of inference*, i.e., the specific quantities they seek to determine [@Everitt_et_al_2010]. For instance, researchers might be interested in answering the following question: “To what extent do different teaching methods $(T)$ influence students' ability to produce high-quality written texts $(Y)$?" To investigate this, researchers could randomly assign students to two groups, each exposed to a different teaching method $(T_{i} = \{1,2\})$. Then, they would perform pairwise comparisons, generating a dichotomous outcome $(Y_{i} = \{0,1\})$ showing which student exhibits more of the ability. In this scenario, the research question can be rephrased as the estimand, “*On average*, is there a difference in the ability to produce high-quality written texts between the two groups of students?” and this estimand can be mathematically represented by the random associational quantity in @eq-group_diff, where $E[\cdot]$ denotes the expected value.
+Empirical research uses evidence from observation and experimentation to address real-world challenges. In this context, researchers typically formulate their research questions as *estimands* or *targets of inference*, i.e., the specific quantities they seek to determine [@Everitt_et_al_2010]. For instance, researchers might be interested in answering the following question: "To what extent do different teaching methods $(T)$ influence students' ability to produce high-quality written texts $(Y)$?" To investigate this, researchers could randomly assign students to two groups, each exposed to a different teaching method $(T_{i} = \{1,2\})$. Then, they would perform pairwise comparisons, generating a dichotomous outcome $(Y_{i} = \{0,1\})$ showing which student exhibits more of the ability. In this scenario, the research question can be rephrased as the estimand, "*On average*, is there a difference in the ability to produce high-quality written texts between the two groups of students?" and this estimand can be mathematically represented by the random associational quantity in @eq-group_diff, where $E[\cdot]$ denotes the expected value.
 
 $$
 E[Y_{i} \cond T_{i}=1] - E[Y_{i} \cond T_{i}=2]
@@ -548,10 +639,9 @@ Researchers then proceed to identify the estimands. *Identification* determines 
 
 
 <!-- 3. the importance of identification -->
-Identification is essential because it is a necessary condition for *consistency*. An estimator is *consistent* if it converges to the "true" value of an estimand as the sample size approaches infinity [@Everitt_et_al_2010]. Without identification, an estimator cannot achieve consistency, rendering it incapable of reliably computing the estimand, even with "infinite" and error-free data. Consequently, deriving meaningful insights about the estimand from finite data becomes impossible [@Schuessler_et_al_2023, pp. 5]. Therefore, to ensure accurate and reliable estimates, researchers prioritize estimators with desirable identification properties. For instance, the Z-test is a widely used estimator for comparing group proportions, yielding accurate estimates when its underlying assumptions are satisfied [@Kanji_2006]. Furthermore, researchers can interpret estimates from the Z-test as causal, provided the data is collected through a randomized experiment.
+Identification is a necessary condition to ensure *consistent* estimators. An estimator achieves *consistency* when it converges to the "true" value of an estimand as the data size approaches infinity [@Everitt_et_al_2010]. Without identification, researchers cannot achieve consistency, even with "infinite" and error-free data. As a result, deriving meaningful insights about an estimand from finite data becomes impossible [@Schuessler_et_al_2023, pp. 5]. Therefore, to ensure accurate and reliable estimates, researchers prioritize estimators with desirable identification properties. For instance, the Z-test is a widely used estimator for comparing group proportions, yielding accurate estimates when its underlying assumptions are satisfied [@Kanji_2006]. Furthermore, researchers can interpret estimates from the Z-test as causal, provided the data is collected through a randomized experiment.
 
 <!-- The main reason to focus on identification is that if these parameters cannot be identified using "infinite" and error free data, we certainly cannot learn anything about it using finite data. So, for the time being, we assume large samples and error-free measurements [@Schuessler_et_al_2023, pp. 5]. -->
-
 
 <!-- If both assumptions are met, the Z-test is expressed as a signal-to-noise statistic $Z = (\hat{p}_{1} - \hat{p}_{2})/ \hat{s}_{p}$. The signal is defined as the difference between the groups' sample proportions, $\hat{p}_{1} = \sum_{i=1}^{n_{1}}{Y_{i}/n_{1}}$ and $\hat{p}_{2} = \sum_{i=1}^{n_{2}}{Y_{i}/n_{2}}$, analogous to $E[Y_{i} \cond T_{i}=1]$ and $E[Y_{i} \cond T_{i}=2]$, respectively. The noise, represented by $\hat{s}_{p}$, is defined as the unpooled sample variability observed between the two groups.  -->
 
@@ -630,12 +720,13 @@ $$ {#eq-mACE_cont}
 ### Diving into the specifics {#sec-appendix-B2 .appendix appendix-style=plain}
 
 <!-- 1. The benefits of SCMs and DAGs -->
-The structural approach to causal inference uses SCMs and DAGs to formally and graphically represent the presumed causal structure underlying the ACE [@Pearl_2009; @Pearl_et_al_2016; @Gross_et_al_2018; @Neal_2020]. Essentially, these tools serve as *conceptual (theoretical) models* on which identification analysis rests [@Schuessler_et_al_2023, pp. 4]. Specifically, they guide researchers in determining which statistical models can identify an estimand (ACE, CACE, or other), assuming the depicted causal structure is correct [@McElreath_2020], thus enabling valid causal inference. @fig-IEflow shows the role of theoretical models in the inference process.
+The structural approach to causal inference uses SCMs and DAGs to formally and graphically represent the presumed causal structure underlying the ACE [@Pearl_2009; @Pearl_et_al_2016; @Gross_et_al_2018; @Neal_2020]. Essentially, these tools serve as *conceptual (theoretical) models* on which identification analysis rests [@Schuessler_et_al_2023, pp. 4]. Thus, using these tools, researchers can determine which statistical models can identify (ACE, CACE, or other), assuming the depicted causal structure is correct [@McElreath_2020], thus enabling valid causal inference. @fig-IEflow shows the role of theoretical models in the inference process.
+
 
 <!-- The causal assumptions encoded in a DAG constitute the theoretical model on which identification analysis rests. Identification analysis is concerned with determining whether or not the true value of a parameter can be estimated using the assumptions in the model (graph), regardless of random variability in the data due to small samples [@Schuessler_et_al_2023, pp. 4]. -->
 
 
-SCMs and DAGs support causal inference through two key advantages. First, regardless of complexity, they can represent various causal structures using only five fundamental building blocks [@Neal_2020; @McElreath_2020]. This feature allows researchers to decompose complex structures into manageable components, facilitating their analysis [@McElreath_2020]. Second, they depict causal relationships in a non-parametric and fully interactive way. This flexibility enables feasible ACE identification strategies without defining the variables' data types, the functional form between them, or their parameters [@Pearl_et_al_2016, pp. 35]. @sec-appendix-B21 and @sec-appendix-B22 elaborate on the first advantage, while @sec-appendix-B22 and @sec-appendix-B23 do so for the second. 
+SCMs and DAGs support identification analysis through two key advantages. First, regardless of complexity, they can represent various causal structures using only five fundamental building blocks [@Neal_2020; @McElreath_2020]. This feature allows researchers to decompose complex structures into manageable components, facilitating their analysis [@McElreath_2020]. Second, they depict causal relationships in a non-parametric and fully interactive way. This flexibility enables feasible ACE identification strategies without defining the variables' data types, the functional form between them, or their parameters [@Pearl_et_al_2016, pp. 35]. @sec-appendix-B21 and @sec-appendix-B22 elaborate on the first advantage, while @sec-appendix-B22 and @sec-appendix-B23 do so for the second. 
 
 <!-- A heuristic is a strategy that simplifies information to make decisions more quickly, efficiently, and sometimes more accurately than complex methods [@Chow_2015]. -->
 
