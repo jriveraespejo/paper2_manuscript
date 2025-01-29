@@ -100,10 +100,10 @@ Numerous studies have documented the effectiveness of CJ in assessing traits and
 <!-- Adaptive comparison algorithms dynamically present stimuli to judges, based on the results of previous comparisons. They aim to enhance the informativeness of comparisons while optimizing judges' time [@Bramley_2015].  -->
 
 <!-- 3. But what critical issues remain in CJ Research? -->
-Nevertheless, despite the increasing number of CJ studies, research in this domain remains unsystematic and fragmented, leaving several critical issues unresolved. This study discusses two prominent issues that can compromise the reliability and validity of CJ's trait estimates. The first issue concerns the overreliance on Thurstone's Case V assumptions in the statistical analysis of CJ data. The second involves the apparent disconnect between CJ's approach to trait measurement and hypothesis testing. The study then addresses these challenges by adopting a more systematic and integrated approach grounded in causal inference and Bayesian inference methods.
+Nevertheless, despite the increasing number of CJ studies, research in this domain remains unsystematic and fragmented, leaving several critical issues unresolved. This study identifies and discusses two prominent issues that can undermine the reliability and validity of CJ's trait estimates. The first issue arises from the excessive reliance on Thurstone's Case V assumptions in the statistical analysis of CJ data. The second stems from the apparent disconnect between CJ's approach to trait measurement and hypothesis testing. The study then addresses these issues by extending Thurstone's model through a systematic and integrated approach based on causal and Bayesian inference methods.
 
 <!-- 4. what is the organization of the study? -->
-As a result, the study divides its content into six main sections. @sec-thurstone_theory provides an overview of Thurstone's theory. @sec-theory-issues discusses the identified issues in detail. @sec-theoretical updates the Thurstonian model to address these challenges. The model integrates the theoretical core principles alongside key assessment design features relevant to CJ experiments, such as the selection of judges, stimuli, and comparisons. @sec-statistical translates these theoretical and practical elements into a probabilistic statistical model for the analysis of pairwise comparison data. @sec-discussion discusses the implications of the findings and explores avenues for future research. Finally, @sec-conclusion summarizes the study's key insights.
+As a result, the study divides its content into six main sections. @sec-thurstone_theory provides an overview of Thurstone's theory. @sec-theory-issues discusses the identified issues in detail. @sec-theoretical extends Thurstone's model to address these challenges. The model integrates the theoretical core principles alongside key assessment design features relevant to CJ experiments, such as the selection of judges, stimuli, and comparisons. @sec-statistical translates these theoretical and practical elements into a probabilistic statistical model for the analysis of pairwise comparison data. @sec-discussion discusses the implications of the findings and explores avenues for future research. Finally, @sec-conclusion summarizes the study's key insights.
 
 
 
@@ -142,7 +142,7 @@ However, since the individual discriminal processes of the stimuli are not direc
 
 # Two prominent issues in CJ literature {#sec-theory-issues}
 
-This section discusses the two prominent issues that can undermine the reliability and validity of CJ's trait estimates. @sec-theory-issue1 examines the overreliance on Thurstone's Case V assumptions in the statistical analysis of CJ data. @sec-theory-issue2 focuses on the apparent disconnect between CJ's approach to trait measurement and hypothesis testing.
+This section identifies and discusses the two prominent issues that can undermine the reliability and validity of CJ's trait estimates. @sec-theory-issue1 examines the the excessive reliance on Thurstone's Case V assumptions in the statistical analysis of CJ data. @sec-theory-issue2 focuses on the apparent disconnect between CJ's approach to trait measurement and hypothesis testing.
 
 ## The Case V and the statistical analysis of CJ data {#sec-theory-issue1}
 
@@ -317,34 +317,33 @@ In aggregate, the overreliance on Thurstone's Case V assumptions in the statisti
 <!-- recording: Sven and Tine 25.01.22; time: 00:05:40 - 00:06:30 -->
 <!-- recording: Sven and Tine 25.01.22; time: 00:08:25 - 00:31:56 -->
 
-<!-- 1. What the section will do? -->
-This section addresses the challenges outlined in @sec-theory-issues by leveraging the structural approach to causal inference to extend Thurstone's model. The extension combines the core theoretical principles from @sec-thurstone_theory with several key assessment design features relevant to CJ experiments, such as the selection of judges, stimuli, and comparisons. Specifically, @sec-theory-theoretical_P incorporates the theoretical principles into a *conceptual-population model*. Conversely, @sec-theory-theoretical_SC integrates the assessment design features into a *sample-comparison model*. Combining these elements helps to elucidate how all actors and processes interact during CJ experiments.
+<!-- 1. The structural approach to causal inference -->
+The *structural approach* to causal inference provides a formal framework for identifying causes and estimating their effects using data. The approach uses structural causal models (SCMs) and directed acyclic graphs (DAGs) [@Pearl_2009; @Pearl_et_al_2016; @Gross_et_al_2018; @Neal_2020] to formally and graphically represent the assumed causal structure of a system, such as the one found in CJ experiments. 
+
+<!-- 2. How does SCMs and DAGs are used? -->
+Essentially, SCMs and DAGs function as *conceptual models* on which identification analysis rests [@Schuessler_et_al_2023, pp. 4]. *Identification analysis* helps researchers to determine whether an estimator can accurately compute an estimand based solely on its (causal) assumptions, regardless of random variability [@Schuessler_et_al_2023, pp. 4]. Here, *estimands* represent the specific quantities researchers aim to determine [@Everitt_et_al_2010]. *Estimators* denote the methods or functions that transform data into an estimate, while *estimates* are the numerical values approximating the estimand [@Neal_2020; @Everitt_et_al_2010]. 
+
+<!-- The causal assumptions encoded in a DAG constitute the theoretical model on which identification analysis rests. Identification analysis is concerned with determining whether or not the true value of a parameter can be estimated using the assumptions in the model (graph), regardless of random variability in the data due to small samples [@Schuessler_et_al_2023, pp. 4]. -->
+
+<!-- 3. Example of a CJ estimand and estimator, and its limitations -->
+For instance, researchers might aim to answer the question: "To what extent do different teaching methods influence students' ability to produce high-quality written texts?" To investigate this, they could design a CJ experiment by randomly assigning students to two groups, each receiving a different teaching method. Judges would then compare pairs of students' written texts, producing a dichotomous outcome that reflects the relative quality of each text. In this scenario, researchers can reformulate the research question as the estimand: "*On average*, is there a difference in the ability to produce high-quality written texts between the two groups of students?". Researchers would then use estimates from the BTL model, or its transformations, to approximate this estimand. 
+
+<!-- 4. But why identification is so important? -->
+However, @sec-theory-issues presents strong evidence that the BTL model has several statistical and measurement limitations. These limitations hinder the model's ability to identify distinct estimands relevant to CJ inquiries, including the one presented in the previous paragraph. Identification is crucial because it is a necessary condition for ensuring consistent estimators. Without identification, researchers cannot achieve consistency even with "infinite" and error-free data. In other words, the estimates derived from the estimator fail to converge to the "true" value of the estimand as the data size approaches infinity [@Everitt_et_al_2010]. As a result, deriving meaningful insights from finite data also becomes unattainable [@Schuessler_et_al_2023, pp. 5].
+
+<!-- The main reason to focus on identification is that if these parameters cannot be identified using "infinite" and error free data, we certainly cannot learn anything about it using finite data. So, for the time being, we assume large samples and error-free measurements [@Schuessler_et_al_2023, pp. 5]. -->
+
+<!-- 5. So, how do SCMs and DAGs support identification? -->
+Luckily, SCMs and DAGs support identification analysis through two key advantages. First, regardless of complexity, they can represent various causal structures using only five fundamental building blocks [@Neal_2020; @McElreath_2020]. This feature allows researchers to decompose complex structures into manageable components, facilitating their analysis [@McElreath_2020]. Second, they depict causal relationships in an interactive, non-parametric way. This flexibility enables feasible identification strategies without requiring specification of the types of variables, the functional forms relating them, or the parameters of those functional forms [@Pearl_et_al_2016, pp. 35].
+
+<!-- 5. What the section will do? -->
+As a result, this section addresses the identified limitations by extending Thurstone's model through a systematic and integrated approach based on the structural approach to causal inference. Specifically, it leverages the capabilities of this approach to formalize the combination of the core theoretical principles outlined in @sec-thurstone_theory with key assessment design features relevant to CJ experiments. These features include the selection of judges, stimuli, and comparisons. Combining these components clarifies the interactions among all actors and processes involved in CJ experiments. Accordingly, @sec-theory-theoretical_P incorporates the theoretical principles into a *conceptual-population model*. Meanwhile, @sec-theory-theoretical_SC integrates the assessment design features into a *sample-comparison model*.
 
 <!-- Generalizability is the degree to which you can apply the results of your study to a broader context.  -->
 <!-- https://www.scribbr.com/research-bias/generalizability/ -->
 
 <!-- A theoretical model is a framework that researchers create to structure a study process and plan how to approach a specific research inquiry. It can allow you to define the purpose of your research and develop an informed perspective. Creating a theoretical model typically involves analyzing a subject's literature, including previous research studies and journal articles. Researchers often include a written description of a theoretical model in a beginning section of a dissertation or similar document so a reader can gain more context. -->
 <!-- url: https://www.indeed.com/career-advice/career-development/theoretical-model -->
-
-
-<!-- 2. The structural approach to causal inference -->
-The *structural approach* to causal inference provides a formal framework for identifying causes and estimating their effects using data. This approach uses structural causal models (SCMs) and directed acyclic graphs (DAGs) [@Pearl_2009; @Pearl_et_al_2016; @Gross_et_al_2018; @Neal_2020] to formally and graphically represent the assumed causal structure of a system, such as the one found in CJ experiments. Essentially, SCMs and DAGs function as *conceptual models* on which identification analysis rests [@Schuessler_et_al_2023, pp. 4]. Identification analysis helps researchers determine whether an estimator can accurately compute an estimand based solely on its (causal) assumptions, regardless of random variability [@Schuessler_et_al_2023, pp. 4]. Here, *estimands* represent the specific quantities researchers aim to determine [@Everitt_et_al_2010]. *Estimators* denote the methods or functions that transform data into an estimate [@Neal_2020], while *estimates* are the numerical values approximating the estimand. These estimates are obtained through *estimation*, which is the process that integrates data with an estimator [@Everitt_et_al_2010].
-
-<!-- The causal assumptions encoded in a DAG constitute the theoretical model on which identification analysis rests. Identification analysis is concerned with determining whether or not the true value of a parameter can be estimated using the assumptions in the model (graph), regardless of random variability in the data due to small samples [@Schuessler_et_al_2023, pp. 4]. -->
-
-<!-- 4. example of an estimand and an estimator in CJ -->
-For instance, researchers might aim to answer the question: "To what extent do different teaching methods influence students' ability to produce high-quality written texts?" To investigate this, they could design a CJ experiment by randomly assigning students to two groups, each exposed to a different teaching method. Afterward, judges would compare pairs of written texts, generating a dichotomous outcome that reflects the relative quality of each text. In this scenario, researchers can rephrase the research question as the estimand: "*On average*, is there a difference in the ability to produce high-quality written texts between the two groups of students?". Researchers would then use estimates from the BTL model, or its transformations, to approximate this estimand.
-
-<!-- 5. But the estimator does not satisfy minimum identification properties -->
-However, @sec-theory-issues provides compelling evidence that the BTL model suffers from several statistical and measurement issues, including identification problems. These issues ultimately raise concerns about the consistency of the model's estimates. An estimator is *consistent* if it converges to the "true" value of an estimand as the data size approaches infinity [@Everitt_et_al_2010]. Since identification is a prerequisite for consistency, the absence of proper identification means that researchers cannot achieve consistency, even with "infinite" and error-free data. As a result, deriving meaningful insights from finite data also becomes impossible [@Schuessler_et_al_2023, pp. 5].
-
-<!-- The main reason to focus on identification is that if these parameters cannot be identified using "infinite" and error free data, we certainly cannot learn anything about it using finite data. So, for the time being, we assume large samples and error-free measurements [@Schuessler_et_al_2023, pp. 5]. -->
-
-<!-- 5. So, how do SCMs and DAGs support identification? -->
-Luckily, SCMs and DAGs support identification analysis through two key advantages. First, regardless of complexity, they can represent various causal structures using only five fundamental building blocks [@Neal_2020; @McElreath_2020]. This feature allows researchers to decompose complex structures into manageable components, facilitating their analysis [@McElreath_2020]. Second, they depict causal relationships in an interactive, non-parametric manner. This flexibility enables feasible identification strategies without defining the variables' data types, the functional forms, or their parameters [@Pearl_et_al_2016, pp. 35].
-
-<!-- See @sec-appendix for an overview of the statistical and causal inference concepts required for the development of this section. -->
-
 
 
 ## The conceptual-population model {#sec-theory-theoretical_P}
@@ -357,16 +356,14 @@ Luckily, SCMs and DAGs support identification analysis through two key advantage
 <!-- recording: Sven and Tine 24.12.17; time: 00:26:10 - 00:54:00 -->
 
 <!-- 1. The SCMs -->
-Before integrating the theoretical principles from @sec-thurstone_theory, it is important to define SCMs and DAGs. SCMs are formal mathematical models defined by a set of *endogenous* variables, a set of *exogenous* variables, and a set of functions [@Pearl_2009; @Cinelli_et_al_2020]. Endogenous variables are those whose causal mechanisms a researcher chooses to model [@Neal_2020]. In contrast, exogenous variables represent *errors* or *disturbances* arising from omitted factors that the investigator chooses not to model explicitly [@Pearl_2009, pp. 27,68]. Lastly, the functions, referred to as *structural equations*, express the endogenous variables as non-parametric functions of other variables. These function use the symbol '$:=$' to denote the asymmetrical causal dependence between variables and the symbol '$\dsep$' to represent *d-separation*, a concept akin to (conditional) independence.
+Before integrating the theoretical principles from @sec-thurstone_theory, it is important to define SCMs and DAGs. SCMs are formal mathematical models defined by a set of *endogenous* variables, a set of *exogenous* variables, and a set of functions [@Pearl_2009; @Cinelli_et_al_2020]. Endogenous variables are those whose causal mechanisms a researcher chooses to model [@Neal_2020]. In contrast, exogenous variables represent *errors* or *disturbances* arising from omitted factors that the investigator chooses not to model explicitly [@Pearl_2009, pp. 27,68]. Lastly, the functions, referred to as *structural equations*, express the endogenous variables as non-parametric functions of other variables. 
+
+For instance, @fig-CJ1_scm display the SCM relating the CJ outcome $(O_{kjabi_{1}i_{2}})$, discriminal difference $(D_{kjabi_{1}i_{2}})$, perceived discriminal processes for each text within each student $(PT_{kjai_{1}}, PT_{kjbi_{2}})$, the "true" discriminal processes for each text within each student $(T_{kjai_{1}}, T_{kjbi_{2}})$, and the judges' biases $(B_{kj})$. Notice that the structural equations use the symbol '$:=$' to denote the asymmetrical causal dependence between variables and the symbol '$\dsep$' to represent *d-separation*, a concept akin to (conditional) independence.
 
 <!-- 2. The DAGs -->
 Notably, every SCM has an associated DAG [@Pearl_et_al_2016; @Cinelli_et_al_2020]. A DAG is a graph consisting of nodes connected by edges, where the nodes represent random variables. The term *directed* means that the edges extend from one node to another, with arrows indicating the direction of causal influence. The term *acyclic* implies that the causal influences do not form loops, ensuring the influences do not cycle back on themselves [@McElreath_2020]. DAGs represent observed variables as solid black circles, while they use open circles for unobserved (latent) variables [@Morgan_et_al_2014]. While the *standard representation* of DAGs typically omits exogenous variables for simplicity, the *magnified representation* includes them, offering offering the advantage of highlighting potential issues related to conditioning and confounding [@Cinelli_et_al_2020]. 
 
 <!-- In general terms, causal graphs encode a researcher’s assumptions about the causal process that generated the data in a population of interest [@Schuessler_et_al_2023, pp. 4] -->
-
-
-<!-- 3. The begining -->
-@fig-CJ1 displays CJ's outcome, discriminal difference, discriminal processes and judges' biases assumed by the Thurstone's theory. Notice that in the figure, the structural 
 
 
 <!-- Assuming population data or more commonly known as census data, we ... -->
@@ -510,6 +507,8 @@ Considering comparison mechanisms
 <!-- recording: Sven 24.10.04; time: 00:46:00 - 01:01:00 -->
 <!-- recording: Sven and Tine 24.11.25; time: 00:24:50 - 00:30:35 -->
 <!-- recording: Sven and Tine 24.11.25; time: 00:49:30 - 00:53:30 -->
+
+<!-- These estimates are obtained through *estimation*, which is the process that integrates data with an estimator [@Everitt_et_al_2010]. -->
 
 <!-- 2. What are the benefits of Bayesian inference?-->
 <!-- Bayesian inference procedures offer three key advantages. First, they are well-suited to handling complex and overparameterized models, enabling researchers to estimate models where the number of parameters exceeds the number of observations for estimation [@Baker_1998; @Kim_et_al_1999]. Second, they allow researchers to incorporate prior information, which helps constrain parameters within specified bounds. This capability addresses challenges such as non-convergence or improper parameter estimation that often arise in complex models when analyzed with frequentist methods [@Martin_et_al_1975; @Seaman_et_al_2011]. Finally, Bayesian methods are particularly effective at drawing inferences from small sample sizes, where relying on the asymptotic properties of frequentist approaches may not be justified [@Baldwin_et_al_2013; @Lambert_et_al_2006; @Depaoli_2014]. -->
