@@ -498,7 +498,7 @@ stimuli}
 
 \end{minipage}%
 
-\caption{\label{fig-caseV_issues}The effect of dispersion discrepancies
+\caption{\label{fig-casev_issues}The effect of dispersion discrepancies
 and stimulus correlation on the distribution of the discriminal
 difference.}
 
@@ -811,18 +811,29 @@ model \citep{Neal_2020}. In contrast, exogenous variables represent
 the investigator chooses not to model explicitly
 \citep[pp.~27,68]{Pearl_2009}. Lastly, the functions, referred to as
 \emph{structural equations}, express the endogenous variables as
-non-parametric functions of other variables.
+non-parametric functions of other variables. These functions use the
+symbol `\(:=\)' to denote the asymmetrical causal dependence between
+variables and the symbol `\(\:\bot\:\)' to represent
+\emph{d-separation}, a concept akin to (conditional) independence.
 
-For instance, Figure~\ref{fig-CJ1_scm} display the SCM relating the CJ
-outcome \((O_{kjabi_{1}i_{2}})\), discriminal difference
-\((D_{kjabi_{1}i_{2}})\), perceived discriminal processes for each text
-within each student \((PT_{kjai_{1}}, PT_{kjbi_{2}})\), the ``true''
-discriminal processes for each text within each student
-\((T_{kjai_{1}}, T_{kjbi_{2}})\), and the judges' biases \((B_{kj})\).
-Notice that the structural equations use the symbol `\(:=\)' to denote
-the asymmetrical causal dependence between variables and the symbol
-`\(\:\bot\:\)' to represent \emph{d-separation}, a concept akin to
-(conditional) independence.
+For instance, following the scenario outline in
+Section~\ref{sec-theoretical}, Figure~\ref{fig-cj04_scm} displays the
+SCM that relates the outcome of the CJ experiment \((O_{abhijk})\), to
+several endogenous variables \(V\). These variables include the
+discriminal difference \((D_{abhijk})\), perceived discriminal processes
+\((PT_{ahjk}, PT_{bijk})\), the ``true'' discriminal processes
+\((T_{ahjk}, T_{bijk})\), and the judges' biases \((B_{kj})\), formally
+expressed as
+\(V = \{D_{abhijk}, PT_{ahjk}, PT_{bijk}, T_{ahjk}, T_{bijk}, B_{kj}\}\).
+The structural equations \(\{f_{O},f_{D},f_{PT}\}\) define the
+dependencies among these variables. Notably, in this scenario, the
+judges produce a dichotomous outcome \((O_{abhijk}) = \{0,1\}\).
+Moreover, the indices \(\{a,b\}\) represent the compared texts,
+\(\{h,i\}\) label the students who wrote these texts, \(j\) denotes the
+judge, and \(k\) represents the comparison number. Regarding the \(k\)
+index, the index accounts for cases in which judges perform multiple
+comparisons of the same texts written by the same students, as the one
+discussed in Section~\ref{sec-theoretical}.
 
 Notably, every SCM has an associated DAG
 \citep{Pearl_et_al_2016, Cinelli_et_al_2020}. A DAG is a graph
@@ -847,15 +858,16 @@ confounding \citep{Cinelli_et_al_2020}.
 
 \[
 \begin{aligned}
-  O_{kjabi_{1}i_{2}} & := f_{O}(D_{kjabi_{1}i_{2}}) \\
-  D_{kjabi_{1}i_{2}} & := f_{D}(PT_{kjai_{1}}, PT_{kjbi_{2}}) \\
-  PT_{kjai_{1}} & := f_{PT}(T_{ai_{1}}, T_{bi_{2}}, B_{kj})
+  O_{abhijk} & := f_{O}(D_{abhijk}) \\
+  D_{abhijk} & := f_{D}(PT_{ahjk}, PT_{bijk}) \\
+  PT_{ahjk} & := f_{PT}(T_{ah}, B_{jk}) \\
+  PT_{bijk} & := f_{PT}(T_{bi}, B_{jk})
 \end{aligned}
 \]
 
 }
 
-\subcaption{\label{fig-CJ1_scm}SCM}
+\subcaption{\label{fig-cj04_scm}SCM}
 
 \end{minipage}%
 \newline
@@ -867,20 +879,40 @@ confounding \citep{Cinelli_et_al_2020}.
 
 }
 
-\subcaption{\label{fig-CJ1_DAG}DAG}
+\subcaption{\label{fig-cj04_dag}DAG}
 
 \end{minipage}%
 
-\caption{\label{fig-CJ1}CJ's outcome, discriminal difference,
+\caption{\label{fig-cj04}CJ's outcome, discriminal difference,
 discriminal processes and judges' biases}
 
 \end{figure}%
 
-without loosing generality, the (latent) ``perceived'' and ``true''
-discriminal processes for the stimuli can be depicted in a vector for
-each judge, as in
+Because it quickly becomes intractable, and without loosing generality,
+the (latent) ``perceived'' and ``true'' discriminal processes for the
+stimuli can be depicted in a vector for each judge, as in
 
-\begin{figure}
+\begin{figure}[H]
+
+\begin{minipage}{\linewidth}
+
+\centering{
+
+\[
+\begin{aligned}
+  O_{PRQ} & := f_{O}(D_{PRQ}) \\
+  D_{PRQ} & := f_{D}(PT_{PRQ}) \\
+  PT_{PRQ} & := f_{PT}(T_{AI}, B_{KJ})
+\end{aligned}
+\]
+
+}
+
+\subcaption{\label{fig-cj05_scm}SCM}
+
+\end{minipage}%
+\newline
+\begin{minipage}{\linewidth}
 
 \centering{
 
@@ -888,11 +920,40 @@ each judge, as in
 
 }
 
-\caption{\label{fig-CJ_TM_05}}
+\subcaption{\label{fig-cj05_dag}DAG}
+
+\end{minipage}%
+
+\caption{\label{fig-cj05}CJ's outcome, discriminal difference,
+discriminal processes and judges' biases}
 
 \end{figure}%
 
-\begin{figure}
+\begin{figure}[H]
+
+\begin{minipage}{\linewidth}
+
+\centering{
+
+\[
+\begin{aligned}
+  O_{PRQ} & := f_{O}(D_{PRQ}) \\
+  D_{PRQ} & := f_{D}(PT_{PRQ}) \\
+  PT_{PRQ} & := f_{PT}(T_{AI}, B_{KJ}) \\
+  T_{AI} & := f_{T}(T_{I}, X_{A}, e_{A}) \\
+  T_{I} & := f_{T}(X_{I}, e_{I}) \\
+  B_{KJ} & := f_{B}(B_{J}, Z_{K}, e_{K}) \\
+  B_{J} & := f_{B}(Z_{J}, e_{J}) 
+\end{aligned}
+\]
+
+}
+
+\subcaption{\label{fig-cj10_scm}SCM}
+
+\end{minipage}%
+\newline
+\begin{minipage}{\linewidth}
 
 \centering{
 
@@ -900,7 +961,12 @@ each judge, as in
 
 }
 
-\caption{\label{fig-CJ_TM_10}}
+\subcaption{\label{fig-cj10_dag}DAG}
+
+\end{minipage}%
+
+\caption{\label{fig-cj10}CJ's outcome, discriminal difference,
+discriminal processes and judges' biases}
 
 \end{figure}%
 
@@ -909,7 +975,32 @@ model}\label{sec-theory-theoretical_SC}
 
 Considering the sampling mechanism
 
-\begin{figure}
+\begin{figure}[H]
+
+\begin{minipage}{\linewidth}
+
+\centering{
+
+\[
+\begin{aligned}
+  O^{S}_{PRQ} & := f_{O}(O_{PRQ}, S_{I}, S_{A}, S_{K}, S_{J}) \\
+  O_{PRQ} & := f_{O}(D_{PRQ}) \\
+  D_{PRQ} & := f_{D}(PT_{PRQ}) \\
+  PT_{PRQ} & := f_{PT}(T_{AI}, B_{KJ}) \\
+  T_{AI} & := f_{T}(T_{I}, X_{A}, e_{A}) \\
+  T_{I} & := f_{T}(X_{I}, e_{I}) \\
+  B_{KJ} & := f_{B}(B_{J}, Z_{K}, e_{K}) \\
+  B_{J} & := f_{B}(Z_{J}, e_{J})
+\end{aligned}
+\]
+
+}
+
+\subcaption{\label{fig-cj12_scm}SCM}
+
+\end{minipage}%
+\newline
+\begin{minipage}{\linewidth}
 
 \centering{
 
@@ -917,13 +1008,44 @@ Considering the sampling mechanism
 
 }
 
-\caption{\label{fig-CJ_TM_12}}
+\subcaption{\label{fig-cj12_dag}DAG}
+
+\end{minipage}%
+
+\caption{\label{fig-cj12}CJ's outcome, discriminal difference,
+discriminal processes and judges' biases}
 
 \end{figure}%
 
 Considering comparison mechanisms
 
-\begin{figure}
+\begin{figure}[H]
+
+\begin{minipage}{\linewidth}
+
+\centering{
+
+\[
+\begin{aligned}
+  O^{C}_{PRQ} & := f_{C}(O^{S}_{PRQ}, C) \\
+  O^{S}_{PRQ} & := f_{S}(O_{PRQ}, S_{I}, S_{A}, S_{K}, S_{J}) \\
+  O_{PRQ} & := f_{O}(D_{PRQ}) \\
+  D_{PRQ} & := f_{D}(PT_{PRQ}) \\
+  PT_{PRQ} & := f_{PT}(T_{AI}, B_{KJ}) \\
+  T_{AI} & := f_{T}(T_{I}, X_{A}, e_{A}) \\
+  T_{I} & := f_{T}(X_{I}, e_{I}) \\
+  B_{KJ} & := f_{B}(B_{J}, Z_{K}, e_{K}) \\
+  B_{J} & := f_{B}(Z_{J}, e_{J}) 
+\end{aligned}
+\]
+
+}
+
+\subcaption{\label{fig-cj14_scm}SCM}
+
+\end{minipage}%
+\newline
+\begin{minipage}{\linewidth}
 
 \centering{
 
@@ -931,11 +1053,42 @@ Considering comparison mechanisms
 
 }
 
-\caption{\label{fig-CJ_TM_14}}
+\subcaption{\label{fig-cj14_dag}DAG}
+
+\end{minipage}%
+
+\caption{\label{fig-cj14}CJ's outcome, discriminal difference,
+discriminal processes and judges' biases}
 
 \end{figure}%
 
-\begin{figure}
+\begin{figure}[H]
+
+\begin{minipage}{\linewidth}
+
+\centering{
+
+\[
+\begin{aligned}
+  O^{C}_{PRQ} & := f_{C}(O^{S}_{PRQ}, C) \\
+  O^{S}_{PRQ} & := f_{S}(O_{PRQ}, S_{I}, S_{A}, S_{K}, S_{J}) \\
+  O_{PRQ} & := f_{O}(D_{PRQ}) \\
+  D_{PRQ} & := f_{D}(PT_{PRQ}) \\
+  PT_{PRQ} & := f_{PT}(T_{AI}, B_{KJ}) \\
+  T_{AI} & := f_{T}(T_{I}, X_{A}, e_{A}) \\
+  T_{I} & := f_{T}(X_{I}, e_{I}) \\
+  B_{KJ} & := f_{B}(B_{J}, Z_{K}, e_{K}) \\
+  B_{J} & := f_{B}(Z_{J}, e_{J}) 
+\end{aligned}
+\]
+
+}
+
+\subcaption{\label{fig-cj15_scm}SCM}
+
+\end{minipage}%
+\newline
+\begin{minipage}{\linewidth}
 
 \centering{
 
@@ -943,7 +1096,12 @@ Considering comparison mechanisms
 
 }
 
-\caption{\label{fig-CJ_TM_15}}
+\subcaption{\label{fig-cj15_dag}DAG}
+
+\end{minipage}%
+
+\caption{\label{fig-cj15}CJ's outcome, discriminal difference,
+discriminal processes and judges' biases}
 
 \end{figure}%
 
