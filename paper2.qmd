@@ -330,10 +330,10 @@ Essentially, SCMs and DAGs function as *conceptual models* on which identificati
 <!-- In general terms, causal graphs encode a researcher’s assumptions about the causal process that generated the data in a population of interest [@Schuessler_et_al_2023, pp. 4] -->
 
 <!-- 3. Example of a CJ estimand and estimator, and its limitations -->
-For instance, a motivating example that illustrates these concepts throughout the document could involve researchers aiming to answer the question: "To what extent do different teaching methods influence students' ability to produce high-quality written texts?" To investigate this, they could design a CJ experiment by randomly assigning students to two groups, each receiving a different teaching method. Judges would then compare pairs of students' written texts, producing a dichotomous outcome that reflects the relative quality of each text. Based on this setup, researchers can reformulate the research question as the estimand: "*On average*, is there a difference in the ability to produce high-quality written texts between the two groups of students?". Following current CJ practices, researchers would then rely on estimates from the BTL model, or its transformations, to approximate this estimand.
+A motivating example helps to clarify these concepts. The example will appear throughout the document to illustrate various aspects of the proposed extension. In this scenario, researchers aim to determine: "To what extent do different teaching methods influence students' ability to produce high-quality written texts?" To investigate this, they could design a CJ experiment by randomly assigning students (individuals) to two groups, each receiving a different teaching method. Judges would then compare pairs of students' written texts (stimuli), producing a dichotomous outcome that reflects the relative quality of each text (trait). Based on this setup, researchers could reformulate the research question as the estimand: "*On average*, is there a difference in the ability to produce high-quality written texts between the two groups of students?". Following current CJ practices, researchers would then rely on estimates from the BTL model, or its transformations, to approximate this estimand.
 
 <!-- 4. But why identification is so important? -->
-However, @sec-theory-issues presents compelling evidence that the BTL model has several statistical and measurement limitations. These limitations hinder the model's ability to identify distinct estimands relevant to CJ inquiries, including the one from the motivating example. Identification is crucial because it is a necessary condition for ensuring consistent estimators. Without identification, researchers cannot achieve *consistency* even with "infinite" and error-free data. In other words, the estimates derived from the estimator would fail to converge to the "true" value of the estimand as the data size approaches infinity [@Everitt_et_al_2010]. As a result, deriving meaningful insights from finite data also becomes unattainable [@Schuessler_et_al_2023, pp. 5].
+However, @sec-theory-issues presents compelling evidence that the BTL model has several statistical and measurement limitations. These limitations hinder the model's ability to identify various estimands relevant to CJ inquiries, including the one from the motivating example. Identification is crucial because it is a necessary condition for ensuring consistent estimators. Without identification, *consistency* --the property of an estimator whose estimates converge to the "true" value of the estimand as the data size approaches infinity [@Everitt_et_al_2010]-- cannot be achieved, even with "infinite" and error-free data. As a result, deriving meaningful insights from finite data also becomes unattainable [@Schuessler_et_al_2023, pp. 5].
 
 <!-- The main reason to focus on identification is that if these parameters cannot be identified using "infinite" and error free data, we certainly cannot learn anything about it using finite data. So, for the time being, we assume large samples and error-free measurements [@Schuessler_et_al_2023, pp. 5]. -->
 
@@ -341,7 +341,14 @@ However, @sec-theory-issues presents compelling evidence that the BTL model has 
 Luckily, SCMs and DAGs support identification analysis through two key advantages. First, regardless of complexity, they can represent various causal structures using only five fundamental building blocks [@Neal_2020; @McElreath_2020]. This feature allows researchers to decompose complex structures into manageable components, facilitating their analysis [@McElreath_2020]. Second, they depict causal relationships in an interactive, non-parametric way. This flexibility enables feasible identification strategies without requiring specification of the types of variables, the functional forms relating them, or the parameters of those functional forms [@Pearl_et_al_2016, pp. 35].
 
 <!-- 5. What the section will do? -->
-As a result, this section addresses the identified limitations by extending Thurstone's general form (see @tbl-thurstone_cases) through a systematic and integrated approach based on the structural approach to causal inference. Specifically, it leverages the capabilities of this approach to formalize the combination of the core theoretical principles outlined in @sec-thurstone_theory with key assessment design features relevant to CJ experiments, such as the selection of judges, stimuli, and comparisons. The extended model clarifies the interactions among all actors and processes involved in CJ experiments. Furthermore, it allows researchers to shift the current comparative data analysis paradigm from accepting the model's assumptions as given to testing these assumptions for specific comparative data. For details on these assumptions, refer to @sec-theory-issues. Accordingly, @sec-theory-theoretical_P incorporates the theoretical principles into what the study calls the *conceptual-population model*. Meanwhile, @sec-theory-theoretical_SC integrates the assessment design features into what the study terms the *sample-comparison model*.
+As a result, this section addresses the identified limitations by extending Thurstone's general form (see @tbl-thurstone_cases) through a systematic and integrated approach based on the structural approach to causal inference. Specifically, it leverages the capabilities of this approach to formalize the combination of the core theoretical principles outlined in @sec-thurstone_theory with key assessment design features relevant to CJ experiments, such as the selection of judges, stimuli, and comparisons. 
+
+<!-- 6. What are the advantages? -->
+In addition to addressing the identified limitations, the extended model offers two key advantages. First, it clarifies the interactions among all actors and processes involved in CJ experiments. Second, it shifts the current data analysis paradigm from passively accepting CJ's model assumptions to actively testing them with the specific data under analysis. For more details on these assumptions, refer to @sec-theory-issues.
+
+<!-- 7. How the section is divided? -->
+Accordingly, @sec-theory-theoretical_P incorporates the theoretical principles into what the study calls the *conceptual-population model*. This model assumes that researchers have access to a conceptual population of comparison data, meaning data representing all repeated comparisons made by every available judge for each pair of stimuli produced by each pair of individuals in the population, thus its name. Conversely, @sec-theory-theoretical_SC integrates the assessment design features into what the study calls the *sample-comparison model*. This model assumes a more realistic scenario where researchers only have access to a sample of judges, individuals, stimuli, and comparisons from the conceptual population.
+
 
 <!-- Generalizability is the degree to which you can apply the results of your study to a broader context.  -->
 <!-- https://www.scribbr.com/research-bias/generalizability/ -->
@@ -361,10 +368,18 @@ As a result, this section addresses the identified limitations by extending Thur
 <!-- recording: Sven and Tine 25.01.30 p1; time: 00:23:25 - 00:48:00 -->
 
 <!-- 1. The SCMs -->
-Before integrating the theoretical principles from @sec-thurstone_theory, the study defines SCMs and DAGs. SCMs are formal mathematical models characterized by a set of *endogenous* variables $V$, a set of *exogenous* variables $E$, and a set of functions $F$ [@Pearl_2009; @Cinelli_et_al_2020]. Endogenous variables are those whose causal mechanisms a researcher chooses to model [@Neal_2020]. In contrast, exogenous variables represent *errors* or *disturbances* arising from omitted factors that the investigator chooses not to model explicitly [@Pearl_2009, pp. 27,68]. Lastly, the functions, referred to as *structural equations*, express the endogenous variables as non-parametric functions of other variables. These functions use the symbol '$:=$' to denote the asymmetrical causal dependence between variables and the symbol '$\dsep$' to represent *d-separation*, a concept akin to (conditional) independence.
+Before incorporating the theoretical principles into the *conceptual-population model*, the study defines SCMs, which are formal mathematical models characterized by a set of *endogenous* variables $V$, a set of *exogenous* variables $E$, and a set of functions $F$ [@Pearl_2009; @Cinelli_et_al_2020]. Endogenous variables are those whose causal mechanisms a researcher chooses to model [@Neal_2020]. In contrast, exogenous variables represent *errors* or *disturbances* arising from omitted factors that the investigator chooses not to model explicitly [@Pearl_2009, pp. 27,68]. Lastly, the functions, referred to as *structural equations*, express the endogenous variables as non-parametric functions of other endogenous and exogenous variables. These functions use the symbol '$:=$' to denote the asymmetrical causal dependence between variables and the symbol '$\dsep$' to represent *d-separation*, a concept akin to (conditional) independence.
 
 <!-- 2. the preliminary SCM for CJ -->
-@fig-cj04 illustrates the preliminary integration of the theoretical principles underlying the motivating example. Specifically, [SCM -@fig-cj04_scm] displays the relationship between the outcome of the CJ experiment, $O_{abhijk}$, to several other variables. Here, the indices $\{a,b\}$ represent the compared texts, $\{h,i\}$ label the students who wrote these texts, $j$ denotes the judge, and $k$ accounts for cases where the judges perform multiple comparisons of the same texts written by the same students, i.e., the comparison number for a *repeated measures design* [@Lawson_2015, pp. 366-376]. The other variables related to the outcome include the discriminal difference $(D_{abhijk})$, the perceived discriminal processes $(PT_{ahjk}, PT_{bijk})$, the "true" discriminal processes $(T_{ahjk}, T_{bijk})$, and the judges' biases $(B_{kj})$. Together with the outcome, these variables form the preliminary set of endogenous variables $V = \{O_{abhijk}, D_{abhijk}, PT_{ahjk}, PT_{bijk}, T_{ahjk}, T_{bijk}, B_{kj}\}$. Finally, the preliminary set of structural equations $F = \{f_{O},f_{D},f_{PT}\}$ defines the dependencies among these variables. 
+@fig-cj04 illustrates the preliminary integration of theoretical principles into the conceptual-population model. Specifically, @fig-cj04_scm shows the SCM that underlies the motivating example. This SCM maps the relationship between the outcome of the CJ experiment $(O_{abhijk})$ to several other variables. In this model, the indices $\{a,b\}$ represent the compared texts (stimuli), with $a \neq b$. The indices $\{h,i\}$ label the students who wrote the texts (individuals), where $h = i$ is possible. The index $j$ denotes the judge, and $k$ denotes the comparison number, which accounts for experimental cases where judges perform multiple comparisons of the same texts written by the same students, i.e., a *repeated measures design* [@Lawson_2015, pp. 366-376]. Finally, the SCM presents the preliminary set of structural equations $F = \{f_{O},f_{D},f_{PT}\}$, which define the non-parametric dependencies among these variables.
+
+<!-- 3. What are the innovations of this? -->
+Note that the [SCM -@fig-cj04_scm] incorporates not only the variables described by Thurstone's theory, such as the discriminal difference $(D_{abhijk})$ and the texts' *true* discriminal processes $(T_{ahjk}, T_{bijk})$ (refer to @sec-thurstone_theory), but also innovates by incorporating additional variables central to CJ experiments, such as the texts' *perceived* discriminal processes $(PT_{ahjk}, PT_{bijk})$ and the judges' perceptions $(B_{kj})$. Together with the outcome, these variables constitute the preliminary set of endogenous variables $V = \{O_{abhijk}, D_{abhijk}, PT_{ahjk}, PT_{bijk}, T_{ahjk}, T_{bijk}, B_{kj}\}$. 
+
+By incorporating the texts' perceived discriminal processes into the conceptual-population model, this study considers a crucial aspect of CJ experiments that previous literature has overlooked. It recognizes that the texts' true discriminal processes become an observable outcome only through the judges' perceptions. In other words, researchers observe the CJ outcome only when both variables create a *pure interaction effect*, meaning that neither variable has a direct effect on the outcome, but their interaction produces an effect [@Attia_et_al_2022].
+
+Conversely, based on the evidence presented in @sec-theory-issue1b, the study assumes that other relevant stimulus characteristics influence the judges' perceptions, leading to biases that resist cancellation and ultimately introduce dependencies between the stimuli. To address this, the study incorporates the judges' perceptions into the conceptual-population model, following the recommendations of @Andrich_1978 and @Wainer_et_al_1978.
+
 
 <!-- ![](/images/png/CJ_TM_01.png){#fig-cj01_dag fig-align="center" fig-pos="H" width=23%} -->
 
@@ -393,74 +408,33 @@ SCM
 CJ's outcome, discriminal difference, discriminal processes and judges' biases
 :::
 
-<!-- 3. The DAGs -->
-Notably, every SCM has an associated DAG [@Pearl_et_al_2016; @Cinelli_et_al_2020]. A DAG is a graph consisting of nodes connected by edges, where the nodes represent random variables. The term *directed* means that the edges extend from one node to another, with arrows indicating the direction of causal influence. The term *acyclic* implies that the causal influences do not form loops, ensuring the influences do not cycle back on themselves [@McElreath_2020]. DAGs represent observed variables as solid black circles, while they use open circles for unobserved (latent) variables [@Morgan_et_al_2014]. While the *standard representation* of DAGs typically omits exogenous variables for simplicity, the *magnified representation* includes them, offering the advantage of highlighting potential issues related to conditioning and confounding [@Cinelli_et_al_2020]. 
+<!-- 4. The DAGs -->
+Notably, every SCM has an associated DAG [@Pearl_et_al_2016; @Cinelli_et_al_2020]. A DAG is a graph consisting of nodes connected by edges, where the nodes represent random variables. The term *directed* means that the edges extend from one node to another, with arrows indicating the direction of causal influence. The term *acyclic* implies that the causal influences do not form loops, ensuring the influences do not cycle back on themselves [@McElreath_2020]. DAGs represent observed variables as solid black circles, while they use open circles for unobserved (latent) variables [@Morgan_et_al_2014]. While the *standard representation* of DAGs typically omits exogenous variables for simplicity, the *magnified representation* includes them, offering the advantage of highlighting potential issues related to conditioning and confounding [@Cinelli_et_al_2020]. Thus, this study uses the magnified representation.
 
-<!-- 4. the preliminary DAG for CJ -->
-[DAG -@fig-cj04_dag] displays the preliminary DAG associated with [SCM -@fig-cj04_scm]. The graph shows the direction of causal influences among variables, reflecting the assumptions of Thurstone's theory. It also distinguishes between observable endogenous variables, such as the outcome $O_{abhijk}$, and variables considered latent according to the theory and practice of CJ, such as the discriminal difference $(D_{abhijk})$, the perceived discriminal processes $(PT_{ahjk}, PT_{bijk})$, the "true" discriminal processes $(T_{ahjk}, T_{bijk})$, and the judges' biases $(B_{kj})$.
+<!-- 5. the preliminary DAG for CJ -->
+@fig-cj04_dag displays the DAG associated with [SCM -@fig-cj04_scm]. The graph shows the direction of causal influences among variables, reflecting the assumptions of Thurstone's theory and CJ experiments. It also distinguishes between observable endogenous variables, such as the outcome $O_{abhijk}$, and variables considered latent according to the theory and practice of CJ, such as the discriminal difference, the perceived discriminal processes, the true discriminal processes, and the judges' perceptions.
 
-<!-- Notice,  -->
-<!-- the perceived discriminal processes $(PT_{ahjk}, PT_{bijk})$, the "true" discriminal processes $(T_{ahjk}, T_{bijk})$, and the judges' biases $(B_{kj})$ -->
+<!-- 6. The problem of continuing this way -->
+It is easy to intuit that describing the CJ system by assigning an index and a variable to each discriminal process could quickly become intractable and cumbersome due to the large size of the DAG and the repetition of its components. Therefore, to maintain generality, the study groups pairs of discriminal processes with different indices into matrices that contain these pairs. First, the study defines the vectors $U_{A} \in \mathbb{N}^{A}$, $U_{I} \in \mathbb{N}^{I}$ containing the indices of the stimuli and individuals, where: 
 
-<!-- Assuming population data or more commonly known as census data, we ... -->
+$$
+U_{A} = [1, \dots, a, \dots, b, \dots, A] ;\quad U_{I} = [1, \dots, a, \dots, b, \dots, I]
+$$ 
+
+Then, the study defines the matrices of stimuli and individual comparisons, $P \in \mathbb{N}^{m \times 2}$ and $R \in \mathbb{N}^{n \times 2}$, respectively. Here, each row of $P$ represents a pairing $\{a,b\}$ of stimuli indices and each row of $R$ represents a pairing $\{h,i\}$ of individual indices, i.e.,
+
+$$
+P = \{(a, b) \mid a,b \in U_{A}, a \neq b\} ;\quad R = \{(h, i) \mid h,i \in U_{I}\}
+$$
+
+Here, $m$ and $n$ represents the number of unique pairwise comparisons between stimuli, and unique pairwise comparison per individuals, which corresponds to the number of ways to choose two elements from $U_{A}$ and $U_{I}$, typically given by:
+
+$$
+m = {A \choose 2} = \frac{A!}{2!(A-2)!} ;\quad n = {I \choose 2} = \frac{I!}{2!(I-2)!}
+$$
 
 
 <!-- Because it quickly becomes intractable, and without loosing generality, the (latent) "perceived" and "true" discriminal processes for the stimuli can be depicted in a vector for each judge, as in   -->
-
-
-<!-- To declare a matrix \( P \) in \( \mathbb{N}^2 \) that represents the paired combinations of elements in \( I \), follow these steps: -->
-
-<!-- ### Definitions: -->
-<!-- 1. \( I \) is a subset of the natural numbers, \( I \subseteq \mathbb{N} \). -->
-<!-- 2. The paired combination of elements in \( I \) can be written as \( (i, j) \) for \( i, j \in I \). -->
-
-<!-- ### Constructing the Matrix \( P \): -->
-<!-- 1. Each row of \( P \) represents one pairing \( (i, j) \). -->
-<!-- 2. If \( I = \{a_1, a_2, \ldots, a_n\} \), then \( P \) contains \( n^2 \) rows for all pairs \( (i, j) \), including repetitions where \( i = j \). -->
-<!-- 3. Specifically, the matrix \( P \) is structured as: -->
-<!--    \[ -->
-<!--    P = \begin{bmatrix} -->
-<!--    i_1 & j_1 \\ -->
-<!--    i_2 & j_2 \\ -->
-<!--    \vdots & \vdots \\ -->
-<!--    i_{n^2} & j_{n^2} -->
-<!--    \end{bmatrix}, -->
-<!--    \] -->
-<!--    where \( i_k, j_k \in I \) for all \( k \), and each pair \( (i_k, j_k) \) corresponds to a combination of elements in \( I \). -->
-
-<!-- ### Algorithm to Generate \( P \): -->
-<!-- Given \( I = \{a_1, a_2, \ldots, a_n\} \): -->
-<!-- 1. Loop over all \( i \in I \) (outer loop). -->
-<!-- 2. For each \( i \), loop over all \( j \in I \) (inner loop). -->
-<!-- 3. Append the pair \( (i, j) \) as a new row in \( P \). -->
-
-<!-- ### Example: -->
-<!-- If \( I = \{1, 2, 3\} \), then the matrix \( P \) is: -->
-<!-- \[ -->
-<!-- P = \begin{bmatrix} -->
-<!-- 1 & 1 \\ -->
-<!-- 1 & 2 \\ -->
-<!-- 1 & 3 \\ -->
-<!-- 2 & 1 \\ -->
-<!-- 2 & 2 \\ -->
-<!-- 2 & 3 \\ -->
-<!-- 3 & 1 \\ -->
-<!-- 3 & 2 \\ -->
-<!-- 3 & 3 -->
-<!-- \end{bmatrix}. -->
-<!-- \] -->
-
-<!-- ### Mathematical Notation: -->
-<!-- 1. The matrix \( P \) can be defined as: -->
-<!--    \[ -->
-<!--    P = \{(i, j) \mid i \in I, j \in I\}. -->
-<!--    \] -->
-<!-- 2. In terms of dimensions, \( P \) has \( |I|^2 \) rows and 2 columns. -->
-
-<!-- This formalization ensures that \( P \) represents all paired combinations of elements from \( I \) in \( \mathbb{N}^2 \). -->
-
-
-
 
 
 ::: {#fig-cj05 layout-nrow=2}
@@ -856,7 +830,7 @@ SCMs and DAGs support identification analysis through two key advantages. First,
 #### The five fundamental block for SCMs and DAGs {#sec-appendix-B21 .appendix appendix-style=plain}
 
 <!-- 2. the SCMs -->
-Figures [-@fig-dags_scms1], [-@fig-dags_scms2], [-@fig-dags_scms3], [-@fig-dags_scms4], and [-@fig-dags_scms5] display the five fundamental building blocks for SCMs and DAGs. The left panels of the figures show the formal mathematical models, represented by the SCMs, defined in terms of a set of *endogenous* variables $X=\{X_{1},X_{2},X_{3}\}$, a set of *exogenous* variables $E=\{e_{X1},e_{X2},e_{X3}\}$, and a set of functions $F=\{f_{X1},f_{X2},f_{X3}\}$ [@Pearl_2009; @Cinelli_et_al_2020]. Endogenous variables are those whose causal mechanisms a researcher chooses to model [@Neal_2020]. In contrast, exogenous variables represent *errors* or *disturbances* arising from omitted factors that the investigator chooses not to model explicitly [@Pearl_2009, pp. 27,68]. Lastly, the functions, referred to as *structural equations*, express the endogenous variables as non-parametric functions of other variables. These functions use the symbol '$:=$' to denote the asymmetrical causal dependence of the variables and the symbol '$\dsep$' to represent *d-separation*, a concept akin to (conditional) independence.
+Figures [-@fig-dags_scms1], [-@fig-dags_scms2], [-@fig-dags_scms3], [-@fig-dags_scms4], and [-@fig-dags_scms5] display the five fundamental building blocks for SCMs and DAGs. The left panels of the figures show the formal mathematical models, represented by the SCMs, defined in terms of a set of *endogenous* variables $V=\{X_{1},X_{2},X_{3}\}$, a set of *exogenous* variables $E=\{e_{X1},e_{X2},e_{X3}\}$, and a set of functions $F=\{f_{X1},f_{X2},f_{X3}\}$ [@Pearl_2009; @Cinelli_et_al_2020]. Endogenous variables are those whose causal mechanisms a researcher chooses to model [@Neal_2020]. In contrast, exogenous variables represent *errors* or *disturbances* arising from omitted factors that the investigator chooses not to model explicitly [@Pearl_2009, pp. 27,68]. Lastly, the functions, referred to as *structural equations*, express the endogenous variables as non-parametric functions of other variables. These functions use the symbol '$:=$' to denote the asymmetrical causal dependence of the variables and the symbol '$\dsep$' to represent *d-separation*, a concept akin to (conditional) independence.
 
 <!-- 3. The DAGs -->
 Notably, every SCM has an associated DAG [@Pearl_et_al_2016; @Cinelli_et_al_2020]. The right panels of the figures display these DAGs. A DAG is a graph consisting of nodes connected by edges, where the nodes represent random variables. The term *directed* means that the edges extend from one node to another, with arrows indicating the direction of causal influence. The term *acyclic* implies that the causal influences do not form loops, ensuring the influences do not cycle back on themselves [@McElreath_2020]. DAGs represent observed variables as solid black circles, while they use open circles for unobserved (latent) variables [@Morgan_et_al_2014]. Although the *standard representation* of DAGs typically omits exogenous variables for simplicity, the *magnified representation* depicted in the figures offers one key advantage: including exogenous variables can help researchers highlight potential issues related to conditioning and confounding [@Cinelli_et_al_2020]. 
