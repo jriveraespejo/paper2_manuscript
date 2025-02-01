@@ -746,15 +746,16 @@ functions that transform data into an estimate, while \emph{estimates}
 are the numerical values approximating the estimand
 \citep{Neal_2020, Everitt_et_al_2010}.
 
-For instance, a motivating example that illustrates these concepts
-throughout the document could involve researchers aiming to answer the
-question: ``To what extent do different teaching methods influence
-students' ability to produce high-quality written texts?'' To
-investigate this, they could design a CJ experiment by randomly
-assigning students to two groups, each receiving a different teaching
-method. Judges would then compare pairs of students' written texts,
-producing a dichotomous outcome that reflects the relative quality of
-each text. Based on this setup, researchers can reformulate the research
+A motivating example helps to clarify these concepts. The example will
+appear throughout the document to illustrate various aspects of the
+proposed extension. In this scenario, researchers aim to determine: ``To
+what extent do different teaching methods influence students' ability to
+produce high-quality written texts?'' To investigate this, they could
+design a CJ experiment by randomly assigning students (individuals) to
+two groups, each receiving a different teaching method. Judges would
+then compare pairs of students' written texts (stimuli), producing a
+dichotomous outcome that reflects the relative quality of each text
+(trait). Based on this setup, researchers could reformulate the research
 question as the estimand: ``\emph{On average}, is there a difference in
 the ability to produce high-quality written texts between the two groups
 of students?''. Following current CJ practices, researchers would then
@@ -763,16 +764,16 @@ approximate this estimand.
 
 However, Section~\ref{sec-theory-issues} presents compelling evidence
 that the BTL model has several statistical and measurement limitations.
-These limitations hinder the model's ability to identify distinct
+These limitations hinder the model's ability to identify various
 estimands relevant to CJ inquiries, including the one from the
 motivating example. Identification is crucial because it is a necessary
 condition for ensuring consistent estimators. Without identification,
-researchers cannot achieve \emph{consistency} even with ``infinite'' and
-error-free data. In other words, the estimates derived from the
-estimator would fail to converge to the ``true'' value of the estimand
-as the data size approaches infinity \citep{Everitt_et_al_2010}. As a
-result, deriving meaningful insights from finite data also becomes
-unattainable \citep[pp.~5]{Schuessler_et_al_2023}.
+\emph{consistency} --the property of an estimator whose estimates
+converge to the ``true'' value of the estimand as the data size
+approaches infinity \citep{Everitt_et_al_2010}-- cannot be achieved,
+even with ``infinite'' and error-free data. As a result, deriving
+meaningful insights from finite data also becomes unattainable
+\citep[pp.~5]{Schuessler_et_al_2023}.
 
 Luckily, SCMs and DAGs support identification analysis through two key
 advantages. First, regardless of complexity, they can represent various
@@ -793,58 +794,93 @@ approach to causal inference. Specifically, it leverages the
 capabilities of this approach to formalize the combination of the core
 theoretical principles outlined in Section~\ref{sec-thurstone_theory}
 with key assessment design features relevant to CJ experiments, such as
-the selection of judges, stimuli, and comparisons. The extended model
-clarifies the interactions among all actors and processes involved in CJ
-experiments. Furthermore, it allows researchers to shift the current
-comparative data analysis paradigm from accepting the model's
-assumptions as given to testing these assumptions for specific
-comparative data. For details on these assumptions, refer to
-Section~\ref{sec-theory-issues}. Accordingly,
-Section~\ref{sec-theory-theoretical_P} incorporates the theoretical
-principles into what the study calls the \emph{conceptual-population
-model}. Meanwhile, Section~\ref{sec-theory-theoretical_SC} integrates
-the assessment design features into what the study terms the
-\emph{sample-comparison model}.
+the selection of judges, stimuli, and comparisons.
+
+In addition to addressing the identified limitations, the extended model
+offers two key advantages. First, it clarifies the interactions among
+all actors and processes involved in CJ experiments. Second, it shifts
+the current data analysis paradigm from passively accepting CJ's model
+assumptions to actively testing them with the specific data under
+analysis. For more details on these assumptions, refer to
+Section~\ref{sec-theory-issues}.
+
+Accordingly, Section~\ref{sec-theory-theoretical_P} incorporates the
+theoretical principles into what the study calls the
+\emph{conceptual-population model}. This model assumes that researchers
+have access to a conceptual population of comparison data, meaning data
+representing all repeated comparisons made by every available judge for
+each pair of stimuli produced by each pair of individuals in the
+population, thus its name. Conversely,
+Section~\ref{sec-theory-theoretical_SC} integrates the assessment design
+features into what the study calls the \emph{sample-comparison model}.
+This model assumes a more realistic scenario where researchers only have
+access to a sample of judges, individuals, stimuli, and comparisons from
+the conceptual population.
 
 \subsection{The conceptual-population
 model}\label{sec-theory-theoretical_P}
 
-Before integrating the theoretical principles from
-Section~\ref{sec-thurstone_theory}, the study defines SCMs and DAGs.
-SCMs are formal mathematical models characterized by a set of
-\emph{endogenous} variables \(V\), a set of \emph{exogenous} variables
-\(E\), and a set of functions \(F\)
-\citep{Pearl_2009, Cinelli_et_al_2020}. Endogenous variables are those
-whose causal mechanisms a researcher chooses to model \citep{Neal_2020}.
-In contrast, exogenous variables represent \emph{errors} or
-\emph{disturbances} arising from omitted factors that the investigator
-chooses not to model explicitly \citep[pp.~27,68]{Pearl_2009}. Lastly,
-the functions, referred to as \emph{structural equations}, express the
-endogenous variables as non-parametric functions of other variables.
+Before incorporating the theoretical principles into the
+\emph{conceptual-population model}, the study defines SCMs, which are
+formal mathematical models characterized by a set of \emph{endogenous}
+variables \(V\), a set of \emph{exogenous} variables \(E\), and a set of
+functions \(F\) \citep{Pearl_2009, Cinelli_et_al_2020}. Endogenous
+variables are those whose causal mechanisms a researcher chooses to
+model \citep{Neal_2020}. In contrast, exogenous variables represent
+\emph{errors} or \emph{disturbances} arising from omitted factors that
+the investigator chooses not to model explicitly
+\citep[pp.~27,68]{Pearl_2009}. Lastly, the functions, referred to as
+\emph{structural equations}, express the endogenous variables as
+non-parametric functions of other endogenous and exogenous variables.
 These functions use the symbol `\(:=\)' to denote the asymmetrical
 causal dependence between variables and the symbol `\(\:\bot\:\)' to
 represent \emph{d-separation}, a concept akin to (conditional)
 independence.
 
-Figure~\ref{fig-cj04} illustrates the preliminary integration of the
-theoretical principles underlying the motivating example. Specifically,
-SCM~\ref{fig-cj04_scm} displays the relationship between the outcome of
-the CJ experiment, \(O_{abhijk}\), to several other variables. Here, the
-indices \(\{a,b\}\) represent the compared texts, \(\{h,i\}\) label the
-students who wrote these texts, \(j\) denotes the judge, and \(k\)
-accounts for cases where the judges perform multiple comparisons of the
-same texts written by the same students, i.e., the comparison number for
-a \emph{repeated measures design} \citep[pp.~366-376]{Lawson_2015}. The
-other variables related to the outcome include the discriminal
-difference \((D_{abhijk})\), the perceived discriminal processes
-\((PT_{ahjk}, PT_{bijk})\), the ``true'' discriminal processes
-\((T_{ahjk}, T_{bijk})\), and the judges' biases \((B_{kj})\). Together
-with the outcome, these variables form the preliminary set of endogenous
-variables
+Figure~\ref{fig-cj04} illustrates the preliminary integration of
+theoretical principles into the conceptual-population model.
+Specifically, Figure~\ref{fig-cj04_scm} shows the SCM that underlies the
+motivating example. This SCM maps the relationship between the outcome
+of the CJ experiment \((O_{abhijk})\) to several other variables. In
+this model, the indices \(\{a,b\}\) represent the compared texts
+(stimuli), with \(a \neq b\). The indices \(\{h,i\}\) label the students
+who wrote the texts (individuals), where \(h = i\) is possible. The
+index \(j\) denotes the judge, and \(k\) denotes the comparison number,
+which accounts for experimental cases where judges perform multiple
+comparisons of the same texts written by the same students, i.e., a
+\emph{repeated measures design} \citep[pp.~366-376]{Lawson_2015}.
+Finally, the SCM presents the preliminary set of structural equations
+\(F = \{f_{O},f_{D},f_{PT}\}\), which define the non-parametric
+dependencies among these variables.
+
+Note that the SCM~\ref{fig-cj04_scm} incorporates not only the variables
+described by Thurstone's theory, such as the discriminal difference
+\((D_{abhijk})\) and the texts' \emph{true} discriminal processes
+\((T_{ahjk}, T_{bijk})\) (refer to Section~\ref{sec-thurstone_theory}),
+but also innovates by incorporating additional variables central to CJ
+experiments, such as the texts' \emph{perceived} discriminal processes
+\((PT_{ahjk}, PT_{bijk})\) and the judges' perceptions \((B_{kj})\).
+Together with the outcome, these variables constitute the preliminary
+set of endogenous variables
 \(V = \{O_{abhijk}, D_{abhijk}, PT_{ahjk}, PT_{bijk}, T_{ahjk}, T_{bijk}, B_{kj}\}\).
-Finally, the preliminary set of structural equations
-\(F = \{f_{O},f_{D},f_{PT}\}\) defines the dependencies among these
-variables.
+
+By incorporating the texts' perceived discriminal processes into the
+conceptual-population model, this study considers a crucial aspect of CJ
+experiments that previous literature has overlooked. It recognizes that
+the texts' true discriminal processes become an observable outcome only
+through the judges' perceptions. In other words, researchers observe the
+CJ outcome only when both variables create a \emph{pure interaction
+effect}, meaning that neither variable has a direct effect on the
+outcome, but their interaction produces an effect
+\citep{Attia_et_al_2022}.
+
+Conversely, based on the evidence presented in
+Section~\ref{sec-theory-issue1b}, the study assumes that other relevant
+stimulus characteristics influence the judges' perceptions, leading to
+biases that resist cancellation and ultimately introduce dependencies
+between the stimuli. To address this, the study incorporates the judges'
+perceptions into the conceptual-population model, following the
+recommendations of \citet{Andrich_1978} and \citet{Wainer_et_al_1978}.
 
 \begin{figure}[H]
 
@@ -897,17 +933,49 @@ circles, while they use open circles for unobserved (latent) variables
 DAGs typically omits exogenous variables for simplicity, the
 \emph{magnified representation} includes them, offering the advantage of
 highlighting potential issues related to conditioning and confounding
-\citep{Cinelli_et_al_2020}.
+\citep{Cinelli_et_al_2020}. Thus, this study uses the magnified
+representation.
 
-DAG~\ref{fig-cj04_dag} displays the preliminary DAG associated with
+Figure~\ref{fig-cj04_dag} displays the DAG associated with
 SCM~\ref{fig-cj04_scm}. The graph shows the direction of causal
 influences among variables, reflecting the assumptions of Thurstone's
-theory. It also distinguishes between observable endogenous variables,
-such as the outcome \(O_{abhijk}\), and variables considered latent
-according to the theory and practice of CJ, such as the discriminal
-difference \((D_{abhijk})\), the perceived discriminal processes
-\((PT_{ahjk}, PT_{bijk})\), the ``true'' discriminal processes
-\((T_{ahjk}, T_{bijk})\), and the judges' biases \((B_{kj})\).
+theory and CJ experiments. It also distinguishes between observable
+endogenous variables, such as the outcome \(O_{abhijk}\), and variables
+considered latent according to the theory and practice of CJ, such as
+the discriminal difference, the perceived discriminal processes, the
+true discriminal processes, and the judges' perceptions.
+
+It is easy to intuit that describing the CJ system by assigning an index
+and a variable to each discriminal process could quickly become
+intractable and cumbersome due to the large size of the DAG and the
+repetition of its components. Therefore, to maintain generality, the
+study groups pairs of discriminal processes with different indices into
+matrices that contain these pairs. First, the study defines the vectors
+\(U_{A} \in \mathbb{N}^{A}\), \(U_{I} \in \mathbb{N}^{I}\) containing
+the indices of the stimuli and individuals, where:
+
+\[
+U_{A} = [1, \dots, a, \dots, b, \dots, A] ;\quad U_{I} = [1, \dots, a, \dots, b, \dots, I]
+\]
+
+Then, the study defines the matrices of stimuli and individual
+comparisons, \(P \in \mathbb{N}^{m \times 2}\) and
+\(R \in \mathbb{N}^{n \times 2}\), respectively. Here, each row of \(P\)
+represents a pairing \(\{a,b\}\) of stimuli indices and each row of
+\(R\) represents a pairing \(\{h,i\}\) of individual indices, i.e.,
+
+\[
+P = \{(a, b) \mid a,b \in U_{A}, a \neq b\} ;\quad R = \{(h, i) \mid h,i \in U_{I}\}
+\]
+
+Here, \(m\) and \(n\) represents the number of unique pairwise
+comparisons between stimuli, and unique pairwise comparison per
+individuals, which corresponds to the number of ways to choose two
+elements from \(U_{A}\) and \(U_{I}\), typically given by:
+
+\[
+m = {A \choose 2} = \frac{A!}{2!(A-2)!} ;\quad n = {I \choose 2} = \frac{I!}{2!(I-2)!}
+\]
 
 \begin{figure}[H]
 
@@ -1440,7 +1508,7 @@ Figures \ref{fig-dags_scms1}, \ref{fig-dags_scms2},
 display the five fundamental building blocks for SCMs and DAGs. The left
 panels of the figures show the formal mathematical models, represented
 by the SCMs, defined in terms of a set of \emph{endogenous} variables
-\(X=\{X_{1},X_{2},X_{3}\}\), a set of \emph{exogenous} variables
+\(V=\{X_{1},X_{2},X_{3}\}\), a set of \emph{exogenous} variables
 \(E=\{e_{X1},e_{X2},e_{X3}\}\), and a set of functions
 \(F=\{f_{X1},f_{X2},f_{X3}\}\) \citep{Pearl_2009, Cinelli_et_al_2020}.
 Endogenous variables are those whose causal mechanisms a researcher
