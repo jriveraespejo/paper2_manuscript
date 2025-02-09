@@ -721,10 +721,9 @@ testing, may also undermine the validity of these estimates
 \citep[pp.~2]{Perron_et_al_2015}. Thus, addressing these issues through
 a more systematic and integrated approach could provide significant
 statistical and measurement benefits. For this reason, the study employs
-the structural approach to causal inference, as it fulfills these
-requirements.
+the structural approach to causal inference.
 
-\section{Extending Thurstone's model}\label{sec-theoretical}
+\section{Extending Thurstone's general form}\label{sec-theoretical}
 
 The \emph{structural approach} to causal inference provides a formal
 framework for identifying causes and estimating their effects using
@@ -746,21 +745,21 @@ functions that transform data into an estimate, while \emph{estimates}
 are the numerical values approximating the estimand
 \citep{Neal_2020, Everitt_et_al_2010}.
 
-A motivating example helps to clarify these concepts. The example will
+A motivating example helps to clarify these concepts. This example will
 appear throughout the document to illustrate various aspects of the
 proposed extension. In this scenario, researchers aim to determine: ``To
 what extent do different teaching methods influence students' ability to
-produce high-quality written texts?'' To investigate this, they could
-design a CJ experiment by randomly assigning students (individuals) to
-two groups, each receiving a different teaching method. Judges would
-then compare pairs of students' written texts (stimuli), producing a
-dichotomous outcome that reflects the relative quality of each text
-(trait). Based on this setup, researchers could reformulate the research
-question as the estimand: ``\emph{On average}, is there a difference in
-the ability to produce high-quality written texts between the two groups
-of students?''. Following current CJ practices, researchers would then
-rely on estimates from the BTL model, or its transformations, to
-approximate this estimand.
+produce high-quality written texts?'' To investigate this, they design a
+CJ experiment by randomly assigning students (individuals) to two
+groups, each receiving a different teaching method. Judges then compare
+pairs of students' written texts (stimuli), producing a dichotomous
+outcome that reflects the relative quality of each text (trait). Based
+on this setup, researchers could reformulate the research question as
+the estimand: ``\emph{On average}, is there a difference in the ability
+to produce high-quality written texts between the two groups of
+students?''. Following current CJ practices, researchers would then rely
+on estimates from the BTL model, or its transformations, to approximate
+this estimand.
 
 However, Section~\ref{sec-theory-issues} presents compelling evidence
 that the BTL model has several statistical and measurement limitations.
@@ -787,22 +786,22 @@ specification of the types of variables, the functional forms relating
 them, or the parameters of those functional forms
 \citep[pp.~35]{Pearl_et_al_2016}.
 
-As a result, this section addresses the identified limitations by
-extending Thurstone's general form (see Table~\ref{tbl-thurstone_cases})
-through a systematic and integrated approach based on the structural
-approach to causal inference. Specifically, it leverages the
-capabilities of this approach to formalize the combination of the core
-theoretical principles outlined in Section~\ref{sec-thurstone_theory}
-with key assessment design features relevant to CJ experiments, such as
-the selection of judges, stimuli, and comparisons.
+Thus, this section addresses the identified limitations by extending
+Thurstone's general form (see Table~\ref{tbl-thurstone_cases}) through a
+systematic and integrated approach based on the structural approach to
+causal inference. Specifically, it leverages the capabilities of this
+approach to formalize the combination of the core theoretical principles
+outlined in Section~\ref{sec-thurstone_theory} with key assessment
+design features relevant to CJ experiments, such as the selection of
+judges, stimuli, and comparisons.
 
-In addition to addressing the identified limitations, the extended model
+In addition to overcoming the identified limitations, the extended model
 offers two key advantages. First, it clarifies the interactions among
 all actors and processes involved in CJ experiments. Second, it shifts
-the current data analysis paradigm from passively accepting CJ's model
-assumptions to actively testing them with the specific data under
-analysis. For more details on these assumptions, refer to
-Section~\ref{sec-theory-issues}.
+the current comparative data analysis paradigm from passively accepting
+the model assumptions to actively testing if those assumptions fit the
+specific data under analysis. For more details on these assumptions,
+refer to Section~\ref{sec-theory-issues}.
 
 Accordingly, Section~\ref{sec-theory-theoretical_P} incorporates the
 theoretical principles into what the study calls the
@@ -821,7 +820,7 @@ the conceptual population.
 model}\label{sec-theory-theoretical_P}
 
 Before incorporating the theoretical principles into the
-\emph{conceptual-population model}, the study defines SCMs, which are
+\emph{conceptual-population model}, the study defines SCMs. SCMs are
 formal mathematical models characterized by a set of \emph{endogenous}
 variables \(V\), a set of \emph{exogenous} variables \(E\), and a set of
 functions \(F\) \citep{Pearl_2009, Cinelli_et_al_2020}. Endogenous
@@ -890,16 +889,14 @@ recommendations of \citet{Andrich_1978} and \citet{Wainer_et_al_1978}.
 
 \[
 \begin{aligned}
-  O_{abhijk} & := f_{O}(D_{abhijk}) \\
-  D_{abhijk} & := f_{D}(PT_{ahjk}, PT_{bijk}) \\
-  PT_{ahjk} & := f_{PT}(T_{ah}, B_{jk}) \\
-  PT_{bijk} & := f_{PT}(T_{bi}, B_{jk})
+  O^{cp}_{abhijk} & := f_{O}(D_{abhijk}) \\
+  D_{abhijk} & := f_{D}(T_{ah}, T_{bi}, B_{jk})
 \end{aligned}
 \]
 
 }
 
-\subcaption{\label{fig-cj04_scm}SCM}
+\subcaption{\label{fig-cj03_scm}SCM}
 
 \end{minipage}%
 \newline
@@ -907,15 +904,15 @@ recommendations of \citet{Andrich_1978} and \citet{Wainer_et_al_1978}.
 
 \centering{
 
-\includegraphics[width=0.45\linewidth,height=\textheight,keepaspectratio]{./images/png/CJ_TM_04.png}
+\includegraphics[width=0.35\linewidth,height=\textheight,keepaspectratio]{./images/png/CJ_TM_03.png}
 
 }
 
-\subcaption{\label{fig-cj04_dag}DAG}
+\subcaption{\label{fig-cj03_dag}DAG}
 
 \end{minipage}%
 
-\caption{\label{fig-cj04}CJ's outcome, discriminal difference,
+\caption{\label{fig-cj03}CJ's outcome, discriminal difference,
 discriminal processes and judges' biases}
 
 \end{figure}%
@@ -985,15 +982,14 @@ m = {A \choose 2} = \frac{A!}{2!(A-2)!} ;\quad n = {I \choose 2} = \frac{I!}{2!(
 
 \[
 \begin{aligned}
-  O_{PRQ} & := f_{O}(D_{PRQ}) \\
-  D_{PRQ} & := f_{D}(PT_{PRQ}) \\
-  PT_{PRQ} & := f_{PT}(T_{AI}, B_{KJ})
+  O^{cp}_{RPUV} & := f_{O}(D_{RPUV}) \\
+  D_{RPUV} & := f_{D}(T_{IA}, B_{JK})
 \end{aligned}
 \]
 
 }
 
-\subcaption{\label{fig-cj05_scm}SCM}
+\subcaption{\label{fig-cj04_scm}SCM}
 
 \end{minipage}%
 \newline
@@ -1001,15 +997,15 @@ m = {A \choose 2} = \frac{A!}{2!(A-2)!} ;\quad n = {I \choose 2} = \frac{I!}{2!(
 
 \centering{
 
-\includegraphics[width=0.44\linewidth,height=\textheight,keepaspectratio]{./images/png/CJ_TM_05.png}
+\includegraphics[width=0.44\linewidth,height=\textheight,keepaspectratio]{./images/png/CJ_TM_04.png}
 
 }
 
-\subcaption{\label{fig-cj05_dag}DAG}
+\subcaption{\label{fig-cj04_dag}DAG}
 
 \end{minipage}%
 
-\caption{\label{fig-cj05}CJ's outcome, discriminal difference,
+\caption{\label{fig-cj04}CJ's outcome, discriminal difference,
 discriminal processes and judges' biases}
 
 \end{figure}%
@@ -1022,19 +1018,18 @@ discriminal processes and judges' biases}
 
 \[
 \begin{aligned}
-  O_{PRQ} & := f_{O}(D_{PRQ}) \\
-  D_{PRQ} & := f_{D}(PT_{PRQ}) \\
-  PT_{PRQ} & := f_{PT}(T_{AI}, B_{KJ}) \\
-  T_{AI} & := f_{T}(T_{I}, X_{A}, e_{A}) \\
+  O^{cp}_{RPUV} & := f_{O}(D_{RPUV}) \\
+  D_{RPUV} & := f_{D}(T_{IA}, B_{JK}) \\
+  T_{IA} & := f_{T}(T_{I}, X_{A}, e_{IA}) \\
   T_{I} & := f_{T}(X_{I}, e_{I}) \\
-  B_{KJ} & := f_{B}(B_{J}, Z_{K}, e_{K}) \\
+  B_{JK} & := f_{B}(B_{J}, Z_{K}, e_{JK}) \\
   B_{J} & := f_{B}(Z_{J}, e_{J}) 
 \end{aligned}
 \]
 
 }
 
-\subcaption{\label{fig-cj10_scm}SCM}
+\subcaption{\label{fig-cj09_scm}SCM}
 
 \end{minipage}%
 \newline
@@ -1042,15 +1037,15 @@ discriminal processes and judges' biases}
 
 \centering{
 
-\includegraphics[width=0.68\linewidth,height=\textheight,keepaspectratio]{./images/png/CJ_TM_10.png}
+\includegraphics[width=0.7\linewidth,height=\textheight,keepaspectratio]{./images/png/CJ_TM_09.png}
 
 }
 
-\subcaption{\label{fig-cj10_dag}DAG}
+\subcaption{\label{fig-cj09_dag}DAG}
 
 \end{minipage}%
 
-\caption{\label{fig-cj10}CJ's outcome, discriminal difference,
+\caption{\label{fig-cj09}CJ's outcome, discriminal difference,
 discriminal processes and judges' biases}
 
 \end{figure}%
@@ -1068,20 +1063,19 @@ Considering the sampling mechanism
 
 \[
 \begin{aligned}
-  O^{S}_{PRQ} & := f_{O}(O_{PRQ}, S_{I}, S_{A}, S_{K}, S_{J}) \\
-  O_{PRQ} & := f_{O}(D_{PRQ}) \\
-  D_{PRQ} & := f_{D}(PT_{PRQ}) \\
-  PT_{PRQ} & := f_{PT}(T_{AI}, B_{KJ}) \\
-  T_{AI} & := f_{T}(T_{I}, X_{A}, e_{A}) \\
+  O^{sc}_{RPUV} & := f_{O}(O^{cp}_{RPUV}, S_{I}, S_{A}, S_{K}, S_{J}) \\
+  O^{cp}_{RPUV} & := f_{O}(D_{RPUV}) \\
+  D_{RPUV} & := f_{D}(T_{IA}, B_{JK}) \\
+  T_{IA} & := f_{T}(T_{I}, X_{A}, e_{IA}) \\
   T_{I} & := f_{T}(X_{I}, e_{I}) \\
-  B_{KJ} & := f_{B}(B_{J}, Z_{K}, e_{K}) \\
-  B_{J} & := f_{B}(Z_{J}, e_{J})
+  B_{JK} & := f_{B}(B_{J}, Z_{K}, e_{JK}) \\
+  B_{J} & := f_{B}(Z_{J}, e_{J}) 
 \end{aligned}
 \]
 
 }
 
-\subcaption{\label{fig-cj12_scm}SCM}
+\subcaption{\label{fig-cj11_scm}SCM}
 
 \end{minipage}%
 \newline
@@ -1089,15 +1083,15 @@ Considering the sampling mechanism
 
 \centering{
 
-\includegraphics[width=0.8\linewidth,height=\textheight,keepaspectratio]{./images/png/CJ_TM_12.png}
+\includegraphics[width=0.84\linewidth,height=\textheight,keepaspectratio]{./images/png/CJ_TM_11.png}
 
 }
 
-\subcaption{\label{fig-cj12_dag}DAG}
+\subcaption{\label{fig-cj11_dag}DAG}
 
 \end{minipage}%
 
-\caption{\label{fig-cj12}CJ's outcome, discriminal difference,
+\caption{\label{fig-cj11}CJ's outcome, discriminal difference,
 discriminal processes and judges' biases}
 
 \end{figure}%
@@ -1112,21 +1106,20 @@ Considering comparison mechanisms
 
 \[
 \begin{aligned}
-  O^{C}_{PRQ} & := f_{C}(O^{S}_{PRQ}, C) \\
-  O^{S}_{PRQ} & := f_{S}(O_{PRQ}, S_{I}, S_{A}, S_{K}, S_{J}) \\
-  O_{PRQ} & := f_{O}(D_{PRQ}) \\
-  D_{PRQ} & := f_{D}(PT_{PRQ}) \\
-  PT_{PRQ} & := f_{PT}(T_{AI}, B_{KJ}) \\
-  T_{AI} & := f_{T}(T_{I}, X_{A}, e_{A}) \\
+  O_{RPUV} & := f_{C}(O^{sc}_{RPUV}, C) \\
+  O^{sc}_{RPUV} & := f_{O}(O^{cp}_{RPUV}, S_{I}, S_{A}, S_{K}, S_{J}) \\
+  O^{cp}_{RPUV} & := f_{O}(D_{RPUV}) \\
+  D_{RPUV} & := f_{D}(T_{IA}, B_{JK}) \\
+  T_{IA} & := f_{T}(T_{I}, X_{A}, e_{IA}) \\
   T_{I} & := f_{T}(X_{I}, e_{I}) \\
-  B_{KJ} & := f_{B}(B_{J}, Z_{K}, e_{K}) \\
+  B_{JK} & := f_{B}(B_{J}, Z_{K}, e_{JK}) \\
   B_{J} & := f_{B}(Z_{J}, e_{J}) 
 \end{aligned}
 \]
 
 }
 
-\subcaption{\label{fig-cj14_scm}SCM}
+\subcaption{\label{fig-cj13_scm}SCM}
 
 \end{minipage}%
 \newline
@@ -1134,58 +1127,15 @@ Considering comparison mechanisms
 
 \centering{
 
-\includegraphics[width=0.9\linewidth,height=\textheight,keepaspectratio]{./images/png/CJ_TM_14.png}
+\includegraphics[width=1\linewidth,height=\textheight,keepaspectratio]{./images/png/CJ_TM_13.png}
 
 }
 
-\subcaption{\label{fig-cj14_dag}DAG}
+\subcaption{\label{fig-cj13_dag}DAG}
 
 \end{minipage}%
 
-\caption{\label{fig-cj14}CJ's outcome, discriminal difference,
-discriminal processes and judges' biases}
-
-\end{figure}%
-
-\begin{figure}[H]
-
-\begin{minipage}{\linewidth}
-
-\centering{
-
-\[
-\begin{aligned}
-  O^{C}_{PRQ} & := f_{C}(O^{S}_{PRQ}, C) \\
-  O^{S}_{PRQ} & := f_{S}(O_{PRQ}, S_{I}, S_{A}, S_{K}, S_{J}) \\
-  O_{PRQ} & := f_{O}(D_{PRQ}) \\
-  D_{PRQ} & := f_{D}(PT_{PRQ}) \\
-  PT_{PRQ} & := f_{PT}(T_{AI}, B_{KJ}) \\
-  T_{AI} & := f_{T}(T_{I}, X_{A}, e_{A}) \\
-  T_{I} & := f_{T}(X_{I}, e_{I}) \\
-  B_{KJ} & := f_{B}(B_{J}, Z_{K}, e_{K}) \\
-  B_{J} & := f_{B}(Z_{J}, e_{J}) 
-\end{aligned}
-\]
-
-}
-
-\subcaption{\label{fig-cj15_scm}SCM}
-
-\end{minipage}%
-\newline
-\begin{minipage}{\linewidth}
-
-\centering{
-
-\includegraphics[width=0.9\linewidth,height=\textheight,keepaspectratio]{./images/png/CJ_TM_15.png}
-
-}
-
-\subcaption{\label{fig-cj15_dag}DAG}
-
-\end{minipage}%
-
-\caption{\label{fig-cj15}CJ's outcome, discriminal difference,
+\caption{\label{fig-cj13}CJ's outcome, discriminal difference,
 discriminal processes and judges' biases}
 
 \end{figure}%
@@ -1206,36 +1156,34 @@ research}\label{sec-discussion-limitations}
 \section*{Declarations}\label{declarations}
 \addcontentsline{toc}{section}{Declarations}
 
-\textbf{Funding:} The project was founded through the Research Fund of
-the University of Antwerp (BOF).
+\textbf{Funding:} The Research Fund (BOF) of the University of Antwerp
+funded this project.
 
-\textbf{Financial interests:} The authors have no relevant financial
-interest to disclose.
+\textbf{Financial interests:} The authors declare no relevant financial
+interests.
 
-\textbf{Non-financial interests:} The authors have no relevant
-non-financial interest to disclose.
+\textbf{Non-financial interests:} The authors declare no relevant
+non-financial interests.
 
 \textbf{Ethics approval:} The University of Antwerp Research Ethics
-Committee has confirmed that no ethical approval is required.
+Committee confirmed that this study does not require ethical approval.
 
 \textbf{Consent to participate:} Not applicable
 
-\textbf{Consent for publication:} All authors have read and agreed to
-the published version of the manuscript.
+\textbf{Consent for publication:} All authors have read and approved the
+final version of the manuscript for publication.
 
-\textbf{Availability of data and materials:} No data was utilized in
-this study.
+\textbf{Data availability:} This study did not use any data.
 
-\textbf{Code availability:} All the code utilized in this research is
-available in the digital document located at:
-\url{https://jriveraespejo.github.io/paper2_manuscript/}.
+\textbf{Materials and code availability:} The \texttt{CODE\ LINK}
+section at the top of the digital document located at:
+\url{https://jriveraespejo.github.io/paper2_manuscript/} provides access
+to all materials and code.
 
 \textbf{AI-assisted technologies in the writing process:} The authors
-utilized a range of AI-based language tools throughout the preparation
-of this work. They occasionally employed the tools to refine phrasing
-and optimize wording, ensuring appropriate language use and enhancing
-the manuscript's clarity and coherence. The authors take full
-responsibility for the final content of the publication.
+used various AI-based language tools to refine phrasing, optimize
+wording, and enhance clarity and coherence throughout the manuscript.
+They take full responsibility for the final content of the publication.
 
 \textbf{CRediT authorship contribution statement:}
 \emph{Conceptualization:} S.G., S.DM., T.vD., and J.M.R.E;
@@ -1252,6 +1200,8 @@ acquisition:} S.G. and S.DM.
 
 \section{Appendix}\label{sec-appendix}
 
+\subsection{Statistics and Causal inference}\label{sec-appendixB}
+
 This section introduces fundamental statistical and causal inference
 concepts necessary for understanding the core theoretical principles
 described in this document. It does not, however, offer a comprehensive
@@ -1266,8 +1216,8 @@ seminal intermediate papers such as \citet{Neyman_et_al_1923},
 as well as books such as \citet{Pearl_2009}, \citet{Morgan_et_al_2014},
 and \citet{Hernan_et_al_2020}.
 
-\subsection{Empirical research and randomized
-experiments}\label{sec-appendix-A}
+\subsubsection{Empirical research and randomized
+experiments}\label{sec-appendixB1}
 
 Empirical research uses evidence from observation and experimentation to
 address real-world challenges. In this context, researchers typically
@@ -1359,7 +1309,8 @@ addition, the framework can provide significant theoretical insights
 that can enhance the design of experimental and observational studies
 \citep{McElreath_2020}.
 
-\subsection{Identification under causal inference}\label{sec-appendix-B}
+\subsubsection{Identification under causal
+inference}\label{sec-appendixB2}
 
 Unlike classical statistical modeling, which focuses primarily on
 summarizing data and inferring associations, the \emph{causal inference}
@@ -1379,7 +1330,7 @@ given cause are neither observed nor observable
 \citep{Neal_2020, Counterfactual_2024}. The structural approach to
 causal inference \citep{Pearl_2009, Pearl_et_al_2016} provides a formal
 framework for defining counterfactuals. For instance, in the scenario
-described in Section~\ref{sec-appendix-A}, the approach begins by
+described in Section~\ref{sec-appendixB1}, the approach begins by
 defining the \emph{individual causal effect} (ICE) as the difference
 between each student's potential outcomes, as in Equation~\ref{eq-ICE}.
 
@@ -1434,7 +1385,7 @@ real world from observed data inevitably requires assumptions. This
 requirement holds true for both observational and experimental data.
 
 For instance, if researchers cannot conduct the randomized experiments
-described in Section~\ref{sec-appendix-A} and must instead rely on
+described in Section~\ref{sec-appendixB1} and must instead rely on
 observational data, they can still identify the ACE as long as an
 observed variable \(X\), such as the socio-economic status of the
 school, satisfies the backdoor criterion. Under these circumstances,
@@ -1471,7 +1422,7 @@ applicability across different causal scenarios
   \end{aligned}
 }\end{equation}
 
-\subsubsection{Diving into the specifics}\label{sec-appendix-B2}
+\subsubsection{Diving into the specifics}\label{sec-appendixB3}
 
 The structural approach to causal inference uses SCMs and DAGs to
 formally and graphically represent the presumed causal structure
@@ -1496,12 +1447,15 @@ relationships in a non-parametric and fully interactive way. This
 flexibility enables feasible ACE identification strategies without
 defining the variables' data types, the functional form between them, or
 their parameters \citep[pp.~35]{Pearl_et_al_2016}.
-Section~\ref{sec-appendix-B21} and Section~\ref{sec-appendix-B22}
-elaborate on the first advantage, while Section~\ref{sec-appendix-B22}
-and Section~\ref{sec-appendix-B23} do so for the second.
+
+Thus, Section~\ref{sec-appendixB31} and Section~\ref{sec-appendixB32}
+elaborate on the first advantage, while Section~\ref{sec-appendixB32}
+and Section~\ref{sec-appendixB33} do so for the second. Finally,
+Section~\ref{sec-appendixB34} explains how researchers use SCMs and DAGs
+alongside Bayesian inference methods in the estimation process.
 
 \paragraph{The five fundamental block for SCMs and
-DAGs}\label{sec-appendix-B21}
+DAGs}\label{sec-appendixB31}
 
 Figures \ref{fig-dags_scms1}, \ref{fig-dags_scms2},
 \ref{fig-dags_scms3}, \ref{fig-dags_scms4}, and \ref{fig-dags_scms5}
@@ -1759,7 +1713,7 @@ evidenced by the pairwise relations \(e_{X1} \:\bot\:e_{X2}\),
 \(e_{X1} \:\bot\:e_{X3}\), and \(e_{X2} \:\bot\:e_{X3}\).
 
 Researchers can then use these building blocks to represent the scenario
-outlined in Section~\ref{sec-appendix-B}. SCM \ref{fig-scm_example1} and
+outlined in Section~\ref{sec-appendixB2}. SCM \ref{fig-scm_example1} and
 DAG \ref{fig-mdag_example1} depict the plausible causal structure for
 this example. In this context, the variable \(X\) (socio-economic status
 of the school) is thought to be a confounder in the relationship between
@@ -1808,12 +1762,12 @@ unconnected node pairs, evident from the relationships
 \end{minipage}%
 
 \caption{\label{fig-example1}Plausible causal structure the scenario
-outlined in Section~\ref{sec-appendix-B}.}
+outlined in Section~\ref{sec-appendixB2}.}
 
 \end{figure}%
 
 \paragraph{The probabilistic implications of these
-blocks}\label{sec-appendix-B22}
+blocks}\label{sec-appendixB32}
 
 Beyond their graphical capabilities, SCMs and DAGs can encode the
 probabilistic information embedded within a causal structure. They
@@ -1874,7 +1828,7 @@ once researchers observe empirical data, the patterns of
 validity of the proposed conceptual model.
 
 The five fundamental building blocks described in
-Section~\ref{sec-appendix-B21} clearly illustrate which (in)dependencies
+Section~\ref{sec-appendixB31} clearly illustrate which (in)dependencies
 can SMCs and DAGs predict. For instance, applying the BNF to the causal
 structure shown in the SCM \ref{fig-scm_bb1} and DAG \ref{fig-mdag_bb1}
 enables researchers to express the joint probability distribution of the
@@ -1887,7 +1841,7 @@ supporting the theoretical assumption that the observed variables
 and DAG \ref{fig-mdag_bb2}, the BNF express their joint probability
 distribution as \(P(X_{1}, X_{3}) = P(X_{3} \:|\:X_{1}) P(X_{1})\).
 Notably, these descriptions demonstrate the clear correspondence between
-the structural equations illustrated in Section~\ref{sec-appendix-B21}
+the structural equations illustrated in Section~\ref{sec-appendixB31}
 and the CPDs.
 
 Beyond the insights gained from two-node structures, researchers can
@@ -1923,7 +1877,7 @@ dependent when controlling for \(X_{2}\)
 mathematical proofs for these conclusions.
 
 Using these additional probabilistic insights, researchers can revisit
-the scenario in Section~\ref{sec-appendix-B}. In this context, applying
+the scenario in Section~\ref{sec-appendixB2}. In this context, applying
 the BNF to the SCM \ref{fig-scm_example2} structure, enables the
 representation of the joint probability distribution of the observed
 variables as \(P(Y, T, X) =\) \(P(Y \:|\:T, X) P(T \:|\:X) P(X)\). From
@@ -1974,11 +1928,11 @@ the fork structure \(T \leftarrow X \rightarrow Y\) (gray path in DAG
 \end{minipage}%
 
 \caption{\label{fig-example2}Plausible causal structure the scenario
-outlined in Section~\ref{sec-appendix-B}.}
+outlined in Section~\ref{sec-appendixB2}.}
 
 \end{figure}%
 
-\paragraph{From probability to causality}\label{sec-appendix-B23}
+\paragraph{From probability to causality}\label{sec-appendixB33}
 
 The structural approach to causal inference translates probabilistic
 insights into actionable strategies seeking to identify the ACE from
@@ -2036,7 +1990,7 @@ ACE as:
 }\end{equation}
 
 With these new insights, researchers revisiting the scenario in
-Section~\ref{sec-appendix-B22} can infer that the socio-economic status
+Section~\ref{sec-appendixB32} can infer that the socio-economic status
 of the school, \(X\), satisfies the backdoor criterion, assuming the
 causal structure depicted by the SCM \ref{fig-scm_example2} and DAG
 \ref{fig-mdag_example2} is correct. This means that \(X\) serves as a
@@ -2085,7 +2039,7 @@ satisfies the backdoor criterion.
 \end{minipage}%
 
 \caption{\label{fig-example3}Plausible causal structure the scenario
-outlined in Section~\ref{sec-appendix-B22}.}
+outlined in Section~\ref{sec-appendixB32}.}
 
 \end{figure}%
 
@@ -2093,7 +2047,7 @@ Researchers can then apply the \emph{backdoor adjustment} to identify
 the ACE of \(T\) on \(Y\). They achieve this by first identifying the
 CACE of \(T\) on \(Y\) by conditioning on \(X\), and then marginalizing
 this effect over \(X\) to obtain the ACE. This process is expressed in
-Equation~\ref{eq-mACE2} (see Section~\ref{sec-appendix-B}).
+Equation~\ref{eq-mACE2} (see Section~\ref{sec-appendixB2}).
 
 \begin{equation}\phantomsection\label{eq-mACE2}{
 \begin{aligned}
@@ -2103,7 +2057,7 @@ Equation~\ref{eq-mACE2} (see Section~\ref{sec-appendix-B}).
 \end{aligned}
 }\end{equation}
 
-\paragraph{The estimation process}\label{sec-appendix-C}
+\paragraph{The estimation process}\label{sec-appendixB34}
 
 Ultimately, researchers can use Bayesian inference methods to estimate
 the ACE. The approach begins by defining two probability distributions:
@@ -2147,7 +2101,7 @@ P(X_{1}, X_{2}, \dots, X_{P} \:|\:\theta) = P(X_{1} \:|\:\theta) \prod^{P}_{p=2}
 Nevertheless, researchers can manage the complexity of the likelihood by
 assuming specific local (in)dependencies among variables. SCMs and DAGs
 provide a formal framework to represent these assumptions, as detailed
-in Section~\ref{sec-appendix-B22}. These assumptions improve model
+in Section~\ref{sec-appendixB32}. These assumptions improve model
 tractability and simplify the estimation process by enabling the
 derivation of the BNF of the likelihood (Equation~\ref{eq-like_BNF}).
 With this simplified structure, any probabilistic programming language
