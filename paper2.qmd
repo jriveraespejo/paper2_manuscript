@@ -296,7 +296,7 @@ However, the statistical literature advises caution when using estimated scores 
 <!-- A type-I error occurs when a *true* null hypothesis is incorrectly rejected, while a type-II error occurs when a *false* null hypothesis is incorrectly accepted [@Everitt_et_al_2010]. -->
 
 <!-- 4. segway for next section -->
-In aggregate, the excessive reliance on Thurstone's Case V assumptions in the statistical analysis of CJ data can compromise the reliability of CJ's trait estimates. This overreliance, coupled with the apparent disconnect between CJ's approach to trait measurement and hypothesis testing, may also undermine the validity of these estimates [@Perron_et_al_2015, pp. 2]. Thus, addressing these issues through a more systematic and integrated approach could provide significant statistical and measurement benefits. For this reason, the study employs the structural approach to causal inference, as it fulfills these requirements.
+In aggregate, the excessive reliance on Thurstone's Case V assumptions in the statistical analysis of CJ data can compromise the reliability of CJ's trait estimates. This overreliance, coupled with the apparent disconnect between CJ's approach to trait measurement and hypothesis testing, may also undermine the validity of these estimates [@Perron_et_al_2015, pp. 2]. Thus, addressing these issues through a more systematic and integrated approach could provide significant statistical and measurement benefits. For this reason, the study employs the structural approach to causal inference.
 
 <!-- Reliability is a necessary but not sufficient condition for validity. Reliability can exist without validity but validity cannot exist without reliability [@Perron_et_al_2015, pp. 2]. -->
 
@@ -313,7 +313,7 @@ In aggregate, the excessive reliance on Thurstone's Case V assumptions in the st
 
 
 
-# Extending Thurstone's model {#sec-theoretical}
+# Extending Thurstone's general form {#sec-theoretical}
 
 <!-- recording: Sven and Tine 25.01.22; time: 00:05:40 - 00:06:30 -->
 <!-- recording: Sven and Tine 25.01.22; time: 00:08:25 - 00:31:56 -->
@@ -330,7 +330,7 @@ Essentially, SCMs and DAGs function as *conceptual models* on which identificati
 <!-- In general terms, causal graphs encode a researcher’s assumptions about the causal process that generated the data in a population of interest [@Schuessler_et_al_2023, pp. 4] -->
 
 <!-- 3. Example of a CJ estimand and estimator, and its limitations -->
-A motivating example helps to clarify these concepts. The example will appear throughout the document to illustrate various aspects of the proposed extension. In this scenario, researchers aim to determine: "To what extent do different teaching methods influence students' ability to produce high-quality written texts?" To investigate this, they could design a CJ experiment by randomly assigning students (individuals) to two groups, each receiving a different teaching method. Judges would then compare pairs of students' written texts (stimuli), producing a dichotomous outcome that reflects the relative quality of each text (trait). Based on this setup, researchers could reformulate the research question as the estimand: "*On average*, is there a difference in the ability to produce high-quality written texts between the two groups of students?". Following current CJ practices, researchers would then rely on estimates from the BTL model, or its transformations, to approximate this estimand.
+A motivating example helps to clarify these concepts. This example will appear throughout the document to illustrate various aspects of the proposed extension. In this scenario, researchers aim to determine: "To what extent do different teaching methods influence students' ability to produce high-quality written texts?" To investigate this, they design a CJ experiment by randomly assigning students (individuals) to two groups, each receiving a different teaching method. Judges then compare pairs of students’ written texts (stimuli), producing a dichotomous outcome that reflects the relative quality of each text (trait). Based on this setup, researchers could reformulate the research question as the estimand: "*On average*, is there a difference in the ability to produce high-quality written texts between the two groups of students?". Following current CJ practices, researchers would then rely on estimates from the BTL model, or its transformations, to approximate this estimand.
 
 <!-- 4. But why identification is so important? -->
 However, @sec-theory-issues presents compelling evidence that the BTL model has several statistical and measurement limitations. These limitations hinder the model's ability to identify various estimands relevant to CJ inquiries, including the one from the motivating example. Identification is crucial because it is a necessary condition for ensuring consistent estimators. Without identification, *consistency* --the property of an estimator whose estimates converge to the "true" value of the estimand as the data size approaches infinity [@Everitt_et_al_2010]-- cannot be achieved, even with "infinite" and error-free data. As a result, deriving meaningful insights from finite data also becomes unattainable [@Schuessler_et_al_2023, pp. 5].
@@ -341,10 +341,10 @@ However, @sec-theory-issues presents compelling evidence that the BTL model has 
 Luckily, SCMs and DAGs support identification analysis through two key advantages. First, regardless of complexity, they can represent various causal structures using only five fundamental building blocks [@Neal_2020; @McElreath_2020]. This feature allows researchers to decompose complex structures into manageable components, facilitating their analysis [@McElreath_2020]. Second, they depict causal relationships in an interactive, non-parametric way. This flexibility enables feasible identification strategies without requiring specification of the types of variables, the functional forms relating them, or the parameters of those functional forms [@Pearl_et_al_2016, pp. 35].
 
 <!-- 5. What the section will do? -->
-As a result, this section addresses the identified limitations by extending Thurstone's general form (see @tbl-thurstone_cases) through a systematic and integrated approach based on the structural approach to causal inference. Specifically, it leverages the capabilities of this approach to formalize the combination of the core theoretical principles outlined in @sec-thurstone_theory with key assessment design features relevant to CJ experiments, such as the selection of judges, stimuli, and comparisons. 
+Thus, this section addresses the identified limitations by extending Thurstone’s general form (see @tbl-thurstone_cases) through a systematic and integrated approach based on the structural approach to causal inference. Specifically, it leverages the capabilities of this approach to formalize the combination of the core theoretical principles outlined in @sec-thurstone_theory with key assessment design features relevant to CJ experiments, such as the selection of judges, stimuli, and comparisons. 
 
 <!-- 6. What are the advantages? -->
-In addition to addressing the identified limitations, the extended model offers two key advantages. First, it clarifies the interactions among all actors and processes involved in CJ experiments. Second, it shifts the current data analysis paradigm from passively accepting CJ's model assumptions to actively testing them with the specific data under analysis. For more details on these assumptions, refer to @sec-theory-issues.
+In addition to overcoming the identified limitations, the extended model offers two key advantages. First, it clarifies the interactions among all actors and processes involved in CJ experiments. Second, it shifts the current comparative data analysis paradigm from passively accepting the model assumptions to actively testing if those assumptions fit the specific data under analysis. For more details on these assumptions, refer to @sec-theory-issues.
 
 <!-- 7. How the section is divided? -->
 Accordingly, @sec-theory-theoretical_P incorporates the theoretical principles into what the study calls the *conceptual-population model*. This model assumes that researchers have access to a conceptual population of comparison data, meaning data representing all repeated comparisons made by every available judge for each pair of stimuli produced by each pair of individuals in the population, thus its name. Conversely, @sec-theory-theoretical_SC integrates the assessment design features into what the study calls the *sample-comparison model*. This model assumes a more realistic scenario where researchers only have access to a sample of judges, individuals, stimuli, and comparisons from the conceptual population.
@@ -366,9 +366,10 @@ Accordingly, @sec-theory-theoretical_P incorporates the theoretical principles i
 <!-- recording: Sven and Tine 24.11.25; time: 01:00:00 - 01:08:40 -->
 <!-- recording: Sven and Tine 24.12.17; time: 00:26:10 - 00:54:00 -->
 <!-- recording: Sven and Tine 25.01.30 p1; time: 00:23:25 - 00:48:00 -->
+<!-- recording: Sven and Tine 25.02.07; time: 00:00:00 - 00:00:00 -->
 
 <!-- 1. The SCMs -->
-Before incorporating the theoretical principles into the *conceptual-population model*, the study defines SCMs, which are formal mathematical models characterized by a set of *endogenous* variables $V$, a set of *exogenous* variables $E$, and a set of functions $F$ [@Pearl_2009; @Cinelli_et_al_2020]. Endogenous variables are those whose causal mechanisms a researcher chooses to model [@Neal_2020]. In contrast, exogenous variables represent *errors* or *disturbances* arising from omitted factors that the investigator chooses not to model explicitly [@Pearl_2009, pp. 27,68]. Lastly, the functions, referred to as *structural equations*, express the endogenous variables as non-parametric functions of other endogenous and exogenous variables. These functions use the symbol '$:=$' to denote the asymmetrical causal dependence between variables and the symbol '$\dsep$' to represent *d-separation*, a concept akin to (conditional) independence.
+Before incorporating the theoretical principles into the *conceptual-population model*, the study defines SCMs. SCMs are formal mathematical models characterized by a set of *endogenous* variables $V$, a set of *exogenous* variables $E$, and a set of functions $F$ [@Pearl_2009; @Cinelli_et_al_2020]. Endogenous variables are those whose causal mechanisms a researcher chooses to model [@Neal_2020]. In contrast, exogenous variables represent *errors* or *disturbances* arising from omitted factors that the investigator chooses not to model explicitly [@Pearl_2009, pp. 27,68]. Lastly, the functions, referred to as *structural equations*, express the endogenous variables as non-parametric functions of other endogenous and exogenous variables. These functions use the symbol '$:=$' to denote the asymmetrical causal dependence between variables and the symbol '$\dsep$' to represent *d-separation*, a concept akin to (conditional) independence.
 
 <!-- 2. the preliminary SCM for CJ -->
 @fig-cj04 illustrates the preliminary integration of theoretical principles into the conceptual-population model. Specifically, @fig-cj04_scm shows the SCM that underlies the motivating example. This SCM maps the relationship between the outcome of the CJ experiment $(O_{abhijk})$ to several other variables. In this model, the indices $\{a,b\}$ represent the compared texts (stimuli), with $a \neq b$. The indices $\{h,i\}$ label the students who wrote the texts (individuals), where $h = i$ is possible. The index $j$ denotes the judge, and $k$ denotes the comparison number, which accounts for experimental cases where judges perform multiple comparisons of the same texts written by the same students, i.e., a *repeated measures design* [@Lawson_2015, pp. 366-376]. Finally, the SCM presents the preliminary set of structural equations $F = \{f_{O},f_{D},f_{PT}\}$, which define the non-parametric dependencies among these variables.
@@ -381,32 +382,26 @@ By incorporating the texts' perceived discriminal processes into the conceptual-
 Conversely, based on the evidence presented in @sec-theory-issue1b, the study assumes that other relevant stimulus characteristics influence the judges' perceptions, leading to biases that resist cancellation and ultimately introduce dependencies between the stimuli. To address this, the study incorporates the judges' perceptions into the conceptual-population model, following the recommendations of @Andrich_1978 and @Wainer_et_al_1978.
 
 
-<!-- ![](/images/png/CJ_TM_01.png){#fig-cj01_dag fig-align="center" fig-pos="H" width=23%} -->
+::: {#fig-cj03 layout-nrow=2}
 
-<!-- ![](/images/png/CJ_TM_02.png){#fig-cj02_dag fig-align="center" fig-pos="H" width=32%} -->
-
-<!-- ![](/images/png/CJ_TM_03.png){#fig-cj03_dag fig-align="center" fig-pos="H" width=45%} -->
-
-::: {#fig-cj04 layout-nrow=2}
-
-::: {#fig-cj04_scm fig-align="center" fig-pos="H"}
+::: {#fig-cj03_scm fig-align="center" fig-pos="H"}
 $$
 \begin{aligned}
-  O_{abhijk} & := f_{O}(D_{abhijk}) \\
-  D_{abhijk} & := f_{D}(PT_{ahjk}, PT_{bijk}) \\
-  PT_{ahjk} & := f_{PT}(T_{ah}, B_{jk}) \\
-  PT_{bijk} & := f_{PT}(T_{bi}, B_{jk})
+  O^{cp}_{abhijk} & := f_{O}(D_{abhijk}) \\
+  D_{abhijk} & := f_{D}(T_{ah}, T_{bi}, B_{jk})
 \end{aligned}
 $$
 
 SCM
 :::
 
+![DAG](/images/png/CJ_TM_03.png){#fig-cj03_dag fig-align="center" fig-pos="H" width=35%}
 
-![DAG](/images/png/CJ_TM_04.png){#fig-cj04_dag fig-align="center" fig-pos="H" width=45%}
 
 CJ's outcome, discriminal difference, discriminal processes and judges' biases
 :::
+
+
 
 <!-- 4. The DAGs -->
 Notably, every SCM has an associated DAG [@Pearl_et_al_2016; @Cinelli_et_al_2020]. A DAG is a graph consisting of nodes connected by edges, where the nodes represent random variables. The term *directed* means that the edges extend from one node to another, with arrows indicating the direction of causal influence. The term *acyclic* implies that the causal influences do not form loops, ensuring the influences do not cycle back on themselves [@McElreath_2020]. DAGs represent observed variables as solid black circles, while they use open circles for unobserved (latent) variables [@Morgan_et_al_2014]. While the *standard representation* of DAGs typically omits exogenous variables for simplicity, the *magnified representation* includes them, offering the advantage of highlighting potential issues related to conditioning and confounding [@Cinelli_et_al_2020]. Thus, this study uses the magnified representation.
@@ -437,14 +432,13 @@ $$
 <!-- Because it quickly becomes intractable, and without loosing generality, the (latent) "perceived" and "true" discriminal processes for the stimuli can be depicted in a vector for each judge, as in   -->
 
 
-::: {#fig-cj05 layout-nrow=2}
+::: {#fig-cj04 layout-nrow=2}
 
-::: {#fig-cj05_scm fig-align="center" fig-pos="H"}
+::: {#fig-cj04_scm fig-align="center" fig-pos="H"}
 $$
 \begin{aligned}
-  O_{PRQ} & := f_{O}(D_{PRQ}) \\
-  D_{PRQ} & := f_{D}(PT_{PRQ}) \\
-  PT_{PRQ} & := f_{PT}(T_{AI}, B_{KJ})
+  O^{cp}_{RPUV} & := f_{O}(D_{RPUV}) \\
+  D_{RPUV} & := f_{D}(T_{IA}, B_{JK})
 \end{aligned}
 $$
 
@@ -452,32 +446,22 @@ SCM
 :::
 
 
-![DAG](/images/png/CJ_TM_05.png){#fig-cj05_dag fig-align="center" fig-pos="H" width=44%}
+![DAG](/images/png/CJ_TM_04.png){#fig-cj04_dag fig-align="center" fig-pos="H" width=44%}
 
 CJ's outcome, discriminal difference, discriminal processes and judges' biases
 :::
 
 
-<!-- ![](/images/png/CJ_TM_06.png){#fig-cj06_dag fig-align="center" fig-pos="H" width=59%} -->
+::: {#fig-cj09 layout-nrow=2}
 
-<!-- ![](/images/png/CJ_TM_07.png){#fig-cj07_dag fig-align="center" fig-pos="H" width=68%} -->
-
-<!-- ![](/images/png/CJ_TM_08.png){#fig-cj08_dag fig-align="center" fig-pos="H" width=68%} -->
-
-<!-- ![](/images/png/CJ_TM_09.png){#fig-cj09_dag fig-align="center" fig-pos="H" width=68%} -->
-
-
-::: {#fig-cj10 layout-nrow=2}
-
-::: {#fig-cj10_scm fig-align="center" fig-pos="H"}
+::: {#fig-cj09_scm fig-align="center" fig-pos="H"}
 $$
 \begin{aligned}
-  O_{PRQ} & := f_{O}(D_{PRQ}) \\
-  D_{PRQ} & := f_{D}(PT_{PRQ}) \\
-  PT_{PRQ} & := f_{PT}(T_{AI}, B_{KJ}) \\
-  T_{AI} & := f_{T}(T_{I}, X_{A}, e_{A}) \\
+  O^{cp}_{RPUV} & := f_{O}(D_{RPUV}) \\
+  D_{RPUV} & := f_{D}(T_{IA}, B_{JK}) \\
+  T_{IA} & := f_{T}(T_{I}, X_{A}, e_{IA}) \\
   T_{I} & := f_{T}(X_{I}, e_{I}) \\
-  B_{KJ} & := f_{B}(B_{J}, Z_{K}, e_{K}) \\
+  B_{JK} & := f_{B}(B_{J}, Z_{K}, e_{JK}) \\
   B_{J} & := f_{B}(Z_{J}, e_{J}) 
 \end{aligned}
 $$
@@ -486,7 +470,7 @@ SCM
 :::
 
 
-![DAG](/images/png/CJ_TM_10.png){#fig-cj10_dag fig-align="center" fig-pos="H" width=68%}
+![DAG](/images/png/CJ_TM_09.png){#fig-cj09_dag fig-align="center" fig-pos="H" width=70%}
 
 CJ's outcome, discriminal difference, discriminal processes and judges' biases
 :::
@@ -505,21 +489,19 @@ CJ's outcome, discriminal difference, discriminal processes and judges' biases
 
 Considering the sampling mechanism
 
-<!-- ![](/images/png/CJ_TM_11.png){#fig-cj11_dag fig-align="center" fig-pos="H" width=80%} -->
 
-::: {#fig-cj12 layout-nrow=2}
+::: {#fig-cj11 layout-nrow=2}
 
-::: {#fig-cj12_scm fig-align="center" fig-pos="H"}
+::: {#fig-cj11_scm fig-align="center" fig-pos="H"}
 $$
 \begin{aligned}
-  O^{S}_{PRQ} & := f_{O}(O_{PRQ}, S_{I}, S_{A}, S_{K}, S_{J}) \\
-  O_{PRQ} & := f_{O}(D_{PRQ}) \\
-  D_{PRQ} & := f_{D}(PT_{PRQ}) \\
-  PT_{PRQ} & := f_{PT}(T_{AI}, B_{KJ}) \\
-  T_{AI} & := f_{T}(T_{I}, X_{A}, e_{A}) \\
+  O^{sc}_{RPUV} & := f_{O}(O^{cp}_{RPUV}, S_{I}, S_{A}, S_{K}, S_{J}) \\
+  O^{cp}_{RPUV} & := f_{O}(D_{RPUV}) \\
+  D_{RPUV} & := f_{D}(T_{IA}, B_{JK}) \\
+  T_{IA} & := f_{T}(T_{I}, X_{A}, e_{IA}) \\
   T_{I} & := f_{T}(X_{I}, e_{I}) \\
-  B_{KJ} & := f_{B}(B_{J}, Z_{K}, e_{K}) \\
-  B_{J} & := f_{B}(Z_{J}, e_{J})
+  B_{JK} & := f_{B}(B_{J}, Z_{K}, e_{JK}) \\
+  B_{J} & := f_{B}(Z_{J}, e_{J}) 
 \end{aligned}
 $$
 
@@ -527,7 +509,7 @@ SCM
 :::
 
 
-![DAG](/images/png/CJ_TM_12.png){#fig-cj12_dag fig-align="center" fig-pos="H" width=80%}
+![DAG](/images/png/CJ_TM_11.png){#fig-cj11_dag fig-align="center" fig-pos="H" width=84%}
 
 CJ's outcome, discriminal difference, discriminal processes and judges' biases
 :::
@@ -537,21 +519,19 @@ CJ's outcome, discriminal difference, discriminal processes and judges' biases
 
 Considering comparison mechanisms
 
-<!-- ![](/images/png/CJ_TM_13.png){#fig-cj13_dag fig-align="center" fig-pos="H" width=90%} -->
 
-::: {#fig-cj14 layout-nrow=2}
+::: {#fig-cj13 layout-nrow=2}
 
-::: {#fig-cj14_scm fig-align="center" fig-pos="H"}
+::: {#fig-cj13_scm fig-align="center" fig-pos="H"}
 $$
 \begin{aligned}
-  O^{C}_{PRQ} & := f_{C}(O^{S}_{PRQ}, C) \\
-  O^{S}_{PRQ} & := f_{S}(O_{PRQ}, S_{I}, S_{A}, S_{K}, S_{J}) \\
-  O_{PRQ} & := f_{O}(D_{PRQ}) \\
-  D_{PRQ} & := f_{D}(PT_{PRQ}) \\
-  PT_{PRQ} & := f_{PT}(T_{AI}, B_{KJ}) \\
-  T_{AI} & := f_{T}(T_{I}, X_{A}, e_{A}) \\
+  O_{RPUV} & := f_{C}(O^{sc}_{RPUV}, C) \\
+  O^{sc}_{RPUV} & := f_{O}(O^{cp}_{RPUV}, S_{I}, S_{A}, S_{K}, S_{J}) \\
+  O^{cp}_{RPUV} & := f_{O}(D_{RPUV}) \\
+  D_{RPUV} & := f_{D}(T_{IA}, B_{JK}) \\
+  T_{IA} & := f_{T}(T_{I}, X_{A}, e_{IA}) \\
   T_{I} & := f_{T}(X_{I}, e_{I}) \\
-  B_{KJ} & := f_{B}(B_{J}, Z_{K}, e_{K}) \\
+  B_{JK} & := f_{B}(B_{J}, Z_{K}, e_{JK}) \\
   B_{J} & := f_{B}(Z_{J}, e_{J}) 
 \end{aligned}
 $$
@@ -560,39 +540,11 @@ SCM
 :::
 
 
-![DAG](/images/png/CJ_TM_14.png){#fig-cj14_dag fig-align="center" fig-pos="H" width=90%}
+![DAG](/images/png/CJ_TM_13.png){#fig-cj13_dag fig-align="center" fig-pos="H" width=100%}
 
 CJ's outcome, discriminal difference, discriminal processes and judges' biases
 :::
 
-
-
-
-::: {#fig-cj15 layout-nrow=2}
-
-::: {#fig-cj15_scm fig-align="center" fig-pos="H"}
-$$
-\begin{aligned}
-  O^{C}_{PRQ} & := f_{C}(O^{S}_{PRQ}, C) \\
-  O^{S}_{PRQ} & := f_{S}(O_{PRQ}, S_{I}, S_{A}, S_{K}, S_{J}) \\
-  O_{PRQ} & := f_{O}(D_{PRQ}) \\
-  D_{PRQ} & := f_{D}(PT_{PRQ}) \\
-  PT_{PRQ} & := f_{PT}(T_{AI}, B_{KJ}) \\
-  T_{AI} & := f_{T}(T_{I}, X_{A}, e_{A}) \\
-  T_{I} & := f_{T}(X_{I}, e_{I}) \\
-  B_{KJ} & := f_{B}(B_{J}, Z_{K}, e_{K}) \\
-  B_{J} & := f_{B}(Z_{J}, e_{J}) 
-\end{aligned}
-$$
-
-SCM
-:::
-
-
-![DAG](/images/png/CJ_TM_15.png){#fig-cj15_dag fig-align="center" fig-pos="H" width=90%}
-
-CJ's outcome, discriminal difference, discriminal processes and judges' biases
-:::
 
 
 <!-- It is assumed that the single observer compares each pair of stimuli a "sufficient number of times" so that a proportion, P(A>B), may be determined for each pair of stimuli [@Thurstone_1927b, pp. 267] -->
@@ -686,23 +638,23 @@ CJ's outcome, discriminal difference, discriminal processes and judges' biases
 
 # Declarations {.unnumbered .appendix appendix-style=plain}
 
-**Funding:** The project was founded through the Research Fund of the University of Antwerp (BOF).
+**Funding:** The Research Fund (BOF) of the University of Antwerp funded this project.
 
-**Financial interests:** The authors have no relevant financial interest to disclose.
+**Financial interests:** The authors declare no relevant financial interests.
 
-**Non-financial interests:** The authors have no relevant non-financial interest to disclose.
+**Non-financial interests:** The authors declare no relevant non-financial interests.
 
-**Ethics approval:** The University of Antwerp Research Ethics Committee has confirmed that no ethical approval is required.
+**Ethics approval:** The University of Antwerp Research Ethics Committee confirmed that this study does not require ethical approval.
 
 **Consent to participate:** Not applicable
 
-**Consent for publication:** All authors have read and agreed to the published version of the manuscript.
+**Consent for publication:** All authors have read and approved the final version of the manuscript for publication.
 
-**Availability of data and materials:** No data was utilized in this study.
+**Data availability:** This study did not use any data.
 
-**Code availability:** All the code utilized in this research is available in the digital document located at: [https://jriveraespejo.github.io/paper2_manuscript/](https://jriveraespejo.github.io/paper2_manuscript/).  
+**Materials and code availability:** The `CODE LINK` section at the top of the digital document located at: [https://jriveraespejo.github.io/paper2_manuscript/](https://jriveraespejo.github.io/paper2_manuscript/) provides access to all materials and code.  
 
-**AI-assisted technologies in the writing process:** The authors utilized a range of AI-based language tools throughout the preparation of this work. They occasionally employed the tools to refine phrasing and optimize wording, ensuring appropriate language use and enhancing the manuscript's clarity and coherence. The authors take full responsibility for the final content of the publication.
+**AI-assisted technologies in the writing process:** The authors used various AI-based language tools to refine phrasing, optimize wording, and enhance clarity and coherence throughout the manuscript. They take full responsibility for the final content of the publication.
 
 **CRediT authorship contribution statement:** *Conceptualization:* S.G., S.DM., T.vD., and J.M.R.E; *Methodology:* S.DM., T.vD., and J.M.R.E; *Software:* J.M.R.E.; *Validation:* J.M.R.E.; *Formal Analysis:* J.M.R.E.; *Investigation:* J.M.R.E; *Resources:* S.G., S.DM., and T.vD.; *Data curation:* J.M.R.E.; *Writing - original draft:* J.M.R.E.; *Writing - review and editing:* S.G., S.DM., and T.vD.; *Visualization:* J.M.R.E.; *Supervision:* S.G. and S.DM.; *Project administration:* S.G. and S.DM.; *Funding acquisition:* S.G. and S.DM.
 
@@ -714,12 +666,14 @@ CJ's outcome, discriminal difference, discriminal processes and judges' biases
 
 # Appendix {#sec-appendix .appendix appendix-style=plain}
 
+## Statistics and Causal inference {#sec-appendixB .appendix appendix-style=plain}
+
 <!-- recording: Sven and Tine 25.01.22; time: 00:00:00 - 00:05:40 -->
 
 This section introduces fundamental statistical and causal inference concepts necessary for understanding the core theoretical principles described in this document. It does not, however, offer a comprehensive overview of causal inference methods. Readers seeking more in-depth understanding may wish to explore introductory papers such as @Pearl_2010, @Rohrer_2018, @Pearl_2019, and @Cinelli_et_al_2020. They may also find it helpful to consult introductory books like @Pearl_et_al_2018, @Neal_2020, and @McElreath_2020. For more advanced study, readers may refer to seminal intermediate papers such as @Neyman_et_al_1923, @Rubin_1974, @Spirtes_et_al_1991, and @Sekhon_2009, as well as books such as @Pearl_2009, @Morgan_et_al_2014, and @Hernan_et_al_2020.
 
 
-## Empirical research and randomized experiments {#sec-appendix-A .appendix appendix-style=plain}
+### Empirical research and randomized experiments {#sec-appendixB1 .appendix appendix-style=plain}
 
 <!-- 1. What does empirical research do first? -->
 Empirical research uses evidence from observation and experimentation to address real-world challenges. In this context, researchers typically formulate their research questions as *estimands* or *targets of inference*, i.e., the specific quantities they seek to determine [@Everitt_et_al_2010]. For instance, researchers might be interested in answering the following question: "To what extent do different teaching methods $(T)$ influence students' ability to produce high-quality written texts $(Y)$?" To investigate this, researchers could randomly assign students to two groups, each exposed to a different teaching method $(T_{i} = \{1,2\})$. Then, they would perform pairwise comparisons, generating a dichotomous outcome $(Y_{i} = \{0,1\})$ showing which student exhibits more of the ability. In this scenario, the research question can be rephrased as the estimand, "*On average*, is there a difference in the ability to produce high-quality written texts between the two groups of students?" and this estimand can be mathematically represented by the random associational quantity in @eq-group_diff, where $E[\cdot]$ denotes the expected value.
@@ -755,15 +709,13 @@ Randomized experiments are widely recognized as the gold standard in evidence-ba
 Nevertheless, researchers often face constraints that limit their ability to conduct randomized experiments. These constraints include ethical concerns, such as the assignment of individuals to potentially harmful interventions, and practical limitations, such as the infeasibility of, for example, assigning individuals to genetic modifications or physical impairments [@Neal_2020]. In these cases, causal inference offers a valuable alternative for generating causal estimates and understanding the mechanisms underlying specific data. In addition, the framework can provide significant theoretical insights that can enhance the design of experimental and observational studies [@McElreath_2020]. 
 
 
-## Identification under causal inference {#sec-appendix-B .appendix appendix-style=plain}
-
-<!-- ### The general idea {#sec-appendix-B1 .appendix appendix-style=plain} -->
+### Identification under causal inference {#sec-appendixB2 .appendix appendix-style=plain}
 
 <!-- 1. What is causal inference? -->
 Unlike classical statistical modeling, which focuses primarily on summarizing data and inferring associations, the *causal inference* framework is designed to identify causes and estimate their effects using data [@Shaughnessy_et_al_2010; @Neal_2020]. The framework uses rigorous mathematical techniques to address the *fundamental problem of causality* [@Pearl_2009; @Pearl_et_al_2016; @Morgan_et_al_2014]. This problem revolves around the question, "What would have happened 'in the world' under different circumstances?" This question introduces the concept of counterfactuals, which are instrumental in defining and identifying causal effects.
 
 <!-- 2. What are counterfactuals? -->
-*Counterfactuals* are hypothetical scenarios that are *contrary to fact*, where alternative outcomes resulting from a given cause are neither observed nor observable [@Neal_2020; @Counterfactual_2024]. The structural approach to causal inference [@Pearl_2009; @Pearl_et_al_2016] provides a formal framework for defining counterfactuals. For instance, in the scenario described in @sec-appendix-A, the approach begins by defining the *individual causal effect* (ICE) as the difference between each student's potential outcomes, as in @eq-ICE. 
+*Counterfactuals* are hypothetical scenarios that are *contrary to fact*, where alternative outcomes resulting from a given cause are neither observed nor observable [@Neal_2020; @Counterfactual_2024]. The structural approach to causal inference [@Pearl_2009; @Pearl_et_al_2016] provides a formal framework for defining counterfactuals. For instance, in the scenario described in @sec-appendixB1, the approach begins by defining the *individual causal effect* (ICE) as the difference between each student's potential outcomes, as in @eq-ICE. 
 
 $$
 \tau_{i} = Y_{i} \cond do(T_{i}=1) - Y_{i} \cond do(T_{i}=2)
@@ -789,7 +741,7 @@ Conditioning on a sufficient adjustment set enables researchers to estimate the 
 
 <!-- Statements about the real world from observed data require assumptions. This is true no matter what kind of data we have, and it is explicitly also true for statements based on data stemming from SRSg. The validity of our statements therefore critically hinges on the validity of those assumptions. If our statistical assumptions are wrong for the analysis at hand, the inferential statements will be incorrect no matter how sophisticated the statistical methods are. [@Kohler_et_al_2019, pp. 150] -->
 
-For instance, if researchers cannot conduct the randomized experiments described in @sec-appendix-A and must instead rely on observational data, they can still identify the ACE as long as an observed variable $X$, such as the socio-economic status of the school, satisfies the backdoor criterion. Under these circumstances, researchers first identify the *conditional average causal effect* (CACE, @eq-CACE)
+For instance, if researchers cannot conduct the randomized experiments described in @sec-appendixB1 and must instead rely on observational data, they can still identify the ACE as long as an observed variable $X$, such as the socio-economic status of the school, satisfies the backdoor criterion. Under these circumstances, researchers first identify the *conditional average causal effect* (CACE, @eq-CACE)
 
 $$
 CACE_{t} = E[Y_{i} \cond T_{i}=t, X]
@@ -815,19 +767,21 @@ $$
 $$ {#eq-mACE_cont}
 
 
-### Diving into the specifics {#sec-appendix-B2 .appendix appendix-style=plain}
+### Diving into the specifics {#sec-appendixB3 .appendix appendix-style=plain}
 
 <!-- 1. The benefits of SCMs and DAGs -->
 The structural approach to causal inference uses SCMs and DAGs to formally and graphically represent the presumed causal structure underlying the ACE [@Pearl_2009; @Pearl_et_al_2016; @Gross_et_al_2018; @Neal_2020]. Essentially, these tools serve as *conceptual (theoretical) models* on which identification analysis rests [@Schuessler_et_al_2023, pp. 4]. Thus, using these tools, researchers can determine which statistical models can identify (ACE, CACE, or other), assuming the depicted causal structure is correct [@McElreath_2020], thus enabling valid causal inference. @fig-IEflow shows the role of theoretical models in the inference process.
 
 <!-- The causal assumptions encoded in a DAG constitute the theoretical model on which identification analysis rests. Identification analysis is concerned with determining whether or not the true value of a parameter can be estimated using the assumptions in the model (graph), regardless of random variability in the data due to small samples [@Schuessler_et_al_2023, pp. 4]. -->
 
-SCMs and DAGs support identification analysis through two key advantages. First, regardless of complexity, they can represent various causal structures using only five fundamental building blocks [@Neal_2020; @McElreath_2020]. This feature allows researchers to decompose complex structures into manageable components, facilitating their analysis [@McElreath_2020]. Second, they depict causal relationships in a non-parametric and fully interactive way. This flexibility enables feasible ACE identification strategies without defining the variables' data types, the functional form between them, or their parameters [@Pearl_et_al_2016, pp. 35]. @sec-appendix-B21 and @sec-appendix-B22 elaborate on the first advantage, while @sec-appendix-B22 and @sec-appendix-B23 do so for the second. 
+SCMs and DAGs support identification analysis through two key advantages. First, regardless of complexity, they can represent various causal structures using only five fundamental building blocks [@Neal_2020; @McElreath_2020]. This feature allows researchers to decompose complex structures into manageable components, facilitating their analysis [@McElreath_2020]. Second, they depict causal relationships in a non-parametric and fully interactive way. This flexibility enables feasible ACE identification strategies without defining the variables' data types, the functional form between them, or their parameters [@Pearl_et_al_2016, pp. 35]. 
+
+Thus, @sec-appendixB31 and @sec-appendixB32 elaborate on the first advantage, while @sec-appendixB32 and @sec-appendixB33 do so for the second. Finally, @sec-appendixB34 explains how researchers use SCMs and DAGs alongside Bayesian inference methods in the estimation process. 
 
 <!-- A heuristic is a strategy that simplifies information to make decisions more quickly, efficiently, and sometimes more accurately than complex methods [@Chow_2015]. -->
 
 
-#### The five fundamental block for SCMs and DAGs {#sec-appendix-B21 .appendix appendix-style=plain}
+#### The five fundamental block for SCMs and DAGs {#sec-appendixB31 .appendix appendix-style=plain}
 
 <!-- 2. the SCMs -->
 Figures [-@fig-dags_scms1], [-@fig-dags_scms2], [-@fig-dags_scms3], [-@fig-dags_scms4], and [-@fig-dags_scms5] display the five fundamental building blocks for SCMs and DAGs. The left panels of the figures show the formal mathematical models, represented by the SCMs, defined in terms of a set of *endogenous* variables $V=\{X_{1},X_{2},X_{3}\}$, a set of *exogenous* variables $E=\{e_{X1},e_{X2},e_{X3}\}$, and a set of functions $F=\{f_{X1},f_{X2},f_{X3}\}$ [@Pearl_2009; @Cinelli_et_al_2020]. Endogenous variables are those whose causal mechanisms a researcher chooses to model [@Neal_2020]. In contrast, exogenous variables represent *errors* or *disturbances* arising from omitted factors that the investigator chooses not to model explicitly [@Pearl_2009, pp. 27,68]. Lastly, the functions, referred to as *structural equations*, express the endogenous variables as non-parametric functions of other variables. These functions use the symbol '$:=$' to denote the asymmetrical causal dependence of the variables and the symbol '$\dsep$' to represent *d-separation*, a concept akin to (conditional) independence.
@@ -949,7 +903,7 @@ Collider or inmorality
 A careful examination of these building blocks highlights the theoretical assumptions underlying their observed variables. SCM [-@fig-scm_bb1] and DAG [-@fig-mdag_bb1] depict two unconnected nodes, representing a scenario where variables $X_{1}$ and $X_{3}$ are independent or not causally related. SCM [-@fig-scm_bb2] and DAG [-@fig-mdag_bb2] illustrate two connected nodes, representing a scenario where a *parent* node $X_{1}$ exerts a causal influence on a *child* node $X_{3}$. In this setup, $X_{3}$ is considered a *descendant* of $X_{1}$. Additionally, $X_{1}$ and $X_{3}$ are described as *adjacent* because there is a *direct path* connecting them. SCM [-@fig-scm_bb3] and DAG [-@fig-mdag_bb3] depict a *chain*, where $X_{1}$ influences $X_{2}$, and $X_{2}$ influences $X_{3}$. In this configuration, $X_{1}$ is a parent node of $X_{2}$, which is a parent node of $X_{3}$. This structure creates a *directed path* between $X_{1}$ and $X_{3}$. Consequently, $X_{1}$ is an *ancestor* of $X_{3}$, and $X_{2}$ fully *mediates* the relationship between the two. SCM [-@fig-scm_bb4] and DAG [-@fig-mdag_bb4] illustrate a *fork*, where variables $X_{1}$ and $X_{3}$ are both influenced by $X_{2}$. Here, $X_{2}$ is a parent node that *confounds* the relationship between $X_{1}$ and $X_{3}$. Finally, SCM [-@fig-scm_bb5] and DAG [-@fig-mdag_bb5] show a *collider*, where variables $X_{1}$ and $X_{3}$ are concurrent causes of $X_{2}$. In this configuration, $X_{1}$ and $X_{3}$ are not causally related to each other but both influence $X_{2}$ (an *inmorality*). Notably, all building blocks assume the errors are independent of each other and from all other variables in the graph, as evidenced by the pairwise relations $e_{X1} \dsep e_{X2}$, $e_{X1} \dsep e_{X3}$, and $e_{X2} \dsep e_{X3}$.
 
 <!-- 5. Continuing with the motivating example -->
-Researchers can then use these building blocks to represent the scenario outlined in @sec-appendix-B. SCM [-@fig-scm_example1] and DAG [-@fig-mdag_example1] depict the plausible causal structure for this example. In this context, the variable $X$ (socio-economic status of the school) is thought to be a confounder in the relationship between the teaching method $T$ and the outcome $Y$. The figures display multiple descendant relationships such as $X \rightarrow T$, $X \rightarrow Y$, and $T \rightarrow Y$. They also highlight unconnected node pairs, evident from the relationships $e_{T} \dsep e_{X}$, $e_{T} \dsep e_{Y}$, and $e_{X} \dsep e_{Y}$. Additional, the figures show one fork, $X \rightarrow \{T, Y\}$, and two colliders: $\{X, e_{T}\} \rightarrow T$ and $\{X, T, e_{Y}\} \rightarrow Y$.
+Researchers can then use these building blocks to represent the scenario outlined in @sec-appendixB2. SCM [-@fig-scm_example1] and DAG [-@fig-mdag_example1] depict the plausible causal structure for this example. In this context, the variable $X$ (socio-economic status of the school) is thought to be a confounder in the relationship between the teaching method $T$ and the outcome $Y$. The figures display multiple descendant relationships such as $X \rightarrow T$, $X \rightarrow Y$, and $T \rightarrow Y$. They also highlight unconnected node pairs, evident from the relationships $e_{T} \dsep e_{X}$, $e_{T} \dsep e_{Y}$, and $e_{X} \dsep e_{Y}$. Additional, the figures show one fork, $X \rightarrow \{T, Y\}$, and two colliders: $\{X, e_{T}\} \rightarrow T$ and $\{X, T, e_{Y}\} \rightarrow Y$.
 
 ::: {#fig-example1 layout-ncol=2}
 
@@ -971,11 +925,11 @@ SCM
 
 ![DAG](images/png/mdag_example1.png){#fig-mdag_example1 fig-align="center" width=65%}
 
-Plausible causal structure the scenario outlined in @sec-appendix-B.
+Plausible causal structure the scenario outlined in @sec-appendixB2.
 :::
 
 
-#### The probabilistic implications of these blocks {#sec-appendix-B22 .appendix appendix-style=plain}
+#### The probabilistic implications of these blocks {#sec-appendixB32 .appendix appendix-style=plain}
 
 <!-- 1. How the SCMS and DAGs encode probabilistic information? -->
 Beyond their graphical capabilities, SCMs and DAGs can encode the probabilistic information embedded within a causal structure. They achieve this encoding by relying on three fundamental assumptions: the local Markov, the minimality, the causal edges assumption. The *local Markov assumption* encodes probabilistic independencies between variables by declaring that nodes in a graph are independent of all its non-descendants, given its parents [@Neal_2020, pp. 20]. Meanwhile, the *minimality assumption* encodes probabilistic dependencies among variables by stating that every pair of adjacent nodes exhibits a dependency [@Neal_2020, pp. 21]. Finally, the *causal edges assumption* encodes causal relationships between variables by declaring that each parent node acts as a direct cause of its children [@Neal_2020, pp. 22]. @fig-ACflow illustrates how these assumptions influence the statistical and causal interpretations of graphs. 
@@ -999,7 +953,7 @@ This encoding enables researchers with conceptual (theoretical) knowledge in the
 <!-- The net result is that a researcher who has scientific knowledge in the form of a structural equation model is able to predict patterns of independencies in the data, based solely on the structure of the model’s graph, without relying on any quantitative information carried by the equations or by the distributions of the errors [@Pearl_et_al_2016, pp. 35]. -->
 
 <!-- 4. can you illustrate this concept? -->
-The five fundamental building blocks described in @sec-appendix-B21 clearly illustrate which (in)dependencies can SMCs and DAGs predict. For instance, applying the BNF to the causal structure shown in the SCM [-@fig-scm_bb1] and DAG [-@fig-mdag_bb1] enables researchers to express the joint probability distribution of the observed variables as $P(X_{1}, X_{3}) = P(X_{1}) P(X_{3})$, supporting the theoretical assumption that the observed variables $X_{1}$ and $X_{3}$ are unconditionally independent ($X_{1} \dsep X_{3}$) [@Neal_2020, pp. 24]. Conversely, when $X_{3}$ is unconditionally dependent on $X_{1}$ ($X_{1} \ndsep X_{3}$), as depicted in the SCM [-@fig-scm_bb2] and DAG [-@fig-mdag_bb2], the BNF express their joint probability distribution as $P(X_{1}, X_{3}) = P(X_{3} \cond X_{1}) P(X_{1})$. Notably, these descriptions demonstrate the clear correspondence between the structural equations illustrated in @sec-appendix-B21 and the CPDs.
+The five fundamental building blocks described in @sec-appendixB31 clearly illustrate which (in)dependencies can SMCs and DAGs predict. For instance, applying the BNF to the causal structure shown in the SCM [-@fig-scm_bb1] and DAG [-@fig-mdag_bb1] enables researchers to express the joint probability distribution of the observed variables as $P(X_{1}, X_{3}) = P(X_{1}) P(X_{3})$, supporting the theoretical assumption that the observed variables $X_{1}$ and $X_{3}$ are unconditionally independent ($X_{1} \dsep X_{3}$) [@Neal_2020, pp. 24]. Conversely, when $X_{3}$ is unconditionally dependent on $X_{1}$ ($X_{1} \ndsep X_{3}$), as depicted in the SCM [-@fig-scm_bb2] and DAG [-@fig-mdag_bb2], the BNF express their joint probability distribution as $P(X_{1}, X_{3}) = P(X_{3} \cond X_{1}) P(X_{1})$. Notably, these descriptions demonstrate the clear correspondence between the structural equations illustrated in @sec-appendixB31 and the CPDs.
 
 Beyond the insights gained from two-node structures, researchers can uncover more nuanced patterns of(in)dependencies from chains, forks, and colliders. These (in)dependencies apply to any data set generated by a causal model with those structures, regardless of the specific functions attached to the SCM [@Pearl_et_al_2016, pp. 36]. For instance, applying the BNF to the chain structure depicted in the SCM [-@fig-scm_bb3] and DAG [-@fig-mdag_bb3] allow researchers to represent the joint distribution for the observed variables as $P(X_{1},X_{2},X_{3}) =$ $P(X_{1}) P(X_{2} \cond X_{1}) P(X_{3} \cond X_{2})$. This expression implies that $X_{1}$ and $X_{3}$ are unconditionally dependent $(X_{1} \ndsep X_{3})$, but conditionally independent when controlling for $X_{2}$ $(X_{1} \dsep X_{3} \cond X_{2})$. Moreover, in the fork structure shown in the SCM [-@fig-scm_bb4] and DAG [-@fig-mdag_bb4], researchers can express the joint distribution of the observed variables as $P(X_{1},X_{2},X_{3}) =$ $P(X_{1} \cond X_{2}) P(X_{2}) P(X_{3} \cond X_{2})$. Similar to the chain structure, this expression allows researchers to further infer that $X_{1}$ and $X_{3}$ are unconditionally dependent $(X_{1} \ndsep X_{3})$, but conditionally independent when controlling for $X_{2}$ $(X_{1} \dsep X_{3} \cond X_{2})$. Finally, researchers analyzing the collider structure illustrated in the SCM [-@fig-scm_bb5] and DAG [-@fig-mdag_bb5] can express the joint distribution of the observed variables as $P(X_{1},X_{2},X_{3}) =$ $P(X_{1}) P(X_{2} \cond X_{1}, X_{3}) P(X_{3})$. This representation allows researchers to infer that $X_{1}$ and $X_{3}$ are unconditionally independent $(X_{1} \dsep X_{3})$, but conditionally dependent when controlling for $X_{2}$ $(X_{1} \ndsep X_{3} \cond X_{2})$. The authors @Pearl_et_al_2016 [pp. 37, 40, 41] and @Neal_2020 [pp. 25–26] provide the mathematical proofs for these conclusions.
 
@@ -1007,7 +961,7 @@ Beyond the insights gained from two-node structures, researchers can uncover mor
 
 
 <!-- 5. Continuing with the motivating example -->
-Using these additional probabilistic insights, researchers can revisit the scenario in @sec-appendix-B. In this context, applying the BNF to the SCM [-@fig-scm_example2] structure, enables the representation of the joint probability distribution of the observed variables as $P(Y, T, X) =$ $P(Y \cond T, X) P(T \cond X) P(X)$. From this expression, researchers can infer that the outcome $Y$ is unconditionally dependent on the teaching method $T$ $(Y \ndsep T)$. This dependency arises from two key structures: a direct causal path from the teaching method $T$ to the outcome $Y$, represented by the two-connected-nodes structure $T \rightarrow Y$ (black path in DAG [-@fig-mdag_example2]), and a confounding non-causal path from the teaching method $T$ to the outcome $Y$ through the socio-economic status of the school $X$, represented by the fork structure $T \leftarrow X \rightarrow Y$ (gray path in DAG [-@fig-mdag_example2]). 
+Using these additional probabilistic insights, researchers can revisit the scenario in @sec-appendixB2. In this context, applying the BNF to the SCM [-@fig-scm_example2] structure, enables the representation of the joint probability distribution of the observed variables as $P(Y, T, X) =$ $P(Y \cond T, X) P(T \cond X) P(X)$. From this expression, researchers can infer that the outcome $Y$ is unconditionally dependent on the teaching method $T$ $(Y \ndsep T)$. This dependency arises from two key structures: a direct causal path from the teaching method $T$ to the outcome $Y$, represented by the two-connected-nodes structure $T \rightarrow Y$ (black path in DAG [-@fig-mdag_example2]), and a confounding non-causal path from the teaching method $T$ to the outcome $Y$ through the socio-economic status of the school $X$, represented by the fork structure $T \leftarrow X \rightarrow Y$ (gray path in DAG [-@fig-mdag_example2]). 
 
 
 ::: {#fig-example2 layout-ncol=2}
@@ -1030,11 +984,11 @@ SCM
 
 ![Conditioned DAG](images/png/mdag_example1a.png){#fig-mdag_example2 fig-align="center" width=65%}
 
-Plausible causal structure the scenario outlined in @sec-appendix-B.
+Plausible causal structure the scenario outlined in @sec-appendixB2.
 :::
 
 
-#### From probability to causality {#sec-appendix-B23 .appendix appendix-style=plain}
+#### From probability to causality {#sec-appendixB33 .appendix appendix-style=plain}
 
 <!-- 1. Transforming probabilistic association into causation?  -->
 The structural approach to causal inference translates probabilistic insights into actionable strategies seeking to identify the ACE from associational quantities. The approach achieves this by relying on the *modularity assumption*, which posits that intervening on a node alters only the causal mechanism of that node, leaving others unchanged [@Neal_2020, pp. 34].
@@ -1070,7 +1024,7 @@ $$ {#eq-backdoor_adjustment}
 
 
 <!-- 4. revisiting the motivating example -->
-With these new insights, researchers revisiting the scenario in @sec-appendix-B22 can infer that the socio-economic status of the school, $X$, satisfies the backdoor criterion, assuming the causal structure depicted by the SCM [-@fig-scm_example2] and DAG [-@fig-mdag_example2] is correct. This means that $X$ serves as a sufficient adjustment set, as it effectively blocks all confounding non-causal paths introduced by the fork structure. Nevertheless, since $Y$ remains dependent on $T$ even after conditioning $(Y \ndsep T \cond X)$, this dependency can only be attributed to the direct causal effect $T \rightarrow Y$. Notably, for the purpose of identification, the conditioned DAG [-@fig-mdag_example2] is equivalent to the manipulated DAG [-@fig-mdag_example3], because $X$ satisfies the backdoor criterion.
+With these new insights, researchers revisiting the scenario in @sec-appendixB32 can infer that the socio-economic status of the school, $X$, satisfies the backdoor criterion, assuming the causal structure depicted by the SCM [-@fig-scm_example2] and DAG [-@fig-mdag_example2] is correct. This means that $X$ serves as a sufficient adjustment set, as it effectively blocks all confounding non-causal paths introduced by the fork structure. Nevertheless, since $Y$ remains dependent on $T$ even after conditioning $(Y \ndsep T \cond X)$, this dependency can only be attributed to the direct causal effect $T \rightarrow Y$. Notably, for the purpose of identification, the conditioned DAG [-@fig-mdag_example2] is equivalent to the manipulated DAG [-@fig-mdag_example3], because $X$ satisfies the backdoor criterion.
 
 ::: {#fig-example3 layout-ncol=2}
 
@@ -1091,11 +1045,11 @@ SCM
 
 ![Manipulated DAG](images/png/mdag_example1b.png){#fig-mdag_example3 fig-align="center" width=65%}
 
-Plausible causal structure the scenario outlined in @sec-appendix-B22.
+Plausible causal structure the scenario outlined in @sec-appendixB32.
 :::
 
 
-Researchers can then apply the *backdoor adjustment* to identify the ACE of $T$ on $Y$. They achieve this by first identifying the CACE of $T$ on $Y$ by conditioning on $X$, and then marginalizing this effect over $X$ to obtain the ACE. This process is expressed in @eq-mACE2 (see @sec-appendix-B). 
+Researchers can then apply the *backdoor adjustment* to identify the ACE of $T$ on $Y$. They achieve this by first identifying the CACE of $T$ on $Y$ by conditioning on $X$, and then marginalizing this effect over $X$ to obtain the ACE. This process is expressed in @eq-mACE2 (see @sec-appendixB2). 
 
 $$
 \begin{aligned}
@@ -1107,7 +1061,7 @@ $$ {#eq-mACE2}
 
 
 
-#### The estimation process {#sec-appendix-C .appendix appendix-style=plain}
+#### The estimation process {#sec-appendixB34 .appendix appendix-style=plain}
 
 <!-- 1. How do we use Bayesian inference? -->
 Ultimately, researchers can use Bayesian inference methods to estimate the ACE. The approach begins by defining two probability distributions: the likelihood of the data, $P(X_{1}, X_{2}, \dots, X_{P} \cond \theta)$, and the prior distribution, $P(\theta)$ [@Everitt_et_al_2010], where $X_{P}$ represents a random variable, and $\theta$ represents a one-dimensional parameter space for simplicity. After observing empirical data, researchers can update the priors to posterior distributions using Bayes' rule in @eq-bayes_rule [@Jeffreys_1998]:
@@ -1137,7 +1091,7 @@ $$ {#eq-like_chain}
 
 
 <!-- 3. How do DAGs can help? -->
-Nevertheless, researchers can manage the complexity of the likelihood by assuming specific local (in)dependencies among variables. SCMs and DAGs provide a formal framework to represent these assumptions, as detailed in @sec-appendix-B22. These assumptions improve model tractability and simplify the estimation process by enabling the derivation of the BNF of the likelihood (@eq-like_BNF). With this simplified structure, any probabilistic programming language can model the system and compute the parameter's posterior distribution using @eq-bayes_rule.
+Nevertheless, researchers can manage the complexity of the likelihood by assuming specific local (in)dependencies among variables. SCMs and DAGs provide a formal framework to represent these assumptions, as detailed in @sec-appendixB32. These assumptions improve model tractability and simplify the estimation process by enabling the derivation of the BNF of the likelihood (@eq-like_BNF). With this simplified structure, any probabilistic programming language can model the system and compute the parameter's posterior distribution using @eq-bayes_rule.
 
 $$
 P(X_{1}, X_{2}, \dots, X_{P} \cond \theta) = P(X_{1} \cond \theta) \prod^{P}_{p=2} P(X_{i} \cond pa(X_{i}), \theta )

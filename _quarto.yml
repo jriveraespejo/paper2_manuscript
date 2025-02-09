@@ -8,9 +8,12 @@ manuscript:
      - text: Github repository
        icon: filetype-html
        href: https://github.com/jriveraespejo/paper2_manuscript.git
-     - text: figures
+     - text: CJ figures
        icon: file-code-fill
-       href: code/figures.R
+       href: code/CJfig.R
+     - text: CJ model
+       icon: file-code-fill
+       href: code/CJmod_add.R
   #   - text: Submission Manuscript
   #     icon: filetype-pdf
   #     href: manual_renderization/index.pdfutations using inlin
