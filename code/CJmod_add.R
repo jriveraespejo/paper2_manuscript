@@ -6,7 +6,7 @@ data{
     int nsI;    // max. number of individuals
     int nsA;    // max. number of stimuli
     int nsJ;    // max. number of judges
-    int nsK;    // max. number of repeated comparisons
+    int nsK;    // max. number of judgments
     
     // categories discrete variables
     int sup_dXI;  // max. number of categories in XI
@@ -20,24 +20,24 @@ data{
     array[ns] int<lower=1, upper=nsI> Rs2;   // individual (right)
     array[ns] int<lower=1, upper=nsA> Ps2;   // stimuli (right)
     array[ns] int<lower=1, upper=nsJ> Us;    // judges
-    array[ns] int<lower=1, upper=nsK> Vs;    // repeated comparisons
+    array[ns] int<lower=1, upper=nsK> Vs;    // judgments
     array[ns] int<lower=0, upper=1> ORPUV;   // outcome (dichotomous)
     
     // individual-stimuli data
-    array[nsI*nsA] int<lower=1, upper=nsI> Is;      // individuals
-    array[nsI*nsA] int<lower=1, upper=nsA> As;      // stimuli
+    array[nsI*nsA] int<lower=1, upper=nsI> IA1s;    // individuals
+    array[nsI*nsA] int<lower=1, upper=nsA> IA2s;    // stimuli
     array[nsI*nsA] real XIc;                        // individual predictor (continuous)
     array[nsI*nsA] int<lower=1, upper=sup_dXI> XId; // individual predictor (discrete)
     array[nsI*nsA] real XAc;                        // stimuli predictor (continuous)
     array[nsI*nsA] int<lower=1, upper=sup_dXA> XAd; // stimuli predictor (discrete)
     
     // juges-repeated comparisons data
-    array[nsJ*nsK] int<lower=1, upper=nsJ> Js;      // judges
-    array[nsJ*nsK] int<lower=1, upper=nsK> Ks;      // repeated comparisons
+    array[nsJ*nsK] int<lower=1, upper=nsJ> JK1s;    // judges
+    array[nsJ*nsK] int<lower=1, upper=nsK> JK2s;    // judgments
     array[nsJ*nsK] real ZJc;                        // judges predictor (continuous)
     array[nsJ*nsK] int<lower=1, upper=sup_dZJ> ZJd; // judges predictor (discrete)
-    array[nsJ*nsK] real ZKc;                        // repeated comparisons predictor (continuous)
-    array[nsJ*nsK] int<lower=1, upper=sup_dZK> ZKd; // repeated comparisons predictor (discrete)
+    array[nsJ*nsK] real ZKc;                        // judgments predictor (continuous)
+    array[nsJ*nsK] int<lower=1, upper=sup_dZK> ZKd; // judgments predictor (discrete)
     
 }
 parameters{
@@ -60,7 +60,7 @@ parameters{
     
     vector[nsJ] eJ;       // judges errors (identification)
     real<lower=0> pJK;    // proportion of variability (identification)
-    matrix[nsJ,nsK] zeJK; // comparisons errors (non-centered)
+    matrix[nsJ,nsK] zeJK; // judgments errors (non-centered)
     
 }
 transformed parameters{
@@ -71,29 +71,29 @@ transformed parameters{
     matrix[nsI,nsA] eIA;  // stimuli errors
     
     vector[nsJ] BJ;       // judges' trait
-    matrix[nsJ,nsK] BJK;  // judges-repeated comparisons trait
-    matrix[nsJ,nsK] eJK;  // repeated comparisons
+    matrix[nsJ,nsK] BJK;  // judges-judgments trait
+    matrix[nsJ,nsK] eJK;  // judgments errors
     
     
     // individuals-stimuli
     // error calculation
     eIA = pIA * zeIA;    // identification as a prop. of previous level
     for( ia in 1:(nsI*nsA) ){
-      TI[ Is[ia] ] = bXIc*XIc[ ia ] + bXId[ XId[ia] ] + eI[ Is[ia] ];
-      TIA[ Is[ia], As[ia] ] = TI[ Is[ia] ] + bXAc*XAc[ ia ] + bXAd[ XAd[ia] ] + eIA[ Is[ia], As[ia] ];
+      TI[ IA1s[ia] ] = bXIc*XIc[ ia ] + bXId[ XId[ia] ] + eI[ IA1s[ia] ];
+      TIA[ IA1s[ia], IA2s[ia] ] = TI[ IA1s[ia] ] + bXAc*XAc[ ia ] + bXAd[ XAd[ia] ] + eIA[ IA1s[ia], IA2s[ia] ];
     }
     
     // judges-repeated comparisons
     eJK = pJK * zeJK;    // identification as a prop. of previous level
     if( nsK == 1 ){
       for( jk in 1:(nsJ*nsK) ){
-        BJ[ Js[jk] ] = bZJc*ZJc[ jk ] + bZJd[ ZJd[jk] ] + eJ[ Js[jk] ];
-        BJK[ Js[jk], Ks[jk] ] = BJ[ Js[jk] ] + bZKc*ZKc[ jk ] + bZKd[ ZKd[jk] ]; // no repetitions -> log_eJK not possible
+        BJ[ JK1s[jk] ] = bZJc*ZJc[ jk ] + bZJd[ ZJd[jk] ] + eJ[ JK1s[jk] ];
+        BJK[ JK1s[jk], JK2s[jk] ] = BJ[ JK1s[jk] ] + bZKc*ZKc[ jk ] + bZKd[ ZKd[jk] ]; // no repetitions -> log_eJK not possible
       }
     } else {
       for( jk in 1:(nsJ*nsK) ){
-        BJ[ Js[jk] ] = bZJc*ZJc[ jk ] + bZJd[ ZJd[jk] ] + eJ[ Js[jk] ];
-        BJK[ Js[jk], Ks[jk] ] = BJ[ Js[jk] ] + bZKc*ZKc[ jk ] + bZKd[ ZKd[jk] ] + eJK[ Js[jk], Ks[jk] ];
+        BJ[ JK1s[jk] ] = bZJc*ZJc[ jk ] + bZJd[ ZJd[jk] ] + eJ[ JK1s[jk] ];
+        BJK[ JK1s[jk], JK2s[jk] ] = BJ[ JK1s[jk] ] + bZKc*ZKc[ jk ] + bZKd[ ZKd[jk] ] + eJK[ JK1s[jk], JK2s[jk] ];
       }
     }
     
