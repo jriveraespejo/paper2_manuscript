@@ -5,18 +5,19 @@ manuscript:
   article: paper2.qmd 
   meca-bundle: "manuscript-meca.zip"
   code-links:
-     - text: Github repository
-       icon: filetype-html
-       href: https://github.com/jriveraespejo/paper2_manuscript.git
-     - text: CJ figures
-       icon: file-code-fill
-       href: code/CJfig.R
-     - text: CJ model
-       icon: file-code-fill
-       href: code/CJmod_add.R
-  #   - text: Submission Manuscript
-  #     icon: filetype-pdf
-  #     href: manual_renderization/index.pdfutations using inlin
+    - text: Github repository
+      repo: https://github.com/jriveraespejo/paper2_manuscript.git
+    #- text: UK Rash presentation
+    #  href: https://github.com/jriveraespejo/paper2_manuscript.git
+    #- text: Submission Manuscript
+    #  href: manual_renderization/index.pdf
+    - text: Figures
+      icon: file-code-fill
+      href: code/CJfig.R
+    - text: Stan
+      icon: file-code-fill
+      href: code/CJmod_add.R
+  
   
     
 execute:

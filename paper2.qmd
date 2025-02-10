@@ -257,7 +257,7 @@ Again, in experimental practice, researchers approach this process in reverse. T
 Notably, Thurstone attributed the lack of correlation between stimuli to the cancellation of potential judges' biases. He argued that this cancellation resulted from two opposing and equally weighted effects occurring during pairwise comparisons [@Thurstone_1927b, pp. 268]. @Andrich_1978 provided a mathematical demonstration of this cancellation using the BTL model under the assumption of discriminal processes with additive biases. However, it is easy to imagine at least two scenarios in which the zero correlation assumption is almost certainly invalid: when the pairwise comparison involves multidimensional, complex traits with heterogeneous stimuli and when an additional hierarchical structure is relevant to the stimuli.
 
 <!-- 3. The first scenario where the assumption does not hold -->
-In the first scenario, the intricate aspects of multidimensional, complex traits may introduce dependencies between the stimuli due to certain judges' biases that resist cancellation. Research on text quality suggests that when judges evaluate these traits, they often rely on various intricate characteristics of the stimuli to form their judgments [@vanDaal_et_al_2016; @Lesterhuis_2018; @Chambers_et_al_2022]. These additional relevant characteristics, which are unlikely to be equally weighted or opposing, can exert an uneven influence on judges' perceptions, creating biases in their judgments and, ultimately, introducing dependencies between stimuli [@vanderLinden_et_al_2017_II, pp. 346]. For example, this could occur when a judge assessing the argumentative quality of a text places more weight on its grammatical accuracy than other judges, thereby favoring texts with fewer errors but weaker arguments. While direct evidence for this particular scenario is lacking, studies such as @Pollitt_et_al_2003 demonstrate the presence of such biases, supporting the notion that the factors influencing pairwise comparisons may not always cancel out.
+In the first scenario, the intricate aspects of multidimensional, complex traits may introduce dependencies between the stimuli due to certain judges' biases that resist cancellation. Research on text quality suggests that when judges evaluate these traits, they often rely on various intricate characteristics of the stimuli to form their judgments [@vanDaal_et_al_2016; @Lesterhuis_2018; @Chambers_et_al_2022]. These additional relevant characteristics are unlikely to be equally weighted or opposing. As a result, they may exert an uneven influence on judges' perceptions, creating biases in their judgments. Furthermore, since the discriminal difference of the stimuli becomes an observable outcome only through the judges' perceptions, these biases may ultimately introduce dependencies between the stimuli [@vanderLinden_et_al_2017_II, pp. 346]. For example, this could occur when a judge assessing the argumentative quality of a text places more weight on its grammatical accuracy than other judges, thereby favoring texts with fewer errors but weaker arguments. While direct evidence for this particular scenario is lacking, studies such as @Pollitt_et_al_2003 demonstrate the presence of such biases, supporting the notion that the factors influencing pairwise comparisons may not always cancel out.
 
 <!-- If the test taker’s position on one latent trait is fixed, the assumption of local stochastic independence requires the association between the responses to the items to vanish. Suppose the assumption is violated and more than one dimension is necessary to describe the test takers’ position in the latent space. The association between the responses to the items given one proficiency parameter does then not vanish. [@vanderLinden_et_al_2017_II, pp. 346]. -->
 
@@ -296,7 +296,7 @@ However, the statistical literature advises caution when using estimated scores 
 <!-- A type-I error occurs when a *true* null hypothesis is incorrectly rejected, while a type-II error occurs when a *false* null hypothesis is incorrectly accepted [@Everitt_et_al_2010]. -->
 
 <!-- 4. segway for next section -->
-In aggregate, the excessive reliance on Thurstone's Case V assumptions in the statistical analysis of CJ data can compromise the reliability of CJ's trait estimates. This overreliance, coupled with the apparent disconnect between CJ's approach to trait measurement and hypothesis testing, may also undermine the validity of these estimates [@Perron_et_al_2015, pp. 2]. Thus, addressing these issues through a more systematic and integrated approach could provide significant statistical and measurement benefits. For this reason, the study employs the structural approach to causal inference.
+In aggregate, the excessive reliance on Thurstone's Case V assumptions in the statistical analysis of comparative data can compromise the reliability of the trait estimates. This overreliance may also undermine their validity [@Perron_et_al_2015, pp. 2], especially when combined with the disconnect between CJ's approach to trait measurement and hypothesis testing. However, the structural approach to causal inference can address these issues by providing a systematic and integrated framework that enhances statistical accuracy while strengthening measurement reliability and validity.
 
 <!-- Reliability is a necessary but not sufficient condition for validity. Reliability can exist without validity but validity cannot exist without reliability [@Perron_et_al_2015, pp. 2]. -->
 
@@ -318,6 +318,7 @@ In aggregate, the excessive reliance on Thurstone's Case V assumptions in the st
 <!-- recording: Sven and Tine 25.01.22; time: 00:05:40 - 00:06:30 -->
 <!-- recording: Sven and Tine 25.01.22; time: 00:08:25 - 00:31:56 -->
 <!-- recording: Sven and Tine 25.01.30 p1; time: 00:00:00 - 00:23:25 -->
+<!-- recording: Sven and Tine 25.02.07; time: 00:02:20 - 00:06:20 -->
 
 <!-- 1. The structural approach to causal inference -->
 The *structural approach* to causal inference provides a formal framework for identifying causes and estimating their effects using data. The approach uses structural causal models (SCMs) and directed acyclic graphs (DAGs) [@Pearl_2009; @Pearl_et_al_2016; @Gross_et_al_2018; @Neal_2020] to formally and graphically represent the assumed causal structure of a system, such as the one found in CJ experiments.
@@ -330,25 +331,21 @@ Essentially, SCMs and DAGs function as *conceptual models* on which identificati
 <!-- In general terms, causal graphs encode a researcher’s assumptions about the causal process that generated the data in a population of interest [@Schuessler_et_al_2023, pp. 4] -->
 
 <!-- 3. Example of a CJ estimand and estimator, and its limitations -->
-A motivating example helps to clarify these concepts. This example will appear throughout the document to illustrate various aspects of the proposed extension. In this scenario, researchers aim to determine: "To what extent do different teaching methods influence students' ability to produce high-quality written texts?" To investigate this, they design a CJ experiment by randomly assigning students (individuals) to two groups, each receiving a different teaching method. Judges then compare pairs of students’ written texts (stimuli), producing a dichotomous outcome that reflects the relative quality of each text (trait). Based on this setup, researchers could reformulate the research question as the estimand: "*On average*, is there a difference in the ability to produce high-quality written texts between the two groups of students?". Following current CJ practices, researchers would then rely on estimates from the BTL model, or its transformations, to approximate this estimand.
+A motivating example helps to clarify these concepts. This example will appear throughout the document to illustrate various aspects of the proposed development. In this example, researchers aim to determine: "To what extent do different teaching methods influence students' ability to produce high-quality written texts?" To investigate this, researchers could design a CJ experiment by randomly assigning students (individuals) to two groups, each receiving a different teaching method. Judges would then compare pairs of students’ written texts (stimuli), to produce a dichotomous outcome that reflects the relative quality of each text (trait). Based on this setup, researchers could reformulate the research question as the estimand: "*On average*, is there a difference in the ability to produce high-quality written texts between the two groups of students?". Finally, following current CJ practices, researchers would then rely on estimates from the BTL model, or its transformations, to approximate this estimand.
 
 <!-- 4. But why identification is so important? -->
-However, @sec-theory-issues presents compelling evidence that the BTL model has several statistical and measurement limitations. These limitations hinder the model's ability to identify various estimands relevant to CJ inquiries, including the one from the motivating example. Identification is crucial because it is a necessary condition for ensuring consistent estimators. Without identification, *consistency* --the property of an estimator whose estimates converge to the "true" value of the estimand as the data size approaches infinity [@Everitt_et_al_2010]-- cannot be achieved, even with "infinite" and error-free data. As a result, deriving meaningful insights from finite data also becomes unattainable [@Schuessler_et_al_2023, pp. 5].
+However, @sec-theory-issues presents compelling evidence that the BTL model has several statistical and measurement limitations. These limitations hinder the model’s ability to identify various estimands relevant to CJ inquiries, including the one described in the motivating example. Identification is crucial because it is a necessary condition for ensuring consistent estimators. *Consistency* refers to the property of an estimator whose estimates converge to the "true" value of the estimand as the data size approaches infinity [@Everitt_et_al_2010]. Without identification, consistency cannot be achieved, even with "infinite" and error-free data. Consequently, deriving meaningful insights from finite data becomes impossible [@Schuessler_et_al_2023, pp. 5].
 
 <!-- The main reason to focus on identification is that if these parameters cannot be identified using "infinite" and error free data, we certainly cannot learn anything about it using finite data. So, for the time being, we assume large samples and error-free measurements [@Schuessler_et_al_2023, pp. 5]. -->
 
 <!-- 5. So, how do SCMs and DAGs support identification? -->
 Luckily, SCMs and DAGs support identification analysis through two key advantages. First, regardless of complexity, they can represent various causal structures using only five fundamental building blocks [@Neal_2020; @McElreath_2020]. This feature allows researchers to decompose complex structures into manageable components, facilitating their analysis [@McElreath_2020]. Second, they depict causal relationships in an interactive, non-parametric way. This flexibility enables feasible identification strategies without requiring specification of the types of variables, the functional forms relating them, or the parameters of those functional forms [@Pearl_et_al_2016, pp. 35].
 
-<!-- 5. What the section will do? -->
-Thus, this section addresses the identified limitations by extending Thurstone’s general form (see @tbl-thurstone_cases) through a systematic and integrated approach based on the structural approach to causal inference. Specifically, it leverages the capabilities of this approach to formalize the combination of the core theoretical principles outlined in @sec-thurstone_theory with key assessment design features relevant to CJ experiments, such as the selection of judges, stimuli, and comparisons. 
-
-<!-- 6. What are the advantages? -->
-In addition to overcoming the identified limitations, the extended model offers two key advantages. First, it clarifies the interactions among all actors and processes involved in CJ experiments. Second, it shifts the current comparative data analysis paradigm from passively accepting the model assumptions to actively testing if those assumptions fit the specific data under analysis. For more details on these assumptions, refer to @sec-theory-issues.
+<!-- 6. What the section will do? -->
+Thus, this section addresses the identified issues in @sec-theory-issues by extending Thurstone’s general form using the structural approach to causal inference. Specifically, it leverages the capabilities of this approach to formalize the combination of the core theoretical principles outlined in @sec-thurstone_theory with key assessment design features relevant to CJ experiments, such as the selection of judges, stimuli, and comparisons. In addition to enhancing statistical accuracy and strengthening measurement reliability and validity, the approach offers two key advantages. First, it clarifies the interactions among all actors and processes involved in CJ experiments. Second, it shifts the current comparative data analysis paradigm from passively accepting the model assumptions to actively testing whether those assumptions fit the data under analysis.
 
 <!-- 7. How the section is divided? -->
-Accordingly, @sec-theory-theoretical_P incorporates the theoretical principles into what the study calls the *conceptual-population model*. This model assumes that researchers have access to a conceptual population of comparison data, meaning data representing all repeated comparisons made by every available judge for each pair of stimuli produced by each pair of individuals in the population, thus its name. Conversely, @sec-theory-theoretical_SC integrates the assessment design features into what the study calls the *sample-comparison model*. This model assumes a more realistic scenario where researchers only have access to a sample of judges, individuals, stimuli, and comparisons from the conceptual population.
-
+Accordingly, @sec-theory-theoretical_P incorporates the theoretical principles into what we call the *conceptual-population model*. This model assumes that researchers have access to a conceptual population of comparison data, that is, data representing all repeated comparisons made by every available judge for each pair of stimuli produced by each pair of individuals in the population, hence its name. Conversely, @sec-theory-theoretical_SC integrates the assessment design features into what we call the *sample-comparison model*. This model assumes a more realistic scenario where researchers only have access to a sample of judges, individuals, stimuli, and comparisons from the conceptual population.
 
 <!-- Generalizability is the degree to which you can apply the results of your study to a broader context.  -->
 <!-- https://www.scribbr.com/research-bias/generalizability/ -->
@@ -366,20 +363,18 @@ Accordingly, @sec-theory-theoretical_P incorporates the theoretical principles i
 <!-- recording: Sven and Tine 24.11.25; time: 01:00:00 - 01:08:40 -->
 <!-- recording: Sven and Tine 24.12.17; time: 00:26:10 - 00:54:00 -->
 <!-- recording: Sven and Tine 25.01.30 p1; time: 00:23:25 - 00:48:00 -->
-<!-- recording: Sven and Tine 25.02.07; time: 00:00:00 - 00:00:00 -->
+<!-- recording: Sven and Tine 25.02.07; time: 00:00:00 - 00:02:20 -->
 
 <!-- 1. The SCMs -->
-Before incorporating the theoretical principles into the *conceptual-population model*, the study defines SCMs. SCMs are formal mathematical models characterized by a set of *endogenous* variables $V$, a set of *exogenous* variables $E$, and a set of functions $F$ [@Pearl_2009; @Cinelli_et_al_2020]. Endogenous variables are those whose causal mechanisms a researcher chooses to model [@Neal_2020]. In contrast, exogenous variables represent *errors* or *disturbances* arising from omitted factors that the investigator chooses not to model explicitly [@Pearl_2009, pp. 27,68]. Lastly, the functions, referred to as *structural equations*, express the endogenous variables as non-parametric functions of other endogenous and exogenous variables. These functions use the symbol '$:=$' to denote the asymmetrical causal dependence between variables and the symbol '$\dsep$' to represent *d-separation*, a concept akin to (conditional) independence.
+Before incorporating the theoretical principles into the *conceptual-population model*, it is essential to define SCMs. SCMs are formal mathematical models characterized by a set of *endogenous* variables $V$, a set of *exogenous* variables $E$, and a set of functions $F$ [@Pearl_2009; @Cinelli_et_al_2020]. Endogenous variables are those whose causal mechanisms a researcher chooses to model [@Neal_2020]. In contrast, exogenous variables represent *errors* or *disturbances* arising from omitted factors that the investigator chooses not to model explicitly [@Pearl_2009, pp. 27,68]. Lastly, the functions, referred to as *structural equations*, express the endogenous variables as non-parametric functions of other endogenous and exogenous variables. These functions use the symbol '$:=$' to denote the asymmetrical causal dependence between variables and the symbol '$\dsep$' to represent *d-separation*, a concept akin to (conditional) independence.
 
 <!-- 2. the preliminary SCM for CJ -->
-@fig-cj04 illustrates the preliminary integration of theoretical principles into the conceptual-population model. Specifically, @fig-cj04_scm shows the SCM that underlies the motivating example. This SCM maps the relationship between the outcome of the CJ experiment $(O_{abhijk})$ to several other variables. In this model, the indices $\{a,b\}$ represent the compared texts (stimuli), with $a \neq b$. The indices $\{h,i\}$ label the students who wrote the texts (individuals), where $h = i$ is possible. The index $j$ denotes the judge, and $k$ denotes the comparison number, which accounts for experimental cases where judges perform multiple comparisons of the same texts written by the same students, i.e., a *repeated measures design* [@Lawson_2015, pp. 366-376]. Finally, the SCM presents the preliminary set of structural equations $F = \{f_{O},f_{D},f_{PT}\}$, which define the non-parametric dependencies among these variables.
+@fig-cj04 illustrates the preliminary integration of theoretical principles into the conceptual-population model. Specifically, @fig-cj04_scm shows the SCM that underlies the motivating example. This SCM maps the relationship between the conceptual-population outcome $(O^{cp}_{abhijk})$ to several other variables. In this SCM, the subscripts $\{a,b\}$ represent the compared texts (stimuli), with $a \neq b$. The indices $\{h,i\}$ label the students who wrote the texts (individuals), where $h = i$ is possible. Moreover, the index $j$ denotes the judge, and $k$ denotes the judgment number, which accounts for experimental cases where judges perform multiple judgments of the same texts written by the same students, i.e., a *repeated measures design* [@Lawson_2015, pp. 366-376]. 
+
+The other variables in [SCM -@fig-cj04_scm] include the texts' discriminal processes $(T_{ahjk}, T_{bijk})$ and their discriminal difference $(D_{abhijk})$, in line with Thurstone's theory (see @sec-thurstone_theory). Additionally, based on the evidence presented in @sec-theory-issue1b and the recommendations of @Andrich_1978 and @Wainer_et_al_1978, we incorporate the judges' biases $(B_{kj})$ into the model. Together with the outcome, these variables form the preliminary set of endogenous variables, $V = \{ O_{abhijk}, D_{abhijk}, T_{ahjk}, T_{bijk}, B_{kj} \}$. Finally, the SCM shows the preliminary set of structural equations, $F = \{ f_{O}, f_{D} \}$, which define the non-parametric dependencies among these variables.
 
 <!-- 3. What are the innovations of this? -->
-Note that the [SCM -@fig-cj04_scm] incorporates not only the variables described by Thurstone's theory, such as the discriminal difference $(D_{abhijk})$ and the texts' *true* discriminal processes $(T_{ahjk}, T_{bijk})$ (refer to @sec-thurstone_theory), but also innovates by incorporating additional variables central to CJ experiments, such as the texts' *perceived* discriminal processes $(PT_{ahjk}, PT_{bijk})$ and the judges' perceptions $(B_{kj})$. Together with the outcome, these variables constitute the preliminary set of endogenous variables $V = \{O_{abhijk}, D_{abhijk}, PT_{ahjk}, PT_{bijk}, T_{ahjk}, T_{bijk}, B_{kj}\}$. 
-
-By incorporating the texts' perceived discriminal processes into the conceptual-population model, this study considers a crucial aspect of CJ experiments that previous literature has overlooked. It recognizes that the texts' true discriminal processes become an observable outcome only through the judges' perceptions. In other words, researchers observe the CJ outcome only when both variables create a *pure interaction effect*, meaning that neither variable has a direct effect on the outcome, but their interaction produces an effect [@Attia_et_al_2022].
-
-Conversely, based on the evidence presented in @sec-theory-issue1b, the study assumes that other relevant stimulus characteristics influence the judges' perceptions, leading to biases that resist cancellation and ultimately introduce dependencies between the stimuli. To address this, the study incorporates the judges' perceptions into the conceptual-population model, following the recommendations of @Andrich_1978 and @Wainer_et_al_1978.
+By incorporating judges' biases into the conceptual-population model, we assume that additional relevant characteristics of the stimuli are unlikely to be equally weighted or opposing. Thus, these characteristics may exert an uneven influence on judges' perceptions, creating biases in their judgments. Furthermore, since the discriminal difference of the stimuli becomes an observable outcome only through the judges' perceptions, these biases may ultimately introduce dependencies between the stimuli [@vanderLinden_et_al_2017_II, pp. 346], hence the need for their integration. The full statistical elaboration of this point is presented in @sec-statistical.
 
 
 ::: {#fig-cj03 layout-nrow=2}
@@ -402,31 +397,52 @@ CJ's outcome, discriminal difference, discriminal processes and judges' biases
 :::
 
 
-
 <!-- 4. The DAGs -->
 Notably, every SCM has an associated DAG [@Pearl_et_al_2016; @Cinelli_et_al_2020]. A DAG is a graph consisting of nodes connected by edges, where the nodes represent random variables. The term *directed* means that the edges extend from one node to another, with arrows indicating the direction of causal influence. The term *acyclic* implies that the causal influences do not form loops, ensuring the influences do not cycle back on themselves [@McElreath_2020]. DAGs represent observed variables as solid black circles, while they use open circles for unobserved (latent) variables [@Morgan_et_al_2014]. While the *standard representation* of DAGs typically omits exogenous variables for simplicity, the *magnified representation* includes them, offering the advantage of highlighting potential issues related to conditioning and confounding [@Cinelli_et_al_2020]. Thus, this study uses the magnified representation.
 
 <!-- 5. the preliminary DAG for CJ -->
-@fig-cj04_dag displays the DAG associated with [SCM -@fig-cj04_scm]. The graph shows the direction of causal influences among variables, reflecting the assumptions of Thurstone's theory and CJ experiments. It also distinguishes between observable endogenous variables, such as the outcome $O_{abhijk}$, and variables considered latent according to the theory and practice of CJ, such as the discriminal difference, the perceived discriminal processes, the true discriminal processes, and the judges' perceptions.
+@fig-cj04_dag displays the DAG associated with [SCM -@fig-cj03_scm]. The graph shows the direction of causal influences among variables, reflecting the assumptions of Thurstone's theory and CJ experiments. It also distinguishes between observable endogenous variables, such as the outcome, and variables considered latent according to the theory and practice of CJ, such as the the text's discriminal processes, their discriminal difference, and the judges' biases.
 
 <!-- 6. The problem of continuing this way -->
-It is easy to intuit that describing the CJ system by assigning an index and a variable to each discriminal process could quickly become intractable and cumbersome due to the large size of the DAG and the repetition of its components. Therefore, to maintain generality, the study groups pairs of discriminal processes with different indices into matrices that contain these pairs. First, the study defines the vectors $U_{A} \in \mathbb{N}^{A}$, $U_{I} \in \mathbb{N}^{I}$ containing the indices of the stimuli and individuals, where: 
+It is easy to see that representing the CJ system using indices for a single pair of individuals and stimuli, along with the indices for the judgment number and the judge responsible for the comparison, can quickly become intractable and cumbersome. Thus, to maintain generality and simplify the notation, certain indices are grouped into vectors or matrices. First, we define the matrices $IA$ and $JK$ as:
 
 $$
-U_{A} = [1, \dots, a, \dots, b, \dots, A] ;\quad U_{I} = [1, \dots, a, \dots, b, \dots, I]
-$$ 
-
-Then, the study defines the matrices of stimuli and individual comparisons, $P \in \mathbb{N}^{m \times 2}$ and $R \in \mathbb{N}^{n \times 2}$, respectively. Here, each row of $P$ represents a pairing $\{a,b\}$ of stimuli indices and each row of $R$ represents a pairing $\{h,i\}$ of individual indices, i.e.,
-
+IA = \begin{bmatrix}
+1 & 1 \\
+1 & 2 \\
+\vdots & \vdots \\
+h & a \\
+\vdots & \vdots \\
+i & b \\
+\vdots & \vdots \\
+n_{I} & n_{A}-1 \\
+n_{I} & n_{A} \\
+\end{bmatrix} \in \mathbb{N}^{(n_{I} \cdot n_{A}) \times 2} \; ; \quad
+JK = \begin{bmatrix}
+1 & 1 \\
+1 & 2 \\
+\vdots & \vdots \\
+j & k \\
+\vdots & \vdots \\
+n_{J} & n_{K}-1 \\
+n_{I} & n_{A} \\
+\end{bmatrix} \in \mathbb{N}^{(n_{J} \cdot n_{K}) \times 2}
 $$
-P = \{(a, b) \mid a,b \in U_{A}, a \neq b\} ;\quad R = \{(h, i) \mid h,i \in U_{I}\}
-$$
 
-Here, $m$ and $n$ represents the number of unique pairwise comparisons between stimuli, and unique pairwise comparison per individuals, which corresponds to the number of ways to choose two elements from $U_{A}$ and $U_{I}$, typically given by:
+Each row of $IA$ represents a unique pairing of an individual $\{h,i\}$ with a stimulus $\{a,b\}$. Here, $n_{I}$ represents the number of individuals and $n_{A}$ the number of stimulus within individuals in the population. Similarly, each row of $JK$ represents a unique pairing of a judge $j$ with a judgment $k$. Here, $n_{J}$ represents the number of judges and $n_{K}$ the number of judgments performed by each judge in the population.
 
-$$
-m = {A \choose 2} = \frac{A!}{2!(A-2)!} ;\quad n = {I \choose 2} = \frac{I!}{2!(I-2)!}
-$$
+
+<!-- Then, the study defines the matrices of stimuli and individual comparisons, $P \in \mathbb{N}^{m \times 2}$ and $R \in \mathbb{N}^{n \times 2}$, respectively. Here, each row of $P$ represents a pairing $\{a,b\}$ of stimuli indices and each row of $R$ represents a pairing $\{h,i\}$ of individual indices, i.e., -->
+
+<!-- $$ -->
+<!-- P = \{(a, b) \mid a,b \in U_{A}, a \neq b\} ;\quad R = \{(h, i) \mid h,i \in U_{I}\} -->
+<!-- $$ -->
+
+<!-- Here, $m$ and $n$ represents the number of unique pairwise comparisons between stimuli, and unique pairwise comparison per individuals, which corresponds to the number of ways to choose two elements from $U_{A}$ and $U_{I}$, typically given by: -->
+
+<!-- $$ -->
+<!-- m = {A \choose 2} = \frac{A!}{2!(A-2)!} ;\quad n = {I \choose 2} = \frac{I!}{2!(I-2)!} -->
+<!-- $$ -->
 
 
 <!-- Because it quickly becomes intractable, and without loosing generality, the (latent) "perceived" and "true" discriminal processes for the stimuli can be depicted in a vector for each judge, as in   -->
@@ -551,7 +567,7 @@ CJ's outcome, discriminal difference, discriminal processes and judges' biases
 
 
 
-# Extending the BTL model {#sec-statistical}
+# Abandoning the BTL model {#sec-statistical}
 
 <!-- Second, @sec-theory-statistics uses *Bayesian inference methods* to convert these theoretical and practical elements into a statistical model that supports the analysis of paired comparison data. -->
 
@@ -559,6 +575,8 @@ CJ's outcome, discriminal difference, discriminal processes and judges' biases
 <!-- recording: Sven 24.10.04; time: 00:46:00 - 01:01:00 -->
 <!-- recording: Sven and Tine 24.11.25; time: 00:24:50 - 00:30:35 -->
 <!-- recording: Sven and Tine 24.11.25; time: 00:49:30 - 00:53:30 -->
+
+<!-- In other words, researchers observe the CJ outcome only when texts' discriminal processes and the judges biases create a *pure interaction effect*, meaning that neither of them has a direct effect on the outcome, but their interaction produces an effect [@Attia_et_al_2022]. -->
 
 <!-- These estimates are obtained through *estimation*, which is the process that integrates data with an estimator [@Everitt_et_al_2010]. -->
 
