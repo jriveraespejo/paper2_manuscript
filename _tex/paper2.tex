@@ -835,43 +835,37 @@ the asymmetrical causal dependence between variables and the symbol
 `\(\:\bot\:\)' to represent \emph{d-separation}, a concept akin to
 (conditional) independence.
 
-Figure~\ref{fig-cj04} illustrates the preliminary integration of
-theoretical principles into the conceptual-population model.
-Specifically, Figure~\ref{fig-cj04_scm} shows the SCM that underlies the
-motivating example. This SCM maps the relationship between the
-conceptual-population outcome \((O^{cp}_{abhijk})\) to several other
-variables. In this SCM, the subscripts \(\{a,b\}\) represent the
-compared texts (stimuli), with \(a \neq b\). The indices \(\{h,i\}\)
-label the students who wrote the texts (individuals), where \(h = i\) is
-possible. Moreover, the index \(j\) denotes the judge, and \(k\) denotes
-the judgment number, which accounts for experimental cases where judges
-perform multiple judgments of the same texts written by the same
-students, i.e., a \emph{repeated measures design}
-\citep[pp.~366-376]{Lawson_2015}.
+SCM~\ref{fig-cj03_scm} illustrates the preliminary integration of
+theoretical principles into the conceptual-population model. This SCM
+maps the relationship between the conceptual-population outcome,
+\((O^{cp}_{abhijk})\), and several related variables. The subscripts
+\(a\) and \(b\) represent the compared texts (stimuli), while the
+indices \(h\) and \(i\) label the students who authored them
+(individuals). Moreover, the index \(j\) refers to the judge, and \(k\)
+specifies the judgment number, accounting for experimental conditions
+where judges compare the same texts written by the same students
+multiple times, i.e., a \emph{repeated measures design}
+\citep[pp.~366-376]{Lawson_2015}. It is important to note that the
+indexing system allows for comparisons between different texts written
+by the same student (\(h = i\), \(a \neq b\)) and between texts written
+by distinct students (\(h \neq i\), where \(a = b\) is possible).
+However, it excludes cases where judges compare a student's text to
+itself (\(h = i\), \(a = b\)), as such a comparison lacks practical
+meaning.
 
-The other variables in SCM~\ref{fig-cj04_scm} include the texts'
+The other variables in SCM~\ref{fig-cj03_scm} include the texts'
 discriminal processes \((T_{ahjk}, T_{bijk})\) and their discriminal
 difference \((D_{abhijk})\), in line with Thurstone's theory (see
-Section~\ref{sec-thurstone_theory}). Additionally, based on the evidence
-presented in Section~\ref{sec-theory-issue1b} and the recommendations of
-\citet{Andrich_1978} and \citet{Wainer_et_al_1978}, we incorporate the
-judges' biases \((B_{kj})\) into the model. Together with the outcome,
-these variables form the preliminary set of endogenous variables,
+Section~\ref{sec-thurstone_theory}). Additionally, based on the
+arguments presented in Section~\ref{sec-theory-issue1b} and the
+recommendations of \citet{Andrich_1978} and \citet{Wainer_et_al_1978},
+the SCM incorporates the judges' biases \((B_{kj})\). Together with the
+outcome, these variables form the preliminary set of endogenous
+variables,
 \(V = \{ O_{abhijk}, D_{abhijk}, T_{ahjk}, T_{bijk}, B_{kj} \}\).
 Finally, the SCM shows the preliminary set of structural equations,
 \(F = \{ f_{O}, f_{D} \}\), which define the non-parametric dependencies
 among these variables.
-
-By incorporating judges' biases into the conceptual-population model, we
-assume that additional relevant characteristics of the stimuli are
-unlikely to be equally weighted or opposing. Thus, these characteristics
-may exert an uneven influence on judges' perceptions, creating biases in
-their judgments. Furthermore, since the discriminal difference of the
-stimuli becomes an observable outcome only through the judges'
-perceptions, these biases may ultimately introduce dependencies between
-the stimuli \citep[pp.~346]{vanderLinden_et_al_2017_II}, hence the need
-for their integration. The full statistical elaboration of this point is
-presented in Section~\ref{sec-statistical}.
 
 \begin{figure}[H]
 
@@ -881,8 +875,8 @@ presented in Section~\ref{sec-statistical}.
 
 \[
 \begin{aligned}
-  O^{cp}_{abhijk} & := f_{O}(D_{abhijk}) \\
-  D_{abhijk} & := f_{D}(T_{ah}, T_{bi}, B_{jk})
+  O^{cp}_{haibjk} & := f_{O}(D_{haibjk}) \\
+  D_{haibjk} & := f_{D}(T_{ha}, T_{ib}, B_{jk})
 \end{aligned}
 \]
 
@@ -911,40 +905,42 @@ discriminal processes and judges' biases}
 
 Notably, every SCM has an associated DAG
 \citep{Pearl_et_al_2016, Cinelli_et_al_2020}. A DAG is a graph
-consisting of nodes connected by edges, where the nodes represent random
-variables. The term \emph{directed} means that the edges extend from one
-node to another, with arrows indicating the direction of causal
-influence. The term \emph{acyclic} implies that the causal influences do
+consisting of nodes connected by edges, where nodes represent random
+variables. The term \emph{directed} indicates that edges or arrows
+extend from one node to another showing the direction of causal
+influence. The term \emph{acyclic} means that the causal influences do
 not form loops, ensuring the influences do not cycle back on themselves
-\citep{McElreath_2020}. DAGs represent observed variables as solid black
-circles, while they use open circles for unobserved (latent) variables
-\citep{Morgan_et_al_2014}. While the \emph{standard representation} of
-DAGs typically omits exogenous variables for simplicity, the
-\emph{magnified representation} includes them, offering the advantage of
-highlighting potential issues related to conditioning and confounding
-\citep{Cinelli_et_al_2020}. Thus, this study uses the magnified
-representation.
+\citep{McElreath_2020}. DAGs depict observed variables as solid black
+circles and unobserved (latent) variables as open circles
+\citep{Morgan_et_al_2014}. The \emph{standard representation} of DAGs
+typically omits exogenous variables for simplicity, while the
+\emph{magnified representation} includes them to highlight potential
+issues related to conditioning and confounding
+\citep{Cinelli_et_al_2020}. This section adopts the magnified
+representation to enhance clarity.
 
-Figure~\ref{fig-cj04_dag} displays the DAG associated with
+Figure~\ref{fig-cj03_dag} displays the DAG associated with
 SCM~\ref{fig-cj03_scm}. The graph shows the direction of causal
 influences among variables, reflecting the assumptions of Thurstone's
-theory and CJ experiments. It also distinguishes between observable
+theory and CJ's experiments. It also distinguishes between observable
 endogenous variables, such as the outcome, and variables considered
-latent according to the theory and practice of CJ, such as the the
-text's discriminal processes, their discriminal difference, and the
-judges' biases.
+latent according to the theory and practice of CJ, such as the text's
+discriminal processes, their discriminal difference, and the judges'
+biases.
 
-It is easy to see that representing the CJ system using indices for a
-single pair of individuals and stimuli, along with the indices for the
-judgment number and the judge responsible for the comparison, can
-quickly become intractable and cumbersome. Thus, to maintain generality
-and simplify the notation, certain indices are grouped into vectors or
-matrices. First, we define the matrices \(IA\) and \(JK\) as:
+Although SCMs and DAGs do not necessitate specifying the data structure
+of the modeled system, defining these structures can sometimes enhance
+their clarity and simplify their notation. Thus, we organize certain
+indices into vectors or matrices. First, we define the matrices \(IA\)
+and \(JK\) as follows:
 
-\[
-IA = \begin{bmatrix}
+\begin{equation}\phantomsection\label{eq-mat12}{
+IA_{(n_{I} \cdot n_{A}) \times 2} = \begin{bmatrix}
 1 & 1 \\
 1 & 2 \\
+\vdots & \vdots \\
+1 & n_{A}-1 \\
+1 & n_{A} \\
 \vdots & \vdots \\
 h & a \\
 \vdots & \vdots \\
@@ -952,25 +948,125 @@ i & b \\
 \vdots & \vdots \\
 n_{I} & n_{A}-1 \\
 n_{I} & n_{A} \\
-\end{bmatrix} \in \mathbb{N}^{(n_{I} \cdot n_{A}) \times 2} \; ; \quad
-JK = \begin{bmatrix}
+\end{bmatrix} \in \mathbb{N} \; ; \quad
+JK_{(n_{J} \cdot n_{K}) \times 2} = \begin{bmatrix}
 1 & 1 \\
 1 & 2 \\
+\vdots & \vdots \\
+1 & n_{K}-1 \\
+1 & n_{K} \\
 \vdots & \vdots \\
 j & k \\
 \vdots & \vdots \\
 n_{J} & n_{K}-1 \\
-n_{I} & n_{A} \\
-\end{bmatrix} \in \mathbb{N}^{(n_{J} \cdot n_{K}) \times 2}
+n_{J} & n_{K} \\
+\end{bmatrix} \in \mathbb{N}
+}\end{equation}
+
+where each row of \(IA\) corresponds to a unique pairing of individuals
+\(h, i\) with stimuli \(a, b\). Here, \(n_{I}\) represents the number of
+individuals, while \(n_{A}\) denotes the number of stimuli available per
+individual. Thus, the matrix \(IA\) is composed of natural numbers
+\(\mathbb{N}\), with \(n_{I} \cdot n_{A}\) rows and \(2\) columns.
+Similarly, each row of \(JK\) specifies a unique pairing of a judge
+\(j\) with a judgment \(k\). In this case, \(n_{J}\) indicates the total
+number of judges, and \(n_{K}\) represents the number of judgments each
+judge performs. Therefore, the matrix \(JK\) is also composed of natural
+numbers \(\mathbb{N},\) with \(n_{J} \cdot n_{K}\) rows and \(2\)
+columns.
+
+Importantly, since the discriminal difference of the stimuli becomes an
+observable outcome only through judges' perceptions, it is necessary to
+define the matrix \(RPUV\), where each row of the matrix uniquely pairs
+the corresponding rows from the matrices \(IA\) and \(JK\) as follows:
+
+\begin{equation}\phantomsection\label{eq-mat3}{
+RPUV_{{n_{I} \cdot n_{A} \choose 2} \cdot n_{J} \cdot n_{K}  \times 6} = \begin{bmatrix}
+1 & 1 & 1 & 2 & 1 & 1 \\
+1 & 1 & 1 & 2 & 1 & 2 \\
+\vdots & \vdots & \vdots & \vdots & \vdots & \vdots\\
+1 & 1 & 1 & 2 & 1 & n_{K}-1 \\
+1 & 1 & 1 & 2 & 1 & n_{K} \\
+\vdots & \vdots & \vdots & \vdots & \vdots & \vdots\\
+h & a & i & b & j & k \\
+\vdots & \vdots & \vdots & \vdots & \vdots & \vdots\\
+n_{I} & n_{A}-1 & n_{I} & n_{A} & n_{J} & 1 \\
+n_{I} & n_{A}-1 & n_{I} & n_{A} & n_{J} & 2 \\
+\vdots & \vdots & \vdots & \vdots & \vdots & \vdots\\
+n_{I} & n_{A}-1 & n_{I} & n_{A} & n_{J} & n_{K}-1 \\
+n_{I} & n_{A}-1 & n_{I} & n_{A} & n_{J} & n_{K} \\
+\end{bmatrix} \in \mathbb{N}
+}\end{equation}
+
+Here, the \(RPUV\) matrix is also composed of natural numbers
+\(\mathbb{N}\), and has a dimension of
+\({n_{I} \cdot n_{A} \choose 2} \cdot n_{J} \cdot n_{K}\) rows and \(6\)
+columns. The dimension of the matrix results from the
+conceptual-population model's assumption that researchers have access to
+data representing all repeated comparisons made by every available judge
+for each pair of stimuli produced by each pair of individuals in the
+population. Here, the term \({n_{I} \cdot n_{a} \choose 2}\) represents
+the Binomial coefficient, which quantifies the number of
+individual-stimuli comparison pairs, and it is defined as:
+
+\[
+{n_{I} \cdot n_{A} \choose 2} = \frac{ (n_{I} \cdot n_{A})! }{ 2! (n_{I} \cdot n_{A} - 2)! }
 \]
 
-Each row of \(IA\) represents a unique pairing of an individual
-\(\{h,i\}\) with a stimulus \(\{a,b\}\). Here, \(n_{I}\) represents the
-number of individuals and \(n_{A}\) the number of stimulus within
-individuals in the population. Similarly, each row of \(JK\) represents
-a unique pairing of a judge \(j\) with a judgment \(k\). Here, \(n_{J}\)
-represents the number of judges and \(n_{K}\) the number of judgments
-performed by each judge in the population.
+Using the motivating example outlined in Section~\ref{sec-theoretical},
+we can visualize the shape of these structures. For illustrative
+purposes, assume the conceptual population consists of \(n_{I} = 5\)
+individuals, each with \(n_{A} = 2\) available stimuli. Additionally,
+assume that each pair of stimuli is evaluated by \(n_{J} = 3\) judges,
+with each judge making \(n_{K} = 3\) comparative judgments. Given this
+setup, the matrices in (\ref{eq-mat12}) and (\ref{eq-mat3}) are
+represented as follows:
+
+\[
+IA_{10 \times 2} = \begin{bmatrix}
+1 & 1 \\
+1 & 2 \\
+2 & 1 \\
+2 & 2 \\
+3 & 1 \\
+3 & 2 \\
+4 & 1 \\
+4 & 2 \\
+5 & 1 \\
+5 & 2 \\
+\end{bmatrix}\; ; \quad
+JK_{9 \times 2} = \begin{bmatrix}
+1 & 1 \\
+1 & 2 \\
+1 & 3 \\
+2 & 1 \\
+2 & 2 \\
+2 & 3 \\
+3 & 1 \\
+3 & 2 \\
+3 & 3 \\
+\end{bmatrix} \; ; \quad
+RPUV_{405  \times 6} = \begin{bmatrix}
+1 & 1 & 1 & 2 & 1 & 1 \\
+1 & 1 & 1 & 2 & 1 & 2 \\
+1 & 1 & 1 & 2 & 1 & 3 \\
+\vdots & \vdots & \vdots & \vdots & \vdots & \vdots\\
+1 & 1 & 5 & 1 & 1 & 1 \\
+1 & 1 & 5 & 1 & 1 & 2 \\
+1 & 1 & 5 & 1 & 1 & 3 \\
+\vdots & \vdots & \vdots & \vdots & \vdots & \vdots\\
+1 & 1 & 5 & 1 & 3 & 1 \\
+1 & 1 & 5 & 1 & 3 & 2 \\
+1 & 1 & 5 & 1 & 3 & 3 \\
+\vdots & \vdots & \vdots & \vdots & \vdots & \vdots\\
+4 & 2 & 5 & 2 & 3 & 1 \\
+4 & 2 & 5 & 2 & 3 & 2 \\
+4 & 2 & 5 & 2 & 3 & 3 \\
+\end{bmatrix}
+\]
+
+With these matrices we can express an equivalent version of
+SCM~\ref{fig-cj03_scm} and DAG~\ref{fig-cj03_dag} in a vectorized form.
 
 \begin{figure}[H]
 
@@ -1198,7 +1294,7 @@ acquisition:} S.G. and S.DM.
 
 \section{Appendix}\label{sec-appendix}
 
-\subsection{Statistics and Causal inference}\label{sec-appendixB}
+\subsection{Statistical and Causal inference}\label{sec-appendixB}
 
 This section introduces fundamental statistical and causal inference
 concepts necessary for understanding the core theoretical principles

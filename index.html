@@ -10,7 +10,7 @@
 <meta name="author" content="Tine van van Daal">
 <meta name="author" content="Sven De De Maeyer">
 <meta name="author" content="Steven Gillis">
-<meta name="dcterms.date" content="2025-02-10">
+<meta name="dcterms.date" content="2025-02-11">
 <meta name="keywords" content="causal inference, directed acyclic graphs, structural causal models, bayesian statistical methods, thurstonian model, comparative judgement, probability, statistical modeling">
 
 <title>Let’s talk about Thurstone &amp; Co.: An information-theoretical model for comparative judgments, and its statistical translation</title>
@@ -108,10 +108,10 @@ window.Quarto = {
 <meta name="citation_author" content="Tine van van Daal">
 <meta name="citation_author" content="Sven De De Maeyer">
 <meta name="citation_author" content="Steven Gillis">
-<meta name="citation_publication_date" content="2025-02-10">
-<meta name="citation_cover_date" content="2025-02-10">
+<meta name="citation_publication_date" content="2025-02-11">
+<meta name="citation_cover_date" content="2025-02-11">
 <meta name="citation_year" content="2025">
-<meta name="citation_online_date" content="2025-02-10">
+<meta name="citation_online_date" content="2025-02-11">
 <meta name="citation_language" content="en">
 <meta name="citation_reference" content="citation_title=Correlation and causation;,citation_author=S. Wright;,citation_publication_date=1927;,citation_cover_date=1927;,citation_year=1927;,citation_fulltext_html_url=https://books.google.co.ao/books/about/Journal_of_Agricultural_Research.html?hl=pt-PT&amp;amp;amp;id=lNNdIV_qpwIC;,citation_issue=7;,citation_volume=20;,citation_journal_title=Correlation and causation;">
 <meta name="citation_reference" content="citation_title=On the interpretation of χ2 from contingency tables, and the calculation of p;,citation_author=R. Fisher;,citation_publication_date=1922;,citation_cover_date=1922;,citation_year=1922;,citation_fulltext_html_url=http://www.jstor.org/stable/2340521;,citation_issue=1;,citation_doi=10.2307/2340521;,citation_volume=85;,citation_journal_title=Journal of the Royal Statistical Society;,citation_publisher=[Wiley, Royal Statistical Society];">
@@ -440,7 +440,7 @@ window.Quarto = {
                 <div>
             <div class="quarto-title-meta-heading">Published</div>
             <div class="quarto-title-meta-contents">
-              <p class="date">February 10, 2025</p>
+              <p class="date">February 11, 2025</p>
             </div>
           </div>
           
@@ -777,10 +777,8 @@ Figure&nbsp;2: The effect of dispersion discrepancies and stimulus correlation o
 <!-- 1. The SCMs -->
 <p>Before incorporating the theoretical principles into the <em>conceptual-population model</em>, it is essential to define SCMs. SCMs are formal mathematical models characterized by a set of <em>endogenous</em> variables <span class="math inline">\(V\)</span>, a set of <em>exogenous</em> variables <span class="math inline">\(E\)</span>, and a set of functions <span class="math inline">\(F\)</span> <span class="citation" data-cites="Pearl_2009 Cinelli_et_al_2020">(<a href="#ref-Pearl_2009" role="doc-biblioref">Pearl 2009</a>; <a href="#ref-Cinelli_et_al_2020" role="doc-biblioref">Cinelli, Forney, and Pearl 2020</a>)</span>. Endogenous variables are those whose causal mechanisms a researcher chooses to model <span class="citation" data-cites="Neal_2020">(<a href="#ref-Neal_2020" role="doc-biblioref">Neal 2020</a>)</span>. In contrast, exogenous variables represent <em>errors</em> or <em>disturbances</em> arising from omitted factors that the investigator chooses not to model explicitly <span class="citation" data-cites="Pearl_2009">(<a href="#ref-Pearl_2009" role="doc-biblioref">Pearl 2009, 27, 68</a>)</span>. Lastly, the functions, referred to as <em>structural equations</em>, express the endogenous variables as non-parametric functions of other endogenous and exogenous variables. These functions use the symbol ‘<span class="math inline">\(:=\)</span>’ to denote the asymmetrical causal dependence between variables and the symbol ‘<span class="math inline">\(\:\bot\:\)</span>’ to represent <em>d-separation</em>, a concept akin to (conditional) independence.</p>
 <!-- 2. the preliminary SCM for CJ -->
-<p><a href="#fig-cj04" class="quarto-xref">Figure&nbsp;4</a> illustrates the preliminary integration of theoretical principles into the conceptual-population model. Specifically, <a href="#fig-cj04_scm" class="quarto-xref">Figure&nbsp;4 (a)</a> shows the SCM that underlies the motivating example. This SCM maps the relationship between the conceptual-population outcome <span class="math inline">\((O^{cp}_{abhijk})\)</span> to several other variables. In this SCM, the subscripts <span class="math inline">\(\{a,b\}\)</span> represent the compared texts (stimuli), with <span class="math inline">\(a \neq b\)</span>. The indices <span class="math inline">\(\{h,i\}\)</span> label the students who wrote the texts (individuals), where <span class="math inline">\(h = i\)</span> is possible. Moreover, the index <span class="math inline">\(j\)</span> denotes the judge, and <span class="math inline">\(k\)</span> denotes the judgment number, which accounts for experimental cases where judges perform multiple judgments of the same texts written by the same students, i.e., a <em>repeated measures design</em> <span class="citation" data-cites="Lawson_2015">(<a href="#ref-Lawson_2015" role="doc-biblioref">Lawson 2015, 366–76</a>)</span>.</p>
-<p>The other variables in <a href="#fig-cj04_scm" class="quarto-xref">SCM&nbsp;4 (a)</a> include the texts’ discriminal processes <span class="math inline">\((T_{ahjk}, T_{bijk})\)</span> and their discriminal difference <span class="math inline">\((D_{abhijk})\)</span>, in line with Thurstone’s theory (see <a href="#sec-thurstone_theory" class="quarto-xref">Section&nbsp;2</a>). Additionally, based on the evidence presented in <a href="#sec-theory-issue1b" class="quarto-xref">Section&nbsp;3.1.2</a> and the recommendations of <span class="citation" data-cites="Andrich_1978">Andrich (<a href="#ref-Andrich_1978" role="doc-biblioref">1978</a>)</span> and <span class="citation" data-cites="Wainer_et_al_1978">Wainer, TimbersFairbank, and Hough (<a href="#ref-Wainer_et_al_1978" role="doc-biblioref">1978</a>)</span>, we incorporate the judges’ biases <span class="math inline">\((B_{kj})\)</span> into the model. Together with the outcome, these variables form the preliminary set of endogenous variables, <span class="math inline">\(V = \{ O_{abhijk}, D_{abhijk}, T_{ahjk}, T_{bijk}, B_{kj} \}\)</span>. Finally, the SCM shows the preliminary set of structural equations, <span class="math inline">\(F = \{ f_{O}, f_{D} \}\)</span>, which define the non-parametric dependencies among these variables.</p>
-<!-- 3. What are the innovations of this? -->
-<p>By incorporating judges’ biases into the conceptual-population model, we assume that additional relevant characteristics of the stimuli are unlikely to be equally weighted or opposing. Thus, these characteristics may exert an uneven influence on judges’ perceptions, creating biases in their judgments. Furthermore, since the discriminal difference of the stimuli becomes an observable outcome only through the judges’ perceptions, these biases may ultimately introduce dependencies between the stimuli <span class="citation" data-cites="vanderLinden_et_al_2017_II">(<a href="#ref-vanderLinden_et_al_2017_II" role="doc-biblioref">van der Linden 2017b, 2:346</a>)</span>, hence the need for their integration. The full statistical elaboration of this point is presented in <a href="#sec-statistical" class="quarto-xref">Section&nbsp;5</a>.</p>
+<p><a href="#fig-cj03_scm" class="quarto-xref">SCM&nbsp;3 (a)</a> illustrates the preliminary integration of theoretical principles into the conceptual-population model. This SCM maps the relationship between the conceptual-population outcome, <span class="math inline">\((O^{cp}_{abhijk})\)</span>, and several related variables. The subscripts <span class="math inline">\(a\)</span> and <span class="math inline">\(b\)</span> represent the compared texts (stimuli), while the indices <span class="math inline">\(h\)</span> and <span class="math inline">\(i\)</span> label the students who authored them (individuals). Moreover, the index <span class="math inline">\(j\)</span> refers to the judge, and <span class="math inline">\(k\)</span> specifies the judgment number, accounting for experimental conditions where judges compare the same texts written by the same students multiple times, i.e., a <em>repeated measures design</em> <span class="citation" data-cites="Lawson_2015">(<a href="#ref-Lawson_2015" role="doc-biblioref">Lawson 2015, 366–76</a>)</span>. It is important to note that the indexing system allows for comparisons between different texts written by the same student (<span class="math inline">\(h = i\)</span>, <span class="math inline">\(a \neq b\)</span>) and between texts written by distinct students (<span class="math inline">\(h \neq i\)</span>, where <span class="math inline">\(a = b\)</span> is possible). However, it excludes cases where judges compare a student’s text to itself (<span class="math inline">\(h = i\)</span>, <span class="math inline">\(a = b\)</span>), as such a comparison lacks practical meaning.</p>
+<p>The other variables in <a href="#fig-cj03_scm" class="quarto-xref">SCM&nbsp;3 (a)</a> include the texts’ discriminal processes <span class="math inline">\((T_{ahjk}, T_{bijk})\)</span> and their discriminal difference <span class="math inline">\((D_{abhijk})\)</span>, in line with Thurstone’s theory (see <a href="#sec-thurstone_theory" class="quarto-xref">Section&nbsp;2</a>). Additionally, based on the arguments presented in <a href="#sec-theory-issue1b" class="quarto-xref">Section&nbsp;3.1.2</a> and the recommendations of <span class="citation" data-cites="Andrich_1978">Andrich (<a href="#ref-Andrich_1978" role="doc-biblioref">1978</a>)</span> and <span class="citation" data-cites="Wainer_et_al_1978">Wainer, TimbersFairbank, and Hough (<a href="#ref-Wainer_et_al_1978" role="doc-biblioref">1978</a>)</span>, the SCM incorporates the judges’ biases <span class="math inline">\((B_{kj})\)</span>. Together with the outcome, these variables form the preliminary set of endogenous variables, <span class="math inline">\(V = \{ O_{abhijk}, D_{abhijk}, T_{ahjk}, T_{bijk}, B_{kj} \}\)</span>. Finally, the SCM shows the preliminary set of structural equations, <span class="math inline">\(F = \{ f_{O}, f_{D} \}\)</span>, which define the non-parametric dependencies among these variables.</p>
 <div id="fig-cj03" class="quarto-layout-panel">
 <figure class="quarto-float quarto-float-fig figure">
 <figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-fig" id="fig-cj03-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
@@ -797,8 +795,8 @@ Figure&nbsp;3: CJ’s outcome, discriminal difference, discriminal processes and
 <div aria-describedby="fig-cj03_scm-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <p><span class="math display">\[
 \begin{aligned}
-  O^{cp}_{abhijk} &amp; := f_{O}(D_{abhijk}) \\
-  D_{abhijk} &amp; := f_{D}(T_{ah}, T_{bi}, B_{jk})
+  O^{cp}_{haibjk} &amp; := f_{O}(D_{haibjk}) \\
+  D_{haibjk} &amp; := f_{D}(T_{ha}, T_{ib}, B_{jk})
 \end{aligned}
 \]</span></p>
 </div>
@@ -824,15 +822,18 @@ Figure&nbsp;3: CJ’s outcome, discriminal difference, discriminal processes and
 </figure>
 </div>
 <!-- 4. The DAGs -->
-<p>Notably, every SCM has an associated DAG <span class="citation" data-cites="Pearl_et_al_2016 Cinelli_et_al_2020">(<a href="#ref-Pearl_et_al_2016" role="doc-biblioref">Pearl, Glymour, and Jewell 2016</a>; <a href="#ref-Cinelli_et_al_2020" role="doc-biblioref">Cinelli, Forney, and Pearl 2020</a>)</span>. A DAG is a graph consisting of nodes connected by edges, where the nodes represent random variables. The term <em>directed</em> means that the edges extend from one node to another, with arrows indicating the direction of causal influence. The term <em>acyclic</em> implies that the causal influences do not form loops, ensuring the influences do not cycle back on themselves <span class="citation" data-cites="McElreath_2020">(<a href="#ref-McElreath_2020" role="doc-biblioref">McElreath 2020</a>)</span>. DAGs represent observed variables as solid black circles, while they use open circles for unobserved (latent) variables <span class="citation" data-cites="Morgan_et_al_2014">(<a href="#ref-Morgan_et_al_2014" role="doc-biblioref">Morgan and Winship 2014</a>)</span>. While the <em>standard representation</em> of DAGs typically omits exogenous variables for simplicity, the <em>magnified representation</em> includes them, offering the advantage of highlighting potential issues related to conditioning and confounding <span class="citation" data-cites="Cinelli_et_al_2020">(<a href="#ref-Cinelli_et_al_2020" role="doc-biblioref">Cinelli, Forney, and Pearl 2020</a>)</span>. Thus, this study uses the magnified representation.</p>
+<p>Notably, every SCM has an associated DAG <span class="citation" data-cites="Pearl_et_al_2016 Cinelli_et_al_2020">(<a href="#ref-Pearl_et_al_2016" role="doc-biblioref">Pearl, Glymour, and Jewell 2016</a>; <a href="#ref-Cinelli_et_al_2020" role="doc-biblioref">Cinelli, Forney, and Pearl 2020</a>)</span>. A DAG is a graph consisting of nodes connected by edges, where nodes represent random variables. The term <em>directed</em> indicates that edges or arrows extend from one node to another showing the direction of causal influence. The term <em>acyclic</em> means that the causal influences do not form loops, ensuring the influences do not cycle back on themselves <span class="citation" data-cites="McElreath_2020">(<a href="#ref-McElreath_2020" role="doc-biblioref">McElreath 2020</a>)</span>. DAGs depict observed variables as solid black circles and unobserved (latent) variables as open circles <span class="citation" data-cites="Morgan_et_al_2014">(<a href="#ref-Morgan_et_al_2014" role="doc-biblioref">Morgan and Winship 2014</a>)</span>. The <em>standard representation</em> of DAGs typically omits exogenous variables for simplicity, while the <em>magnified representation</em> includes them to highlight potential issues related to conditioning and confounding <span class="citation" data-cites="Cinelli_et_al_2020">(<a href="#ref-Cinelli_et_al_2020" role="doc-biblioref">Cinelli, Forney, and Pearl 2020</a>)</span>. This section adopts the magnified representation to enhance clarity.</p>
 <!-- 5. the preliminary DAG for CJ -->
-<p><a href="#fig-cj04_dag" class="quarto-xref">Figure&nbsp;4 (b)</a> displays the DAG associated with <a href="#fig-cj03_scm" class="quarto-xref">SCM&nbsp;3 (a)</a>. The graph shows the direction of causal influences among variables, reflecting the assumptions of Thurstone’s theory and CJ experiments. It also distinguishes between observable endogenous variables, such as the outcome, and variables considered latent according to the theory and practice of CJ, such as the the text’s discriminal processes, their discriminal difference, and the judges’ biases.</p>
+<p><a href="#fig-cj03_dag" class="quarto-xref">Figure&nbsp;3 (b)</a> displays the DAG associated with <a href="#fig-cj03_scm" class="quarto-xref">SCM&nbsp;3 (a)</a>. The graph shows the direction of causal influences among variables, reflecting the assumptions of Thurstone’s theory and CJ’s experiments. It also distinguishes between observable endogenous variables, such as the outcome, and variables considered latent according to the theory and practice of CJ, such as the text’s discriminal processes, their discriminal difference, and the judges’ biases.</p>
 <!-- 6. The problem of continuing this way -->
-<p>It is easy to see that representing the CJ system using indices for a single pair of individuals and stimuli, along with the indices for the judgment number and the judge responsible for the comparison, can quickly become intractable and cumbersome. Thus, to maintain generality and simplify the notation, certain indices are grouped into vectors or matrices. First, we define the matrices <span class="math inline">\(IA\)</span> and <span class="math inline">\(JK\)</span> as:</p>
-<p><span class="math display">\[
-IA = \begin{bmatrix}
+<p>Although SCMs and DAGs do not necessitate specifying the data structure of the modeled system, defining these structures can sometimes enhance their clarity and simplify their notation. Thus, we organize certain indices into vectors or matrices. First, we define the matrices <span class="math inline">\(IA\)</span> and <span class="math inline">\(JK\)</span> as follows:</p>
+<p><span id="eq-mat12"><span class="math display">\[
+IA_{(n_{I} \cdot n_{A}) \times 2} = \begin{bmatrix}
 1 &amp; 1 \\
 1 &amp; 2 \\
+\vdots &amp; \vdots \\
+1 &amp; n_{A}-1 \\
+1 &amp; n_{A} \\
 \vdots &amp; \vdots \\
 h &amp; a \\
 \vdots &amp; \vdots \\
@@ -840,27 +841,87 @@ i &amp; b \\
 \vdots &amp; \vdots \\
 n_{I} &amp; n_{A}-1 \\
 n_{I} &amp; n_{A} \\
-\end{bmatrix} \in \mathbb{N}^{(n_{I} \cdot n_{A}) \times 2} \; ; \quad
-JK = \begin{bmatrix}
+\end{bmatrix} \in \mathbb{N} \; ; \quad
+JK_{(n_{J} \cdot n_{K}) \times 2} = \begin{bmatrix}
 1 &amp; 1 \\
 1 &amp; 2 \\
+\vdots &amp; \vdots \\
+1 &amp; n_{K}-1 \\
+1 &amp; n_{K} \\
 \vdots &amp; \vdots \\
 j &amp; k \\
 \vdots &amp; \vdots \\
 n_{J} &amp; n_{K}-1 \\
-n_{I} &amp; n_{A} \\
-\end{bmatrix} \in \mathbb{N}^{(n_{J} \cdot n_{K}) \times 2}
+n_{J} &amp; n_{K} \\
+\end{bmatrix} \in \mathbb{N}
+\tag{1}\]</span></span></p>
+<p>where each row of <span class="math inline">\(IA\)</span> corresponds to a unique pairing of individuals <span class="math inline">\(h, i\)</span> with stimuli <span class="math inline">\(a, b\)</span>. Here, <span class="math inline">\(n_{I}\)</span> represents the number of individuals, while <span class="math inline">\(n_{A}\)</span> denotes the number of stimuli available per individual. Thus, the matrix <span class="math inline">\(IA\)</span> is composed of natural numbers <span class="math inline">\(\mathbb{N}\)</span>, with <span class="math inline">\(n_{I} \cdot n_{A}\)</span> rows and <span class="math inline">\(2\)</span> columns. Similarly, each row of <span class="math inline">\(JK\)</span> specifies a unique pairing of a judge <span class="math inline">\(j\)</span> with a judgment <span class="math inline">\(k\)</span>. In this case, <span class="math inline">\(n_{J}\)</span> indicates the total number of judges, and <span class="math inline">\(n_{K}\)</span> represents the number of judgments each judge performs. Therefore, the matrix <span class="math inline">\(JK\)</span> is also composed of natural numbers <span class="math inline">\(\mathbb{N},\)</span> with <span class="math inline">\(n_{J} \cdot n_{K}\)</span> rows and <span class="math inline">\(2\)</span> columns.</p>
+<p>Importantly, since the discriminal difference of the stimuli becomes an observable outcome only through judges’ perceptions, it is necessary to define the matrix <span class="math inline">\(RPUV\)</span>, where each row of the matrix uniquely pairs the corresponding rows from the matrices <span class="math inline">\(IA\)</span> and <span class="math inline">\(JK\)</span> as follows:</p>
+<p><span id="eq-mat3"><span class="math display">\[
+RPUV_{{n_{I} \cdot n_{A} \choose 2} \cdot n_{J} \cdot n_{K}  \times 6} = \begin{bmatrix}
+1 &amp; 1 &amp; 1 &amp; 2 &amp; 1 &amp; 1 \\
+1 &amp; 1 &amp; 1 &amp; 2 &amp; 1 &amp; 2 \\
+\vdots &amp; \vdots &amp; \vdots &amp; \vdots &amp; \vdots &amp; \vdots\\
+1 &amp; 1 &amp; 1 &amp; 2 &amp; 1 &amp; n_{K}-1 \\
+1 &amp; 1 &amp; 1 &amp; 2 &amp; 1 &amp; n_{K} \\
+\vdots &amp; \vdots &amp; \vdots &amp; \vdots &amp; \vdots &amp; \vdots\\
+h &amp; a &amp; i &amp; b &amp; j &amp; k \\
+\vdots &amp; \vdots &amp; \vdots &amp; \vdots &amp; \vdots &amp; \vdots\\
+n_{I} &amp; n_{A}-1 &amp; n_{I} &amp; n_{A} &amp; n_{J} &amp; 1 \\
+n_{I} &amp; n_{A}-1 &amp; n_{I} &amp; n_{A} &amp; n_{J} &amp; 2 \\
+\vdots &amp; \vdots &amp; \vdots &amp; \vdots &amp; \vdots &amp; \vdots\\
+n_{I} &amp; n_{A}-1 &amp; n_{I} &amp; n_{A} &amp; n_{J} &amp; n_{K}-1 \\
+n_{I} &amp; n_{A}-1 &amp; n_{I} &amp; n_{A} &amp; n_{J} &amp; n_{K} \\
+\end{bmatrix} \in \mathbb{N}
+\tag{2}\]</span></span></p>
+<p>Here, the <span class="math inline">\(RPUV\)</span> matrix is also composed of natural numbers <span class="math inline">\(\mathbb{N}\)</span>, and has a dimension of <span class="math inline">\({n_{I} \cdot n_{A} \choose 2} \cdot n_{J} \cdot n_{K}\)</span> rows and <span class="math inline">\(6\)</span> columns. The dimension of the matrix results from the conceptual-population model’s assumption that researchers have access to data representing all repeated comparisons made by every available judge for each pair of stimuli produced by each pair of individuals in the population. Here, the term <span class="math inline">\({n_{I} \cdot n_{a} \choose 2}\)</span> represents the Binomial coefficient, which quantifies the number of individual-stimuli comparison pairs, and it is defined as:</p>
+<p><span class="math display">\[
+{n_{I} \cdot n_{A} \choose 2} = \frac{ (n_{I} \cdot n_{A})! }{ 2! (n_{I} \cdot n_{A} - 2)! }
 \]</span></p>
-<p>Each row of <span class="math inline">\(IA\)</span> represents a unique pairing of an individual <span class="math inline">\(\{h,i\}\)</span> with a stimulus <span class="math inline">\(\{a,b\}\)</span>. Here, <span class="math inline">\(n_{I}\)</span> represents the number of individuals and <span class="math inline">\(n_{A}\)</span> the number of stimulus within individuals in the population. Similarly, each row of <span class="math inline">\(JK\)</span> represents a unique pairing of a judge <span class="math inline">\(j\)</span> with a judgment <span class="math inline">\(k\)</span>. Here, <span class="math inline">\(n_{J}\)</span> represents the number of judges and <span class="math inline">\(n_{K}\)</span> the number of judgments performed by each judge in the population.</p>
-<!-- Then, the study defines the matrices of stimuli and individual comparisons, $P \in \mathbb{N}^{m \times 2}$ and $R \in \mathbb{N}^{n \times 2}$, respectively. Here, each row of $P$ represents a pairing $\{a,b\}$ of stimuli indices and each row of $R$ represents a pairing $\{h,i\}$ of individual indices, i.e., -->
-<!-- $$ -->
-<!-- P = \{(a, b) \mid a,b \in U_{A}, a \neq b\} ;\quad R = \{(h, i) \mid h,i \in U_{I}\} -->
-<!-- $$ -->
-<!-- Here, $m$ and $n$ represents the number of unique pairwise comparisons between stimuli, and unique pairwise comparison per individuals, which corresponds to the number of ways to choose two elements from $U_{A}$ and $U_{I}$, typically given by: -->
-<!-- $$ -->
-<!-- m = {A \choose 2} = \frac{A!}{2!(A-2)!} ;\quad n = {I \choose 2} = \frac{I!}{2!(I-2)!} -->
-<!-- $$ -->
-<!-- Because it quickly becomes intractable, and without loosing generality, the (latent) "perceived" and "true" discriminal processes for the stimuli can be depicted in a vector for each judge, as in   -->
+<p>Using the motivating example outlined in <a href="#sec-theoretical" class="quarto-xref">Section&nbsp;4</a>, we can visualize the shape of these structures. For illustrative purposes, assume the conceptual population consists of <span class="math inline">\(n_{I} = 5\)</span> individuals, each with <span class="math inline">\(n_{A} = 2\)</span> available stimuli. Additionally, assume that each pair of stimuli is evaluated by <span class="math inline">\(n_{J} = 3\)</span> judges, with each judge making <span class="math inline">\(n_{K} = 3\)</span> comparative judgments. Given this setup, the matrices in (<a href="#eq-mat12" class="quarto-xref">1</a>) and (<a href="#eq-mat3" class="quarto-xref">2</a>) are represented as follows:</p>
+<p><span class="math display">\[
+IA_{10 \times 2} = \begin{bmatrix}
+1 &amp; 1 \\
+1 &amp; 2 \\
+2 &amp; 1 \\
+2 &amp; 2 \\
+3 &amp; 1 \\
+3 &amp; 2 \\
+4 &amp; 1 \\
+4 &amp; 2 \\
+5 &amp; 1 \\
+5 &amp; 2 \\
+\end{bmatrix}\; ; \quad
+JK_{9 \times 2} = \begin{bmatrix}
+1 &amp; 1 \\
+1 &amp; 2 \\
+1 &amp; 3 \\
+2 &amp; 1 \\
+2 &amp; 2 \\
+2 &amp; 3 \\
+3 &amp; 1 \\
+3 &amp; 2 \\
+3 &amp; 3 \\
+\end{bmatrix} \; ; \quad
+RPUV_{405  \times 6} = \begin{bmatrix}
+1 &amp; 1 &amp; 1 &amp; 2 &amp; 1 &amp; 1 \\
+1 &amp; 1 &amp; 1 &amp; 2 &amp; 1 &amp; 2 \\
+1 &amp; 1 &amp; 1 &amp; 2 &amp; 1 &amp; 3 \\
+\vdots &amp; \vdots &amp; \vdots &amp; \vdots &amp; \vdots &amp; \vdots\\
+1 &amp; 1 &amp; 5 &amp; 1 &amp; 1 &amp; 1 \\
+1 &amp; 1 &amp; 5 &amp; 1 &amp; 1 &amp; 2 \\
+1 &amp; 1 &amp; 5 &amp; 1 &amp; 1 &amp; 3 \\
+\vdots &amp; \vdots &amp; \vdots &amp; \vdots &amp; \vdots &amp; \vdots\\
+1 &amp; 1 &amp; 5 &amp; 1 &amp; 3 &amp; 1 \\
+1 &amp; 1 &amp; 5 &amp; 1 &amp; 3 &amp; 2 \\
+1 &amp; 1 &amp; 5 &amp; 1 &amp; 3 &amp; 3 \\
+\vdots &amp; \vdots &amp; \vdots &amp; \vdots &amp; \vdots &amp; \vdots\\
+4 &amp; 2 &amp; 5 &amp; 2 &amp; 3 &amp; 1 \\
+4 &amp; 2 &amp; 5 &amp; 2 &amp; 3 &amp; 2 \\
+4 &amp; 2 &amp; 5 &amp; 2 &amp; 3 &amp; 3 \\
+\end{bmatrix}
+\]</span></p>
+<p>With these matrices we can express an equivalent version of <a href="#fig-cj03_scm" class="quarto-xref">SCM&nbsp;3 (a)</a> and <a href="#fig-cj03_dag" class="quarto-xref">DAG&nbsp;3 (b)</a> in a vectorized form.</p>
 <div id="fig-cj04" class="quarto-layout-panel">
 <figure class="quarto-float quarto-float-fig figure">
 <figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-fig" id="fig-cj04-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
@@ -1127,7 +1188,7 @@ Figure&nbsp;7: CJ’s outcome, discriminal difference, discriminal processes and
 </div></section><section id="sec-appendix" class="level1 appendix" data-appendix-style="plain" data-number="8"><h2 class="anchored quarto-appendix-heading"><span class="header-section-number">8</span> Appendix</h2><div class="quarto-appendix-contents">
 
 
-</div></section><section id="sec-appendixB" class="level2 appendix" data-appendix-style="plain" data-number="8.1"><h2 class="anchored quarto-appendix-heading"><span class="header-section-number">8.1</span> Statistics and Causal inference</h2><div class="quarto-appendix-contents">
+</div></section><section id="sec-appendixB" class="level2 appendix" data-appendix-style="plain" data-number="8.1"><h2 class="anchored quarto-appendix-heading"><span class="header-section-number">8.1</span> Statistical and Causal inference</h2><div class="quarto-appendix-contents">
 
 <!-- recording: Sven and Tine 25.01.22; time: 00:00:00 - 00:05:40 -->
 <p>This section introduces fundamental statistical and causal inference concepts necessary for understanding the core theoretical principles described in this document. It does not, however, offer a comprehensive overview of causal inference methods. Readers seeking more in-depth understanding may wish to explore introductory papers such as <span class="citation" data-cites="Pearl_2010">Pearl (<a href="#ref-Pearl_2010" role="doc-biblioref">2010</a>)</span>, <span class="citation" data-cites="Rohrer_2018">Rohrer (<a href="#ref-Rohrer_2018" role="doc-biblioref">2018</a>)</span>, <span class="citation" data-cites="Pearl_2019">Pearl (<a href="#ref-Pearl_2019" role="doc-biblioref">2019</a>)</span>, and <span class="citation" data-cites="Cinelli_et_al_2020">Cinelli, Forney, and Pearl (<a href="#ref-Cinelli_et_al_2020" role="doc-biblioref">2020</a>)</span>. They may also find it helpful to consult introductory books like <span class="citation" data-cites="Pearl_et_al_2018">Pearl and Mackenzie (<a href="#ref-Pearl_et_al_2018" role="doc-biblioref">2018</a>)</span>, <span class="citation" data-cites="Neal_2020">Neal (<a href="#ref-Neal_2020" role="doc-biblioref">2020</a>)</span>, and <span class="citation" data-cites="McElreath_2020">McElreath (<a href="#ref-McElreath_2020" role="doc-biblioref">2020</a>)</span>. For more advanced study, readers may refer to seminal intermediate papers such as <span class="citation" data-cites="Neyman_et_al_1923">Neyman (<a href="#ref-Neyman_et_al_1923" role="doc-biblioref">1923</a>)</span>, <span class="citation" data-cites="Rubin_1974">Rubin (<a href="#ref-Rubin_1974" role="doc-biblioref">1974</a>)</span>, <span class="citation" data-cites="Spirtes_et_al_1991">Spirtes, Glymour, and Scheines (<a href="#ref-Spirtes_et_al_1991" role="doc-biblioref">1991</a>)</span>, and <span class="citation" data-cites="Sekhon_2009">Sekhon (<a href="#ref-Sekhon_2009" role="doc-biblioref">2009</a>)</span>, as well as books such as <span class="citation" data-cites="Pearl_2009">Pearl (<a href="#ref-Pearl_2009" role="doc-biblioref">2009</a>)</span>, <span class="citation" data-cites="Morgan_et_al_2014">Morgan and Winship (<a href="#ref-Morgan_et_al_2014" role="doc-biblioref">2014</a>)</span>, and <span class="citation" data-cites="Hernan_et_al_2020">Hernán and Robins (<a href="#ref-Hernan_et_al_2020" role="doc-biblioref">2020</a>)</span>.</p>
@@ -1137,10 +1198,10 @@ Figure&nbsp;7: CJ’s outcome, discriminal difference, discriminal processes and
 </div></section><section id="sec-appendixB1" class="level3 appendix" data-appendix-style="plain" data-number="8.1.1"><h2 class="anchored quarto-appendix-heading"><span class="header-section-number">8.1.1</span> Empirical research and randomized experiments</h2><div class="quarto-appendix-contents">
 
 <!-- 1. What does empirical research do first? -->
-<p>Empirical research uses evidence from observation and experimentation to address real-world challenges. In this context, researchers typically formulate their research questions as <em>estimands</em> or <em>targets of inference</em>, i.e., the specific quantities they seek to determine <span class="citation" data-cites="Everitt_et_al_2010">(<a href="#ref-Everitt_et_al_2010" role="doc-biblioref">Everitt and Skrondal 2010</a>)</span>. For instance, researchers might be interested in answering the following question: “To what extent do different teaching methods <span class="math inline">\((T)\)</span> influence students’ ability to produce high-quality written texts <span class="math inline">\((Y)\)</span>?” To investigate this, researchers could randomly assign students to two groups, each exposed to a different teaching method <span class="math inline">\((T_{i} = \{1,2\})\)</span>. Then, they would perform pairwise comparisons, generating a dichotomous outcome <span class="math inline">\((Y_{i} = \{0,1\})\)</span> showing which student exhibits more of the ability. In this scenario, the research question can be rephrased as the estimand, “<em>On average</em>, is there a difference in the ability to produce high-quality written texts between the two groups of students?” and this estimand can be mathematically represented by the random associational quantity in <a href="#eq-group_diff" class="quarto-xref">Equation&nbsp;1</a>, where <span class="math inline">\(E[\cdot]\)</span> denotes the expected value.</p>
+<p>Empirical research uses evidence from observation and experimentation to address real-world challenges. In this context, researchers typically formulate their research questions as <em>estimands</em> or <em>targets of inference</em>, i.e., the specific quantities they seek to determine <span class="citation" data-cites="Everitt_et_al_2010">(<a href="#ref-Everitt_et_al_2010" role="doc-biblioref">Everitt and Skrondal 2010</a>)</span>. For instance, researchers might be interested in answering the following question: “To what extent do different teaching methods <span class="math inline">\((T)\)</span> influence students’ ability to produce high-quality written texts <span class="math inline">\((Y)\)</span>?” To investigate this, researchers could randomly assign students to two groups, each exposed to a different teaching method <span class="math inline">\((T_{i} = \{1,2\})\)</span>. Then, they would perform pairwise comparisons, generating a dichotomous outcome <span class="math inline">\((Y_{i} = \{0,1\})\)</span> showing which student exhibits more of the ability. In this scenario, the research question can be rephrased as the estimand, “<em>On average</em>, is there a difference in the ability to produce high-quality written texts between the two groups of students?” and this estimand can be mathematically represented by the random associational quantity in <a href="#eq-group_diff" class="quarto-xref">Equation&nbsp;3</a>, where <span class="math inline">\(E[\cdot]\)</span> denotes the expected value.</p>
 <p><span id="eq-group_diff"><span class="math display">\[
 E[Y_{i} \:|\:T_{i}=1] - E[Y_{i} \:|\:T_{i}=2]
-\tag{1}\]</span></span></p>
+\tag{3}\]</span></span></p>
 <!-- 2. What do they do next? -->
 <p>Researchers then proceed to identify the estimands. <em>Identification</em> determines whether an estimator can accurately compute the estimand based solely on its assumptions, regardless of random variability <span class="citation" data-cites="Schuessler_et_al_2023">(<a href="#ref-Schuessler_et_al_2023" role="doc-biblioref">Schuessler and Selb 2023, 4</a>)</span>. An <em>estimator</em> refers to a method or function that transforms data into an estimate <span class="citation" data-cites="Neal_2020">(<a href="#ref-Neal_2020" role="doc-biblioref">Neal 2020</a>)</span>. <em>Estimates</em> are numerical values that approximate the estimand derived through the process of <em>estimation</em>, which integrates data with an estimator <span class="citation" data-cites="Everitt_et_al_2010">(<a href="#ref-Everitt_et_al_2010" role="doc-biblioref">Everitt and Skrondal 2010</a>)</span>. The Identification-Estimation flowchart <span class="citation" data-cites="McElreath_2020 Neal_2020">(<a href="#ref-McElreath_2020" role="doc-biblioref">McElreath 2020</a>; <a href="#ref-Neal_2020" role="doc-biblioref">Neal 2020</a>)</span>, shown in <a href="#fig-IEflow" class="quarto-xref">Figure&nbsp;8</a>, visually represents the transition from estimands to estimates.</p>
 <!-- The causal assumptions encoded in a DAG constitute the theoretical model on which identification analysis rests. Identification analysis is concerned with determining whether or not the true value of a parameter can be estimated using the assumptions in the model (graph), regardless of random variability in the data due to small samples [@Schuessler_et_al_2023, pp. 4]. -->
@@ -1169,42 +1230,42 @@ Figure&nbsp;8: Identification-Estimation flowchart. Extracted and slightly modif
 <!-- 1. What is causal inference? -->
 <p>Unlike classical statistical modeling, which focuses primarily on summarizing data and inferring associations, the <em>causal inference</em> framework is designed to identify causes and estimate their effects using data <span class="citation" data-cites="Shaughnessy_et_al_2010 Neal_2020">(<a href="#ref-Shaughnessy_et_al_2010" role="doc-biblioref">Shaughnessy, Zechmeister, and Zechmeister 2010</a>; <a href="#ref-Neal_2020" role="doc-biblioref">Neal 2020</a>)</span>. The framework uses rigorous mathematical techniques to address the <em>fundamental problem of causality</em> <span class="citation" data-cites="Pearl_2009 Pearl_et_al_2016 Morgan_et_al_2014">(<a href="#ref-Pearl_2009" role="doc-biblioref">Pearl 2009</a>; <a href="#ref-Pearl_et_al_2016" role="doc-biblioref">Pearl, Glymour, and Jewell 2016</a>; <a href="#ref-Morgan_et_al_2014" role="doc-biblioref">Morgan and Winship 2014</a>)</span>. This problem revolves around the question, “What would have happened ‘in the world’ under different circumstances?” This question introduces the concept of counterfactuals, which are instrumental in defining and identifying causal effects.</p>
 <!-- 2. What are counterfactuals? -->
-<p><em>Counterfactuals</em> are hypothetical scenarios that are <em>contrary to fact</em>, where alternative outcomes resulting from a given cause are neither observed nor observable <span class="citation" data-cites="Neal_2020 Counterfactual_2024">(<a href="#ref-Neal_2020" role="doc-biblioref">Neal 2020</a>; <a href="#ref-Counterfactual_2024" role="doc-biblioref">Counterfactual 2024</a>)</span>. The structural approach to causal inference <span class="citation" data-cites="Pearl_2009 Pearl_et_al_2016">(<a href="#ref-Pearl_2009" role="doc-biblioref">Pearl 2009</a>; <a href="#ref-Pearl_et_al_2016" role="doc-biblioref">Pearl, Glymour, and Jewell 2016</a>)</span> provides a formal framework for defining counterfactuals. For instance, in the scenario described in <a href="#sec-appendixB1" class="quarto-xref">Section&nbsp;8.1.1</a>, the approach begins by defining the <em>individual causal effect</em> (ICE) as the difference between each student’s potential outcomes, as in <a href="#eq-ICE" class="quarto-xref">Equation&nbsp;2</a>.</p>
+<p><em>Counterfactuals</em> are hypothetical scenarios that are <em>contrary to fact</em>, where alternative outcomes resulting from a given cause are neither observed nor observable <span class="citation" data-cites="Neal_2020 Counterfactual_2024">(<a href="#ref-Neal_2020" role="doc-biblioref">Neal 2020</a>; <a href="#ref-Counterfactual_2024" role="doc-biblioref">Counterfactual 2024</a>)</span>. The structural approach to causal inference <span class="citation" data-cites="Pearl_2009 Pearl_et_al_2016">(<a href="#ref-Pearl_2009" role="doc-biblioref">Pearl 2009</a>; <a href="#ref-Pearl_et_al_2016" role="doc-biblioref">Pearl, Glymour, and Jewell 2016</a>)</span> provides a formal framework for defining counterfactuals. For instance, in the scenario described in <a href="#sec-appendixB1" class="quarto-xref">Section&nbsp;8.1.1</a>, the approach begins by defining the <em>individual causal effect</em> (ICE) as the difference between each student’s potential outcomes, as in <a href="#eq-ICE" class="quarto-xref">Equation&nbsp;4</a>.</p>
 <p><span id="eq-ICE"><span class="math display">\[
 \tau_{i} = Y_{i} \:|\:do(T_{i}=1) - Y_{i} \:|\:do(T_{i}=2)
-\tag{2}\]</span></span></p>
-<p>where <span class="math inline">\(do(T_{i}=t)\)</span> represents the intervention operator, <span class="math inline">\(Y_{i} \:|\:do(T_{i}=1)\)</span> represents the potential outcome under intervention <span class="math inline">\(T_{i}=1\)</span>, and <span class="math inline">\(Y_{i} \:|\:do(T_{i}=1)\)</span> represents the potential outcome under intervention <span class="math inline">\(T_{i}=2\)</span>. Here, an <em>intervention</em> involves assigning a constant value to the treatment variable for each student’s potential outcomes. Note that if a student is assigned to intervention <span class="math inline">\(T_{i}=1\)</span>, the potential outcome under <span class="math inline">\(T_{i}=2\)</span> becomes a counterfactual, as it is no longer observed nor observable. To address this challenge, the structural approach extends the ICE to the <em>average causal effect</em> (ACE, <a href="#eq-ACE" class="quarto-xref">Equation&nbsp;3</a>), representing the average difference between the students’ observed potential outcomes and their counterfactual counterparts.</p>
+\tag{4}\]</span></span></p>
+<p>where <span class="math inline">\(do(T_{i}=t)\)</span> represents the intervention operator, <span class="math inline">\(Y_{i} \:|\:do(T_{i}=1)\)</span> represents the potential outcome under intervention <span class="math inline">\(T_{i}=1\)</span>, and <span class="math inline">\(Y_{i} \:|\:do(T_{i}=1)\)</span> represents the potential outcome under intervention <span class="math inline">\(T_{i}=2\)</span>. Here, an <em>intervention</em> involves assigning a constant value to the treatment variable for each student’s potential outcomes. Note that if a student is assigned to intervention <span class="math inline">\(T_{i}=1\)</span>, the potential outcome under <span class="math inline">\(T_{i}=2\)</span> becomes a counterfactual, as it is no longer observed nor observable. To address this challenge, the structural approach extends the ICE to the <em>average causal effect</em> (ACE, <a href="#eq-ACE" class="quarto-xref">Equation&nbsp;5</a>), representing the average difference between the students’ observed potential outcomes and their counterfactual counterparts.</p>
 <p><span id="eq-ACE"><span class="math display">\[
 \begin{aligned}
 \tau &amp; = E[\tau_{i}] \\
   &amp; = E[Y_{i} \:|\:do(T_{i}=1)]- E[Y_{i} \:|\:do(T_{i}=2)]
 \end{aligned}
-\tag{3}\]</span></span></p>
+\tag{5}\]</span></span></p>
 <!-- [^1]: The potential outcomes approach [@Neyman_et_al_1923; @Rubin_1974] defines the ICE as $\tau_{i} = Y^{1}_{i} - Y^{2}_{i}$, while it defines the ACE as $\tau = E[\tau_{i}] = E[Y^{1}_{i}]- E[Y^{2}_{i}]$. -->
 <!-- 3. But how does it work? -->
-<p>Even though counterfactuals are unobservable, researchers can still identify the ACE from associational estimates by leveraging the structural approach. The approach identifies the ACE by statistically conditioning data on a <em>sufficient adjustment set</em> of variables <span class="math inline">\(X\)</span> <span class="citation" data-cites="Pearl_2009 Pearl_et_al_2016 Morgan_et_al_2014">(<a href="#ref-Pearl_2009" role="doc-biblioref">Pearl 2009</a>; <a href="#ref-Pearl_et_al_2016" role="doc-biblioref">Pearl, Glymour, and Jewell 2016</a>; <a href="#ref-Morgan_et_al_2014" role="doc-biblioref">Morgan and Winship 2014</a>)</span>. This <em>sufficient</em> set (potentially empty) must block all non-causal paths between <span class="math inline">\(T\)</span> to <span class="math inline">\(Y\)</span> without opening new ones. When such a set exists, then <span class="math inline">\(T\)</span> and <span class="math inline">\(Y\)</span> are <em>d-separated</em> by <span class="math inline">\(X\)</span> (<span class="math inline">\(T \:\bot\:Y \:|\:X\)</span>) <span class="citation" data-cites="Pearl_2009">(<a href="#ref-Pearl_2009" role="doc-biblioref">Pearl 2009</a>)</span>, and <span class="math inline">\(X\)</span> satisfies the <em>backdoor criterion</em> <span class="citation" data-cites="Neal_2020">(<a href="#ref-Neal_2020" role="doc-biblioref">Neal 2020</a>, pp 37)</span>. Here, <em>conditioning</em> describes the process of restricting the focus to the subset of the population defined by the conditioning variable <span class="citation" data-cites="Neal_2020">(<a href="#ref-Neal_2020" role="doc-biblioref">Neal 2020, 32</a>)</span> (see <a href="#eq-CACE" class="quarto-xref">Equation&nbsp;4</a>).</p>
+<p>Even though counterfactuals are unobservable, researchers can still identify the ACE from associational estimates by leveraging the structural approach. The approach identifies the ACE by statistically conditioning data on a <em>sufficient adjustment set</em> of variables <span class="math inline">\(X\)</span> <span class="citation" data-cites="Pearl_2009 Pearl_et_al_2016 Morgan_et_al_2014">(<a href="#ref-Pearl_2009" role="doc-biblioref">Pearl 2009</a>; <a href="#ref-Pearl_et_al_2016" role="doc-biblioref">Pearl, Glymour, and Jewell 2016</a>; <a href="#ref-Morgan_et_al_2014" role="doc-biblioref">Morgan and Winship 2014</a>)</span>. This <em>sufficient</em> set (potentially empty) must block all non-causal paths between <span class="math inline">\(T\)</span> to <span class="math inline">\(Y\)</span> without opening new ones. When such a set exists, then <span class="math inline">\(T\)</span> and <span class="math inline">\(Y\)</span> are <em>d-separated</em> by <span class="math inline">\(X\)</span> (<span class="math inline">\(T \:\bot\:Y \:|\:X\)</span>) <span class="citation" data-cites="Pearl_2009">(<a href="#ref-Pearl_2009" role="doc-biblioref">Pearl 2009</a>)</span>, and <span class="math inline">\(X\)</span> satisfies the <em>backdoor criterion</em> <span class="citation" data-cites="Neal_2020">(<a href="#ref-Neal_2020" role="doc-biblioref">Neal 2020</a>, pp 37)</span>. Here, <em>conditioning</em> describes the process of restricting the focus to the subset of the population defined by the conditioning variable <span class="citation" data-cites="Neal_2020">(<a href="#ref-Neal_2020" role="doc-biblioref">Neal 2020, 32</a>)</span> (see <a href="#eq-CACE" class="quarto-xref">Equation&nbsp;6</a>).</p>
 <!-- Conditioning on T=t just means that we are restricting our focus to the subset of the population to those who received treatment t. In contrast, an intervention would be to take the whole population and give everyone treatment t [@Neal_2020, pp. 32]. -->
 <p>Conditioning on a sufficient adjustment set enables researchers to estimate the ACE, even when the data comes from an observational study. This process is feasible because such conditioning ensures that the ACE estimator satisfies several critical properties, including confounding elimination <span class="citation" data-cites="Morgan_et_al_2014">(<a href="#ref-Morgan_et_al_2014" role="doc-biblioref">Morgan and Winship 2014</a>)</span>. Naturally, the validity of claims about the causal effects of <span class="math inline">\(T\)</span> on <span class="math inline">\(Y\)</span> now hinges on the assumption that <span class="math inline">\(X\)</span> serves as a sufficient adjustment set. However, as <span class="citation" data-cites="Kohler_et_al_2019">Kohler, Kreuter, and Stuart (<a href="#ref-Kohler_et_al_2019" role="doc-biblioref">2019, 150</a>)</span> noted, drawing conclusions about the real world from observed data inevitably requires assumptions. This requirement holds true for both observational and experimental data.</p>
 <!-- Statements about the real world from observed data require assumptions. This is true no matter what kind of data we have, and it is explicitly also true for statements based on data stemming from SRSg. The validity of our statements therefore critically hinges on the validity of those assumptions. If our statistical assumptions are wrong for the analysis at hand, the inferential statements will be incorrect no matter how sophisticated the statistical methods are. [@Kohler_et_al_2019, pp. 150] -->
-<p>For instance, if researchers cannot conduct the randomized experiments described in <a href="#sec-appendixB1" class="quarto-xref">Section&nbsp;8.1.1</a> and must instead rely on observational data, they can still identify the ACE as long as an observed variable <span class="math inline">\(X\)</span>, such as the socio-economic status of the school, satisfies the backdoor criterion. Under these circumstances, researchers first identify the <em>conditional average causal effect</em> (CACE, <a href="#eq-CACE" class="quarto-xref">Equation&nbsp;4</a>)</p>
+<p>For instance, if researchers cannot conduct the randomized experiments described in <a href="#sec-appendixB1" class="quarto-xref">Section&nbsp;8.1.1</a> and must instead rely on observational data, they can still identify the ACE as long as an observed variable <span class="math inline">\(X\)</span>, such as the socio-economic status of the school, satisfies the backdoor criterion. Under these circumstances, researchers first identify the <em>conditional average causal effect</em> (CACE, <a href="#eq-CACE" class="quarto-xref">Equation&nbsp;6</a>)</p>
 <p><span id="eq-CACE"><span class="math display">\[
 CACE_{t} = E[Y_{i} \:|\:T_{i}=t, X]
-\tag{4}\]</span></span></p>
-<p>From the CACE, researchers can identify the ACE from associational quantities as in <a href="#eq-mACE1" class="quarto-xref">Equation&nbsp;5</a>. This identification process is commonly known as the <em>backdoor adjustment</em>. Here, <span class="math inline">\(E_{X}[\cdot]\)</span> represents the marginal expected value over <span class="math inline">\(X\)</span> <span class="citation" data-cites="Morgan_et_al_2014">(<a href="#ref-Morgan_et_al_2014" role="doc-biblioref">Morgan and Winship 2014</a>)</span>.</p>
+\tag{6}\]</span></span></p>
+<p>From the CACE, researchers can identify the ACE from associational quantities as in <a href="#eq-mACE1" class="quarto-xref">Equation&nbsp;7</a>. This identification process is commonly known as the <em>backdoor adjustment</em>. Here, <span class="math inline">\(E_{X}[\cdot]\)</span> represents the marginal expected value over <span class="math inline">\(X\)</span> <span class="citation" data-cites="Morgan_et_al_2014">(<a href="#ref-Morgan_et_al_2014" role="doc-biblioref">Morgan and Winship 2014</a>)</span>.</p>
 <p><span id="eq-mACE1"><span class="math display">\[
 \begin{aligned}
   \tau &amp; = E[Y_{i} \:|\:do(T_{i}=1)]- E[Y_{i} \:|\:do(T_{i}=2)] \\
   &amp; = E_{X}[CACE_{1} - CACE_{2}] \\
   &amp; = E_{X}\left[ E[Y_{i} \:|\:T_{i}=1, X] - E[Y_{i} \:|\:T_{i}=2, X] \right]
 \end{aligned}
-\tag{5}\]</span></span></p>
-<p>Notably, the approach extends the ACE identification for a continuous variable <span class="math inline">\(T\)</span> as in <a href="#eq-mACE_cont" class="quarto-xref">Equation&nbsp;6</a>, ensuring broad applicability across different causal scenarios <span class="citation" data-cites="Neal_2020">(<a href="#ref-Neal_2020" role="doc-biblioref">Neal 2020, 45</a>)</span></p>
+\tag{7}\]</span></span></p>
+<p>Notably, the approach extends the ACE identification for a continuous variable <span class="math inline">\(T\)</span> as in <a href="#eq-mACE_cont" class="quarto-xref">Equation&nbsp;8</a>, ensuring broad applicability across different causal scenarios <span class="citation" data-cites="Neal_2020">(<a href="#ref-Neal_2020" role="doc-biblioref">Neal 2020, 45</a>)</span></p>
 <p><span id="eq-mACE_cont"><span class="math display">\[
 \begin{aligned}
   \tau &amp;= E[Y_{i} \:|\:do(T_{i}=t)] \\
   &amp; = d E_{X}\left[ E[Y_{i} \:|\:T_{i}=t, X]\right]/ dt
   \end{aligned}
-\tag{6}\]</span></span></p>
+\tag{8}\]</span></span></p>
 </div></section><section id="sec-appendixB3" class="level3 appendix" data-appendix-style="plain" data-number="8.1.3"><h2 class="anchored quarto-appendix-heading"><span class="header-section-number">8.1.3</span> Diving into the specifics</h2><div class="quarto-appendix-contents">
 
 <!-- 1. The benefits of SCMs and DAGs -->
@@ -1500,13 +1561,13 @@ Figure&nbsp;15: The flow of association and causation in graphs. Extracted and s
 </figure>
 </div>
 <!-- 2. What are the general implications of this? -->
-<p>A notable implication of the assumptions underlying the probabilistic encoding is that any conceptual model described by an SCM and DAG can represent the joint distribution of variables more efficiently <span class="citation" data-cites="Pearl_et_al_2016">(<a href="#ref-Pearl_et_al_2016" role="doc-biblioref">Pearl, Glymour, and Jewell 2016, 29</a>)</span>. This expression takes the form of a product of conditional probability distributions (CPDs) of the type <span class="math inline">\(P(child \:|\:parents)\)</span>. This property is formally known as the <em>Bayesian Network factorization</em> (BNF, <a href="#eq-net_factor" class="quarto-xref">Equation&nbsp;7</a>) <span class="citation" data-cites="Pearl_et_al_2016 Neal_2020">(<a href="#ref-Pearl_et_al_2016" role="doc-biblioref">Pearl, Glymour, and Jewell 2016, 29</a>; <a href="#ref-Neal_2020" role="doc-biblioref">Neal 2020, 21</a>)</span>. In this expression, <span class="math inline">\(pa(X_{i})\)</span> denotes the set of variables that are the parents of <span class="math inline">\(X_{i}\)</span>.</p>
+<p>A notable implication of the assumptions underlying the probabilistic encoding is that any conceptual model described by an SCM and DAG can represent the joint distribution of variables more efficiently <span class="citation" data-cites="Pearl_et_al_2016">(<a href="#ref-Pearl_et_al_2016" role="doc-biblioref">Pearl, Glymour, and Jewell 2016, 29</a>)</span>. This expression takes the form of a product of conditional probability distributions (CPDs) of the type <span class="math inline">\(P(child \:|\:parents)\)</span>. This property is formally known as the <em>Bayesian Network factorization</em> (BNF, <a href="#eq-net_factor" class="quarto-xref">Equation&nbsp;9</a>) <span class="citation" data-cites="Pearl_et_al_2016 Neal_2020">(<a href="#ref-Pearl_et_al_2016" role="doc-biblioref">Pearl, Glymour, and Jewell 2016, 29</a>; <a href="#ref-Neal_2020" role="doc-biblioref">Neal 2020, 21</a>)</span>. In this expression, <span class="math inline">\(pa(X_{i})\)</span> denotes the set of variables that are the parents of <span class="math inline">\(X_{i}\)</span>.</p>
 <p><span id="eq-net_factor"><span class="math display">\[
 \begin{aligned}
 P(X_{1}, X_{2}, \dots, X_{P}) &amp; = X_{1} \cdot \prod^{P}_{p=2} P(X_{i} \:|\:X_{i-1}, \dots, X_{1}) &amp; (\small{\text{by chain rule})}\\
 &amp; = X_{1} \cdot \prod^{P}_{p=2} P(X_{i} \:|\:pa(X_{i}) ) &amp; (\small{\text{by BNF}})
 \end{aligned}
-\tag{7}\]</span></span></p>
+\tag{9}\]</span></span></p>
 <!-- 3. What is the net result of this? -->
 <p>This encoding enables researchers with conceptual (theoretical) knowledge in the form of an SCM and DAG to predict patterns of (in)dependencies in the data. As highlighted by <span class="citation" data-cites="Pearl_et_al_2016">Pearl, Glymour, and Jewell (<a href="#ref-Pearl_et_al_2016" role="doc-biblioref">2016, 35</a>)</span>, these predictions depend solely on the structure of these conceptual models without requiring the quantitative details of the equations or the distributions of the errors. Moreover, once researchers observe empirical data, the patterns of (in)dependencies in the data can provide significant insights into the validity of the proposed conceptual model.</p>
 <!-- The net result is that a researcher who has scientific knowledge in the form of a structural equation model is able to predict patterns of independencies in the data, based solely on the structure of the model’s graph, without relying on any quantitative information carried by the equations or by the distributions of the errors [@Pearl_et_al_2016, pp. 35]. -->
@@ -1565,19 +1626,19 @@ Figure&nbsp;16: Plausible causal structure the scenario outlined in <a href="#se
 <!-- 1. Transforming probabilistic association into causation?  -->
 <p>The structural approach to causal inference translates probabilistic insights into actionable strategies seeking to identify the ACE from associational quantities. The approach achieves this by relying on the <em>modularity assumption</em>, which posits that intervening on a node alters only the causal mechanism of that node, leaving others unchanged <span class="citation" data-cites="Neal_2020">(<a href="#ref-Neal_2020" role="doc-biblioref">Neal 2020, 34</a>)</span>.</p>
 <!-- 2. additional necessary concepts  -->
-<p>The modularity assumption underpins the concepts of manipulated graphs and Truncated Factorization, which are essential for representing interventions <span class="math inline">\(P(Y_{i} \:|\:do(T_{i}=t))\)</span> within SCMs and DAGs. <em>Manipulated graphs</em> simulate physical interventions by removing specific edges from a DAG, while preserving the remaining structure unchanged <span class="citation" data-cites="Neal_2020">(<a href="#ref-Neal_2020" role="doc-biblioref">Neal 2020, 34</a>)</span>. In parallel, <em>Truncated Factorization</em> (TF) achieves a similar simulation by removing specific functions from the conceptual model and replacing them with constants, while keeping the rest of the structure unchanged <span class="citation" data-cites="Pearl_2010">(<a href="#ref-Pearl_2010" role="doc-biblioref">Pearl 2010</a>)</span>. The probabilistic implications of this factorization are formalized in <a href="#eq-trunc_factor" class="quarto-xref">Equation&nbsp;8</a>, where <span class="math inline">\(S\)</span> represents the subset of variables <span class="math inline">\(X_{p}\)</span> directly influenced by the intervention, while an example illustrating these concepts follows below.</p>
+<p>The modularity assumption underpins the concepts of manipulated graphs and Truncated Factorization, which are essential for representing interventions <span class="math inline">\(P(Y_{i} \:|\:do(T_{i}=t))\)</span> within SCMs and DAGs. <em>Manipulated graphs</em> simulate physical interventions by removing specific edges from a DAG, while preserving the remaining structure unchanged <span class="citation" data-cites="Neal_2020">(<a href="#ref-Neal_2020" role="doc-biblioref">Neal 2020, 34</a>)</span>. In parallel, <em>Truncated Factorization</em> (TF) achieves a similar simulation by removing specific functions from the conceptual model and replacing them with constants, while keeping the rest of the structure unchanged <span class="citation" data-cites="Pearl_2010">(<a href="#ref-Pearl_2010" role="doc-biblioref">Pearl 2010</a>)</span>. The probabilistic implications of this factorization are formalized in <a href="#eq-trunc_factor" class="quarto-xref">Equation&nbsp;10</a>, where <span class="math inline">\(S\)</span> represents the subset of variables <span class="math inline">\(X_{p}\)</span> directly influenced by the intervention, while an example illustrating these concepts follows below.</p>
 <p><span id="eq-trunc_factor"><span class="math display">\[
 P(X_{1}, X_{2}, \dots, X_{P} \:|\:do(S)) =
 \begin{cases}
   \prod P(X_{p} \:|\:pa(X_{p}) ) &amp; \text{if} \: p \not\in S \\
   1 \quad &amp; \text{otherwise}
 \end{cases}
-\tag{8}\]</span></span></p>
+\tag{10}\]</span></span></p>
 <!-- 3. How to use these concepts to finally define the ACE -->
-<p>Using the TF, researchers can define the <em>backdoor adjustment</em> to identify the ACE. This adjustment states that if a variable <span class="math inline">\(X_{p} \in S\)</span> serves as a <em>sufficient adjustment set</em> for the effect of <span class="math inline">\(X_{a}\)</span> on <span class="math inline">\(X_{b}\)</span>, then the ACE can be identified using <a href="#eq-backdoor" class="quarto-xref">Equation&nbsp;9</a>. The sufficient adjustment set (potentially empty) must block all non-causal paths between <span class="math inline">\(X_{a}\)</span> and <span class="math inline">\(X_{b}\)</span> without introducing new paths. If such a set exists, then <span class="math inline">\(X_{a}\)</span> and <span class="math inline">\(X_{b}\)</span> are <em>d-separated</em> by <span class="math inline">\(X_{p}\)</span> (<span class="math inline">\(X_{a} \:\bot\:X_{b} \:|\:X_{p}\)</span>) <span class="citation" data-cites="Pearl_2009">(<a href="#ref-Pearl_2009" role="doc-biblioref">Pearl 2009</a>)</span>, and <span class="math inline">\(X_{p}\)</span> satisfies the <em>backdoor criterion</em> <span class="citation" data-cites="Neal_2020">(<a href="#ref-Neal_2020" role="doc-biblioref">Neal 2020, 37</a>)</span>.</p>
+<p>Using the TF, researchers can define the <em>backdoor adjustment</em> to identify the ACE. This adjustment states that if a variable <span class="math inline">\(X_{p} \in S\)</span> serves as a <em>sufficient adjustment set</em> for the effect of <span class="math inline">\(X_{a}\)</span> on <span class="math inline">\(X_{b}\)</span>, then the ACE can be identified using <a href="#eq-backdoor" class="quarto-xref">Equation&nbsp;11</a>. The sufficient adjustment set (potentially empty) must block all non-causal paths between <span class="math inline">\(X_{a}\)</span> and <span class="math inline">\(X_{b}\)</span> without introducing new paths. If such a set exists, then <span class="math inline">\(X_{a}\)</span> and <span class="math inline">\(X_{b}\)</span> are <em>d-separated</em> by <span class="math inline">\(X_{p}\)</span> (<span class="math inline">\(X_{a} \:\bot\:X_{b} \:|\:X_{p}\)</span>) <span class="citation" data-cites="Pearl_2009">(<a href="#ref-Pearl_2009" role="doc-biblioref">Pearl 2009</a>)</span>, and <span class="math inline">\(X_{p}\)</span> satisfies the <em>backdoor criterion</em> <span class="citation" data-cites="Neal_2020">(<a href="#ref-Neal_2020" role="doc-biblioref">Neal 2020, 37</a>)</span>.</p>
 <p><span id="eq-backdoor"><span class="math display">\[
 P(X_{a} \:|\:do(X_{b}=x)) = \sum_{Xp} P(X_{a} \:|\:X_{b}=x, X_{p}) P(X_{p})
-\tag{9}\]</span></span></p>
+\tag{11}\]</span></span></p>
 <p>Ultimately, the backdoor adjustment enables researchers to express the ACE as:</p>
 <p><span id="eq-backdoor_adjustment"><span class="math display">\[
 \begin{aligned}
@@ -1585,7 +1646,7 @@ P(X_{a} \:|\:do(X_{b}=x)) = \sum_{Xp} P(X_{a} \:|\:X_{b}=x, X_{p}) P(X_{p})
   &amp; = E_{Xp}\left[ E[X_{a} \:|\:do(X_{b}=1), X_{p}]- E[X_{a} \:|\:do(X_{b}=2), X_{p}] \right] \\
   &amp; = \sum_{Xp} X_{a} \cdot P(X_{a} \:|\:X_{b}=1, X_{p}) \cdot P(X_{p}) - \sum_{Xp} X_{a} \cdot P(X_{a} \:|\:X_{b}=2, X_{p}) \cdot P(X_{p})
 \end{aligned}
-\tag{10}\]</span></span></p>
+\tag{12}\]</span></span></p>
 <!-- 4. revisiting the motivating example -->
 <p>With these new insights, researchers revisiting the scenario in <a href="#sec-appendixB32" class="quarto-xref">Section&nbsp;8.1.3.2</a> can infer that the socio-economic status of the school, <span class="math inline">\(X\)</span>, satisfies the backdoor criterion, assuming the causal structure depicted by the SCM <a href="#fig-scm_example2" class="quarto-xref">16 (a)</a> and DAG <a href="#fig-mdag_example2" class="quarto-xref">16 (b)</a> is correct. This means that <span class="math inline">\(X\)</span> serves as a sufficient adjustment set, as it effectively blocks all confounding non-causal paths introduced by the fork structure. Nevertheless, since <span class="math inline">\(Y\)</span> remains dependent on <span class="math inline">\(T\)</span> even after conditioning <span class="math inline">\((Y \:\not\bot\:T \:|\:X)\)</span>, this dependency can only be attributed to the direct causal effect <span class="math inline">\(T \rightarrow Y\)</span>. Notably, for the purpose of identification, the conditioned DAG <a href="#fig-mdag_example2" class="quarto-xref">16 (b)</a> is equivalent to the manipulated DAG <a href="#fig-mdag_example3" class="quarto-xref">17 (b)</a>, because <span class="math inline">\(X\)</span> satisfies the backdoor criterion.</p>
 <div id="fig-example3" class="quarto-layout-panel">
@@ -1632,38 +1693,38 @@ Figure&nbsp;17: Plausible causal structure the scenario outlined in <a href="#se
 </div>
 </figure>
 </div>
-<p>Researchers can then apply the <em>backdoor adjustment</em> to identify the ACE of <span class="math inline">\(T\)</span> on <span class="math inline">\(Y\)</span>. They achieve this by first identifying the CACE of <span class="math inline">\(T\)</span> on <span class="math inline">\(Y\)</span> by conditioning on <span class="math inline">\(X\)</span>, and then marginalizing this effect over <span class="math inline">\(X\)</span> to obtain the ACE. This process is expressed in <a href="#eq-mACE2" class="quarto-xref">Equation&nbsp;11</a> (see <a href="#sec-appendixB2" class="quarto-xref">Section&nbsp;8.1.2</a>).</p>
+<p>Researchers can then apply the <em>backdoor adjustment</em> to identify the ACE of <span class="math inline">\(T\)</span> on <span class="math inline">\(Y\)</span>. They achieve this by first identifying the CACE of <span class="math inline">\(T\)</span> on <span class="math inline">\(Y\)</span> by conditioning on <span class="math inline">\(X\)</span>, and then marginalizing this effect over <span class="math inline">\(X\)</span> to obtain the ACE. This process is expressed in <a href="#eq-mACE2" class="quarto-xref">Equation&nbsp;13</a> (see <a href="#sec-appendixB2" class="quarto-xref">Section&nbsp;8.1.2</a>).</p>
 <p><span id="eq-mACE2"><span class="math display">\[
 \begin{aligned}
   \tau &amp; = E[Y_{i} \:|\:do(T_{i}=1)]- E[Y_{i} \:|\:do(T_{i}=2)] \\
   &amp; = E_{X}\left[ E[Y_{i} \:|\:T_{i}=1, X] - E[Y_{i} \:|\:T_{i}=2, X] \right] \\
   &amp; = \sum_{X} Y_{i} \cdot P( Y_{i} \:|\:T_{i}=1, X) \cdot P(X) - \sum_{X} Y_{i} \cdot P( Y_{i} \:|\:T_{i}=2, X) \cdot P(X)
 \end{aligned}
-\tag{11}\]</span></span></p>
+\tag{13}\]</span></span></p>
 </div></section><section id="sec-appendixB34" class="level4 appendix" data-appendix-style="plain" data-number="8.1.3.4"><h2 class="anchored quarto-appendix-heading"><span class="header-section-number">8.1.3.4</span> The estimation process</h2><div class="quarto-appendix-contents">
 
 <!-- 1. How do we use Bayesian inference? -->
-<p>Ultimately, researchers can use Bayesian inference methods to estimate the ACE. The approach begins by defining two probability distributions: the likelihood of the data, <span class="math inline">\(P(X_{1}, X_{2}, \dots, X_{P} \:|\:\theta)\)</span>, and the prior distribution, <span class="math inline">\(P(\theta)\)</span> <span class="citation" data-cites="Everitt_et_al_2010">(<a href="#ref-Everitt_et_al_2010" role="doc-biblioref">Everitt and Skrondal 2010</a>)</span>, where <span class="math inline">\(X_{P}\)</span> represents a random variable, and <span class="math inline">\(\theta\)</span> represents a one-dimensional parameter space for simplicity. After observing empirical data, researchers can update the priors to posterior distributions using Bayes’ rule in <a href="#eq-bayes_rule" class="quarto-xref">Equation&nbsp;12</a>:</p>
+<p>Ultimately, researchers can use Bayesian inference methods to estimate the ACE. The approach begins by defining two probability distributions: the likelihood of the data, <span class="math inline">\(P(X_{1}, X_{2}, \dots, X_{P} \:|\:\theta)\)</span>, and the prior distribution, <span class="math inline">\(P(\theta)\)</span> <span class="citation" data-cites="Everitt_et_al_2010">(<a href="#ref-Everitt_et_al_2010" role="doc-biblioref">Everitt and Skrondal 2010</a>)</span>, where <span class="math inline">\(X_{P}\)</span> represents a random variable, and <span class="math inline">\(\theta\)</span> represents a one-dimensional parameter space for simplicity. After observing empirical data, researchers can update the priors to posterior distributions using Bayes’ rule in <a href="#eq-bayes_rule" class="quarto-xref">Equation&nbsp;14</a>:</p>
 <p><span id="eq-bayes_rule"><span class="math display">\[
 P(\theta \:|\:X_{1}, X_{2}, \dots, X_{P}) = \frac{P(X_{1}, X_{2}, \dots, X_{P} \:|\:\theta) \cdot P(\theta)}{P(X_{1}, X_{2}, \dots, X_{P})}
-\tag{12}\]</span></span></p>
-<p>Given that the denominator on the right-hand side of <a href="#eq-bayes_rule" class="quarto-xref">Equation&nbsp;12</a> serves as a normalizing constant independent of the parameter <span class="math inline">\(\theta\)</span>, researchers can simplify the posterior updating process into three steps. First, they integrate new empirical data through the likelihood. Second, they update the parameters’ priors to a posterior distribution according to <a href="#eq-prop_rule" class="quarto-xref">Equation&nbsp;13</a>. Ultimately, they normalize these results to obtain a valid probability distribution.</p>
+\tag{14}\]</span></span></p>
+<p>Given that the denominator on the right-hand side of <a href="#eq-bayes_rule" class="quarto-xref">Equation&nbsp;14</a> serves as a normalizing constant independent of the parameter <span class="math inline">\(\theta\)</span>, researchers can simplify the posterior updating process into three steps. First, they integrate new empirical data through the likelihood. Second, they update the parameters’ priors to a posterior distribution according to <a href="#eq-prop_rule" class="quarto-xref">Equation&nbsp;15</a>. Ultimately, they normalize these results to obtain a valid probability distribution.</p>
 <p><span id="eq-prop_rule"><span class="math display">\[
 P(\theta \:|\:X_{1}, X_{2}, \dots, X_{P}) \propto P(X_{1}, X_{2}, \dots, X_{P}\:|\:\theta) \cdot P(\theta)
-\tag{13}\]</span></span></p>
+\tag{15}\]</span></span></p>
 <!-- check: -->
 <!-- https://en.wikipedia.org/wiki/Maximum_a_posteriori_estimation -->
 <!-- https://en.wikipedia.org/wiki/Bayesian_inference -->
 <!-- 2. But what is the problem? -->
-<p>Temporarily setting aside the definition of prior distributions <span class="math inline">\(P(\theta)\)</span>, note that the posterior updating process depends heavily on the assumptions underlying the likelihood of the data. However, as the number of random variables, <span class="math inline">\(P\)</span>, increases, this joint distribution quickly becomes intractable <span class="citation" data-cites="Neal_2020">(<a href="#ref-Neal_2020" role="doc-biblioref">Neal 2020</a>)</span>. This intractability is evident from <a href="#eq-like_chain" class="quarto-xref">Equation&nbsp;14</a>, where the likelihood distribution is expressed by multiple chained CPDs.</p>
+<p>Temporarily setting aside the definition of prior distributions <span class="math inline">\(P(\theta)\)</span>, note that the posterior updating process depends heavily on the assumptions underlying the likelihood of the data. However, as the number of random variables, <span class="math inline">\(P\)</span>, increases, this joint distribution quickly becomes intractable <span class="citation" data-cites="Neal_2020">(<a href="#ref-Neal_2020" role="doc-biblioref">Neal 2020</a>)</span>. This intractability is evident from <a href="#eq-like_chain" class="quarto-xref">Equation&nbsp;16</a>, where the likelihood distribution is expressed by multiple chained CPDs.</p>
 <p><span id="eq-like_chain"><span class="math display">\[
 P(X_{1}, X_{2}, \dots, X_{P} \:|\:\theta) = P(X_{1} \:|\:\theta) \prod^{P}_{p=2} P(X_{i} \:|\:X_{i-1}, \dots, X_{1}, \theta )
-\tag{14}\]</span></span></p>
+\tag{16}\]</span></span></p>
 <!-- 3. How do DAGs can help? -->
-<p>Nevertheless, researchers can manage the complexity of the likelihood by assuming specific local (in)dependencies among variables. SCMs and DAGs provide a formal framework to represent these assumptions, as detailed in <a href="#sec-appendixB32" class="quarto-xref">Section&nbsp;8.1.3.2</a>. These assumptions improve model tractability and simplify the estimation process by enabling the derivation of the BNF of the likelihood (<a href="#eq-like_BNF" class="quarto-xref">Equation&nbsp;15</a>). With this simplified structure, any probabilistic programming language can model the system and compute the parameter’s posterior distribution using <a href="#eq-bayes_rule" class="quarto-xref">Equation&nbsp;12</a>.</p>
+<p>Nevertheless, researchers can manage the complexity of the likelihood by assuming specific local (in)dependencies among variables. SCMs and DAGs provide a formal framework to represent these assumptions, as detailed in <a href="#sec-appendixB32" class="quarto-xref">Section&nbsp;8.1.3.2</a>. These assumptions improve model tractability and simplify the estimation process by enabling the derivation of the BNF of the likelihood (<a href="#eq-like_BNF" class="quarto-xref">Equation&nbsp;17</a>). With this simplified structure, any probabilistic programming language can model the system and compute the parameter’s posterior distribution using <a href="#eq-bayes_rule" class="quarto-xref">Equation&nbsp;14</a>.</p>
 <p><span id="eq-like_BNF"><span class="math display">\[
 P(X_{1}, X_{2}, \dots, X_{P} \:|\:\theta) = P(X_{1} \:|\:\theta) \prod^{P}_{p=2} P(X_{i} \:|\:pa(X_{i}), \theta )
-\tag{15}\]</span></span></p>
+\tag{17}\]</span></span></p>
 <div style="page-break-after: always;"></div>
 </div></section><section id="references" class="level1 unnumbered appendix" data-appendix-style="plain"><h2 class="anchored quarto-appendix-heading">References</h2><div class="quarto-appendix-contents">
 
@@ -1877,7 +1938,7 @@ Zimmerman, D. 1994. <span>“A Note on the Influence of Outliers on Parametric a
   title = {Let’s Talk about {Thurstone} \&amp; {Co.:} {An}
     Information-Theoretical Model for Comparative Judgments, and Its
     Statistical Translation},
-  date = {2025-02-10},
+  date = {2025-02-11},
   langid = {en},
   abstract = {This study revisits Thurstone’s law of comparative
     judgments (CJ) by addressing two key limitations in traditional
@@ -1902,7 +1963,7 @@ Zimmerman, D. 1994. <span>“A Note on the Influence of Outliers on Parametric a
 Rivera Espejo, Jose Manuel, Tine van van Daal, Sven De De Maeyer, and
 Steven Gillis. 2025. <span>“Let’s Talk about Thurstone &amp; Co.: An
 Information-Theoretical Model for Comparative Judgments, and Its
-Statistical Translation.”</span> February 10, 2025.
+Statistical Translation.”</span> February 11, 2025.
 </div></div></section></div></main>
 <!-- /main column -->
 <script id="quarto-html-after-body" type="application/javascript">
