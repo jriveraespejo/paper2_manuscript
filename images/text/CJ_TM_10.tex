@@ -26,7 +26,7 @@
     %\draw[{Circle[open]}-{latex}{Circle},gray](-1,-0.3) to (1.1,-0.3); %,gray
     
     % complete outcome
-    \node at (1.5,0) {$O^{cp}_{RPUV}$}; %[gray]
+    \node[gray,gray] at (1.5,0) {$O^{cp}_{RPUV}$}; %[gray]
 
     %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
@@ -35,21 +35,21 @@
     \draw[{Circle[open]}-{latex},gray](-6,2.8) to (-4,1.64); %,gray
     
     % sub-units' cluster
-    \node[gray][font=\scriptsize,gray] at (-6,2.39) {Sub-units}; %,gray
-    \draw[dashed,gray] (-6.4,0.39)--(-5.4,0.39)--(-5.4,2.19)--(-6.4,2.19)--(-6.4,0.39); %,gray
+    \node[font=\scriptsize,gray] at (-6,2.39) {Sub-units}; %,gray
+    \draw[dashed,gray] (-6.5,0.39)--(-5.5,0.39)--(-5.5,2.19)--(-6.5,2.19)--(-6.5,0.39); %,gray
     
     % sub-units error
     \node[gray,gray] at (-6,1.89) {$e_{IA}$}; %[gray]
     \draw[{Circle[open]}-{latex},gray](-6,1.59) to (-4,1.59); %,gray
     
     % predictors for sub-unit
-    \node[gray,gray] at (-6,0.93) {$X_{A}$}; %[gray]
+    \node[gray,gray] at (-6,0.93) {$X_{IA}$}; %[gray]
     \draw[{Circle}-{latex},gray](-6,0.59) to (-4,1.54); %,gray
 
     %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
     % units' cluster
-    \node[gray][font=\scriptsize,gray] at (-7.5,4.5) {Units}; %,gray
+    \node[font=\scriptsize,gray] at (-7.5,4.5) {Units}; %,gray
     \draw[dashed,gray] (-7.9,2.5)--(-6.9,2.5)--(-6.9,4.3)--(-7.9,4.3)--(-7.9,2.5); %,gray
     
     % predictors for units
@@ -67,21 +67,21 @@
     \draw[{Circle[open]}-{latex},gray](-6,-2.9) to (-4,-1.95); %,gray
 
     % judgments' cluster
-    \node[gray][font=\scriptsize,gray] at (-5.9,-0.5) {Judgments}; %,gray
-    \draw[dashed,gray] (-6.4,-2.5)--(-5.4,-2.5)--(-5.4,-0.7)--(-6.4,-0.7)--(-6.4,-2.5); %,gray
+    \node[font=\scriptsize,gray] at (-6,-0.5) {Judgments}; %,gray
+    \draw[dashed,gray] (-6.5,-2.5)--(-5.5,-2.5)--(-5.5,-0.7)--(-6.5,-0.7)--(-6.5,-2.5); %,gray
     
     % judgments' bias error 
     \node[gray,gray] at (-6,-2.2) {$e_{JK}$}; %[gray]
     \draw[{Circle[open]}-{latex},gray](-6,-1.9) to (-4,-1.9); %,gray
     
     % predictors for judgments
-    \node[gray,gray] at (-6,-1.2) {$Z_{K}$}; %[gray]
+    \node[gray,gray] at (-6,-1.2) {$Z_{JK}$}; %[gray]
     \draw[{Circle}-{latex},gray](-6,-0.9) to (-4,-1.85); %,gray
     
     %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
     % judges' cluster
-    \node[gray][font=\scriptsize,gray] at (-7.5,-2.5) {Judges}; %,gray
+    \node[font=\scriptsize,gray] at (-7.5,-2.5) {Judges}; %,gray
     \draw[dashed,gray] (-7.9,-4.3)--(-6.9,-4.3)--(-6.9,-2.7)--(-7.9,-2.7)--(-7.9,-4.3); %,gray
     
     % predictors for judges' bias
@@ -123,7 +123,7 @@
     %\draw[{Circle}-{latex}](3,2.7) to (4.8,-0.25); %,gray
     
     % observed outcome
-    %\node at (5.4,0) {$O_{RPUV}$}; %[gray]
+    %\node[gray] at (5.4,0) {$O_{RPUV}$}; %[gray]
     %\draw[{Circle[open]}-{latex}{Circle}](2.9,-0.3) to (4.9,-0.3); %,gray
         
 \end{tikzpicture}
