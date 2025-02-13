@@ -273,8 +273,8 @@ integrated approach based on causal and Bayesian inference methods.
 As a result, the study divides its content into six main sections.
 Section~\ref{sec-thurstone_theory} provides an overview of Thurstone's
 theory. Section~\ref{sec-theory-issues} discusses the identified issues
-in detail. Section~\ref{sec-theoretical} develops Thurstone's theory to
-address these challenges. The development integrates core theoretical
+in detail. Section~\ref{sec-theoretical} extends Thurstone's theory to
+address these challenges. The extension integrates core theoretical
 principles alongside key assessment design features relevant to CJ
 experiments, such as the selection of judges, stimuli, and comparisons.
 Section~\ref{sec-statistical} translates these theoretical and practical
@@ -725,7 +725,7 @@ inference can address these issues by providing a systematic and
 integrated framework that enhances statistical accuracy while
 strengthening measurement reliability and validity.
 
-\section{Developing Thurstone's theory}\label{sec-theoretical}
+\section{Extending Thurstone's theory}\label{sec-theoretical}
 
 The \emph{structural approach} to causal inference provides a formal
 framework for identifying causes and estimating their effects using
@@ -749,14 +749,14 @@ are the numerical values approximating the estimand
 
 A motivating example helps to clarify these concepts. This example will
 appear throughout the document to illustrate various aspects of the
-proposed development. In this example, researchers aim to determine:
-``To what extent do different teaching methods influence students'
-ability to produce high-quality written texts?'' To investigate this,
-researcher design a CJ experiment by randomly assigning students
-(individuals) to two groups, each receiving a different teaching method.
-Judges then compare pairs of students' written texts (stimuli), to
-produce a dichotomous outcome that reflects the relative quality of each
-text (trait). Based on this setup, researchers reformulate the research
+proposed extension. In this example, researchers aim to determine: ``To
+what extent do different teaching methods influence students' ability to
+produce high-quality written texts?'' To investigate this, researcher
+design a CJ experiment by randomly assigning students (individuals) to
+two groups, each receiving a different teaching method. Judges then
+compare pairs of students' written texts (stimuli), to produce a
+dichotomous outcome that reflects the relative quality of each text
+(trait). Based on this setup, researchers reformulate the research
 question as the estimand: ``\emph{On average}, is there a difference in
 the ability to produce high-quality written texts between the two groups
 of students?''. Finally, following current CJ practices, researchers
@@ -790,7 +790,7 @@ them, or the parameters of those functional forms
 \citep[pp.~35]{Pearl_et_al_2016}.
 
 Thus, this section addresses the issues identified in
-Section~\ref{sec-theory-issues} by developing Thurstone's theory using
+Section~\ref{sec-theory-issues} by extending Thurstone's theory using
 the structural approach to causal inference. Specifically, it leverages
 the capabilities of this approach to formalize the combination of the
 core theoretical principles outlined in
@@ -853,15 +853,14 @@ comparisons between texts written by the same student (\(h = i\),
 where judges compare a student's text to itself (\(h = i\), \(a = b\)),
 as such comparison lacks practical meaning within the CJ framework.
 
-In line with Thurstone's theory, the other variables present in
-SCM~\ref{fig-cj03_scm} include the texts' discriminal processes
-\((T_{ha}, T_{ib})\) and their discriminal difference \((D_{hiabjk})\)
-(see Section~\ref{sec-thurstone_theory}). Additionally, based on the
-arguments presented in Section~\ref{sec-theory-issue1b} and the
-recommendations of \citet{Andrich_1978} and \citet{Wainer_et_al_1978},
-the SCM~\ref{fig-cj03_scm} incorporates the judges' biases \((B_{kj})\).
-Together with the outcome, these variables form the preliminary set of
-endogenous variables,
+In line with Thurstone's theory, SCM~\ref{fig-cj03_scm} depicts the
+texts' discriminal processes \((T_{ha}, T_{ib})\) and their discriminal
+difference \((D_{hiabjk})\) (see Section~\ref{sec-thurstone_theory}).
+Additionally, based on the arguments in Section~\ref{sec-theory-issue1b}
+and the recommendations of \citet{Andrich_1978} and
+\citet{Wainer_et_al_1978}, the SCM incorporates the judges' biases
+\((B_{kj})\). Together with the outcome, these variables form the
+preliminary set of endogenous variables,
 \(V = \{ O_{hiabjk}, D_{hiabjk}, T_{ha}, T_{ib}, B_{kj} \}\). Finally,
 the SCM shows the preliminary set of structural equations,
 \(F = \{ f_{O}, f_{D} \}\), which define the non-parametric dependencies
@@ -898,8 +897,7 @@ among these variables.
 
 \end{minipage}%
 
-\caption{\label{fig-cj03}Conceptual-population model, preliminary
-integration of theoretical principles.}
+\caption{\label{fig-cj03}Conceptual-population model, scalar form.}
 
 \end{figure}%
 
@@ -913,25 +911,28 @@ not form loops, ensuring the influences do not cycle back on themselves
 \citep{McElreath_2020}. DAGs conventionally depict observed variables as
 solid black circles and unobserved (latent) variables as open circles
 \citep{Morgan_et_al_2014}. Moreover, they often omit exogenous variables
-for simplicity, following the \emph{standard representation}. However,
-this section adopts the \emph{magnified representation} of DAGS, as
-including exogenous variables can enhance clarity and reveal potential
-issues related to conditioning and confounding
-\citep{Cinelli_et_al_2020}.
+for simplicity, following a \emph{standard representation}. However,
+this section adopts the \emph{magnified representation} of DAGs, as
+including exogenous variables in their representation can enhance
+clarity and reveal potential issues related to conditioning and
+confounding \citep{Cinelli_et_al_2020}.
 
-Figure~\ref{fig-cj03_dag} displays the DAG associated with
-SCM~\ref{fig-cj03_scm}. This graph illustrates the direction of causal
-influences among variables, reflecting the assumptions of Thurstone's
-theory and the practical aspects of CJ experiments. It also
-distinguishes between observable endogenous variables, such as the
-outcome, and variables considered latent within the CJ framework, such
-as the text's discriminal processes, their discriminal difference, and
-the judges' biases.
+Figure~\ref{fig-cj03_dag} displays the DAG corresponding to
+SCM~\ref{fig-cj03_scm}, illustrating the causal relationships among
+variables based on Thurstone's theory and the practical aspects of CJ
+experiments. Particularly, the graph shows how the texts' discriminal
+processes \((T_{ha}, T_{ib})\) influence their discriminal difference
+\((D_{hiabjk})\), which in turn determines the outcome. It also depicts
+the judges' biases \((B_{kj})\) as an additional factor influencing the
+texts' discriminal difference. Furthermore, the DAG helps distinguish
+between observed endogenous variables, such as the outcome, and latent
+endogenous variables, which include the texts' discriminal processes,
+their discriminal difference, and the judges' biases.
 
 Although specifying a system's data structure is not mandatory for using
 SCMs and DAGs, defining one can sometimes enhance clarity and facilitate
-the description of the system. Thus, to simplify the description of the
-CJ system, we first define the vectors \(I\) and \(J\), along with the
+the description of the system. Thus, to simplify the description of a CJ
+experiment, we first define the vectors \(I\) and \(J\), along with the
 matrices \(IA\) and \(JK\), as follows:
 
 \begin{equation}\phantomsection\label{eq-mat12}{
@@ -1042,10 +1043,10 @@ defined as follows:
 
 Readers can better visualize the structure of these vectors and matrices
 by considering small values for the parameters corresponding to number
-of individuals \((n_{I} = 5)\), the number of available stimuli per
-individual \((n_{A} = 2)\), the total number of judges \((n_{J} = 3)\),
-and the number of judgments each judge performs \((n_{K} = 3)\). Using
-these values, the matrices described in equations (\ref{eq-mat12}) and
+of individuals, the number of available stimuli per individual, the
+total number of judges, and the number of judgments each judge performs.
+For instance, assuming \(n_{I} = 5\), \(n_{A} = 2\), \(n_{J} = 3\), and
+\(n_{K} = 3\), the matrices described in equations (\ref{eq-mat12}) and
 (\ref{eq-mat3}) take the following form:
 
 \[
@@ -1104,17 +1105,18 @@ RPUV_{405  \times 6} = \begin{bmatrix}
 \]
 
 Thus, using the data structure defined by the matrices in equations
-(\ref{eq-mat12}) and (\ref{eq-mat3}), we can now re-express
+(\ref{eq-mat12}) and (\ref{eq-mat3}), we can re-express
 SCM~\ref{fig-cj03_scm} and DAG~\ref{fig-cj03_dag} in an equivalent
-vectorized form, as shown in Figure~\ref{fig-cj04}. In this
-representation, the outcome \(O^{cp}_{RPUV}\), the texts' discriminal
-difference \(D_{RPUV}\), their discriminal processes \(T_{IA}\), and the
-judges' biases \(B_{JK}\) are no longer scalar values but vectors. These
-vectors capture all the values from the conceptual population.
-Specifically, \(O^{cp}_{RPUV}\) and \(D_{RPUV}\) are vectors of length
-\({n_{I} \cdot n_{A} \choose 2} \cdot n_{J} \cdot n_{K}\), while
-\(T_{IA}\) and \(B_{JK}\) are vectors of length \((n_{I} \cdot n_{A})\)
-and \((n_{J} \cdot n_{K})\), respectively.
+vectorized form, as shown in Figure~\ref{fig-cj04}. In this depiction,
+the outcome \(O^{cp}_{RPUV}\), the texts' discriminal difference
+\(D_{RPUV}\), their discriminal processes \(T_{IA}\), and the judges'
+biases \(B_{JK}\) are represented as vectors rather than scalar values.
+These vectors encompass all values from the conceptual population.
+Specifically, \(O^{cp}_{RPUV}\) is an observed vector of length
+\({n{I} \cdot n_{A} \choose 2} \cdot n_{J} \cdot n_{K}\), while
+\(D_{RPUV}\) is a latent vector of the same dimension. Additionally,
+\(T_{IA}\) and \(B_{JK}\) are latent vectors of lengths
+\((n_{I} \cdot n_{A})\) and \((n_{J} \cdot n_{K})\), respectively.
 
 \begin{figure}[H]
 
@@ -1147,44 +1149,45 @@ and \((n_{J} \cdot n_{K})\), respectively.
 
 \end{minipage}%
 
-\caption{\label{fig-cj04}Conceptual-population model, vectorized form of
-SCM~\ref{fig-cj03_scm} and DAG~\ref{fig-cj03_dag}.}
+\caption{\label{fig-cj04}Conceptual-population model, vectorized form.}
 
 \end{figure}%
 
-Building on the arguments developed in Section~\ref{sec-theory-issue2}
-and the principles of Structural Equation Modeling (SEM)
-\citep[pp.~138]{Hoyle_et_al_2023} and Item Response Theory (IRT)
+Moreover, building on the arguments developed in
+Section~\ref{sec-theory-issue2} and the principles of Structural
+Equation Modeling (SEM) \citep[pp.~138]{Hoyle_et_al_2023} and Item
+Response Theory (IRT)
 \citetext{\citealp[chap.~6]{Fox_2010}; \citealp[chap.~24]{vanderLinden_et_al_2017_I}},
 the conceptual-population model includes two hierarchical structural
 components. Each component defines how different observed or latent
 variables influence the primary latent variable of interest
-\citep{Everitt_et_al_2010}. This addition facilitates analyses that
-integrate the trait measurement and hypothesis testing processes,
+\citep{Everitt_et_al_2010}. This addition facilitates analyses
+integrating the trait measurement and hypothesis testing processes,
 simultaneously accounting for the traits and their associated
-uncertainties, thereby reducing bias and enhancing the measurement
+uncertainties, thereby reducing bias and enhancing measurement
 precision.
 
 Figure~\ref{fig-cj09} displays the two hierarchical structural
 components for the motivating example. Specifically, the top branch of
 DAG~\ref{fig-cj09_dag} depicts the first component. This component
-describes how the students' writing-quality trait \(T_{I}\) and a set of
-\emph{relevant} text-related variables \(X_{IA}\) causally influence the
-texts' written-quality trait \(T_{IA}\). The DAG also highlights the
-idiosyncratic errors \(e_{IA}\), which capture variations in the texts'
-trait that neither the students' trait nor other relevant text-related
-variables can explain. Here, \(T_{I}\) and \(e_{IA}\) are latent vectors
-of length \(n_{I}\) and \((n_{I} \cdot n_{A})\), respectively.
-Additionally, \(X_{IA}\) is an observed matrix with a dimension of
-\((n_{I} \cdot n_{A})\) rows and \(p_{IA}\) columns.
+describes how the students' writing-quality trait \((T_{I})\) and a set
+of \emph{relevant} text-related variables \((X_{IA})\) causally
+influence the texts' written-quality trait \((T_{IA})\). The DAG also
+highlights the idiosyncratic errors \((e_{IA})\), which capture
+variations in the texts' trait that neither the students' trait nor
+other relevant text-related variables can explain. Here, \(T_{I}\) and
+\(e_{IA}\) are latent vectors of length \(n_{I}\) and
+\((n_{I} \cdot n_{A})\), respectively. Additionally, \(X_{IA}\) is an
+observed matrix with a dimension of \((n_{I} \cdot n_{A})\) rows and
+\(q_{IA}\) columns.
 
 Furthermore, the top branch of DAG~\ref{fig-cj09_dag} describes how a
-set of \emph{relevant} student-related variables \(X_{I}\) causally
-influence the students' writing-quality trait \(T_{I}\). The DAG also
-includes the idiosyncratic errors \(e_{I}\), which capture variations in
-the the students' traits that the relevant student-related variables
+set of \emph{relevant} student-related variables \((X_{I})\) causally
+influence the students' writing-quality trait \((T_{I})\). The DAG also
+includes the idiosyncratic errors \((e_{I})\), which capture variations
+in the students' traits that the relevant student-related variables
 cannot explain. Here, \(e_{I}\) is a latent vector of length \(n_{I}\),
-and \(X_{I}\) is an observed matrix with \(n_{I}\) rows and \(p_{I}\)
+and \(X_{I}\) is an observed matrix with \(n_{I}\) rows and \(q_{I}\)
 columns.
 
 \begin{figure}[H]
@@ -1222,35 +1225,44 @@ columns.
 
 \end{minipage}%
 
-\caption{\label{fig-cj09}Conceptual-population model, full integration
-of theoretical principles.}
+\caption{\label{fig-cj09}Conceptual-population model, final vectorized
+form.}
 
 \end{figure}%
 
 Similarly, the bottom branch of DAG~\ref{fig-cj09_dag} depicts the
 second component. This component describes how the judges' bias
-\(B_{J}\) and a set of \emph{relevant} judgment-related variables
-\(Z_{JK}\) causally influence the biases associated with each text
-\(B_{JK}\). The DAG also highlights the idiosyncratic errors \(e_{JK}\),
-which capture variations in the texts' bias that neither the judges'
-bias nor other relevant judgment-related variables can explain. In this
-description, \(B_{J}\) and \(e_{JK}\) are latent vectors of length
-\(n_{J}\) and \((n_{J} \cdot n_{K})\), respectively. Additionally,
-\(Z_{JK}\) is an observed matrix with a dimension of
-\((n_{J} \cdot n_{K})\) rows and \(p_{JK}\) columns.
+\((B_{J})\) and a set of \emph{relevant} judgment-related variables
+\((Z_{JK})\) causally influence the biases associated with each text
+\(B_{JK}\). The DAG also highlights the idiosyncratic errors
+\((e_{JK})\), which capture variations in the texts' bias that neither
+the judges' bias nor other relevant judgment-related variables can
+explain. In this description, \(B_{J}\) and \(e_{JK}\) are latent
+vectors of length \(n_{J}\) and \((n_{J} \cdot n_{K})\), respectively.
+Additionally, \(Z_{JK}\) is an observed matrix with a dimension of
+\((n_{J} \cdot n_{K})\) rows and \(q_{JK}\) columns.
 
 Moreover, the bottom branch of DAG~\ref{fig-cj09_dag} describes how a
-set of \emph{relevant} judge-related variables \(Z_{J}\) causally
-influence the judges' bias \(B_{J}\). The DAG also accounts for
-idiosyncratic errors \(e_{J}\), capturing the variations in the judges'
-bias that relevant judge-related variables cannot explain. Here,
+set of \emph{relevant} judge-related variables \((Z_{J})\) causally
+influence the judges' bias \((B_{J})\). The DAG also accounts for
+idiosyncratic errors \((e_{J})\), capturing the variations in the
+judges' bias that relevant judge-related variables cannot explain. Here,
 \(e_{J}\) is a latent vector of length \(n_{J}\), and \(Z_{J}\) is an
-observed matrix with \(n_{J}\) rows and \(p_{J}\) columns. Notably, all
+observed matrix with \(n_{J}\) rows and \(q_{J}\) columns. Notably, all
 variables and functions shown in SCM~\ref{fig-cj09_scm} and
 DAG~\ref{fig-cj09_dag} constitute the set of endogenous variables \(V\)
 and structural equations \(F\) for the conceptual-population model.
 
-In summary,
+Overall, the conceptual-population model extends Thurstone's theory by
+introducing key innovations to address the limitations discussed in
+Section~\ref{sec-theory-issues}. These enhancements include accounting
+for judges' biases and integrating hierarchical structural components.
+Nevertheless, despite its statistical and measurement advantages, the
+model still relies on the unrealistic assumption that researchers can
+access data capturing all repeated judgments from every judge for each
+pair of stimuli produced by every individual in the population. Since
+this assumption is rarely met in practice, a more realistic scenario
+must be considered.
 
 \subsection{The sample-comparison
 model}\label{sec-theory-theoretical_SC}
@@ -1350,30 +1362,6 @@ discriminal processes and judges' biases}
 
 \subsection{Limitations and further
 research}\label{sec-discussion-limitations}
-
-A cautious reader will notice that the model descriptions of
-Section~\ref{sec-theory-theoretical_P} rely on several relevant
-variables. In this study, a \emph{relevant} or a \emph{sufficient
-adjustment} set of variables (potentially an empty set) refers to those
-that satisfy the \emph{backdoor criterion} \citep[pp.~37]{Neal_2020},
-that is, variables that block all non-causal paths without introducing
-new ones \citep{Pearl_2009, Pearl_et_al_2016, Morgan_et_al_2014}.
-
-Incorporating these variables into the conceptual-population model
-enables researchers to identify different estimands of interest and
-their causal effects, even with observational data. This identification
-works because conditioning on these variables ensures that the estimator
-meets several critical properties, including confounding elimination
-\citep{Morgan_et_al_2014}. Here, \emph{conditioning} means restricting
-the statistical analysis to a subset of the population defined by the
-values of a given variable \citep[pp.~32]{Neal_2020}.
-
-Naturally, the validity of causal claims now hinges on the assumption
-that these variables serve as a sufficient adjustment set, a property
-that cannot be guaranteed for any variable. Nevertheless, as
-\citet[pp.~150]{Kohler_et_al_2019} noted, drawing conclusions about the
-real world from observed data inevitably requires assumptions, and these
-requirements hold true for both observational and experimental data.
 
 \section{Conclusion}\label{sec-conclusion}
 
