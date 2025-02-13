@@ -905,17 +905,21 @@ Notably, every SCM has an associated DAG
 \citep{Pearl_et_al_2016, Cinelli_et_al_2020}. A DAG is a graph
 consisting of nodes connected by edges, where nodes represent random
 variables. The term \emph{directed} indicates that edges or arrows
-extend from one node to another, showing the direction of causal
-influence. The term \emph{acyclic} means that the causal influences do
+extend from one node to another, indicating the direction of causal
+influence, while the absence of an edge implies no relationship between
+the nodes. The term \emph{acyclic} means that the causal influences do
 not form loops, ensuring the influences do not cycle back on themselves
-\citep{McElreath_2020}. DAGs conventionally depict observed variables as
-solid black circles and unobserved (latent) variables as open circles
-\citep{Morgan_et_al_2014}. Moreover, they often omit exogenous variables
-for simplicity, following a \emph{standard representation}. However,
-this section adopts the \emph{magnified representation} of DAGs, as
-including exogenous variables in their representation can enhance
-clarity and reveal potential issues related to conditioning and
-confounding \citep{Cinelli_et_al_2020}.
+\citep{McElreath_2020}. DAGs conventionally represent observed variables
+with solid black circles and unobserved (latent) variables with open
+circles \citep{Morgan_et_al_2014}. They also display conditioned
+variables by surrounding them with a square. Here, \emph{conditioning}
+refers to restricting the statistical analysis to a subset of the
+population defined by the values of the given variable
+\citep[pp.~32]{Neal_2020}. While DAGs often omit exogenous variables for
+simplicity, following a \emph{standard representation}, this section
+adopts the \emph{magnified representation} of DAGs, as including
+exogenous variables can improve clarity and help reveal potential issues
+related to conditioning and confounding \citep{Cinelli_et_al_2020}.
 
 Figure~\ref{fig-cj03_dag} displays the DAG corresponding to
 SCM~\ref{fig-cj03_scm}, illustrating the causal relationships among
@@ -924,8 +928,8 @@ experiments. Particularly, the graph shows how the texts' discriminal
 processes \((T_{ha}, T_{ib})\) influence their discriminal difference
 \((D_{hiabjk})\), which in turn determines the outcome. It also depicts
 the judges' biases \((B_{kj})\) as an additional factor influencing the
-texts' discriminal difference. Furthermore, the DAG helps distinguish
-between observed endogenous variables, such as the outcome, and latent
+texts' discriminal difference. Furthermore, the DAG distinguish between
+observed endogenous variables, such as the outcome, and latent
 endogenous variables, which include the texts' discriminal processes,
 their discriminal difference, and the judges' biases.
 
@@ -1203,7 +1207,10 @@ columns.
   T_{IA} & := f_{T}(T_{I}, X_{A}, e_{IA}) \\
   T_{I} & := f_{T}(X_{I}, e_{I}) \\
   B_{JK} & := f_{B}(B_{J}, Z_{K}, e_{JK}) \\
-  B_{J} & := f_{B}(Z_{J}, e_{J}) 
+  B_{J} & := f_{B}(Z_{J}, e_{J}) \\
+  e_{IA} & \:\bot\:\{ e_{I}, e_{JK}, e_{J} \} \\
+  e_{I} & \:\bot\:\{ e_{JK}, e_{J} \} \\
+  e_{JK} & \:\bot\:e_{J} \\
 \end{aligned}
 \]
 
@@ -1248,26 +1255,47 @@ influence the judges' bias \((B_{J})\). The DAG also accounts for
 idiosyncratic errors \((e_{J})\), capturing the variations in the
 judges' bias that relevant judge-related variables cannot explain. Here,
 \(e_{J}\) is a latent vector of length \(n_{J}\), and \(Z_{J}\) is an
-observed matrix with \(n_{J}\) rows and \(q_{J}\) columns. Notably, all
-variables and functions shown in SCM~\ref{fig-cj09_scm} and
-DAG~\ref{fig-cj09_dag} constitute the set of endogenous variables \(V\)
-and structural equations \(F\) for the conceptual-population model.
+observed matrix with \(n_{J}\) rows and \(q_{J}\) columns.
+
+Notably, all variables and functions shown in SCM~\ref{fig-cj09_scm} and
+DAG~\ref{fig-cj09_dag} define the set of endogenous variables \(V\),
+structural equations \(F\), and exogenous variables \(E\) for the
+conceptual-population model. Additionally, the figures demonstrate that
+all exogenous variables are independent of one another, as indicated by
+the relationships \(e_{IA} \:\bot\:\{ e_{I}, e_{JK}, e_{J} \}\),
+\(e_{I} \:\bot\:\{ e_{JK}, e_{J} \}\) and \(e_{JK} \:\bot\:e_{J}\).
 
 Overall, the conceptual-population model extends Thurstone's theory by
 introducing key innovations to address the limitations discussed in
 Section~\ref{sec-theory-issues}. These enhancements include accounting
 for judges' biases and integrating hierarchical structural components.
-Nevertheless, despite its statistical and measurement advantages, the
-model still relies on the unrealistic assumption that researchers can
-access data capturing all repeated judgments from every judge for each
-pair of stimuli produced by every individual in the population. Since
-this assumption is rarely met in practice, a more realistic scenario
-must be considered.
+Nevertheless, despite its promise of enhancing measurement accuracy and
+precision, the model still depends on the unrealistic assumption that
+researchers have access to data encompassing all repeated judgments from
+every judge for each pair of stimuli produced by every individual in the
+population. Since researchers rarely meet this assumption in practice,
+they must consider a more realistic scenario. The extensions to the
+conceptual-population model, derived from this realistic scenario, are
+concisely described in the sample-comparison model.
 
 \subsection{The sample-comparison
 model}\label{sec-theory-theoretical_SC}
 
-Considering the sampling mechanism
+In the sample-comparison model, researchers have access to a limited
+number of judgments (\(n^{s}{K}\)) from a sample of judges
+(\(n^{s}{J}\)), along with a specific number of texts (\(n^{s}{A}\))
+from a sample of students (\(n^{s}{I}\)) drawn from the conceptual
+population.
+
+Figure~\ref{fig-cj11} illustrates the sample-comparison model,
+incorporating the sample mechanism. Following the convention of
+\citet[pp.~499-516]{McElreath_2020}, the DAG~\ref{fig-cj11_dag} shows
+several conditioned variables \((S_{R}\), \(S_{P}\), \(S_{U}\), and
+\(S_{V})\) that causally influence the sample-comparison outcome
+\(O^{sc}_{RPUV}\), reflecting how the outcome is a sample drawn from the
+conceptual population. The DAG also depicts the conceptual-population
+outcome \(O^{cp}_{RPUV}\) is now an unobserved variable, emphasizing the
+researchers' inability to access such an outcome.
 
 \begin{figure}[H]
 
@@ -1277,13 +1305,16 @@ Considering the sampling mechanism
 
 \[
 \begin{aligned}
-  O^{sc}_{RPUV} & := f_{O}(O^{cp}_{RPUV}, S_{I}, S_{A}, S_{K}, S_{J}) \\
+  O^{sc}_{RPUV} & := f_{O}(O^{cp}_{RPUV}, S_{R}, S_{P}, S_{U}, S_{V}) \\
   O^{cp}_{RPUV} & := f_{O}(D_{RPUV}) \\
   D_{RPUV} & := f_{D}(T_{IA}, B_{JK}) \\
   T_{IA} & := f_{T}(T_{I}, X_{A}, e_{IA}) \\
   T_{I} & := f_{T}(X_{I}, e_{I}) \\
   B_{JK} & := f_{B}(B_{J}, Z_{K}, e_{JK}) \\
-  B_{J} & := f_{B}(Z_{J}, e_{J}) 
+  B_{J} & := f_{B}(Z_{J}, e_{J}) \\
+  e_{IA} & \:\bot\:\{ e_{I}, e_{JK}, e_{J} \} \\
+  e_{I} & \:\bot\:\{ e_{JK}, e_{J} \} \\
+  e_{JK} & \:\bot\:e_{J} \\
 \end{aligned}
 \]
 
@@ -1305,8 +1336,8 @@ Considering the sampling mechanism
 
 \end{minipage}%
 
-\caption{\label{fig-cj11}CJ's outcome, discriminal difference,
-discriminal processes and judges' biases}
+\caption{\label{fig-cj11}Sample-comparison model including sampling
+mechanism}
 
 \end{figure}%
 
@@ -1321,13 +1352,16 @@ Considering comparison mechanisms
 \[
 \begin{aligned}
   O_{RPUV} & := f_{C}(O^{sc}_{RPUV}, C) \\
-  O^{sc}_{RPUV} & := f_{O}(O^{cp}_{RPUV}, S_{I}, S_{A}, S_{K}, S_{J}) \\
+  O^{sc}_{RPUV} & := f_{O}(O^{cp}_{RPUV}, S_{R}, S_{P}, S_{U}, S_{V}) \\
   O^{cp}_{RPUV} & := f_{O}(D_{RPUV}) \\
   D_{RPUV} & := f_{D}(T_{IA}, B_{JK}) \\
   T_{IA} & := f_{T}(T_{I}, X_{A}, e_{IA}) \\
   T_{I} & := f_{T}(X_{I}, e_{I}) \\
   B_{JK} & := f_{B}(B_{J}, Z_{K}, e_{JK}) \\
-  B_{J} & := f_{B}(Z_{J}, e_{J}) 
+  B_{J} & := f_{B}(Z_{J}, e_{J}) \\
+  e_{IA} & \:\bot\:\{ e_{I}, e_{JK}, e_{J} \} \\
+  e_{I} & \:\bot\:\{ e_{JK}, e_{J} \} \\
+  e_{JK} & \:\bot\:e_{J} \\
 \end{aligned}
 \]
 
@@ -1349,8 +1383,8 @@ Considering comparison mechanisms
 
 \end{minipage}%
 
-\caption{\label{fig-cj13}CJ's outcome, discriminal difference,
-discriminal processes and judges' biases}
+\caption{\label{fig-cj13}Sample-comparison model including sample and
+comparison mechanisms}
 
 \end{figure}%
 
