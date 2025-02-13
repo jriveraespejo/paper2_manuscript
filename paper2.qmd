@@ -397,10 +397,10 @@ Conceptual-population model, scalar form.
 
 
 <!-- 4. The DAGs -->
-Notably, every SCM has an associated DAG [@Pearl_et_al_2016; @Cinelli_et_al_2020]. A DAG is a graph consisting of nodes connected by edges, where nodes represent random variables. The term *directed* indicates that edges or arrows extend from one node to another, showing the direction of causal influence. The term *acyclic* means that the causal influences do not form loops, ensuring the influences do not cycle back on themselves [@McElreath_2020]. DAGs conventionally depict observed variables as solid black circles and unobserved (latent) variables as open circles [@Morgan_et_al_2014]. Moreover, they often omit exogenous variables for simplicity, following a *standard representation*. However, this section adopts the *magnified representation* of DAGs, as including exogenous variables in their representation can enhance clarity and reveal potential issues related to conditioning and confounding [@Cinelli_et_al_2020].
+Notably, every SCM has an associated DAG [@Pearl_et_al_2016; @Cinelli_et_al_2020]. A DAG is a graph consisting of nodes connected by edges, where nodes represent random variables. The term *directed* indicates that edges or arrows extend from one node to another, indicating the direction of causal influence, while the absence of an edge implies no relationship between the nodes. The term *acyclic* means that the causal influences do not form loops, ensuring the influences do not cycle back on themselves [@McElreath_2020]. DAGs conventionally represent observed variables with solid black circles and unobserved (latent) variables with open circles [@Morgan_et_al_2014]. They also display conditioned variables by surrounding them with a square. Here, *conditioning* refers to restricting the statistical analysis to a subset of the population defined by the values of the given variable [@Neal_2020, pp. 32]. While DAGs often omit exogenous variables for simplicity, following a *standard representation*, this section adopts the *magnified representation* of DAGs, as including exogenous variables can improve clarity and help reveal potential issues related to conditioning and confounding [@Cinelli_et_al_2020].
 
 <!-- 5. the preliminary DAG for CJ -->
-@fig-cj03_dag displays the DAG corresponding to [SCM -@fig-cj03_scm], illustrating the causal relationships among variables based on Thurstone's theory and the practical aspects of CJ experiments. Particularly, the graph shows how the texts' discriminal processes $(T_{ha}, T_{ib})$ influence their discriminal difference $(D_{hiabjk})$, which in turn determines the outcome. It also depicts the judges' biases $(B_{kj})$ as an additional factor influencing the texts' discriminal difference. Furthermore, the DAG helps distinguish between observed endogenous variables, such as the outcome, and latent endogenous variables, which include the texts' discriminal processes, their discriminal difference, and the judges' biases.
+@fig-cj03_dag displays the DAG corresponding to [SCM -@fig-cj03_scm], illustrating the causal relationships among variables based on Thurstone's theory and the practical aspects of CJ experiments. Particularly, the graph shows how the texts' discriminal processes $(T_{ha}, T_{ib})$ influence their discriminal difference $(D_{hiabjk})$, which in turn determines the outcome. It also depicts the judges' biases $(B_{kj})$ as an additional factor influencing the texts' discriminal difference. Furthermore, the DAG distinguish between observed endogenous variables, such as the outcome, and latent endogenous variables, which include the texts' discriminal processes, their discriminal difference, and the judges' biases.
 
 <!-- 6. Why is useful to declare the data structure? -->
 Although specifying a system's data structure is not mandatory for using SCMs and DAGs, defining one can sometimes enhance clarity and facilitate the description of the system. Thus, to simplify the description of a CJ experiment, we first define the vectors $I$ and $J$, along with the matrices $IA$ and $JK$, as follows:
@@ -589,7 +589,10 @@ $$
   T_{IA} & := f_{T}(T_{I}, X_{A}, e_{IA}) \\
   T_{I} & := f_{T}(X_{I}, e_{I}) \\
   B_{JK} & := f_{B}(B_{J}, Z_{K}, e_{JK}) \\
-  B_{J} & := f_{B}(Z_{J}, e_{J}) 
+  B_{J} & := f_{B}(Z_{J}, e_{J}) \\
+  e_{IA} & \dsep \{ e_{I}, e_{JK}, e_{J} \} \\
+  e_{I} & \dsep \{ e_{JK}, e_{J} \} \\
+  e_{JK} & \dsep e_{J} \\
 \end{aligned}
 $$
 
@@ -605,19 +608,21 @@ Conceptual-population model, final vectorized form.
 
 Similarly, the bottom branch of [DAG -@fig-cj09_dag] depicts the second component. This component describes how the judges' bias $(B_{J})$ and a set of *relevant* judgment-related variables $(Z_{JK})$ causally influence the biases associated with each text $B_{JK}$. The DAG also highlights the idiosyncratic errors $(e_{JK})$, which capture variations in the texts' bias that neither the judges' bias nor other relevant judgment-related variables can explain. In this description, $B_{J}$ and $e_{JK}$ are latent vectors of length $n_{J}$ and $(n_{J} \cdot n_{K})$, respectively. Additionally, $Z_{JK}$ is an observed matrix with a dimension of $(n_{J} \cdot n_{K})$ rows and $q_{JK}$ columns.
 
-Moreover, the bottom branch of [DAG -@fig-cj09_dag] describes how a set of *relevant* judge-related variables $(Z_{J})$ causally influence the judges' bias $(B_{J})$. The DAG also accounts for idiosyncratic errors $(e_{J})$, capturing the variations in the judges' bias that relevant judge-related variables cannot explain. Here, $e_{J}$ is a latent vector of length $n_{J}$, and $Z_{J}$ is an observed matrix with $n_{J}$ rows and $q_{J}$ columns. Notably, all variables and functions shown in [SCM -@fig-cj09_scm] and [DAG -@fig-cj09_dag] constitute the set of endogenous variables $V$ and structural equations $F$ for the conceptual-population model.
+Moreover, the bottom branch of [DAG -@fig-cj09_dag] describes how a set of *relevant* judge-related variables $(Z_{J})$ causally influence the judges' bias $(B_{J})$. The DAG also accounts for idiosyncratic errors $(e_{J})$, capturing the variations in the judges' bias that relevant judge-related variables cannot explain. Here, $e_{J}$ is a latent vector of length $n_{J}$, and $Z_{J}$ is an observed matrix with $n_{J}$ rows and $q_{J}$ columns. 
 
-Overall, the conceptual-population model extends Thurstone's theory by introducing key innovations to address the limitations discussed in @sec-theory-issues. These enhancements include accounting for judges' biases and integrating hierarchical structural components. Nevertheless, despite its statistical and measurement advantages, the model still relies on the unrealistic assumption that researchers can access data capturing all repeated judgments from every judge for each pair of stimuli produced by every individual in the population. Since this assumption is rarely met in practice, a more realistic scenario must be considered.
+Notably, all variables and functions shown in [SCM -@fig-cj09_scm] and [DAG -@fig-cj09_dag] define the set of endogenous variables $V$, structural equations $F$, and exogenous variables $E$ for the conceptual-population model. Additionally, the figures demonstrate that all exogenous variables are independent of one another, as indicated by the relationships $e_{IA} \dsep \{ e_{I}, e_{JK}, e_{J} \}$, $e_{I} \dsep \{ e_{JK}, e_{J} \}$ and $e_{JK} \dsep e_{J}$.
+
+Overall, the conceptual-population model extends Thurstone's theory by introducing key innovations to address the limitations discussed in @sec-theory-issues. These enhancements include accounting for judges' biases and integrating hierarchical structural components. Nevertheless, despite its promise of enhancing measurement accuracy and precision, the model still depends on the unrealistic assumption that researchers have access to data encompassing all repeated judgments from every judge for each pair of stimuli produced by every individual in the population. Since researchers rarely meet this assumption in practice, they must consider a more realistic scenario. The extensions to the conceptual-population model, derived from this realistic scenario, are concisely described in the sample-comparison model.
 
 
 ## The sample-comparison model {#sec-theory-theoretical_SC}
 
-<!-- comparison mechanism as missing mechanism -->
 <!-- recording: Sven 24.10.04; time: 00:09:10 - 00:14:30 -->
 <!-- recording: Sven 24.10.04; time: 00:34:10 - 00:41:00 -->
 
+In the sample-comparison model, researchers have access to a limited number of judgments ($n^{s}{K}$) from a sample of judges ($n^{s}{J}$), along with a specific number of texts ($n^{s}{A}$) from a sample of students ($n^{s}{I}$) drawn from the conceptual population.
 
-Considering the sampling mechanism
+@fig-cj11 illustrates the sample-comparison model, incorporating the sample mechanism. Following the convention of @McElreath_2020 [pp. 499-516], the [DAG -@fig-cj11_dag] shows several conditioned variables $(S_{R}$, $S_{P}$, $S_{U}$, and $S_{V})$ that causally influence the sample-comparison outcome $O^{sc}_{RPUV}$, reflecting how the outcome is a sample drawn from the conceptual population. The DAG also depicts the conceptual-population outcome $O^{cp}_{RPUV}$ is now an unobserved variable, emphasizing the researchers' inability to access such an outcome.
 
 
 ::: {#fig-cj11 layout-nrow=2}
@@ -625,13 +630,16 @@ Considering the sampling mechanism
 ::: {#fig-cj11_scm fig-align="center" fig-pos="H"}
 $$
 \begin{aligned}
-  O^{sc}_{RPUV} & := f_{O}(O^{cp}_{RPUV}, S_{I}, S_{A}, S_{K}, S_{J}) \\
+  O^{sc}_{RPUV} & := f_{O}(O^{cp}_{RPUV}, S_{R}, S_{P}, S_{U}, S_{V}) \\
   O^{cp}_{RPUV} & := f_{O}(D_{RPUV}) \\
   D_{RPUV} & := f_{D}(T_{IA}, B_{JK}) \\
   T_{IA} & := f_{T}(T_{I}, X_{A}, e_{IA}) \\
   T_{I} & := f_{T}(X_{I}, e_{I}) \\
   B_{JK} & := f_{B}(B_{J}, Z_{K}, e_{JK}) \\
-  B_{J} & := f_{B}(Z_{J}, e_{J}) 
+  B_{J} & := f_{B}(Z_{J}, e_{J}) \\
+  e_{IA} & \dsep \{ e_{I}, e_{JK}, e_{J} \} \\
+  e_{I} & \dsep \{ e_{JK}, e_{J} \} \\
+  e_{JK} & \dsep e_{J} \\
 \end{aligned}
 $$
 
@@ -641,7 +649,7 @@ SCM
 
 ![DAG](/images/png/CJ_TM_11.png){#fig-cj11_dag fig-align="center" fig-pos="H" width=84%}
 
-CJ's outcome, discriminal difference, discriminal processes and judges' biases
+Sample-comparison model including sampling mechanism
 :::
 
 
@@ -656,13 +664,16 @@ Considering comparison mechanisms
 $$
 \begin{aligned}
   O_{RPUV} & := f_{C}(O^{sc}_{RPUV}, C) \\
-  O^{sc}_{RPUV} & := f_{O}(O^{cp}_{RPUV}, S_{I}, S_{A}, S_{K}, S_{J}) \\
+  O^{sc}_{RPUV} & := f_{O}(O^{cp}_{RPUV}, S_{R}, S_{P}, S_{U}, S_{V}) \\
   O^{cp}_{RPUV} & := f_{O}(D_{RPUV}) \\
   D_{RPUV} & := f_{D}(T_{IA}, B_{JK}) \\
   T_{IA} & := f_{T}(T_{I}, X_{A}, e_{IA}) \\
   T_{I} & := f_{T}(X_{I}, e_{I}) \\
   B_{JK} & := f_{B}(B_{J}, Z_{K}, e_{JK}) \\
-  B_{J} & := f_{B}(Z_{J}, e_{J}) 
+  B_{J} & := f_{B}(Z_{J}, e_{J}) \\
+  e_{IA} & \dsep \{ e_{I}, e_{JK}, e_{J} \} \\
+  e_{I} & \dsep \{ e_{JK}, e_{J} \} \\
+  e_{JK} & \dsep e_{J} \\
 \end{aligned}
 $$
 
@@ -672,12 +683,8 @@ SCM
 
 ![DAG](/images/png/CJ_TM_13.png){#fig-cj13_dag fig-align="center" fig-pos="H" width=100%}
 
-CJ's outcome, discriminal difference, discriminal processes and judges' biases
+Sample-comparison model including sample and comparison mechanisms
 :::
-
-
-
-<!-- It is assumed that the single observer compares each pair of stimuli a "sufficient number of times" so that a proportion, P(A>B), may be determined for each pair of stimuli [@Thurstone_1927b, pp. 267] -->
 
 
 
@@ -730,6 +737,7 @@ CJ's outcome, discriminal difference, discriminal processes and judges' biases
 
 ## Findings {#sec-discussion-finding}
 
+<!-- recording: Sven 24.10.04; time: 00:09:10 - 00:14:30 -->
 <!-- recording: Sven and Tine 24.11.25; time: 00:56:10 - 00:56:10 -->
 
 <!-- "If Thurstone’s Law is to be used in support of comparative judgment for assessment, his theory must be extended to cover the uses and applications that are required for assessment purposes." [@Kelly_et_al_2022, pp. 678] -->
@@ -750,13 +758,17 @@ CJ's outcome, discriminal difference, discriminal processes and judges' biases
 
 <!-- We advocate for the no removal of judges, but rather identify them and treat the data with the appropriate model, so these 'misfits' do not affect the measurement of the trait -->
 
+<!-- sampling and comparisons mechanism are effective generators of missing data. -->
+
+<!-- It is assumed that the single observer compares each pair of stimuli a "sufficient number of times" so that a proportion, P(A>B), may be determined for each pair of stimuli [@Thurstone_1927b, pp. 267] -->
+
 
 
 ## Limitations and further research {#sec-discussion-limitations}
 
 <!-- A cautious reader will notice that the model descriptions of @sec-theory-theoretical_P rely on several relevant variables. In this study, a *relevant* or a *sufficient adjustment* set of variables (potentially an empty set) refers to those that satisfy the *backdoor criterion* [@Neal_2020, pp. 37], that is, variables that block all non-causal paths without introducing new ones [@Pearl_2009; @Pearl_et_al_2016; @Morgan_et_al_2014].  -->
 
-<!-- Incorporating these variables into the conceptual-population model enables researchers to identify different estimands of interest and their causal effects, even with observational data. This identification works because conditioning on these variables ensures that the estimator meets several critical properties, including confounding elimination [@Morgan_et_al_2014]. Here, *conditioning* means restricting the statistical analysis to a subset of the population defined by the values of a given variable [@Neal_2020, pp. 32]. -->
+<!-- Incorporating these variables into the conceptual-population model enables researchers to identify different estimands of interest and their causal effects, even with observational data. This identification works because conditioning on these variables ensures that the estimator meets several critical properties, including confounding elimination [@Morgan_et_al_2014]. -->
 
 <!-- Naturally, the validity of causal claims now hinges on the assumption that these variables serve as a sufficient adjustment set, a property that cannot be guaranteed for any variable. Nevertheless, as @Kohler_et_al_2019 [pp. 150] noted, drawing conclusions about the real world from observed data inevitably requires assumptions, and these requirements hold true for both observational and experimental data. -->
 
