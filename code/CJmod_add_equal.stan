@@ -28,16 +28,16 @@ data{
     array[nsI*nsA] int<lower=1, upper=nsA> IA2s;    // stimuli
     array[nsI*nsA] real XIc;                        // individual predictor (continuous)
     array[nsI*nsA] int<lower=1, upper=sup_dXI> XId; // individual predictor (discrete)
-    array[nsI*nsA] real XAc;                        // stimuli predictor (continuous)
-    array[nsI*nsA] int<lower=1, upper=sup_dXA> XAd; // stimuli predictor (discrete)
+    array[nsI*nsA] real XIAc;                       // stimuli predictor (continuous)
+    array[nsI*nsA] int<lower=1, upper=sup_dXA> XIAd;// stimuli predictor (discrete)
     
     // juges-repeated comparisons data
     array[nsJ*nsK] int<lower=1, upper=nsJ> JK1s;    // judges
     array[nsJ*nsK] int<lower=1, upper=nsK> JK2s;    // judgments
     array[nsJ*nsK] real ZJc;                        // judges predictor (continuous)
     array[nsJ*nsK] int<lower=1, upper=sup_dZJ> ZJd; // judges predictor (discrete)
-    array[nsJ*nsK] real ZKc;                        // judgments predictor (continuous)
-    array[nsJ*nsK] int<lower=1, upper=sup_dZK> ZKd; // judgments predictor (discrete)
+    array[nsJ*nsK] real ZJKc;                       // judgments predictor (continuous)
+    array[nsJ*nsK] int<lower=1, upper=sup_dZK> ZJKd;// judgments predictor (discrete)
     
 }
 parameters{
@@ -80,7 +80,7 @@ transformed parameters{
     eIA = pIA * zeIA;    // identification as a prop. of previous level
     for( ia in 1:(nsI*nsA) ){
       TI[ IA1s[ia] ] = bXIc*XIc[ ia ] + bXId[ XId[ia] ] + eI[ IA1s[ia] ];
-      TIA[ IA1s[ia], IA2s[ia] ] = TI[ IA1s[ia] ] + bXAc*XAc[ ia ] + bXAd[ XAd[ia] ] + eIA[ IA1s[ia], IA2s[ia] ];
+      TIA[ IA1s[ia], IA2s[ia] ] = TI[ IA1s[ia] ] + bXAc*XIAc[ ia ] + bXAd[ XIAd[ia] ] + eIA[ IA1s[ia], IA2s[ia] ];
     }
     
     // judges-repeated comparisons
@@ -88,12 +88,12 @@ transformed parameters{
     if( nsK == 1 ){
       for( jk in 1:(nsJ*nsK) ){
         BJ[ JK1s[jk] ] = bZJc*ZJc[ jk ] + bZJd[ ZJd[jk] ] + eJ[ JK1s[jk] ];
-        BJK[ JK1s[jk], JK2s[jk] ] = BJ[ JK1s[jk] ] + bZKc*ZKc[ jk ] + bZKd[ ZKd[jk] ]; // no repetitions -> log_eJK not possible
+        BJK[ JK1s[jk], JK2s[jk] ] = BJ[ JK1s[jk] ] + bZKc*ZJKc[ jk ] + bZKd[ ZJKd[jk] ]; // no repetitions -> log_eJK not possible
       }
     } else {
       for( jk in 1:(nsJ*nsK) ){
         BJ[ JK1s[jk] ] = bZJc*ZJc[ jk ] + bZJd[ ZJd[jk] ] + eJ[ JK1s[jk] ];
-        BJK[ JK1s[jk], JK2s[jk] ] = BJ[ JK1s[jk] ] + bZKc*ZKc[ jk ] + bZKd[ ZKd[jk] ] + eJK[ JK1s[jk], JK2s[jk] ];
+        BJK[ JK1s[jk], JK2s[jk] ] = BJ[ JK1s[jk] ] + bZKc*ZJKc[ jk ] + bZKd[ ZJKd[jk] ] + eJK[ JK1s[jk], JK2s[jk] ];
       }
     }
     

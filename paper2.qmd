@@ -463,7 +463,7 @@ Additionally, we define the matrix $RPUV$, where each row uniquely pairs the cor
 
 
 $$
-RPUV_{{n_{I} \cdot n_{A} \choose 2} \cdot n_{J} \cdot n_{K}  \times 6} = \begin{bmatrix}
+RPUV_{n \times 6} = \begin{bmatrix}
 1 & 1 & 1 & 2 & 1 & 1 \\
 1 & 1 & 1 & 2 & 1 & 2 \\
 \vdots & \vdots & \vdots & \vdots & \vdots & \vdots\\
@@ -481,7 +481,7 @@ n_{I} & n_{I} & n_{A}-1 & n_{A} & n_{J} & n_{K} \\
 $$ {#eq-mat3}
 
 
-This matrix also consists of scalars from the set of natural numbers $\mathbb{N}$ and has a dimension of ${n_{I} \cdot n_{A} \choose 2} \cdot n_{J} \cdot n_{K}$ rows and $6$ columns. The matrix's dimension results from the conceptual-population model's assumption that researchers have access to data capturing all repeated judgments made by every available judge for each pair of stimuli produced by each pair of individuals in the population. Here, the term ${n_{I} \cdot n_{A} \choose 2}$ represents the Binomial coefficient, which quantifies the total number of individual-stimuli comparison pairs within the conceptual population. The coefficient is defined as follows:
+This matrix also consists of scalars from the set of natural numbers $\mathbb{N}$ and has a dimension of $n = {n_{I} \cdot n_{A} \choose 2} \cdot n_{J} \cdot n_{K}$ rows and $6$ columns. The matrix's dimension results from the conceptual-population model's assumption that researchers have access to data capturing all repeated judgments made by every available judge for each pair of stimuli produced by each pair of individuals in the population. Here, the term ${n_{I} \cdot n_{A} \choose 2}$ represents the Binomial coefficient, which quantifies the total number of individual-stimuli comparison pairs within the conceptual population. The coefficient is defined as follows:
 
 $$
 {n_{I} \cdot n_{A} \choose 2} = \frac{ (n_{I} \cdot n_{A})! }{ 2! (n_{I} \cdot n_{A} - 2)! }
@@ -586,13 +586,13 @@ $$
 \begin{aligned}
   O^{cp}_{RPUV} & := f_{O}(D_{RPUV}) \\
   D_{RPUV} & := f_{D}(T_{IA}, B_{JK}) \\
-  T_{IA} & := f_{T}(T_{I}, X_{A}, e_{IA}) \\
+  T_{IA} & := f_{T}(T_{I}, X_{IA}, e_{IA}) \\
   T_{I} & := f_{T}(X_{I}, e_{I}) \\
-  B_{JK} & := f_{B}(B_{J}, Z_{K}, e_{JK}) \\
+  B_{JK} & := f_{B}(B_{J}, Z_{JK}, e_{JK}) \\
   B_{J} & := f_{B}(Z_{J}, e_{J}) \\
   e_{IA} & \dsep \{ e_{I}, e_{JK}, e_{J} \} \\
   e_{I} & \dsep \{ e_{JK}, e_{J} \} \\
-  e_{JK} & \dsep e_{J} \\
+  e_{JK} & \dsep e_{J} 
 \end{aligned}
 $$
 
@@ -622,24 +622,26 @@ Overall, the conceptual-population model extends Thurstone's theory by introduci
 
 In the sample-comparison model, researchers have access to a limited number of judgments ($n^{s}{K}$) from a sample of judges ($n^{s}{J}$), along with a specific number of texts ($n^{s}{A}$) from a sample of students ($n^{s}{I}$) drawn from the conceptual population.
 
-@fig-cj11 illustrates the sample-comparison model, incorporating the sample mechanism. Following the convention of @McElreath_2020 [pp. 499-516], the [DAG -@fig-cj11_dag] shows several conditioned variables $(S_{R}$, $S_{P}$, $S_{U}$, and $S_{V})$ that causally influence the sample-comparison outcome $O^{sc}_{RPUV}$, reflecting how the outcome is a sample drawn from the conceptual population. The DAG also depicts the conceptual-population outcome $O^{cp}_{RPUV}$ is now an unobserved variable, emphasizing the researchers' inability to access such an outcome.
+@fig-cj12 illustrates the sample-comparison model, incorporating the sample mechanism. Following the convention of @McElreath_2020 [pp. 499-516], the [DAG -@fig-cj12_dag] shows several conditioned variables $(S_{R}$, $S_{P}$, $S_{U}$, and $S_{V})$ that causally influence the sample-comparison outcome $O^{sc}_{RPUV}$, reflecting how the outcome is a sample drawn from the conceptual population. The DAG also depicts the conceptual-population outcome $O^{cp}_{RPUV}$ is now an unobserved variable, emphasizing the researchers' inability to access such an outcome.
 
 
-::: {#fig-cj11 layout-nrow=2}
+Concatenating the matrices 
 
-::: {#fig-cj11_scm fig-align="center" fig-pos="H"}
+::: {#fig-cj12 layout-nrow=2}
+
+::: {#fig-cj12_scm fig-align="center" fig-pos="H"}
 $$
 \begin{aligned}
-  O^{sc}_{RPUV} & := f_{O}(O^{cp}_{RPUV}, S_{R}, S_{P}, S_{U}, S_{V}) \\
+  O^{sc}_{RPUV} & := f_{O}(O^{cp}_{RPUV}, S_{RPUV}) \\
   O^{cp}_{RPUV} & := f_{O}(D_{RPUV}) \\
   D_{RPUV} & := f_{D}(T_{IA}, B_{JK}) \\
-  T_{IA} & := f_{T}(T_{I}, X_{A}, e_{IA}) \\
+  T_{IA} & := f_{T}(T_{I}, X_{IA}, e_{IA}) \\
   T_{I} & := f_{T}(X_{I}, e_{I}) \\
-  B_{JK} & := f_{B}(B_{J}, Z_{K}, e_{JK}) \\
+  B_{JK} & := f_{B}(B_{J}, Z_{JK}, e_{JK}) \\
   B_{J} & := f_{B}(Z_{J}, e_{J}) \\
   e_{IA} & \dsep \{ e_{I}, e_{JK}, e_{J} \} \\
   e_{I} & \dsep \{ e_{JK}, e_{J} \} \\
-  e_{JK} & \dsep e_{J} \\
+  e_{JK} & \dsep e_{J} 
 \end{aligned}
 $$
 
@@ -647,7 +649,7 @@ SCM
 :::
 
 
-![DAG](/images/png/CJ_TM_11.png){#fig-cj11_dag fig-align="center" fig-pos="H" width=84%}
+![DAG](/images/png/CJ_TM_12.png){#fig-cj12_dag fig-align="center" fig-pos="H" width=84%}
 
 Sample-comparison model including sampling mechanism
 :::
@@ -658,9 +660,67 @@ Sample-comparison model including sampling mechanism
 Considering comparison mechanisms
 
 
-::: {#fig-cj13 layout-nrow=2}
+::: {#fig-cj14 layout-nrow=2}
 
-::: {#fig-cj13_scm fig-align="center" fig-pos="H"}
+::: {#fig-cj14_scm fig-align="center" fig-pos="H"}
+$$
+\begin{aligned}
+  O_{RPUV} & := f_{C}(O^{sc}_{RPUV}, C) \\
+  O^{sc}_{RPUV} & := f_{O}(O^{cp}_{RPUV}, S_{RPUV}) \\
+  O^{cp}_{RPUV} & := f_{O}(D_{RPUV}) \\
+  D_{RPUV} & := f_{D}(T_{IA}, B_{JK}) \\
+  T_{IA} & := f_{T}(T_{I}, X_{IA}, e_{IA}) \\
+  T_{I} & := f_{T}(X_{I}, e_{I}) \\
+  B_{JK} & := f_{B}(B_{J}, Z_{JK}, e_{JK}) \\
+  B_{J} & := f_{B}(Z_{J}, e_{J}) \\
+  e_{IA} & \dsep \{ e_{I}, e_{JK}, e_{J} \} \\
+  e_{I} & \dsep \{ e_{JK}, e_{J} \} \\
+  e_{JK} & \dsep e_{J} 
+\end{aligned}
+$$
+
+SCM
+:::
+
+
+![DAG](/images/png/CJ_TM_14.png){#fig-cj14_dag fig-align="center" fig-pos="H" width=100%}
+
+Sample-comparison model including sample and comparison mechanisms
+:::
+
+
+
+# Abandoning the BTL model {#sec-statistical}
+
+<!-- recording: Sven 24.10.04; time: 00:46:00 - 01:01:00 -->
+<!-- recording: Sven and Tine 24.11.25; time: 00:24:50 - 00:30:35 -->
+<!-- recording: Sven and Tine 24.11.25; time: 00:49:30 - 00:53:30 -->
+
+
+::: {#fig-cj15 layout-ncol=2}
+
+::: {#fig-cj15_stat fig-align="center" fig-pos="H"}
+$$
+\begin{aligned}
+  O_{RPUV} & = O^{sc}_{RPUV} \odot C \\
+  O^{sc}_{RPUV} & = O^{cp}_{RPUV} \odot S_{RPUV} \\
+  O^{cp}_{RPUV} & \sim \text{Bernoulli} \left[ \text{inv\_logit}( D_{RPUV} ) \right] \\
+  D_{RPUV} & = \left( T_{IA}[R_{1},P_{1}] - T_{IA}[R_{2},P_{2}] \right) + B_{JK}[U,V] \\
+  T_{IA} & = T_{I} + \beta_{XA} X_{IA} + e_{IA} \\
+  T_{I} & = \beta_{XI} X_{I} + e_{I} \\
+  B_{JK} & = B_{J} + \beta_{ZK} Z_{JK} + e_{JK} \\
+  B_{J} & = \beta_{ZJ} Z_{J} + e_{J} \\
+  e_{IA} & \sim \text{Normal}(0, p_{IA}) \\  
+  e_{I} & \sim \text{Normal}(0,1) \\
+  e_{JK} & \sim \text{Normal}(0, p_{JK}) \\
+  e_{J} & \sim \text{Normal}(0,1)
+\end{aligned}
+$$
+
+Statistical model
+:::
+
+::: {#fig-cj15_scm fig-align="center" fig-pos="H"}
 $$
 \begin{aligned}
   O_{RPUV} & := f_{C}(O^{sc}_{RPUV}, C) \\
@@ -673,26 +733,16 @@ $$
   B_{J} & := f_{B}(Z_{J}, e_{J}) \\
   e_{IA} & \dsep \{ e_{I}, e_{JK}, e_{J} \} \\
   e_{I} & \dsep \{ e_{JK}, e_{J} \} \\
-  e_{JK} & \dsep e_{J} \\
+  e_{JK} & \dsep e_{J}
 \end{aligned}
 $$
 
 SCM
 :::
 
-
-![DAG](/images/png/CJ_TM_13.png){#fig-cj13_dag fig-align="center" fig-pos="H" width=100%}
-
 Sample-comparison model including sample and comparison mechanisms
 :::
 
-
-
-# Abandoning the BTL model {#sec-statistical}
-
-<!-- recording: Sven 24.10.04; time: 00:46:00 - 01:01:00 -->
-<!-- recording: Sven and Tine 24.11.25; time: 00:24:50 - 00:30:35 -->
-<!-- recording: Sven and Tine 24.11.25; time: 00:49:30 - 00:53:30 -->
 
 <!-- Second, @sec-theory-statistics uses *Bayesian inference methods* to convert these theoretical and practical elements into a statistical model that supports the analysis of paired comparison data. -->
 
