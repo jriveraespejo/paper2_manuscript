@@ -5,16 +5,16 @@ manuscript:
   article: paper2.qmd 
   meca-bundle: "manuscript-meca.zip"
   code-links:
-    - text: Github repository
-      repo: https://github.com/jriveraespejo/paper2_manuscript.git
-    - text: UK presentation 2025
+    - text: 'Github repository'
+      repo: https://github.com/jriveraespejo/paper2_manuscript
+    - text: 'Cambridge presentation 2025'
       href: https://jriveraespejo.github.io/UK_presentation_2025/presentation.html
     #- text: Submission Manuscript
     #  href: manual_renderization/index.pdf
-    - text: Figures
+    - text: 'Figures'
       icon: file-code-fill
       href: code/CJfig.R
-    - text: Stan
+    - text: 'Stan'
       icon: file-code-fill
       href: code/CJmod_add.R
   

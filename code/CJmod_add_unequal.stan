@@ -55,10 +55,12 @@ parameters{
     
     // error parameters 
     vector[nsI*nsA] zeI;  // individual errors (non-centered)
+    simplex[sup_dXI] hsI; // individuals half-sigma
     real<lower=0> pIA;    // stimuli proportion of variability
     matrix[nsI,nsA] zeIA; // stimuli errors (non-centered)
 
     vector[nsJ*nsK] zeJ;  // judges errors (identification)
+    simplex[sup_dZJ] hsJ; // judges half-sigma
     real<lower=0> pJK;    // judgments proportion of variability
     matrix[nsJ,nsK] zeJK; // judgments errors (non-centered)
 
@@ -67,11 +69,13 @@ transformed parameters{
     
     // declaring
     vector[nsI] TI;       // individuals' trait
+    vector[sup_dXI] sI;   // individuals sigma
     vector[nsI*nsA] eI;   // individuals errors (identification)
     matrix[nsI,nsA] TIA;  // stimuli trait
     matrix[nsI,nsA] eIA;  // stimuli errors
     
     vector[nsJ] BJ;       // judges' trait
+    vector[sup_dZJ] sJ;   // judges sigma
     vector[nsJ*nsK] eJ;   // judges' errors (identification)
     matrix[nsJ,nsK] BJK;  // judges-judgments trait
     matrix[nsJ,nsK] eJK;  // judgments errors
@@ -79,8 +83,9 @@ transformed parameters{
     
     // individuals-stimuli
     // error calculation
-    eI = zeI;             // identification: sI = 1
-    eIA = pIA * zeIA;     // identification: pIA prop. of previous level
+    sI = sup_dXI*hsI;       // identification: sum(sI)=sup_dXI & mean(sI)=1
+    eI = sI[ XId ] .* zeI;
+    eIA = pIA * zeIA;       // identification: pIA prop. of previous level
     
     // trait calculation
     for( ia in 1:(nsI*nsA) ){
@@ -90,8 +95,9 @@ transformed parameters{
     
     // judges-repeated comparisons
     // error calculation
-    eJ = zeJ;             // identification: sJ = 1
-    eJK = pJK * zeJK;     // identification: pJK prop. of previous level
+    sJ = sup_dZJ*hsJ;       // identification: sum(sJ)=sup_dZJ & mean(sJ)=1
+    eJ = sJ[ ZJd ] .* zeJ;
+    eJK = pJK * zeJK;       // identification: pJK prop. of previous level
     
     // trait calculation
     if( nsK == 1 ){
@@ -126,14 +132,16 @@ model{
     
     
     // errors 
-    zeI ~ std_normal();               // identification
-    pIA ~ exponential(3);             // identification
+    zeI ~ std_normal();                         // identification
+    hsI ~ dirichlet( rep_vector(5, sup_dXI) );  // identification: sum(hsI)=1 & mean(hsI)=1/sup_dXI
+    pIA ~ exponential(3);                       // identification
     to_vector( zeIA ) ~ std_normal();
-
-    zeJ ~ std_normal();               // identification
-    pJK ~ exponential(3);             // identification
+    
+    zeJ ~ std_normal();                         // identification
+    hsJ ~ dirichlet( rep_vector(5, sup_dZJ) );  // identification: sum(hsJ)=1 & mean(hsJ)=1/sup_dXI
+    pJK ~ exponential(3);                       // identification
     to_vector( zeJK ) ~ std_normal();
-
+    
     
     // likelihood
     for( n in 1:ns ){
