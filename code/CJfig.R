@@ -3,6 +3,9 @@ rm(list=ls())
 
 main_dir = '/home/josema/Desktop/1. Work/1 research/PhD Antwerp/#thesis/paper2/paper2_manuscript/images/png/'
 
+require(rethinking)
+require(tidyverse)
+
 
 
 # functions ####
@@ -10,6 +13,28 @@ colorArea <- function(from, to, density, ..., col="lightgray", dens=NULL){
   y_seq = seq(from, to, length.out=500)
   d = c(0, density(y_seq, ...), 0)
   polygon(c(from, y_seq, to), d, col=col, density=dens, border=NA)
+}
+
+sim_me = function( n=100, b=0.3, s1=1, s2=0.8){
+  
+  # # test
+  # n = 100
+  # b = 0.2
+  # s1 = 1
+  # s2 = 0.8
+  
+  # simulation
+  x = rnorm( n=n, mean=0, sd=1 )
+  mu_y = b*x
+  y = rnorm( n=n, mean=mu_y, sd=s1 )
+  y_tilde = rnorm( n=n, mean=y, sd=s2 )
+  
+  # saving coefficients
+  res = c( coef( lm( y ~ x ) )[2], coef( lm( y_tilde ~ x ) )[2] )
+  
+  # return object
+  return(res)
+  
 }
 
 
@@ -97,7 +122,7 @@ lines( x=c(dd[1], dd[1]+2*dd[2]), y=rep( pplotD[3], 2), lty=2, lwd=0.7 )
 text( x=dd[1]+1, y=pplotD[3]-0.02, cex=0.8, expression( sigma[BA] ) ) 
 text( x=dd[1]+1.7, y=0.25, cex=0.8, 'where:' )
 text( x=dd[1]+2.4, y=0.22, cex=0.8,
-      expression( sigma[BA] == sqrt( sigma[B]^2 + sigma[A]^2 - rho*sigma[B]*sigma[A]) ) )
+      expression( sigma[BA] == sqrt( sigma[B]^2 + sigma[A]^2 - 2*rho*sigma[B]*sigma[A]) ) )
 
 dev.off()
 
@@ -241,5 +266,76 @@ text( x=dd[[1]]+1.7, y=0.26, cex=0.8, 'where:' )
 text( x=dd[[1]]+2.45, y=0.22, cex=0.8,
       expression( sigma[BA] == sqrt( sigma[B]^2 + sigma[A]^2 - 2*rho*sigma[B]*sigma[A]) ) )
 legend('topleft', lwd=l_wd, lty=l_ty, bty='n', legend=parse(text=text) )
+
+dev.off()
+
+
+
+
+
+
+# figure 5 ####
+
+# simulation
+b = 0.2
+s2 = c(0.5, 1, 1.5)
+dlist = list()
+for( s in seq_along(s2) ){
+  dlist[[s]] = t( replicate( n=2000, sim_me( b=b, s2=s2[s]) ) )
+  dlist[[s]] = data.frame(dlist[[s]])
+  names(dlist[[s]]) = paste0( c('wo','w'), '_me')
+  dlist[[s]] = c( sapply(dlist[[s]], mean), sapply(dlist[[s]], sd) )
+}
+names(dlist) = paste0('s2_', s2)
+# str(dlist)
+
+
+# plot
+png( filename=file.path(main_dir, 'measurement_error1.png'),
+     height=13, width=13, units='cm', res=400  )
+ 
+with(dlist, {
+  curve( dnorm( x, mean=s2_0.5[1], sd=s2_0.5[3]), lty=1, lwd=1, xlim=c(-0.5,1), ylab='', xlab='X', 
+         main=bquote( n == 100 ~ ',' ~ beta[X] == .(b) ~ ',' ~ sigma[T] == .(s2[1]) ) )
+  curve( dnorm( x, mean=s2_0.5[2], sd=s2_0.5[4]), lty=2, lwd=1, xlim=c(-0.5,1), add=T )
+  colorArea( from=0, to=1, density=dnorm, mean=s2_0.5[2], sd=s2_0.5[4], col=rgb(0,0,0,0.1) )
+  abline( v=b, lty=2, lwd=0.5 )
+  legend( 'topleft', legend=c('true', 'without m.e.', 'with m.e.'),
+          bty='n', lty=c(2,1,2), lwd=c(0.5,1,1) )
+  })
+
+dev.off()
+
+
+
+png( filename=file.path(main_dir, 'measurement_error2.png'),
+     height=13, width=13, units='cm', res=400  )
+
+with(dlist, {
+  curve( dnorm( x, mean=s2_1[1], sd=s2_1[3]), lty=1, lwd=1, xlim=c(-0.5,1), ylab='', xlab='X',
+         main=bquote( n == 100 ~ ',' ~ beta[X] == .(b) ~ ',' ~ sigma[T] == .(s2[2])  ) )
+  curve( dnorm( x, mean=s2_1[2], sd=s2_1[4]), lty=2, lwd=1, xlim=c(-0.5,1), add=T )
+  colorArea( from=0, to=1, density=dnorm, mean=s2_1[2], sd=s2_1[4], col=rgb(0,0,0,0.1) )
+  abline( v=b, lty=2, lwd=0.5 )
+  legend( 'topleft', legend=c('true', 'without m.e.', 'with m.e.'),
+          bty='n', lty=c(2,1,2), lwd=c(0.5,1,1) )
+})
+
+dev.off()
+
+
+
+png( filename=file.path(main_dir, 'measurement_error3.png'),
+     height=13, width=13, units='cm', res=400  )
+
+with(dlist, {
+  curve( dnorm( x, mean=s2_1.5[1], sd=s2_1.5[3]), lty=1, lwd=1, xlim=c(-0.5,1), ylab='', xlab='X',
+         main=bquote( n == 100 ~ ',' ~ beta[X] == .(b) ~ ',' ~ sigma[T] == .(s2[3])  ) )
+  curve( dnorm( x, mean=s2_1.5[2], sd=s2_1.5[4]), lty=2, lwd=1, xlim=c(-0.5,1), add=T )
+  colorArea( from=0, to=1, density=dnorm, mean=s2_1.5[2], sd=s2_1.5[4], col=rgb(0,0,0,0.1) )
+  abline( v=b, lty=2, lwd=0.5 )
+  legend( 'topleft', legend=c('true', 'without m.e.', 'with m.e.'),
+          bty='n', lty=c(2,1,2), lwd=c(0.5,1,1) )
+})
 
 dev.off()
