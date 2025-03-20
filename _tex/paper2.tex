@@ -192,23 +192,35 @@ Antwerp, Linguistics},,postcodesep={}}
 
         
 \begin{abstract}
-This study revisits Thurstone's law of comparative judgments (CJ) by
-addressing two key limitations in traditional approaches. Firstly, it
-addresses the overreliance on the assumptions of Thurstone's Case V in
-the statistical analysis of CJ data. Secondly, it addresses the apparent
-disconnect between CJ's approach to trait measurement and hypothesis
-testing. We put forward a systematic approach based on causal analysis
-and Bayesian statistical methods, which results in a model that
-facilitates a more comprehensive understanding of the factors
-influencing CJ experiments while offering a robust statistical
-translation. The new model accommodates unequal dispersions and
-correlations between stimuli, enhancing the reliability and validity of
-CJ's trait estimation, thereby ensuring the accurate measurement and
-interpretation of comparative data. The paper highlights the relevance
-of this updated framework for modern empirical research, particularly in
-education and social sciences. This contribution advances current
-research methodologies, providing a robust foundation for future
-applications in diverse fields.
+This study revisits Thurstone's law of comparative judgment (CJ),
+focusing on two prominent issues of traditional approaches. First, it
+critiques the heavy reliance on Thurstone's Case V assumptions and, by
+extension, the Bradley-Terry-Luce (BTL) model when analyzing CJ data.
+Specifically, the study raises concerns about the assumptions of equal
+discriminal dispersions and zero correlation between the stimuli. While
+these assumptions simplify the trait measurement process, they may fail
+to capture the complexity of CJ data, potentially leading to unreliable
+and inaccurate trait estimates. Second, the study highlights the
+apparent disconnect between CJ's trait measurement and hypothesis
+testing processes. Although separating these processes simplifies the
+analysis of CJ data, it may also undermine the reliability of various
+statistical results derived from the measurement.
+
+To address these issues, the study extends Thurstone's general form
+using a systematic and integrated approach based on Causal and Bayesian
+inference methods. This extension integrates core theoretical principles
+alongside key assessment design features relevant to CJ experiments,
+such as the selection of judges, stimuli, and comparisons. It then
+translates these elements into a probabilistic statistical model for
+analyzing dichotomous CJ data, overcoming the rigid assumptions of Case
+V and the BTL model.
+
+Finally, the study emphasizes the relevance of this extension for
+contemporary empirical CJ research, particularly stressing the need for
+bespoke CJ models tailored to the specific assumptions of the
+experiments and data. It also lays the foundation for broader
+applications, encouraging researchers across the social sciences to
+adopt more robust and interpretable methodologies.
 \end{abstract}
 
 
@@ -252,37 +264,47 @@ addition, the evidence suggests that the reliability and time efficiency
 of CJ are comparable, if not superior, to those of other assessment
 methods when employing adaptive comparison algorithms
 \citep{Pollitt_2012b, Verhavert_et_al_2022, Mikhailiuk_et_al_2021}.
-Meanwhile, research on the validity of CJ scores indicates their
-capacity to represent accurately the traits under measurement
+Meanwhile, research on validity indicates the capacity of CJ scores to
+represent accurately the traits under measurement
 \citep{Whitehouse_2012, vanDaal_et_al_2016, Lesterhuis_2018_thesis, Bartholomew_et_al_2018, Bouwer_et_al_2023}.
-Moreover, research on its practical applicability highlights CJ's
+Lastly, research on its practical applicability highlights CJ's
 versatility across both educational and non-educational contexts
 \citep{Kimbell_2012, Jones_et_al_2015, Bartholomew_et_al_2018, Jones_et_al_2019, Marshall_et_al_2020, Bartholomew_et_al_2020, Boonen_et_al_2020}.
 
 Nevertheless, despite the increasing number of CJ studies, research in
 this domain remains unsystematic and fragmented, leaving several
 critical issues unresolved. This study identifies and discusses two
-prominent issues that can undermine the reliability and validity of CJ's
-trait estimates. The first issue arises from the excessive reliance on
-Thurstone's Case V assumptions in the statistical analysis of CJ data.
-The second stems from the apparent disconnect between CJ's approach to
-trait measurement and hypothesis testing. This study addresses these
-issues by extending Thurstone's general form through a systematic and
-integrated approach based on Causal and Bayesian inference methods.
+prominent issues of traditional approaches that can undermine the
+reliability and validity of CJ's trait estimates
+\citep[pp.~2]{Perron_et_al_2015}. First, it critiques the heavy reliance
+on Thurstone's Case V assumptions \citep{Thurstone_1927b} and, by
+extension, the Bradley-Terry-Luce (BTL) model
+\citep{Bradley_et_al_1952, Luce_1959} when analyzing CJ data.
+Specifically, the study raises concerns about the assumptions of equal
+discriminal dispersions and zero correlation between the stimuli. While
+these assumptions simplify statistical modeling, they may fail to
+capture the complexity of CJ data, potentially leading to unreliable and
+inaccurate trait estimates. Second, the study highlights the apparent
+disconnect between CJ's trait measurement and hypothesis testing
+processes. Although separating these processes simplifies the analysis
+of CJ data, it may also undermine the reliability of various statistical
+results derived from the measurement.
 
-As a result, the study divides its content into six main sections.
-Section~\ref{sec-thurstone_theory} provides an overview of Thurstone's
-theory. Section~\ref{sec-theory-issues} discusses the identified issues
-in detail. Section~\ref{sec-theoretical} extends Thurstone's general
-form to address these challenges. The extension integrates core
-theoretical principles alongside key assessment design features relevant
-to CJ experiments, such as the selection of judges, stimuli, and
-comparisons. Section~\ref{sec-statistical} translates these theoretical
-and practical elements into a probabilistic statistical model for the
-analysis of dichotomous pairwise comparison data.
-Section~\ref{sec-discussion} discusses the findings, limitations,
+To address these issues, the study extends Thurstone's general form
+using a systematic and integrated approach based on Causal and Bayesian
+inference methods. As a result, the study divides its content into six
+main sections. Section~\ref{sec-thurstone_theory} provides an overview
+of Thurstone's theory. Section~\ref{sec-theory-issues} discusses the
+identified issues in detail. Section~\ref{sec-theoretical} extends
+Thurstone's general form to address these challenges. The extension
+integrates core theoretical principles alongside key assessment design
+features relevant to CJ experiments, such as the selection of judges,
+stimuli, and comparisons. Section~\ref{sec-statistical} translates these
+theoretical and practical elements into a probabilistic statistical
+model to analyze dichotomous pairwise comparison data.
+Section~\ref{sec-discussion} discusses the findings, limitations, and
 challenges and explores avenues for future research. Finally,
-Section~\ref{sec-conclusion} summarizes the study's key insights.
+Section~\ref{sec-conclusion} summarizes the study's conclusions.
 
 \section{Thurstone's theory}\label{sec-thurstone_theory}
 
@@ -347,31 +369,31 @@ not directly observable, the theory introduces the \emph{law of
 comparative judgment}. This law posits that in pairwise comparisons, a
 judge perceives the stimulus with a discriminal process positioned
 further along the trait continuum as possessing more of the trait
-\citep[pp.~251]{Bramley_2008}. This suggests that the relative distance
-between stimuli, rather than their absolute positions on the continuum,
-likely defines the outcome of pairwise comparisons. Indeed, the theory
-assumes that the difference between the underlying discriminal processes
-of the stimuli, referred to as the \emph{discriminal difference},
-determines the observed dichotomous outcome. Furthermore, the theory
-assumes that because the individual discriminal processes form a Normal
-distribution on the continuum, the discriminal difference will also
-conform to a Normal distribution \citep[pp.~452]{Andrich_1978}. In this
-distribution, the mode (mean) represents the relative separation between
-the stimuli, and its dispersion indicates the variability of that
-separation.
+\citep[pp.~251]{Bramley_2008}. This suggests that pairwise comparison
+outcomes depend on the relative distance between stimuli, not their
+absolute positions on the continuum. Indeed, the theory assumes that the
+difference between the underlying discriminal processes of the stimuli,
+referred to as the \emph{discriminal difference}, determines the
+observed dichotomous outcome. Furthermore, the theory assumes that
+because the individual discriminal processes form a Normal distribution
+on the continuum, the discriminal difference will also conform to a
+Normal distribution \citep[pp.~452]{Andrich_1978}. In this distribution,
+the mode (mean) represents the relative separation between the stimuli,
+and its dispersion indicates the variability of that separation.
 
 Figure~\ref{fig-discriminal_difference} illustrates the distribution of
 the discriminal difference for the hypothetical texts depicted in
 Figure~\ref{fig-discriminal_process}. The figure indicates that the
 judge perceives Text B as having significantly higher quality than Text
-A. This conclusion is supported by two key observations: the positive
-difference between their modal discriminal processes
-\((T_{B} - T_{A} > 0)\) and the probability area where the discriminal
-difference distinctly favors Text B over Text A, represented by the
-shaded gray area denoted as \(P(B > A)\). As a result, the dichotomous
-outcome of this comparison is more likely to favor Text B over Text A.
+A. Two key observations support this conclusion: the positive difference
+between their modal discriminal processes \((T_{B} - T_{A} > 0)\) and
+the probability area where the discriminal difference distinctly favors
+Text B over Text A, represented by the shaded gray area denoted as
+\(P(B > A)\). As a result, the dichotomous outcome of this comparison is
+more likely to favor Text B over Text A.
 
-\section{Two prominent issues in CJ practice}\label{sec-theory-issues}
+\section{Two Prominent Issues in Traditional CJ
+Practice}\label{sec-theory-issues}
 
 Thurstone noted from the outset that his general form, described in
 Section~\ref{sec-thurstone_theory}, led to a \emph{trait scaling
@@ -381,9 +403,9 @@ parameters than the number of available pairwise comparisons
 five texts, the general form would require estimating \(20\) parameters:
 five modal discriminal processes, five discriminal dispersions, and
 \(10\) correlations --one per comparison (see
-Table~\ref{tbl-thurstone_cases}). However, a single judge could provide
-only \({5 \choose 2} = 10\) unique comparisons, an insufficient data set
-to estimate the required parameters.
+Table~\ref{tbl-thurstone_cases}). However, a single judge could only
+provide \({5 \choose 2} = 10\) unique comparisons, an insufficient data
+set to estimate the required parameters.
 
 To address this issue and facilitate the practical implementation of the
 theory, Thurstone developed five cases derived from this general form,
@@ -413,121 +435,85 @@ asumptions}
 
 \end{table}%
 
-It is evident that although Thurstone developed Case V to provide a
-``rather coarse scaling'' of traits \citep[pp.~269]{Thurstone_1927b} and
-cautioned that its use ``should not be made without experimental test''
-\citep[pp.~270]{Thurstone_1927b}, the CJ literature has nevertheless
-relied the most on it in practice. This preference is particularly
-notable given that Case V incorporates the most extensive set of
-simplifying assumptions among all the cases
+However, Thurstone designed Case V to provide a ``rather coarse
+scaling'' of traits \citep[pp.~269]{Thurstone_1927b}, prioritizing
+statistical simplicity over precise trait measurement. He cautioned that
+its use ``should not be made without (an) experimental test''
+\citep[pp.~270]{Thurstone_1927b} because it imposes the most extensive
+set of simplifying assumptions among all the proposed cases
 \citetext{\citealp[pp.~253]{Bramley_2008}; \citealp[pp.~677]{Kelly_et_al_2022}}
-(see Table~\ref{tbl-thurstone_cases}).
+(see Table~\ref{tbl-thurstone_cases}). Therefore, it is surprising that,
+despite these limitations, CJ research has predominantly relied on Case
+V to measure different traits, raising significant concerns about the
+reliability and validity of such measurements in contexts where the
+case's assumptions may not hold \citep[pp.~677]{Kelly_et_al_2022}.
 
 Furthermore, since Thurstone's primary goal was to define a
 psychological scale and ``allocate the compared stimuli on this
 continuum'' \citep[pp.~269]{Thurstone_1927b}, he did not provide
-guidance on how to use these measurements when, for instance,
-researchers aim to test hypotheses related to the measured traits.
-Although the CJ practice has circumvented this issue by using scores'
-point estimates or their transformations for such analyses, a
-fundamental question remains: Is this method appropriate for addressing
-these inquiries?
+specific guidance on how to use the measurement scores from Case V to
+conduct hypothesis tests related to the measured traits. Although the CJ
+practice has circumvented this issue by using the point estimates of the
+scores or their transformations for such analyses, a fundamental
+question remains: Is this method appropriate for addressing these
+inquiries?
 
-Thus, this section discusses these two prominent issues, as they could
-undermine the reliability and validity of CJ's trait estimates
-\citep[pp.~2]{Perron_et_al_2015}. Specifically,
-Section~\ref{sec-theory-issue1} examines the the excessive reliance on
+Thus, this section discusses these two prominent issues. Specifically,
+Section~\ref{sec-theory-issue1} examines the heavy reliance on
 Thurstone's Case V assumptions in the statistical analysis of CJ data.
-Moreover, Section~\ref{sec-theory-issue2} focuses on the apparent
+Conversely, Section~\ref{sec-theory-issue2} focuses on the apparent
 disconnect between the approaches to trait measurement and hypothesis
 testing in CJ.
 
-\subsection{The overreliance on Case V in the statistical analysis of CJ
+\subsection{The Case V and the statistical analysis of CJ
 data}\label{sec-theory-issue1}
 
-As previously discussed, despite relying on the most extensive set of
-simplifying assumptions
-\citetext{\citealp[pp.~253]{Bramley_2008}; \citealp[pp.~677]{Kelly_et_al_2022}},
-Case V remains the most widely used case in the CJ literature. This
-popularity stems mainly from its simplified statistical representation
-in the Bradley-Terry-Luce (BTL) model
-\citep{Bradley_et_al_1952, Luce_1959}. The BTL model mirrors the
-assumptions of Case V, with one notable distinction: whereas Case V
-assumes a Normal distribution for the stimuli discriminal processes, the
-BTL model uses the more mathematically tractable Logistic distribution
-\citep[pp.~254]{Andrich_1978, Bramley_2008} (see
-Table~\ref{tbl-thurstone_cases}). As noted by
-\citet[pp.~16]{vanderLinden_et_al_2017_I}, this substitution has little
-impact on the model's estimation or interpretation because the
+Despite its limitations, Case V remains the most widely used model in CJ
+literature. This preference primarily stems from the BTL model, which
+provides a simplified statistical representation of the case. The BTL
+model mirrors the assumptions of Case V, with one notable distinction:
+while Case V assumes a Normal distribution for the stimuli' discriminal
+processes, the BTL model uses the more mathematically tractable Logistic
+distribution \citep[pp.~254]{Andrich_1978, Bramley_2008} (see
+Table~\ref{tbl-thurstone_cases}). However, as
+\citet[pp.~16]{vanderLinden_et_al_2017_I} noted, this substitution has
+minimal impact on the model's estimation or interpretation because the
 discriminal process scale is arbitrary up to a non-monotonic
-transformation. Furthermore, this minimal impact is reinforced by the
+transformation. Furthermore, this limited impact is supported by the
 fact that the Normal and Logistic distributions exhibit analogous
 statistical properties, differing only by a scaling factor of
 approximately \(1.7\).
 
-However, as mentioned earlier, Thurstone originally developed Case V to
-provide a ``rather coarse scaling'' of traits
-\citep[pp.~269]{Thurstone_1927b}, prioritizing statistical simplicity
-over precision in trait measurement \citep[pp.~677]{Kelly_et_al_2022}.
-He explicitly warned against its untested application, stating that its
-use ``should not be made without (an) experimental test''
-\citep[pp.~270]{Thurstone_1927b}. Furthermore, he acknowledged that some
-assumptions could prove problematic when researchers assess complex
-traits or heterogeneous stimuli \citep[pp.~376]{Thurstone_1927a}.
-Consequently, given that modern CJ applications frequently involve such
-traits and stimuli, two main assumptions of Case V and, by extension, of
-the BTL model may not consistently hold in theory or practice, namely
-the assumption of equal dispersion and zero correlation between stimuli.
+However, Thurstone acknowledged that some assumptions of Case V could be
+problematic when researchers assess complex traits or heterogeneous
+stimuli \citep[pp.~376]{Thurstone_1927a}. Thus, given that modern CJ
+applications often involve such traits and stimuli, two key assumptions
+of Case V, and by extension, the BTL model, may not always hold in
+theory or practice. These assumptions are the equal dispersion and zero
+correlation between stimuli.
 
 \subsubsection{The assumption of equal dispersions between
 stimuli}\label{sec-theory-issue1a}
 
-Thurstone argued that the assumption of equal dispersions may not apply
-when researchers assess complex traits or heterogeneous stimuli
-\citep[pp.~376]{Thurstone_1927a}, as these traits and stimuli can
-introduce judgment discrepancies due to their unique characteristics
-\citep{vanDaal_et_al_2016, Lesterhuis_2018, Chambers_et_al_2022}.
-Indeed, the CJ literature may already provide evidence of this violation
-through ``misfit'' statistics. For example, labeling texts as
-\emph{misfits} indicates that comparisons involving these texts result
-in more judgment discrepancies than those involving other texts
-\citetext{\citealp[pp.~11]{Pollitt_2004}; \citealp[pp.~290]{Pollitt_2012b}}.
-These discrepancies imply that the discriminal differences for
-\emph{misfit} texts have broader distributions, further suggesting that
-their discriminal processes exhibit more dispersion than those of other
-texts. This idea can be illustrated using
-Figure~\ref{fig-discriminal_process}, where text B shows a wider
-discriminal dispersion than text A. As a result, the texts' discriminal
-processes overlap more, making it difficult for a judge to determine
-which text possesses more of the trait.
-
-A similar line of reasoning applies to the concept of ``misfit'' judges,
-whose evaluations deviate substantially from the shared consensus due to
-the unique characteristics of the stimuli or the judges themselves
-\citetext{\citealp[pp.~164-165]{Pollitt_2012a}; \citealp[pp.~289-290]{Pollitt_2012b}; \citealp[pp.~4]{vanDaal_et_al_2016}; \citealp[pp.~20]{Goossens_et_al_2018}}.
-These ``misfit'' judges and their associated deviations can give rise to
-additional statistical and measurement issues, which we discuss in more
-detail in Section~\ref{sec-theory-issue1b}.
-
 According to the theory, discrepancies in the discriminal dispersions of
-stimuli shape the distribution of the discriminal difference, exerting a
-direct influence on the outcome of pairwise comparisons. A thought
-experiment can illustrate this idea. In this experiment, researchers can
-observe the discriminal processes for the texts depicted in
-Figure~\ref{fig-discriminal_process}. Furthermore, the experiment
-assumes that the discriminal dispersion for Text A remains constant and
-that the texts are uncorrelated \((\rho=0)\).
-Figure~\ref{fig-dispersion} reveals that an increase in the uncertainty
-associated with the perception of Text B compared to Text A
-\((\sigma_{B} - \sigma_{A})\), broadens the distribution of their
+stimuli shape the distribution of the discriminal difference, directly
+influencing the outcome of pairwise comparisons. A thought experiment
+can help illustrate this idea. In this experiment, researchers observe
+the discriminal processes for two texts, similar to those shown in
+Figure~\ref{fig-discriminal_process}. Additionally, the discriminal
+dispersion for Text A remains constant, and the texts are uncorrelated
+\((\rho=0)\). Figure~\ref{fig-dispersion} demonstrates that an increase
+in the uncertainty associated with the perception of Text B relative to
+Text A \((\sigma_{B} - \sigma_{A})\), broadens the distribution of their
 discriminal difference. This broadening affects the probability area
 where the discriminal difference distinctly favors Text B over Text A,
 expressed as \(P(B>A)\), ultimately influencing the comparison outcome.
 Additionally, the figure reveals that when the discriminal dispersions
-of the texts are equal \((\sigma_{B} - \sigma_{A}=0)\), the discriminal
-difference is more narrow compared to situations where their dispersions
-differ. Consequently, the discriminal difference is more likely to favor
-Text B over Text A (shaded gray area).
+of the texts are equal, as in the BTL model
+\((\sigma_{B} - \sigma_{A}=0)\), the discriminal difference is more
+narrow than when the dispersions differ. As a result, the discriminal
+difference is more likely to favor Text B over Text A, as it is
+represented by the shaded gray area.
 
 \begin{figure}
 
@@ -566,13 +552,13 @@ In experimental practice, however, the thought experiment occurs in
 reverse. Researchers first observe the comparison outcome and then use
 the BTL model to infer the discriminal difference between stimuli and
 their respective discriminal processes \citep[pp.~373]{Thurstone_1927a}.
-Consequently, the ability of the outcome to reflect \emph{true}
-differences between stimuli largely depends on the validity of the
-model's assumptions \citep[pp.~150]{Kohler_et_al_2019}, particularly the
-assumption of equal dispersions. For example, when researchers correctly
-assume equal dispersions between texts, the BTL model estimates a
-discriminal difference distribution that accurately represents the
-\emph{true} discriminal difference between them. This scenario is
+Consequently, the outcome's ability to reflect \emph{true} differences
+between stimuli largely depends on the validity of the model's
+assumptions \citep[pp.~150]{Kohler_et_al_2019}, in this case, the
+assumption of equal dispersions. For instance, when the assumption
+accurately captures the complexity of the data, the BTL model estimates
+a discriminal difference distribution that accurately represents the
+\emph{true} discriminal difference between the texts. This scenario is
 illustrated in Figure~\ref{fig-dispersion}, when the model's discriminal
 difference distribution aligns with the \emph{true} discriminal
 difference distribution, represented by the thick continuous line
@@ -580,59 +566,120 @@ corresponding to \(\sigma_{B}-\sigma_{A}=0\). The accuracy of this
 discriminal difference then ensures reliable estimates for the texts'
 discriminal processes.
 
-However, erroneously assuming equal dispersions between stimuli can give
+Notably, while the assumption of equal dispersions simplifies the trait
+measurement process, evidence from the CJ literature suggests that the
+BTL model may fail to capture the complexity of modern CJ data.
+Specifically, the assumption of equal dispersions may not hold when
+researchers assess complex traits or heterogeneous stimuli
+\citetext{\citealp[pp.~376]{Thurstone_1927a}; \citealp[pp.~273]{Bramley_2008}; \citealp[pp.~678]{Kelly_et_al_2022}},
+as these traits and stimuli can introduce judgment discrepancies due to
+their unique characteristics
+\citep{vanDaal_et_al_2016, Lesterhuis_2018, Chambers_et_al_2022}.
+Indeed, the CJ literature may already provide evidence of such
+discrepancies, particularly in the form of ``misfit'' statistics. For
+instance, \emph{misfit texts} are those whose comparisons result in more
+judgment discrepancies than those involving other texts
+\citetext{\citealp[pp.~11]{Pollitt_2004}; \citealp[pp.~290]{Pollitt_2012b}}.
+
+These discrepancies may arise from two possible causes. First, the
+discriminal processes of misfit texts may substantially overlap with
+those of non-misfit texts. Second, misfit texts may represent outlying
+observations with characteristics that make them difficult to compare
+and position on the trait scale. Regarding the first cause, the overlap
+can occur when misfit texts share the same trait space and have equal
+dispersion as non-misfit texts or when they exhibit larger discriminal
+dispersions. Although the BTL model can distinguish the first scenario,
+it is inherently agnostic to the second.
+Figure~\ref{fig-discriminal_process} illustrates how an increased
+discriminal dispersion can widen the overlap between two texts, leading
+to more judgment discrepancies. In the figure, text B has a broader
+discriminal dispersion than text A, expanding the overlap between their
+discriminal processes, where judges struggle to determine which text
+possesses more of the trait.
+
+Thus, erroneously assuming equal dispersions between stimuli can give
 rise to significant statistical and measurement issues. Specifically,
-the model may overestimate the trait's reliability, that is, the degree
-to which the outcome accurately reflects the \emph{true} discriminal
-differences between stimuli. This overestimation, in turn, results in
-spurious conclusions about these differences
+the BTL model may overestimate the trait's reliability, that is, the
+degree to which the outcome accurately reflects the \emph{true}
+discriminal differences between stimuli. This overestimation, in turn,
+results in spurious conclusions about these differences
 \citep[pp.~370]{McElreath_2020} and, by extension, about the underlying
 discriminal processes of stimuli. Figure~\ref{fig-dispersion} also
 illustrates this scenario when the model's discriminal difference
 distribution aligns with the thick continuous line for
 \(\sigma_{B}-\sigma_{A}=0\), while the \emph{true} discriminal
 difference follows any discontinuous line where
-\(\sigma_{B}-\sigma_{A} \neq 0\). Additionally, if researchers recognize
-that misfit statistics highlight these critical differences in
-dispersions, the conventional CJ practice of excluding stimuli based on
-these statistics
-\citep{Pollitt_2012a, Pollitt_2012b, vanDaal_et_al_2016, Goossens_et_al_2018}
-can unintentionally discard valuable information, introducing bias into
-trait estimates \citep[chap.~12]{Zimmerman_1994, McElreath_2020}. The
-direction and magnitude of these biases are often unpredictable, as they
-depend on which stimuli are excluded from the analysis.
+\(\sigma_{B}-\sigma_{A} \neq 0\).
+
+Finally, regarding the second cause, if researchers recognize that
+misfit statistics may represent outlying observations, the conventional
+CJ practice of excluding stimuli based on these statistics
+\citep{Pollitt_2012a, Pollitt_2012b, vanDaal_et_al_2016, Goossens_et_al_2018},
+may unintentionally discard valuable information, introducing bias into
+the trait estimates \citep[chap.~12]{Zimmerman_1994, McElreath_2020}.
+The direction and magnitude of these biases remain unpredictable, as
+they depend on which stimuli researchers exclude from the analysis.
 
 \subsubsection{The assumption of zero correlation between
 stimuli}\label{sec-theory-issue1b}
 
-In contrast, Thurstone assumed that stimuli were uncorrelated because
-judges' biases, arising from two opposing and equally weighted effects
-occurring during the pairwise comparisons, canceled each other out
+The correlation \(\rho\) measures how much the judges' perception of a
+specific trait in one stimulus depends on their perception of the same
+trait in another. As with the discriminal dispersions, this correlation
+shapes the distribution of the discriminal difference, directly
+impacting the outcomes of pairwise comparisons. A similar thought
+experiment, as the one depicted in Section~\ref{sec-theory-issue1a}, can
+illustrate this idea. The experiment only assumes that the discriminal
+dispersions for both texts remain constant. Figure~\ref{fig-correlation}
+reveals that as the correlation between the texts increases, the
+distribution of their discriminal difference becomes narrower. This
+narrowing affects the area under the curve where the discriminal
+difference distinctly favors Text B over Text A, denoted as
+\(P(B > A)\), thus influencing the comparison outcome. Furthermore, the
+figure shows that when two texts are independent or uncorrelated
+\((\rho=0)\), their discriminal difference is less narrow compared to
+scenarios where the texts are positively correlated. As a result, the
+discriminal difference is less likely to favor Text B over Text A, as it
+is represented by the shaded gray area.
+
+As outlined in the previous section, researchers approach this process
+in reverse. They begin by observing the outcomes and using the BTL model
+to estimate the stimuli' discriminal differences and discriminal
+processes. Given that the BTL model assumes independent discriminal
+processes across comparisons, if this assumption holds in the data, the
+model estimates a discriminal difference distribution that accurately
+reflects the \emph{true} discriminal difference between the texts. Once
+more, the accuracy of the discriminal difference ensures reliable
+estimates for the discriminal processes of the texts.
+
+Thurstone assumed that stimuli were uncorrelated because judges' biases,
+arising from two opposing and equally weighted effects occurring during
+the pairwise comparisons, canceled each other out
 \citep[pp.~268]{Thurstone_1927b}. \citet{Andrich_1978} provided a
 mathematical demonstration of this cancellation using the BTL model
 under the assumption of discriminal processes with additive biases.
-However, the assumption of zero correlation is not met in practice in at
-least two scenarios. First, when intricate aspects of multidimensional,
-complex traits or heterogeneous stimuli influence judges' perceptions,
-generating biases that resist cancellation. Second, when an additional
-hierarchical structure is relevant to the stimuli.
+However, evidence from the CJ literature indicates that the assumption
+of zero correlation does not hold in practice in at least two scenarios:
+when intricate aspects of multidimensional, complex traits or
+heterogeneous stimuli influence judges' perceptions or when additional
+hierarchical structures are relevant to the stimuli.
 
 In the first scenario, research on text quality suggests that when
 judges evaluate multidimensional, complex traits or heterogeneous
 stimuli, they often rely on various intricate characteristics of the
 stimuli to form their judgments
 \citep{vanDaal_et_al_2016, Lesterhuis_2018, Chambers_et_al_2022}. These
-additional relevant characteristics are unlikely to be equally weighted
-or opposing. As a result, they may exert an uneven influence on judges'
-perceptions, creating biases in their judgments that resist
+additional relevant characteristics, when assessed, are unlikely to be
+equally weighted or opposing. As a result, they may exert an uneven
+influence on judges' perceptions, creating biases that resist
 cancellation. For example, this could occur when a judge assessing the
 argumentative quality of a text places more weight on its grammatical
 accuracy than other judges, thereby favoring texts with fewer errors but
 weaker arguments. Furthermore, since the discriminal difference of the
 stimuli becomes an observable outcome only through the judges'
-perceptions, these biases could ultimately introduce dependencies
-between the stimuli \citep[pp.~346]{vanderLinden_et_al_2017_II}. While
-direct evidence for this particular scenario is lacking, studies such as
+perceptions, these biases could introduce dependencies between the
+stimuli \citep[pp.~346]{vanderLinden_et_al_2017_II}. While direct
+evidence for this particular scenario is lacking, studies such as
 \citet{Pollitt_et_al_2003} demonstrate the presence of such biases,
 supporting the notion that the factors influencing pairwise comparisons
 may not always cancel out.
@@ -646,111 +693,97 @@ account for this additional source of dependence have been insufficient.
 For instance, when CJ data incorporates multiple samples of stimuli from
 the same individuals, researchers frequently rely on (averaged) point
 estimates of the BTL scores to conduct subsequent analyses and tests at
-the individual hierarchical level
+the individual level
 \citep{Bramley_et_al_2019, Boonen_et_al_2020, Bouwer_et_al_2023, vanDaal_et_al_2017, Jones_et_al_2019, Gijsen_et_al_2021}.
 However, this approach can introduce additional statistical and
 measurement issues, which we discuss in greater detail in
 Section~\ref{sec-theory-issue2}.
 
-According to the theory, the correlation \(\rho\) measures how much the
-judges' perception of a specific trait in one stimulus depends on their
-perception of the same trait in another. As with the discriminal
-dispersions, this correlation shapes the distribution of the discriminal
-difference, directly impacting the outcomes of pairwise comparisons. A
-similar thought experiment, as the one depicted in
-Section~\ref{sec-theory-issue1a}, can illustrate this idea. The
-experiment now assumes that the discriminal dispersions for both texts
-remain constant. Figure~\ref{fig-correlation} reveals that as the
-correlation between the texts increases, the distribution of their
-discriminal difference becomes narrower. This narrowing affects the area
-under the curve where the discriminal difference distinctly favors Text
-B over Text A, denoted as \(P(B > A)\), thus influencing the comparison
-outcome. Furthermore, the figure shows that when two texts are
-independent or uncorrelated \((\rho=0)\), their discriminal difference
-is less narrow compared to scenarios where the texts are highly
-correlated. Consequently, the discriminal difference is less likely to
-favor Text B over Text A (shaded gray area).
-
-Again, in experimental practice, researchers approach this process in
-reverse. They begin by observing the outcomes and use the BTL model to
-estimate the stimuli' discriminal difference and discriminal processes.
-Given that the BTL model assumes independent discriminal processes
-across comparisons, if this assumption holds, the model estimates a
-discriminal difference distribution that accurately reflects the
-\emph{true} discriminal difference between the texts. This scenario is
-illustrated in Figure~\ref{fig-correlation} when the discriminal
-difference distribution of the model aligns with the \emph{true}
-distribution, represented by the thick continuous line corresponding to
-\(\rho=0\). Once more, the accuracy of the discriminal difference
-ensures reliable estimates for the discriminal processes of the texts.
-
-However, erroneously assuming zero correlation between stimuli can lead
-to significant statistical and measurement issues. Specifically,
-neglecting judges' biases or hierarchical structures can create
+Thus, erroneously assuming zero correlation between stimuli can also
+lead to significant statistical and measurement issues. Specifically,
+neglecting judges' biases or relevant hierarchical structures can create
 dimensional mismatches in the model, leading to the over- or
 underestimation of trait reliability \citep[pp.~341,
-482]{Hoyle_et_al_2023}. In other words, the outcome may fail to
-accurately reflect the \emph{true} discriminal differences between
-stimuli. These inaccuracies can result in spurious conclusions about
-these differences \citep[pp.~370]{McElreath_2020} and, by extension, the
-underlying discriminal processes \citep{Ackerman_1989}. This issue is
-illustrated in Figure~\ref{fig-correlation} when the model discriminal
-difference distribution follows the thick continuous line
+482]{Ackerman_1989, Hoyle_et_al_2023}. These inaccuracies can result in
+spurious conclusions about the discriminal differences
+\citep[pp.~370]{McElreath_2020} and, by extension, the underlying
+discriminal processes of the stimuli. This issue is illustrated in
+Figure~\ref{fig-correlation} when the discriminal difference
+distribution of the BTL model follows the thick continuous line
 \((\rho = 0)\), while the \emph{true} discriminal difference follows any
-discontinuous line where \((\rho \neq 0)\). Conversely, excluding judges
-based on misfit statistics risks discarding valuable information,
-potentially biasing the trait estimates
-\citep[chap.~12]{Zimmerman_1994, McElreath_2020}. Again, the direction
-and magnitude of these biases are often unpredictable, as they depend on
-which judges are excluded from the analysis.
+discontinuous line where \((\rho \neq 0)\).
+
+Finally, as discussed in the previous section, removing judges based on
+misfit statistics risks discarding valuable information and even
+introduce bias into the trait estimates
+\citep[chap.~12]{Zimmerman_1994, McElreath_2020}. The direction and
+magnitude of these biases remain unpredictable because they depend on
+which judges researchers exclude from the analysis. Researchers define
+\emph{misfit judges} as those whose evaluations deviate substantially
+from the shared consensus due to the unique characteristics of either
+the stimuli or the judges themselves
+\citetext{\citealp[pp.~164-165]{Pollitt_2012a}; \citealp[pp.~289-290]{Pollitt_2012b}; \citealp[pp.~4]{vanDaal_et_al_2016}; \citealp[pp.~20]{Goossens_et_al_2018}}.
 
 \subsection{The disconnect between trait measurement and hypothesis
 testing}\label{sec-theory-issue2}
 
 Building on the previous section, it is clear that, despite its
-limitations, the BTL model commonly serves as the measurement model for
-CJ assessments. Specifically, the model provides a method for
-transforming manifest into latent variables (psychological scales) and
-allocating the compared stimuli on this continuum
+limitations, researchers typically rely on the BTL model to measure a
+trait and place the compared stimuli along such trait continuum
 \citetext{\citealp[pp.~269]{Thurstone_1927b}; \citealp{Everitt_et_al_2010}}.
-For example, when evaluating writing quality, researchers use the BTL
-model to process the dichotomous outcomes resulting from the pairwise
-comparisons (the manifest variables) to estimate scores that reflect the
-underlying level of writing quality (the latent variable)
-\citep{Laming_2004, Pollitt_2012b, Whitehouse_2012, vanDaal_et_al_2016, Lesterhuis_2018_thesis, Coertjens_et_al_2017, Goossens_et_al_2018, Bouwer_et_al_2023}.
-
-Researchers then typically use the BTL scores' point estimates, or their
-transformations, to conduct additional analyses or hypothesis tests. For
-example, these scores have been used to identify `misfit' judges and
-stimuli \citep{Pollitt_2012b, vanDaal_et_al_2016, Goossens_et_al_2018},
-detect biases in judges' ratings
-\citep{Pollitt_et_al_2003, Pollitt_2012b}, calculate correlations with
-other assessment methods \citep{Goossens_et_al_2018, Bouwer_et_al_2023},
-or test hypotheses related to the underlying trait of interest
+Additionally, the CJ literature shows that researchers frequently use
+point estimates of BTL scores or their transformations to conduct
+further analyses or hypothesis tests. For example, researchers have used
+these scores to identify `misfit' judges and stimuli
+\citep{Pollitt_2012b, vanDaal_et_al_2016, Goossens_et_al_2018}, detect
+biases in judges' ratings \citep{Pollitt_et_al_2003, Pollitt_2012b},
+calculate correlations with other assessment methods
+\citep{Goossens_et_al_2018, Bouwer_et_al_2023}, or test hypotheses
+related to the underlying trait of interest
 \citep{Casalicchio_et_al_2015, Bramley_et_al_2019, Boonen_et_al_2020, Bouwer_et_al_2023, vanDaal_et_al_2017, Jones_et_al_2019, Gijsen_et_al_2021}.
 
-However, the statistical literature advises caution when using estimated
-scores for additional analyses and tests. A key consideration is that
-BTL scores are parameter estimates that inherently carry uncertainty.
-Ignoring this uncertainty can bias the analysis and reduce the precision
-of hypothesis tests. Notably, the direction and magnitude of such biases
-are often unpredictable. Results may be attenuated, exaggerated, or
-remain unaffected depending on the degree of uncertainty in the scores
-and the actual effects being tested
+Nevertheless, while separating the trait measurement and hypothesis
+testing processes simplifies the analysis of CJ data, the statistical
+literature cautions against relying solely on the point estimates of BTL
+scores to conduct further analyses or hypothesis tests, as this practice
+can undermine the resulting statistical conclusions. A key consideration
+is that BTL scores are parameter estimates that inherently carry
+uncertainty. Ignoring this uncertainty can bias the analysis and reduce
+the precision of hypothesis tests. Notably, the direction and magnitude
+of such biases are often unpredictable. Results may be attenuated,
+exaggerated, or remain unaffected depending on the degree of uncertainty
+in the scores and the actual effects being tested
 \citetext{\citealp[pp.~25]{Kline_et_al_2023}; \citealp[pp.~137]{Hoyle_et_al_2023}}.
-Finally, the reduced precision in hypothesis tests diminishes their
+Furthermore, the reduced precision in hypothesis tests diminishes their
 statistical power, increasing the likelihood of committing type-I or
 type-II errors \citep{McElreath_2020}.
+Figure~\ref{fig-measurement_error} illustrates these issues, showing how
+neglecting the uncertainty associated with BTL scores can reduce the
+precision of an effect linked to the predictor.
 
-In aggregate, excessive reliance on Thurstone's Case V assumptions in
+\begin{figure}
+
+\centering{
+
+\includegraphics[width=1\linewidth,height=\textheight,keepaspectratio]{./images/png/measurement_error.png}
+
+}
+
+\caption{\label{fig-measurement_error}The effect of outcome uncertainty
+on the estimation of an effect \(\beta\) linked to the predictor.
+Uncertainty increases from left to right.}
+
+\end{figure}%
+
+In aggregate, the heavy reliance on Thurstone's Case V assumptions in
 the statistical analysis of comparative data can compromise the
 reliability of trait estimates. This overreliance may also undermine
 their validity \citep[pp.~2]{Perron_et_al_2015}, particularly when
-coupled with the disconnect between CJ's approach to trait measurement
-and hypothesis testing. However, the structural approach to causal
-inference can address these issues by offering a systematic and
-integrated framework that strengthens measurement reliability and
-validity while enhancing the statistical accuracy of hypothesis tests.
+coupled with the disconnect between the trait measurement and hypothesis
+testing processes. However, the structural approach to causal inference
+can address these issues by offering a systematic and integrated
+framework that strengthens measurement reliability and validity while
+enhancing the statistical accuracy of hypothesis tests.
 
 \section{Extending Thurstone's general form}\label{sec-theoretical}
 
@@ -816,16 +849,16 @@ them, or the parameters of those functional forms
 Thus, this section addresses the issues identified in
 Section~\ref{sec-theory-issues} by extending Thurstone's general form
 using the structural approach to causal inference. Specifically, it
-formalizes the combination of the core theoretical principles outlined
-in Section~\ref{sec-thurstone_theory} with key assessment design
-features relevant to CJ experiments, such as the selection of judges,
-stimuli, and comparisons. In addition to enhancing statistical accuracy
-and strengthening measurement reliability and validity, the approach
-offers two key advantages. First, it clarifies the interactions among
-all actors and processes involved in CJ experiments. Second, it shifts
-the current comparative data analysis paradigm from passively accepting
-the model assumptions to actively testing whether those assumptions fit
-the data under analysis.
+combines the core theoretical principles outlined in
+Section~\ref{sec-thurstone_theory} with key assessment design features
+relevant to CJ experiments, such as the selection of judges, stimuli,
+and comparisons. In addition to enhancing statistical accuracy and
+strengthening measurement reliability and validity, the approach offers
+two key advantages. First, it clarifies the interactions among all
+actors and processes involved in CJ experiments. Second, it shifts the
+current comparative data analysis paradigm from passively accepting the
+model assumptions to actively testing whether those assumptions fit the
+data under analysis.
 
 Accordingly, Section~\ref{sec-theory-theoretical_P} incorporates the
 theoretical principles into what we call the \emph{conceptual-population
@@ -1493,16 +1526,16 @@ Notice,
 \begin{aligned}
   O_{RPUV} & = O^{sc}_{RPUV} \odot C \\
   O^{sc}_{RPUV} & = O^{cp}_{RPUV} \odot S \\
-  O^{cp}_{RPUV} & \sim \text{Bernoulli} \left[ \text{inv\_logit}( D_{RPUV} ) \right] \\
+  O^{cp}_{RPUV} & \overset{iid}{\sim} \text{Bernoulli} \left[ \text{inv\_logit}( D_{RPUV} ) \right] \\
   D_{RPUV} & = \left( T_{IA}[R_{1},P_{1}] - T_{IA}[R_{2},P_{2}] \right) + B_{JK}[U,V] \\
   T_{IA} & = T_{I} + \beta_{XA} X_{IA} + e_{IA} \\
   T_{I} & = \beta_{XI} X_{I} + e_{I} \\
   B_{JK} & = B_{J} + \beta_{ZK} Z_{JK} + e_{JK} \\
   B_{J} & = \beta_{ZJ} Z_{J} + e_{J} \\
-  e_{I} & \sim \text{Normal}(0,1) \\
-  e_{J} & \sim \text{Normal}(0,1) \\
-  e_{IA} & \sim \text{Normal}(0, p_{IA}) \\  
-  e_{JK} & \sim \text{Normal}(0, p_{JK})
+  e_{I} & \overset{iid}{\sim} \text{Normal}(0,1) \\
+  e_{J} & \overset{iid}{\sim} \text{Normal}(0,1) \\
+  e_{IA} & \overset{iid}{\sim} \text{Normal}(0, p_{IA}) \\  
+  e_{JK} & \overset{iid}{\sim} \text{Normal}(0, p_{JK})
 \end{aligned}
 \]
 
@@ -1554,16 +1587,16 @@ student's traits}
 \begin{aligned}
   O_{RPUV} & = O^{sc}_{RPUV} \odot C \\
   O^{sc}_{RPUV} & = O^{cp}_{RPUV} \odot S \\
-  O^{cp}_{RPUV} & \sim \text{Bernoulli} \left[ \text{inv\_logit}( D_{RPUV} ) \right] \\
+  O^{cp}_{RPUV} & \overset{iid}{\sim} \text{Bernoulli} \left[ \text{inv\_logit}( D_{RPUV} ) \right] \\
   D_{RPUV} & = \left( T_{IA}[R_{1},P_{1}] - T_{IA}[R_{2},P_{2}] \right) + B_{JK}[U,V] \\
   T_{IA} & = T_{I} + \beta_{XA} X_{IA} + e_{IA} \\
   T_{I} & = \beta_{XI} X_{I} + e_{I} \\
   B_{JK} & = B_{J} + \beta_{ZK} Z_{JK} + e_{JK} \\
   B_{J} & = \beta_{ZJ} Z_{J} + e_{J} \\
-  e_{I} & \sim \text{Normal}(0,s_{XI}) \\
-  e_{J} & \sim \text{Normal}(0,s_{ZJ}) \\
-  e_{IA} & \sim \text{Normal}(0, p_{IA}) \\  
-  e_{JK} & \sim \text{Normal}(0, p_{JK}) \\ \\
+  e_{I} & \overset{iid}{\sim} \text{Normal}(0,s_{XI}) \\
+  e_{J} & \overset{iid}{\sim} \text{Normal}(0,s_{ZJ}) \\
+  e_{IA} & \overset{iid}{\sim} \text{Normal}(0, p_{IA}) \\  
+  e_{JK} & \overset{iid}{\sim} \text{Normal}(0, p_{JK}) \\ \\
   & \textbf{Contraints:} \\
   & \sum_{g=1}^{G_{XI}} s_{XI}/G_{XI} = 1 ; \quad \sum_{g=1}^{G_{ZJ}} s_{ZJ}/G_{ZJ} = 1
 \end{aligned}
