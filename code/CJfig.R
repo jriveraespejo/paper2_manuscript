@@ -5,6 +5,7 @@ main_dir = '/home/josema/Desktop/1. Work/1 research/PhD Antwerp/#thesis/paper2/p
 
 require(rethinking)
 require(tidyverse)
+require(metafor)
 
 
 
@@ -22,15 +23,20 @@ sim_me = function( n=100, b=0.3, s1=1, s2=0.8){
   # b = 0.2
   # s1 = 1
   # s2 = 0.8
-  
+
   # simulation
   x = rnorm( n=n, mean=0, sd=1 )
   mu_y = b*x
   y = rnorm( n=n, mean=mu_y, sd=s1 )
-  y_tilde = rnorm( n=n, mean=y, sd=s2 )
+  y_star = rnorm( n=n, mean=y, sd=s2 )
+  d = data.frame( obs=1:n, y, y_star, y_sd=s2, x)
+  
+  # regressions
+  reg1 = lm( y ~ x, data=d )
+  reg2 = lm( y_star ~ x, data=d )
   
   # saving coefficients
-  res = c( coef( lm( y ~ x ) )[2], coef( lm( y_tilde ~ x ) )[2] )
+  res = c( coef( reg1 )[2], coef( reg2 )[2] )
   
   # return object
   return(res)
@@ -38,13 +44,16 @@ sim_me = function( n=100, b=0.3, s1=1, s2=0.8){
 }
 
 
-
-# figure 1 ####
-
 # distributional parameters
 dpA = c(0, 0.5) # distribution text A (mean, sd)
 dpB = c(1, 1) # distribution text B (mean, sd)
 rAB = 0 # correlation between discriminal processes
+
+
+
+
+
+# figure 1 ####
 
 # figure
 png( filename=file.path(main_dir, 'discriminal_process.png'), 
@@ -278,30 +287,33 @@ dev.off()
 
 # simulation
 b = 0.2
-s2 = c(0.5, 1, 1.5)
+s2 = c(0.3, 0.6, 1)
 dlist = list()
 for( s in seq_along(s2) ){
   dlist[[s]] = t( replicate( n=2000, sim_me( b=b, s2=s2[s]) ) )
-  dlist[[s]] = data.frame(dlist[[s]])
+  dlist[[s]] = data.frame( dlist[[s]] )
   names(dlist[[s]]) = paste0( c('wo','w'), '_me')
   dlist[[s]] = c( sapply(dlist[[s]], mean), sapply(dlist[[s]], sd) )
 }
-names(dlist) = paste0('s2_', s2)
+names(dlist) = c('a1','a2','a3')
 # str(dlist)
 
 
+## figure 5.1 ####
+
 # plot
-png( filename=file.path(main_dir, 'measurement_error1.png'),
+png( filename=file.path(main_dir, 'measurement_error.png'),
      height=13, width=13, units='cm', res=400  )
  
 with(dlist, {
-  curve( dnorm( x, mean=s2_0.5[1], sd=s2_0.5[3]), lty=1, lwd=1, xlim=c(-0.5,1), ylab='', xlab='X', 
+  curve( dnorm( x, mean=a1[1], sd=a1[3]), 
+         lty=2, lwd=1, xlim=c(-0.5,1), ylab='', xlab='X', 
          main=bquote( n == 100 ~ ',' ~ beta[X] == .(b) ~ ',' ~ sigma[T] == .(s2[1]) ) )
-  curve( dnorm( x, mean=s2_0.5[2], sd=s2_0.5[4]), lty=2, lwd=1, xlim=c(-0.5,1), add=T )
-  colorArea( from=0, to=1, density=dnorm, mean=s2_0.5[2], sd=s2_0.5[4], col=rgb(0,0,0,0.1) )
+  curve( dnorm( x, mean=a1[2], sd=a1[4]), lty=1, lwd=1.5, xlim=c(-0.5,1), add=T )
+  colorArea( from=0, to=1, density=dnorm, mean=a1[2], sd=a1[4], col=rgb(0,0,0,0.1) )
   abline( v=b, lty=2, lwd=0.5 )
-  legend( 'topleft', legend=c('true', 'without m.e.', 'with m.e.'),
-          bty='n', lty=c(2,1,2), lwd=c(0.5,1,1) )
+  legend( 'topleft', legend=c('true','with m.e.'),
+          bty='n', lty=c(2,1), lwd=c(1,1.5) )
   })
 
 dev.off()
@@ -312,13 +324,14 @@ png( filename=file.path(main_dir, 'measurement_error2.png'),
      height=13, width=13, units='cm', res=400  )
 
 with(dlist, {
-  curve( dnorm( x, mean=s2_1[1], sd=s2_1[3]), lty=1, lwd=1, xlim=c(-0.5,1), ylab='', xlab='X',
-         main=bquote( n == 100 ~ ',' ~ beta[X] == .(b) ~ ',' ~ sigma[T] == .(s2[2])  ) )
-  curve( dnorm( x, mean=s2_1[2], sd=s2_1[4]), lty=2, lwd=1, xlim=c(-0.5,1), add=T )
-  colorArea( from=0, to=1, density=dnorm, mean=s2_1[2], sd=s2_1[4], col=rgb(0,0,0,0.1) )
+  curve( dnorm( x, mean=a2[1], sd=a2[3]), 
+         lty=2, lwd=1, xlim=c(-0.5,1), ylab='', xlab='X', 
+         main=bquote( n == 100 ~ ',' ~ beta[X] == .(b) ~ ',' ~ sigma[T] == .(s2[2]) ) )
+  curve( dnorm( x, mean=a2[2], sd=a2[4]), lty=1, lwd=1.5, xlim=c(-0.5,1), add=T )
+  colorArea( from=0, to=1, density=dnorm, mean=a2[2], sd=a2[4], col=rgb(0,0,0,0.1) )
   abline( v=b, lty=2, lwd=0.5 )
-  legend( 'topleft', legend=c('true', 'without m.e.', 'with m.e.'),
-          bty='n', lty=c(2,1,2), lwd=c(0.5,1,1) )
+  legend( 'topleft', legend=c('true','with m.e.'),
+          bty='n', lty=c(2,1), lwd=c(1,1.5) )
 })
 
 dev.off()
@@ -329,13 +342,61 @@ png( filename=file.path(main_dir, 'measurement_error3.png'),
      height=13, width=13, units='cm', res=400  )
 
 with(dlist, {
-  curve( dnorm( x, mean=s2_1.5[1], sd=s2_1.5[3]), lty=1, lwd=1, xlim=c(-0.5,1), ylab='', xlab='X',
-         main=bquote( n == 100 ~ ',' ~ beta[X] == .(b) ~ ',' ~ sigma[T] == .(s2[3])  ) )
-  curve( dnorm( x, mean=s2_1.5[2], sd=s2_1.5[4]), lty=2, lwd=1, xlim=c(-0.5,1), add=T )
-  colorArea( from=0, to=1, density=dnorm, mean=s2_1.5[2], sd=s2_1.5[4], col=rgb(0,0,0,0.1) )
+  curve( dnorm( x, mean=a3[1], sd=a3[3]), 
+         lty=2, lwd=1, xlim=c(-0.5,1), ylab='', xlab='X', 
+         main=bquote( n == 100 ~ ',' ~ beta[X] == .(b) ~ ',' ~ sigma[T] == .(s2[3]) ) )
+  curve( dnorm( x, mean=a3[2], sd=a3[4]), lty=1, lwd=1.5, xlim=c(-0.5,1), add=T )
+  colorArea( from=0, to=1, density=dnorm, mean=a3[2], sd=a3[4], col=rgb(0,0,0,0.1) )
   abline( v=b, lty=2, lwd=0.5 )
-  legend( 'topleft', legend=c('true', 'without m.e.', 'with m.e.'),
-          bty='n', lty=c(2,1,2), lwd=c(0.5,1,1) )
+  legend( 'topleft', legend=c('true','with m.e.'),
+          bty='n', lty=c(2,1), lwd=c(1,1.5) )
 })
+
+dev.off()
+
+
+
+## figure 5.2 ####
+
+# plot
+png( filename=file.path(main_dir, 'measurement_error.png'),
+     height=9, width=25, units='cm', res=400  )
+
+par(mfrow=c(1,3))
+
+with(dlist, {
+  curve( dnorm( x, mean=a1[1], sd=a1[3]), 
+         lty=2, lwd=1, xlim=c(-0.5,1), ylab='', xlab='X', 
+         main=bquote( n == 100 ~ ',' ~ beta[X] == .(b) ~ ',' ~ sigma[T] == .(s2[1]) ) )
+  curve( dnorm( x, mean=a1[2], sd=a1[4]), lty=1, lwd=1.5, xlim=c(-0.5,1), add=T )
+  colorArea( from=0, to=1, density=dnorm, mean=a1[2], sd=a1[4], col=rgb(0,0,0,0.1) )
+  abline( v=b, lty=2, lwd=0.5 )
+  legend( 'topleft', legend=c('true','with m.e.'),
+          bty='n', lty=c(2,1), lwd=c(1,1.5) )
+})
+
+with(dlist, {
+  curve( dnorm( x, mean=a2[1], sd=a2[3]), 
+         lty=2, lwd=1, xlim=c(-0.5,1), ylab='', xlab='X', 
+         main=bquote( n == 100 ~ ',' ~ beta[X] == .(b) ~ ',' ~ sigma[T] == .(s2[2]) ) )
+  curve( dnorm( x, mean=a2[2], sd=a2[4]), lty=1, lwd=1.5, xlim=c(-0.5,1), add=T )
+  colorArea( from=0, to=1, density=dnorm, mean=a2[2], sd=a2[4], col=rgb(0,0,0,0.1) )
+  abline( v=b, lty=2, lwd=0.5 )
+  legend( 'topleft', legend=c('true','with m.e.'),
+          bty='n', lty=c(2,1), lwd=c(1,1.5) )
+})
+
+with(dlist, {
+  curve( dnorm( x, mean=a3[1], sd=a3[3]), 
+         lty=2, lwd=1, xlim=c(-0.5,1), ylab='', xlab='X', 
+         main=bquote( n == 100 ~ ',' ~ beta[X] == .(b) ~ ',' ~ sigma[T] == .(s2[3]) ) )
+  curve( dnorm( x, mean=a3[2], sd=a3[4]), lty=1, lwd=1.5, xlim=c(-0.5,1), add=T )
+  colorArea( from=0, to=1, density=dnorm, mean=a3[2], sd=a3[4], col=rgb(0,0,0,0.1) )
+  abline( v=b, lty=2, lwd=0.5 )
+  legend( 'topleft', legend=c('true','with m.e.'),
+          bty='n', lty=c(2,1), lwd=c(1,1.5) )
+})
+
+par(mfrow=c(1,1))
 
 dev.off()
