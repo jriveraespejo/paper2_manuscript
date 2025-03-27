@@ -1,4 +1,5 @@
 % Options for packages loaded elsewhere
+% Options for packages loaded elsewhere
 \PassOptionsToPackage{unicode}{hyperref}
 \PassOptionsToPackage{hyphens}{url}
 \PassOptionsToPackage{dvipsnames,svgnames,x11names}{xcolor}
@@ -7,21 +8,22 @@
   authoryear,
   review,
   1p]{elsarticle}
-
+\usepackage{xcolor}
 \usepackage{amsmath,amssymb}
+\setcounter{secnumdepth}{5}
 \usepackage{iftex}
 \ifPDFTeX
   \usepackage[T1]{fontenc}
   \usepackage[utf8]{inputenc}
   \usepackage{textcomp} % provide euro and other symbols
 \else % if luatex or xetex
-  \usepackage{unicode-math}
+  \usepackage{unicode-math} % this also loads fontspec
   \defaultfontfeatures{Scale=MatchLowercase}
   \defaultfontfeatures[\rmfamily]{Ligatures=TeX,Scale=1}
 \fi
 \usepackage{lmodern}
-\ifPDFTeX\else  
-    % xetex/luatex font selection
+\ifPDFTeX\else
+  % xetex/luatex font selection
 \fi
 % Use upquote if available, for straight quotes in verbatim environments
 \IfFileExists{upquote.sty}{\usepackage{upquote}}{}
@@ -39,9 +41,6 @@
 }{% if KOMA class
   \KOMAoptions{parskip=half}}
 \makeatother
-\usepackage{xcolor}
-\setlength{\emergencystretch}{3em} % prevent overfull lines
-\setcounter{secnumdepth}{5}
 % Make \paragraph and \subparagraph free-standing
 \makeatletter
 \ifx\paragraph\undefined\else
@@ -67,8 +66,7 @@
 \makeatother
 
 
-\providecommand{\tightlist}{%
-  \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}\usepackage{longtable,booktabs,array}
+\usepackage{longtable,booktabs,array}
 \usepackage{calc} % for calculating minipage widths
 % Correct order of tables after \paragraph or \subparagraph
 \usepackage{etoolbox}
@@ -93,6 +91,22 @@
 % Set default figure placement to htbp
 \def\fps@figure{htbp}
 \makeatother
+
+
+
+
+
+\setlength{\emergencystretch}{3em} % prevent overfull lines
+
+\providecommand{\tightlist}{%
+  \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
+
+
+
+ 
+\usepackage[]{natbib}
+\bibliographystyle{elsarticle-harv}
+
 
 \makeatletter
 \@ifpackageloaded{caption}{}{\usepackage{caption}}
@@ -136,13 +150,9 @@
 \@ifpackageloaded{subcaption}{}{\usepackage{subcaption}}
 \makeatother
 \journal{Psychometrika}
-
-\usepackage[]{natbib}
-\bibliographystyle{elsarticle-harv}
 \usepackage{bookmark}
-
 \IfFileExists{xurl.sty}{\usepackage{xurl}}{} % add URL line breaks if available
-\urlstyle{same} % disable monospaced font for URLs
+\urlstyle{same}
 \hypersetup{
   pdftitle={Let's talk about Thurstone \& Co.: An information-theoretical model for comparative judgments, and its statistical translation},
   pdfauthor={Jose Manuel Rivera Espejo; Tine van van Daal; Sven De De Maeyer; Steven Gillis},
@@ -198,13 +208,13 @@ critiques the heavy reliance on Thurstone's Case V assumptions and, by
 extension, the Bradley-Terry-Luce (BTL) model when analyzing CJ data.
 Specifically, the study raises concerns about the assumptions of equal
 discriminal dispersions and zero correlation between the stimuli. While
-these assumptions simplify the trait measurement process, they may fail
-to capture the complexity of CJ data, potentially leading to unreliable
-and inaccurate trait estimates. Second, the study highlights the
-apparent disconnect between CJ's trait measurement and hypothesis
-testing processes. Although separating these processes simplifies the
-analysis of CJ data, it may also undermine the reliability of various
-statistical results derived from the measurement.
+these assumptions simplify the trait measurement model, they may fail to
+capture the complexity of CJ data, potentially leading to unreliable and
+inaccurate trait estimates. Second, the study highlights the apparent
+disconnect between CJ's trait measurement and hypothesis testing
+processes. Although separating these processes simplifies the analysis
+of CJ data, it may also undermine the reliability of various statistical
+results derived from these processes.
 
 To address these issues, the study extends Thurstone's general form
 using a systematic and integrated approach based on Causal and Bayesian
@@ -217,10 +227,10 @@ V and the BTL model.
 
 Finally, the study emphasizes the relevance of this extension for
 contemporary empirical CJ research, particularly stressing the need for
-bespoke CJ models tailored to the specific assumptions of the
-experiments and data. It also lays the foundation for broader
-applications, encouraging researchers across the social sciences to
-adopt more robust and interpretable methodologies.
+bespoke CJ models tailored to the experiments and data assumptions. It
+also lays the foundation for broader applications, encouraging
+researchers across the social sciences to adopt more robust and
+interpretable methodologies.
 \end{abstract}
 
 
@@ -282,13 +292,13 @@ extension, the Bradley-Terry-Luce (BTL) model
 \citep{Bradley_et_al_1952, Luce_1959} when analyzing CJ data.
 Specifically, the study raises concerns about the assumptions of equal
 discriminal dispersions and zero correlation between the stimuli. While
-these assumptions simplify statistical modeling, they may fail to
+these assumptions simplify the trait measurement model, they may fail to
 capture the complexity of CJ data, potentially leading to unreliable and
 inaccurate trait estimates. Second, the study highlights the disconnect
 between CJ's trait measurement and hypothesis testing processes.
 Although separating these processes simplifies the analysis of CJ data,
 it may also undermine the reliability of various statistical results
-derived from the measurement.
+derived from these processes.
 
 To address these issues, this study extends Thurstone's general form
 using a systematic and integrated approach based on Causal and Bayesian
@@ -417,10 +427,10 @@ set to estimate the required parameters.
 
 To address this issue and facilitate the practical implementation of the
 theory, Thurstone developed five cases derived from this general form,
-each progressively incorporating additional simplifying assumptions into
-the model. In Case I, Thurstone postulated that pairs of stimuli would
-maintain a constant correlation across all comparisons. In Case II, he
-allowed multiple judges to undertake comparisons instead of confining
+each progressively incorporating additional simplifying assumptions. In
+Case I, Thurstone postulated that pairs of stimuli would maintain a
+constant correlation across all comparisons. In Case II, he allowed
+multiple judges to undertake comparisons instead of confining
 evaluations to a single judge. In Case III, he posited that there was no
 correlation between stimuli. In Case IV, he assumed that the stimuli
 exhibited similar dispersions. Finally, in Case V, he replaced this
@@ -575,8 +585,8 @@ discriminal difference then ensures reliable estimates for the texts'
 discriminal processes.
 
 Notably, while the assumption of equal dispersions simplifies the trait
-measurement process, evidence from the CJ literature suggests that the
-BTL model may fail to capture the complexity of modern CJ data.
+measurement model, evidence from the CJ literature suggests that the BTL
+model may fail to capture the complexity of modern CJ data.
 Specifically, the assumption of equal dispersions may not hold when
 researchers assess complex traits or heterogeneous stimuli
 \citetext{\citealp[pp.~376]{Thurstone_1927a}; \citealp[pp.~273]{Bramley_2008}; \citealp[pp.~678]{Kelly_et_al_2022}},
@@ -600,20 +610,20 @@ dispersions. Although the BTL model can distinguish the first scenario,
 it is inherently agnostic to the second.
 Figure~\ref{fig-discriminal_process} illustrates how an increased
 discriminal dispersion can widen the overlap between two texts, leading
-to more judgment discrepancies. In the figure, text B has a broader
-discriminal dispersion than text A, expanding the overlap between their
+to more judgment discrepancies. In the figure, Text B has a broader
+discriminal dispersion than Text A, expanding the overlap between their
 discriminal processes, a space where judges struggle to determine which
 text possesses more of the trait.
 
-When the assumption of equal dispersions between stimuli does not hold,
-significant statistical and measurement issues can arise Specifically,
-the BTL model may overestimate the trait's reliability, that is, the
-degree to which the outcome accurately reflects the \emph{true}
-discriminal differences between stimuli. This overestimation, in turn,
-results in spurious conclusions about these differences
-\citep[pp.~370]{McElreath_2020} and, by extension, about the underlying
-discriminal processes of stimuli. Figure~\ref{fig-dispersion} also
-illustrates this scenario when the model's discriminal difference
+Significant statistical and measurement issues can arise when the
+assumption of equal dispersions between stimuli does not hold.
+Specifically, the BTL model may overestimate the trait's reliability,
+that is, the degree to which the outcome accurately reflects the
+\emph{true} discriminal differences between stimuli. This
+overestimation, in turn, results in spurious conclusions about these
+differences \citep[pp.~370]{McElreath_2020} and, by extension, about the
+underlying discriminal processes of stimuli. Figure~\ref{fig-dispersion}
+also illustrates this scenario when the model's discriminal difference
 distribution aligns with the thick continuous line for
 \(\sigma_{B}-\sigma_{A}=0\), while the \emph{true} discriminal
 difference follows any discontinuous line where
@@ -717,13 +727,13 @@ spurious conclusions about the discriminal differences
 \citep[pp.~370]{McElreath_2020} and, by extension, the underlying
 discriminal processes of the stimuli. This issue is illustrated in
 Figure~\ref{fig-correlation} when the discriminal difference
-distribution of the BTL model follows the thick continuous line
+distribution of the BTL scores follows the thick continuous line
 \((\rho = 0)\), while the \emph{true} discriminal difference follows any
-discontinuous line where \((\rho \neq 0)\).
+discontinuous line where \(\rho \neq 0\).
 
-Finally, as discussed in the previous section, removing judges based on
-misfit statistics risks discarding valuable information and even
-introduce bias into the trait estimates
+Finally, as discussed in the previous section, removing \emph{misfit}
+judges based risks discarding valuable information and even introduce
+bias into the trait estimates
 \citep[chap.~12]{Zimmerman_1994, McElreath_2020}. The direction and
 magnitude of these biases remain unpredictable because they depend on
 which judges researchers exclude from the analysis. \emph{Misfit judges}
@@ -765,9 +775,9 @@ Furthermore, the reduced precision in hypothesis tests diminishes their
 statistical power, increasing the likelihood of committing type-I or
 type-II errors \citep{McElreath_2020}.
 Figure~\ref{fig-measurement_error} illustrates these issues,
-demonstrating how neglecting measurement error by relying only on
-outcome averages can reduce the precision of a predictor's estimated
-effect.
+demonstrating how neglecting measurement error \((\sigma_{T})\) by
+relying only on outcome averages can reduce the precision of a
+predictor's estimated effect.
 
 \begin{figure}
 
@@ -778,8 +788,9 @@ effect.
 }
 
 \caption{\label{fig-measurement_error}The effect of outcome uncertainty
-on the estimation of an effect \(\beta\) linked to the predictor.
-Uncertainty increases from left to right.}
+\(\sigma_{T}\) on the estimation of an effect \(\beta_{X}\) linked to
+the predictor. The example assumes a sample size \(n=100\) and an
+uncertainty that increases from left to right.}
 
 \end{figure}%
 
@@ -844,10 +855,10 @@ becomes impossible \citep[pp.~5]{Schuessler_et_al_2023}.
 
 Luckily, SCMs and DAGs support identification analysis through two key
 advantages. First, regardless of complexity, they can represent various
-causal structures using only five fundamental building blocks
-\citep{Neal_2020, McElreath_2020}. This feature allows researchers to
-decompose complex structures into manageable components, facilitating
-their analysis \citep{McElreath_2020}. Second, they depict causal
+causal structures using only five fundamental building blocks. This
+feature allows researchers to decompose complex structures into
+manageable components, facilitating their analysis
+\citep{Neal_2020, McElreath_2020}. Second, they depict causal
 relationships in a non-parametric way. This flexibility enables feasible
 identification strategies without requiring specification of the types
 of variables, the functional forms relating them, or the parameters of
@@ -893,39 +904,40 @@ issues raised in Section~\ref{sec-theory-issues}.
 \subsubsection{Integrating the first theoretical
 principles}\label{sec-theory-theoretical_P1}
 
-Before incorporating the theoretical principles into the
-\emph{conceptual-population model}, it is essential to further define
-SCMs. SCMs are formal mathematical models characterized by a set of
-\emph{endogenous} variables \(V\), a set of \emph{exogenous} variables
-\(E\), and a set of functions \(F\)
-\citep{Pearl_2009, Cinelli_et_al_2020}. Endogenous variables are those
-whose causal mechanisms a researcher chooses to model \citep{Neal_2020}.
-In contrast, exogenous variables represent \emph{errors} or
-\emph{disturbances} arising from omitted factors that the investigator
-chooses not to model explicitly \citep[pp.~27,68]{Pearl_2009}. Lastly,
-the functions, referred to as \emph{structural equations}, express the
-endogenous variables as non-parametric functions of other endogenous and
-exogenous variables. These functions use the symbol `\(:=\)' to denote
-the asymmetrical causal dependence between variables and the symbol
-`\(\:\bot\:\)' to represent \emph{d-separation}, a concept akin to
-(conditional) independence.
+Before incorporating the first theoretical principles of Thurstone's
+theory, it is essential to further define SCMs. SCMs are formal
+mathematical models characterized by a set of \emph{endogenous}
+variables \(V\), a set of \emph{exogenous} variables \(E\), and a set of
+functions \(F\) \citep{Pearl_2009, Cinelli_et_al_2020}. Endogenous
+variables are those whose causal mechanisms a researcher chooses to
+model \citep{Neal_2020}. In contrast, exogenous variables represent
+\emph{errors} or \emph{disturbances} arising from omitted factors that
+the investigator chooses not to model explicitly
+\citep[pp.~27,68]{Pearl_2009}. Lastly, the functions, referred to as
+\emph{structural equations}, express the endogenous variables as
+non-parametric functions of other endogenous and exogenous variables.
+These functions use the symbol `\(:=\)' to denote the asymmetrical
+causal dependence between variables and the symbol `\(\:\bot\:\)' to
+represent \emph{d-separation}, a concept akin to (conditional)
+independence.
 
-SCM~\ref{fig-cj03_scm} illustrates the first theoretical principles of
-the conceptual-population model designed to examine the impact of
-different teaching methods on students' writing ability. This SCM
-outlines the relationship between the conceptual-population outcome
-\((O^{cp}_{hiabjk})\) and several related variables. The subscripts
-\(h\) and \(i\) label the students who authored the texts (individuals),
-while the indices \(a\) and \(b\) represent the compared texts
-(stimuli). The index \(j\) refers to the judge, and \(k\) represents the
-judgment index, accounting for experimental conditions where judges
-perform the same judgment multiple times, i.e., a \emph{repeated
-measures design} \citep[pp.~366-376]{Lawson_2015}. Notably, the indexing
-system facilitates comparisons between texts written by the same student
-(\(h = i\), \(a \neq b\)) and between texts written by distinct students
+SCM~\ref{fig-cj03_scm} illustrates the inclusion of the first
+theoretical principles into the conceptual-population model designed to
+examine the impact of different teaching methods on students' writing
+ability. This SCM outlines the relationship between the
+conceptual-population outcome \((O^{cp}_{hiabjk})\) and several related
+variables. The subscripts \(h\) and \(i\) label the students who
+authored the texts (individuals), while the indices \(a\) and \(b\)
+represent the compared texts (stimuli). The index \(j\) refers to the
+judge, and \(k\) represents the judgment index, accounting for
+experimental conditions where judges perform the same judgment multiple
+times, i.e., a \emph{repeated measures design}
+\citep[pp.~366-376]{Lawson_2015}. Notably, the indexing system
+facilitates comparisons between texts written by the same student
+\((h = i, a \neq b)\) and between texts written by distinct students
 (\(h \neq i\), where \(a = b\) is possible). However, it excludes cases
-where judges compare a student's text to itself (\(h = i\), \(a = b\)),
-as such comparison lacks practical relevance within the CJ framework.
+where judges compare a student's text to itself \((h = i, a = b)\), as
+such comparison lacks practical relevance within the CJ framework.
 
 In line with Thurstone's theory, SCM~\ref{fig-cj03_scm} depicts the
 texts' discriminal processes \((T_{ha}, T_{ib})\) and their discriminal
@@ -989,10 +1001,10 @@ solid black circles and unobserved (latent) variables as open circles
 surrounding them with a square. Here, \emph{conditioning} refers to
 restricting the statistical analysis to a subset of the population
 defined by the values of the given variable \citep[pp.~32]{Neal_2020}.
-Although DAGs often omit exogenous variables for simplicity, this
-section includes exogenous variables to improve clarity and reveal
-potential issues related to conditioning and confounding
-\citep{Cinelli_et_al_2020}.
+Although DAGs often omit exogenous variables for simplicity, the DAGs
+presented in this section includes exogenous variables to improve
+clarity and reveal potential issues related to conditioning and
+confounding \citep{Cinelli_et_al_2020}.
 
 Figure~\ref{fig-cj03_dag} displays the DAG corresponding to
 SCM~\ref{fig-cj03_scm}, illustrating the expected causal relationships
@@ -1083,7 +1095,7 @@ this matrix has \(n\) rows and \(6\) columns, where
 term \({n_{I} \cdot n_{A} \choose 2}\) represents the binomial
 coefficient, which quantifies the total number of unique comparisons
 possible between every pair of stimuli generated by each pair of
-individuals in the population. Whe define the matrix as follows:
+individuals in the population. Thus, we define the matrix as follows:
 
 \begin{equation}\phantomsection\label{eq-mat12}{
 R = \begin{bmatrix}
