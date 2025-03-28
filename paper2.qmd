@@ -426,7 +426,7 @@ Conceptual-population model, scalar form.
 :::
 
 <!-- 3. The DAGs -->
-Notably, every SCM has an associated DAG [@Pearl_et_al_2016; @Cinelli_et_al_2020]. A DAG is a *graph* consisting of nodes connected by edges, where nodes represent random variables. The term *directed* indicates that edges or arrows extend from one node to another, indicating the direction of causal influence. The absence of an edge implies no direct relationship between the nodes. The term *acyclic* means that the causal influences do not form loops, ensuring the influences do not cycle back on themselves [@McElreath_2020]. DAGs conventionally depict observed variables as solid black circles and unobserved (latent) variables as open circles [@Morgan_et_al_2014]. They also display conditioned variables by surrounding them with a square. Here, *conditioning* refers to restricting the statistical analysis to a subset of the population defined by the values of the given variable [@Neal_2020, pp. 32]. Although DAGs often omit exogenous variables for simplicity, the DAGs presented in this section includes exogenous variables to improve clarity and reveal potential issues related to conditioning and confounding [@Cinelli_et_al_2020].
+Notably, every SCM has an associated DAG [@Pearl_et_al_2016; @Cinelli_et_al_2020]. A DAG is a *graph* consisting of nodes connected by edges, where nodes represent random variables. The term *directed* indicates that edges or arrows extend from one node to another, indicating the direction of causal influence. The absence of an edge implies no direct relationship between the nodes. The term *acyclic* means that the causal influences do not form loops, ensuring the influences do not cycle back on themselves [@McElreath_2020]. DAGs conventionally depict observed variables as solid black circles and unobserved (latent) variables as open circles [@Morgan_et_al_2014]. Although DAGs often omit exogenous variables for simplicity, the DAGs presented in this section includes exogenous variables to improve clarity and reveal potential issues related to conditioning and confounding [@Cinelli_et_al_2020].
 
 <!-- the *standard representation* omit exogenous variables for simplicity -->
 <!-- the *magnified representation* includes exogenous variables -->
@@ -442,6 +442,8 @@ Notably, every SCM has an associated DAG [@Pearl_et_al_2016; @Cinelli_et_al_2020
 
 
 ### The *conceptual population* data structure {#sec-theory-theoretical_P2}
+
+<!-- recording: Sven and Tine 25.03.28; time: 00:10:00 - 00:11:00 -->
 
 <!-- 1. Why is useful to declare the data structure? -->
 Although specifying a system's data structure is not mandatory when using SCMs and DAGs, defining one in this case can improve clarity and facilitate the description of the system. Thus, to re-express the scalar form of the CJ system shown in @fig-cj03 into an equivalent vectorized form, we first define the vectors $I$ and $J$, along with the matrices $IA$ and $JK$, as follows:
@@ -577,7 +579,7 @@ R = \begin{bmatrix}
 5 & 1 & 5 & 2 & 3 & 2 \\
 5 & 1 & 5 & 2 & 3 & 3 \\
 \end{bmatrix}
-$$
+$$ {#eq-mat13}
 
 <!-- 3. how de we use that data structure? -->
 Now, using equations ([-@eq-mat11]) and ([-@eq-mat12]), we can re-express [SCM -@fig-cj03_scm] and [DAG -@fig-cj03_dag] in an equivalent vectorized form, as shown in @fig-cj04. In this depiction, the outcome $O^{cp}_{R}$, the texts' discriminal difference $D_{R}$, their discriminal processes $T_{IA}$, and the judges' biases $B_{JK}$ are represented as vectors rather than scalar values. These vectors capture all the observations from the conceptual population. Specifically, $O^{cp}_{R}$ and $D_{R}$ are observed and latent vectors of length $n$, respectively. Moreover, $T_{IA}$ and $B_{JK}$ are latent vectors of lengths $(n_{I} \cdot n_{A})$ and $(n_{J} \cdot n_{K})$, respectively.
@@ -604,16 +606,17 @@ Conceptual-population model, vectorized form.
 
 ### Integrating hierarchical structural components {#sec-theory-theoretical_P3}
 
+<!-- recording: Sven and Tine 25.03.28; time: 00:12:45 - 00:33:00 -->
+
 <!-- 1. What are we going to do? -->
-The conceptual-population model integrates two *hierarchical structural components* to examine how different teaching methods influence students' writing ability. This approach builds on the principles of Structural Equation Modeling (SEM) [@Hoyle_et_al_2023, pp. 138] and Item Response Theory (IRT) [@Fox_2010, chap. 6; @vanderLinden_et_al_2017_I, chap. 24]. Each structural component defines how observed or latent variables affect the primary latent variable of interest [@Everitt_et_al_2010]. Their hierarchical nature enables researchers to test hypotheses while accounting for uncertainties associated with trait estimation (see @sec-theory-issue2), particularly when stimuli exhibit a hierarchical structure (see @sec-theory-issue1b).
+Building on the principles of Structural Equation Modeling (SEM) [@Hoyle_et_al_2023, pp. 138] and Item Response Theory (IRT) [@Fox_2010, chap. 6; @vanderLinden_et_al_2017_I, chap. 24], the conceptual-population model integrates two *hierarchical structural components* to examine how different teaching methods influence students' writing ability. Each structural component defines how observed or latent variables affect the primary latent variable of interest [@Everitt_et_al_2010]. Their hierarchical nature enables researchers to test hypotheses while accounting for uncertainties associated with trait estimation (see @sec-theory-issue2), particularly when stimuli exhibit a hierarchical structure (see @sec-theory-issue1b).
 
 <!-- 2 Explaining what we did -->
-The top branch of [DAG -@fig-cj09_dag] depicts the first component. This component describes how the students' writing-quality trait $(T_{I})$ and a set of *relevant* text-related variables $(X_{IA})$ (e.g., text length) causally influence the texts' written-quality trait $(T_{IA})$. The DAG also highlights the idiosyncratic errors $(e_{IA})$, which capture variations in the texts' trait that neither the students' trait nor other relevant text-related variables can explain. In this structure, $T_{I}$ and $e_{IA}$ are latent vectors of length $n_{I}$ and $(n_{I} \cdot n_{A})$, respectively. Additionally, $X_{IA}$ is an observed matrix with a dimension of $(n_{I} \cdot n_{A})$ rows and $q_{IA}$ columns (variables). 
+The top branch of [DAG -@fig-cj09_dag] illustrates the first component, where *relevant* [^1] student-related variables $(X_{I})$, such as the teaching method, causally influence the latent variable representing students' writing-quality trait $(T_{I})$. It also shows how $T_{I}$ and *relevant* [^2] text-related variables $(X_{IA})$ (e.g., text length) causally influence the texts' written-quality trait $(T_{IA})$, the primary latent variable of interest. Additionally, the branch accounts for idiosyncratic errors: $e_{I}$ captures unexplained variations in students' traits unexplained by $X_{I}$, while $e_{IA}$ captures variations in texts' traits unexplained by $T_{I}$ or $X_{IA}$. Here, $X_{I}$ is an observed matrix with $n_{I}$ rows and $q_{I}$ columns (variables), and both $e_{I}$ and $T_{I}$ are latent vectors of length $n_{I}$. Similarly, $X_{IA}$ is an observed matrix with dimension $(n_{I} \cdot n_{A})$ rows and $q_{IA}$ columns (variables), while $e_{IA}$ and $T_{IA}$ are latent vectors of length $n_{I} \cdot n_{A}$.
 
-Additionally, the DAG's top branch illustrates how a set of *relevant* student-related variables $(X_{I})$, such as the teaching method, causally influence the students' writing-quality trait $(T_{I})$. The DAG also includes the idiosyncratic errors $(e_{I})$, which capture variations in the students' traits that the relevant student-related variables cannot explain. Here, $e_{I}$ is a latent vector of length $n_{I}$, and $X_{I}$ can be an observed matrix with $n_{I}$ rows and $q_{I}$ columns (variables).
+[^1]: Here, *relevant* refers to variables that satisfy the *backdoor criterion* [@Neal_2020, pp 37], that is, they belong to a *sufficient adjustment set* [@Pearl_2009; @Pearl_et_al_2016; @Morgan_et_al_2014]. A *sufficient* set (potentially empty) blocks all non-causal paths between a predictor and an outcome without opening new ones [@Pearl_2009]. While these topics are beyond the scope of this study, readers seeking a deeper understanding can refer to introductory papers such as @Pearl_2010, @Rohrer_2018, @Pearl_2019, and @Cinelli_et_al_2020, as well as introductory books like @Pearl_et_al_2018, @Neal_2020 and @McElreath_2020 useful. For more advanced study, seminal papers such as @Neyman_et_al_1923, @Rubin_1974, @Spirtes_et_al_1991, and @Sekhon_2009, along with books such as @Pearl_2009, @Morgan_et_al_2014 and @Hernan_et_al_2020, are recommended.
 
-Here, *relevant* refers to variables that satisfy the *backdoor criterion* [@Neal_2020, pp 37], that is, they belong to a *sufficient adjustment set* [@Pearl_2009; @Pearl_et_al_2016; @Morgan_et_al_2014]. A *sufficient* set (potentially empty) blocks all non-causal paths between a predictor and an outcome without opening new ones [@Pearl_2009]. 
-
+[^2]: refer to footnote 1.
 
 ::: {#fig-cj09 layout-nrow=2}
 
@@ -642,9 +645,10 @@ Conceptual-population model, final vectorized form.
 :::
 
 
-Similarly, the bottom branch of [DAG -@fig-cj09_dag] depicts the second component. This component describes how the judges' bias $(B_{J})$ and a set of *relevant* judgment-related variables $(Z_{JK})$ (e.g., the number of judgments a judge makes) causally influence the biases associated with each text $B_{JK}$. The DAG also highlights the idiosyncratic errors $(e_{JK})$, which capture variations in the texts' bias that neither the judges' bias nor other relevant judgment-related variables can explain. In this description, $B_{J}$ and $e_{JK}$ are latent vectors of length $n_{J}$ and $(n_{J} \cdot n_{K})$, respectively. Additionally, $Z_{JK}$ is an observed matrix with a dimension of $(n_{J} \cdot n_{K})$ rows and $q_{JK}$ columns.
+Similarly, the bottom branch of [DAG -@fig-cj09_dag] depicts the second component, where *relevant* [^3] judge-related variables $(Z_{J})$, such as judgment expertise, causally influence the latent variable representing judges' bias $(B_{J})$. It also shows how $B_{J}$ and *relevant* [^4] judgment-related variables $(Z_{JK})$ (e.g., the number of judgments a judge makes) causally influence the biases associated with each text $B_{JK}$, the primary latent variable of interest. Additionally, the branch accounts for idiosyncratic errors: $e_{J}$ captures unexplained variations in judges' bias unexplained by $Z_{J}$, while $e_{JK}$ captures variations in judgments unexplained by $B_{J}$ or $Z_{JK}$. Here, $Z_{J}$ is an observed matrix with $n_{J}$ rows and $q_{J}$ columns (variables), and both $e_{J}$ and $B_{J}$ are latent vectors of length $n_{J}$. Similarly, $Z_{JK}$ is an observed matrix with dimension $(n_{J} \cdot n_{K})$ rows and $q_{JK}$ columns (variables), while $e_{JK}$ and $B_{JK}$ are latent vectors of length $n_{J} \cdot n_{K}$.
 
-Moreover, the DAG's bottom branch describes how a set of *relevant* judge-related variables $(Z_{J})$, such as judgment expertise, causally influence the judges' bias $(B_{J})$. The DAG also accounts for idiosyncratic errors $(e_{J})$, capturing the variations in the judges' bias that relevant judge-related variables cannot explain. Here, $e_{J}$ is a latent vector of length $n_{J}$, and $Z_{J}$ is an observed matrix with $n_{J}$ rows and $q_{J}$ columns. 
+[^3]: refer to footnote 1.
+[^4]: refer to footnote 1.
 
 Notably, all variables and functions shown in [SCM -@fig-cj09_scm] and [DAG -@fig-cj09_dag] define the set of endogenous variables $V$, structural equations $F$, and exogenous variables $E$ for the conceptual-population model. Additionally, the figures demonstrate that all exogenous variables are independent of one another, as indicated by the relationships $e_{IA} \dsep \{ e_{I}, e_{JK}, e_{J} \}$, $e_{I} \dsep \{ e_{JK}, e_{J} \}$ and $e_{JK} \dsep e_{J}$.
 
@@ -663,10 +667,13 @@ In the sample-comparison model, we assume a more realistic scenario than the con
 
 ### The sample mechanism {#sec-theory-theoretical_SC1}
 
+<!-- recording: Sven and Tine 25.03.28; time: 00:09:00 - 00:10:00 -->
+<!-- recording: Sven and Tine 25.03.28; time: 00:11:30 - 00:12:25 -->
+
 <!-- Develop how you get the vectors S and C and sampling weights when you know the extension of the population. (See https://mc-stan.org/docs/stan-users-guide/poststratification.html ) -->
 
 <!-- 1. start by defining the sampling vector and matrices  -->
-To facilitate the interpretation of the sample-comparison model, we first define the data sample using several binary vector variables: $S_{I}$, $S_{J}$, $S_{IA}$, $S_{JK}$, and $S$ as follows.
+To incorporate the sampling mechanism and facilitate the interpretation of the sample-comparison model, we first define the data sampling process using the binary vector variables $S_{I}$, $S_{J}$, $S_{IA}$, and $S_{JK}$ as follows:
 
 $$
 S_{I} = \begin{bmatrix}
@@ -702,18 +709,10 @@ jk_{(2)} \\
 jk_{(jk)} \\
 \vdots \\
 jk_{(nJ \cdot nK)} \\
-\end{bmatrix}; \;
-S = \begin{bmatrix}
-s_{(1)} \\
-s_{(2)} \\
-\vdots \\
-s_{(s)} \\
-\vdots \\
-s_{(n)} \\
 \end{bmatrix}
 $$ {#eq-mat21}
 
-Each element of the vectors $S_{I}$ and $S_{J}$ is a binary value that indicates the presence $(1)$ or absence $(0)$ of data in the $I$ and $J$ vectors, as defined in equation ([-@eq-mat11]). Therefore, the vector $S_{I}$ contains $n_{I}$ elements, and the vector $S_{J}$ contains $n_{J}$ elements. For example, we define each element of the vector $S_{I}$ as in equation ([-@eq-mat22]), and we apply a similar definition to $S_{J}$.
+Where each element of the vectors $S_{I}$ and $S_{J}$ is a binary value indicating the presence or absence of data in the $I$ and $J$ vectors (see equation ([-@eq-mat11])). Thus, the vectors $S_{I}$ and $S_{J}$ contains $n_{I}$ and $n_{J}$ elements, respectively. Specifically, we define the vector $S_{I}$ as in equation ([-@eq-mat22]) and apply a similar definition to $S_{J}$.
 
 $$
 i_{(i)} = \begin{cases} 
@@ -722,7 +721,7 @@ i_{(i)} = \begin{cases}
 \end{cases}
 $$ {#eq-mat22}
 
-Each element of the vectors $S_{IA}$ and $S_{JK}$ is defined like $i_{(i)}$ with vector $I$, but applied to data in the matrices $IA$ and $JK$, as defined in equation ([-@eq-mat11]). Therefore, the vector $S_{IA}$ contains $n_{I} \cdot n_{A}$ elements, and the vector $S_{JK}$ contains $n_{J} \cdot n_{K}$ elements. For example, we define each element of the vector $S_{IA}$ as in equation ([-@eq-mat23]), and we apply a similar definition to $S_{JK}$.
+Similarly, each element of the vectors $S_{IA}$ and $S_{JK}$ is a binary value indicating the presence or absence of data in the matrices $IA$ and $JK$ (see equation ([-@eq-mat11])). Thus, the vectors $S_{IA}$ and $S_{JK}$ contains $n_{I} \cdot n_{A}$ and $n_{J} \cdot n_{K}$ elements, respectively. Specifically, we define the vector $S_{IA}$ as in equation ([-@eq-mat23]) and apply a similar definition to $S_{JK}$.
 
 $$
 ia_{(ia)} = \begin{cases} 
@@ -731,23 +730,67 @@ ia_{(ia)} = \begin{cases}
 \end{cases}
 $$ {#eq-mat23}
 
-The equation shows that the observed values in the $S_{I}$ and $S_{J}$ vectors determine the binary values in the $S_{IA}$ and $S_{JK}$ vectors, through the $IA$ and $JK$ matrices, respectively. Specifically, researchers cannot observe stimuli and judgments for individuals and judges they did not sample initially.
-
-Finally, the vector $S$ in equation ([-@eq-mat21]) contains $n = \binom{n_{I} \cdot n_{A}}{2} \cdot n_{J} \cdot n_{K}$ elements, with each element defined in equation ([-@eq-mat24]). This equation shows that the observed values in $S_{IA}$ and $S_{JK}$ determine the binary values in $S$ through the $R$ matrix. Specifically, researchers can only observe a subset of judges' comparisons for a subset of stimuli generated by a subset of individuals.
+We can visualize these vectors more clearly using the example in equation ([-@eq-mat13]). Suppose the sample excludes the second student and the third judge. Additionally, assume that the second text from each individual and the third judgment from each judge are also missing. Under these conditions, the vectors have the following structure: 
 
 $$
-s_{(s)} = \begin{cases} 
-1 & \text{if the data for the } i,a \text{ with the } h,b \text{ and the } j,k \text{ elements of } R \text{ are observed} \\
-0 & \text{if the data for the } i,a \text{ with the } h,b \text{ and the } j,k \text{ elements of } R \text{ are missing}
-\end{cases}
+S_{I} = \begin{bmatrix}
+1 \\
+0 \\
+1 \\
+1 \\
+1
+\end{bmatrix} ; \;
+S_{J} = \begin{bmatrix}
+1 \\
+1 \\
+0
+\end{bmatrix} ; \;
+S_{IA} = \begin{bmatrix}
+1 \\
+0 \\
+0 \\
+0 \\
+1 \\
+0 \\
+1 \\
+0 \\
+1 \\
+0 
+\end{bmatrix} ; \;
+S_{JK} = \begin{bmatrix}
+1 \\
+1 \\
+0 \\
+1 \\
+1 \\
+0 \\
+0 \\
+0 \\
+0 
+\end{bmatrix}
 $$ {#eq-mat24}
 
+Equation ([-@eq-mat24]) shows that missing values in the $S_{I}$ and $S_{J}$ vectors directly determine those in the $S_{IA}$ and $S_{JK}$ vectors. In other words, researchers can only observe texts and judgments from students and judges initially included in the sample. Additionally, it shows that the sum of observed elements in $S_{I}$ equals the sampled students $(n^{s}_{I})$ and that a similar sum in vector $S_{J}$ equals the sampled judges $(n^{s}_{J})$. Conversely, the sum of observed elements in $S_{IA}$ represents the total sampled texts across all students $(n^{s}_{I} \cdot n^{s}_{A})$, while a similar sum in vector $S_{JK}$ represents the total sampled judgments across all judges $(n^{s}_{J} \cdot n^{s}_{K})$.
+
+Finally, we define the *sample design* vector $S$ in equation ([-@eq-mat25]), which maps each element of $S_{IA}$ to every component of $S_{JK}$. Essentially, this vector serves as the sampled equivalent of the $R$ matrix defined in equation ([-@eq-mat12]), where the sum of its elements represents the total data sample $n^{s} = \binom{n^{s}_{I} \cdot n^{s}_{A}}{2} \cdot n^{s}_{J} \cdot n^{s}_{K}$.
+
+$$
+S = \begin{bmatrix}
+s_{(1)} \\
+s_{(2)} \\
+\vdots \\
+s_{(s)} \\
+\vdots \\
+s_{(n)} \\
+\end{bmatrix}
+$$ {#eq-mat25}
 
 <!-- 2. What is the effect of the sampling mechanism -->
-With the definition of $S$, we can now integrate the sample mechanism into the conceptual-population model. @fig-cj12 illustrates this model. Following the convention of @McElreath_2020 [pp. 499-516] and @Deffner_et_al_2022 [pp. 6], the [DAG -@fig-cj12_dag] depicts the conceptual-population outcome $O^{cp}_{R}$ as an unobserved variable, emphasizing the researchers' inability to access such an outcome due to the sampling mechanism. Additionally, the DAG depicts the conditioned *sample design* variable $S$ causally influencing the sample-comparison outcome $O^{sc}_{R}$. This variable shows that the sample-comparison outcome is a subset drawn from the conceptual-population outcome $O^{cp}_{R}$. 
+With the definition of $S$, we incorporate the sample mechanism into the conceptual-population model. Following the convention of @McElreath_2020 [pp. 499-516] and @Deffner_et_al_2022 [pp. 6], the [DAG -@fig-cj12_dag] represents the conceptual-population outcome $O^{cp}_{R}$ as unobserved, emphasizing that researchers cannot directly access this outcome due to the sampling mechanism.
+
+Additionally, the DAG depicts the *sample design* vector $S$ as a causal factor influencing the sample-comparison outcome $O^{sc}_{R}$. A square encloses this vector, indicating that it is a conditioned variable. In this context, *conditioning* means restricting the statistical analysis to a specific subset of the population based on the values of a given variable [@Neal_2020, pp. 32]. Thus, the vector $S$ is responsible for selecting the subset of observation from the conceptual-population outcome $O^{cp}_{R}$, generating the sample-comparison outcome $O^{sc}_{R}$.
 
 <!-- Follow conventions of McElreath (2020) NOT Schuessler et al (2023) regarding selection variables and missing data. -->
-
 
 ::: {#fig-cj12 layout-nrow=2}
 
@@ -775,10 +818,6 @@ SCM
 
 Sample-comparison model including sampling mechanism
 :::
-
-
-Notice,
-<!-- The condition of case selection to be independent from Y is always met in experiments because the Y is not realized before the experiment starts. [@Kohler_et_al_2019, pp. 160] -->
 
 
 
@@ -842,6 +881,7 @@ Notice,
 <!-- recording: Sven 24.10.04; time: 00:46:00 - 01:01:00 -->
 <!-- recording: Sven and Tine 24.11.25; time: 00:24:50 - 00:30:35 -->
 <!-- recording: Sven and Tine 24.11.25; time: 00:49:30 - 00:53:30 -->
+<!-- recording: Sven and Tine 25.03.28; time: 00:33:55 - 00:37:50 -->
 
 
 <!-- To build the statistical part, start with the joint probability of observing the sample data P(Y, Z), then partition this joint probability in smaller conditional probabilities derived from the DAG. -->
@@ -850,58 +890,11 @@ Notice,
 <!-- (https://mc-stan.org/docs/stan-users-guide/regression.html#priors-for-identification.section) -->
 
 
+when you talk about the variability, refer that the equal dispersion is just assuming 1 for identification.
+
 ::: {#fig-cj15 layout-ncol=2}
 
 ::: {#fig-cj15_stat fig-align="center" fig-pos="H"}
-$$
-\begin{aligned}
-  O_{R} & = O^{sc}_{R} \odot C \\
-  O^{sc}_{R} & = O^{cp}_{R} \odot S \\
-  O^{cp}_{R} & \overset{iid}{\sim} \text{Bernoulli} \left[ \text{inv\_logit}( D_{R} ) \right] \\
-  D_{R} & = \left( T_{IA}[R_{1},P_{1}] - T_{IA}[R_{2},P_{2}] \right) + B_{JK}[U,V] \\
-  T_{IA} & = T_{I} + \beta_{XA} X_{IA} + e_{IA} \\
-  T_{I} & = \beta_{XI} X_{I} + e_{I} \\
-  B_{JK} & = B_{J} + \beta_{ZK} Z_{JK} + e_{JK} \\
-  B_{J} & = \beta_{ZJ} Z_{J} + e_{J} \\
-  e_{I} & \overset{iid}{\sim} \text{Normal}(0,1) \\
-  e_{J} & \overset{iid}{\sim} \text{Normal}(0,1) \\
-  e_{IA} & \overset{iid}{\sim} \text{Normal}(0, p_{IA}) \\  
-  e_{JK} & \overset{iid}{\sim} \text{Normal}(0, p_{JK})
-\end{aligned}
-$$
-
-Statistical model
-:::
-
-::: {#fig-cj15_scm fig-align="center" fig-pos="H"}
-$$
-\begin{aligned}
-  O_{R} & := f_{C}(O^{sc}_{R}, C) \\
-  O^{sc}_{R} & := f_{S}(O^{cp}_{R}, S) \\
-  O^{cp}_{R} & := f_{O}(D_{R}) \\
-  D_{R} & := f_{D}(T_{IA}, B_{JK}) \\
-  T_{IA} & := f_{T}(T_{I}, X_{A}, e_{IA}) \\
-  T_{I} & := f_{T}(X_{I}, e_{I}) \\
-  B_{JK} & := f_{B}(B_{J}, Z_{K}, e_{JK}) \\
-  B_{J} & := f_{B}(Z_{J}, e_{J}) \\
-  e_{I} & \dsep \{ e_{J}, e_{IA}, e_{JK} \} \\
-  e_{J} & \dsep \{ e_{IA}, e_{JK} \} \\
-  e_{IA} & \dsep e_{JK}
-\end{aligned}
-$$
-
-SCM
-:::
-
-Sample-comparison model, including sample and comparison mechanisms and assuming equal discriminal dispersions for the student's traits
-:::
-
-
-
-
-::: {#fig-cj16 layout-ncol=2}
-
-::: {#fig-cj16_stat fig-align="center" fig-pos="H"}
 $$
 \begin{aligned}
   O_{R} & = O^{sc}_{R} \odot C \\
@@ -924,7 +917,7 @@ $$
 Statistical model
 :::
 
-::: {#fig-cj16_scm fig-align="center" fig-pos="H"}
+::: {#fig-cj15_scm fig-align="center" fig-pos="H"}
 $$
 \begin{aligned}
   O_{R} & := f_{C}(O^{sc}_{R}, C) \\
@@ -1038,6 +1031,7 @@ Sample-comparison model, including sample and comparison mechanisms and assuming
 
 <!-- Due to efficiency of scoring, most of research only collects only one text. This assumes that there is significant homogeneity between text of the same individual, compared to the between individual variability. However, this cannot be known ad-hoc.  -->
 
+<!-- Use your example, teaching practice and Aptitude-Treatment Interaction (ATI), certain interventions do not have the same effect for all pupils, treatment is a random intercept and slope variable. Relevant variables depends on the context, you really have to think through which variables you have to put in. -->
 
 
 
@@ -1073,17 +1067,20 @@ Sample-comparison model, including sample and comparison mechanisms and assuming
 
 <!-- Our DAG is, of course, incomplete and possibly wrong, in particular when it comes to the nodes that have not been experimentally manipulated. But an incomplete model is still an improvement over no model at all. [@Deffner_et_al_2022, pp. 5] -->
 
+<!-- remember to mention fidelity of the theory in the model -->
+
 <!-- A causal framework is not only useful for analysis but also aids research design [@Deffner_et_al_2022, pp. 11] -->
 
-
 <!-- A generalizable understanding of a given phenomenon, therefore, cannot be based only on the accumulation of data but requires the theory-driven testing of causal assumptions. [@Deffner_et_al_2022, pp. 13] -->
+
+<!-- Causal inference frameworks do not magically guarantee value-free answers, but they force us to be precise about the questions we ask, and to be transparent about the assumptions that we are willing to make [@Rohrer_et_al_2022, pp. 4-5] -->
 
 
 
 
 ## Limitations and further research {#sec-discussion-limitations}
 
-<!-- A cautious reader will notice that the model descriptions of @sec-theory-theoretical_P rely on several relevant variables. In this study, a *relevant* or a *sufficient adjustment* set of variables (potentially an empty set) refers to those that satisfy the *backdoor criterion* [@Neal_2020, pp. 37], that is, variables that block all non-causal paths without introducing new ones [@Pearl_2009; @Pearl_et_al_2016; @Morgan_et_al_2014].  -->
+<!-- *Relevant* refers to variables that satisfy the *backdoor criterion* [@Neal_2020, pp 37], that is, they belong to a *sufficient adjustment set* [@Pearl_2009; @Pearl_et_al_2016; @Morgan_et_al_2014]. A *sufficient* set (potentially empty) blocks all non-causal paths between a predictor and an outcome without opening new ones [@Pearl_2009]. Use your example, teaching practice and Aptitude-Treatment Interaction (ATI), certain interventions do not have the same effect for all pupils, treatment is a random intercept and slope variable. Relevant variables depends on the context, you really have to think through which variables you have to put in. -->
 
 <!-- Incorporating these variables into the conceptual-population model enables researchers to identify different estimands of interest and their causal effects, even with observational data. This identification works because conditioning on these variables ensures that the estimator meets several critical properties, including confounding elimination [@Morgan_et_al_2014]. -->
 

@@ -1,4 +1,4 @@
-# equal variances ####
+# equal discriminal dispersions ####
 
 mcmc_code = "
 data{
@@ -178,7 +178,7 @@ writeLines(mcmc_code, con=file.path(dir, 'code', model_nam) )
 
 
 
-# unequal variances ####
+# different discriminal dispersions ####
 
 mcmc_code = "
 data{
