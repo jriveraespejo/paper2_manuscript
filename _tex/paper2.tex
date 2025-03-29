@@ -895,11 +895,11 @@ model}\label{sec-theory-theoretical_P}
 
 In the conceptual-population model, we assume an idealized scenario
 where researchers have access to a \emph{conceptual population} of
-comparative data --data representing all repeated judgments made by each
-judge for every stimulus pair produced by each pair of individuals in
-the population. This assumption allows us to integrate Thurstone's
-theoretical principles and propose innovations to address some of the
-issues raised in Section~\ref{sec-theory-issues}.
+comparative data --data representing \emph{all repeated judgments made
+by each judge for every stimulus pair produced by each pair of
+individuals} in the population. This assumption allows us to integrate
+Thurstone's theoretical principles and propose innovations to address
+some of the issues raised in Section~\ref{sec-theory-issues}.
 
 \subsubsection{Integrating the first theoretical
 principles}\label{sec-theory-theoretical_P1}
@@ -1232,7 +1232,7 @@ how observed or latent variables affect the primary latent variable of
 interest \citep{Everitt_et_al_2010}. Their hierarchical nature enables
 researchers to test hypotheses while accounting for uncertainties
 associated with trait estimation (see Section~\ref{sec-theory-issue2}),
-particularly when stimuli exhibit a hierarchical structure (see
+and when stimuli exhibit a hierarchical structure (see
 Section~\ref{sec-theory-issue1b}).
 
 The top branch of DAG~\ref{fig-cj09_dag} illustrates the first
@@ -1242,15 +1242,15 @@ component, where \emph{relevant} \footnote{Here, \emph{relevant} refers
   set} \citep{Pearl_2009, Pearl_et_al_2016, Morgan_et_al_2014}. A
   \emph{sufficient} set (potentially empty) blocks all non-causal paths
   between a predictor and an outcome without opening new ones
-  \citep{Pearl_2009}. While these topics are beyond the scope of this
-  study, readers seeking a deeper understanding can refer to
+  \citep{Pearl_2009}. These topics are beyond the scope of this study,
+  thus, readers seeking a more profound understanding can refer to
   introductory papers such as \citet{Pearl_2010}, \citet{Rohrer_2018},
   \citet{Pearl_2019}, and \citet{Cinelli_et_al_2020}, as well as
-  introductory books like \citet{Pearl_et_al_2018}, \citet{Neal_2020}
+  introductory books like \citet{Pearl_et_al_2018}, \citet{Neal_2020},
   and \citet{McElreath_2020} useful. For more advanced study, seminal
   papers such as \citet{Neyman_et_al_1923}, \citet{Rubin_1974},
   \citet{Spirtes_et_al_1991}, and \citet{Sekhon_2009}, along with books
-  such as \citet{Pearl_2009}, \citet{Morgan_et_al_2014} and
+  such as \citet{Pearl_2009}, \citet{Morgan_et_al_2014}, and
   \citet{Hernan_et_al_2020}, are recommended.} student-related variables
 \((X_{I})\), such as the teaching method, causally influence the latent
 variable representing students' writing-quality trait \((T_{I})\). It
@@ -1258,15 +1258,15 @@ also shows how \(T_{I}\) and \emph{relevant} \footnote{refer to footnote
   1.} text-related variables \((X_{IA})\) (e.g., text length) causally
 influence the texts' written-quality trait \((T_{IA})\), the primary
 latent variable of interest. Additionally, the branch accounts for
-idiosyncratic errors: \(e_{I}\) captures unexplained variations in
-students' traits unexplained by \(X_{I}\), while \(e_{IA}\) captures
-variations in texts' traits unexplained by \(T_{I}\) or \(X_{IA}\).
-Here, \(X_{I}\) is an observed matrix with \(n_{I}\) rows and \(q_{I}\)
-columns (variables), and both \(e_{I}\) and \(T_{I}\) are latent vectors
-of length \(n_{I}\). Similarly, \(X_{IA}\) is an observed matrix with
-dimension \((n_{I} \cdot n_{A})\) rows and \(q_{IA}\) columns
-(variables), while \(e_{IA}\) and \(T_{IA}\) are latent vectors of
-length \(n_{I} \cdot n_{A}\).
+idiosyncratic errors: \(e_{I}\) captures variations in students' traits
+unexplained by \(X_{I}\), while \(e_{IA}\) captures variations in texts'
+traits unexplained by \(T_{I}\) or \(X_{IA}\). Here, \(X_{I}\) is an
+observed matrix with \(n_{I}\) rows and \(q_{I}\) columns (variables),
+and both \(e_{I}\) and \(T_{I}\) are latent vectors of length \(n_{I}\).
+Similarly, \(X_{IA}\) is an observed matrix with dimension
+\(n_{I} \cdot n_{A}\) rows and \(q_{IA}\) columns (variables), while
+\(e_{IA}\) and \(T_{IA}\) are latent vectors of length
+\(n_{I} \cdot n_{A}\).
 
 \begin{figure}[H]
 
@@ -1320,12 +1320,12 @@ causally influence the latent variable representing judges' bias
 number of judgments a judge makes) causally influence the biases
 associated with each text \(B_{JK}\), the primary latent variable of
 interest. Additionally, the branch accounts for idiosyncratic errors:
-\(e_{J}\) captures unexplained variations in judges' bias unexplained by
-\(Z_{J}\), while \(e_{JK}\) captures variations in judgments unexplained
-by \(B_{J}\) or \(Z_{JK}\). Here, \(Z_{J}\) is an observed matrix with
+\(e_{J}\) captures variations in judges' bias unexplained by \(Z_{J}\),
+while \(e_{JK}\) captures variations in judgments unexplained by
+\(B_{J}\) or \(Z_{JK}\). Here, \(Z_{J}\) is an observed matrix with
 \(n_{J}\) rows and \(q_{J}\) columns (variables), and both \(e_{J}\) and
 \(B_{J}\) are latent vectors of length \(n_{J}\). Similarly, \(Z_{JK}\)
-is an observed matrix with dimension \((n_{J} \cdot n_{K})\) rows and
+is an observed matrix with dimension \(n_{J} \cdot n_{K}\) rows and
 \(q_{JK}\) columns (variables), while \(e_{JK}\) and \(B_{JK}\) are
 latent vectors of length \(n_{J} \cdot n_{K}\).
 
@@ -1349,20 +1349,19 @@ repeated judgments from every judge for each pair of stimuli produced by
 every individual in the population. Since researchers rarely meet this
 assumption in practice, they must consider a more realistic scenario.
 The extensions to the conceptual-population model, derived from this
-realistic scenario, are concisely described in the sample-comparison
-model.
+realistic scenario, are described in the sample-comparison model.
 
 \subsection{The sample-comparison
 model}\label{sec-theory-theoretical_SC}
 
 In the sample-comparison model, we assume a more realistic scenario than
 the conceptual-population model. Specifically, we assume researchers
-have access to a data sample consisting of a limited number of judgments
-\((n^{s}_{K})\) from a sample of judges \((n^{s}_{J})\) and a specific
-number of texts \((n^{s}_{A})\) from a sample of students
-\((n^{s}_{I})\), drawn from the conceptual population. Additionally, we
-assume that judges do not make \emph{all possible comparisons} allowed
-by the sample, but rather only \(n_{C}\) comparisons.
+have access to a data sample consisting of a \emph{limited number of
+judgments \((n^{s}_{K})\) from a sample of judges \((n^{s}_{J})\) and a
+specific number of texts \((n^{s}_{A})\) from a sample of students
+\((n^{s}_{I})\)}, drawn from the conceptual population. In a subsequent
+step, we assume that judges \emph{do not make all possible comparisons}
+allowed by the sample, but rather only \(n_{C}\) comparisons.
 
 \subsubsection{The sample mechanism}\label{sec-theory-theoretical_SC1}
 
@@ -1408,12 +1407,12 @@ jk_{(nJ \cdot nK)} \\
 \end{bmatrix}
 }\end{equation}
 
-Where each element of the vectors \(S_{I}\) and \(S_{J}\) is a binary
-value indicating the presence or absence of data in the \(I\) and \(J\)
-vectors (see equation (\ref{eq-mat11})). Thus, the vectors \(S_{I}\) and
-\(S_{J}\) contains \(n_{I}\) and \(n_{J}\) elements, respectively.
-Specifically, we define the vector \(S_{I}\) as in equation
-(\ref{eq-mat22}) and apply a similar definition to \(S_{J}\).
+Where each element of \(S_{I}\) and \(S_{J}\) is a binary value
+indicating the presence or absence of data elements in the \(I\) and
+\(J\) vectors (see equation (\ref{eq-mat11})). Thus, the vectors
+\(S_{I}\) and \(S_{J}\) contains \(n_{I}\) and \(n_{J}\) elements,
+respectively. Specifically, we define the vector \(S_{I}\) as in
+equation (\ref{eq-mat22}) and apply a similar definition to \(S_{J}\).
 
 \begin{equation}\phantomsection\label{eq-mat22}{
 i_{(i)} = \begin{cases} 
@@ -1422,13 +1421,13 @@ i_{(i)} = \begin{cases}
 \end{cases}
 }\end{equation}
 
-Similarly, each element of the vectors \(S_{IA}\) and \(S_{JK}\) is a
-binary value indicating the presence or absence of data in the matrices
-\(IA\) and \(JK\) (see equation (\ref{eq-mat11})). Thus, the vectors
-\(S_{IA}\) and \(S_{JK}\) contains \(n_{I} \cdot n_{A}\) and
-\(n_{J} \cdot n_{K}\) elements, respectively. Specifically, we define
-the vector \(S_{IA}\) as in equation (\ref{eq-mat23}) and apply a
-similar definition to \(S_{JK}\).
+Similarly, each element of \(S_{IA}\) and \(S_{JK}\) is a binary value
+indicating the presence or absence of data rows in the matrices \(IA\)
+and \(JK\) (see equation (\ref{eq-mat11})). Thus, the vectors \(S_{IA}\)
+and \(S_{JK}\) contains \(n_{I} \cdot n_{A}\) and \(n_{J} \cdot n_{K}\)
+elements, respectively. Specifically, we define the vector \(S_{IA}\) as
+in equation (\ref{eq-mat23}) and apply a similar definition to
+\(S_{JK}\).
 
 \begin{equation}\phantomsection\label{eq-mat23}{
 ia_{(ia)} = \begin{cases} 
@@ -1438,11 +1437,11 @@ ia_{(ia)} = \begin{cases}
 }\end{equation}
 
 We can visualize these vectors more clearly using the example in
-equation (\ref{eq-mat13}). Suppose the sample excludes the second
-student and the third judge. Additionally, assume that the second text
-from each individual and the third judgment from each judge are also
-missing. Under these conditions, the vectors have the following
-structure:
+equation (\ref{eq-mat13}). Suppose researchers exclude the second
+student and the third judge. Additionally, they do not include the
+second text from each individual and the third judgment from each judge.
+Given \(n_{I} = 5\), \(n_{A} = 2\), \(n_{J} = 3\), and \(n_{K} = 3\),
+these vectors take the following structure:
 
 \begin{equation}\phantomsection\label{eq-mat24}{
 S_{I} = \begin{bmatrix}
@@ -1484,8 +1483,8 @@ S_{JK} = \begin{bmatrix}
 
 Equation (\ref{eq-mat24}) shows that missing values in the \(S_{I}\) and
 \(S_{J}\) vectors directly determine those in the \(S_{IA}\) and
-\(S_{JK}\) vectors. In other words, researchers can only observe texts
-and judgments from students and judges initially included in the sample.
+\(S_{JK}\). In other words, researchers can only observe texts and
+judgments from students and judges initially included in the sample.
 Additionally, it shows that the sum of observed elements in \(S_{I}\)
 equals the sampled students \((n^{s}_{I})\) and that a similar sum in
 vector \(S_{J}\) equals the sampled judges \((n^{s}_{J})\). Conversely,
@@ -1495,10 +1494,8 @@ similar sum in vector \(S_{JK}\) represents the total sampled judgments
 across all judges \((n^{s}_{J} \cdot n^{s}_{K})\).
 
 Finally, we define the \emph{sample design} vector \(S\) in equation
-(\ref{eq-mat25}), which maps each element of \(S_{IA}\) to every
-component of \(S_{JK}\). Essentially, this vector serves as the sampled
-equivalent of the \(R\) matrix defined in equation (\ref{eq-mat12}),
-where the sum of its elements represents the total data sample
+(\ref{eq-mat25}), which maps each element of \(S_{IA}\) to every element
+of \(S_{JK}\). The sum of its elements represents the total data sample
 \(n^{s} = \binom{n^{s}_{I} \cdot n^{s}_{A}}{2} \cdot n^{s}_{J} \cdot n^{s}_{K}\).
 
 \begin{equation}\phantomsection\label{eq-mat25}{
@@ -1519,16 +1516,6 @@ the conceptual-population model. Following the convention of
 the conceptual-population outcome \(O^{cp}_{R}\) as unobserved,
 emphasizing that researchers cannot directly access this outcome due to
 the sampling mechanism.
-
-Additionally, the DAG depicts the \emph{sample design} vector \(S\) as a
-causal factor influencing the sample-comparison outcome \(O^{sc}_{R}\).
-A square encloses this vector, indicating that it is a conditioned
-variable. In this context, \emph{conditioning} means restricting the
-statistical analysis to a specific subset of the population based on the
-values of a given variable \citep[pp.~32]{Neal_2020}. Thus, the vector
-\(S\) is responsible for selecting the subset of observation from the
-conceptual-population outcome \(O^{cp}_{R}\), generating the
-sample-comparison outcome \(O^{sc}_{R}\).
 
 \begin{figure}[H]
 
@@ -1574,32 +1561,35 @@ mechanism}
 
 \end{figure}%
 
+The DAG also depicts the \emph{sample design} vector \(S\) as a causal
+factor influencing the sample-comparison outcome \(O^{sc}_{R}\). A
+square encloses this vector, indicating that it is a conditioned
+variable. In this context, \emph{conditioning} means restricting the
+statistical analysis to a specific subset of the population based on the
+values of a conditioned variable \citep[pp.~32]{Neal_2020}. Essentially,
+\(S\) serves as the sample equivalent for the \(R\) matrix (see equation
+(\ref{eq-mat12})), that is, this vector determines \emph{which repeated
+comparisons a subset of judges makes for a subset of stimuli produced by
+a subset of individuals} from the conceptual-population, ultimately
+generating the sample-comparison outcome \(O^{sc}_{R}\) from the
+conceptual-population outcome \(O^{cp}_{R}\).
+
+Notably, the DAG shows that \(S\) is independent of all other variables
+in the model. This implies that the conceptual model represented in
+DAG~\ref{fig-cj12_dag} applies exclusively to Simple Random Sampling
+(SRS) designs \citep[pp.~150]{Kohler_et_al_2019}. In these designs, each
+judgment, judge, stimulus, and individual has the same probability of
+being included in the sample as any other observation within their
+respective groups \citep[pp.~16-112]{Lawson_2015}.
+
+However, because CJ experiments rarely exhaustively pair sampled
+judgments, judges, stimuli, and individuals--due to concerns about the
+practical feasibility of the comparison task, like in
+\citet[p.~5]{Boonen_et_al_2020}--a realistic scenario must account for
+judges comparing only specific stimuli from certain individuals.
+
 \subsubsection{The comparison
 mechanism}\label{sec-theory-theoretical_SC2}
-
-Conversely, we make the scenario depicted in
-Section~\ref{sec-theory-theoretical_SC1} more realistic by integrating
-the comparison mechanism, that is, we assume that researchers do not
-have access to \emph{all comparisons} from the sample, but rather a
-sufficient number of comparisons \((n_{C})\) so that a proportion,
-\(P(B>A)\), may be determined for each pair of stimuli
-\citep[pp.~267]{Thurstone_1927b}. Figure~\ref{fig-cj14} illustrates this
-model, incorporating both the sample and comparison mechanisms.
-
-Following the convention of \citet[pp.~499-516]{McElreath_2020}, the
-DAG~\ref{fig-cj14_dag} depicts the sample-comparison outcome
-\(O^{sc}_{R}\) as an unobserved variable, emphasizing the researchers'
-inability to access such an outcome due to the comparison mechanism.
-Moreover, the DAG shows the conditioned \emph{comparison design}
-variable \(C\), which causally influence the observed outcome \(O_{R}\).
-This variable reflects how this observed outcome is a sample drawn from
-the sample-comparison outcome \(O^{sp}_{R}\). Specifically, the variable
-is a vector \(C = \{ c_{1}, \dots, c_{n} \}\), where \(n\) corresponds
-to the number of rows in the matrix \(R\) (refer to
-Section~\ref{sec-theory-theoretical_P2}), and each \(c_{i}\) is a binary
-variable indicating the presence \((1)\) or absence \((0)\) of data in
-the corresponding positions of the sample-comparison outcome
-\(O^{sp}_{R}\). Specifically,
 
 \[
 c_i = \begin{cases} 
@@ -1652,8 +1642,6 @@ c_i = \begin{cases}
 comparison mechanisms}
 
 \end{figure}%
-
-Notice,
 
 \section{Abandoning the BTL model}\label{sec-statistical}
 
