@@ -1172,18 +1172,6 @@ R = \begin{bmatrix}
 \end{bmatrix}
 }\end{equation}
 
-Now, using equations (\ref{eq-mat11}) and (\ref{eq-mat12}), we can
-re-express SCM~\ref{fig-cj03_scm} and DAG~\ref{fig-cj03_dag} in an
-equivalent vectorized form, as shown in Figure~\ref{fig-cj04}. In this
-depiction, the outcome \(O^{cp}_{R}\), the texts' discriminal difference
-\(D_{R}\), their discriminal processes \(T_{IA}\), and the judges'
-biases \(B_{JK}\) are represented as vectors rather than scalar values.
-These vectors capture all the observations from the conceptual
-population. Specifically, \(O^{cp}_{R}\) and \(D_{R}\) are observed and
-latent vectors of length \(n\), respectively. Moreover, \(T_{IA}\) and
-\(B_{JK}\) are latent vectors of lengths \(n_{I} \cdot n_{A}\) and
-\(n_{J} \cdot n_{K}\), respectively.
-
 \begin{figure}[H]
 
 \begin{minipage}{\linewidth}
@@ -1218,6 +1206,18 @@ latent vectors of length \(n\), respectively. Moreover, \(T_{IA}\) and
 \caption{\label{fig-cj04}Conceptual-population model, vectorized form.}
 
 \end{figure}%
+
+Now, using equations (\ref{eq-mat11}) and (\ref{eq-mat12}), we can
+re-express SCM~\ref{fig-cj03_scm} and DAG~\ref{fig-cj03_dag} in an
+equivalent vectorized form, as shown in Figure~\ref{fig-cj04}. In this
+depiction, the outcome \(O^{cp}_{R}\), the texts' discriminal difference
+\(D_{R}\), their discriminal processes \(T_{IA}\), and the judges'
+biases \(B_{JK}\) are represented as vectors rather than scalar values.
+These vectors capture all the observations from the conceptual
+population. Specifically, \(O^{cp}_{R}\) and \(D_{R}\) are observed and
+latent vectors of length \(n\), respectively. Moreover, \(T_{IA}\) and
+\(B_{JK}\) are latent vectors of lengths \(n_{I} \cdot n_{A}\) and
+\(n_{J} \cdot n_{K}\), respectively.
 
 \subsubsection{Integrating hierarchical structural
 components}\label{sec-theory-theoretical_P3}
@@ -1372,7 +1372,6 @@ process using the binary vector variables \(S_{I}\), \(S_{J}\),
 \begin{equation}\phantomsection\label{eq-mat21}{
 S_{I} = \begin{bmatrix}
 i_{(1)} \\
-i_{(2)} \\
 \vdots \\
 i_{(h)} \\
 \vdots \\
@@ -1382,7 +1381,6 @@ i_{(nI)}
 \end{bmatrix} ; \;
 S_{J} = \begin{bmatrix}
 j_{(1)} \\
-j_{(2)} \\
 \vdots \\
 j_{(j)} \\
 \vdots \\
@@ -1390,7 +1388,6 @@ j_{(nJ)}
 \end{bmatrix} ; \;
 S_{IA} = \begin{bmatrix}
 ia_{(1)} \\
-ia_{(2)} \\
 \vdots \\
 ia_{(ia)} \\
 \vdots \\
@@ -1398,7 +1395,6 @@ ia_{(nI \cdot nA)} \\
 \end{bmatrix} ; \;
 S_{JK} = \begin{bmatrix}
 jk_{(1)} \\
-jk_{(2)} \\
 \vdots \\
 jk_{(jk)} \\
 \vdots \\
@@ -1504,7 +1500,6 @@ each pair of sampled individuals from the population.
 \begin{equation}\phantomsection\label{eq-mat25}{
 S = \begin{bmatrix}
 s_{(1)} \\
-s_{(2)} \\
 \vdots \\
 s_{(s)} \\
 \vdots \\
@@ -1586,9 +1581,9 @@ judgment, judge, stimulus, and individual has the same probability of
 being included in the sample as any other observation within their
 respective groups \citep[pp.~16-112]{Lawson_2015}.
 
-However, because CJ experiments rarely use the exhaustive pairing of the
-sampled judgments, judges, stimuli, and individuals --due to concerns
-about the practical feasibility of the comparison task, like in
+However, because CJ experiments rarely use the exhaustive pairing of
+sampled judges, stimuli, and individuals --due to concerns about the
+practical feasibility of the comparison task, like in
 \citet[p.~5]{Boonen_et_al_2020}-- a realistic scenario must also account
 for judges comparing only specific stimuli from certain individuals.
 
