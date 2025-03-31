@@ -837,7 +837,7 @@ text (trait). Based on this setup, researchers can reformulate the
 research question as the estimand: ``\emph{On average}, is there a
 difference in the ability to produce high-quality written texts between
 the two groups of students?''. Following current CJ practices,
-researchers then rely on estimates from the BTL model, or its
+researchers rely on estimates from the BTL model, or its
 transformations, to approximate this estimand.
 
 However, Section~\ref{sec-theory-issues} presents compelling evidence
@@ -1017,10 +1017,10 @@ judges' biases (open circles).
 \subsubsection{\texorpdfstring{The \emph{conceptual population} data
 structure}{The conceptual population data structure}}\label{sec-theory-theoretical_P2}
 
-Although specifying a system's data structure is not mandatory when
-using SCMs and DAGs, defining one in this case can improve clarity and
-facilitate the description of the system. Thus, to re-express the scalar
-form of the CJ system shown in Figure~\ref{fig-cj03} into an equivalent
+Although specifying a data structure is not mandatory when using SCMs
+and DAGs, defining one in this case can improve clarity and facilitate
+the description of the system. Thus, to re-express the scalar form of
+the CJ system shown in Figure~\ref{fig-cj03} into an equivalent
 vectorized form, we first define the vectors \(I\) and \(J\), along with
 the matrices \(IA\) and \(JK\), as follows:
 
@@ -1077,12 +1077,12 @@ Similarly, each element of \(J\) corresponds to a unique judge \(j\),
 with \(n_{J}\) indicating the total number of judges. Moreover, each row
 of \(IA\) represents a unique pairing of individuals \(h, i\) with
 stimuli \(a, b\). As a result, the matrix \(IA\) contains
-\((n_{I} \cdot n_{A})\) rows and \(2\) columns, where \(n_{A}\)
-specifies the number of stimuli available per individual. Likewise, each
-row of \(JK\) associates a judge \(j\) with a judgment index \(k\).
-Consequently, the matrix \(JK\) has \((n_{J} \cdot n_{K})\) rows and
-\(2\) columns, where \(n_{K}\) indicates the number of judgments each
-judge makes.
+\(n_{I} \cdot n_{A}\) rows and \(2\) columns, where \(n_{A}\) specifies
+the number of stimuli available per individual. Likewise, each row of
+\(JK\) associates a judge \(j\) with a judgment index \(k\).
+Consequently, the matrix \(JK\) has \(n_{J} \cdot n_{K}\) rows and \(2\)
+columns, where \(n_{K}\) indicates the number of judgments each judge
+makes.
 
 Additionally, we construct the matrix \(R\) to map each row of the
 \(IA\) matrix with a corresponding row from the \(JK\) matrix. Thus,
@@ -1181,8 +1181,8 @@ biases \(B_{JK}\) are represented as vectors rather than scalar values.
 These vectors capture all the observations from the conceptual
 population. Specifically, \(O^{cp}_{R}\) and \(D_{R}\) are observed and
 latent vectors of length \(n\), respectively. Moreover, \(T_{IA}\) and
-\(B_{JK}\) are latent vectors of lengths \((n_{I} \cdot n_{A})\) and
-\((n_{J} \cdot n_{K})\), respectively.
+\(B_{JK}\) are latent vectors of lengths \(n_{I} \cdot n_{A}\) and
+\(n_{J} \cdot n_{K}\), respectively.
 
 \begin{figure}[H]
 
@@ -1230,10 +1230,9 @@ structural components} to examine how different teaching methods
 influence students' writing ability. Each structural component defines
 how observed or latent variables affect the primary latent variable of
 interest \citep{Everitt_et_al_2010}. Their hierarchical nature enables
-researchers to test hypotheses while accounting for uncertainties
-associated with trait estimation (see Section~\ref{sec-theory-issue2}),
-and when stimuli exhibit a hierarchical structure (see
-Section~\ref{sec-theory-issue1b}).
+researchers to test hypotheses considering the hierarchical structure of
+stimuli (see Section~\ref{sec-theory-issue1b}) and the uncertainties in
+trait estimation (see Section~\ref{sec-theory-issue2}).
 
 The top branch of DAG~\ref{fig-cj09_dag} illustrates the first
 component, where \emph{relevant} \footnote{Here, \emph{relevant} refers
@@ -1256,16 +1255,16 @@ component, where \emph{relevant} \footnote{Here, \emph{relevant} refers
 variable representing students' writing-quality trait \((T_{I})\). It
 also shows how \(T_{I}\) and \emph{relevant} \footnote{refer to footnote
   1.} text-related variables \((X_{IA})\) (e.g., text length) causally
-influence the texts' written-quality trait \((T_{IA})\), the primary
-latent variable of interest. Additionally, the branch accounts for
-idiosyncratic errors: \(e_{I}\) captures variations in students' traits
-unexplained by \(X_{I}\), while \(e_{IA}\) captures variations in texts'
-traits unexplained by \(T_{I}\) or \(X_{IA}\). Here, \(X_{I}\) is an
-observed matrix with \(n_{I}\) rows and \(q_{I}\) columns (variables),
-and both \(e_{I}\) and \(T_{I}\) are latent vectors of length \(n_{I}\).
-Similarly, \(X_{IA}\) is an observed matrix with dimension
-\(n_{I} \cdot n_{A}\) rows and \(q_{IA}\) columns (variables), while
-\(e_{IA}\) and \(T_{IA}\) are latent vectors of length
+influence the texts' written-quality trait \((T_{IA})\), the first
+primary latent variable of interest. Additionally, the branch accounts
+for idiosyncratic errors: \(e_{I}\) captures variations in students'
+traits unexplained by \(X_{I}\), while \(e_{IA}\) captures variations in
+texts' traits unexplained by \(T_{I}\) or \(X_{IA}\). Here, \(X_{I}\) is
+an observed matrix with \(n_{I}\) rows and \(q_{I}\) columns
+(variables), and both \(e_{I}\) and \(T_{I}\) are latent vectors of
+length \(n_{I}\). Similarly, \(X_{IA}\) is an observed matrix with
+dimension \(n_{I} \cdot n_{A}\) rows and \(q_{IA}\) columns (variables),
+while \(e_{IA}\) and \(T_{IA}\) are latent vectors of length
 \(n_{I} \cdot n_{A}\).
 
 \begin{figure}[H]
@@ -1318,8 +1317,8 @@ causally influence the latent variable representing judges' bias
 \((B_{J})\). It also shows how \(B_{J}\) and \emph{relevant} \footnote{refer
   to footnote 1.} judgment-related variables \((Z_{JK})\) (e.g., the
 number of judgments a judge makes) causally influence the biases
-associated with each text \(B_{JK}\), the primary latent variable of
-interest. Additionally, the branch accounts for idiosyncratic errors:
+associated with each text \(B_{JK}\), the second primary latent variable
+of interest. Additionally, the branch accounts for idiosyncratic errors:
 \(e_{J}\) captures variations in judges' bias unexplained by \(Z_{J}\),
 while \(e_{JK}\) captures variations in judgments unexplained by
 \(B_{J}\) or \(Z_{JK}\). Here, \(Z_{J}\) is an observed matrix with
@@ -1330,8 +1329,8 @@ is an observed matrix with dimension \(n_{J} \cdot n_{K}\) rows and
 latent vectors of length \(n_{J} \cdot n_{K}\).
 
 Notably, all variables and functions shown in SCM~\ref{fig-cj09_scm} and
-DAG~\ref{fig-cj09_dag} define the set of endogenous variables \(V\),
-structural equations \(F\), and exogenous variables \(E\) for the
+DAG~\ref{fig-cj09_dag} are part of the set of endogenous variables
+\(V\), structural equations \(F\), and exogenous variables \(E\) for the
 conceptual-population model. Additionally, the figures demonstrate that
 all exogenous variables are independent of one another, as indicated by
 the relationships \(e_{IA} \:\bot\:\{ e_{I}, e_{JK}, e_{J} \}\),
@@ -1489,14 +1488,18 @@ Additionally, it shows that the sum of observed elements in \(S_{I}\)
 equals the sampled students \((n^{s}_{I})\) and that a similar sum in
 vector \(S_{J}\) equals the sampled judges \((n^{s}_{J})\). Conversely,
 the sum of observed elements in \(S_{IA}\) represents the total sampled
-texts across all students \((n^{s}_{I} \cdot n^{s}_{A})\), while a
-similar sum in vector \(S_{JK}\) represents the total sampled judgments
-across all judges \((n^{s}_{J} \cdot n^{s}_{K})\).
+texts across all sampled students \((n^{s}_{I} \cdot n^{s}_{A})\), while
+a similar sum in vector \(S_{JK}\) represents the total sampled
+judgments across all sampled judges \((n^{s}_{J} \cdot n^{s}_{K})\).
 
 Finally, we define the \emph{sample design} vector \(S\) in equation
 (\ref{eq-mat25}), which maps each element of \(S_{IA}\) to every element
 of \(S_{JK}\). The sum of its elements represents the total data sample
 \(n^{s} = \binom{n^{s}_{I} \cdot n^{s}_{A}}{2} \cdot n^{s}_{J} \cdot n^{s}_{K}\).
+Here, the term \({n^{s}_{I} \cdot n^{s}_{A} \choose 2}\) represents the
+binomial coefficient, which quantifies the total number of unique
+comparisons possible between every pair of sampled stimuli generated by
+each pair of sampled individuals from the population.
 
 \begin{equation}\phantomsection\label{eq-mat25}{
 S = \begin{bmatrix}
@@ -1566,13 +1569,14 @@ factor influencing the sample-comparison outcome \(O^{sc}_{R}\). A
 square encloses this vector, indicating that it is a conditioned
 variable. In this context, \emph{conditioning} means restricting the
 statistical analysis to a specific subset of the population based on the
-values of a conditioned variable \citep[pp.~32]{Neal_2020}. Essentially,
-\(S\) serves as the sample equivalent for the \(R\) matrix (see equation
-(\ref{eq-mat12})), that is, this vector determines \emph{which repeated
-comparisons a subset of judges makes for a subset of stimuli produced by
-a subset of individuals} from the conceptual-population, ultimately
-generating the sample-comparison outcome \(O^{sc}_{R}\) from the
-conceptual-population outcome \(O^{cp}_{R}\).
+values of a conditioned variable \citep[pp.~32]{Neal_2020}, in this case
+\(S\). Essentially, \(S\) serves as the sample equivalent for the \(R\)
+matrix (see equation (\ref{eq-mat12})), that is, this vector determines
+\emph{which repeated comparisons the subset of judges makes for the
+subset of stimuli produced by the subset of individuals} sampled from
+the conceptual-population. This process ultimately generates the
+sample-comparison outcome \(O^{sc}_{R}\) from the conceptual-population
+outcome \(O^{cp}_{R}\).
 
 Notably, the DAG shows that \(S\) is independent of all other variables
 in the model. This implies that the conceptual model represented in
@@ -1582,11 +1586,11 @@ judgment, judge, stimulus, and individual has the same probability of
 being included in the sample as any other observation within their
 respective groups \citep[pp.~16-112]{Lawson_2015}.
 
-However, because CJ experiments rarely exhaustively pair sampled
-judgments, judges, stimuli, and individuals--due to concerns about the
-practical feasibility of the comparison task, like in
-\citet[p.~5]{Boonen_et_al_2020}--a realistic scenario must account for
-judges comparing only specific stimuli from certain individuals.
+However, because CJ experiments rarely use the exhaustive pairing of the
+sampled judgments, judges, stimuli, and individuals --due to concerns
+about the practical feasibility of the comparison task, like in
+\citet[p.~5]{Boonen_et_al_2020}-- a realistic scenario must also account
+for judges comparing only specific stimuli from certain individuals.
 
 \subsubsection{The comparison
 mechanism}\label{sec-theory-theoretical_SC2}
