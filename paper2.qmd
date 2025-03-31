@@ -581,9 +581,6 @@ R = \begin{bmatrix}
 \end{bmatrix}
 $$ {#eq-mat13}
 
-<!-- 3. how de we use that data structure? -->
-Now, using equations ([-@eq-mat11]) and ([-@eq-mat12]), we can re-express [SCM -@fig-cj03_scm] and [DAG -@fig-cj03_dag] in an equivalent vectorized form, as shown in @fig-cj04. In this depiction, the outcome $O^{cp}_{R}$, the texts' discriminal difference $D_{R}$, their discriminal processes $T_{IA}$, and the judges' biases $B_{JK}$ are represented as vectors rather than scalar values. These vectors capture all the observations from the conceptual population. Specifically, $O^{cp}_{R}$ and $D_{R}$ are observed and latent vectors of length $n$, respectively. Moreover, $T_{IA}$ and $B_{JK}$ are latent vectors of lengths $n_{I} \cdot n_{A}$ and $n_{J} \cdot n_{K}$, respectively.
-
 ::: {#fig-cj04 layout-nrow=2}
 
 ::: {#fig-cj04_scm fig-align="center" fig-pos="H"}
@@ -602,6 +599,9 @@ SCM
 
 Conceptual-population model, vectorized form.
 :::
+
+<!-- 3. how de we use that data structure? -->
+Now, using equations ([-@eq-mat11]) and ([-@eq-mat12]), we can re-express [SCM -@fig-cj03_scm] and [DAG -@fig-cj03_dag] in an equivalent vectorized form, as shown in @fig-cj04. In this depiction, the outcome $O^{cp}_{R}$, the texts' discriminal difference $D_{R}$, their discriminal processes $T_{IA}$, and the judges' biases $B_{JK}$ are represented as vectors rather than scalar values. These vectors capture all the observations from the conceptual population. Specifically, $O^{cp}_{R}$ and $D_{R}$ are observed and latent vectors of length $n$, respectively. Moreover, $T_{IA}$ and $B_{JK}$ are latent vectors of lengths $n_{I} \cdot n_{A}$ and $n_{J} \cdot n_{K}$, respectively.
 
 
 ### Integrating hierarchical structural components {#sec-theory-theoretical_P3}
@@ -678,7 +678,6 @@ To incorporate the sampling mechanism and facilitate the interpretation of the s
 $$
 S_{I} = \begin{bmatrix}
 i_{(1)} \\
-i_{(2)} \\
 \vdots \\
 i_{(h)} \\
 \vdots \\
@@ -688,7 +687,6 @@ i_{(nI)}
 \end{bmatrix} ; \;
 S_{J} = \begin{bmatrix}
 j_{(1)} \\
-j_{(2)} \\
 \vdots \\
 j_{(j)} \\
 \vdots \\
@@ -696,7 +694,6 @@ j_{(nJ)}
 \end{bmatrix} ; \;
 S_{IA} = \begin{bmatrix}
 ia_{(1)} \\
-ia_{(2)} \\
 \vdots \\
 ia_{(ia)} \\
 \vdots \\
@@ -704,7 +701,6 @@ ia_{(nI \cdot nA)} \\
 \end{bmatrix} ; \;
 S_{JK} = \begin{bmatrix}
 jk_{(1)} \\
-jk_{(2)} \\
 \vdots \\
 jk_{(jk)} \\
 \vdots \\
@@ -777,7 +773,6 @@ Finally, we define the *sample design* vector $S$ in equation ([-@eq-mat25]), wh
 $$
 S = \begin{bmatrix}
 s_{(1)} \\
-s_{(2)} \\
 \vdots \\
 s_{(s)} \\
 \vdots \\
@@ -821,7 +816,7 @@ Notably, the DAG shows that $S$ is independent of all other variables in the mod
 
 <!-- Follow conventions of McElreath (2020) NOT Schuessler et al (2023) regarding selection variables and missing data. -->
 
-However, because CJ experiments rarely use the exhaustive pairing of the sampled judgments, judges, stimuli, and individuals --due to concerns about the practical feasibility of the comparison task, like in @Boonen_et_al_2020 [p. 5]-- a realistic scenario must also account for judges comparing only specific stimuli from certain individuals.
+However, because CJ experiments rarely use the exhaustive pairing of sampled judges, stimuli, and individuals --due to concerns about the practical feasibility of the comparison task, like in @Boonen_et_al_2020 [p. 5]-- a realistic scenario must also account for judges comparing only specific stimuli from certain individuals.
 
 
 ### The comparison mechanism {#sec-theory-theoretical_SC2}
