@@ -651,7 +651,7 @@ Overall, the conceptual-population model extends Thurstone's general form by int
 <!-- recording: Sven 25.03.31; time: 00:34:00 - 00:38:50 -->
 
 <!-- 1. What is the more realistic scenario: the sample mechanism -->
-The sample-comparison model presents a more realistic scenario than the conceptual-population model. Expressly, it assumes researchers work with a data sample consisting of a limited number of repeated judgments $(n^{s}_{K})$ from a sample of judges $(n^{s}_{J})$ and a specific number of texts $(n^{s}_{A})$ from a sample of students $(n^{s}_{I})$, all drawn from the conceptual population. In a subsequent step, it assumes that judges do not perform *all possible stimuli comparisons* within the data sample. Instead, they conduct a sufficient number of stimuli comparisons, $n_{C}$, to ensure an accurate estimation of the proportion $P(B>A)$.
+The sample-comparison model presents a more realistic scenario than the conceptual-population model. Expressly, it assumes researchers work with a data sample consisting of a limited number of repeated judgments $(n^{s}_{K})$ from a sample of judges $(n^{s}_{J})$ and a specific number of texts $(n^{s}_{A})$ from a sample of students $(n^{s}_{I})$, all drawn from the conceptual population. In a subsequent step, it assumes that judges do not perform *all repeated judgments* within the data sample. Instead, they conduct a sufficient number of stimuli comparisons, $n_{C}$, to ensure an accurate estimation of the proportion $P(B>A)$.
 
 
 ### The sample mechanism {#sec-theory-theoretical_SC1}
