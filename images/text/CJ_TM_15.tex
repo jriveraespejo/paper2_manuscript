@@ -1,0 +1,105 @@
+\documentclass[tikz, border=1mm]{standalone}
+\usepackage{tikz} 
+\usetikzlibrary{arrows.meta}
+\usepackage{pgfplots}
+
+\begin{document}
+
+\begin{tikzpicture}
+
+    %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+    
+    % "true" discriminal process for sub-unit
+    \node at (-3.8,1.89) {$T_{IA}$}; %[gray]
+    \draw[{Circle[open]}-{latex}](-4,1.59) to (-1,-0.25); %,gray
+
+    %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+    % "true" judgments' bias k_{j}
+    \node at (-3.8,-2.2) {$B_{JK}$}; %[gray]
+    \draw[{Circle[open]}-{latex}](-4,-1.9) to (-1,-0.35); %,gray
+
+    %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+    % discriminal difference
+    \node at (-0.8,0) {$D_{R}$}; %[gray]
+    \draw[{Circle[open]}-{latex}{Circle}](-1,-0.3) to (1.1,-0.3); %,gray
+
+    % sampling mechanism
+    \node[rectangle,draw] at (-1,1.89) {$S$}; %,gray
+    \draw[{Circle}-{latex}](-1,1.59) to (1,-0.25); %,gray
+
+    % comparison mechanism 
+    \node[rectangle,draw] at (-1,-2.2) {$C$}; %,gray
+    \draw[{Circle}-{latex}](-1,-1.9) to (1,-0.35); %,gray
+    
+    % observed outcome
+    \node at (1.2,0) {$O_{R}$}; %[gray]
+    
+    %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+    % "true" discriminal process of unit
+    \node at (-5.9,3.1) {$T_{I}$}; %[gray]
+    \draw[{Circle[open]}-{latex}](-6,2.8) to (-4,1.64); %,gray
+    
+    % sub-units' cluster
+    \node[font=\scriptsize] at (-6,2.39) {Stimuli}; %,gray
+    \draw[dashed] (-6.5,0.39)--(-5.5,0.39)--(-5.5,2.19)--(-6.5,2.19)--(-6.5,0.39); %,gray
+    
+    % sub-units error
+    \node at (-6,1.89) {$e_{IA}$}; %[gray]
+    \draw[{Circle[open]}-{latex}](-6,1.59) to (-4,1.59); %,gray
+    
+    % predictors for sub-unit
+    \node at (-6,0.93) {$X_{IA}$}; %[gray]
+    \draw[{Circle}-{latex}](-6,0.59) to (-4,1.54); %,gray
+
+    %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+    % units' cluster
+    \node[font=\scriptsize] at (-7.4,4.5) {Individuals}; %,gray
+    \draw[dashed] (-7.9,2.5)--(-6.9,2.5)--(-6.9,4.3)--(-7.9,4.3)--(-7.9,2.5); %,gray
+    
+    % predictors for units
+    \node at (-7.5,4) {$X_{I}$}; %[gray]
+    \draw[{Circle}-{latex}](-7.5,3.7) to (-6,2.8); %,gray
+
+    % units trait error
+    \node at (-7.5,3.05) {$e_{I}$}; %[gray]
+    \draw[{Circle[open]}-{latex}](-7.5,2.75) to (-6,2.75); %,gray
+
+    %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+    % judges' bias
+    \node at (-5.9,-3.2) {$B_{J}$}; %[gray]
+    \draw[{Circle[open]}-{latex}](-6,-2.9) to (-4,-1.95); %,gray
+
+    % judgments' cluster
+    \node[font=\scriptsize] at (-6,-0.5) {Judgments}; %,gray
+    \draw[dashed] (-6.5,-2.5)--(-5.5,-2.5)--(-5.5,-0.7)--(-6.5,-0.7)--(-6.5,-2.5); %,gray
+    
+    % judgments' bias error 
+    \node at (-6,-2.2) {$e_{JK}$}; %[gray]
+    \draw[{Circle[open]}-{latex}](-6,-1.9) to (-4,-1.9); %,gray
+    
+    % predictors for judgments
+    \node at (-6,-1.2) {$Z_{JK}$}; %[gray]
+    \draw[{Circle}-{latex}](-6,-0.9) to (-4,-1.85); %,gray
+    
+    %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+    % judges' cluster
+    \node[font=\scriptsize] at (-7.5,-2.5) {Judges}; %,gray
+    \draw[dashed] (-7.9,-4.3)--(-6.9,-4.3)--(-6.9,-2.7)--(-7.9,-2.7)--(-7.9,-4.3); %,gray
+    
+    % predictors for judges' bias
+    \node at (-7.5,-4) {$Z_{J}$}; %[gray]
+    \draw[{Circle}-{latex}](-7.5,-3.7) to (-6,-2.95); %,gray
+    
+    % judges' bias error
+    \node at (-7.5,-3.2) {$e_{J}$}; %[gray]
+    \draw[{Circle[open]}-{latex}](-7.5,-2.9) to (-6,-2.9); %,gray
+        
+\end{tikzpicture}
+
+\end{document}

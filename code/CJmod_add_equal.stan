@@ -15,13 +15,13 @@ data{
     int sup_ZKd;  // max. number of categories in ZK
     
     // comparison data
-    array[ns] int<lower=1, upper=nsI> Rs1;   // individual (left)
-    array[ns] int<lower=1, upper=nsA> Ps1;   // stimuli (left)
-    array[ns] int<lower=1, upper=nsI> Rs2;   // individual (right)
-    array[ns] int<lower=1, upper=nsA> Ps2;   // stimuli (right)
-    array[ns] int<lower=1, upper=nsJ> Us;    // judges
-    array[ns] int<lower=1, upper=nsK> Vs;    // judgments
-    array[ns] int<lower=0, upper=1> ORPUV;   // outcome (dichotomous)
+    array[ns] int<lower=1, upper=nsI> R1;   // individual (left)
+    array[ns] int<lower=1, upper=nsA> R2;   // stimuli (left)
+    array[ns] int<lower=1, upper=nsI> R3;   // individual (right)
+    array[ns] int<lower=1, upper=nsA> R4;   // stimuli (right)
+    array[ns] int<lower=1, upper=nsJ> R5;    // judges
+    array[ns] int<lower=1, upper=nsK> R6;    // judgments
+    array[ns] int<lower=0, upper=1> OR;   // outcome (dichotomous)
     
     // individual-stimuli data
     array[nsI*nsA] int<lower=1, upper=nsI> IA1s;    // individuals
@@ -96,7 +96,7 @@ transformed parameters{
       
         // error calculation
         eJ[ JK1s[jk] ] = zeJ[ JK1s[jk] ];                             // identification: sJ = 1
-        eJK[ JK1s[jk], JK2s[jk] ] = pJK * zeJK[ JK1s[jk], JK2s[jk] ]; // identification: pJK prop. of previous level
+        eJK[ JK1s[jk], JK2s[jk] ] = pJK * zeJK[ JK1s[jk], JK2s[jk] ]; // identification: pJK prop. of 1
         
         // trait calculation
         BJ[ JK1s[jk] ] = bZJc*ZJc[ jk ] + bZJd[ ZJd[jk] ] + eJ[ JK1s[jk] ];
@@ -108,7 +108,7 @@ transformed parameters{
         
         // error calculation
         eJ[ JK1s[jk] ] = zeJ[ JK1s[jk] ];                             // identification: sJ = 1
-        eJK[ JK1s[jk], JK2s[jk] ] = pJK * zeJK[ JK1s[jk], JK2s[jk] ]; // identification: pJK prop. of previous level
+        eJK[ JK1s[jk], JK2s[jk] ] = pJK * zeJK[ JK1s[jk], JK2s[jk] ]; // identification: pJK prop. of 1
         
         // trait calculation
         BJ[ JK1s[jk] ] = bZJc*ZJc[ jk ] + bZJd[ ZJd[jk] ] + eJ[ JK1s[jk] ];
@@ -148,9 +148,9 @@ model{
     
     // likelihood
     for( n in 1:ns ){
-      DRPUV[n] = ( TIA[ Rs1[n], Ps1[n] ] - TIA[ Rs2[n], Ps2[n] ] ) + BJK[ Us[n], Vs[n] ];
+      DRPUV[n] = ( TIA[ R1[n], R2[n] ] - TIA[ R3[n], R4[n] ] ) + BJK[ R5[n], R6[n] ];
     }
-    ORPUV ~ bernoulli_logit( DRPUV );
+    OR ~ bernoulli_logit( DRPUV );
     
 }
 generated quantities{
@@ -161,8 +161,8 @@ generated quantities{
     
     // log-likelihood
     for( n in 1:ns ){
-      DRPUV[n] = ( TIA[ Rs1[n], Ps1[n] ] - TIA[ Rs2[n], Ps2[n] ] ) + BJK[ Us[n], Vs[n] ];
-      log_lik[n] = bernoulli_logit_lpmf( ORPUV[n] | DRPUV[n] );
+      DRPUV[n] = ( TIA[ R1[n], R2[n] ] - TIA[ R3[n], R4[n] ] ) + BJK[ R5[n], R6[n] ];
+      log_lik[n] = bernoulli_logit_lpmf( OR[n] | DRPUV[n] );
     }
     
 }
