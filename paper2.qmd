@@ -672,13 +672,13 @@ Building on the principles of Structural Equation Modeling (SEM) [@Hoyle_et_al_2
 <!-- This is a whole section  [@vanderLinden_et_al_2017_I, chap. 24] -->
 
 <!-- 2 Explaining what we did -->
-The top branch of [DAG -@fig-cj09_dag] illustrates the first component, where *relevant* [^2] student-related variables $(X_{I})$, such as teaching method, and students' idiosyncratic errors $e_{I}$ causally influence the latent variable representing students' writing-quality trait $(T_{I})$. The error term $e_{I}$ captures variations in students' traits unexplained by $X_{I}$. Here, $X_{I}$ is an observed matrix with $n_{I}$ rows and $q_{I}$ columns (variables), and both $e_{I}$ and $T_{I}$ are latent vectors of length $n_{I}$. Additionally, this branch shows how $T_{I}$, along with *relevant* [^3] text-related variables $(X_{IA})$ (e.g., text length), and texts' idiosyncratic errors $e_{IA}$ causally influence the texts' writing-quality trait $(T_{IA})$, the first primary latent variable of interest. The error term $e_{IA}$ captures variations in the texts' traits that remain unexplained by $T_{I}$ or $X_{IA}$. Here, $X_{IA}$ is an observed matrix with dimensions $n_{I} \cdot n_{A}$ rows and $q_{IA}$ columns (variables), while $e_{IA}$ and $T_{IA}$ are latent vectors of length $n_{I} \cdot n_{A}$.
+The top branch of [DAG -@fig-cj09_dag] illustrates the first component, where *relevant* [^2] student-related variables $(X_{I})$, such as teaching method, and students' idiosyncratic errors $e_{I}$ causally influence the latent variable representing students' writing-quality trait $(T_{I})$. The error term $e_{I}$ captures variations in students' traits unexplained by $X_{I}$. Here, $X_{I}$ is an observed matrix with $n_{I}$ rows and $q_{I}$ columns (variables), and both $e_{I}$ and $T_{I}$ are latent vectors of length $n_{I}$. Additionally, this branch shows how $T_{I}$, along with *relevant* [^3] text-related variables $(X_{IA})$ (e.g., text length), and texts' idiosyncratic errors $e_{IA}$ causally influence the texts' writing-quality trait $(T_{IA})$, the first primary latent variable of interest. The error term $e_{IA}$ captures variations in the texts' traits that remain unexplained by $T_{I}$ or $X_{IA}$. Here, $X_{IA}$ is an observed matrix with dimensions $n_{I} \cdot n_{A}$ rows and $q_{IA}$ columns (variables), while $e_{IA}$ and $T_{IA}$ are latent matrices with $n_{I}$ rows and $n_{A}$ columns.
 
 [^2]: *Relevant variables* are those that satisfy the *backdoor criterion* [@Neal_2020, pp 37], that is, they belong to a *sufficient adjustment set* [@Pearl_2009; @Pearl_et_al_2016; @Morgan_et_al_2014]. A *sufficient* set (potentially empty) blocks all non-causal paths between a predictor and an outcome without opening new ones [@Pearl_2009]. Refer also to footnote 1.
 
 [^3]: refer to footnote 2.
 
-Similarly, the bottom branch of [DAG -@fig-cj09_dag] depicts the second component, where *relevant* [^4] judge-related variables $(Z_{J})$, such as judgment expertise, and judges' idiosyncratic errors $e_{J}$ causally influence the latent variable representing judges' bias $(B_{J})$. The error $e_{J}$ captures variations in judges' bias unexplained by $Z_{J}$. Here, $Z_{J}$ is an observed matrix with $n_{J}$ rows and $q_{J}$ columns (variables), and both $e_{J}$ and $B_{J}$ are latent vectors of length $n_{J}$. Furthermore, the branch shows how $B_{J}$, along with *relevant* [^5] judgment-related variables $(Z_{JK})$ (e.g., the number of judgments a judge makes), and judgments' idiosyncratic errors $e_{JK}$ causally influence the biases associated with each text $B_{JK}$, the second primary latent variable of interest. The error $e_{JK}$ captures variations in judgments unexplained by $B_{J}$ or $Z_{JK}$. Here, $Z_{JK}$ is an observed matrix with dimension $n_{J} \cdot n_{K}$ rows and $q_{JK}$ columns (variables), while $e_{JK}$ and $B_{JK}$ are latent vectors of length $n_{J} \cdot n_{K}$.
+Similarly, the bottom branch of [DAG -@fig-cj09_dag] depicts the second component, where *relevant* [^4] judge-related variables $(Z_{J})$, such as judgment expertise, and judges' idiosyncratic errors $e_{J}$ causally influence the latent variable representing judges' bias $(B_{J})$. The error $e_{J}$ captures variations in judges' bias unexplained by $Z_{J}$. Here, $Z_{J}$ is an observed matrix with $n_{J}$ rows and $q_{J}$ columns (variables), and both $e_{J}$ and $B_{J}$ are latent vectors of length $n_{J}$. Furthermore, the branch shows how $B_{J}$, along with *relevant* [^5] judgment-related variables $(Z_{JK})$ (e.g., the number of judgments a judge makes), and judgments' idiosyncratic errors $e_{JK}$ causally influence the biases associated with each text $B_{JK}$, the second primary latent variable of interest. The error $e_{JK}$ captures variations in judgments unexplained by $B_{J}$ or $Z_{JK}$. Here, $Z_{JK}$ is an observed matrix with dimension $n_{J} \cdot n_{K}$ rows and $q_{JK}$ columns (variables), while $e_{JK}$ and $B_{JK}$ are latent latent matrices with $n_{J}$ rows and $n_{K}$ columns
 
 [^4]: refer to footnote 2.
 [^5]: refer to footnote 2.
@@ -722,7 +722,7 @@ Conceptual-population model, final vectorized form.
 <!-- recording: Sven 25.03.31; time: 00:34:00 - 00:38:50 -->
 
 <!-- 1. What is the more realistic scenario: the sample mechanism -->
-The sample-comparison model presents a more realistic scenario than the conceptual-population model. In @sec-theory-theoretical_SC1, it explicitly assumes researchers work with a data sample consisting of a limited number of repeated judgments $(n^{s}_{K})$ from a sample of judges $(n^{s}_{J})$ and a specific number of texts $(n^{s}_{A})$ from a sample of students $(n^{s}_{I})$, all drawn from the conceptual population. Moreover, in @sec-theory-theoretical_SC2, the model assumes that judges do not perform *all repeated judgments* within the data sample. Instead, they conduct a sufficient number of stimuli comparisons, $n_{C}$, to ensure an accurate estimation of the proportion $P(B>A)$.
+The sample-comparison model presents a more realistic scenario than the conceptual-population model. In @sec-theory-theoretical_SC1, it explicitly assumes researchers work with a data sample consisting of a limited number of repeated judgments $(n^{s}_{K})$ from a sample of judges $(n^{s}_{J})$ and a specific number of texts $(n^{s}_{A})$ from a sample of students $(n^{s}_{I})$, all drawn from the conceptual population. Furthermore, in @sec-theory-theoretical_SC2, the model assumes that judges do not perform *all repeated judgments* within the data sample. Instead, they conduct a sufficient number of stimuli comparisons, $n_{C}$, to ensure an accurate estimation of the proportion $P(B>A)$, as proposed by @Thurstone_1927b.
 
 <!-- It is assumed that the single observer compares each pair of stimuli a "sufficient number of times" so that a proportion, P(A>B), may be determined for each pair of stimuli [@Thurstone_1927b, pp. 267] -->
 
@@ -776,7 +776,7 @@ jk_{(nJ,nK)}
 \end{bmatrix}
 $$ {#eq-mat21}
 
-Where each element of $S_{I}$ is a binary value indicating the presence or absence of corresponding elements in the vector $I$, as in equation ([-@eq-mat22]). We apply the same logic to $S_{J}$, based on the vector $J$ (not shown). Thus, the vectors $S_{I}$ and $S_{J}$ contains $n_{I}$ and $n_{J}$ elements, respectively.
+Where each element of $S_{I}$ is a binary value indicating the presence or absence of corresponding elements in the vector $I$, as in equation ([-@eq-mat22]). We apply the same logic to $S_{J}$ using vector $J$ (not shown). Thus, the vectors $S_{I}$ and $S_{J}$ contains $n_{I}$ and $n_{J}$ elements, respectively.
 $$
 i_{(i)} = \begin{cases} 
 1 & \text{if data element } i \text{ from } I \text{ is sampled} \\
@@ -784,7 +784,7 @@ i_{(i)} = \begin{cases}
 \end{cases}
 $$ {#eq-mat22}
 
-Similarly, each element of $S_{IA}$ is a binary value indicating the presence or absence of data rows in the matrices $IA$, as defined in equation ([-@eq-mat23]). We apply the same logic to $S_{JK}$, based on the matrix $JK$ (not shown). Thus, the vectors $S_{IA}$ and $S_{JK}$ contains $n_{I} \cdot n_{A}$ and $n_{J} \cdot n_{K}$ elements, respectively. 
+Similarly, each element of $S_{IA}$ is a binary value indicating the presence or absence of data rows in the matrices $IA$, as defined in equation ([-@eq-mat23]). We apply the same logic to $S_{JK}$ using the matrix $JK$ (not shown). Thus, the vectors $S_{IA}$ and $S_{JK}$ contains $n_{I} \cdot n_{A}$ and $n_{J} \cdot n_{K}$ elements, respectively. 
 $$
 ia_{(i,a)} = \begin{cases} 
 1 & \text{if data elements } i,a \text{ from } IA \text{ are sampled} \\
@@ -792,7 +792,7 @@ ia_{(i,a)} = \begin{cases}
 \end{cases}
 $$ {#eq-mat23}
 
-We can visualize these vectors more clearly using the example in equation ([-@eq-mat13]). Suppose researchers exclude the second student and the third judge. They also omit the second text from each individual and the third repeated judgment from each judge. Given $n_{I} = 5$, $n_{A} = 2$, $n_{J} = 3$, and $n_{K} = 3$, these vectors take the following structure:
+We can visualize these vectors more clearly using the example in equation ([-@eq-mat13]). Suppose researchers exclude the second student and the third judge, and they also omit the second text from each individual and the third repeated judgment from each judge. Given $n_{I} = 5$, $n_{A} = 2$, $n_{J} = 3$, and $n_{K} = 3$, these vectors take the following structure:
 $$
 S_{I} = \begin{bmatrix}
 1 \\
@@ -857,7 +857,7 @@ s_{(h,i,a,b,j,k)} = \begin{cases}
 $$ {#eq-mat26}
 
 <!-- 2. Integrate the sample mechanism -->
-With the definition of $S$, we incorporate the sample mechanism into the conceptual-population model. Following the convention of @McElreath_2020 and @Deffner_et_al_2022, [DAG -@fig-cj14_dag] represents the conceptual-population outcome $O^{cp}_{R}$ as unobserved, emphasizing that researchers cannot directly access this outcome due to the sampling mechanism. The DAG also depicts the *sample design* vector $S$ as a causal factor influencing the sample-comparison outcome $O^{sc}_{R}$. A square encloses this vector, indicating that it is a conditioned variable. Here, *conditioning* means that researchers restrict their focus to the elements of $O^{cp}_{R}$ that satisfy $s_{(h,i,a,b,j,k)}=1$ [@Neal_2020; @McElreath_2020]. Essentially, $S$ serves as the sample equivalent for the $R$ matrix, that is, this vector selects *all repeated judgments a subset of judges makes for the subset of stimuli produced by the sampled individuals*. This process generates the sample-comparison outcome $O^{sc}_{R}$ from the conceptual-population outcome $O^{cp}_{R}$. 
+With the definition of $S$, we incorporate the sample mechanism into the conceptual-population model. Following the convention of @McElreath_2020 and @Deffner_et_al_2022, [DAG -@fig-cj14_dag] represents the conceptual-population outcome $O^{cp}_{R}$ as unobserved, emphasizing that researchers cannot directly access this outcome due to the sampling mechanism. The DAG also depicts the *sample design* vector $S$ as a causal factor influencing the sample-comparison outcome $O^{sc}_{R}$. A square encloses this vector, indicating that it is a conditioned variable. Here, *conditioning* means that researchers restrict their focus to the elements of $O^{cp}_{R}$ that satisfy $s_{(h,i,a,b,j,k)}=1$ [@Neal_2020; @McElreath_2020]. Essentially, $S$ serves as the vector selecting *all repeated judgments a subset of judges makes for the subset of stimuli produced by the sampled individuals*. This process generates the sample-comparison outcome $O^{sc}_{R}$.
 
 <!-- Follow conventions of @McElreath_2020 NOT @Schuessler_et_al_2023 regarding selection variables and missing data. -->
 
@@ -902,7 +902,7 @@ Sample-comparison model, final vectorized form
 :::
 
 <!-- 3. segway for next section -->
-However, because CJ experiments rarely use the exhaustive pairing of sampled judges, stimuli, and individuals--due to concerns about the practical feasibility of the comparison task [@Boonen_et_al_2020]-- a realistic scenario must also account for judges comparing only specific stimuli from certain individuals.
+However, because CJ experiments rarely use the exhaustive pairing of sampled judges, stimuli, and individuals--due to concerns about the practical feasibility of the comparison task [@Boonen_et_al_2020]--a realistic scenario must also account for judges comparing only specific stimuli from certain individuals.
 
 <!-- An exhaustive pairing of all stimuli would lead to a total of 7875 possible pairs for each listener group. Obviously, such a large number of pairs would undermine the practical feasibility of the experiment. However, in order to arrive at a reliable ranking, not all possible combinations of stimuli had to be assessed. More specifically, each stimulus had to be judged by the listeners of each particular listener group – together, not individually – at least 20 times. [@Boonen_et_al_2020, p. 5] -->
 
@@ -925,12 +925,12 @@ c_{(n_{I},n_{A}-1,n_{I},n_{A},n_{J},1)}
 \end{bmatrix}
 $$ {#eq-mat27}
 
-Where $C$ contains $n$ elements corresponding to the number of rows in the $R$ matrix, with each element $c_{(h,a,i,b,j,k)}$ being a binary value indicating the presence or absence of data rows in the $R$ similar to equation ([-@eq-mat26]). This definition assumes that the subset of judges *does not* perform all repeated judgments for the subset of stimuli produced by the sampled individuals. Instead, they conduct a "sufficient number of comparisons" $n_{C}$ to ensure the accurate estimation of the proportion $P(B>A)$ for each pair of stimuli [@Thurstone_1927b, pp. 267].
+Where $C$ contains $n$ elements corresponding to the number of rows in the $R$ matrix, with each element $c_{(h,a,i,b,j,k)}$ being a binary value indicating the presence or absence of data rows in the $R$ similar to equation ([-@eq-mat26]). This definition assumes that the sampled judges *do not* perform all repeated judgments for the subset of stimuli produced by the sampled individuals. Instead, they conduct a "sufficient number of comparisons" $n_{C}$ to ensure the accurate estimation of the proportion $P(B>A)$ for each pair of stimuli [@Thurstone_1927b, pp. 267].
 
 <!-- It is assumed that the single observer compares each pair of stimuli a "sufficient number of times" so that a proportion, P(A>B), may be determined for each pair of stimuli [@Thurstone_1927b, pp. 267] -->
 
 <!-- 2. What is the effect of the comparison mechanism -->
-[DAG -@fig-cj14_dag] also incorporates the comparison mechanism $C$ into the conceptual-population model. The DAG represents the sample-comparison outcome $O^{sc}_{R}$ as unobserved, highlighting that researchers cannot directly access this outcome due to the comparison mechanism. Moreover, it represents the *comparison mechanism* $C$ as a causal factor influencing the final comparative outcome $O_{R}$. Equivalent to the sampling mechanism, a square encloses this vector, indicating that $C$ is a conditioned variable that determines *which repeated judgments the subset of judges makes for the subset of stimuli produced by the sampled individuals*. This process ultimately derives the final comparative outcome $O_{R}$ from the sample-comparison outcome $O^{sc}_{R}$. 
+[DAG -@fig-cj14_dag] also incorporates the comparison mechanism $C$ into the conceptual-population model. The DAG represents the sample-comparison outcome $O^{sc}_{R}$ as unobserved, highlighting that researchers cannot directly access this outcome due to the comparison mechanism. Moreover, it represents the *comparison mechanism* $C$ as a causal factor influencing the final comparative outcome $O_{R}$. Equivalent to the sampling mechanism, a square encloses this vector, indicating that $C$ is a conditioned variable that determines *which repeated judgments the subset of judges makes for the subset of stimuli produced by the sampled individuals*. This process ultimately derives the final comparative outcome $O_{R}$. 
 
 Notably, the DAG shows that $C$ is also independent of all other variables in the model. This independence implies that the conceptual model represented by [DAG -@fig-cj14_dag] applies exclusively to Random Allocation Comparative Designs [@Bramley_2015] or Incomplete Block Designs [@Lawson_2015]. In these designs, every repeated judgment has an equal probability of being included in the sample.
 
@@ -966,7 +966,7 @@ Comparative judgment model
 :::
 
 <!-- 3. preparing to transform the conceptual model into an statistical one -->
-Finally, without loss of generality, researchers can reformulate the sample-comparison model in @fig-cj14 into the equivalent form shown in @fig-cj15. This reformulation rests on two principles. First, because the sampling and comparison mechanism vectors $S$ and $C$ are binary, researchers can integrate them into the model using element-wise products. This approach eliminates the need to define the structural equations $f_{S}$ and $f_{C}$. Second, since only the final comparative outcome $O_{R}$ is observed, it is standard to assume that the distribution of the conceptual-population outcome $O^{cp}_{R}$, defined by the structural equation $f_{O}$, also applies to this outcome $O_{R}$. This assumption removes the necessity of describing the unobserved outcomes $O^{cp}_{R}$ and $O^{sc}_{R}$.
+Finally, without loss of generality, researchers can reformulate the sample-comparison model in @fig-cj14 into the equivalent form shown in @fig-cj15. This reformulation rests on two principles. First, because the sampling and comparison mechanism vectors $S$ and $C$ are binary, researchers can integrate them into the model using element-wise products. This approach eliminates the need to define the structural equations $f_{S}$ and $f_{C}$. Second, since only the final comparative outcome $O_{R}$ is observed, it is standard to assume that the distribution of the conceptual-population outcome $O^{cp}_{R}$, defined by the structural equation $f_{O}$, also applies to this outcome. This assumption removes the necessity of describing the unobserved outcomes $O^{cp}_{R}$ and $O^{sc}_{R}$.
 
 <!-- move the assumption for the conceptual population outcome to the data outcome based on the fact that it is logical to think that the data outcome would have the same distribution as the population outcome, if the data comes from that population. For example, if I have the distribution of the population outcome, and it is a bernoulli, and even if I do not have it because of S and C, the distributional assumption still holds -->
 
@@ -982,17 +982,33 @@ In summary, extending Thurstone's general form allows researchers to address iss
 <!-- recording: Sven and Tine 25.03.28; time: 00:33:55 - 00:37:50 -->
 <!-- recording: Sven and Tine 25.03.31; time: 00:38:50 - 00:47:00 -->
 
-Using [SCM -@fig-cj15_scm] we finally define the 
+<!-- Deriving a statistical model to address violations of the equal dispersion assumption in CJ experiments (see @sec-theory-issue1a) becomes straightforward when using SCMs. Because the structural equations $F$ in the [SCM -@fig-cj15_scm] encode probabilistic information, the SCM can represent the joint distribution of the variables more efficiently [@Pearl_et_al_2016, pp. 29]. Specifically, it expresses the joint distribution as a product of conditional probability distributions (CPDs) of the type $P(child \cond parents)$. This property is formally known as the *Bayesian Network factorization* (BNF) [@Pearl_et_al_2016, pp. 29; @Neal_2020, pp. 21]. Equation [-@eq-mat28] presents the joint distribution of the sample data and partitions it into smaller CPDs derived from the SCM structure. -->
 
-$\sum_{g=1}^{G_{XI}} s_{XI}/G_{XI} = 1$ $\sum_{g=1}^{G_{ZJ}} s_{ZJ}/G_{ZJ} = 1$
+<!-- $$ -->
+<!-- \begin{aligned} -->
+<!--   P(O_{R}, & S, C, D_{R}, T_{IA}, X_{IA}, e_{IA}, T_{I}, X_{I}, e_{I}, B_{JK}, Z_{JK}, e_{JK}, B_{J}, Z_{J}, e_{J} ) & \\ -->
+<!--   &= P(O_{R} \;|\; S, C, D_{R}) \cdot P(D_{R} \;|\; T_{IA}, B_{JK}) \cdot P(T_{IA} \;|\; T_{I}, X_{IA}, e_{IA}) \cdot P(T_{I} \;|\; X_{I}, e_{I}) \\ -->
+<!--   & \quad \cdot P(B_{JK} \;|\; B_{J}, Z_{JK}, e_{JK}) \cdot P(B_{J} \;|\; Z_{J}, e_{J}) \cdot P(S) \cdot P(C) \cdot P(X_{IA}) \cdot P(X_{I}) \\  -->
+<!--   & \quad \cdot P(Z_{JK}) \cdot P(Z_{J}) \cdot P(e_{IA}) \cdot P(e_{I}) \cdot P(e_{JK}) \cdot P(e_{J}) -->
+<!-- \end{aligned} -->
+<!-- $$ {#eq-mat28} -->
 
+<!-- 1. How to derive an stat model from an SCM? aboutn the outcome distribution -->
+Researchers can easily derive a statistical model to address violations of the equal dispersion assumption in CJ experiments (see @sec-theory-issue1a) using only [SCM -@fig-cj15_scm]. This derivation is possible because the structural equations $F$ encode probabilistic information [@Pearl_et_al_2016], allowing researchers to replace them with suitable probabilistic assumptions. As a first step, given the dichotomous nature of CJ outcomes, the model [-@fig-cj16_stat] assumes that $O_{R}$ follows a Bernoulli distribution[^6]. Next, following the conventions of Generalized Linear Latent And Mixed Models (GLLAMMs) [@Rabe_et_al_2004a; @Skrondal_et_al_2004a; @Rabe_et_al_2012b], the model links the observed outcome to the latent discriminal difference vector $D_{R}$ through an inverse-logit function: $\text{inv\_logit}(x) = 1/(1 + \exp(-x))$. Notice that the sampling and comparison mechanisms, $S$ and $C$, act as element-wise multipliers of the discriminal difference (denoted by the symbol $\odot$), incorporating the design structure into the statistical formulation. Researchers can omit these vectors when only the observed CJ sample is available.
 
-<!-- To build the statistical part, start with the joint probability of observing the sample data P(Y, Z), then partition this joint probability in smaller conditional probabilities derived from the DAG. -->
+<!-- Second, in a fully specified SCM, we can represent the joint distributions of n variables with greater efficiency: We need only to specify the n functions that govern the relationships between the variables, and then from the probabilities of the error terms, we can discover all the probabilities that govern the joint distribution. ... For any model whose graph is acyclic, the joint distribution of the variables in the model is given by the product of the conditional distributions P(child|parents) over all the "families" in the graph. [@Pearl_et_al_2016, pp. 29] -->
 
-<!-- The difficulty and discrimination parameters for the questions should then be given a diffuse, or ideally a hierarchical prior, which will identify these parameters by scaling and locating relative to the student ability parameters. -->
-<!-- (https://mc-stan.org/docs/stan-users-guide/regression.html#priors-for-identification.section) -->
+[^6]: The binomial distribution--including its special case, the Bernoulli distribution-- "represents the maximum entropy way to count binary events" [@McElreath_2020, pp. 34]. This means that when only two un-ordered outcomes are possible, and the expected numbers of each type of event are assumed to be constant, then the binomial distribution is the one that is most consistent with these constraints [@McElreath_2020, pp. 310]. For a detailed discussion of the binomial as a maximum entropy distribution, see @McElreath_2020 [chap. 10.1.2].
 
-<!-- when you talk about the variability, refer that the equal dispersion is just assuming 1 for identification. -->
+<!-- The binomial distribution is rather special, because it represents the maximum entropy way to count binary events. [@McElreath_2020, pp. 34] -->
+
+<!-- Choosing the distribution with the largest entropy means spreading probability as evenly as possible, while still remaining consistent with anything we think we know about a process. [@McElreath_2020, pp. 299] -->
+
+<!-- The principle of maximum entropy helps us choose likelihood functions, by providing a way to use stated assumptions about constraints on the outcome variable to choose the likelihood function that is the most conservative distribution compatible with the known constraints. [@McElreath_2020, pp. 300] -->
+
+<!-- There are a few conceptual lessons to take away from this example. First, hopefully it reinforces the maximum entropy nature of the binomial distribution. When only two un-ordered outcomes are possible—such as blue and white marbles—and the expected numbers of each type of event are assumed to be constant, then the distribution that is most consistent with these constraints is the binomial distribution.  -->
+<!-- Second, of course usually we do not know the expected value, but wish to estimate it. If only two un-ordered outcomes are possible and you think the process generating them is invariant in time—so that the expected value remains constant at each combination of predictor values—then the distribution that is most conservative is the binomial. -->
+<!-- Third, back in Chapter 2, we derived the binomial distribution just by counting how many paths through the garden of forking data were consistent with our assumptions. ... The likelihoods derived in that way turn out to be exactly the same as the likelihoods we get by maximizing entropy. This is not a coincidence. Entropy counts up the number of different ways a process can produce a particular result, according to our assumptions. [@McElreath_2020, pp. 310-311, chap. 10.1.2] -->
 
 ::: {#fig-cj16 layout-ncol=2}
 
@@ -1000,15 +1016,15 @@ $\sum_{g=1}^{G_{XI}} s_{XI}/G_{XI} = 1$ $\sum_{g=1}^{G_{ZJ}} s_{ZJ}/G_{ZJ} = 1$
 $$
 \begin{aligned}
   O_{R} & \overset{iid}{\sim} \text{Bernoulli} \left[ \text{inv\_logit}( D_{R} \odot S \odot C ) \right] \\
-  D_{R} & = \left( T_{IA}[R_{1},R_{2}] - T_{IA}[R_{3},R_{4}] \right) + B_{JK}[R_{5},R_{6}] \\
-  T_{IA} & = T_{I}[IA_{1}] + \beta_{XA} X_{IA} + e_{IA} \\
-  T_{I} & = \beta_{XI} X_{I} + e_{I} \\
-  B_{JK} & = B_{J}[JK_{1}] + \beta_{ZK} Z_{JK} + e_{JK} \\
-  B_{J} & = \beta_{ZJ} Z_{J} + e_{J} \\
-  e_{I} & \overset{iid}{\sim} \text{Normal}(0,s_{XI}) \\
-  e_{J} & \overset{iid}{\sim} \text{Normal}(0,s_{ZJ}) \\
-  e_{IA} & \overset{iid}{\sim} \text{Normal}(0, p_{IA}) \\  
-  e_{JK} & \overset{iid}{\sim} \text{Normal}(0, p_{JK})
+  D_{R} & = \left( T_{IA}[h,a] - T_{IA}[i,b] \right) + B_{JK}[j,k] \\
+  T_{IA}[i,b] & = T_{I}[i] + \beta_{XA} X_{IA}[i,] + e_{IA}[i,b] \\
+  T_{I}[i] & = \beta_{XI} X_{I}[i,] + e_{I}[i] \\
+  B_{JK}[j,k] & = B_{J}[j] + \beta_{ZK} Z_{JK}[j,] + e_{JK}[j,k] \\
+  B_{J}[j] & = \beta_{ZJ} Z_{J}[j,] + e_{J}[j] \\
+  e_{I}[i] & \overset{iid}{\sim} \text{Normal}(0,s_{XI}) \\
+  e_{J}[j] & \overset{iid}{\sim} \text{Normal}(0,s_{ZJ}) \\
+  e_{IA}[i,b] & \overset{iid}{\sim} \text{Normal}(0, p_{IA}) \\  
+  e_{JK}[j,k] & \overset{iid}{\sim} \text{Normal}(0, p_{JK})
 \end{aligned}
 $$
 
@@ -1030,11 +1046,23 @@ $$
 \end{aligned}
 $$
 
-SCM
+[SCM -@fig-cj15_scm]
 :::
 
 Comparative judgment model, SCM and statistical model assuming different discriminal dispersions for the student's traits
 :::
+
+<!-- 2. Continuing with the probabilistic assumptions -->
+Furthermore, the statistical model defines the discriminal difference $D_{R}$ as the difference between the writing-quality traits of two distinct texts, $T_{IA}[h,a]$ and $T_{IA}[i,b]$, along with the corresponding repeated judge biases, $B_{JK}[j,k]$. The square brackets indicate the indices of the elements within their respective trait vectors and matrices, as in equation ([-@eq-mat11]) and ([-@eq-mat12]). 
+
+<!-- The difficulty and discrimination parameters for the questions should then be given a diffuse, or ideally a hierarchical prior, which will identify these parameters by scaling and locating relative to the student ability parameters. -->
+<!-- (https://mc-stan.org/docs/stan-users-guide/regression.html#priors-for-identification.section) -->
+
+<!-- when you talk about the variability, refer that the equal dispersion is just assuming 1 for identification. -->
+
+
+$\sum_{g=1}^{G_{XI}} s_{XI}/G_{XI} = 1$ $\sum_{g=1}^{G_{ZJ}} s_{ZJ}/G_{ZJ} = 1$
+
 
 
 <!-- Second, @sec-theory-statistics uses *Bayesian inference methods* to convert these theoretical and practical elements into a statistical model that supports the analysis of paired comparison data. -->
@@ -1545,10 +1573,8 @@ Beyond their graphical capabilities, SCMs and DAGs can encode the probabilistic 
 
 ![ The flow of association and causation in graphs. Extracted and slightly modified from @Neal_2020 [pp. 31] ](images/png/ACflow.png){#fig-ACflow fig-align="center" width=80%}
 
-
 <!-- 2. What are the general implications of this? -->
 A notable implication of the assumptions underlying the probabilistic encoding is that any conceptual model described by an SCM and DAG can represent the joint distribution of variables more efficiently [@Pearl_et_al_2016, pp. 29]. This expression takes the form of a product of conditional probability distributions (CPDs) of the type $P(child \cond parents)$. This property is formally known as the *Bayesian Network factorization* (BNF, @eq-net_factor) [@Pearl_et_al_2016, pp. 29; @Neal_2020, pp. 21]. In this expression, $pa(X_{i})$ denotes the set of variables that are the parents of $X_{i}$.
-
 $$
 \begin{aligned}
 P(X_{1}, X_{2}, \dots, X_{P}) & = X_{1} \cdot \prod^{P}_{p=2} P(X_{i} \cond X_{i-1}, \dots, X_{1}) & (\small{\text{by chain rule})}\\
