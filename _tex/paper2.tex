@@ -1234,7 +1234,7 @@ interest. The error term \(e_{IA}\) captures variations in the texts'
 traits that remain unexplained by \(T_{I}\) or \(X_{IA}\). Here,
 \(X_{IA}\) is an observed matrix with dimensions \(n_{I} \cdot n_{A}\)
 rows and \(q_{IA}\) columns (variables), while \(e_{IA}\) and \(T_{IA}\)
-are latent vectors of length \(n_{I} \cdot n_{A}\).
+are latent matrices with \(n_{I}\) rows and \(n_{A}\) columns.
 
 Similarly, the bottom branch of DAG~\ref{fig-cj09_dag} depicts the
 second component, where \emph{relevant} \footnote{refer to footnote 2.}
@@ -1252,8 +1252,8 @@ biases associated with each text \(B_{JK}\), the second primary latent
 variable of interest. The error \(e_{JK}\) captures variations in
 judgments unexplained by \(B_{J}\) or \(Z_{JK}\). Here, \(Z_{JK}\) is an
 observed matrix with dimension \(n_{J} \cdot n_{K}\) rows and \(q_{JK}\)
-columns (variables), while \(e_{JK}\) and \(B_{JK}\) are latent vectors
-of length \(n_{J} \cdot n_{K}\).
+columns (variables), while \(e_{JK}\) and \(B_{JK}\) are latent latent
+matrices with \(n_{J}\) rows and \(n_{K}\) columns
 
 Notably, all variables and functions shown in SCM~\ref{fig-cj09_scm} and
 DAG~\ref{fig-cj09_dag} are part of the set of endogenous variables
@@ -1326,11 +1326,12 @@ researchers work with a data sample consisting of a limited number of
 repeated judgments \((n^{s}_{K})\) from a sample of judges
 \((n^{s}_{J})\) and a specific number of texts \((n^{s}_{A})\) from a
 sample of students \((n^{s}_{I})\), all drawn from the conceptual
-population. Moreover, in Section~\ref{sec-theory-theoretical_SC2}, the
-model assumes that judges do not perform \emph{all repeated judgments}
-within the data sample. Instead, they conduct a sufficient number of
-stimuli comparisons, \(n_{C}\), to ensure an accurate estimation of the
-proportion \(P(B>A)\).
+population. Furthermore, in Section~\ref{sec-theory-theoretical_SC2},
+the model assumes that judges do not perform \emph{all repeated
+judgments} within the data sample. Instead, they conduct a sufficient
+number of stimuli comparisons, \(n_{C}\), to ensure an accurate
+estimation of the proportion \(P(B>A)\), as proposed by
+\citet{Thurstone_1927b}.
 
 \subsubsection{The sample mechanism}\label{sec-theory-theoretical_SC1}
 
@@ -1383,9 +1384,9 @@ jk_{(nJ,nK)}
 
 Where each element of \(S_{I}\) is a binary value indicating the
 presence or absence of corresponding elements in the vector \(I\), as in
-equation (\ref{eq-mat22}). We apply the same logic to \(S_{J}\), based
-on the vector \(J\) (not shown). Thus, the vectors \(S_{I}\) and
-\(S_{J}\) contains \(n_{I}\) and \(n_{J}\) elements, respectively.
+equation (\ref{eq-mat22}). We apply the same logic to \(S_{J}\) using
+vector \(J\) (not shown). Thus, the vectors \(S_{I}\) and \(S_{J}\)
+contains \(n_{I}\) and \(n_{J}\) elements, respectively.
 \begin{equation}\phantomsection\label{eq-mat22}{
 i_{(i)} = \begin{cases} 
 1 & \text{if data element } i \text{ from } I \text{ is sampled} \\
@@ -1395,8 +1396,8 @@ i_{(i)} = \begin{cases}
 
 Similarly, each element of \(S_{IA}\) is a binary value indicating the
 presence or absence of data rows in the matrices \(IA\), as defined in
-equation (\ref{eq-mat23}). We apply the same logic to \(S_{JK}\), based
-on the matrix \(JK\) (not shown). Thus, the vectors \(S_{IA}\) and
+equation (\ref{eq-mat23}). We apply the same logic to \(S_{JK}\) using
+the matrix \(JK\) (not shown). Thus, the vectors \(S_{IA}\) and
 \(S_{JK}\) contains \(n_{I} \cdot n_{A}\) and \(n_{J} \cdot n_{K}\)
 elements, respectively. \begin{equation}\phantomsection\label{eq-mat23}{
 ia_{(i,a)} = \begin{cases} 
@@ -1407,8 +1408,8 @@ ia_{(i,a)} = \begin{cases}
 
 We can visualize these vectors more clearly using the example in
 equation (\ref{eq-mat13}). Suppose researchers exclude the second
-student and the third judge. They also omit the second text from each
-individual and the third repeated judgment from each judge. Given
+student and the third judge, and they also omit the second text from
+each individual and the third repeated judgment from each judge. Given
 \(n_{I} = 5\), \(n_{A} = 2\), \(n_{J} = 3\), and \(n_{K} = 3\), these
 vectors take the following structure:
 \begin{equation}\phantomsection\label{eq-mat24}{
@@ -1511,11 +1512,9 @@ encloses this vector, indicating that it is a conditioned variable.
 Here, \emph{conditioning} means that researchers restrict their focus to
 the elements of \(O^{cp}_{R}\) that satisfy \(s_{(h,i,a,b,j,k)}=1\)
 \citep{Neal_2020, McElreath_2020}. Essentially, \(S\) serves as the
-sample equivalent for the \(R\) matrix, that is, this vector selects
-\emph{all repeated judgments a subset of judges makes for the subset of
-stimuli produced by the sampled individuals}. This process generates the
-sample-comparison outcome \(O^{sc}_{R}\) from the conceptual-population
-outcome \(O^{cp}_{R}\).
+vector selecting \emph{all repeated judgments a subset of judges makes
+for the subset of stimuli produced by the sampled individuals}. This
+process generates the sample-comparison outcome \(O^{sc}_{R}\).
 
 Notably, the DAG shows that \(S\) is independent of all other variables
 in the model. This implies that DAG~\ref{fig-cj14_dag} applies
@@ -1570,9 +1569,9 @@ within their respective groups \citep{Lawson_2015}.
 
 However, because CJ experiments rarely use the exhaustive pairing of
 sampled judges, stimuli, and individuals--due to concerns about the
-practical feasibility of the comparison task \citep{Boonen_et_al_2020}--
-a realistic scenario must also account for judges comparing only
-specific stimuli from certain individuals.
+practical feasibility of the comparison task
+\citep{Boonen_et_al_2020}--a realistic scenario must also account for
+judges comparing only specific stimuli from certain individuals.
 
 \subsubsection{The comparison
 mechanism}\label{sec-theory-theoretical_SC2}
@@ -1598,8 +1597,8 @@ Where \(C\) contains \(n\) elements corresponding to the number of rows
 in the \(R\) matrix, with each element \(c_{(h,a,i,b,j,k)}\) being a
 binary value indicating the presence or absence of data rows in the
 \(R\) similar to equation (\ref{eq-mat26}). This definition assumes that
-the subset of judges \emph{does not} perform all repeated judgments for
-the subset of stimuli produced by the sampled individuals. Instead, they
+the sampled judges \emph{do not} perform all repeated judgments for the
+subset of stimuli produced by the sampled individuals. Instead, they
 conduct a ``sufficient number of comparisons'' \(n_{C}\) to ensure the
 accurate estimation of the proportion \(P(B>A)\) for each pair of
 stimuli \citep[pp.~267]{Thurstone_1927b}.
@@ -1614,8 +1613,7 @@ outcome \(O_{R}\). Equivalent to the sampling mechanism, a square
 encloses this vector, indicating that \(C\) is a conditioned variable
 that determines \emph{which repeated judgments the subset of judges
 makes for the subset of stimuli produced by the sampled individuals}.
-This process ultimately derives the final comparative outcome \(O_{R}\)
-from the sample-comparison outcome \(O^{sc}_{R}\).
+This process ultimately derives the final comparative outcome \(O_{R}\).
 
 Notably, the DAG shows that \(C\) is also independent of all other
 variables in the model. This independence implies that the conceptual
@@ -1676,8 +1674,8 @@ define the structural equations \(f_{S}\) and \(f_{C}\). Second, since
 only the final comparative outcome \(O_{R}\) is observed, it is standard
 to assume that the distribution of the conceptual-population outcome
 \(O^{cp}_{R}\), defined by the structural equation \(f_{O}\), also
-applies to this outcome \(O_{R}\). This assumption removes the necessity
-of describing the unobserved outcomes \(O^{cp}_{R}\) and \(O^{sc}_{R}\).
+applies to this outcome. This assumption removes the necessity of
+describing the unobserved outcomes \(O^{cp}_{R}\) and \(O^{sc}_{R}\).
 
 In summary, extending Thurstone's general form allows researchers to
 address issues with the BTL model, such as accounting for judge biases
@@ -1692,10 +1690,33 @@ a statistical model, which we develop in the next section.
 
 \section{Abandoning the BTL model}\label{sec-statistical}
 
-Using SCM~\ref{fig-cj15_scm} we finally define the
-
-\(\sum_{g=1}^{G_{XI}} s_{XI}/G_{XI} = 1\)
-\(\sum_{g=1}^{G_{ZJ}} s_{ZJ}/G_{ZJ} = 1\)
+Researchers can easily derive a statistical model to address violations
+of the equal dispersion assumption in CJ experiments (see
+Section~\ref{sec-theory-issue1a}) using only SCM~\ref{fig-cj15_scm}.
+This derivation is possible because the structural equations \(F\)
+encode probabilistic information \citep{Pearl_et_al_2016}, allowing
+researchers to replace them with suitable probabilistic assumptions. As
+a first step, given the dichotomous nature of CJ outcomes, the model
+\ref{fig-cj16_stat} assumes that \(O_{R}\) follows a Bernoulli
+distribution\footnote{The binomial distribution--including its special
+  case, the Bernoulli distribution-- ``represents the maximum entropy
+  way to count binary events'' \citep[pp.~34]{McElreath_2020}. This
+  means that when only two un-ordered outcomes are possible, and the
+  expected numbers of each type of event are assumed to be constant,
+  then the binomial distribution is the one that is most consistent with
+  these constraints \citep[pp.~310]{McElreath_2020}. For a detailed
+  discussion of the binomial as a maximum entropy distribution, see
+  \citet[chap.~10.1.2]{McElreath_2020}.}. Next, following the
+conventions of Generalized Linear Latent And Mixed Models (GLLAMMs)
+\citep{Rabe_et_al_2004a, Skrondal_et_al_2004a, Rabe_et_al_2012b}, the
+model links the observed outcome to the latent discriminal difference
+vector \(D_{R}\) through an inverse-logit function:
+\(\text{inv\_logit}(x) = 1/(1 + \exp(-x))\). Notice that the sampling
+and comparison mechanisms, \(S\) and \(C\), act as element-wise
+multipliers of the discriminal difference (denoted by the symbol
+\(\odot\)), incorporating the design structure into the statistical
+formulation. Researchers can omit these vectors when only the observed
+CJ sample is available.
 
 \begin{figure}[H]
 
@@ -1706,15 +1727,15 @@ Using SCM~\ref{fig-cj15_scm} we finally define the
 \[
 \begin{aligned}
   O_{R} & \overset{iid}{\sim} \text{Bernoulli} \left[ \text{inv\_logit}( D_{R} \odot S \odot C ) \right] \\
-  D_{R} & = \left( T_{IA}[R_{1},R_{2}] - T_{IA}[R_{3},R_{4}] \right) + B_{JK}[R_{5},R_{6}] \\
-  T_{IA} & = T_{I}[IA_{1}] + \beta_{XA} X_{IA} + e_{IA} \\
-  T_{I} & = \beta_{XI} X_{I} + e_{I} \\
-  B_{JK} & = B_{J}[JK_{1}] + \beta_{ZK} Z_{JK} + e_{JK} \\
-  B_{J} & = \beta_{ZJ} Z_{J} + e_{J} \\
-  e_{I} & \overset{iid}{\sim} \text{Normal}(0,s_{XI}) \\
-  e_{J} & \overset{iid}{\sim} \text{Normal}(0,s_{ZJ}) \\
-  e_{IA} & \overset{iid}{\sim} \text{Normal}(0, p_{IA}) \\  
-  e_{JK} & \overset{iid}{\sim} \text{Normal}(0, p_{JK})
+  D_{R} & = \left( T_{IA}[h,a] - T_{IA}[i,b] \right) + B_{JK}[j,k] \\
+  T_{IA}[i,b] & = T_{I}[i] + \beta_{XA} X_{IA}[i,] + e_{IA}[i,b] \\
+  T_{I}[i] & = \beta_{XI} X_{I}[i,] + e_{I}[i] \\
+  B_{JK}[j,k] & = B_{J}[j] + \beta_{ZK} Z_{JK}[j,] + e_{JK}[j,k] \\
+  B_{J}[j] & = \beta_{ZJ} Z_{J}[j,] + e_{J}[j] \\
+  e_{I}[i] & \overset{iid}{\sim} \text{Normal}(0,s_{XI}) \\
+  e_{J}[j] & \overset{iid}{\sim} \text{Normal}(0,s_{ZJ}) \\
+  e_{IA}[i,b] & \overset{iid}{\sim} \text{Normal}(0, p_{IA}) \\  
+  e_{JK}[j,k] & \overset{iid}{\sim} \text{Normal}(0, p_{JK})
 \end{aligned}
 \]
 
@@ -1744,7 +1765,7 @@ Using SCM~\ref{fig-cj15_scm} we finally define the
 
 }
 
-\subcaption{\label{fig-cj16_scm}SCM}
+\subcaption{\label{fig-cj16_scm}SCM~\ref{fig-cj15_scm}}
 
 \end{minipage}%
 
@@ -1753,6 +1774,17 @@ model assuming different discriminal dispersions for the student's
 traits}
 
 \end{figure}%
+
+Furthermore, the statistical model defines the discriminal difference
+\(D_{R}\) as the difference between the writing-quality traits of two
+distinct texts, \(T_{IA}[h,a]\) and \(T_{IA}[i,b]\), along with the
+corresponding repeated judge biases, \(B_{JK}[j,k]\). The square
+brackets indicate the indices of the elements within their respective
+trait vectors and matrices, as in equation (\ref{eq-mat11}) and
+(\ref{eq-mat12}).
+
+\(\sum_{g=1}^{G_{XI}} s_{XI}/G_{XI} = 1\)
+\(\sum_{g=1}^{G_{ZJ}} s_{ZJ}/G_{ZJ} = 1\)
 
 \section{Discussion}\label{sec-discussion}
 
@@ -2421,7 +2453,6 @@ Equation~\ref{eq-net_factor})
 \citetext{\citealp[pp.~29]{Pearl_et_al_2016}; \citealp[pp.~21]{Neal_2020}}.
 In this expression, \(pa(X_{i})\) denotes the set of variables that are
 the parents of \(X_{i}\).
-
 \begin{equation}\phantomsection\label{eq-net_factor}{
 \begin{aligned}
 P(X_{1}, X_{2}, \dots, X_{P}) & = X_{1} \cdot \prod^{P}_{p=2} P(X_{i} \:|\:X_{i-1}, \dots, X_{1}) & (\small{\text{by chain rule})}\\
