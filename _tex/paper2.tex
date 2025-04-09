@@ -469,10 +469,11 @@ Thus, given these limitations, it is surprising that CJ research has
 predominantly relied on Case V to measure different traits, raising
 significant concerns about the reliability and validity of such
 measurements in contexts where the case's assumptions may not hold
-\citep{Kelly_et_al_2022}. Furthermore, although the CJ practice has
-attempted to address the issue of hypothesis testing by using the
-scores' point estimates or their transformations, a critical question
-remains: Is this approach suitable for addressing these inquiries?
+\citep{Kelly_et_al_2022, Andrich_1978}. Furthermore, although the CJ
+practice has attempted to address the issue of hypothesis testing by
+using the scores' point estimates or their transformations, a critical
+question remains: Is this approach suitable for addressing these
+inquiries?
 
 Thus, this section discusses these two prominent issues. Specifically,
 Section~\ref{sec-theory-issue1} examines the heavy reliance on
@@ -906,20 +907,20 @@ SCM~\ref{fig-cj03_scm} presents the first theoretical principles
 embedded in the conceptual-population model, which evaluates the impact
 of different teaching methods on students' writing ability. This SCM
 outlines the relationship between the conceptual-population outcome
-\((O^{cp}_{haibjk})\) and several related variables. The subscripts
-\(h\) and \(i\) identify the students who authored the texts (i.e., the
+\((O^{cp}_{iahbjk})\) and several related variables. The subscripts
+\(i\) and \(h\) identify the students who authored the texts (i.e., the
 individuals). The indices \(a\) and \(b\) represent the texts under
 comparison (i.e., the stimuli). The index \(j\) indicates the judge
 conducting the comparison, while the index \(k\) captures \emph{repeated
 measures designs} \citep[pp.~366-376]{Lawson_2015}, accounting for
 experimental conditions where a judge compares the same pair of stimuli
 multiple times. Thus, the indexing system supports comparisons between
-different texts written by the same student \((h = i;\) \(a \neq b)\)
-and between texts written by distinct students \((h \neq i;\) where
+different texts written by the same student \((i = h;\) \(a \neq b)\)
+and between texts written by distinct students \((i \neq h;\) where
 \(a = b\) is permitted\()\), each judged once or repeatedly by all
 judges \((j = 1,\dots,n_{J};\) \(k = 1,\dots,n_K;\) where \(n_{J}>1\)
 and \(n_{K}\geq1)\). However, it excludes cases where a judge compares a
-student's text to itself, whether once or multiple times \((h = i;\)
+student's text to itself, whether once or multiple times \((i = h;\)
 \(a = b;\) \(j = 1,\dots,n_{J};\) \(k = 1,\dots,n_{K};\) where
 \(n_{J}>1\) and \(n_{K}\geq1)\), as such comparison lacks practical
 relevance within the CJ framework. Here, \(n_{J}\) indicates the total
@@ -927,14 +928,13 @@ number of judges, and \(n_{K}\) denotes the number of repeated judgments
 each judge performs.
 
 In line with Thurstone's theory, SCM~\ref{fig-cj03_scm} depicts the
-texts' discriminal processes \((T_{ha}, T_{ib})\) and their discriminal
-difference \((D_{haibjk})\) (see Section~\ref{sec-thurstone_theory}).
+texts' discriminal processes \((T_{ia}, T_{hb})\) and their discriminal
+difference \((D_{iahbjk})\) (see Section~\ref{sec-thurstone_theory}).
 Additionally, based on the arguments developed in
-Section~\ref{sec-theory-issue1b} and the recommendations of
-\citet{Andrich_1978} and \citet{Wainer_et_al_1978}, the SCM incorporates
-the judges' biases \((B_{kj})\). Together with the outcome, these
-variables constitute the preliminary set of endogenous variables,
-\(V = \{ O_{haibjk}, D_{haibjk}, T_{ha}, T_{ib}, B_{kj} \}\). Finally,
+Section~\ref{sec-theory-issue1b}, the SCM incorporates the judges'
+biases \((B_{kj})\). Together with the outcome, these variables
+constitute the preliminary set of endogenous variables,
+\(V = \{ O_{iahbjk}, D_{iahbjk}, T_{ia}, T_{hb}, B_{kj} \}\). Finally,
 the SCM presents the preliminary set of structural equations,
 \(F = \{ f_{O}, f_{D} \}\), which define the non-parametric dependencies
 among these variables.
@@ -947,8 +947,8 @@ among these variables.
 
 \[
 \begin{aligned}
-  O^{cp}_{haibjk} & := f_{O}(D_{haibjk}) \\
-  D_{haibjk} & := f_{D}(T_{ha}, T_{ib}, B_{jk})
+  O^{cp}_{iahbjk} & := f_{O}(D_{iahbjk}) \\
+  D_{iahbjk} & := f_{D}(T_{ia}, T_{hb}, B_{jk})
 \end{aligned}
 \]
 
@@ -992,9 +992,9 @@ related to conditioning and confounding \citep{Cinelli_et_al_2020}.
 Figure~\ref{fig-cj03_dag} displays the DAG corresponding to
 SCM~\ref{fig-cj03_scm}, illustrating the expected causal relationships
 outlined in Thurstone's theory. The graph shows that the discriminal
-processes of the texts \((T_{ha}, T_{ib})\) influence their discriminal
-difference \((D_{hiabjk})\), which in turn determines the outcome
-\((O^{cp}_{hiabjk})\). It also highlights the influence of judges'
+processes of the texts \((T_{ia}, T_{hb})\) influence their discriminal
+difference \((D_{iahbjk})\), which in turn determines the outcome
+\((O^{cp}_{iahbjk})\). It also highlights the influence of judges'
 biases \((B_{kj})\) on the discriminal difference. Additionally, the DAG
 differentiates between observed endogenous variables, such as the
 outcome (solid black circle), and latent endogenous variables, including
@@ -1014,9 +1014,9 @@ the matrices \(IA\) and \(JK\), as follows:
 I = \begin{bmatrix}
 1 \\
 \vdots \\
-h \\
-\vdots \\
 i \\
+\vdots \\
+h \\
 \vdots \\
 n_{I}
 \end{bmatrix} ; \;
@@ -1032,9 +1032,9 @@ IA = \begin{bmatrix}
 \vdots & \vdots \\
 1 & n_{A} \\
 \vdots & \vdots \\
-h & a \\
+i & a \\
 \vdots & \vdots \\
-i & b \\
+h & b \\
 \vdots & \vdots \\
 n_{I} & 1 \\
 \vdots & \vdots \\
@@ -1053,11 +1053,11 @@ n_{J} & n_{K}
 \end{bmatrix}
 }\end{equation}
 
-Here, each element of \(I\) represents a unique individual \(h\) or
-\(i\), where \(n_{I}\) denotes the total number of individuals.
+Here, each element of \(I\) represents a unique individual \(i\) or
+\(h\), where \(n_{I}\) denotes the total number of individuals.
 Similarly, each element of \(J\) corresponds to a unique judge \(j\),
 with \(n_{J}\) indicating the total number of judges. Moreover, each row
-of \(IA\) represents a unique pairing of individuals \(h, i\) with
+of \(IA\) represents a unique pairing of individuals \(i, h\) with
 stimuli \(a, b\). As a result, the matrix \(IA\) contains
 \(n_{I} \cdot n_{A}\) rows and \(2\) columns, where \(n_{A}\) specifies
 the number of stimuli available per individual. Likewise, each row of
@@ -1081,7 +1081,7 @@ R = \begin{bmatrix}
 \vdots & \vdots & \vdots & \vdots & \vdots & \vdots\\
 1 & 1 & 1 & 2 & 1 & n_{K} \\
 \vdots & \vdots & \vdots & \vdots & \vdots & \vdots\\
-h & a & i & b & j & k \\
+i & a & h & b & j & k \\
 \vdots & \vdots & \vdots & \vdots & \vdots & \vdots\\
 n_{I} & n_{A}-1 & n_{I} & n_{A} & n_{J} & 1 \\
 \vdots & \vdots & \vdots & \vdots & \vdots & \vdots\\
@@ -1229,7 +1229,7 @@ latent vectors of length \(n_{I}\). Additionally, this branch shows how
 \(T_{I}\), along with \emph{relevant} \footnote{refer to footnote 2.}
 text-related variables \((X_{IA})\) (e.g., text length), and texts'
 idiosyncratic errors \(e_{IA}\) causally influence the texts'
-writing-quality trait \((T_{IA})\), the first primary latent variable of
+written-quality trait \((T_{IA})\), the first primary latent variable of
 interest. The error term \(e_{IA}\) captures variations in the texts'
 traits that remain unexplained by \(T_{I}\) or \(X_{IA}\). Here,
 \(X_{IA}\) is an observed matrix with dimensions \(n_{I} \cdot n_{A}\)
@@ -1248,8 +1248,8 @@ of length \(n_{J}\). Furthermore, the branch shows how \(B_{J}\), along
 with \emph{relevant} \footnote{refer to footnote 2.} judgment-related
 variables \((Z_{JK})\) (e.g., the number of judgments a judge makes),
 and judgments' idiosyncratic errors \(e_{JK}\) causally influence the
-biases associated with each text \(B_{JK}\), the second primary latent
-variable of interest. The error \(e_{JK}\) captures variations in
+judges' biases associated with each text \(B_{JK}\), the second primary
+latent variable of interest. The error \(e_{JK}\) captures variations in
 judgments unexplained by \(B_{J}\) or \(Z_{JK}\). Here, \(Z_{JK}\) is an
 observed matrix with dimension \(n_{J} \cdot n_{K}\) rows and \(q_{JK}\)
 columns (variables), while \(e_{JK}\) and \(B_{JK}\) are latent latent
@@ -1343,9 +1343,9 @@ process} using the binary vector variables \(S_{I}\), \(S_{J}\),
 S_{I} = \begin{bmatrix}
 i_{(1)} \\
 \vdots \\
-i_{(h)} \\
-\vdots \\
 i_{(i)} \\
+\vdots \\
+i_{(h)} \\
 \vdots \\
 i_{(nI)}
 \end{bmatrix} ; \;
@@ -1361,9 +1361,9 @@ ia_{(1,1)} \\
 \vdots \\
 ia_{(1,n_{A})} \\
 \vdots \\
-ia_{(h,a)} \\
+ia_{(i,a)} \\
 \vdots \\
-ia_{(i,b)} \\
+ia_{(h,b)} \\
 \vdots \\
 ia_{(nI,1)} \\
 \vdots \\
@@ -1468,7 +1468,7 @@ researchers can also express \(S_{JK}\) using \(n_{K} = n^{s}_{K} = 2\).
 
 Finally, we define the \emph{sample mechanism} \(S\) in equation
 (\ref{eq-mat25}), which maps each element of \(S_{IA}\) to every element
-of \(S_{JK}\). Each element \(s_{(h,a,i,b,j,k)}\) is a binary value
+of \(S_{JK}\). Each element \(s_{(i,a,h,b,j,k)}\) is a binary value
 indicating the presence or absence of data rows in the matrix \(R\)
 resulting from the sample mechanism, as in equation (\ref{eq-mat26}).
 Thus, the vector contains \(n\) elements, matching the number of rows in
@@ -1485,7 +1485,7 @@ s_{(1,1,1,2,1,1)} \\
 \vdots \\
 s_{(1,1,1,2,1,n_{K})} \\
 \vdots \\
-s_{(h,a,i,b,j,k)} \\
+s_{(i,a,h,b,j,k)} \\
 \vdots \\
 s_{(n_{I},n_{A}-1,n_{I},n_{A},n_{J},1)} \\
 \vdots \\
@@ -1494,8 +1494,8 @@ s_{(n_{I},n_{A}-1,n_{I},n_{A},n_{J},1)}
 }\end{equation}
 
 \begin{equation}\phantomsection\label{eq-mat26}{
-s_{(h,i,a,b,j,k)} = \begin{cases} 
-1 & \text{if data elements } h,i,a,b,j,k \text{ from } R \text{ are sampled} \\
+s_{(i,a,h,b,j,k)} = \begin{cases} 
+1 & \text{if data elements } i,a,h,b,j,k \text{ from } R \text{ are sampled} \\
 0 & \text{if data elements } h,i,a,b,j,k \text{ from } R \text{ are missing}
 \end{cases}
 }\end{equation}
@@ -1510,7 +1510,7 @@ depicts the \emph{sample design} vector \(S\) as a causal factor
 influencing the sample-comparison outcome \(O^{sc}_{R}\). A square
 encloses this vector, indicating that it is a conditioned variable.
 Here, \emph{conditioning} means that researchers restrict their focus to
-the elements of \(O^{cp}_{R}\) that satisfy \(s_{(h,i,a,b,j,k)}=1\)
+the elements of \(O^{cp}_{R}\) that satisfy \(s_{(i,a,h,b,j,k)}=1\)
 \citep{Neal_2020, McElreath_2020}. Essentially, \(S\) serves as the
 vector selecting \emph{all repeated judgments a subset of judges makes
 for the subset of stimuli produced by the sampled individuals}. This
@@ -1576,16 +1576,21 @@ judges comparing only specific stimuli from certain individuals.
 \subsubsection{The comparison
 mechanism}\label{sec-theory-theoretical_SC2}
 
-As in the previous section, to facilitate the interpretation of the
-sample-comparison model, we first define the \emph{comparison mechanism}
-using the binary vector variable \(C\) as follows:
+As in the previous section, we begin defining the \emph{comparison
+mechanism} using the binary vector variable \(C\) to facilitate the
+interpretation of the sample-comparison model (see equation
+(\ref{eq-mat27})). The vector contains \(n\) elements corresponding to
+the number of rows in the \(R\) matrix, with each element
+\(c_{(i,a,h,b,j,k)}\) being a binary value indicating the presence or
+absence of data rows in \(R\), a definition similar to that of \(S\) in
+equation (\ref{eq-mat26}).
 \begin{equation}\phantomsection\label{eq-mat27}{
 C = \begin{bmatrix}
 c_{(1,1,1,2,1,1)} \\
 \vdots \\
 c_{(1,1,1,2,1,n_{K})} \\
 \vdots \\
-c_{(h,a,i,b,j,k)} \\
+c_{(i,a,h,b,j,k)} \\
 \vdots \\
 c_{(n_{I},n_{A}-1,n_{I},n_{A},n_{J},1)} \\
 \vdots \\
@@ -1593,34 +1598,29 @@ c_{(n_{I},n_{A}-1,n_{I},n_{A},n_{J},1)}
 \end{bmatrix}
 }\end{equation}
 
-Where \(C\) contains \(n\) elements corresponding to the number of rows
-in the \(R\) matrix, with each element \(c_{(h,a,i,b,j,k)}\) being a
-binary value indicating the presence or absence of data rows in the
-\(R\) similar to equation (\ref{eq-mat26}). This definition assumes that
-the sampled judges \emph{do not} perform all repeated judgments for the
-subset of stimuli produced by the sampled individuals. Instead, they
-conduct a ``sufficient number of comparisons'' \(n_{C}\) to ensure the
-accurate estimation of the proportion \(P(B>A)\) for each pair of
-stimuli \citep[pp.~267]{Thurstone_1927b}.
-
-DAG~\ref{fig-cj14_dag} also incorporates the comparison mechanism \(C\)
-into the conceptual-population model. The DAG represents the
+The DAG~\ref{fig-cj14_dag} also integrates the comparison mechanism
+\(C\) into the conceptual-population model, which ultimately derives the
+final comparative outcome \(O_{R}\). First, it shows the
 sample-comparison outcome \(O^{sc}_{R}\) as unobserved, highlighting
 that researchers cannot directly access this outcome due to the
-comparison mechanism. Moreover, it represents the \emph{comparison
-mechanism} \(C\) as a causal factor influencing the final comparative
-outcome \(O_{R}\). Equivalent to the sampling mechanism, a square
-encloses this vector, indicating that \(C\) is a conditioned variable
-that determines \emph{which repeated judgments the subset of judges
-makes for the subset of stimuli produced by the sampled individuals}.
-This process ultimately derives the final comparative outcome \(O_{R}\).
+comparison mechanism. Second, it depicts the \emph{comparison mechanism}
+\(C\) as a causal factor influencing the final comparative outcome
+\(O_{R}\). As with the sampling mechanism, a square encloses \(C\) to
+indicate that it is a conditioned variable--that is, one that determines
+\emph{which repeated judgments the subset of judges makes for the subset
+of stimuli produced by the sampled individuals}. In essence, \(C\)
+reflects the assumption that judges \emph{do not} perform all possible
+repeated judgments for the selected stimuli. Instead, they carry out a
+``sufficient number of comparisons'' \(n_{C}\) to allow for accurate
+estimation of the proportion \(P(B>A)\) for each stimulus pair
+\citep[pp.~267]{Thurstone_1927b}.
 
-Notably, the DAG shows that \(C\) is also independent of all other
-variables in the model. This independence implies that the conceptual
-model represented by DAG~\ref{fig-cj14_dag} applies exclusively to
-Random Allocation Comparative Designs \citep{Bramley_2015} or Incomplete
-Block Designs \citep{Lawson_2015}. In these designs, every repeated
-judgment has an equal probability of being included in the sample.
+Notably, DAG~\ref{fig-cj14_dag} shows that \(C\) is independent of all
+other variables in the model. This independence implies that the
+conceptual model represented by the DAG applies exclusively to Random
+Allocation Comparative Designs \citep{Bramley_2015} or Incomplete Block
+Designs \citep{Lawson_2015}. In these designs, every repeated judgment
+has an equal probability of being included in the sample.
 
 \begin{figure}[H]
 
@@ -1694,29 +1694,31 @@ Researchers can easily derive a statistical model to address violations
 of the equal dispersion assumption in CJ experiments (see
 Section~\ref{sec-theory-issue1a}) using only SCM~\ref{fig-cj15_scm}.
 This derivation is possible because the structural equations \(F\)
-encode probabilistic information \citep{Pearl_et_al_2016}, allowing
-researchers to replace them with suitable probabilistic assumptions. As
-a first step, given the dichotomous nature of CJ outcomes, the model
-\ref{fig-cj16_stat} assumes that \(O_{R}\) follows a Bernoulli
+encode probabilistic information \citep{Pearl_et_al_2016}, which
+researchers can replace with suitable probabilistic assumptions. As a
+starting point, given the dichotomous nature of CJ outcomes,
+model~\ref{fig-cj16_stat} assumes that \(O_{R}\) follows a Bernoulli
 distribution\footnote{The binomial distribution--including its special
-  case, the Bernoulli distribution-- ``represents the maximum entropy
-  way to count binary events'' \citep[pp.~34]{McElreath_2020}. This
+  case, the Bernoulli distribution-- represent a maximum entropy
+  distribution for binary events \citep[pp.~34]{McElreath_2020}. This
   means that when only two un-ordered outcomes are possible, and the
   expected numbers of each type of event are assumed to be constant,
   then the binomial distribution is the one that is most consistent with
   these constraints \citep[pp.~310]{McElreath_2020}. For a detailed
   discussion of the binomial as a maximum entropy distribution, see
-  \citet[chap.~10.1.2]{McElreath_2020}.}. Next, following the
-conventions of Generalized Linear Latent And Mixed Models (GLLAMMs)
+  \citet[chap.~10.1.2]{McElreath_2020}.}.
+
+Next, following the conventions of Generalized Linear Latent And Mixed
+Models (GLLAMMs)
 \citep{Rabe_et_al_2004a, Skrondal_et_al_2004a, Rabe_et_al_2012b}, the
 model links the observed outcome to the latent discriminal difference
-vector \(D_{R}\) through an inverse-logit function:
+vector \(D_{R}\) using an inverse-logit function:
 \(\text{inv\_logit}(x) = 1/(1 + \exp(-x))\). Notice that the sampling
 and comparison mechanisms, \(S\) and \(C\), act as element-wise
-multipliers of the discriminal difference (denoted by the symbol
-\(\odot\)), incorporating the design structure into the statistical
-formulation. Researchers can omit these vectors when only the observed
-CJ sample is available.
+multipliers of \(D_{R}\) (denoted by the symbol \(\odot\)), directly
+incorporating key assessment design features relevant to CJ experiments
+into the statistical formulation. Researchers can omit these vectors
+when only the observed CJ sample is available.
 
 \begin{figure}[H]
 
@@ -1727,15 +1729,15 @@ CJ sample is available.
 \[
 \begin{aligned}
   O_{R} & \overset{iid}{\sim} \text{Bernoulli} \left[ \text{inv\_logit}( D_{R} \odot S \odot C ) \right] \\
-  D_{R} & = \left( T_{IA}[h,a] - T_{IA}[i,b] \right) + B_{JK}[j,k] \\
-  T_{IA}[i,b] & = T_{I}[i] + \beta_{XA} X_{IA}[i,] + e_{IA}[i,b] \\
-  T_{I}[i] & = \beta_{XI} X_{I}[i,] + e_{I}[i] \\
-  B_{JK}[j,k] & = B_{J}[j] + \beta_{ZK} Z_{JK}[j,] + e_{JK}[j,k] \\
-  B_{J}[j] & = \beta_{ZJ} Z_{J}[j,] + e_{J}[j] \\
-  e_{I}[i] & \overset{iid}{\sim} \text{Normal}(0,s_{XI}) \\
-  e_{J}[j] & \overset{iid}{\sim} \text{Normal}(0,s_{ZJ}) \\
-  e_{IA}[i,b] & \overset{iid}{\sim} \text{Normal}(0, p_{IA}) \\  
-  e_{JK}[j,k] & \overset{iid}{\sim} \text{Normal}(0, p_{JK})
+  D_{R} & = \left( T_{IA}[i,a] - T_{IA}[h,b] \right) + B_{JK}[j,k] \\
+  T_{IA} & = T_{I} + \beta_{XA} X_{IA} + e_{IA} \\
+  T_{I} & = \beta_{XI} X_{I} + e_{I} \\
+  B_{JK} & = B_{J} + \beta_{ZK} Z_{JK} + e_{JK} \\
+  B_{J} & = \beta_{ZJ} Z_{J} + e_{J} \\
+  e_{I} & \overset{iid}{\sim} \text{Normal}(0,s_{XI}) \\
+  e_{J} & \overset{iid}{\sim} \text{Normal}(0,s_{ZJ}) \\
+  e_{IA} & \overset{iid}{\sim} \text{Normal}(0, p_{IA}) \\  
+  e_{JK} & \overset{iid}{\sim} \text{Normal}(0, p_{JK})
 \end{aligned}
 \]
 
@@ -1775,16 +1777,77 @@ traits}
 
 \end{figure}%
 
-Furthermore, the statistical model defines the discriminal difference
-\(D_{R}\) as the difference between the writing-quality traits of two
-distinct texts, \(T_{IA}[h,a]\) and \(T_{IA}[i,b]\), along with the
-corresponding repeated judge biases, \(B_{JK}[j,k]\). The square
-brackets indicate the indices of the elements within their respective
-trait vectors and matrices, as in equation (\ref{eq-mat11}) and
-(\ref{eq-mat12}).
+Then, model~\ref{fig-cj16_stat} defines \(D_{R}\) as the difference
+between the discriminal processes of two texts, \(T_{IA}[i, a]\) and
+\(T_{IA}[h, b]\), which represent their underlying written-quality
+trait. This difference also includes the corresponding repeated judge
+biases, \(B_{JK}[j, k]\). Note that if we assume that \(B_{JK}[j,k]\)
+reflects the difference in stimulus-specific biases, i.e.,
+\(B_{JK}[j,k] = B_{JK}[i,a,j,k] - B_{JK}[h,b,j,k]\), then we can
+re-write the discriminal difference as:
+\begin{equation}\phantomsection\label{eq-mat51}{
+\begin{aligned}
+D_{R} &= \left( T_{IA}[i,a] - T_{IA}[h,b] \right) + B_{JK}[j,k] ] \\
+&= \left( T_{IA}[i, a] + B_{JK}[i, a, j, k] \right) - \left( T_{IA}[h, b] + B_{JK}[h, b, j, k] \right) \\
+& = T^{*}_{IA}[i,a] - T^{*}_{IA}[h,b]
+\end{aligned}
+}\end{equation} This formulation reveals that the discriminal difference
+captures a \emph{pure interaction effect}, in which neither the texts'
+discriminal processes nor the judges' biases alone determine the
+outcome, but their interaction does \citep{Attia_et_al_2022}. In simple
+terms, the discriminal processes of the stimuli become an observable
+outcome only through the judges' perceptions (biases). For clarity, the
+square brackets in \(D_{R}\) only indicate the relevant indices within
+each trait vector; they do not represent any data subsetting.
 
-\(\sum_{g=1}^{G_{XI}} s_{XI}/G_{XI} = 1\)
-\(\sum_{g=1}^{G_{ZJ}} s_{ZJ}/G_{ZJ} = 1\)
+Next, the model defines \(T_{IA}\) as a linear combination of the
+students' underlying writing-quality traits \(T_{I}\), the effects of
+relevant text-related variables \(\beta_{XA}X_{IA}\) (e.g., text
+length), and the texts' idiosyncratic errors \(e_{IA}\). The model
+assumes that each element of \(e_{IA}\) is independent and identically
+distributed \((iid)\) according to a Normal distribution, with a mean of
+zero and a standard deviation \(p_{IA}\), defined as a proportion of
+\(1\). This standardization establishes the scale of the latent trait,
+as it is required by latent variable models \citep{Depaoli_2021}.
+
+Additionally, the model defines \(T_{I}\) as a linear combination of the
+effects of relevant student-related variables, \(\beta_{XI} X_{I}\), and
+students' idiosyncratic errors, \(e_{I}\). As before, each element of
+\(e_{I}\) is \(iid\) following a Normal distribution with a mean of
+zero. However, the standard deviation, \(s_{XI}\), varies depending on
+the teaching method to which each student belongs. Given the example in
+Section~\ref{sec-theoretical}, where the teaching method
+\(X_{I} = 1,2\), the model sets the following constraint to anchor the
+scale of the latent trait \citep{Depaoli_2021}:
+\(\sum_{g=1}^{2} s_{XI}[g]/2 = 1\) This constraint effectively addresses
+concerns about the equal dispersion assumption raised in
+Section~\ref{sec-theory-issue1a}.
+
+Similarly, the model defines \(B_{JK}\) as a linear combination of the
+judges' individual bias \(B_{J}\), the effects of relevant
+judgment-related variables \(\beta_{ZK}Z_{JK}\) (e.g., the number of
+judgments a judge makes), and judgment-specific idiosyncratic errors
+\(e_{JK}\). The model assumes that each element of \(e_{JK}\) is \(iid\)
+according to a Normal distribution, with a mean of zero and a standard
+deviation \(p_{JK}\), defined as a proportion of \(1\), to anchor the
+scale of the latent trait \citep{Depaoli_2021}.
+
+The model also defines \(B_{J}\) as a linear combination of the effects
+of relevant judge-level variables \(\beta_{ZJ}Z_{J}\) (e.g., judgment
+expertise) and judge-specific idiosyncratic errors \(e_{J}\). Each
+element of \(e_{J}\) is likewise assumed to be \(iid\) Normal with mean
+zero and a standard deviation \(s_{ZJ}\) that depends on the groups to
+which each judge belongs. For instance, if \(Z_{J} = 1, \dots, 3\)
+represents three groups of judges with varying expertise, the model
+imposes the constraint \(\sum_{g=1}^{3} s_{ZJ}[g]/3 = 1\) to fix the
+scale of the latent trait \citep{Depaoli_2021}.
+
+Finally, we apply \emph{Bayesian inference methods} to turn
+model~\ref{fig-cj16_stat} into a practical statistical tool for
+analyzing paired comparison data. The \textbf{Declarations} section of
+this document provides a link to this model, along with an alternative
+specification that assumes equal discriminal dispersions. We implemented
+both models in \texttt{Stan} \citep[version \(2.26.1\),][]{Stan_2020}.
 
 \section{Discussion}\label{sec-discussion}
 
