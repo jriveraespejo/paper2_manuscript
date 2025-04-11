@@ -1567,11 +1567,12 @@ within their respective groups \citep{Lawson_2015}.
 
 \end{figure}%
 
-However, because CJ experiments rarely use the exhaustive pairing of
-sampled judges, stimuli, and individuals--due to concerns about the
-practical feasibility of the comparison task
-\citep{Boonen_et_al_2020}--a realistic scenario must also account for
-judges comparing only specific stimuli from certain individuals.
+However, due to concerns about the practical feasibility of the
+comparison task \citep{Boonen_et_al_2020}, CJ experiments rarely
+implement an exhaustive pairings of sampled judges, stimuli, and
+individuals. Thus, a realistic scenario must account for the fact that
+judges typically compare only a subset of stimuli authored by certain
+individuals.
 
 \subsubsection{The comparison
 mechanism}\label{sec-theory-theoretical_SC2}
@@ -1602,14 +1603,14 @@ The DAG~\ref{fig-cj14_dag} also integrates the \emph{comparison
 mechanism} \(C\) into the conceptual-population model, ultimately
 deriving the outcome \(O_{R}\). It shows the sample-comparison outcome
 \(O^{sc}_{R}\) as unobserved, highlighting that researchers cannot
-directly access this outcome due to the comparison mechanism. Moreover,
-it depicts \(C\) as a causal factor influencing \(O_{R}\). As with the
-sampling mechanism, a square encloses \(C\) to indicate that it is a
-conditioned variable--that is, one that determines \emph{which repeated
-judgments the subset of judges makes for the subset of stimuli produced
-by the sampled individuals}. In essence, \(C\) reflects the assumption
-that judges \emph{do not} perform all possible repeated judgments for
-the selected stimuli. Instead, they carry out a ``sufficient number of
+directly access to \(O^{sc}_{R}\) due to the comparison mechanism.
+Moreover, the DAG depicts \(C\) as a causal factor influencing
+\(O_{R}\), enclosing it in a square to indicate that it is a conditioned
+variable. Specifically, \(C\) determines \emph{which repeated judgments
+the subset of judges makes for the subset of stimuli produced by the
+sampled individuals}. In essence, \(C\) reflects the assumption that
+judges \emph{do not} perform all possible repeated judgments for the
+selected stimuli. Instead, they carry out a ``sufficient number of
 comparisons'' \(n_{C}\) to allow for accurate estimation of the
 proportion \(P(B>A)\) for each stimulus pair
 \citep[pp.~267]{Thurstone_1927b}.
@@ -1718,36 +1719,38 @@ CPD of \(Y\) given \(X\).
 }\end{equation}
 
 Each CPD in equation (\ref{eq-mat51}) rests on specific assumptions,
-which we outline below. First, we assume that \(O_{R}\) follows a
-Bernoulli distribution\footnote{The binomial distribution--including its
-  special case, the Bernoulli distribution-- represent a maximum entropy
-  distribution for binary events \citep[pp.~34]{McElreath_2020}. This
-  means that when only two un-ordered outcomes are possible, and the
-  expected numbers of each type of event are assumed to be constant,
-  then the binomial distribution is the one that is most consistent with
-  these constraints \citep[pp.~310]{McElreath_2020}. For a detailed
-  discussion of the binomial as a maximum entropy distribution, see
+which we outline in the SCM~\ref{fig-cj16_scm}, the probabilistic model
+\ref{fig-cj16_scm}, and the statistical model \ref{fig-cj16_scm}. First,
+we assume that \(O_{R}\) follows a Bernoulli distribution\footnote{The
+  binomial distribution--including its special case, the Bernoulli
+  distribution-- represent a maximum entropy distribution for binary
+  events \citep[pp.~34]{McElreath_2020}. This means that when only two
+  un-ordered outcomes are possible, and the expected numbers of each
+  type of event are assumed to be constant, then the binomial
+  distribution is the one that is most consistent with these constraints
+  \citep[pp.~310]{McElreath_2020}. For a detailed discussion of the
+  binomial as a maximum entropy distribution, see
   \citet[chap.~10.1.2]{McElreath_2020}.}, reflecting the binary nature
 of CJ outcomes. Furthermore, following the conventions of Generalized
 Linear Latent and Mixed Models (GLLAMMs)
 \citep{Rabe_et_al_2004a, Skrondal_et_al_2004a, Rabe_et_al_2012b}, the
 distribution links \(O_{R}\) to the latent discriminal difference vector
 \(D_{R}\) using an inverse-logit function:
-\(\text{inv\_logit}(x) = 1/(1 + \exp(-x))\). Note that the probability
-distributions for the sample and comparison mechanisms, \(P(S)\) and
-\(P(C)\), included in the probabilistic model \ref{fig-cj16_prob}, are
-omitted from the statistical model \ref{fig-cj16_stat}. We exclude these
-probabilities from the statistical definition because, although they are
-part of the joint distribution of the data, they do not influence the
-dependence between \(O_{R}\) and \(D_{R}\), since \(S\) and \(C\) are
-governed by random selection designs\footnote{Randomization ensures that
-  data---and, by extension, an estimator---satisfies several key
-  identification properties, such as common support, no interference,
-  and consistency. The most critical property, however, is the
-  elimination of confounding. \emph{Confounding} occurs when an external
-  variable, such as \(X_{I}\), simultaneously influences both the
-  outcome (e.g., \(O_{R}\)) and a variable of interest (e.g., \(S\)),
-  resulting in spurious associations between the two
+\(\text{inv\_logit}(x) = 1/(1 + \exp(-x))\). Note that while the
+probabilistic model \ref{fig-cj16_prob} includes the probability
+distributions for the sampling and comparison mechanisms, \(P(S)\) and
+\(P(C)\), we omit these from the statistical model \ref{fig-cj16_stat}.
+We do so because, although these distributions contribute to the joint
+distribution of the data, they do not affect the relationship between
+\(O_{R}\) and \(D_{R}\). This lack of influence is due to the random
+selection designs that govern \(S\) and \(C\)\footnote{Randomization
+  ensures that data---and, by extension, an estimator---satisfies
+  several key identification properties, such as common support, no
+  interference, and consistency. The most critical property, however, is
+  the elimination of confounding. \emph{Confounding} occurs when an
+  external variable, such as \(X_{I}\), simultaneously influences both
+  the outcome (e.g., \(O_{R}\)) and a variable of interest (e.g.,
+  \(S\)), resulting in spurious associations between the two
   \citep{Everitt_et_al_2010}. Randomization addresses this issue by
   effectively decoupling the association between the variable of
   interest and any other variable, except for the outcome itself. For a
@@ -1758,7 +1761,7 @@ governed by random selection designs\footnote{Randomization ensures that
 Second, we define \(D_{R}\) as the difference between the discriminal
 processes of two texts, \(T_{IA}[i, a]\) and \(T_{IA}[h, b]\), plus the
 corresponding repeated judge biases, \(B_{JK}[j, k]\). The discriminal
-processes represent the underlying written-quality traits of the texts.
+processes represent the underlying written-quality trait of the texts.
 Note that if we assume that \(B_{JK}[j,k]\) reflects the difference in
 stimulus-specific biases, i.e.,
 \(B_{JK}[j,k] = B_{JK}[i,a,j,k] - B_{JK}[h,b,j,k]\), we can re-write the
@@ -1774,9 +1777,10 @@ captures a \emph{pure interaction effect}, in which neither the texts'
 discriminal processes nor the judges' biases alone determine the
 outcome, but their interaction does \citep{Attia_et_al_2022}. In simple
 terms, the discriminal processes of the stimuli become an observable
-outcome only through the judges' perceptions (biases). For clarity, the
-square brackets in \(D_{R}\) only indicate the relevant indices within
-each trait vector; they do not represent any data subsetting.
+outcome only through the judges' perceptions (biases). It is important
+to clarify that the square brackets in \(D_{R}\) merely indicate the
+relevant indices for each trait vector, without implying any subsetting
+of the data.
 
 \begin{figure}[H]
 
@@ -1870,8 +1874,8 @@ standard deviation \(p_{IA}\). The parameter \(p_{IA}\) is defined as a
 proportion of 1 to establish the scale of the latent trait, which is
 required in any latent variable model \citep{Depaoli_2021}. Note that
 because \(e_{IA}\) follows a Normal distribution, \(T_{IA}\) is also
-normally distributed. This result indicates that our model reverts to
-the original assumptions for the discriminal processes of stimuli
+normally distributed. This result implies that our model reverts to
+assuming Normal discriminal processes for the stimuli, as originally
 proposed by \citet{Thurstone_1927b} (see
 Table~\ref{tbl-thurstone_cases}).
 
@@ -1903,10 +1907,11 @@ relevant judge-level variables \(\beta_{ZJ}Z_{J}\) (e.g., judgment
 expertise) and judge-specific idiosyncratic errors \(e_{J}\). Each
 element of \(e_{J}\) is likewise assumed to be \(iid\) Normal with mean
 zero and a standard deviation \(s_{ZJ}\) that depends on the groups to
-which each judge belongs. For instance, if \(Z_{J} = 1, \dots, 3\)
-represents three groups of judges with varying expertise, the model
-imposes the constraint \(\sum_{g=1}^{3} s_{ZJ}[g]/3 = 1\) to fix the
-scale of the latent trait \citep{Depaoli_2021}.
+which each judge belongs. For instance, if \(Z_{J}\) is a variable that
+can take on three values representing three groups of judges with
+varying expertise, the model imposes the constraint
+\(\sum_{g=1}^{3} s_{ZJ}[g]/3 = 1\) to fix the scale of the latent trait
+\citep{Depaoli_2021}.
 
 Finally, to transform model~\ref{fig-cj16_stat} into a practical
 statistical tool for analyzing paired comparison data, we use
