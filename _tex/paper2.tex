@@ -248,7 +248,6 @@ model \sep comparative judgement \sep probability \sep
 
 \newcommand{\dsep}{\:\bot\:}
 \newcommand{\ndsep}{\:\not\bot\:}
-\newcommand{\cond}{\:|\:}
 
 \section{Introduction}\label{sec-introduction}
 
@@ -891,7 +890,8 @@ Before incorporating the first theoretical principles of Thurstone's
 theory, it is essential to further define SCMs. SCMs are formal
 mathematical models characterized by a set of \emph{endogenous}
 variables \(V\), a set of \emph{exogenous} variables \(E\), and a set of
-functions \(F\) \citep{Pearl_2009, Cinelli_et_al_2020}. Endogenous
+functions \(F\)
+\citep{Pearl_2009, Pearl_et_al_2016, Cinelli_et_al_2020}. Endogenous
 variables are those whose causal mechanisms a researcher chooses to
 model \citep{Neal_2020}. In contrast, exogenous variables represent
 \emph{errors} or \emph{disturbances} arising from omitted factors that
@@ -1582,8 +1582,8 @@ interpretation of the sample-comparison model (see equation
 (\ref{eq-mat27})). The vector contains \(n\) elements corresponding to
 the number of rows in the \(R\) matrix, with each element
 \(c_{(i,a,h,b,j,k)}\) being a binary value indicating the presence or
-absence of data rows in \(R\), a definition similar to that of \(S\) in
-equation (\ref{eq-mat26}).
+absence of data rows in \(R\), a definition similar to that of
+\(s_{(i,a,h,b,j,k)}\) in equation (\ref{eq-mat26}).
 \begin{equation}\phantomsection\label{eq-mat27}{
 C = \begin{bmatrix}
 c_{(1,1,1,2,1,1)} \\
@@ -1598,25 +1598,24 @@ c_{(n_{I},n_{A}-1,n_{I},n_{A},n_{J},1)}
 \end{bmatrix}
 }\end{equation}
 
-The DAG~\ref{fig-cj14_dag} also integrates the comparison mechanism
-\(C\) into the conceptual-population model, which ultimately derives the
-final comparative outcome \(O_{R}\). First, it shows the
-sample-comparison outcome \(O^{sc}_{R}\) as unobserved, highlighting
-that researchers cannot directly access this outcome due to the
-comparison mechanism. Second, it depicts the \emph{comparison mechanism}
-\(C\) as a causal factor influencing the final comparative outcome
-\(O_{R}\). As with the sampling mechanism, a square encloses \(C\) to
-indicate that it is a conditioned variable--that is, one that determines
-\emph{which repeated judgments the subset of judges makes for the subset
-of stimuli produced by the sampled individuals}. In essence, \(C\)
-reflects the assumption that judges \emph{do not} perform all possible
-repeated judgments for the selected stimuli. Instead, they carry out a
-``sufficient number of comparisons'' \(n_{C}\) to allow for accurate
-estimation of the proportion \(P(B>A)\) for each stimulus pair
+The DAG~\ref{fig-cj14_dag} also integrates the \emph{comparison
+mechanism} \(C\) into the conceptual-population model, ultimately
+deriving the outcome \(O_{R}\). It shows the sample-comparison outcome
+\(O^{sc}_{R}\) as unobserved, highlighting that researchers cannot
+directly access this outcome due to the comparison mechanism. Moreover,
+it depicts \(C\) as a causal factor influencing \(O_{R}\). As with the
+sampling mechanism, a square encloses \(C\) to indicate that it is a
+conditioned variable--that is, one that determines \emph{which repeated
+judgments the subset of judges makes for the subset of stimuli produced
+by the sampled individuals}. In essence, \(C\) reflects the assumption
+that judges \emph{do not} perform all possible repeated judgments for
+the selected stimuli. Instead, they carry out a ``sufficient number of
+comparisons'' \(n_{C}\) to allow for accurate estimation of the
+proportion \(P(B>A)\) for each stimulus pair
 \citep[pp.~267]{Thurstone_1927b}.
 
-Notably, DAG~\ref{fig-cj14_dag} shows that \(C\) is independent of all
-other variables in the model. This independence implies that the
+Notably, DAG~\ref{fig-cj14_dag} also shows that \(C\) is independent of
+all other variables in the model. This independence implies that the
 conceptual model represented by the DAG applies exclusively to Random
 Allocation Comparative Designs \citep{Bramley_2015} or Incomplete Block
 Designs \citep{Lawson_2015}. In these designs, every repeated judgment
@@ -1664,71 +1663,179 @@ has an equal probability of being included in the sample.
 
 \end{figure}%
 
-Finally, without loss of generality, researchers can reformulate the
-sample-comparison model in Figure~\ref{fig-cj14} into the equivalent
-form shown in Figure~\ref{fig-cj15}. This reformulation rests on two
-principles. First, because the sampling and comparison mechanism vectors
-\(S\) and \(C\) are binary, researchers can integrate them into the
-model using element-wise products. This approach eliminates the need to
-define the structural equations \(f_{S}\) and \(f_{C}\). Second, since
-only the final comparative outcome \(O_{R}\) is observed, it is standard
-to assume that the distribution of the conceptual-population outcome
-\(O^{cp}_{R}\), defined by the structural equation \(f_{O}\), also
-applies to this outcome. This assumption removes the necessity of
-describing the unobserved outcomes \(O^{cp}_{R}\) and \(O^{sc}_{R}\).
+Finally, since it is standard to assume that the distribution of the
+conceptual-population outcome \(O^{cp}_{R}\) also holds for
+\(O^{sc}_{R}\) and \(O_{R}\), we can reformulate the sample-comparison
+model in Figure~\ref{fig-cj14} into the equivalent form shown in
+Figure~\ref{fig-cj15}. This reformulation produces a model that applies
+directly to a sample of comparative data. In this version, the
+unobserved outcomes \(O^{cp}_{R}\) and \(O^{sc}_{R}\) are omitted, and
+\(O_{R}\) inherits the structural equation \(f_{O}\) that originally
+defined \(O^{cp}_{R}\). Moreover, the definition of \(O_{R}\) now
+reflects its direct dependence on the discriminal difference \(D_{R}\)
+and the sample and comparison mechanisms, \(S\) and \(C\).
 
-In summary, extending Thurstone's general form allows researchers to
-address issues with the BTL model, such as accounting for judge biases
-(see Section~\ref{sec-theory-issue1b}), the hierarchical structure of
-stimuli (see Section~\ref{sec-theory-issue1b}), and measurement error in
-trait estimation and hypothesis testing (see
-Section~\ref{sec-theory-issue2}). However, it does not address concerns
-about stimuli' equal dispersions discussed in
-Section~\ref{sec-theory-issue1a}. Since this issue involves statistical
-assumptions regarding the discriminal process distribution, it requires
-a statistical model, which we develop in the next section.
+In summary, the SCM~\ref{fig-cj15_scm} and DAG~\ref{fig-cj15_dag} extend
+Thurstone's general form to address several limitations of the BTL
+model. These extensions account for judge biases (see
+Section~\ref{sec-theory-issue1b}), reflect the hierarchical structure of
+stimuli (see Section~\ref{sec-theory-issue1b}), and incorporate
+measurement error in trait estimation and hypothesis testing (see
+Section~\ref{sec-theory-issue2}). However, they do not resolve concerns
+about the assumption of equal dispersions among stimuli discussed in
+Section~\ref{sec-theory-issue1a}. Because this issue involves
+statistical assumptions about the distribution of the discriminal
+process, it requires a statistical model, which we develop in the next
+section.
 
-\section{Abandoning the BTL model}\label{sec-statistical}
+\section{From SCMs to a statistical model}\label{sec-statistical}
 
-Researchers can easily derive a statistical model to address violations
-of the equal dispersion assumption in CJ experiments (see
-Section~\ref{sec-theory-issue1a}) using only SCM~\ref{fig-cj15_scm}.
-This derivation is possible because the structural equations \(F\)
-encode probabilistic information \citep{Pearl_et_al_2016}, which
-researchers can replace with suitable probabilistic assumptions. As a
-starting point, given the dichotomous nature of CJ outcomes,
-model~\ref{fig-cj16_stat} assumes that \(O_{R}\) follows a Bernoulli
-distribution\footnote{The binomial distribution--including its special
-  case, the Bernoulli distribution-- represent a maximum entropy
+With the structure in SCM~\ref{fig-cj15_scm}, we can derive a
+statistical model that addresses violations of the equal dispersion
+assumption in CJ experiments (see Section~\ref{sec-theory-issue1a}).
+This derivation is possible because a fully specified SCM encodes
+functional and probabilistic information, which we can replace with
+appropriate functions and probabilistic assumptions
+\citep{Pearl_et_al_2016}. Specifically, SCM~\ref{fig-cj15_scm} allows us
+to express the joint distribution of our CJ system as a product of
+simpler conditional probability distributions (CPDs)\footnote{This
+  re-expression is possible because the \emph{chain rule} of probability
+  and the \emph{Bayesian Network Factorization (BNF)} property. For
+  further details, see \citet{Pearl_et_al_2016} and \citet{Neal_2020}.},
+as shown in equation (\ref{eq-mat51}). For clarity, we treat expressions
+such as \(Y := f_{Y}(X)\), \(P(Y \mid X)\), and \(Y \sim f(Y \mid X)\)
+as equivalent. Here, \(P(Y \mid X)\) and \(f(Y \mid X)\) represent the
+CPD of \(Y\) given \(X\).
+\begin{equation}\phantomsection\label{eq-mat51}{
+\begin{aligned}
+  P(O_{R}, & S, C, D_{R}, T_{IA}, X_{IA}, e_{IA}, T_{I}, X_{I}, e_{I}, B_{JK}, Z_{JK}, e_{JK}, B_{J}, Z_{J}, e_{J} ) & \\
+  &= P(O_{R} \mid D_{R}, S, C) \cdot P(S) \cdot P(C) \cdot P(D_{R} \mid T_{IA}, B_{JK}) \\
+  & \quad \cdot P(T_{IA} \mid T_{I}, X_{IA}, e_{IA}) \cdot P(T_{I} \mid X_{I}, e_{I}) \\
+  & \quad \cdot P(B_{JK} \mid B_{J}, Z_{JK}, e_{JK}) \cdot P(B_{J} \mid Z_{J}, e_{J}) \\
+  & \quad \cdot P(X_{IA}) \cdot P(X_{I}) \cdot P(Z_{JK}) \cdot P(Z_{J}) \\
+  & \quad \cdot P(e_{IA}) \cdot P(e_{I}) \cdot P(e_{JK}) \cdot P(e_{J})  
+\end{aligned}
+}\end{equation}
+
+Each CPD in equation (\ref{eq-mat51}) rests on specific assumptions,
+which we outline below. First, we assume that \(O_{R}\) follows a
+Bernoulli distribution\footnote{The binomial distribution--including its
+  special case, the Bernoulli distribution-- represent a maximum entropy
   distribution for binary events \citep[pp.~34]{McElreath_2020}. This
   means that when only two un-ordered outcomes are possible, and the
   expected numbers of each type of event are assumed to be constant,
   then the binomial distribution is the one that is most consistent with
   these constraints \citep[pp.~310]{McElreath_2020}. For a detailed
   discussion of the binomial as a maximum entropy distribution, see
-  \citet[chap.~10.1.2]{McElreath_2020}.}.
-
-Next, following the conventions of Generalized Linear Latent And Mixed
-Models (GLLAMMs)
+  \citet[chap.~10.1.2]{McElreath_2020}.}, reflecting the binary nature
+of CJ outcomes. Furthermore, following the conventions of Generalized
+Linear Latent and Mixed Models (GLLAMMs)
 \citep{Rabe_et_al_2004a, Skrondal_et_al_2004a, Rabe_et_al_2012b}, the
-model links the observed outcome to the latent discriminal difference
-vector \(D_{R}\) using an inverse-logit function:
-\(\text{inv\_logit}(x) = 1/(1 + \exp(-x))\). Notice that the sampling
-and comparison mechanisms, \(S\) and \(C\), act as element-wise
-multipliers of \(D_{R}\) (denoted by the symbol \(\odot\)), directly
-incorporating key assessment design features relevant to CJ experiments
-into the statistical formulation. Researchers can omit these vectors
-when only the observed CJ sample is available.
+distribution links \(O_{R}\) to the latent discriminal difference vector
+\(D_{R}\) using an inverse-logit function:
+\(\text{inv\_logit}(x) = 1/(1 + \exp(-x))\). Note that the probability
+distributions for the sample and comparison mechanisms, \(P(S)\) and
+\(P(C)\), included in the probabilistic model \ref{fig-cj16_prob}, are
+omitted from the statistical model \ref{fig-cj16_stat}. We exclude these
+probabilities from the statistical definition because, although they are
+part of the joint distribution of the data, they do not influence the
+dependence between \(O_{R}\) and \(D_{R}\), since \(S\) and \(C\) are
+governed by random selection designs\footnote{Randomization ensures that
+  data---and, by extension, an estimator---satisfies several key
+  identification properties, such as common support, no interference,
+  and consistency. The most critical property, however, is the
+  elimination of confounding. \emph{Confounding} occurs when an external
+  variable, such as \(X_{I}\), simultaneously influences both the
+  outcome (e.g., \(O_{R}\)) and a variable of interest (e.g., \(S\)),
+  resulting in spurious associations between the two
+  \citep{Everitt_et_al_2010}. Randomization addresses this issue by
+  effectively decoupling the association between the variable of
+  interest and any other variable, except for the outcome itself. For a
+  more detailed discussion on the benefits of randomization, see
+  \citet{Pearl_2009}, \citet{Morgan_et_al_2014}, \citet{Neal_2020}, and
+  \citet{Hernan_et_al_2020}.}.
+
+Second, we define \(D_{R}\) as the difference between the discriminal
+processes of two texts, \(T_{IA}[i, a]\) and \(T_{IA}[h, b]\), plus the
+corresponding repeated judge biases, \(B_{JK}[j, k]\). The discriminal
+processes represent the underlying written-quality traits of the texts.
+Note that if we assume that \(B_{JK}[j,k]\) reflects the difference in
+stimulus-specific biases, i.e.,
+\(B_{JK}[j,k] = B_{JK}[i,a,j,k] - B_{JK}[h,b,j,k]\), we can re-write the
+discriminal difference as:
+\begin{equation}\phantomsection\label{eq-mat52}{
+\begin{aligned}
+D_{R} &= \left( T_{IA}[i,a] - T_{IA}[h,b] \right) + B_{JK}[j,k] \\
+&= \left( T_{IA}[i, a] + B_{JK}[i, a, j, k] \right) - \left( T_{IA}[h, b] + B_{JK}[h, b, j, k] \right) \\
+& = T^{*}_{IA}[i,a] - T^{*}_{IA}[h,b]
+\end{aligned}
+}\end{equation} This formulation reveals that the discriminal difference
+captures a \emph{pure interaction effect}, in which neither the texts'
+discriminal processes nor the judges' biases alone determine the
+outcome, but their interaction does \citep{Attia_et_al_2022}. In simple
+terms, the discriminal processes of the stimuli become an observable
+outcome only through the judges' perceptions (biases). For clarity, the
+square brackets in \(D_{R}\) only indicate the relevant indices within
+each trait vector; they do not represent any data subsetting.
 
 \begin{figure}[H]
 
-\begin{minipage}{0.50\linewidth}
+\begin{minipage}{0.33\linewidth}
 
 \centering{
 
 \[
 \begin{aligned}
-  O_{R} & \overset{iid}{\sim} \text{Bernoulli} \left[ \text{inv\_logit}( D_{R} \odot S \odot C ) \right] \\
+  O_{R} & := f_{O}(D_{R}, S, C) \\ 
+  D_{R} & := f_{D}(T_{IA}, B_{JK}) \\
+  T_{IA} & := f_{T}(T_{I}, X_{IA}, e_{IA}) \\
+  T_{I} & := f_{T}(X_{I}, e_{I}) \\
+  B_{JK} & := f_{B}(B_{J}, Z_{JK}, e_{JK}) \\
+  B_{J} & := f_{B}(Z_{J}, e_{J}) \\
+  e_{I} & \:\bot\:\{ e_{J}, e_{IA}, e_{JK} \} \\
+  e_{J} & \:\bot\:\{ e_{IA}, e_{JK} \} \\
+  e_{IA} & \:\bot\:e_{JK} \\ \\
+\end{aligned}
+\]
+
+}
+
+\subcaption{\label{fig-cj16_scm}SCM}
+
+\end{minipage}%
+%
+\begin{minipage}{0.33\linewidth}
+
+\centering{
+
+\[
+\begin{aligned}
+  & P( O_{R} \mid D_{R}, S, C ) \cdot P(S) \cdot P(C) \\
+  & P( D_{R} \mid T_{IA}, B_{JK} ) \\
+  & P( T_{IA} \mid T_{I}, X_{IA}, e_{IA} ) \\
+  & P( T_{I} \mid X_{I}, e_{I} ) \\
+  & P( B_{JK} \mid B_{J}, Z_{JK}, e_{JK} ) \\
+  & P( B_{J} \mid Z_{J}, e_{J} ) \\
+  & P( e_{I} ) \\
+  & P( e_{J} ) \\
+  & P( e_{IA} ) \\  
+  & P( e_{JK} )
+\end{aligned}
+\]
+
+}
+
+\subcaption{\label{fig-cj16_prob}Probabilistic model}
+
+\end{minipage}%
+%
+\begin{minipage}{0.33\linewidth}
+
+\centering{
+
+\[
+\begin{aligned}
+  O_{R} & \overset{iid}{\sim} \text{Bernoulli} \left[ \text{inv\_logit}( D_{R} ) \right] \\
   D_{R} & = \left( T_{IA}[i,a] - T_{IA}[h,b] \right) + B_{JK}[j,k] \\
   T_{IA} & = T_{I} + \beta_{XA} X_{IA} + e_{IA} \\
   T_{I} & = \beta_{XI} X_{I} + e_{I} \\
@@ -1746,94 +1853,53 @@ when only the observed CJ sample is available.
 \subcaption{\label{fig-cj16_stat}Statistical model}
 
 \end{minipage}%
-%
-\begin{minipage}{0.50\linewidth}
 
-\centering{
-
-\[
-\begin{aligned}
-  O_{R} & := f_{O}(D_{R}, S, C) \\
-  D_{R} & := f_{D}(T_{IA}, B_{JK}) \\
-  T_{IA} & := f_{T}(T_{I}, X_{IA}, e_{IA}) \\
-  T_{I} & := f_{T}(X_{I}, e_{I}) \\
-  B_{JK} & := f_{B}(B_{J}, Z_{JK}, e_{JK}) \\
-  B_{J} & := f_{B}(Z_{J}, e_{J}) \\
-  e_{I} & \:\bot\:\{ e_{J}, e_{IA}, e_{JK} \} \\
-  e_{J} & \:\bot\:\{ e_{IA}, e_{JK} \} \\
-  e_{IA} & \:\bot\:e_{JK} 
-\end{aligned}
-\]
-
-}
-
-\subcaption{\label{fig-cj16_scm}SCM~\ref{fig-cj15_scm}}
-
-\end{minipage}%
-
-\caption{\label{fig-cj16}Comparative judgment model, SCM and statistical
-model assuming different discriminal dispersions for the student's
-traits}
+\caption{\label{fig-cj16}Comparative judgment model, SCM, probabilistic
+and statistical model assuming different discriminal dispersions for the
+student's traits}
 
 \end{figure}%
 
-Then, model~\ref{fig-cj16_stat} defines \(D_{R}\) as the difference
-between the discriminal processes of two texts, \(T_{IA}[i, a]\) and
-\(T_{IA}[h, b]\), which represent their underlying written-quality
-trait. This difference also includes the corresponding repeated judge
-biases, \(B_{JK}[j, k]\). Note that if we assume that \(B_{JK}[j,k]\)
-reflects the difference in stimulus-specific biases, i.e.,
-\(B_{JK}[j,k] = B_{JK}[i,a,j,k] - B_{JK}[h,b,j,k]\), then we can
-re-write the discriminal difference as:
-\begin{equation}\phantomsection\label{eq-mat51}{
-\begin{aligned}
-D_{R} &= \left( T_{IA}[i,a] - T_{IA}[h,b] \right) + B_{JK}[j,k] ] \\
-&= \left( T_{IA}[i, a] + B_{JK}[i, a, j, k] \right) - \left( T_{IA}[h, b] + B_{JK}[h, b, j, k] \right) \\
-& = T^{*}_{IA}[i,a] - T^{*}_{IA}[h,b]
-\end{aligned}
-}\end{equation} This formulation reveals that the discriminal difference
-captures a \emph{pure interaction effect}, in which neither the texts'
-discriminal processes nor the judges' biases alone determine the
-outcome, but their interaction does \citep{Attia_et_al_2022}. In simple
-terms, the discriminal processes of the stimuli become an observable
-outcome only through the judges' perceptions (biases). For clarity, the
-square brackets in \(D_{R}\) only indicate the relevant indices within
-each trait vector; they do not represent any data subsetting.
+Third, we define \(T_{IA}\) as a linear combination of the students'
+underlying writing-quality traits \(T_{I}\), the effects of relevant
+text-related variables \(\beta_{XA}X_{IA}\) (e.g., text length on
+quality), and the texts' idiosyncratic errors \(e_{IA}\). We assume that
+each element of \(e_{IA}\) is independent and identically distributed
+\((iid)\) according to a Normal distribution, with a mean of zero and a
+standard deviation \(p_{IA}\). The parameter \(p_{IA}\) is defined as a
+proportion of 1 to establish the scale of the latent trait, which is
+required in any latent variable model \citep{Depaoli_2021}. Note that
+because \(e_{IA}\) follows a Normal distribution, \(T_{IA}\) is also
+normally distributed. This result indicates that our model reverts to
+the original assumptions for the discriminal processes of stimuli
+proposed by \citet{Thurstone_1927b} (see
+Table~\ref{tbl-thurstone_cases}).
 
-Next, the model defines \(T_{IA}\) as a linear combination of the
-students' underlying writing-quality traits \(T_{I}\), the effects of
-relevant text-related variables \(\beta_{XA}X_{IA}\) (e.g., text
-length), and the texts' idiosyncratic errors \(e_{IA}\). The model
-assumes that each element of \(e_{IA}\) is independent and identically
-distributed \((iid)\) according to a Normal distribution, with a mean of
-zero and a standard deviation \(p_{IA}\), defined as a proportion of
-\(1\). This standardization establishes the scale of the latent trait,
-as it is required by latent variable models \citep{Depaoli_2021}.
-
-Additionally, the model defines \(T_{I}\) as a linear combination of the
-effects of relevant student-related variables, \(\beta_{XI} X_{I}\), and
-students' idiosyncratic errors, \(e_{I}\). As before, each element of
-\(e_{I}\) is \(iid\) following a Normal distribution with a mean of
-zero. However, the standard deviation, \(s_{XI}\), varies depending on
-the teaching method to which each student belongs. Given the example in
+Fourth, we define \(T_{I}\) as a linear combination of the effects of
+relevant student-related variables, \(\beta_{XI} X_{I}\), and students'
+idiosyncratic errors, \(e_{I}\). As before, we assume that each element
+of \(e_{I}\) is \(iid\) Normal with a mean of zero. However, we consider
+the standard deviation, \(s_{XI}\), varies depending on the teaching
+method group to which each student belongs. Given the example in
 Section~\ref{sec-theoretical}, where the teaching method
 \(X_{I} = 1,2\), the model sets the following constraint to anchor the
 scale of the latent trait \citep{Depaoli_2021}:
-\(\sum_{g=1}^{2} s_{XI}[g]/2 = 1\) This constraint effectively addresses
-concerns about the equal dispersion assumption raised in
+\(\sum_{g=1}^{2} s_{XI}[g]/2 = 1\). Note that this parametrization of
+\(e_{I}\) relaxes the equal dispersion assumption for the stimuli,
+effectively addressing the concerns raised in
 Section~\ref{sec-theory-issue1a}.
 
-Similarly, the model defines \(B_{JK}\) as a linear combination of the
-judges' individual bias \(B_{J}\), the effects of relevant
-judgment-related variables \(\beta_{ZK}Z_{JK}\) (e.g., the number of
-judgments a judge makes), and judgment-specific idiosyncratic errors
-\(e_{JK}\). The model assumes that each element of \(e_{JK}\) is \(iid\)
-according to a Normal distribution, with a mean of zero and a standard
+Fifth, we define \(B_{JK}\) as a linear combination of the judges'
+individual bias \(B_{J}\), the effects of relevant judgment-related
+variables \(\beta_{ZK}Z_{JK}\) (e.g., how the number of judgments a
+judge makes affect the assessment of quality), and judgment-specific
+idiosyncratic errors \(e_{JK}\). We assume that each element of
+\(e_{JK}\) is \(iid\) Normal with a mean of zero and a standard
 deviation \(p_{JK}\), defined as a proportion of \(1\), to anchor the
 scale of the latent trait \citep{Depaoli_2021}.
 
-The model also defines \(B_{J}\) as a linear combination of the effects
-of relevant judge-level variables \(\beta_{ZJ}Z_{J}\) (e.g., judgment
+Sixth, we define \(B_{J}\) as a linear combination of the effects of
+relevant judge-level variables \(\beta_{ZJ}Z_{J}\) (e.g., judgment
 expertise) and judge-specific idiosyncratic errors \(e_{J}\). Each
 element of \(e_{J}\) is likewise assumed to be \(iid\) Normal with mean
 zero and a standard deviation \(s_{ZJ}\) that depends on the groups to
@@ -1842,16 +1908,17 @@ represents three groups of judges with varying expertise, the model
 imposes the constraint \(\sum_{g=1}^{3} s_{ZJ}[g]/3 = 1\) to fix the
 scale of the latent trait \citep{Depaoli_2021}.
 
-Finally, we apply \emph{Bayesian inference methods} to turn
-model~\ref{fig-cj16_stat} into a practical statistical tool for
-analyzing paired comparison data. The \textbf{Declarations} section of
-this document provides a link to this model, along with an alternative
+Finally, to transform model~\ref{fig-cj16_stat} into a practical
+statistical tool for analyzing paired comparison data, we use
+\emph{Bayesian inference methods}. The \textbf{Declarations} section of
+this document includes a link to the model, along with an alternative
 specification that assumes equal discriminal dispersions. We implemented
-both models in \texttt{Stan} \citep[version \(2.26.1\),][]{Stan_2020}.
+both versions of the model using \texttt{Stan} \citep[version
+\(2.26.1\),][]{Stan_2020}. Although the implementation was successful,
+we do not report the results here, as they fall outside the scope of
+this document.
 
 \section{Discussion}\label{sec-discussion}
-
-\subsection{Findings}\label{sec-discussion-finding}
 
 \subsection{Limitations and further
 research}\label{sec-discussion-limitations}
@@ -1946,7 +2013,7 @@ associational quantity in Equation~\ref{eq-group_diff}, where
 \(E[\cdot]\) denotes the expected value.
 
 \begin{equation}\phantomsection\label{eq-group_diff}{
-E[Y_{i} \:|\:T_{i}=1] - E[Y_{i} \:|\:T_{i}=2]
+E[Y_{i} \mid T_{i}=1] - E[Y_{i} \mid T_{i}=2]
 }\end{equation}
 
 Researchers then proceed to identify the estimands.
@@ -2042,12 +2109,12 @@ defining the \emph{individual causal effect} (ICE) as the difference
 between each student's potential outcomes, as in Equation~\ref{eq-ICE}.
 
 \begin{equation}\phantomsection\label{eq-ICE}{
-\tau_{i} = Y_{i} \:|\:do(T_{i}=1) - Y_{i} \:|\:do(T_{i}=2)
+\tau_{i} = Y_{i} \mid do(T_{i}=1) - Y_{i} \mid do(T_{i}=2)
 }\end{equation}
 
 where \(do(T_{i}=t)\) represents the intervention operator,
-\(Y_{i} \:|\:do(T_{i}=1)\) represents the potential outcome under
-intervention \(T_{i}=1\), and \(Y_{i} \:|\:do(T_{i}=1)\) represents the
+\(Y_{i} \mid do(T_{i}=1)\) represents the potential outcome under
+intervention \(T_{i}=1\), and \(Y_{i} \mid do(T_{i}=1)\) represents the
 potential outcome under intervention \(T_{i}=2\). Here, an
 \emph{intervention} involves assigning a constant value to the treatment
 variable for each student's potential outcomes. Note that if a student
@@ -2062,7 +2129,7 @@ counterparts.
 \begin{equation}\phantomsection\label{eq-ACE}{
 \begin{aligned}
 \tau & = E[\tau_{i}] \\
-  & = E[Y_{i} \:|\:do(T_{i}=1)]- E[Y_{i} \:|\:do(T_{i}=2)]
+  & = E[Y_{i} \mid do(T_{i}=1)]- E[Y_{i} \mid do(T_{i}=2)]
 \end{aligned}
 }\end{equation}
 
@@ -2074,7 +2141,7 @@ conditioning data on a \emph{sufficient adjustment set} of variables
 \emph{sufficient} set (potentially empty) must block all non-causal
 paths between \(T\) to \(Y\) without opening new ones. When such a set
 exists, then \(T\) and \(Y\) are \emph{d-separated} by \(X\)
-(\(T \:\bot\:Y \:|\:X\)) \citep{Pearl_2009}, and \(X\) satisfies the
+(\(T \:\bot\:Y \mid X\)) \citep{Pearl_2009}, and \(X\) satisfies the
 \emph{backdoor criterion} \citep[pp 37]{Neal_2020}. Here,
 \emph{conditioning} describes the process of restricting the focus to
 the subset of the population defined by the conditioning variable
@@ -2100,7 +2167,7 @@ researchers first identify the \emph{conditional average causal effect}
 (CACE, Equation~\ref{eq-CACE})
 
 \begin{equation}\phantomsection\label{eq-CACE}{
-CACE_{t} = E[Y_{i} \:|\:T_{i}=t, X]
+CACE_{t} = E[Y_{i} \mid T_{i}=t, X]
 }\end{equation}
 
 From the CACE, researchers can identify the ACE from associational
@@ -2111,9 +2178,9 @@ represents the marginal expected value over \(X\)
 
 \begin{equation}\phantomsection\label{eq-mACE1}{
 \begin{aligned}
-  \tau & = E[Y_{i} \:|\:do(T_{i}=1)]- E[Y_{i} \:|\:do(T_{i}=2)] \\
+  \tau & = E[Y_{i} \mid do(T_{i}=1)]- E[Y_{i} \mid do(T_{i}=2)] \\
   & = E_{X}[CACE_{1} - CACE_{2}] \\
-  & = E_{X}\left[ E[Y_{i} \:|\:T_{i}=1, X] - E[Y_{i} \:|\:T_{i}=2, X] \right]
+  & = E_{X}\left[ E[Y_{i} \mid T_{i}=1, X] - E[Y_{i} \mid T_{i}=2, X] \right]
 \end{aligned}
 }\end{equation}
 
@@ -2124,8 +2191,8 @@ applicability across different causal scenarios
 
 \begin{equation}\phantomsection\label{eq-mACE_cont}{
 \begin{aligned}
-  \tau &= E[Y_{i} \:|\:do(T_{i}=t)] \\
-  & = d E_{X}\left[ E[Y_{i} \:|\:T_{i}=t, X]\right]/ dt
+  \tau &= E[Y_{i} \mid do(T_{i}=t)] \\
+  & = d E_{X}\left[ E[Y_{i} \mid T_{i}=t, X]\right]/ dt
   \end{aligned}
 }\end{equation}
 
@@ -2510,7 +2577,7 @@ encoding is that any conceptual model described by an SCM and DAG can
 represent the joint distribution of variables more efficiently
 \citep[pp.~29]{Pearl_et_al_2016}. This expression takes the form of a
 product of conditional probability distributions (CPDs) of the type
-\(P(child \:|\:parents)\). This property is formally known as the
+\(P(child \mid parents)\). This property is formally known as the
 \emph{Bayesian Network factorization} (BNF,
 Equation~\ref{eq-net_factor})
 \citetext{\citealp[pp.~29]{Pearl_et_al_2016}; \citealp[pp.~21]{Neal_2020}}.
@@ -2518,8 +2585,8 @@ In this expression, \(pa(X_{i})\) denotes the set of variables that are
 the parents of \(X_{i}\).
 \begin{equation}\phantomsection\label{eq-net_factor}{
 \begin{aligned}
-P(X_{1}, X_{2}, \dots, X_{P}) & = X_{1} \cdot \prod^{P}_{p=2} P(X_{i} \:|\:X_{i-1}, \dots, X_{1}) & (\small{\text{by chain rule})}\\
-& = X_{1} \cdot \prod^{P}_{p=2} P(X_{i} \:|\:pa(X_{i}) ) & (\small{\text{by BNF}})
+P(X_{1}, X_{2}, \dots, X_{P}) & = X_{1} \cdot \prod^{P}_{p=2} P(X_{i} \mid X_{i-1}, \dots, X_{1}) & (\small{\text{by chain rule})}\\
+& = X_{1} \cdot \prod^{P}_{p=2} P(X_{i} \mid pa(X_{i}) ) & (\small{\text{by BNF}})
 \end{aligned}
 }\end{equation}
 
@@ -2545,7 +2612,7 @@ supporting the theoretical assumption that the observed variables
 \(X_{3}\) is unconditionally dependent on \(X_{1}\)
 (\(X_{1} \:\not\bot\:X_{3}\)), as depicted in the SCM \ref{fig-scm_bb2}
 and DAG \ref{fig-mdag_bb2}, the BNF express their joint probability
-distribution as \(P(X_{1}, X_{3}) = P(X_{3} \:|\:X_{1}) P(X_{1})\).
+distribution as \(P(X_{1}, X_{3}) = P(X_{3} \mid X_{1}) P(X_{1})\).
 Notably, these descriptions demonstrate the clear correspondence between
 the structural equations illustrated in Section~\ref{sec-appendixB31}
 and the CPDs.
@@ -2559,26 +2626,26 @@ applying the BNF to the chain structure depicted in the SCM
 \ref{fig-scm_bb3} and DAG \ref{fig-mdag_bb3} allow researchers to
 represent the joint distribution for the observed variables as
 \(P(X_{1},X_{2},X_{3}) =\)
-\(P(X_{1}) P(X_{2} \:|\:X_{1}) P(X_{3} \:|\:X_{2})\). This expression
+\(P(X_{1}) P(X_{2} \mid X_{1}) P(X_{3} \mid X_{2})\). This expression
 implies that \(X_{1}\) and \(X_{3}\) are unconditionally dependent
 \((X_{1} \:\not\bot\:X_{3})\), but conditionally independent when
-controlling for \(X_{2}\) \((X_{1} \:\bot\:X_{3} \:|\:X_{2})\).
+controlling for \(X_{2}\) \((X_{1} \:\bot\:X_{3} \mid X_{2})\).
 Moreover, in the fork structure shown in the SCM \ref{fig-scm_bb4} and
 DAG \ref{fig-mdag_bb4}, researchers can express the joint distribution
 of the observed variables as \(P(X_{1},X_{2},X_{3}) =\)
-\(P(X_{1} \:|\:X_{2}) P(X_{2}) P(X_{3} \:|\:X_{2})\). Similar to the
+\(P(X_{1} \mid X_{2}) P(X_{2}) P(X_{3} \mid X_{2})\). Similar to the
 chain structure, this expression allows researchers to further infer
 that \(X_{1}\) and \(X_{3}\) are unconditionally dependent
 \((X_{1} \:\not\bot\:X_{3})\), but conditionally independent when
-controlling for \(X_{2}\) \((X_{1} \:\bot\:X_{3} \:|\:X_{2})\). Finally,
+controlling for \(X_{2}\) \((X_{1} \:\bot\:X_{3} \mid X_{2})\). Finally,
 researchers analyzing the collider structure illustrated in the SCM
 \ref{fig-scm_bb5} and DAG \ref{fig-mdag_bb5} can express the joint
 distribution of the observed variables as \(P(X_{1},X_{2},X_{3}) =\)
-\(P(X_{1}) P(X_{2} \:|\:X_{1}, X_{3}) P(X_{3})\). This representation
+\(P(X_{1}) P(X_{2} \mid X_{1}, X_{3}) P(X_{3})\). This representation
 allows researchers to infer that \(X_{1}\) and \(X_{3}\) are
 unconditionally independent \((X_{1} \:\bot\:X_{3})\), but conditionally
 dependent when controlling for \(X_{2}\)
-\((X_{1} \:\not\bot\:X_{3} \:|\:X_{2})\). The authors \citet[pp.~37, 40,
+\((X_{1} \:\not\bot\:X_{3} \mid X_{2})\). The authors \citet[pp.~37, 40,
 41]{Pearl_et_al_2016} and \citet[pp.~25--26]{Neal_2020} provide the
 mathematical proofs for these conclusions.
 
@@ -2586,7 +2653,7 @@ Using these additional probabilistic insights, researchers can revisit
 the scenario in Section~\ref{sec-appendixB2}. In this context, applying
 the BNF to the SCM \ref{fig-scm_example2} structure, enables the
 representation of the joint probability distribution of the observed
-variables as \(P(Y, T, X) =\) \(P(Y \:|\:T, X) P(T \:|\:X) P(X)\). From
+variables as \(P(Y, T, X) =\) \(P(Y \mid T, X) P(T \mid X) P(X)\). From
 this expression, researchers can infer that the outcome \(Y\) is
 unconditionally dependent on the teaching method \(T\)
 \((Y \:\not\bot\:T)\). This dependency arises from two key structures: a
@@ -2649,7 +2716,7 @@ alters only the causal mechanism of that node, leaving others unchanged
 
 The modularity assumption underpins the concepts of manipulated graphs
 and Truncated Factorization, which are essential for representing
-interventions \(P(Y_{i} \:|\:do(T_{i}=t))\) within SCMs and DAGs.
+interventions \(P(Y_{i} \mid do(T_{i}=t))\) within SCMs and DAGs.
 \emph{Manipulated graphs} simulate physical interventions by removing
 specific edges from a DAG, while preserving the remaining structure
 unchanged \citep[pp.~34]{Neal_2020}. In parallel, \emph{Truncated
@@ -2662,9 +2729,9 @@ variables \(X_{p}\) directly influenced by the intervention, while an
 example illustrating these concepts follows below.
 
 \begin{equation}\phantomsection\label{eq-trunc_factor}{
-P(X_{1}, X_{2}, \dots, X_{P} \:|\:do(S)) =
+P(X_{1}, X_{2}, \dots, X_{P} \mid do(S)) =
 \begin{cases}
-  \prod P(X_{p} \:|\:pa(X_{p}) ) & \text{if} \: p \not\in S \\
+  \prod P(X_{p} \mid pa(X_{p}) ) & \text{if} \: p \not\in S \\
   1 \quad & \text{otherwise}
 \end{cases}
 }\end{equation}
@@ -2677,11 +2744,11 @@ Equation~\ref{eq-backdoor}. The sufficient adjustment set (potentially
 empty) must block all non-causal paths between \(X_{a}\) and \(X_{b}\)
 without introducing new paths. If such a set exists, then \(X_{a}\) and
 \(X_{b}\) are \emph{d-separated} by \(X_{p}\)
-(\(X_{a} \:\bot\:X_{b} \:|\:X_{p}\)) \citep{Pearl_2009}, and \(X_{p}\)
+(\(X_{a} \:\bot\:X_{b} \mid X_{p}\)) \citep{Pearl_2009}, and \(X_{p}\)
 satisfies the \emph{backdoor criterion} \citep[pp.~37]{Neal_2020}.
 
 \begin{equation}\phantomsection\label{eq-backdoor}{
-P(X_{a} \:|\:do(X_{b}=x)) = \sum_{Xp} P(X_{a} \:|\:X_{b}=x, X_{p}) P(X_{p})
+P(X_{a} \mid do(X_{b}=x)) = \sum_{Xp} P(X_{a} \mid X_{b}=x, X_{p}) P(X_{p})
 }\end{equation}
 
 Ultimately, the backdoor adjustment enables researchers to express the
@@ -2689,9 +2756,9 @@ ACE as:
 
 \begin{equation}\phantomsection\label{eq-backdoor_adjustment}{
 \begin{aligned}
-\tau & = E[X_{a} \:|\:do(X_{b}=1)]- E[X_{a} \:|\:do(X_{b}=2)] \\
-  & = E_{Xp}\left[ E[X_{a} \:|\:do(X_{b}=1), X_{p}]- E[X_{a} \:|\:do(X_{b}=2), X_{p}] \right] \\
-  & = \sum_{Xp} X_{a} \cdot P(X_{a} \:|\:X_{b}=1, X_{p}) \cdot P(X_{p}) - \sum_{Xp} X_{a} \cdot P(X_{a} \:|\:X_{b}=2, X_{p}) \cdot P(X_{p})
+\tau & = E[X_{a} \mid do(X_{b}=1)]- E[X_{a} \mid do(X_{b}=2)] \\
+  & = E_{Xp}\left[ E[X_{a} \mid do(X_{b}=1), X_{p}]- E[X_{a} \mid do(X_{b}=2), X_{p}] \right] \\
+  & = \sum_{Xp} X_{a} \cdot P(X_{a} \mid X_{b}=1, X_{p}) \cdot P(X_{p}) - \sum_{Xp} X_{a} \cdot P(X_{a} \mid X_{b}=2, X_{p}) \cdot P(X_{p})
 \end{aligned}
 }\end{equation}
 
@@ -2703,7 +2770,7 @@ causal structure depicted by the SCM \ref{fig-scm_example2} and DAG
 sufficient adjustment set, as it effectively blocks all confounding
 non-causal paths introduced by the fork structure. Nevertheless, since
 \(Y\) remains dependent on \(T\) even after conditioning
-\((Y \:\not\bot\:T \:|\:X)\), this dependency can only be attributed to
+\((Y \:\not\bot\:T \mid X)\), this dependency can only be attributed to
 the direct causal effect \(T \rightarrow Y\). Notably, for the purpose
 of identification, the conditioned DAG \ref{fig-mdag_example2} is
 equivalent to the manipulated DAG \ref{fig-mdag_example3}, because \(X\)
@@ -2757,9 +2824,9 @@ Equation~\ref{eq-mACE2} (see Section~\ref{sec-appendixB2}).
 
 \begin{equation}\phantomsection\label{eq-mACE2}{
 \begin{aligned}
-  \tau & = E[Y_{i} \:|\:do(T_{i}=1)]- E[Y_{i} \:|\:do(T_{i}=2)] \\
-  & = E_{X}\left[ E[Y_{i} \:|\:T_{i}=1, X] - E[Y_{i} \:|\:T_{i}=2, X] \right] \\
-  & = \sum_{X} Y_{i} \cdot P( Y_{i} \:|\:T_{i}=1, X) \cdot P(X) - \sum_{X} Y_{i} \cdot P( Y_{i} \:|\:T_{i}=2, X) \cdot P(X)
+  \tau & = E[Y_{i} \mid do(T_{i}=1)]- E[Y_{i} \mid do(T_{i}=2)] \\
+  & = E_{X}\left[ E[Y_{i} \mid T_{i}=1, X] - E[Y_{i} \mid T_{i}=2, X] \right] \\
+  & = \sum_{X} Y_{i} \cdot P( Y_{i} \mid T_{i}=1, X) \cdot P(X) - \sum_{X} Y_{i} \cdot P( Y_{i} \mid T_{i}=2, X) \cdot P(X)
 \end{aligned}
 }\end{equation}
 
@@ -2768,7 +2835,7 @@ Equation~\ref{eq-mACE2} (see Section~\ref{sec-appendixB2}).
 Ultimately, researchers can use Bayesian inference methods to estimate
 the ACE. The approach begins by defining two probability distributions:
 the likelihood of the data,
-\(P(X_{1}, X_{2}, \dots, X_{P} \:|\:\theta)\), and the prior
+\(P(X_{1}, X_{2}, \dots, X_{P} \mid \theta)\), and the prior
 distribution, \(P(\theta)\) \citep{Everitt_et_al_2010}, where \(X_{P}\)
 represents a random variable, and \(\theta\) represents a
 one-dimensional parameter space for simplicity. After observing
@@ -2776,7 +2843,7 @@ empirical data, researchers can update the priors to posterior
 distributions using Bayes' rule in Equation~\ref{eq-bayes_rule}:
 
 \begin{equation}\phantomsection\label{eq-bayes_rule}{
-P(\theta \:|\:X_{1}, X_{2}, \dots, X_{P}) = \frac{P(X_{1}, X_{2}, \dots, X_{P} \:|\:\theta) \cdot P(\theta)}{P(X_{1}, X_{2}, \dots, X_{P})}
+P(\theta \mid X_{1}, X_{2}, \dots, X_{P}) = \frac{P(X_{1}, X_{2}, \dots, X_{P} \mid \theta) \cdot P(\theta)}{P(X_{1}, X_{2}, \dots, X_{P})}
 }\end{equation}
 
 Given that the denominator on the right-hand side of
@@ -2789,7 +2856,7 @@ Equation~\ref{eq-prop_rule}. Ultimately, they normalize these results to
 obtain a valid probability distribution.
 
 \begin{equation}\phantomsection\label{eq-prop_rule}{
-P(\theta \:|\:X_{1}, X_{2}, \dots, X_{P}) \propto P(X_{1}, X_{2}, \dots, X_{P}\:|\:\theta) \cdot P(\theta)
+P(\theta \mid X_{1}, X_{2}, \dots, X_{P}) \propto P(X_{1}, X_{2}, \dots, X_{P}\mid \theta) \cdot P(\theta)
 }\end{equation}
 
 Temporarily setting aside the definition of prior distributions
@@ -2801,7 +2868,7 @@ intractability is evident from Equation~\ref{eq-like_chain}, where the
 likelihood distribution is expressed by multiple chained CPDs.
 
 \begin{equation}\phantomsection\label{eq-like_chain}{
-P(X_{1}, X_{2}, \dots, X_{P} \:|\:\theta) = P(X_{1} \:|\:\theta) \prod^{P}_{p=2} P(X_{i} \:|\:X_{i-1}, \dots, X_{1}, \theta )
+P(X_{1}, X_{2}, \dots, X_{P} \mid \theta) = P(X_{1} \mid \theta) \prod^{P}_{p=2} P(X_{i} \mid X_{i-1}, \dots, X_{1}, \theta )
 }\end{equation}
 
 Nevertheless, researchers can manage the complexity of the likelihood by
@@ -2815,7 +2882,7 @@ can model the system and compute the parameter's posterior distribution
 using Equation~\ref{eq-bayes_rule}.
 
 \begin{equation}\phantomsection\label{eq-like_BNF}{
-P(X_{1}, X_{2}, \dots, X_{P} \:|\:\theta) = P(X_{1} \:|\:\theta) \prod^{P}_{p=2} P(X_{i} \:|\:pa(X_{i}), \theta )
+P(X_{1}, X_{2}, \dots, X_{P} \mid \theta) = P(X_{1} \mid \theta) \prod^{P}_{p=2} P(X_{i} \mid pa(X_{i}), \theta )
 }\end{equation}
 
 \newpage{}
