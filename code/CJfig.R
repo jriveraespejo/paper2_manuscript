@@ -44,16 +44,14 @@ sim_me = function( n=100, b=0.3, s1=1, s2=0.8){
 }
 
 
+
+# figure 1 ####
+
 # distributional parameters
 dpA = c(0, 0.5) # distribution text A (mean, sd)
 dpB = c(1, 1) # distribution text B (mean, sd)
 rAB = 0 # correlation between discriminal processes
 
-
-
-
-
-# figure 1 ####
 
 # figure
 png( filename=file.path(main_dir, 'discriminal_process.png'), 
