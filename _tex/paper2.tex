@@ -1523,6 +1523,13 @@ each repeated judgment, judge, stimulus, and individual has the same
 probability of being included in the sample as any other observation
 within their respective groups \citep{Lawson_2015}.
 
+However, due to concerns about the practical feasibility of the
+comparison task \citep{Boonen_et_al_2020}, CJ experiments rarely
+implement an exhaustive pairings of sampled judges, stimuli, and
+individuals. Thus, a realistic scenario must account for the fact that
+judges typically compare only a subset of stimuli authored by certain
+individuals.
+
 \begin{figure}[H]
 
 \begin{minipage}{\linewidth}
@@ -1566,13 +1573,6 @@ within their respective groups \citep{Lawson_2015}.
 \caption{\label{fig-cj14}Sample-comparison model, final vectorized form}
 
 \end{figure}%
-
-However, due to concerns about the practical feasibility of the
-comparison task \citep{Boonen_et_al_2020}, CJ experiments rarely
-implement an exhaustive pairings of sampled judges, stimuli, and
-individuals. Thus, a realistic scenario must account for the fact that
-judges typically compare only a subset of stimuli authored by certain
-individuals.
 
 \subsubsection{The comparison
 mechanism}\label{sec-theory-theoretical_SC2}
@@ -1689,7 +1689,7 @@ statistical assumptions about the distribution of the discriminal
 process, it requires a statistical model, which we develop in the next
 section.
 
-\section{From SCMs to a statistical model}\label{sec-statistical}
+\section{From SCM to a statistical model}\label{sec-statistical}
 
 With the structure in SCM~\ref{fig-cj15_scm}, we can derive a
 statistical model that addresses violations of the equal dispersion
@@ -1698,8 +1698,8 @@ This derivation is possible because a fully specified SCM encodes
 functional and probabilistic information, which we can replace with
 appropriate functions and probabilistic assumptions
 \citep{Pearl_et_al_2016}. Specifically, SCM~\ref{fig-cj15_scm} allows us
-to express the joint distribution of our CJ system as a product of
-simpler conditional probability distributions (CPDs)\footnote{This
+to express the joint distribution of our complex CJ system as a product
+of simpler conditional probability distributions (CPDs)\footnote{This
   re-expression is possible because the \emph{chain rule} of probability
   and the \emph{Bayesian Network Factorization (BNF)} property. For
   further details, see \citet{Pearl_et_al_2016} and \citet{Neal_2020}.},
