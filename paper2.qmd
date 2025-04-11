@@ -903,6 +903,12 @@ Notably, the DAG shows that $S$ is independent of all other variables in the mod
 
 <!-- This is a whole section [@Lawson_2015, pp. 16-112] -->
 
+<!-- 3. segway for next section -->
+However, due to concerns about the practical feasibility of the comparison task [@Boonen_et_al_2020], CJ experiments rarely implement an exhaustive pairings of sampled judges, stimuli, and individuals. Thus, a realistic scenario must account for the fact that judges typically compare only a subset of stimuli authored by certain individuals.
+
+
+<!-- An exhaustive pairing of all stimuli would lead to a total of 7875 possible pairs for each listener group. Obviously, such a large number of pairs would undermine the practical feasibility of the experiment. However, in order to arrive at a reliable ranking, not all possible combinations of stimuli had to be assessed. More specifically, each stimulus had to be judged by the listeners of each particular listener group – together, not individually – at least 20 times. [@Boonen_et_al_2020, p. 5] -->
+
 ::: {#fig-cj14 layout-nrow=2}
 
 ::: {#fig-cj14_scm fig-align="center" fig-pos="H"}
@@ -930,12 +936,6 @@ SCM
 
 Sample-comparison model, final vectorized form
 :::
-
-<!-- 3. segway for next section -->
-However, due to concerns about the practical feasibility of the comparison task [@Boonen_et_al_2020], CJ experiments rarely implement an exhaustive pairings of sampled judges, stimuli, and individuals. Thus, a realistic scenario must account for the fact that judges typically compare only a subset of stimuli authored by certain individuals.
-
-
-<!-- An exhaustive pairing of all stimuli would lead to a total of 7875 possible pairs for each listener group. Obviously, such a large number of pairs would undermine the practical feasibility of the experiment. However, in order to arrive at a reliable ranking, not all possible combinations of stimuli had to be assessed. More specifically, each stimulus had to be judged by the listeners of each particular listener group – together, not individually – at least 20 times. [@Boonen_et_al_2020, p. 5] -->
 
 
 ### The comparison mechanism {#sec-theory-theoretical_SC2}
@@ -1005,7 +1005,7 @@ Finally, since it is standard to assume that the distribution of the conceptual-
 In summary, the [SCM -@fig-cj15_scm] and [DAG -@fig-cj15_dag] extend Thurstone's general form to address several limitations of the BTL model. These extensions account for judge biases (see @sec-theory-issue1b), reflect the hierarchical structure of stimuli (see @sec-theory-issue1b), and incorporate measurement error in trait estimation and hypothesis testing (see @sec-theory-issue2). However, they do not resolve concerns about the assumption of equal dispersions among stimuli discussed in @sec-theory-issue1a. Because this issue involves statistical assumptions about the distribution of the discriminal process, it requires a statistical model, which we develop in the next section.
 
 
-# From SCMs to a statistical model  {#sec-statistical}
+# From SCM to a statistical model  {#sec-statistical}
 
 <!-- recording: Sven 24.10.04; time: 00:46:00 - 01:01:00 -->
 <!-- recording: Sven and Tine 24.11.25; time: 00:24:50 - 00:30:35 -->
@@ -1019,7 +1019,7 @@ In summary, the [SCM -@fig-cj15_scm] and [DAG -@fig-cj15_dag] extend Thurstone's
 <!-- recording: Sven and Tine 25.04.10; time: 00:52:00 - 00:53:40 -->
 
 <!-- 1. How to derive an stat model from an SCM? -->
-With the structure in [SCM -@fig-cj15_scm], we can derive a statistical model that addresses violations of the equal dispersion assumption in CJ experiments (see @sec-theory-issue1a). This derivation is possible because a fully specified SCM encodes functional and probabilistic information, which we can replace with appropriate functions and probabilistic assumptions [@Pearl_et_al_2016]. Specifically, [SCM -@fig-cj15_scm] allows us to express the joint distribution of our CJ system as a product of simpler conditional probability distributions (CPDs)[^6], as shown in equation ([-@eq-mat51]). For clarity, we treat expressions such as $Y := f_{Y}(X)$, $P(Y \mid X)$, and $Y \sim f(Y \mid X)$ as equivalent. Here, $P(Y \mid X)$ and $f(Y \mid X)$ represent the CPD of $Y$ given $X$.
+With the structure in [SCM -@fig-cj15_scm], we can derive a statistical model that addresses violations of the equal dispersion assumption in CJ experiments (see @sec-theory-issue1a). This derivation is possible because a fully specified SCM encodes functional and probabilistic information, which we can replace with appropriate functions and probabilistic assumptions [@Pearl_et_al_2016]. Specifically, [SCM -@fig-cj15_scm] allows us to express the joint distribution of our complex CJ system as a product of simpler conditional probability distributions (CPDs)[^6], as shown in equation ([-@eq-mat51]). For clarity, we treat expressions such as $Y := f_{Y}(X)$, $P(Y \mid X)$, and $Y \sim f(Y \mid X)$ as equivalent. Here, $P(Y \mid X)$ and $f(Y \mid X)$ represent the CPD of $Y$ given $X$.
 $$
 \begin{aligned}
   P(O_{R}, & S, C, D_{R}, T_{IA}, X_{IA}, e_{IA}, T_{I}, X_{I}, e_{I}, B_{JK}, Z_{JK}, e_{JK}, B_{J}, Z_{J}, e_{J} ) & \\
