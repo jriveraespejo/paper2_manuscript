@@ -1921,20 +1921,27 @@ representing three groups of judges with varying expertise, the model
 imposes the constraint \(\sum_{g=1}^{3} s_{ZJ}[g]/3 = 1\) to fix the
 scale of the latent trait \citep{Depaoli_2021}.
 
-Finally, using \emph{Bayesian inference methods} to transform the
+Finally, we use \emph{Bayesian inference methods} to convert
 model~\ref{fig-cj16_stat} into a practical statistical tool for
 analyzing paired comparison data. Bayesian inference offers three key
-advantages. First, it is well-suited for estimating complex and
-overparameterized models, where the number of parameters may exceed the
-number of observations \citep{Baker_1998, Kim_et_al_1999}. Second, it
-allows researchers to incorporate prior information, which constrains
-parameter estimates within plausible bounds. This feature mitigates
-common estimation issues, such as non-convergence or improper solutions,
-often encountered in complex models under frequentist methods
-\citep{Martin_et_al_1975, Seaman_et_al_2011}. Third, Bayesian inference
-is particularly effective for drawing conclusions from small samples,
-where the asymptotic properties underlying frequentist methods are less
-reliable \citep{Baldwin_et_al_2013, Lambert_et_al_2006, Depaoli_2014}.
+advantages for this purpose. First, it handles complex and
+overparameterized models--such as the one we implement--where the number
+of parameters exceeds the number of observations
+\citep{Baker_1998, Kim_et_al_1999}. Second, it incorporates prior
+information to constrain parameter estimates within plausible bounds,
+thereby mitigating estimation issues like non-convergence or improper
+solutions that often affect frequentist methods
+\citep{Martin_et_al_1975, Seaman_et_al_2011}. In our implementation, we
+use priors to define the error distribution, which sets the scale of the
+latent variables \citep{Depaoli_2014}. Third, Bayesian inference
+supports robust inferences from small samples, where the asymptotic
+properties underlying frequentist methods are less reliable
+\citep{Baldwin_et_al_2013, Lambert_et_al_2006, Depaoli_2014}. This
+feature is particularly relevant in CJ experiments, where researchers
+often collect large volumes of paired comparisons but work with
+relatively small samples of judges, stimuli, and individuals to test
+hypotheses.
+
 The \textbf{Declarations} section of this document provides a link to
 the model code, along with an alternative specification that assumes
 equal discriminal dispersions. We implemented both versions of the model
