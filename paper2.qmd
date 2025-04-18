@@ -940,6 +940,7 @@ Sample-comparison model, final vectorized form
 
 ### The comparison mechanism {#sec-theory-theoretical_SC2}
 
+<!-- recording: Sven 24.10.04; time: 00:09:10 - 00:14:30 -->
 <!-- recording: Sven and Tine 25.04.10; time: 00:16:30 - 00:19:00 -->
 
 <!-- 1. start by defining the comparison vector  -->
@@ -1041,7 +1042,7 @@ $$ {#eq-mat51}
 
 <!-- For any model whose graph is acyclic, the joint distribution of the variables in the model is given by the product of the conditional distributions P(child | parents) over all the "families" in the graph. Formally, we write this rule as P(x_{1}, \dots, x_{n}) = \prod_{i}P(x_{i} | pa_{i}) where pa_{i} stands for the values of the parents of variable X_{i}, and the product i runs over all i, from 1 to n. [@Pearl_et_al_2016, pp. 29] -->
 
-<!-- 2. assumptions about the outcome, and the sample and comparison mechanism -->
+<!-- 2. assumptions about the outcome -->
 Each CPD in equation ([-@eq-mat51]) rests on specific assumptions, which we outline in the [SCM -@fig-cj16_scm], the probabilistic model [-@fig-cj16_scm], and the statistical model [-@fig-cj16_scm]. First, we assume that $O_{R}$ follows a Bernoulli distribution[^7], reflecting the binary nature of CJ outcomes. Furthermore, following the conventions of Generalized Linear Latent and Mixed Models (GLLAMMs) [@Rabe_et_al_2004a; @Skrondal_et_al_2004a; @Rabe_et_al_2012b], the distribution links $O_{R}$ to the latent discriminal difference vector $D_{R}$ using an inverse-logit function: $\text{inv\_logit}(x) = 1/(1 + \exp(-x))$. 
 
 [^7]: The binomial distribution--including its special case, the Bernoulli distribution-- represent a maximum entropy distribution for binary events [@McElreath_2020, pp. 34]. This means that when only two un-ordered outcomes are possible, and the expected numbers of each type of event are assumed to be constant, then the binomial distribution is the one that is most consistent with these constraints [@McElreath_2020, pp. 310]. For a detailed discussion of the binomial as a maximum entropy distribution, see @McElreath_2020 [chap. 10.1.2].
@@ -1117,11 +1118,12 @@ Statistical model
 Comparative judgment model, SCM, probabilistic and statistical model assuming different discriminal dispersions for the student's traits
 :::
 
+<!-- 3. Note about the sample and comparison mechanism, as well as the predictor's distribution -->
 Note that while the joint distribution in Equation ([-@eq-mat51]) includes the probability distributions of the sampling and comparison mechanisms, $P(S)$ and $P(C)$, as well as those of the predictor variables--$P(X_{IA})$, $P(X_{I})$, $P(Z_{JK})$, and $P(Z_{J})$--we omit these probabilities from the models presented in @fig-cj16. We make this omission because, although these distributions contribute to the overall joint distribution of the data, they do not influence the relationship between $O_{R}$ and $D_{R}$. This independence stems from the random selection designs that govern $S$, $C$, $X_{IA}$, $X_{I}$, $Z_{JK}$, and $Z_{J}$[^8].
 
 [^8]: Randomization ensures that data—and, by extension, an estimator—satisfies several key identification properties, such as common support, no interference, and consistency. The most critical property, however, is the elimination of confounding. *Confounding* occurs when an external variable, such as $X_{I}$, simultaneously influences both the outcome (e.g., $O_{R}$) and a variable of interest (e.g., $X_{I}$ or $S$), resulting in spurious associations between the two [@Everitt_et_al_2010]. Randomization addresses this issue by effectively decoupling the association between the variable of interest and any other variable, except for the outcome itself. For a more detailed discussion on the benefits of randomization, see @Pearl_2009, @Morgan_et_al_2014, @Neal_2020, and @Hernan_et_al_2020.
 
-<!-- 2. Continuing with the assumptions -->
+<!-- 4. functional form for D_{R} -->
 Second, we define $D_{R}$ as the difference between the discriminal processes of two texts, $T_{IA}[i, a]$ and $T_{IA}[h, b]$, plus the corresponding repeated judge biases, $B_{JK}[j, k]$. The discriminal processes represent the underlying written-quality trait of the texts. Note that if we assume that $B_{JK}[j,k]$ reflects the difference in stimulus-specific biases, i.e., $B_{JK}[j,k] = B_{JK}[i,a,j,k] - B_{JK}[h,b,j,k]$, we can re-write the discriminal difference as: 
 $$
 \begin{aligned}
@@ -1138,27 +1140,34 @@ This formulation reveals that the discriminal difference captures a *pure intera
 
 <!-- Judges discrimination ability can be integrated in the models if we assume that the bias is not additive (as in Bramley explanation) but multiplicative. In the latter case the bias is not eliminated by taking just the difference. True, but it is false to think that because the biases are additive they get just eliminated. For instance, if we assume that the bias is additive but different for each stimuli, this means that the DAG should be: {T_{IA}, B_{JK}} -> O_{R}, but mathematically you can write it as it is above  -->
 
+<!-- 5. Functional form and assumptions for T_{IA} -->
 Third, we define $T_{IA}$ as a linear combination of the students' underlying writing-quality traits $T_{I}$, the effects of relevant text-related variables $\beta_{XA}X_{IA}$ (e.g., text length on quality), and the texts' idiosyncratic errors $e_{IA}$. We assume that each element of $e_{IA}$ is independent and identically distributed $(iid)$ according to a Normal distribution, with a mean of zero and a standard deviation $p_{IA}$. The parameter $p_{IA}$ is defined as a proportion of 1 to establish the scale of the latent trait, which is required in any latent variable model [@Depaoli_2021]. Note that because $e_{IA}$ follows a Normal distribution, $T_{IA}$ is also normally distributed. This result implies that our model reverts to assuming Normal discriminal processes for the stimuli, as originally proposed by @Thurstone_1927b (see @tbl-thurstone_cases).
 
 <!-- Within CFA, it is also necessary to resolve a series of indeterminacies, which are largely linked to the fact that the latent factors do not have a scale of their own. Indeterminacies exist in terms of the scale, location, and orientation of the factors. In order to handle these indeterminacies, we must set the scale of each of the latent factors. This can be handled in one of two ways. The first method that can be used is to standardize the latent factors such that the variances are set to 1 and the latent factor means are set to 0. The second method, and the one employed in the examples below, is to fix an otherwise free factor loading to a value of 1. [@Depaoli_2021, pp. 93] -->
 
 <!-- The difficulty and discrimination parameters for the questions should then be given a diffuse, or ideally a hierarchical prior, which will identify these parameters by scaling and locating relative to the student ability parameters. (https://mc-stan.org/docs/stan-users-guide/regression.html#priors-for-identification.section) -->
 
+<!-- 6. Functional form and assumptions for T_{I} -->
 Fourth, we define $T_{I}$ as a linear combination of the effects of relevant student-related variables, $\beta_{XI} X_{I}$, and students' idiosyncratic errors, $e_{I}$. As before, we assume that each element of $e_{I}$ is $iid$ Normal with a mean of zero. However, we consider the standard deviation, $s_{XI}$, varies depending on the teaching method group to which each student belongs. Given the example in @sec-theoretical, where the teaching method $X_{I} = 1,2$, the model sets the following constraint to anchor the scale of the latent trait [@Depaoli_2021]: $\sum_{g=1}^{2} s_{XI}[g]/2 = 1$. Note that this parametrization of $e_{I}$ relaxes the equal dispersion assumption for the stimuli, effectively addressing the concerns raised in @sec-theory-issue1a.
 
 <!-- Fortunately, the statistical literature offers a solution to address violations of the equal dispersion assumption in CJ experiments. This solution involves using models that extend traditional approaches to account for the different variability in the stimuli, referred to as over-dispersed models [@McElreath_2020, chap. 12]. -->
 
 <!-- when you talk about the variability, refer that the equal dispersion is just assuming 1 for identification. -->
 
+<!-- 7. Functional form and assumptions for B_{JK} -->
 Fifth, we define $B_{JK}$ as a linear combination of the judges' individual bias $B_{J}$, the effects of relevant judgment-related variables $\beta_{ZK}Z_{JK}$ (e.g., how the number of judgments a judge makes affect the assessment of quality), and judgment-specific idiosyncratic errors $e_{JK}$. We assume that each element of $e_{JK}$ is $iid$ Normal with a mean of zero and a standard deviation $p_{JK}$, defined as a proportion of $1$, to anchor the scale of the latent trait [@Depaoli_2021].
 
+<!-- 8. Functional form and assumptions for B_{J} -->
 Sixth, we define $B_{J}$ as a linear combination of the effects of relevant judge-level variables $\beta_{ZJ}Z_{J}$ (e.g., the effects of judgment expertise on the quality assessment) and judge-specific idiosyncratic errors $e_{J}$. Each element of $e_{J}$ is likewise assumed to be $iid$ Normal with mean zero and a standard deviation $s_{ZJ}$ that depends on the groups to which each judge belongs. For instance, if $Z_{J}$ is a variable that can take on three values representing three groups of judges with varying expertise, the model imposes the constraint $\sum_{g=1}^{3} s_{ZJ}[g]/3 = 1$ to fix the scale of the latent trait [@Depaoli_2021].
 
 <!-- Using assumptions from IRT [@deAyala_2009, p. 20-21], we are assuming a multidimensional model, that violates the local independence assumption -->
 
 <!-- [@deAyala_2009, p. 291-29] think about indeterminancies in MIRT. to solve metric indeterminancy you commonly fix a mu=0, and s=1, but for rotational indeterminancy, you need to define (maybe) orthogonality between units traits and judges bias -->
 
-Finally, using *Bayesian inference methods* to transform the [model -@fig-cj16_stat] into a practical statistical tool for analyzing paired comparison data. Bayesian inference offers three key advantages. First, it is well-suited for estimating complex and overparameterized models, where the number of parameters may exceed the number of observations [@Baker_1998; @Kim_et_al_1999]. Second, it allows researchers to incorporate prior information, which constrains parameter estimates within plausible bounds. This feature mitigates common estimation issues, such as non-convergence or improper solutions, often encountered in complex models under frequentist methods [@Martin_et_al_1975; @Seaman_et_al_2011]. Third, Bayesian inference is particularly effective for drawing conclusions from small samples, where the asymptotic properties underlying frequentist methods are less reliable [@Baldwin_et_al_2013; @Lambert_et_al_2006; @Depaoli_2014]. The **Declarations** section of this document provides a link to the model code, along with an alternative specification that assumes equal discriminal dispersions. We implemented both versions of the model using `Stan` [@Stan_2020, version 2.26.1]. Although the implementations were successful, we do not report the results here, as they fall outside the scope of this document.
+<!-- 9. Computational implementation -->
+Finally, we use *Bayesian inference methods* to convert [model -@fig-cj16_stat] into a practical statistical tool for analyzing paired comparison data. Bayesian inference offers three key advantages for this purpose. First, it handles complex and overparameterized models--such as the one we implement--where the number of parameters exceeds the number of observations [@Baker_1998; @Kim_et_al_1999]. Second, it incorporates prior information to constrain parameter estimates within plausible bounds, thereby mitigating estimation issues like non-convergence or improper solutions that often affect frequentist methods [@Martin_et_al_1975; @Seaman_et_al_2011]. In our implementation, we use priors to define the error distribution, which sets the scale of the latent variables [@Depaoli_2014]. Third, Bayesian inference supports robust inferences from small samples, where the asymptotic properties underlying frequentist methods are less reliable [@Baldwin_et_al_2013; @Lambert_et_al_2006; @Depaoli_2014]. This feature is particularly relevant in CJ experiments, where researchers often collect large volumes of paired comparisons but work with relatively small samples of judges, stimuli, and individuals to test hypotheses.
+
+The **Declarations** section of this document provides a link to the model code, along with an alternative specification that assumes equal discriminal dispersions. We implemented both versions of the model using `Stan` [@Stan_2020, version 2.26.1]. Although the implementations were successful, we do not report the results here, as they fall outside the scope of this document.
 
 <!-- Proposal: Make the model to be bX %*% X 
 Decision: Although this makes it easier for the software, the way it is declared is more explicit. -->
@@ -1178,11 +1187,21 @@ Decision: interesting, but I think I like the model as it is, explicit! -->
 
 # Discussion {#sec-discussion}
 
-<!-- recording: Sven 24.10.04; time: 00:09:10 - 00:14:30 -->
-<!-- recording: Sven and Tine 24.11.25; time: 00:56:10 - 00:56:10 -->
+<!-- recording: Sven and Tine 24.11.25; time: 00:56:10 - 00:58:20 -->
 <!-- recording: Sven and Tine 25.04.10; time: 00:41:55 - 00:47:00 -->
 
-<!-- Thus, this section addresses the issues identified in @sec-theory-issues by extending  Thurstone’s theory using the structural approach to causal inference. Specifically, it leverages the capabilities of this approach to formalize the combination of the core theoretical principles outlined in @sec-thurstone_theory with key assessment design features relevant to CJ experiments, such as the selection of judges, stimuli, and comparisons. In addition to enhancing statistical accuracy and strengthening measurement reliability and validity, the approach offers two key advantages. First, it clarifies the interactions among all actors and processes involved in CJ experiments. Second, it shifts the current comparative data analysis paradigm from passively accepting the model assumptions to actively testing whether those assumptions fit the data under analysis. -->
+<!-- make a summary of what you have accomplished so far -->
+
+<!-- change the paradigm -->
+
+<!-- opportunities open  -->
+
+<!-- Now that we have this model we have a principled way to make some power analysis which will helps us to design studies, rather than just relying in simple rules of thumbs. -->
+
+
+
+
+<!-- Thus, this study addresses the issues identified in @sec-theory-issues by extending  Thurstone’s general form using the structural approach to causal inference and Bayesian inference methods. Specifically, it leverages the capabilities of this approach to formalize the combination of the core theoretical principles outlined in @sec-thurstone_theory with key assessment design features relevant to CJ experiments, such as the selection of judges, stimuli, and comparisons, i.e, the sampleand compariosn mechanisms. In addition to enhancing statistical accuracy and strengthening measurement reliability and validity, the approach offers two key advantages. First, it clarifies the interactions among all actors and processes involved in CJ experiments. Second, it shifts the current comparative data analysis paradigm from passively accepting the model assumptions to actively testing whether those assumptions fit the data under analysis. -->
 
 
 <!-- "If Thurstone’s Law is to be used in support of comparative judgment for assessment, his theory must be extended to cover the uses and applications that are required for assessment purposes." [@Kelly_et_al_2022, pp. 678] -->
