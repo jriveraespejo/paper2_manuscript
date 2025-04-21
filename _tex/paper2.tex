@@ -300,28 +300,29 @@ it may also undermine the reliability of various statistical results
 derived from these processes.
 
 To address these issues, this study extends Thurstone's general form
-using a systematic and integrated approach based on Causal and Bayesian
-inference methods. In addition to improving statistical accuracy and
-strengthening measurement reliability and validity, the approach offers
-two key advantages. First, it clarifies the interactions among all
-actors and processes involved in CJ experiments. Second, it shifts the
-current comparative data analysis paradigm from passively accepting the
-BTL model assumptions to actively testing whether those assumptions fit
-the data under analysis.
+through a systematic and integrated approach that combines Causal and
+Bayesian inference methods. In addition to potentially enhancing
+measurement reliability and validity \citep{Perron_et_al_2015}, and
+improving statistical accuracy in hypothesis testing, this approach
+offers two key advantages. First, it clarifies the interactions among
+all actors and processes involved in CJ experiments. Second, it shifts
+the current comparative data analysis paradigm from passively accepting
+the BTL model assumptions to actively testing whether those assumptions
+fit the data under analysis.
 
 As a result, the study divides its content into six main sections.
 Section~\ref{sec-thurstone_theory} provides an overview of Thurstone's
 theory. Section~\ref{sec-theory-issues} discusses the identified issues
 in detail. Section~\ref{sec-theoretical} extends Thurstone's general
 form to address these challenges. The extension integrates core
-theoretical principles alongside key assessment design features relevant
-to CJ experiments, such as the selection of judges, stimuli, and
-comparisons. Section~\ref{sec-statistical} translates these theoretical
-and practical elements into a probabilistic statistical model to analyze
-dichotomous pairwise comparison data. Section~\ref{sec-discussion}
-discusses the findings, limitations, and challenges and explores avenues
-for future research. Finally, Section~\ref{sec-conclusion} summarizes
-the study's conclusions.
+theoretical principles alongside key CJ experimental design features,
+such as the selection of judges, stimuli, and comparisons.
+Section~\ref{sec-statistical} translates these theoretical and practical
+elements into a probabilistic statistical model to analyze dichotomous
+pairwise comparison data. Section~\ref{sec-discussion} discusses the
+findings, limitations, and challenges and explores avenues for future
+research. Finally, Section~\ref{sec-conclusion} summarizes the study's
+conclusions.
 
 \section{Thurstone's theory}\label{sec-thurstone_theory}
 
@@ -595,11 +596,12 @@ instance, \emph{misfit texts} are those whose comparisons result in more
 judgment discrepancies than those involving other texts
 \citep{Pollitt_2004, Pollitt_2012b, Pollitt_2012a, Goossens_et_al_2018}.
 These misfit texts may exhibit larger discriminal dispersions or
-represent outliers --texts with distinctive characteristics that deviate
+represent outliers--texts with distinctive characteristics that deviate
 markedly from the rest of the sample \citep{Grubbs_1969}. In either
-case, comparing misfit texts results in more judgment discrepancies, yet
-the BTL model neither accounts for these cases nor offers any means to
-address them.
+case, the comparison of these texts results in more judgment
+discrepancies, yet the BTL model neither accounts for these cases nor
+offers any means to address them, except their elimination from the
+analysis.
 
 Significant statistical and measurement issues can arise when the
 assumption of equal dispersions between stimuli does not hold.
@@ -614,8 +616,9 @@ distribution aligns with the thick continuous line for
 \(\sigma_{B}-\sigma_{A}=0\), while the \emph{true} discriminal
 difference follows any discontinuous line where
 \(\sigma_{B}-\sigma_{A} \neq 0\). Furthermore, if researchers
-acknowledge that misfit statistics may represent outlying observations,
-the common CJ practice of excluding stimuli based on these statistics
+acknowledge that misfit statistics may represent texts with different
+dispersions or outlying observations, the common CJ practice of
+excluding stimuli based on these statistics
 \citep{Pollitt_2012a, Pollitt_2012b, vanDaal_et_al_2016, Goossens_et_al_2018},
 may unintentionally discard valuable information, introducing bias into
 the trait estimates \citep[chap.~12]{Zimmerman_1994, McElreath_2020}.
@@ -930,10 +933,11 @@ each judge performs.
 In line with Thurstone's theory, SCM~\ref{fig-cj03_scm} depicts the
 texts' discriminal processes \((T_{ia}, T_{hb})\) and their discriminal
 difference \((D_{iahbjk})\) (see Section~\ref{sec-thurstone_theory}).
-Additionally, based on the arguments developed in
-Section~\ref{sec-theory-issue1b}, the SCM incorporates the judges'
-biases \((B_{kj})\). Together with the outcome, these variables
-constitute the preliminary set of endogenous variables,
+Additionally, building on the arguments developed in
+Section~\ref{sec-theory-issue1b}, the SCM incorporates a key design
+features of CJ experiments: the judges' biases \((B_{kj})\). These
+variables, along with the outcome \((O_{iahbjk})\), constitute the
+preliminary set of endogenous variables,
 \(V = \{ O_{iahbjk}, D_{iahbjk}, T_{ia}, T_{hb}, B_{kj} \}\). Finally,
 the SCM presents the preliminary set of structural equations,
 \(F = \{ f_{O}, f_{D} \}\), which define the non-parametric dependencies
@@ -1951,8 +1955,53 @@ they fall outside the scope of this document.
 
 \section{Discussion}\label{sec-discussion}
 
-\subsection{Limitations and further
-research}\label{sec-discussion-limitations}
+This study extends Thurstone's general form through a systematic,
+integrated approach that combines Causal and Bayesian inference methods.
+It begins by formulating the extension as a conceptual model,
+represented by an SCM and a DAG. This formulation integrates Thurstone's
+core theoretical principles, including the distribution of the
+discriminal process, with key CJ experimental design features, such as
+the sampling and comparison mechanisms. The study then translates the
+SCM into a bespoke statistical model that addresses key limitations of
+the BTL model. Specifically, the statistical model accounts for judge
+biases, captures the hierarchical structure of stimuli, incorporates
+measurement error in trait estimation and hypothesis testing, and
+accommodates violations of the equal dispersion assumption. These
+improvements potentially enhance measurement reliability and validity
+\citep{Perron_et_al_2015} and improve the statistical accuracy of
+hypothesis testing.
+
+Beyond these potential benefits, the approach offers two key advantages.
+First, it clarifies the interactions among all actors and processes
+involved in CJ experiments. Second, it shifts the analytic paradigm from
+passively accepting the assumptions of the BTL model to actively testing
+their fit with observed data. Together, these advantages create a
+principled framework for evaluating best practices in CJ experimental
+designs--one that better aligns with the demands of contemporary CJ
+assessment contexts \citep{Kelly_et_al_2022} and opens new avenues for
+research.
+
+One promising research avenue involves investigating how the
+hierarchical structure of stimuli affects CJ experiment designs and
+hypotheses testing. One such study could examine whether collecting a
+single text per individual provides sufficient information to produce
+reliable trait estimates at different levels of the hierarchy. Due to
+concerns about the feasibility of the comparison task
+\citep{Boonen_et_al_2020}, many CJ studies assess traits using only one
+text per individual \citep{citation}. This experimental design
+implicitly assumes that within-individual variability is small relative
+to between-individual differences--that is, texts produced by the same
+individual are relatively homogeneous. However, researchers rarely test
+this assumption, even though it directly influences decisions about the
+number of texts and participants needed for the experiment, ultimately
+affecting the reliability of the trait estimates.
+
+Relatedly, another study could investigate hypotheses about the
+characteristics of the texts themselves. Previously, the literature
+lacked a direct and integrated method for evaluating these types of
+hypotheses. Now, by collecting data on specific stimulus features,
+researchers can assess whether these variables produce the expected
+effects.
 
 \section{Conclusion}\label{sec-conclusion}
 
