@@ -109,14 +109,16 @@ Nevertheless, despite the increasing number of CJ studies, research in this doma
 <!-- Reliability is a necessary but not sufficient condition for validity. Reliability can exist without validity but validity cannot exist without reliability. [@Perron_et_al_2015, pp. 2] -->
 
 <!-- 5. So, what are we doing? -->
-To address these issues, this study extends Thurstone's general form using a systematic and integrated approach based on Causal and Bayesian inference methods. In addition to improving statistical accuracy and strengthening measurement reliability and validity, the approach offers two key advantages. First, it clarifies the interactions among all actors and processes involved in CJ experiments. Second, it shifts the current comparative data analysis paradigm from passively accepting the BTL model assumptions to actively testing whether those assumptions fit the data under analysis.
+To address these issues, this study extends Thurstone's general form through a systematic and integrated approach that combines Causal and Bayesian inference methods. In addition to potentially enhancing measurement reliability and validity [@Perron_et_al_2015], and improving statistical accuracy in hypothesis testing, this approach offers two key advantages. First, it clarifies the interactions among all actors and processes involved in CJ experiments. Second, it shifts the current comparative data analysis paradigm from passively accepting the BTL model assumptions to actively testing whether those assumptions fit the data under analysis.
+
+<!-- Reliability is a necessary but not sufficient condition for validity. Reliability can exist without validity but validity cannot exist without reliability. [@Perron_et_al_2015, pp. 2] -->
 
 <!-- Many cross-cultural scientists already pay close attention to concerns of causal inference and comparison without use of a formal framework (e.g., Norenzayan & Heine, 2005; Pollet et al., 2014). For these researchers, a formalized framework can provide a vocabulary to articulate their concerns and work toward solutions in a more systematic manner. [@Deffner_et_al_2022, pp. 2] -->
 
 <!-- Specifically, a framework is needed which lets us reason about the causes of non-invariance. [@Sterner_et_al_2024, pp. 751] -->
 
 <!-- 4. what is the organization of the study? -->
-As a result, the study divides its content into six main sections. @sec-thurstone_theory provides an overview of Thurstone's theory. @sec-theory-issues discusses the identified issues in detail. @sec-theoretical extends Thurstone's general form to address these challenges. The extension integrates core theoretical principles alongside key assessment design features relevant to CJ experiments, such as the selection of judges, stimuli, and comparisons. @sec-statistical translates these theoretical and practical elements into a probabilistic statistical model to analyze dichotomous pairwise comparison data. @sec-discussion discusses the findings, limitations, and challenges and explores avenues for future research. Finally, @sec-conclusion summarizes the study's conclusions.
+As a result, the study divides its content into six main sections. @sec-thurstone_theory provides an overview of Thurstone's theory. @sec-theory-issues discusses the identified issues in detail. @sec-theoretical extends Thurstone's general form to address these challenges. The extension integrates core theoretical principles alongside key CJ experimental design features, such as the selection of judges, stimuli, and comparisons. @sec-statistical translates these theoretical and practical elements into a probabilistic statistical model to analyze dichotomous pairwise comparison data. @sec-discussion discusses the findings, limitations, and challenges and explores avenues for future research. Finally, @sec-conclusion summarizes the study's conclusions.
 
 
 # Thurstone's theory {#sec-thurstone_theory}
@@ -255,7 +257,7 @@ In experimental practice, however, the thought experiment occurs in reverse. Res
 <!-- Statements about the real world from observed data require assumptions. This is true no matter what kind of data we have, and it is explicitly also true for statements based on data stemming from SRSg. The validity of our statements therefore critically hinges on the validity of those assumptions. If our statistical assumptions are wrong for the analysis at hand, the inferential statements will be incorrect no matter how sophisticated the statistical methods are. [@Kohler_et_al_2019, pp. 150] -->
 
 <!-- 3. But does it hold in practice? -->
-Notably, while assuming equal dispersions simplifies the trait measurement model, evidence from the CJ literature suggests that this assumption may fail to capture the complexity of modern CJ data. In particular, the assumption may not hold when researchers assess complex traits or heterogeneous stimuli [@Thurstone_1927a; @Bramley_2008; @Kelly_et_al_2022], as these traits and stimuli can introduce judgment discrepancies due to their unique characteristics [@vanDaal_et_al_2016; @Lesterhuis_2018; @Chambers_et_al_2022]. Indeed, the CJ literature may already provide indications of such discrepancies, particularly in the form of "misfit" statistics. For instance, *misfit texts* are those whose comparisons result in more judgment discrepancies than those involving other texts [@Pollitt_2004; @Pollitt_2012b; @Pollitt_2012a; @Goossens_et_al_2018]. These misfit texts may exhibit larger discriminal dispersions or represent outliers --texts with distinctive characteristics that deviate markedly from the rest of the sample [@Grubbs_1969]. In either case, comparing misfit texts results in more judgment discrepancies, yet the BTL model neither accounts for these cases nor offers any means to address them.
+Notably, while assuming equal dispersions simplifies the trait measurement model, evidence from the CJ literature suggests that this assumption may fail to capture the complexity of modern CJ data. In particular, the assumption may not hold when researchers assess complex traits or heterogeneous stimuli [@Thurstone_1927a; @Bramley_2008; @Kelly_et_al_2022], as these traits and stimuli can introduce judgment discrepancies due to their unique characteristics [@vanDaal_et_al_2016; @Lesterhuis_2018; @Chambers_et_al_2022]. Indeed, the CJ literature may already provide indications of such discrepancies, particularly in the form of "misfit" statistics. For instance, *misfit texts* are those whose comparisons result in more judgment discrepancies than those involving other texts [@Pollitt_2004; @Pollitt_2012b; @Pollitt_2012a; @Goossens_et_al_2018]. These misfit texts may exhibit larger discriminal dispersions or represent outliers--texts with distinctive characteristics that deviate markedly from the rest of the sample [@Grubbs_1969]. In either case, the comparison of these texts results in more judgment discrepancies, yet the BTL model neither accounts for these cases nor offers any means to address them, except their elimination from the analysis.
 
 <!-- It is probably true that this variability of the discriminal dispersion on the psychological continuum is of relatively less serious importance in dealing with strictly homogeneous stimulus series, but it becomes a serious factor in dealing with less conspicuous attributes or with less homogeneous stimulus series, such as handwriting specimens, English compositions, sewing samples, oriental rugs. In measurements of the type known as judgment scales the discriminal dispersion on the psychological continuum becomes one of the unknowns to be determined as well as the scale value of the specimen. Every specimen in such a series presents two unknown values to be determined, namely, the scale value of its modal discriminal process on the psychological continuum and its discriminal dispersion. [@Thurstone_1927a, pp. 376] -->
 
@@ -285,7 +287,7 @@ Notably, while assuming equal dispersions simplifies the trait measurement model
 
 
 <!-- 5. So, what happens when the assumption does not hold? -->
-Significant statistical and measurement issues can arise when the assumption of equal dispersions between stimuli does not hold. Specifically, the BTL model may overestimate the trait's reliability, that is, the degree to which the outcome accurately reflects the *true* discriminal differences between stimuli. This overestimation, in turn, results in spurious conclusions about these differences [@McElreath_2020] and, by extension, about the underlying discriminal processes of stimuli. @fig-dispersion also illustrates this scenario when the model's discriminal difference distribution aligns with the thick continuous line for $\sigma_{B}-\sigma_{A}=0$, while the *true* discriminal difference follows any discontinuous line where $\sigma_{B}-\sigma_{A} \neq 0$. Furthermore, if researchers acknowledge that misfit statistics may represent outlying observations, the common CJ practice of excluding stimuli based on these statistics [@Pollitt_2012a; @Pollitt_2012b; @vanDaal_et_al_2016; @Goossens_et_al_2018], may unintentionally discard valuable information, introducing bias into the trait estimates [@Zimmerman_1994; @McElreath_2020, chap. 12]. The direction and magnitude of these biases remain unpredictable, as they depend on which stimuli researchers exclude from the analysis.
+Significant statistical and measurement issues can arise when the assumption of equal dispersions between stimuli does not hold. Specifically, the BTL model may overestimate the trait's reliability, that is, the degree to which the outcome accurately reflects the *true* discriminal differences between stimuli. This overestimation, in turn, results in spurious conclusions about these differences [@McElreath_2020] and, by extension, about the underlying discriminal processes of stimuli. @fig-dispersion also illustrates this scenario when the model's discriminal difference distribution aligns with the thick continuous line for $\sigma_{B}-\sigma_{A}=0$, while the *true* discriminal difference follows any discontinuous line where $\sigma_{B}-\sigma_{A} \neq 0$. Furthermore, if researchers acknowledge that misfit statistics may represent texts with different dispersions or outlying observations, the common CJ practice of excluding stimuli based on these statistics [@Pollitt_2012a; @Pollitt_2012b; @vanDaal_et_al_2016; @Goossens_et_al_2018], may unintentionally discard valuable information, introducing bias into the trait estimates [@Zimmerman_1994; @McElreath_2020, chap. 12]. The direction and magnitude of these biases remain unpredictable, as they depend on which stimuli researchers exclude from the analysis.
 
 <!-- But ignoring over-dispersion can also lead to all of the same problems as ignoring any predictor variable. Heterogeneity in counts can be a confound, hiding effects of interest or producing spurious inferences. [@McElreath_2020, pp. 370] -->
 
@@ -487,7 +489,7 @@ Before incorporating the first theoretical principles of Thurstone's theory, it 
 <!-- 2. the preliminary SCM for CJ -->
 [SCM -@fig-cj03_scm] presents the first theoretical principles embedded in the conceptual-population model, which evaluates the impact of different teaching methods on students' writing ability. This SCM outlines the relationship between the conceptual-population outcome $(O^{cp}_{iahbjk})$ and several related variables. The subscripts $i$ and $h$ identify the students who authored the texts (i.e., the individuals). The indices $a$ and $b$ represent the texts under comparison (i.e., the stimuli). The index $j$ indicates the judge conducting the comparison, while the index $k$ captures *repeated measures designs* [@Lawson_2015, pp. 366-376], accounting for experimental conditions where a judge compares the same pair of stimuli multiple times. Thus, the indexing system supports comparisons between different texts written by the same student $(i = h;$ $a \neq b)$ and between texts written by distinct students $(i \neq h;$ where $a = b$ is permitted$)$, each judged once or repeatedly by all judges $(j = 1,\dots,n_{J};$ $k = 1,\dots,n_K;$ where $n_{J}>1$ and $n_{K}\geq1)$. However, it excludes cases where a judge compares a student's text to itself, whether once or multiple times $(i = h;$ $a = b;$ $j = 1,\dots,n_{J};$ $k = 1,\dots,n_{K};$ where $n_{J}>1$ and $n_{K}\geq1)$, as such comparison lacks practical relevance within the CJ framework. Here, $n_{J}$ indicates the total number of judges, and $n_{K}$ denotes the number of repeated judgments each judge performs.
 
-In line with Thurstone's theory, [SCM -@fig-cj03_scm] depicts the texts' discriminal processes $(T_{ia}, T_{hb})$ and their discriminal difference $(D_{iahbjk})$ (see @sec-thurstone_theory). Additionally, based on the arguments developed in @sec-theory-issue1b, the SCM incorporates the judges' biases $(B_{kj})$. Together with the outcome, these variables constitute the preliminary set of endogenous variables, $V = \{ O_{iahbjk}, D_{iahbjk}, T_{ia}, T_{hb}, B_{kj} \}$. Finally, the SCM presents the preliminary set of structural equations, $F = \{ f_{O}, f_{D} \}$, which define the non-parametric dependencies among these variables.
+In line with Thurstone's theory, [SCM -@fig-cj03_scm] depicts the texts' discriminal processes $(T_{ia}, T_{hb})$ and their discriminal difference $(D_{iahbjk})$ (see @sec-thurstone_theory). Additionally, building on the arguments developed in @sec-theory-issue1b, the SCM incorporates a key design features of CJ experiments: the judges' biases $(B_{kj})$. These variables, along with the outcome $(O_{iahbjk})$, constitute the preliminary set of endogenous variables, $V = \{ O_{iahbjk}, D_{iahbjk}, T_{ia}, T_{hb}, B_{kj} \}$. Finally, the SCM presents the preliminary set of structural equations, $F = \{ f_{O}, f_{D} \}$, which define the non-parametric dependencies among these variables.
 
 <!-- Moreover, the literature advocates for the incorporation of relevant hierarchical structures into the statistical model to account for these dependencies. Together, these additions can result in a model resembling a Multilevel Structural Equation Model (MSEM) [@Hoyle_et_al_2023, chap. 26] combined with a multidimensional or two-parameter logistic Item Response Theory (IRT) model [@Hoyle_et_al_2023, chap. 15], depending on the theoretical and statistical treatment of judges' biases.  -->
 
@@ -1188,40 +1190,61 @@ Decision: interesting, but I think I like the model as it is, explicit! -->
 # Discussion {#sec-discussion}
 
 <!-- recording: Sven and Tine 24.11.25; time: 00:56:10 - 00:58:20 -->
+<!-- recording: Sven and Tine 25.04.10; time: 00:12:00 - 00:14:30 -->
 <!-- recording: Sven and Tine 25.04.10; time: 00:41:55 - 00:47:00 -->
 
-<!-- make a summary of what you have accomplished so far -->
+<!-- 1. General summary of what we have done. What are the first benefits? -->
+This study extends Thurstone's general form through a systematic, integrated approach that combines Causal and Bayesian inference methods. It begins by formulating the extension as a conceptual model, represented by an SCM and a DAG. This formulation integrates Thurstone's core theoretical principles, including the distribution of the discriminal process, with key CJ experimental design features, such as the sampling and comparison mechanisms. The study then translates the SCM into a bespoke statistical model that addresses key limitations of the BTL model. Specifically, the statistical model accounts for judge biases, captures the hierarchical structure of stimuli, incorporates measurement error in trait estimation and hypothesis testing, and accommodates violations of the equal dispersion assumption. These improvements potentially enhance measurement reliability and validity [@Perron_et_al_2015] and improve the statistical accuracy of hypothesis testing.
 
-<!-- change the paradigm -->
+<!-- Reliability is a necessary but not sufficient condition for validity. Reliability can exist without validity but validity cannot exist without reliability. [@Perron_et_al_2015, pp. 2] -->
 
-<!-- opportunities open  -->
+<!-- 2. Are there any additional advantages? -->
+Beyond these potential benefits, the approach offers two key advantages. First, it clarifies the interactions among all actors and processes involved in CJ experiments. Second, it shifts the analytic paradigm from passively accepting the assumptions of the BTL model to actively testing their fit with observed data. Together, these advantages create a principled framework for evaluating best practices in CJ experimental designs--one that better aligns with the demands of contemporary CJ assessment contexts [@Kelly_et_al_2022] and opens new avenues for research.
 
-<!-- Now that we have this model we have a principled way to make some power analysis which will helps us to design studies, rather than just relying in simple rules of thumbs. -->
+<!-- If Thurstone's Law is to be used in support of comparative judgment for assessment, his theory must be extended to cover the uses and applications that are required for assessment purposes. [@Kelly_et_al_2022, pp. 678] -->
 
-
-
-
-<!-- Thus, this study addresses the issues identified in @sec-theory-issues by extending  Thurstone’s general form using the structural approach to causal inference and Bayesian inference methods. Specifically, it leverages the capabilities of this approach to formalize the combination of the core theoretical principles outlined in @sec-thurstone_theory with key assessment design features relevant to CJ experiments, such as the selection of judges, stimuli, and comparisons, i.e, the sampleand compariosn mechanisms. In addition to enhancing statistical accuracy and strengthening measurement reliability and validity, the approach offers two key advantages. First, it clarifies the interactions among all actors and processes involved in CJ experiments. Second, it shifts the current comparative data analysis paradigm from passively accepting the model assumptions to actively testing whether those assumptions fit the data under analysis. -->
-
-
-<!-- "If Thurstone’s Law is to be used in support of comparative judgment for assessment, his theory must be extended to cover the uses and applications that are required for assessment purposes." [@Kelly_et_al_2022, pp. 678] -->
+<!-- We recognise that there is unlikely to be a single answer to these questions for all the cases in which comparative judgment may be used. However, work to derive some general principles for good practice would be valuable. [@Kelly_et_al_2022, pp. 683] -->
 
 
-<!-- These procedures also bear on a larger topic of discussion in social science. The proper response, when faced with low predictive capacity of presumed independent variables, is not only to search for new independent variables and/or alternative theoretical models; the proper recourse may also be to use more sophisticated measurement models. [@Wainer_et_al_1978, pp. 332] -->
+<!-- 3. First research avenue -->
+One promising research avenue involves investigating how the hierarchical structure of stimuli affects CJ experiment designs and hypotheses testing. One such study could examine whether collecting a single text per individual provides sufficient information to produce reliable trait estimates at different levels of the hierarchy. Due to concerns about the feasibility of the comparison task [@Boonen_et_al_2020], many CJ studies assess traits using only one text per individual [@citation]. This experimental design implicitly assumes that within-individual variability is small relative to between-individual differences--that is, texts produced by the same individual are relatively homogeneous. However, researchers rarely test this assumption, even though it directly influences decisions about the number of texts and participants needed for the experiment, ultimately affecting the reliability of the trait estimates.
 
-
-
-<!-- In order to make it possible to estimate the parameters satisfactorily with the relatively small amount of data available it would probably be necessary to reduce the number of parameters estimated in some other way, for example, by representing all the scripts from one board with a single parameter, as in the logistic regression model used in Greatorex et al. (2002). Such an approach shifts the philosophy of the exercise from that of Thurstone and Rasch (constructing psychological scales capable of yielding sample-free measurement) to the philosophy of statistical modelling (finding a model that optimises parsimony and variance explained). [@Bramley_2008, pp. 274] -->
-<!-- Comment: the sample-free measurement philosophy is an illusory one, because in this contexts, the measurements depend on the perception of judges.  -->
+Relatedly, another study could investigate hypotheses about the characteristics of the texts themselves. Previously, the literature lacked a direct and integrated method for evaluating these types of hypotheses. Now, by collecting data on specific stimulus features, researchers can assess whether these variables produce the expected effects.
 
 
 
-<!-- 4. How these judgment discrepancies happen?  -->
+
+<!-- power analysis to know the implications of certain sampling is nice to have it explicitly. -->
+
+
+<!-- One of these avenues could be about the implications of the hierarchical structure of the stimuli, not only for the design of CJ experiments, but also for the test of hypothesis.  -->
+<!-- The avenues of research span the following:  -->
+<!-- - assessing if the number of texts a researcher collects is sufficient. Due to efficiency of scoring, most of research only collects only one text. This assumes that there is significant homogeneity between text of the same individual, compared to the between individual variability. However, this cannot be known ad-hoc. The frameworks open the avenue to test this assumption -->
+<!-- - Assessing hypothesis regarding the characteristics of the texts. Before the literature did not have a direct and integrated way to assess these types of hypothesis, now you just need to collect data on the particular stimuli, and test if these variables reflect the expected effect -->
+
+<!-- Derived from this other avenues of research that are open are -->
+<!-- - assessing if the number of individuals a researcher collects is sufficient. Most of the literature focuses on ensuring that the number of comparisons between texts are sufficient, but no literature actively engages in determining if the number of individuals are sufficient to test hypothesis at that level. -->
+<!-- - Moreover, if certain characteristics of the individuals explain the trait locations of their texts -->
+
+
+<!-- 4. How these judgment discrepancies happen? -->
 <!-- These misfit texts likely arise from two underlying mechanisms. First, a text may exhibit a larger discriminal dispersion, increasing the overlap between its discriminal process and those of multiple other texts. This greater overlap leads to more judgment discrepancies, increasing the likelihood of classifying the text as a misfit. @fig-discriminal_process illustrates this scenario. In the figure, Text B has a wider discriminal dispersion than Text A, enlarging the region where their discriminal processes intersect. This larger overlap represents an area where judges face greater difficulty in determining which text exhibits a higher level of the trait. Second, a text may represent an outlier --one with distinct characteristics that deviate markedly from the rest of the sample [@Grubbs_1969]. Such texts are harder to compare and place on the trait scale, resulting in more judgment discrepancies and a misfit classification. In either case, the BTL model is inherently agnostic to these mechanisms and does not provide any means to address them. -->
 
+<!-- The problem isn’t necessarily that “outliers” are bad data. Rather processes are often variable mixtures and this results in thicker tails. [@McElreath_2020, pp. 369] -->
+
+<!-- (Done) It is more likely that we can decide the characteristics of the objects we want to include in the study (independent variables), ensuring groups that are more balanced. However, in the case of subjects sometimes the independent variables cannot be assigned (e.g., hearing status) -->
+
+<!-- When you want to investigate objects, the experiment has an experimental unit: the trial on the objects, but you only have one object per subject. Consequently, objects and subjects are confounded. -->
 
 
 
+
+<!-- presence of judges biases in the comparative judgment procedure. From this it derives research on:  -->
+<!-- - does the judges have biases, and if so, do ad-hoc sta -->
+
+<!-- Given that the discriminal difference of the stimuli becomes an observable outcome only through the judges' perceptions, this study has argued that judges biases could introduce dependencies between the stimuli [@vanderLinden_et_al_2017_II].  -->
+
+<!-- This hierarchical nature open paths for research in, for instance, the benefits of *repeated measures designs* [@Lawson_2015, pp. 366-376] in CJ experiments. This is when the experimental conditions accounts for judges comparing the same pair of stimuli multiple times. Or research that determines the minimum number of judges and judgments required to ensure an acceptable level of reliability and validity under particular assumptions of the data [@Kelly_et_al_2022, pp. 682]. -->
 
 
 <!-- (Is this a validity contention?) -->
@@ -1231,12 +1254,14 @@ Decision: interesting, but I think I like the model as it is, explicit! -->
 
 <!-- Samples from different sites often differ in terms of their demographic profiles (here, their age and gender distribution), and these demographic variables might in turn affect the distribution of the trait of interest. How should researchers deal with these differences? The answer depends on the processes that generated the observed disparities. Demographic disparities among samples may result from (a) differences in the actual populations from which the samples are taken or (b) sampling procedures that differ among sites. [@Deffner_et_al_2022, pp. 6] -->
 
-<!-- Pollitt (2012a) argues that assessors in pairwise comparisons need less training, given intuitive comparison and decision making. However, there is a distinct lack of research on the role of training. [?] -->
+<!-- The primary writing study showed that both trained markers and teachers with no marker training can use the method effectively to assess the quality of children’s writing, and the e-scape project has demonstrated the same for the assessment of e-portfolios in Design & Technology. We do not yet know how widely it can be, or should be, applied. [@Pollitt_2012b, pp. 297]-->
 
-<!-- To date, there is no evidence to support a minimum number of judges and judgments required to ensure an acceptable level of validity [@Kelly_et_al_2022, pp. 682]. -->
+<!-- However, the definition of expert in this assessment context is further complicated by studies suggesting that training is unnecessary for comparative judgment exercises to be conducted well. [@Kelly_et_al_2022, pp. 681] -->
 
 <!-- These examples demonstrate that the generalizability of experimental effects does not depend on the presence of population differences per se but on the exact mechanisms by which populations differ. While some differences—especially those concerning the independent variable—are inconsequential for intended generalizations, differences concerning effect modifiers or mediators require statistical adjustment. [@Deffner_et_al_2022, pp. 11] -->
 
+
+<!-- Furthermore, it is not inconceivable that the selection of a particular group of judges used to perform the pairwise comparison could result in an incomplete depiction of the dimensions and complexity of the trait. --->
 
 
 
@@ -1246,23 +1271,39 @@ Decision: interesting, but I think I like the model as it is, explicit! -->
 
 <!-- We advocate for the no removal of judges, but rather identify them and treat the data with the appropriate model, so these 'misfits' do not affect the measurement of the trait -->
 
-<!-- sampling and comparisons mechanism are effective generators of missing data. -->
-
 <!-- The outcomes of the analysis can be considered in two parts: the ‘model’ and the ‘misfit’. [@Bramley_2008, pp. 260] -->
 
 <!-- It has a good reporting structure, and the pattern of both judge and script fit and misfit enables further investigation of the biases which may be taking place. [@Pollitt_et_al_2003, pp. 7]. -->
 
-<!-- The problem isn’t necessarily that “outliers” are bad data. Rather processes are often variable mixtures and this results in thicker tails. [@McElreath_2020, pp. 369] -->
+
+
+
+
+<!-- clarifies the hierarchical structure underlying both stimuli and judgments in CJ experiments. Specifically, the model makes explicit how stimuli are nested within individuals and how judgments are nested within judges. -->
+
+<!-- Using this principled framework, the study clarifies the hierarchical structure underlying both stimuli and judgments in CJ experiments. Specifically, the model makes explicit how stimuli are nested within individuals and how judgments are nested within judges. It also accounts for potential judge biases in the comparative judgment process. -->
 
 
 
 
 
-<!-- design matters -->
+
+<!-- To date, there is no evidence to support a minimum number of judges and judgments required to ensure an acceptable level of validity [@Kelly_et_al_2022, pp. 682]. -->
 
 <!-- The field of comparative judgment, while growing, is still relatively small, and at present we do not have compelling answers to fundamental questions such as: how many judges do we need? Who should judge? How many judgments should they make? And crucially, how can we be confident that they are basing their judgments on acceptable criteria? If judges are not using construct-relevant criteria, then the argument that comparative judgments are necessarily valid cannot be upheld. We recognise that there is unlikely to be a single answer to these questions for all the cases in which comparative judgment may be used. However, work to derive some general principles for good practice would be valuable. [@Kelly_et_al_2022, pp. 683] -->
 
-<!-- It is assumed that the single observer compares each pair of stimuli a "sufficient number of times" so that a proportion, P(A>B), may be determined for each pair of stimuli [@Thurstone_1927b, pp. 267] -->
+
+
+<!-- Continuing with the first advantage, now we clarify two additional processes of CJ experiments that previous literature do not typically mention: that the sample and comparison mechanism are generators of missing data--that is, they determine which observations do we get to see in our data sample. This opens the path to use Rubin's missing data framework [@Rubin_1976] into CJ applications to investigate more complex CJ designs, particularly the ones that are not random samples as the ones outlined here, which could be characterized in Rubin's structure parlor as missing at random (MAR) and missing not at random (MNAR) [@Rubin_1976]. Among these cases are adaptive comparative algorithm designs, for which the causal structure is not clear, and thus, its impact on trait measurement and hypothesis testing is also not clear. Another  -->
+
+<!-- normally S and C are not explicitly mentioned  -->
+
+
+<!-- The condition of case selection to be independent from Y is always met in experiments because the Y is not realized before the experiment starts. [@Kohler_et_al_2019, pp. 160] -->
+
+<!-- Brought Rubin's missing data framework to the field. -->
+<!-- Because $S$ and $C$, by design, generate data that it is missing completely at random (MCAR) [@Rubin_1976] are random samples, they fulfill ignorability. -->
+
 
 <!-- Thus Thurstone’s model (in both its Case 5 and Rasch formulation) achieves the goal of sample-free calibration (Wright, 1977) in the sense that the estimate of the distance between A and B does not depend on which other objects they are compared with. The practical importance of this is that it is not necessary to have a completely crossed or balanced design of paired comparisons because the estimation process naturally handles missing data. [@Bramley_2008, pp. 256] -->
 
@@ -1270,17 +1311,27 @@ Decision: interesting, but I think I like the model as it is, explicit! -->
 
 <!-- Since the analysis can cope with non-random missing data (see earlier), the collection of data can be very flexible – tailored to the needs of the particular situation. Because the comparative judgements are all independent, data can be accumulated as needed. The investigator is thus not (in principle) bound by a prior design. At any point more data could be collected and added to the existing data to recover from accidents, to replace an unacceptable judge, to add extra scripts, to resolve conflicts, to investigate possible bias or to deepen the study of any aspect that proves especially interesting. [@Bramley_2008, pp. 261] -->
 
-<!-- Due to efficiency of scoring, most of research only collects only one text. This assumes that there is significant homogeneity between text of the same individual, compared to the between individual variability. However, this cannot be known ad-hoc.  -->
+
+<!-- It is assumed that the single observer compares each pair of stimuli a "sufficient number of times" so that a proportion, P(A>B), may be determined for each pair of stimuli [@Thurstone_1927b, pp. 267] -->
+
+<!-- In order to make it possible to estimate the parameters satisfactorily with the relatively small amount of data available it would probably be necessary to reduce the number of parameters estimated in some other way, for example, by representing all the scripts from one board with a single parameter, as in the logistic regression model used in Greatorex et al. (2002). Such an approach shifts the philosophy of the exercise from that of Thurstone and Rasch (constructing psychological scales capable of yielding sample-free measurement) to the philosophy of statistical modelling (finding a model that optimises parsimony and variance explained). [@Bramley_2008, pp. 274] -->
+<!-- Comment: the sample-free measurement philosophy is an illusory one, because in this contexts, the measurements depend on the perception of judges. -->
+
+
+
+
+
+
+
+
 
 <!-- Use your example, teaching practice and Aptitude-Treatment Interaction (ATI), certain interventions do not have the same effect for all pupils, treatment is a random intercept and slope variable. Relevant variables depends on the context, you really have to think through which variables you have to put in. -->
 
-<!-- Brought Rubin's missing data framework to the field. -->
-<!-- Because $S$ and $C$, by design, generate data that it is missing completely at random (MCAR) [@Rubin_1976] are are random samples, they fulfill ignorability.  -->
 
 
-<!-- recording: Sven and Tine 25.04.10; time: 00:12:00 - 00:14:00 -->
-<!-- Consider how to use the S and C, when the designs are more complexes. -->
-<!-- Normally, S and C are not typically mentioned  -->
+<!-- These procedures also bear on a larger topic of discussion in social science. The proper response, when faced with low predictive capacity of presumed independent variables, is not only to search for new independent variables and/or alternative theoretical models; the proper recourse may also be to use more sophisticated measurement models. [@Wainer_et_al_1978, pp. 332] -->
+
+
 
 
 
@@ -1318,16 +1369,16 @@ Decision: interesting, but I think I like the model as it is, explicit! -->
 
 <!-- Causal inference frameworks do not magically guarantee value-free answers, but they force us to be precise about the questions we ask, and to be transparent about the assumptions that we are willing to make [@Rohrer_et_al_2022, pp. 4-5] -->
 
+<!-- Many cross-cultural scientists already pay close attention to concerns of causal inference and comparison without use of a formal framework (e.g., Norenzayan & Heine, 2005; Pollet et al., 2014). For these researchers, a formalized framework can provide a vocabulary to articulate their concerns and work toward solutions in a more systematic manner. [@Deffner_et_al_2022, pp. 2] -->
+
+<!-- Specifically, a framework is needed which lets us reason about the causes of non-invariance. [@Sterner_et_al_2024, pp. 751] -->
+
 
 <!-- To use graphs to reason about confounding control and other forms of bias requires that the representation on the graph be such that there is: -->
 <!-- 1. No ungraphed confounding: Any variable that affects two or more variables in the graph via distinct direct effects must be shown on the graph as an ancestor of the affected variables, even if it is unmeasured. -->
 <!-- 2. No ungraphed collider stratification: Any variable that affects selection or is used for stratification and is affected by two or more variables in the graph (including its random disturbance) must be shown on the graph as a descendant of the variables affecting it, even if it is unmeasured. -->
 <!-- As may become clear from the descriptions below, these requirements are needed to ensure that any association between two variables in the graph can be atributed solely to open paths between the variables within the graph, and thus can be traced to either variation in graphed causal variables, or conditioning on effects of such variables, or both. Conditions 1 and 2 enforce the connectivity requirement of DAGs by demanding the graph we draw show all variables which can causally explain associations (either as uncontrolled confounders or as controlled colliders), even if those variables are unmeasured or hypothetical. [@Lash_et_al_2021, pp. 113] -->
 
-
-
-
-## Limitations and further research {#sec-discussion-limitations}
 
 <!-- *Relevant* refers to variables that satisfy the *backdoor criterion* [@Neal_2020, pp 37], that is, they belong to a *sufficient adjustment set* [@Pearl_2009; @Pearl_et_al_2016; @Morgan_et_al_2014]. A *sufficient* set (potentially empty) blocks all non-causal paths between a predictor and an outcome without opening new ones [@Pearl_2009]. Use your example, teaching practice and Aptitude-Treatment Interaction (ATI), certain interventions do not have the same effect for all pupils, treatment is a random intercept and slope variable. Relevant variables depends on the context, you really have to think through which variables you have to put in. -->
 
@@ -1337,7 +1388,15 @@ Decision: interesting, but I think I like the model as it is, explicit! -->
 
 <!-- Statements about the real world from observed data require assumptions. This is true no matter what kind of data we have, and it is explicitly also true for statements based on data stemming from SRSg. The validity of our statements therefore critically hinges on the validity of those assumptions. If our statistical assumptions are wrong for the analysis at hand, the inferential statements will be incorrect no matter how sophisticated the statistical methods are. [@Kohler_et_al_2019, pp. 150] -->
 
-<!-- The condition of case selection to be independent from Y is always met in experiments because the Y is not realized before the experiment starts. [@Kohler_et_al_2019, pp. 160] -->
+
+<!-- Talk about Bayesian Workflow, and how it would fit the process to arrive to the proposed model. -->
+
+
+
+
+
+
+
 
 <!-- (do not do this yet!) Develop how you multiply the predictions by the inverse of the sample probability to get the estimates. Should I use the probability itself?: Remember that in a random sample the sample probability is n/N, so the the inverse of the sample probability is N/n. So, multiplying the estimate by the n * N/n gives you the prediction for the population?, yes. -->
 <!-- (See https://timss2023.org/methods/, and pdf in mail, and https://discourse.mc-stan.org/t/survey-weighted-regression/1654 ) -->
@@ -1346,21 +1405,11 @@ Decision: interesting, but I think I like the model as it is, explicit! -->
 
 <!-- Add to future research how would be to use the model when you do not know the weights of the sample, but you can use external data to approximate them. -->
 
-
-<!-- Talk about Bayesian Workflow, and how it would fit the process to arrive to the proposed model. -->
-
-
-<!-- (Done) It is more likely that we can decide the characteristics of the objects we want to include in the study (independent variables), ensuring groups that are more balanced. However, in the case of subjects sometimes the independent variables cannot be assigned (e.g., hearing status) -->
-
-<!-- When you want to investigate objects, the experiment has an experimental unit: the trial on the objects, but you only have one object per subject. Consequently, objects and subjects are confounded. -->
-
 <!-- Develop how you get the vectors S and C and sampling weights when you know the extension of the population. (See https://mc-stan.org/docs/stan-users-guide/poststratification.html ) -->
 
 
 
-
 # Conclusion {#sec-conclusion}
-
 
 
 {{< pagebreak >}}
