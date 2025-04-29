@@ -95,6 +95,72 @@ dev.off()
 
 
 
+
+
+## figure 1a ####
+
+# distributional parameters
+dpA = c(-0.9, 0.5) # distribution text A (mean, sd)
+dpB = c(0, 1) # distribution text B (mean, sd)
+dpC = c(0.9, 0.5) # distribution text B (mean, sd)
+rAB = 0 # correlation between discriminal processes
+
+
+# figure
+png( filename=file.path(main_dir, 'diff_discriminal_dispersion.png'),
+     height=10, width=15, units='cm', res=400  )
+
+# initial figure
+par( mar=c(2,0,0.5,0) )
+plot( NULL, xlim=c(-3,3), ylim=c(0,0.9), 
+      xaxt='n', yaxt='n', xlab='', ylab='', axes=F )
+axis( side=1, labels=F, lwd.ticks=0 )
+axis( side=1, at=c(dpA[1], dpB[1], dpC[1]), tick=F, 
+      label=c( expression( T[A] ), expression( T[B] ), expression( T[C] ) ) )
+
+# figure parameters
+pplotA = c( dnorm( dpA[1], mean=dpA[1], sd=dpA[2] ),
+            dnorm( dpA[1], mean=dpA[1], sd=dpA[2] ) + 0.05,
+            dnorm( dpA[1] + dpA[2], mean=dpA[1], sd=dpA[2]),
+            dnorm( dpA[1]+0.25, mean=dpA[1], sd=dpA[2] )-0.25 )
+
+pplotB = c( dnorm( dpB[1], mean=dpB[1], sd=dpB[2] ),
+            dnorm( dpB[1], mean=dpB[1], sd=dpB[2] ) + 0.05,
+            dnorm( dpB[1] + dpB[2], mean=dpB[1], sd=dpB[2]),
+            dnorm( dpB[1]+0.45, mean=dpB[1], sd=dpB[2] )-0.15 )
+
+pplotC = c( dnorm( dpC[1], mean=dpC[1], sd=dpC[2] ),
+            dnorm( dpC[1], mean=dpC[1], sd=dpC[2] ) + 0.05,
+            dnorm( dpC[1] + dpC[2], mean=dpC[1], sd=dpC[2]),
+            dnorm( dpC[1]+0.45, mean=dpC[1], sd=dpC[2] )-0.08 )
+
+
+# discriminal process text A
+curve( dnorm(x, mean=dpA[1], sd=dpA[2]), lwd=1.5, col=rgb(0,0,0,0.6), add=T ) 
+text( x=dpA[1], y=pplotA[2], cex=0.8, 'Text A', col=rgb(0,0,0,0.6) ) 
+lines( x=c(dpA[1], dpA[1]), y=c(pplotA[1], -0.1), lty=2, lwd=0.7, col=rgb(0,0,0,0.6) )
+lines( x=c(dpA[1], dpA[1]+dpA[2]), y=rep( pplotA[3], 2), lty=2, lwd=0.7, col=rgb(0,0,0,0.6) )
+text( x=dpA[1]+0.25, y=pplotA[4], cex=0.8, expression( sigma[A] ), col=rgb(0,0,0,0.6) ) 
+
+# discriminal process text B
+curve( dnorm(x, mean=dpB[1], sd=dpB[2]), lwd=1.5, add=T ) 
+text( x=dpB[1], y=pplotB[2], cex=0.8, 'Text B' ) 
+lines( x=c(dpB[1], dpB[1]), y=c(pplotB[1], -0.1), lty=2, lwd=0.7 )
+lines( x=c(dpB[1], dpB[1]+dpB[2]), y=rep( pplotB[3], 2), lty=2, lwd=0.7 )
+text( x=dpB[1]+0.45, y=pplotB[4], cex=0.8, expression( sigma[B] ) ) 
+
+curve( dnorm(x, mean=dpC[1], sd=dpC[2]), lwd=1.5, col=rgb(0,0,0,0.6), add=T ) 
+text( x=dpC[1], y=pplotA[2], cex=0.8, 'Text C', col=rgb(0,0,0,0.6) ) 
+lines( x=c(dpC[1], dpC[1]), y=c(pplotC[1], -0.1), lty=2, lwd=0.7, col=rgb(0,0,0,0.6) )
+lines( x=c(dpC[1], dpC[1]+dpC[2]), y=rep( pplotC[3], 2), lty=2, lwd=0.7, col=rgb(0,0,0,0.6) )
+text( x=dpC[1]+0.25, y=pplotC[4], cex=0.8, expression( sigma[C] ), col=rgb(0,0,0,0.6) ) 
+
+
+dev.off()
+
+
+
+
 # figure 2 ####
 
 # distributional parameters
