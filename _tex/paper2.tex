@@ -317,10 +317,9 @@ theoretical principles alongside key CJ experimental design features,
 such as the selection of judges, stimuli, and comparisons.
 Section~\ref{sec-statistical} translates these theoretical and practical
 elements into a probabilistic statistical model to analyze dichotomous
-pairwise comparison data. Section~\ref{sec-discussion} discusses the
-findings, limitations, and challenges and explores avenues for future
-research. Finally, Section~\ref{sec-conclusion} summarizes the study's
-conclusions.
+pairwise comparison data. Finally, Section~\ref{sec-discussion}
+discusses the findings, explores avenues for future research, and detail
+the challenges for future researchers.
 
 \section{Thurstone's theory}\label{sec-thurstone_theory}
 
@@ -414,28 +413,28 @@ Thurstone noted from the outset that his general form, described in
 Section~\ref{sec-thurstone_theory}, led to a \emph{trait scaling
 problem}. Specifically, the model required estimating more ``unknown''
 parameters than the number of available pairwise comparisons
-\citep[pp.~267]{Thurstone_1927b}. For instance, in a CJ experiment with
-five texts, the general form would require estimating \(20\) parameters:
-five modal discriminal processes, five discriminal dispersions, and
-\(10\) correlations --one per comparison (see
-Table~\ref{tbl-thurstone_cases}). However, a single judge could only
-provide \({5 \choose 2} = 10\) unique comparisons, an insufficient data
-set to estimate the required parameters.
+\citep{Thurstone_1927b}. For instance, in a CJ experiment with five
+texts, the general form would require estimating \(20\) parameters: five
+modal discriminal processes, five discriminal dispersions, and \(10\)
+correlations --one per comparison (see Table~\ref{tbl-thurstone_cases}).
+However, a single judge could only provide \({5 \choose 2} = 10\) unique
+comparisons, an insufficient data set to estimate the required
+parameters.
 
 To address this issue and facilitate the practical implementation of the
 theory, Thurstone developed five cases derived from this general form,
-each progressively incorporating additional simplifying assumptions. In
-Case I, Thurstone postulated that pairs of stimuli would maintain a
-constant correlation across all comparisons. In Case II, he allowed
-multiple judges to undertake comparisons instead of confining
-evaluations to a single judge. In Case III, he posited that there was no
-correlation between stimuli. In Case IV, he assumed that the stimuli
-exhibited similar dispersions. Finally, in Case V, he replaced this
-assumption with the condition that stimuli had equal discriminal
-dispersions. Table~\ref{tbl-thurstone_cases} summarizes the assumptions
-of the general form and the five cases. For a detailed discussion of
-these cases and their progression, refer to \citet{Thurstone_1927b} and
-\citet[pp.~248--253]{Bramley_2008}.
+each progressively incorporating additional simplifying assumptions
+\citep{Thurstone_1927b}. In Case I, Thurstone postulated that pairs of
+stimuli would maintain a constant correlation across all comparisons. In
+Case II, he allowed multiple judges to undertake comparisons instead of
+confining evaluations to a single judge. In Case III, he posited that
+there was no correlation between stimuli. In Case IV, he assumed that
+the stimuli exhibited similar dispersions. Finally, in Case V, he
+replaced this assumption with the condition that stimuli had equal
+discriminal dispersions. Table~\ref{tbl-thurstone_cases} summarizes the
+assumptions of the general form and the five cases. For a detailed
+discussion of these cases and their progression, refer to
+\citet{Thurstone_1927b} and \citet[pp.~248--253]{Bramley_2008}.
 
 \begin{table}
 
@@ -451,26 +450,25 @@ asumptions}
 \end{table}%
 
 However, Thurstone developed Case V prioritizing statistical simplicity
-over precise trait measurement, and without providing clear guidance on
-how to use Case V's measurement scores for hypothesis testing.
-Specifically, he cautioned that its use ``should not be made without
-(an) experimental test'' \citep[pp.~270]{Thurstone_1927b}, as the case
+over precise trait measurement and offering no guidance on how to use
+its trait estimates for statistical inference or hypothesis testing.
+Specifically, Thurstone cautioned that its use ``should not be made
+without (an) experimental test'' \citep[pp.~270]{Thurstone_1927b}, as it
 imposes the most extensive set of simplifying assumptions
 \citep{Bramley_2008, Kelly_et_al_2022} (see
 Table~\ref{tbl-thurstone_cases}). Moreover, because Thurstone's primary
-goal was to provide a ``rather coarse scaling'' of traits
-\citep[pp.~269]{Thurstone_1927b} and ``allocate the compared stimuli on
-this continuum'' \citep[pp.~269]{Thurstone_1927b}, he did not address
-how to use the resulting measurement scores for hypothesis testing.
-Thus, given these limitations, it is surprising that CJ research has
-predominantly relied on Case V to measure different traits, raising
-significant concerns about the reliability and validity of such
-measurements in contexts where the case's assumptions may not hold
-\citep{Kelly_et_al_2022, Andrich_1978}. Furthermore, although the CJ
-practice has attempted to address the issue of hypothesis testing by
-using the scores' point estimates or their transformations, a critical
-question remains: Is this approach suitable for addressing these
-inquiries?
+goal was to produce a ``rather coarse scaling'' of traits and ``allocate
+the compared stimuli on this continuum''
+\citep[pp.~269]{Thurstone_1927b}, his theory did not support formal
+statistical inference. Despite these limitations, it is surprising that
+CJ research has predominantly relied on Case V to measure different
+traits, which raises significant concerns about the reliability and
+validity of such measurements in contexts where the case's assumptions
+may not hold \citep{Kelly_et_al_2022, Andrich_1978}. Furthermore,
+although the CJ tradition has attempted to address the gap of hypothesis
+testing by using the point estimates of the traits--or their
+transformations--a critical question remains: Does this approach provide
+a valid foundation for statistical inference?
 
 Thus, this section discusses these two prominent issues. Specifically,
 Section~\ref{sec-theory-issue1} examines the heavy reliance on
@@ -483,19 +481,24 @@ testing in CJ.
 data}\label{sec-theory-issue1}
 
 As previously discussed, Case V remains the most widely used model in CJ
-literature. This preference primarily stems from the BTL model, which
-provides a simplified statistical representation of the case. The BTL
-model mirrors the assumptions of Case V, with one notable distinction:
-while Case V assumes a Normal distribution for the stimuli' discriminal
-processes, the BTL model uses the more mathematically tractable Logistic
-distribution \citep{Andrich_1978, Bramley_2008} (see
+literature. This preference largely stems from the widespread adoption
+of the BTL model, which provides a simplified statistical representation
+of the case. The BTL model mirrors most of Case V's assumptions, with
+one notable distinction: while Case V assumes a Normal distribution for
+the stimuli' discriminal processes, the BTL model uses the more
+mathematically tractable Logistic distribution
+\citep{Andrich_1978, Bramley_2008} (see
 Table~\ref{tbl-thurstone_cases}). However, this substitution has minimal
-impact on the model's estimation or interpretation because the
-discriminal process scale is arbitrary up to a non-monotonic
-transformation \citep{vanderLinden_et_al_2017_I, McElreath_2021}.
-Furthermore, this limited impact is supported by the fact that the
-Normal and Logistic distributions exhibit analogous statistical
-properties, differing only by a scaling factor of approximately \(1.7\).
+impact on trait estimation or model interpretation because the scale of
+the discriminal process (i.e., the latent trait) is arbitrary up to a
+non-monotonic transformation
+\citep{vanderLinden_et_al_2017_I, McElreath_2021}. That is, as long as
+the substitution (transformation) preserves the data rank order, the
+choice of distribution for the discriminal processes is inconsequential.
+This condition is satisfied in this case, as the Normal and Logistic
+distributions exhibit analogous statistical properties, differing only
+by a scaling factor of approximately \(1.7\)
+\citep{vanderLinden_et_al_2017_I}.
 
 However, Thurstone acknowledged that some assumptions of Case V could be
 problematic when researchers assess complex traits or heterogeneous
@@ -613,12 +616,13 @@ difference follows any discontinuous line where
 \(\sigma_{B}-\sigma_{A} \neq 0\). Furthermore, if researchers
 acknowledge that misfit statistics may represent texts with different
 dispersions or outlying observations, the common CJ practice of
-excluding stimuli based on these statistics
-\citep{Pollitt_2012a, Pollitt_2012b, vanDaal_et_al_2016, Goossens_et_al_2018},
-may unintentionally discard valuable information, introducing bias into
-the trait estimates \citep{Zimmerman_1994, McElreath_2020}. The
-direction and magnitude of these biases remain unpredictable, as they
-depend on which stimuli researchers exclude from the analysis.
+excluding stimuli based on these statistics, as seen in
+\citet{Pollitt_2012a}, \citet{Pollitt_2012b},
+\citet{vanDaal_et_al_2016}, and \citet{Goossens_et_al_2018}, may
+unintentionally discard valuable information, introducing bias into the
+trait estimates \citep{Zimmerman_1994, McElreath_2020}. The direction
+and magnitude of these biases remain unpredictable, as they depend on
+which stimuli researchers exclude from the analysis.
 
 \subsubsection{The assumption of zero correlation between
 stimuli}\label{sec-theory-issue1b}
@@ -726,13 +730,13 @@ the analysis \citep{Zimmerman_1994, OHagan_2018, McElreath_2020}.
 \subsection{The disconnect between trait measurement and hypothesis
 testing}\label{sec-theory-issue2}
 
-Building on the previous section, it is clear that, researchers
-typically rely on the BTL model to measure a trait and place the
-compared stimuli along its continuum \citep{Thurstone_1927b}.
-Additionally, the CJ literature shows that researchers frequently use
-point estimates of BTL scores or their transformations to conduct
-further analyses or hypothesis tests. For example, researchers have used
-these scores to identify `misfit' judges and stimuli
+Building on the previous section, it is clear that, researchers in CJ
+studies typically use the BTL model to measure traits and position the
+compared stimuli along a latent continuum \citep{Thurstone_1927b}. The
+CJ literature also show that they frequently rely on point estimates of
+these traits (i.e, the BTL scores)--or their transformations--to conduct
+statistical inference or hypothesis testing. For example, researchers
+have used these scores to identify `misfit' judges and stimuli
 \citep{Pollitt_2012b, vanDaal_et_al_2016, Goossens_et_al_2018}, detect
 biases in judges' ratings \citep{Pollitt_et_al_2003, Pollitt_2012b},
 calculate correlations with other assessment methods
@@ -743,37 +747,18 @@ related to the underlying trait of interest
 Nevertheless, while separating the trait measurement and hypothesis
 testing processes simplifies the analysis of CJ data, the statistical
 literature cautions against relying solely on the point estimates of BTL
-scores to conduct further analyses or hypothesis tests, as this practice
-can undermine the resulting statistical conclusions. A key consideration
-is that BTL scores are parameter estimates that inherently carry
-uncertainty (measurement error). Ignoring this uncertainty can bias the
-analysis and reduce the precision of hypothesis tests. The direction and
-magnitude of such biases are often unpredictable. Results may be
-attenuated, exaggerated, or remain unaffected depending on the degree of
-uncertainty in the scores and the actual effects being tested
+scores to conduct statistical inference or hypothesis tests, as this
+practice can undermine the resulting statistical conclusions. A key
+consideration is that BTL scores are parameter estimates that inherently
+carry uncertainty (measurement error). Ignoring this uncertainty can
+bias the analysis and reduce the precision of hypothesis tests. The
+direction and magnitude of such biases are often unpredictable. Results
+may be attenuated, exaggerated, or remain unaffected depending on the
+degree of uncertainty in the scores and the actual effects being tested
 \citep{McElreath_2020, Kline_et_al_2023, Hoyle_et_al_2023}. Furthermore,
 the reduced precision in hypothesis tests diminishes their statistical
 power, increasing the likelihood of committing type-I or type-II errors
-\citep{McElreath_2020}. Figure~\ref{fig-measurement_error} illustrates
-these issues, showing that neglecting measurement error
-\((\sigma_{T})\)--by relying solely on outcome averages--reduces the
-precision of a predictor's estimated effect \(\beta_{X}\), as indicated
-by the solid lines.
-
-\begin{figure}
-
-\centering{
-
-\includegraphics[width=1\linewidth,height=\textheight,keepaspectratio]{./images/png/measurement_error.png}
-
-}
-
-\caption{\label{fig-measurement_error}The effect of outcome uncertainty
-\(\sigma_{T}\) on the estimation of an effect \(\beta_{X}\) linked to
-the predictor. The example assumes a sample size \(n=100\) and an
-uncertainty that increases from left to right.}
-
-\end{figure}%
+\citep{McElreath_2020}.
 
 In aggregate, the heavy reliance on Thurstone's Case V assumptions in
 the statistical analysis of comparative data can compromise the
@@ -946,11 +931,11 @@ imperfect--and that each judge may carry some degree of bias
 that judges' perceptions (bias) should be treated as an integral
 component of the CJ system from the outset, as this leads to a more
 accurate representation of the data-generating process underlying the
-pairwise comparisons. All these variables constitute the preliminary set
-of endogenous variables,
-\(V = \{ O_{iahbjk}, D_{iahbjk}, T_{ia}, T_{hb}, B_{kj} \}\), while the
-preliminary set of structural equations, \(F = { f_{O}, f_{D} }\),
-captures the non-parametric dependencies among them.
+pairwise comparisons. This model defines the preliminary set of
+endogenous variables,
+\(V = \{ O_{iahbjk}, D_{iahbjk}, T_{ia}, T_{hb}, B_{kj} \}\), and the
+preliminary set of structural equations, \(F = { f_{O}, f_{D} }\), which
+capture the non-parametric dependencies among these variables.
 
 \begin{figure}[H]
 
@@ -1080,8 +1065,8 @@ columns, where \(n_{K}\) indicates the number of repeated judgments each
 judge makes.
 
 Additionally, we construct the matrix \(R\) to map each row of the
-\(IA\) matrix with a corresponding row from the \(JK\) matrix. Thus,
-this matrix has \(n\) rows and \(6\) columns, where
+\(IA\) matrix with a corresponding row from the \(JK\) matrix. This
+matrix has \(n\) rows and \(6\) columns, where
 \(n = {n_{I} \cdot n_{A} \choose 2} \cdot n_{J} \cdot n_{K}\). Here, the
 term \({n_{I} \cdot n_{A} \choose 2}\) represents the binomial
 coefficient, which quantifies the total number of unique comparisons
@@ -1694,13 +1679,13 @@ In summary, the SCM~\ref{fig-cj15_scm} and DAG~\ref{fig-cj15_dag} extend
 Thurstone's general form to address several limitations of the BTL
 model. These extensions account for judge biases (see
 Section~\ref{sec-theory-theoretical_P1}), reflect the hierarchical
-structure of stimuli (see Section~\ref{sec-theory-theoretical_P3}),
-incorporate measurement error in trait estimation and hypothesis testing
-(also see Section~\ref{sec-theory-theoretical_P3}), and clarify the role
-of the sample and comparison mechanisms in CJ experiments (see
+structure of stimuli and incorporate measurement error in trait
+estimation and hypothesis testing (see
+Section~\ref{sec-theory-theoretical_P3}), and clarify the role of the
+sample and comparison mechanisms in CJ experiments (see
 Section~\ref{sec-theory-theoretical_SC}). However, they do not resolve
 concerns about the assumption of equal dispersions among stimuli
-discussed in Section~\ref{sec-theory-issue1a}. Because this concern
+discussed in Section~\ref{sec-theory-issue1a}. Since this concern
 relates to the statistical assumption underlying the distribution of the
 discriminal process, we develop a formal statistical model to address it
 in the next section.
@@ -1852,8 +1837,8 @@ This independence stems from the random selection designs that govern
   property, however, is the elimination of confounding.
   \emph{Confounding} occurs when an external variable, such as
   \(X_{I}\), simultaneously influences both the outcome (e.g.,
-  \(O_{R}\)) and a variable of interest (e.g., \(X_{I}\) or \(S\)),
-  resulting in spurious associations between the two
+  \(O_{R}\)) and a variable of interest (e.g., \(S\)), resulting in
+  spurious associations between the latter two
   \citep{Everitt_et_al_2010}. Randomization ensure the absence of
   confounding by effectively decoupling the association between the
   variable of interest and any other variable, except for the outcome
@@ -1862,13 +1847,12 @@ This independence stems from the random selection designs that govern
   \citet{Neal_2020}, and \citet{Hernan_et_al_2020}.}.
 
 Second, we define \(D_{R}\) as the difference between the discriminal
-processes of two texts--\(T_{IA}[i, a]\) and
-\(T_{IA}[h, b]\)--representing the underlying written-quality trait of
-the texts, plus the corresponding repeated judge biases,
-\(B_{JK}[j, k]\). Note that if we assume that \(B_{JK}[j,k]\) reflects
-the difference in stimulus-specific biases, i.e.,
-\(B_{JK}[j,k] = B_{JK}[i,a,j,k] - B_{JK}[h,b,j,k]\), we can re-write the
-discriminal difference as:
+processes of two texts, \(T_{IA}[i, a]\) and \(T_{IA}[h, b]\),
+representing the underlying written-quality trait of the texts, plus the
+corresponding repeated judge biases, \(B_{JK}[j, k]\). Note that if we
+assume that \(B_{JK}[j,k]\) reflects the difference in stimulus-specific
+biases, i.e., \(B_{JK}[j,k] = B_{JK}[i,a,j,k] - B_{JK}[h,b,j,k]\), we
+can re-write the discriminal difference as:
 \begin{equation}\phantomsection\label{eq-mat52}{
 \begin{aligned}
 D_{R} &= \left( T_{IA}[i,a] - T_{IA}[h,b] \right) + B_{JK}[j,k] \\
@@ -1905,7 +1889,7 @@ idiosyncratic errors, \(e_{I}\). As before, we assume that each element
 of \(e_{I}\) is \(iid\) Normal with a mean of zero. However, we consider
 the standard deviation, \(s_{XI}\), varies depending on the teaching
 method group to which each student belongs. Given the example in
-Section~\ref{sec-theoretical}, where the teaching method
+Section~\ref{sec-theoretical} where the teaching method
 \(X_{I} = \{1,2\}\), the model sets the following constraint to anchor
 the scale of the latent trait \citep{Depaoli_2021}:
 \(\sum_{g=1}^{2} s_{XI}[g]/2 = 1\). Note that this parametrization of
@@ -1939,19 +1923,20 @@ analyzing paired comparison data. Bayesian inference offers three key
 advantages for this purpose. First, it handles complex and
 overparameterized models, where the number of parameters exceeds the
 number of observations \citep{Baker_1998, Kim_et_al_1999}--such as the
-one we implement. Second, it incorporates prior information to constrain
-parameter estimates within plausible bounds, thereby mitigating
-estimation issues like non-convergence or improper solutions that often
-affect frequentist methods \citep{Martin_et_al_1975, Seaman_et_al_2011}.
-In our implementation, we use priors to define the error distribution,
-which sets the scale of the latent variables \citep{Depaoli_2014}.
-Third, Bayesian inference supports robust inferences from small samples,
-where the asymptotic properties underlying frequentist methods are less
-reliable \citep{Baldwin_et_al_2013, Lambert_et_al_2006, Depaoli_2014}.
-This feature is particularly relevant in CJ experiments, where
-researchers often collect large volumes of paired comparisons but work
-with relatively small samples of judges, stimuli, and individuals to
-test hypotheses.
+model we try to implement. Second, it incorporates prior information to
+constrain parameter estimates within plausible bounds, thereby
+mitigating estimation issues like non-convergence or improper solutions
+that often affect frequentist methods
+\citep{Martin_et_al_1975, Seaman_et_al_2011}. In our implementation, we
+use priors to define the error distribution, which sets the scale of the
+latent variables \citep{Depaoli_2014}. Third, Bayesian inference
+supports robust inferences from small samples, where the asymptotic
+properties underlying frequentist methods are less reliable
+\citep{Baldwin_et_al_2013, Lambert_et_al_2006, Depaoli_2014}. This
+feature is particularly relevant in CJ experiments, where researchers
+often collect large volumes of paired comparisons but work with
+relatively small samples of judges, stimuli, and individuals to test
+hypotheses.
 
 The \textbf{Declarations} section of this document provides a link to
 the model code, along with an alternative specification that assumes
@@ -1960,21 +1945,74 @@ success using \texttt{Stan} \citep[version 2.26.1]{Stan_2020}.
 
 \section{Discussion}\label{sec-discussion}
 
-This study extends Thurstone's general form through a systematic,
-integrated approach that combines Causal and Bayesian inference methods.
-It begins by formulating the extension as a conceptual model,
-represented by an SCM and a DAG. This formulation integrates Thurstone's
-core theoretical principles, including the distribution of the
-discriminal process, with key CJ experimental design features, such as
-the sampling and comparison mechanisms. The study then translates the
-SCM into a bespoke statistical model that addresses key limitations of
-the BTL model. Specifically, the statistical model accounts for judge
-biases, captures the hierarchical structure of stimuli, incorporates
-measurement error in trait estimation and hypothesis testing, and
-accommodates violations of the equal dispersion assumption. These
-improvements potentially enhance measurement reliability and validity
-\citep{Perron_et_al_2015} and improve the statistical accuracy of
-hypothesis testing.
+Thurstone introduced the Law of Comparative Judgment to measure
+psychological traits of stimuli through pairwise comparisons
+\citep{Thurstone_1927a, Thurstone_1927b}. In its general form, the
+theory models single-judge comparisons across multiple, potentially
+correlated stimuli. Each comparison produces a dichotomous outcome
+indicating which stimulus the judge perceives as having a higher trait
+level. However, Thurstone identified one key issue in this model: it
+required estimating more ``unknown'' parameters than the number of
+available pairwise comparisons \citep{Thurstone_1927b}. To address this
+issue and facilitate the theory's practical applicability, he formulated
+five cases derived from the general form, each progressively
+incorporating several simplifying assumptions.
+
+Of these five cases, the CJ literature has predominantly relied on Case
+V to measure various psychological traits, as shown in studies like
+\citet{Kimbell_2012}, \citet{Jones_et_al_2015}, and
+\citet{Boonen_et_al_2020}. This preference largely stems from the
+widespread adoption of the BTL model, which offers a simplified
+statistical formulation of the case. The BTL model mirrors the
+assumptions of Case V--namely, equal discriminal dispersions and zero
+correlation for the stimuli' discriminal processes--with one notable
+distinction: while Case V assumes normally distributed discriminal
+processes, the BTL model uses the more mathematically tractable Logistic
+distribution \citep{Andrich_1978, Bramley_2008}.
+
+Although replacing the Normal with the Logistic distribution has a
+minimal impact on trait estimation or model interpretation
+\citep{vanderLinden_et_al_2017_I, McElreath_2021}, Thurstone
+acknowledged that the two remaining assumptions of Case V--and, by
+extension, of the BTL model--could pose significant problems when
+researchers assess complex traits or heterogeneous stimuli
+\citep{Thurstone_1927b}. In particular, he noted that although these
+assumptions simplify the trait measurement model, they could fail to
+capture the complexity of CJ data
+\citep{Kelly_et_al_2022, Andrich_1978}, potentially leading to
+unreliable and inaccurate trait estimates
+\citep{Ackerman_1989, Zimmerman_1994, McElreath_2020, Hoyle_et_al_2023}.
+
+Furthermore, because Thurstone's primary goal was to produce a ``coarse
+scaling'' of traits and to ``allocate the compared stimuli on this
+continuum'' \citep[pp.~269]{Thurstone_1927a}, his theory did not specify
+how to use the resulting trait estimates for statistical inference or
+hypothesis testing. The CJ tradition has attempted to address this gap
+by separating trait estimation from hypothesis testing. Specifically, CJ
+studies often rely on point estimates of the traits (i.e., the BTL
+scores)--or their transformations--to conduct hypothesis tests. However,
+the statistical literature cautions against this practice, as it can
+introduce bias into the analysis and compromise the reliability of the
+resulting conclusions
+\citep{McElreath_2020, Kline_et_al_2023, Hoyle_et_al_2023}.
+
+To address these issues, this study extends Thurstone's general form
+using a systematic, integrated approach that combines Causal and
+Bayesian inference methods. It begins by formulating a conceptual model
+represented by an SCM and a DAG. This model integrates Thurstone's core
+theoretical principles--such as the discriminal processes (i.e., traits)
+of stimuli--alongside key CJ experimental design features, including
+judges' bias, sampling procedures, and comparison mechanisms. The study
+then translates the SCM into a bespoke statistical model that addresses
+key limitations of the BTL model. In particular, it enables the analysis
+of CJ data when the assumptions of equal dispersion and zero correlation
+do not hold (see Section~\ref{sec-theory-issue1a} and
+Section~\ref{sec-theory-issue1b}), and when researchers seek to conduct
+statistical inference or hypothesis testing (refer to
+Section~\ref{sec-theory-issue2}). These methodological innovations
+potentially enhance the reliability and validity of trait measurement
+\citep{Perron_et_al_2015} and improve the accuracy of statistical
+conclusions.
 
 Beyond these potential benefits, the approach offers two key advantages.
 First, it clarifies the interactions among all actors and processes
@@ -1986,29 +2024,43 @@ designs--one that better aligns with the demands of contemporary CJ
 assessment contexts \citep{Kelly_et_al_2022} and opens new avenues for
 research.
 
-One promising research avenue involves investigating how the
-hierarchical structure of stimuli affects CJ experiment designs and
-hypotheses testing. One such study could examine whether collecting a
-single text per individual provides sufficient information to produce
-reliable trait estimates at different levels of the hierarchy. Due to
-concerns about the feasibility of the comparison task
-\citep{Boonen_et_al_2020}, many CJ studies assess traits using only one
-text per individual \citep{citation}. This experimental design
-implicitly assumes that within-individual variability is small relative
-to between-individual differences--that is, texts produced by the same
-individual are relatively homogeneous. However, researchers rarely test
-this assumption, even though it directly influences decisions about the
-number of texts and participants needed for the experiment, ultimately
-affecting the reliability of the trait estimates.
+For instance,
 
-Relatedly, another study could investigate hypotheses about the
-characteristics of the texts themselves. Previously, the literature
-lacked a direct and integrated method for evaluating these types of
-hypotheses. Now, by collecting data on specific stimulus features,
-researchers can assess whether these variables produce the expected
-effects.
+Despite its potential, this study presents several challenges that
+researchers must navigate. First, our approach does not establish a
+clear epistemological connection between the theoretical latent trait
+and its quantitative estimate. In other words, the approach does not
+provide a definitive answer to the fundamental question: How do we know
+that the estimated trait reflects the theoretical trait of interest?
+However, this limitation is not unique to our approach; it reflects a
+fundamental challenge all research involving latent constructs faces.
+Nevertheless, we argue that our approach offers methodological tools
+that enable researchers to design CJ experiments under conditions that
+support reliable and valid trait measurement.
 
-\section{Conclusion}\label{sec-conclusion}
+Second, although initial simulation tests of the statistical model have
+yielded promising results (not shown), these findings may not generalize
+across research contexts. We have argued that the model's ability to
+estimate traits accurately and support valid statistical inferences
+depends heavily on the specific research context--particularly on
+whether the data and inferential goals align with the model's underlying
+assumptions. That said, our approach provides tools for researchers to
+test and evaluate these context-dependent CJ models directly.
+
+Third, applying this approach requires a solid understanding of Causal
+inference. For instance, throughout the study, we assume that predictor
+variables must be ``relevant'' to the research context, interpreting
+relevance as the inclusion of the predictor variables in a ``sufficient
+adjustment set.'' However, we do not fully explore what this entails or
+its implications for model specification and validity. Nonetheless, we
+provide key references throughout the study to help motivated
+researchers explore these foundational concepts in greater depth.
+
+Fourth and final, researchers must also be proficient in Probabilistic
+Programming Languages (PPLs) and Bayesian inference methods. This
+expertise is essential for translating context-specific conceptual
+models into bespoke statistical models that meaningfully address the
+research questions at hand.
 
 \newpage{}
 
