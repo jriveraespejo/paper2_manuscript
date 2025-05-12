@@ -1951,7 +1951,7 @@ psychological traits of stimuli through pairwise comparisons
 theory models single-judge comparisons across multiple, potentially
 correlated stimuli. Each comparison produces a dichotomous outcome
 indicating which stimulus the judge perceives as having a higher trait
-level. However, Thurstone identified one key issue in this model: it
+level. However, Thurstone identified one key challenge in this model: it
 required estimating more ``unknown'' parameters than the number of
 available pairwise comparisons \citep{Thurstone_1927b}. To address this
 issue and facilitate the theory's practical applicability, he formulated
@@ -1986,43 +1986,46 @@ unreliable and inaccurate trait estimates
 Furthermore, because Thurstone's primary goal was to produce a ``coarse
 scaling'' of traits and to ``allocate the compared stimuli on this
 continuum'' \citep[pp.~269]{Thurstone_1927a}, his theory did not specify
-how to use the resulting trait estimates for statistical inference or
-hypothesis testing. The CJ tradition has attempted to address this gap
-by separating trait estimation from hypothesis testing. Specifically, CJ
-studies often rely on point estimates of the traits (i.e., the BTL
-scores)--or their transformations--to conduct hypothesis tests. However,
-the statistical literature cautions against this practice, as it can
+how to use the resulting trait estimates for statistical inference. The
+CJ tradition has attempted to address this gap by separating trait
+estimation from the hypothesis testing process. Specifically, CJ studies
+often rely on point estimates of the traits (i.e., the BTL scores)--or
+their transformations--to conduct statistical inference. Although
+separating these processes simplifies the analysis of CJ data, the
+statistical literature cautions against this practice, as it can
 introduce bias into the analysis and compromise the reliability of the
 resulting conclusions
 \citep{McElreath_2020, Kline_et_al_2023, Hoyle_et_al_2023}.
 
-To address these issues, this study extends Thurstone's general form
-using a systematic, integrated approach that combines Causal and
-Bayesian inference methods. It begins by formulating a conceptual model
-represented by an SCM and a DAG. This model integrates Thurstone's core
-theoretical principles--such as the discriminal processes (i.e., traits)
-of stimuli--alongside key CJ experimental design features, including
-judges' bias, sampling procedures, and comparison mechanisms. The study
-then translates the SCM into a bespoke statistical model that addresses
-key limitations of the BTL model. In particular, it enables the analysis
-of CJ data when the assumptions of equal dispersion and zero correlation
-do not hold (see Section~\ref{sec-theory-issue1a} and
-Section~\ref{sec-theory-issue1b}), and when researchers seek to conduct
-statistical inference or hypothesis testing (refer to
-Section~\ref{sec-theory-issue2}). These methodological innovations
-potentially enhance the reliability and validity of trait measurement
-\citep{Perron_et_al_2015} and improve the accuracy of statistical
-conclusions.
+Thus, to address the limitations of Thurstone's Case V and the BTL
+model--particularly their strong assumptions and the disconnect between
+trait measurement and hypothesis testing--this study extends Thurstone's
+general form using a systematic, integrated approach that combines
+Causal and Bayesian inference methods. It begins by formulating a
+conceptual model represented by an SCM and a DAG. This model integrates
+Thurstone's core theoretical principles--such as the discriminal
+processes (i.e., traits) of stimuli--alongside key CJ experimental
+design features, including judges' bias, sampling procedures, and
+comparison mechanisms. The study then translates the SCM into a bespoke
+statistical model that addresses key limitations of the BTL model. In
+particular, it enables the analysis of CJ data when the assumptions of
+equal dispersion and zero correlation do not hold (see
+Section~\ref{sec-theory-issue1a} and Section~\ref{sec-theory-issue1b}),
+and when researchers seek to conduct statistical inference or hypothesis
+testing (refer to Section~\ref{sec-theory-issue2}). These methodological
+innovations potentially enhance the reliability and validity of trait
+measurement \citep{Perron_et_al_2015} and improve the accuracy of
+statistical conclusions.
 
-Beyond these potential benefits, the approach offers two key advantages.
-First, it clarifies the interactions among all actors and processes
-involved in CJ experiments. Second, it shifts the analytic paradigm from
-passively accepting the assumptions of the BTL model to actively testing
-their fit with observed data. Together, these advantages create a
-principled framework for evaluating best practices in CJ experimental
-designs--one that better aligns with the demands of contemporary CJ
-assessment contexts \citep{Kelly_et_al_2022} and opens new avenues for
-research.
+Beyond these potential benefits, the approach offers two additional
+advantages. First, it clarifies the interactions among all actors and
+processes involved in CJ experiments. Second, it shifts the analytic
+paradigm from passively accepting the assumptions of the BTL model to
+actively testing their fit with observed data. Together, these
+advantages create a principled framework for evaluating best practices
+in CJ experimental designs--one that better aligns with the demands of
+contemporary CJ assessment contexts \citep{Kelly_et_al_2022} and opens
+new avenues for research.
 
 For instance,
 
@@ -2041,7 +2044,7 @@ support reliable and valid trait measurement.
 Second, although initial simulation tests of the statistical model have
 yielded promising results (not shown), these findings may not generalize
 across research contexts. We have argued that the model's ability to
-estimate traits accurately and support valid statistical inferences
+accurately estimate traits and support valid statistical inferences
 depends heavily on the specific research context--particularly on
 whether the data and inferential goals align with the model's underlying
 assumptions. That said, our approach provides tools for researchers to
@@ -2060,7 +2063,10 @@ Fourth and final, researchers must also be proficient in Probabilistic
 Programming Languages (PPLs) and Bayesian inference methods. This
 expertise is essential for translating context-specific conceptual
 models into bespoke statistical models that meaningfully address the
-research questions at hand.
+research questions at hand. While such translation is not exclusive to
+Bayesian methods--frequentist approaches can also be used--we argue that
+Bayesian methods offer a more accessible pathway, as they reduce the
+need for additional expertise in optimization theory and techniques.
 
 \newpage{}
 
