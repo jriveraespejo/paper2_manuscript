@@ -1189,16 +1189,11 @@ The **Declarations** section of this document provides a link to the model code,
 <!-- Proposal: Make the model to be bX %*% X 
 Decision: Although this makes it easier for the software, the way it is declared is more explicit. -->
 
-<!-- Proposal: Make e_{I} and e_{J} fully orthogonal, a\
+<!-- Proposal: Make e_{I} and e_{J} fully orthogonal,
 Decision: Although I can see the benefit of this, it would add several layers of explanations to the document or the code for that matter. I think this paper has already a lot of info. -->
 
 <!-- Proposal: Add new way of declaring non-centered parametrization and optional variables (See section 'Affinely transformed real' and 'Declaring optional variables' sections in https://mc-stan.org/docs/reference-manual/types.html) 
 Decision: interesting, but I think I like the model as it is, explicit! -->
-
-
-<!-- @Pritikin_2020 and @Gray_et_al_2024 bayesian modeling attempts -->
-
-<!-- @Bramley_2008 proposes ranking instead of comparisons -->
 
 
 
@@ -1224,7 +1219,7 @@ Decision: interesting, but I think I like the model as it is, explicit! -->
 <!-- talk about S and C -->
 
 <!-- 1. Summary of Thurstone's general theory -->
-Thurstone introduced the Law of Comparative Judgment to measure psychological traits of stimuli through pairwise comparisons [@Thurstone_1927a; @Thurstone_1927b]. In its general form, the theory models single-judge comparisons across multiple, potentially correlated stimuli. Each comparison produces a dichotomous outcome indicating which stimulus the judge perceives as having a higher trait level. However, Thurstone identified one key issue in this model: it required estimating more "unknown" parameters than the number of available pairwise comparisons [@Thurstone_1927b]. To address this issue and facilitate the theory's practical applicability, he formulated five cases derived from the general form, each progressively incorporating several simplifying assumptions.
+Thurstone introduced the Law of Comparative Judgment to measure psychological traits of stimuli through pairwise comparisons [@Thurstone_1927a; @Thurstone_1927b]. In its general form, the theory models single-judge comparisons across multiple, potentially correlated stimuli. Each comparison produces a dichotomous outcome indicating which stimulus the judge perceives as having a higher trait level. However, Thurstone identified one key challenge in this model: it required estimating more "unknown" parameters than the number of available pairwise comparisons [@Thurstone_1927b]. To address this issue and facilitate the theory's practical applicability, he formulated five cases derived from the general form, each progressively incorporating several simplifying assumptions.
 
 <!-- 2. Summary of the why the literature uses Case V -->
 Of these five cases, the CJ literature has predominantly relied on Case V to measure various psychological traits, as shown in studies like @Kimbell_2012, @Jones_et_al_2015, and @Boonen_et_al_2020. This preference largely stems from the widespread adoption of the BTL model, which offers a simplified statistical formulation of the case. The BTL model mirrors the assumptions of Case V--namely, equal discriminal dispersions and zero correlation for the stimuli' discriminal processes--with one notable distinction: while Case V assumes normally distributed discriminal processes, the BTL model uses the more mathematically tractable Logistic distribution [@Andrich_1978; @Bramley_2008].
@@ -1232,15 +1227,15 @@ Of these five cases, the CJ literature has predominantly relied on Case V to mea
 <!-- 3. The issues with Case V, and the BTL model -->
 Although replacing the Normal with the Logistic distribution has a minimal impact on trait estimation or model interpretation [@vanderLinden_et_al_2017_I; @McElreath_2021], Thurstone acknowledged that the two remaining assumptions of Case V--and, by extension, of the BTL model--could pose significant problems when researchers assess complex traits or heterogeneous stimuli [@Thurstone_1927b]. In particular, he noted that although these assumptions simplify the trait measurement model, they could fail to capture the complexity of CJ data [@Kelly_et_al_2022; @Andrich_1978], potentially leading to unreliable and inaccurate trait estimates [@Ackerman_1989; @Zimmerman_1994; @McElreath_2020; @Hoyle_et_al_2023].
 
-Furthermore, because Thurstone's primary goal was to produce a "coarse scaling" of traits and to "allocate the compared stimuli on this continuum" [@Thurstone_1927a, pp. 269], his theory did not specify how to use the resulting trait estimates for statistical inference or hypothesis testing. The CJ tradition has attempted to address this gap by separating trait estimation from hypothesis testing. Specifically, CJ studies often rely on point estimates of the traits (i.e., the BTL scores)--or their transformations--to conduct hypothesis tests. However, the statistical literature cautions against this practice, as it can introduce bias into the analysis and compromise the reliability of the resulting conclusions [@McElreath_2020; @Kline_et_al_2023; @Hoyle_et_al_2023].
+Furthermore, because Thurstone's primary goal was to produce a "coarse scaling" of traits and to "allocate the compared stimuli on this continuum" [@Thurstone_1927a, pp. 269], his theory did not specify how to use the resulting trait estimates for statistical inference. The CJ tradition has attempted to address this gap by separating trait estimation from the hypothesis testing process. Specifically, CJ studies often rely on point estimates of the traits (i.e., the BTL scores)--or their transformations--to conduct statistical inference. Although separating these processes simplifies the analysis of CJ data, the statistical literature cautions against this practice, as it can introduce bias into the analysis and compromise the reliability of the resulting conclusions [@McElreath_2020; @Kline_et_al_2023; @Hoyle_et_al_2023].
 
 <!-- 4. General summary of what we have done. -->
-To address these issues, this study extends Thurstone's general form using a systematic, integrated approach that combines Causal and Bayesian inference methods. It begins by formulating a conceptual model represented by an SCM and a DAG. This model integrates Thurstone's core theoretical principles--such as the discriminal processes (i.e., traits) of stimuli--alongside key CJ experimental design features, including judges' bias, sampling procedures, and comparison mechanisms. The study then translates the SCM into a bespoke statistical model that addresses key limitations of the BTL model. In particular, it enables the analysis of CJ data when the assumptions of equal dispersion and zero correlation do not hold (see @sec-theory-issue1a and @sec-theory-issue1b), and when researchers seek to conduct statistical inference or hypothesis testing (refer to @sec-theory-issue2). These methodological innovations potentially enhance the reliability and validity of trait measurement [@Perron_et_al_2015] and improve the accuracy of statistical conclusions.
+Thus, to address the limitations of Thurstone's Case V and the BTL model--particularly their strong assumptions and the disconnect between trait measurement and hypothesis testing--this study extends Thurstone's general form using a systematic, integrated approach that combines Causal and Bayesian inference methods. It begins by formulating a conceptual model represented by an SCM and a DAG. This model integrates Thurstone's core theoretical principles--such as the discriminal processes (i.e., traits) of stimuli--alongside key CJ experimental design features, including judges' bias, sampling procedures, and comparison mechanisms. The study then translates the SCM into a bespoke statistical model that addresses key limitations of the BTL model. In particular, it enables the analysis of CJ data when the assumptions of equal dispersion and zero correlation do not hold (see @sec-theory-issue1a and @sec-theory-issue1b), and when researchers seek to conduct statistical inference or hypothesis testing (refer to @sec-theory-issue2). These methodological innovations potentially enhance the reliability and validity of trait measurement [@Perron_et_al_2015] and improve the accuracy of statistical conclusions.
 
 <!-- Reliability is a necessary but not sufficient condition for validity. Reliability can exist without validity but validity cannot exist without reliability. [@Perron_et_al_2015, pp. 2] -->
 
 <!-- 2. Are there any additional advantages? -->
-Beyond these potential benefits, the approach offers two key advantages. First, it clarifies the interactions among all actors and processes involved in CJ experiments. Second, it shifts the analytic paradigm from passively accepting the assumptions of the BTL model to actively testing their fit with observed data. Together, these advantages create a principled framework for evaluating best practices in CJ experimental designs--one that better aligns with the demands of contemporary CJ assessment contexts [@Kelly_et_al_2022] and opens new avenues for research.
+Beyond these potential benefits, the approach offers two additional advantages. First, it clarifies the interactions among all actors and processes involved in CJ experiments. Second, it shifts the analytic paradigm from passively accepting the assumptions of the BTL model to actively testing their fit with observed data. Together, these advantages create a principled framework for evaluating best practices in CJ experimental designs--one that better aligns with the demands of contemporary CJ assessment contexts [@Kelly_et_al_2022] and opens new avenues for research.
 
 <!-- If Thurstone's Law is to be used in support of comparative judgment for assessment, his theory must be extended to cover the uses and applications that are required for assessment purposes. [@Kelly_et_al_2022, pp. 678] -->
 
@@ -1452,18 +1447,24 @@ However, this property of the model is true in empirical data only if the model 
 
 <!-- Talk about Bayesian Workflow, and how it would fit the process to arrive to the proposed model. -->
 
+<!-- @Pritikin_2020 and @Gray_et_al_2024 bayesian modeling attempts -->
+
+<!-- @Bramley_2008 proposes ranking instead of comparisons -->
 
 
 
 <!-- Challenges -->
-
+<!-- 1. Epistemiology  -->
 Despite its potential, this study presents several challenges that researchers must navigate. First, our approach does not establish a clear epistemological connection between the theoretical latent trait and its quantitative estimate. In other words, the approach does not provide a definitive answer to the fundamental question: How do we know that the estimated trait reflects the theoretical trait of interest? However, this limitation is not unique to our approach; it reflects a fundamental challenge all research involving latent constructs faces. Nevertheless, we argue that our approach offers methodological tools that enable researchers to design CJ experiments under conditions that support reliable and valid trait measurement.
 
-Second, although initial simulation tests of the statistical model have yielded promising results (not shown), these findings may not generalize across research contexts. We have argued that the model's ability to estimate traits accurately and support valid statistical inferences depends heavily on the specific research context--particularly on whether the data and inferential goals align with the model's underlying assumptions. That said, our approach provides tools for researchers to test and evaluate these context-dependent CJ models directly.
+<!-- 2. Research context is important  -->
+Second, although initial simulation tests of the statistical model have yielded promising results (not shown), these findings may not generalize across research contexts. We have argued that the model's ability to accurately estimate traits and support valid statistical inferences depends heavily on the specific research context--particularly on whether the data and inferential goals align with the model's underlying assumptions. That said, our approach provides tools for researchers to test and evaluate these context-dependent CJ models directly.
 
+<!-- 3. Causal inference knowledge -->
 Third, applying this approach requires a solid understanding of Causal inference. For instance, throughout the study, we assume that predictor variables must be "relevant" to the research context, interpreting relevance as the inclusion of the predictor variables in a "sufficient adjustment set." However, we do not fully explore what this entails or its implications for model specification and validity. Nonetheless, we provide key references throughout the study to help motivated researchers explore these foundational concepts in greater depth.
 
-Fourth and final, researchers must also be proficient in Probabilistic Programming Languages (PPLs) and Bayesian inference methods. This expertise is essential for translating context-specific conceptual models into bespoke statistical models that meaningfully address the research questions at hand.
+<!-- 4. PPL and Bayesian Inference -->
+Fourth and final, researchers must also be proficient in Probabilistic Programming Languages (PPLs) and Bayesian inference methods. This expertise is essential for translating context-specific conceptual models into bespoke statistical models that meaningfully address the research questions at hand. While such translation is not exclusive to Bayesian methods--frequentist approaches can also be used--we argue that Bayesian methods offer a more accessible pathway,  as they reduce the need for additional expertise in optimization theory and techniques.
 
 <!-- (do not do this yet!) Develop how you multiply the predictions by the inverse of the sample probability to get the estimates. Should I use the probability itself?: Remember that in a random sample the sample probability is n/N, so the the inverse of the sample probability is N/n. So, multiplying the estimate by the n * N/n gives you the prediction for the population?, yes. -->
 <!-- (See https://timss2023.org/methods/, and pdf in mail, and https://discourse.mc-stan.org/t/survey-weighted-regression/1654 ) -->
