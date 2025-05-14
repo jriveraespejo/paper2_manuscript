@@ -19,9 +19,9 @@ data{
     array[ns] int<lower=1, upper=nsA> R2;   // stimuli (left)
     array[ns] int<lower=1, upper=nsI> R3;   // individual (right)
     array[ns] int<lower=1, upper=nsA> R4;   // stimuli (right)
-    array[ns] int<lower=1, upper=nsJ> R5;    // judges
-    array[ns] int<lower=1, upper=nsK> R6;    // judgments
-    array[ns] int<lower=0, upper=1> OR;   // outcome (dichotomous)
+    array[ns] int<lower=1, upper=nsJ> R5;   // judges
+    array[ns] int<lower=1, upper=nsK> R6;   // judgments
+    array[ns] int<lower=0, upper=1> OR;     // outcome (dichotomous)
     
     // individual-stimuli data
     array[nsI*nsA] int<lower=1, upper=nsI> IA1s;    // individuals
@@ -54,61 +54,70 @@ parameters{
     
     
     // error parameters 
-    vector[nsI] zeI;            // individual errors (non-centered)
-    real<lower=0,upper=1> pIA;  // stimuli proportion of variability
-    matrix[nsI,nsA] zeIA;       // stimuli errors (non-centered)
-
-    vector[nsJ] zeJ;            // judges errors (identification)
-    real<lower=0,upper=1> pJK;  // judgments proportion of variability
-    matrix[nsJ,nsK] zeJK;       // judgments errors (non-centered)
+    real<lower=0,upper=1> pIA;                  // stimuli proportion of variability
+    real<lower=0,upper=1> pJK;                  // judgments proportion of variability
+    array[max(nsI*nsA, nsJ*nsK)] vector[4] ze;  // errors (non-centered)
 
 }
 transformed parameters{
     
     // declaring
-    vector[nsI] TI;       // individuals' trait
     vector[nsI] eI;       // individuals errors (identification)
-    matrix[nsI,nsA] TIA;  // stimuli trait
     matrix[nsI,nsA] eIA;  // stimuli errors
-    
-    vector[nsJ] BJ;       // judges' trait
     vector[nsJ] eJ;       // judges' errors (identification)
-    matrix[nsJ,nsK] BJK;  // judges-judgments trait
     matrix[nsJ,nsK] eJK;  // judgments errors
+    
+    vector[nsI] TI;       // individuals' trait
+    matrix[nsI,nsA] TIA;  // stimuli trait
+    vector[nsJ] BJ;       // judges' trait
+    matrix[nsJ,nsK] BJK;  // judges-judgments trait
     
     
     // individuals-stimuli
-    for( ia in 1:(nsI*nsA) ){
+    if( nsA == 1 ){
+      for( ia in 1:(nsI*nsA) ){
     
-      // error calculation
-      eI[ IA1s[ia] ] = zeI[ IA1s[ia] ];                             // identification: sI = 1
-      eIA[ IA1s[ia], IA2s[ia] ] = pIA * zeIA[ IA1s[ia], IA2s[ia] ]; // identification: pIA prop. of previous level
+        // error calculation
+        eI[ IA1s[ia] ] = ze[ IA1s[ia], 1 ]; // identification: sI=1
+        
+        // trait calculation
+        TI[ IA1s[ia] ] = bXIc*XIc[ ia ] + bXId[ XId[ia] ] + eI[ IA1s[ia] ];
+        TIA[ IA1s[ia], IA2s[ia] ] = TI[ IA1s[ia] ] + bXAc*XIAc[ ia ] + bXAd[ XIAd[ia] ];
       
-      // trait calculation
-      TI[ IA1s[ia] ] = bXIc*XIc[ ia ] + bXId[ XId[ia] ] + eI[ IA1s[ia] ];
-      TIA[ IA1s[ia], IA2s[ia] ] = TI[ IA1s[ia] ] + bXAc*XIAc[ ia ] + bXAd[ XIAd[ia] ] + eIA[ IA1s[ia], IA2s[ia] ];
+      }
+    } else {
+      for( ia in 1:(nsI*nsA) ){
+    
+        // error calculation
+        eI[ IA1s[ia] ] = ze[ IA1s[ia], 1 ];             // identification: sI=1
+        eIA[ IA1s[ia], IA2s[ia] ] = pIA * ze[ ia, 2 ];  // identification: sIA=pIA
       
+        // trait calculation
+        TI[ IA1s[ia] ] = bXIc*XIc[ ia ] + bXId[ XId[ia] ] + eI[ IA1s[ia] ];
+        TIA[ IA1s[ia], IA2s[ia] ] = TI[ IA1s[ia] ] + bXAc*XIAc[ ia ] + bXAd[ XIAd[ia] ] + eIA[ IA1s[ia], IA2s[ia] ];
+      
+      }
     }
+    
     
     // judges-repeated comparisons
     if( nsK == 1 ){
       for( jk in 1:(nsJ*nsK) ){
       
         // error calculation
-        eJ[ JK1s[jk] ] = zeJ[ JK1s[jk] ];                             // identification: sJ = 1
-        eJK[ JK1s[jk], JK2s[jk] ] = pJK * zeJK[ JK1s[jk], JK2s[jk] ]; // identification: pJK prop. of 1
+        eJ[ JK1s[jk] ] = ze[ JK1s[jk], 3 ]; // identification: sJ=1
         
         // trait calculation
         BJ[ JK1s[jk] ] = bZJc*ZJc[ jk ] + bZJd[ ZJd[jk] ] + eJ[ JK1s[jk] ];
-        BJK[ JK1s[jk], JK2s[jk] ] = BJ[ JK1s[jk] ] + bZKc*ZJKc[ jk ] + bZKd[ ZJKd[jk] ]; // no repetitions -> log_eJK not possible
+        BJK[ JK1s[jk], JK2s[jk] ] = BJ[ JK1s[jk] ] + bZKc*ZJKc[ jk ] + bZKd[ ZJKd[jk] ];
         
       }
     } else {
       for( jk in 1:(nsJ*nsK) ){
         
         // error calculation
-        eJ[ JK1s[jk] ] = zeJ[ JK1s[jk] ];                             // identification: sJ = 1
-        eJK[ JK1s[jk], JK2s[jk] ] = pJK * zeJK[ JK1s[jk], JK2s[jk] ]; // identification: pJK prop. of 1
+        eJ[ JK1s[jk] ] = ze[ JK1s[jk], 3 ];             // identification: sJ=1
+        eJK[ JK1s[jk], JK2s[jk] ] = pJK * ze[ jk, 4 ];  // identification: sJK=pJK
         
         // trait calculation
         BJ[ JK1s[jk] ] = bZJc*ZJc[ jk ] + bZJd[ ZJd[jk] ] + eJ[ JK1s[jk] ];
@@ -121,7 +130,7 @@ transformed parameters{
 model{
     
     // no track
-    vector[ns] DRPUV;               // discriminal difference
+    vector[ns] DRPUV;     // discriminal difference
     
     
     // priors
@@ -136,15 +145,11 @@ model{
     bZKd ~ normal( 0, 0.2 );
     
     
-    // errors 
-    zeI ~ std_normal();               // identification
-    pIA ~ beta_proportion(0.5, 5);   // identification
-    to_vector( zeIA ) ~ std_normal();
-
-    zeJ ~ std_normal();               // identification
-    pJK ~ beta_proportion(0.5, 5);   // identification
-    to_vector( zeJK ) ~ std_normal();
-
+    // errors
+    pIA ~ beta_proportion(0.5, 5);    // identification: sIA=pIA
+    pJK ~ beta_proportion(0.5, 5);    // identification: sJK=pJK
+    ze ~ multi_normal( rep_vector(0,4), diag_matrix( rep_vector(1,4) ) ); 
+                                      // identification: no correlation
     
     // likelihood
     for( n in 1:ns ){

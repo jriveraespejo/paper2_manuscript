@@ -54,70 +54,79 @@ parameters{
     
     
     // error parameters 
-    simplex[sup_XId] hsI;                     // individuals half-sigma
-    array[sup_XId] real<lower=0,upper=1> pIA; // stimuli proportion of variability
-    vector[nsI] zeI;                          // individual errors (non-centered)
-    matrix[nsI,nsA] zeIA;                     // stimuli errors (non-centered)
-
-    simplex[sup_ZJd] hsJ;                     // judges half-sigma
-    array[sup_ZJd] real<lower=0,upper=1> pJK; // judgments proportion of variability
-    vector[nsJ] zeJ;                          // judges errors (identification)
-    matrix[nsJ,nsK] zeJK;                     // judgments errors (non-centered)
+    simplex[sup_XId] hsI;                       // individuals half-sigma
+    real<lower=0,upper=1> pIA;                  // stimuli proportion of variability
+    simplex[sup_ZJd] hsJ;                       // judges half-sigma
+    real<lower=0,upper=1> pJK;                  // judgments proportion of variability
+    array[max(nsI*nsA, nsJ*nsK)] vector[4] ze;  // errors (non-centered)
 
 }
 transformed parameters{
     
     // declaring
     vector[sup_XId] sI;   // individuals sigma
-    vector[nsI] eI;       // individuals errors (identification)
-    vector[nsI] TI;       // individuals' trait
-    matrix[nsI,nsA] eIA;  // stimuli errors
-    matrix[nsI,nsA] TIA;  // stimuli trait
-    
-    
     vector[sup_ZJd] sJ;   // judges sigma
+    
+    vector[nsI] eI;       // individuals errors (identification)
+    matrix[nsI,nsA] eIA;  // stimuli errors
     vector[nsJ] eJ;       // judges' errors (identification)
-    vector[nsJ] BJ;       // judges' trait
     matrix[nsJ,nsK] eJK;  // judgments errors
+    
+    vector[nsI] TI;       // individuals' trait
+    matrix[nsI,nsA] TIA;  // stimuli trait
+    vector[nsJ] BJ;       // judges' trait
     matrix[nsJ,nsK] BJK;  // judges-judgments trait
     
     
     // individuals-stimuli
     sI = sup_XId * hsI;   // identification: sum(sI)=sup_XId & mean(sI)=1
     
-    for( ia in 1:(nsI*nsA) ){
+    if( nsA == 1 ){
+      for( ia in 1:(nsI*nsA) ){
     
-      // error calculation
-      eI[ IA1s[ia] ] = sI[ XId[ia] ] * zeI[ IA1s[ia] ];  
-      eIA[ IA1s[ia], IA2s[ia] ] = pIA[ XId[ia] ] * zeIA[ IA1s[ia], IA2s[ia] ]; // remove sI[ XId[ia] ] to make different levels independent
-       
-      // trait calculation
-      TI[ IA1s[ia] ] = bXIc*XIc[ ia ] + bXId[ XId[ia] ] + eI[ IA1s[ia] ];
-      TIA[ IA1s[ia], IA2s[ia] ] = TI[ IA1s[ia] ] + bXAc*XIAc[ ia ] + bXAd[ XIAd[ia] ] + eIA[ IA1s[ia], IA2s[ia] ];
+        // error calculation
+        eI[ IA1s[ia] ] = sI[ XId[ia] ] * ze[ IA1s[ia], 1 ]; // identification: sum(sI)=sup_XId & mean(sI)=1
+        
+        // trait calculation
+        TI[ IA1s[ia] ] = bXIc*XIc[ ia ] + bXId[ XId[ia] ] + eI[ IA1s[ia] ];
+        TIA[ IA1s[ia], IA2s[ia] ] = TI[ IA1s[ia] ] + bXAc*XIAc[ ia ] + bXAd[ XIAd[ia] ];
       
+      }
+    } else {
+      for( ia in 1:(nsI*nsA) ){
+    
+        // error calculation
+        eI[ IA1s[ia] ] = sI[ XId[ia] ] * ze[ IA1s[ia], 1 ]; // identification: sum(sI)=sup_XId & mean(sI)=1
+        eIA[ IA1s[ia], IA2s[ia] ] = pIA * ze[ ia, 2 ];      // identification: sIA=pIA
+       
+        // trait calculation
+        TI[ IA1s[ia] ] = bXIc*XIc[ ia ] + bXId[ XId[ia] ] + eI[ IA1s[ia] ];
+        TIA[ IA1s[ia], IA2s[ia] ] = TI[ IA1s[ia] ] + bXAc*XIAc[ ia ] + bXAd[ XIAd[ia] ] + eIA[ IA1s[ia], IA2s[ia] ];
+      
+      }
     }
     
     
     // judges-repeated comparisons
-    sJ = sup_ZJd * hsJ;     // identification: sum(sJ)=sup_ZJd & mean(sJ)=1
+    sJ = sup_ZJd * hsJ;   // identification: sum(sJ)=sup_ZJd & mean(sJ)=1
     
     if( nsK == 1 ){
       for( jk in 1:(nsJ*nsK) ){
       
         // error calculation
-        eJ[ JK1s[jk] ] = sJ[ ZJd[jk] ] * zeJ[ JK1s[jk] ];
+        eJ[ JK1s[jk] ] = sJ[ ZJd[jk] ] * ze[ JK1s[jk], 3 ]; // identification: sum(sJ)=sup_ZJd & mean(sJ)=1
         
         // trait calculation
         BJ[ JK1s[jk] ] = bZJc*ZJc[ jk ] + bZJd[ ZJd[jk] ] + eJ[ JK1s[jk] ];
-        BJK[ JK1s[jk], JK2s[jk] ] = BJ[ JK1s[jk] ] + bZKc*ZJKc[ jk ] + bZKd[ ZJKd[jk] ]; // no repetitions -> eJK not possible
+        BJK[ JK1s[jk], JK2s[jk] ] = BJ[ JK1s[jk] ] + bZKc*ZJKc[ jk ] + bZKd[ ZJKd[jk] ];
         
       }
     } else {
       for( jk in 1:(nsJ*nsK) ){
         
         // error calculation
-        eJ[ JK1s[jk] ] = sJ[ ZJd[jk] ] * zeJ[ JK1s[jk] ];
-        eJK[ JK1s[jk], JK2s[jk] ] = pJK[ ZJd[jk] ] * zeJK[ JK1s[jk], JK2s[jk] ]; // remove sJ[ ZJd[jk] ] to make different levels independent
+        eJ[ JK1s[jk] ] = sJ[ ZJd[jk] ] * ze[ JK1s[jk], 3 ]; // identification: sum(sJ)=sup_ZJd & mean(sJ)=1
+        eJK[ JK1s[jk], JK2s[jk] ] = pJK * ze[ jk, 4 ];      // identification: sJK=pJK
         
         // trait calculation
         BJ[ JK1s[jk] ] = bZJc*ZJc[ jk ] + bZJd[ ZJd[jk] ] + eJ[ JK1s[jk] ];
@@ -146,16 +155,12 @@ model{
     
     
     // errors 
-    zeI ~ std_normal();                         // identification
     hsI ~ dirichlet( rep_vector(5, sup_XId) );  // identification: sum(hsI)=1 & mean(hsI)=1/sup_XId
-    pIA ~ beta_proportion(0.5, 5);              // identification
-    to_vector( zeIA ) ~ std_normal();
-    
-    zeJ ~ std_normal();                         // identification
+    pIA ~ beta_proportion(0.5, 5);              // identification: sIA=pIA
     hsJ ~ dirichlet( rep_vector(5, sup_ZJd) );  // identification: sum(hsJ)=1 & mean(hsJ)=1/sup_XId
-    pJK ~ beta_proportion(0.5, 5);              // identification
-    to_vector( zeJK ) ~ std_normal();
-    
+    pJK ~ beta_proportion(0.5, 5);              // identification: sJK=pJK
+    ze ~ multi_normal( rep_vector(0,4), diag_matrix( rep_vector(1,4) ) ); 
+                                                // identification: no correlation
     
     // likelihood
     for( n in 1:ns ){
