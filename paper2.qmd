@@ -1157,12 +1157,12 @@ This formulation reveals that the discriminal difference captures a *pure intera
 We now specify the functional forms for $T_{IA}$, $T_{I}$, $B_{JK}$, and $B_{J}$. We model $T_{IA}$ as a linear combination of the students' underlying writing-quality traits $T_{I}$, the effects of relevant text-related variables on quality assessment $\beta_{XA}X_{IA}$ (such as the influence of text length), and the text-specific idiosyncratic errors $e_{IA}$. Similarly, we express $T_{I}$ as a linear combination of relevant student-related variables affecting the quality assessment $\beta_{XI} X_{I}$, and student-specific idiosyncratic errors $e_{I}$. For the judge-specific terms, we model $B_{JK}$ as a linear combination of the judge's individual bias $B_{J}$, the influence of relevant judgment-related variables on quality assessment $\beta_{ZK}Z_{JK}$ (e.g., how the number of judgments affect the evaluation), and judgment-specific idiosyncratic errors $e_{JK}$. Finally, we define $B_{J}$ as a linear combination of relevant judge-level variables influencing the quality assessment $\beta_{ZJ}Z_{J}$ (such as judgment expertise) and judge-specific idiosyncratic errors $e_{J}$. 
 
 <!-- 6. error assumptions -->
-Next, we specify the probabilistic assumptions for the idiosyncratic errors $e_{I}$, $e_{IA}$, $e_{J}$, and $e_{JK}$. These error terms exhibit indeterminacies in their *location*, *orientation*, and *scale* due to the lack of an inherent scale in the associated latent variables. We must resolve these indeterminacies to identify the model [@Depaoli_2021; @deAyala_2009]. Drawing on principles from SEM [@Hoyle_et_al_2023], we assume that the vector of idiosyncratic errors $\boldsymbol{e} = [e_{I}, e_{IA}, e_{J}, e_{JK}]^{T}$, follows a Multivariate Normal distribution with mean vector $\boldsymbol{\mu}$ and a covariance matrix $\boldsymbol{\Sigma} = \boldsymbol{D} \boldsymbol{R} \boldsymbol{D}$, with $\boldsymbol{D}$ denoting a diagonal matrix of standard deviations and $\boldsymbol{R}$ a correlation matrix. To address the *location* indeterminacy, we set the errors' mean vector to zero: 
+Next, we specify the probabilistic assumptions for the idiosyncratic errors $e_{I}$, $e_{IA}$, $e_{J}$, and $e_{JK}$. These error terms exhibit indeterminacies in their *location*, *orientation*, and *scale* due to the lack of an inherent scale in the associated latent variables. Thus, we must resolve these indeterminacies to identify the latent variable model [@Depaoli_2021; @deAyala_2009]. Drawing on principles from SEM [@Hoyle_et_al_2023], we assume that the vector of idiosyncratic errors $\boldsymbol{e} = [e_{I}, e_{IA}, e_{J}, e_{JK}]^{T}$, follows a Multivariate Normal distribution with mean vector $\boldsymbol{\mu}$ and a covariance matrix $\boldsymbol{\Sigma} = \boldsymbol{D} \boldsymbol{R} \boldsymbol{D}$, with $\boldsymbol{D}$ denoting a diagonal matrix of standard deviations and $\boldsymbol{R}$ a correlation matrix. To address the *location* indeterminacy, we set the errors' mean vector to zero: 
 $$
 \boldsymbol{\mu} = [0, 0, 0, 0]^{T}
 $$ {#eq-mat53}
 
-Following [SCM -@fig-cj16_scm], we assume uncorrelated errors to resolve the *orientation* indeterminacy. Thus, we define the correlation matrix $\boldsymbol{R}$ as:
+Following [SCM -@fig-cj16_scm], we resolve the *orientation* indeterminacy by assuming that the errors are uncorrelated. This assumption leads us to specify a correlation matrix for the errors, $\boldsymbol{R}$, as:
 $$
 \boldsymbol{R} = \begin{bmatrix}
     1 & 0 & 0 & 0 \\
@@ -1182,19 +1182,19 @@ $$
   \end{bmatrix}
 $$ {#eq-mat55}
 
-Here, $s_{XI}$ represents the standard deviation for the individuals, $p_{IA}$ for the stimuli, $s_{ZJ}$ for the judges, and $p_{JK}$ for the judgments. We assume $s_{XI}$ varies depending on the teaching method group to which each student belongs. In the example from @sec-theoretical, where the teaching method $X_{I} = \{1,2\}$, the model sets the constraint according to Equation [-@eq-mat56]. This constraint anchors the scale of the individuals' latent trait while relaxing the assumption of equal dispersion for the stimuli, thereby addressing the concerns raised in @sec-theory-issue1a. 
+Here, $s_{XI}$ represents the standard deviation for the individuals, $p_{IA}$ for the stimuli, $s_{ZJ}$ for the judges, and $p_{JK}$ for the judgments. We assume $s_{XI}$ varies depending on the teaching method group to which each student belongs. In the example from @sec-theoretical, where the teaching method $X_{I} = \{1,2\}$, the model sets the constraint according to Equation ([-@eq-mat56]). This constraint anchors the scale of the individuals' latent trait while relaxing the assumption of equal dispersion for the stimuli, thereby addressing the concerns raised in @sec-theory-issue1a. 
 $$
 \sum_{g=1}^{2} s_{XI}[g]/2 = 1
 $$ {#eq-mat56}
 
 In contrast, we define $p_{IA}$ as a proportion of $1$ to establish the scale of the stimuli' latent trait relative to the scale of the individuals' trait. Note that, since the error vector $\boldsymbol{e}$ follows an uncorrelated Multivariate Normal distribution, $e_{IA}$ follows a univariate Normal distribution by the properties of the distribution. As a result, $T_{IA}$ is also normally distributed, which effectively reverts to assuming Normal discriminal processes for the stimuli, an assumption originally proposed by @Thurstone_1927b (see @tbl-thurstone_cases)
 
-Similarly, we assume $s_{ZJ}$ varies depending on the groups to which each judge belongs. For instance, if $Z_{J} = \{1,2,3\}$ represents three groups of judges with varying expertise, the model sets the constraint: 
+Similarly, we assume $s_{ZJ}$ varies depending on the groups to which each judge belongs. For instance, if $Z_{J} = \{1,2,3\}$ represents three groups of judges with varying expertise, the model sets the constraint according to Equation ([-@eq-mat57]). This constraint anchors the scale of the judges' latent trait and relaxes the assumption of equal dispersion for the judgments. 
 $$
 \sum_{g=1}^{2} s_{ZJ}[g]/3 = 1
-$$ {#eq-mat56}
+$$ {#eq-mat57}
 
-This constraint anchors the scale of the judges' latent trait and relaxes the assumption of equal dispersion for the judgments. Conversely, $p_{JK}$ is defined as a proportion of $1$ to establish the scale of the judgments' latent trait relative to the scale of the judges' trait.
+Conversely, $p_{JK}$ is defined as a proportion of $1$ to establish the scale of the judgments' latent trait relative to the scale of the judges' trait.
 
 <!-- Using assumptions from IRT [@deAyala_2009, p. 20-21], we are assuming a multidimensional model, that violates the local independence assumption -->
 
