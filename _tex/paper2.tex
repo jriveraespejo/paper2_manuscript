@@ -1888,8 +1888,8 @@ Next, we specify the probabilistic assumptions for the idiosyncratic
 errors \(e_{I}\), \(e_{IA}\), \(e_{J}\), and \(e_{JK}\). These error
 terms exhibit indeterminacies in their \emph{location},
 \emph{orientation}, and \emph{scale} due to the lack of an inherent
-scale in the associated latent variables. We must resolve these
-indeterminacies to identify the model
+scale in the associated latent variables. Thus, we must resolve these
+indeterminacies to identify the latent variable model
 \citep{Depaoli_2021, deAyala_2009}. Drawing on principles from SEM
 \citep{Hoyle_et_al_2023}, we assume that the vector of idiosyncratic
 errors \(\boldsymbol{e} = [e_{I}, e_{IA}, e_{J}, e_{JK}]^{T}\), follows
@@ -1903,10 +1903,10 @@ deviations and \(\boldsymbol{R}\) a correlation matrix. To address the
 \boldsymbol{\mu} = [0, 0, 0, 0]^{T}
 }\end{equation}
 
-Following SCM~\ref{fig-cj16_scm}, we assume uncorrelated errors to
-resolve the \emph{orientation} indeterminacy. Thus, we define the
-correlation matrix \(\boldsymbol{R}\) as:
-\begin{equation}\phantomsection\label{eq-mat54}{
+Following SCM~\ref{fig-cj16_scm}, we resolve the \emph{orientation}
+indeterminacy by assuming that the errors are uncorrelated. This
+assumption leads us to specify a correlation matrix for the errors,
+\(\boldsymbol{R}\), as: \begin{equation}\phantomsection\label{eq-mat54}{
 \boldsymbol{R} = \begin{bmatrix}
     1 & 0 & 0 & 0 \\
     0 & 1 & 0 & 0 \\
@@ -1931,7 +1931,7 @@ for the judgments. We assume \(s_{XI}\) varies depending on the teaching
 method group to which each student belongs. In the example from
 Section~\ref{sec-theoretical}, where the teaching method
 \(X_{I} = \{1,2\}\), the model sets the constraint according to Equation
-\ref{eq-mat56}. This constraint anchors the scale of the individuals'
+(\ref{eq-mat56}). This constraint anchors the scale of the individuals'
 latent trait while relaxing the assumption of equal dispersion for the
 stimuli, thereby addressing the concerns raised in
 Section~\ref{sec-theory-issue1a}.
@@ -1952,12 +1952,13 @@ the stimuli, an assumption originally proposed by
 Similarly, we assume \(s_{ZJ}\) varies depending on the groups to which
 each judge belongs. For instance, if \(Z_{J} = \{1,2,3\}\) represents
 three groups of judges with varying expertise, the model sets the
-constraint: \begin{equation}\phantomsection\label{eq-mat56}{
+constraint according to Equation (\ref{eq-mat57}). This constraint
+anchors the scale of the judges' latent trait and relaxes the assumption
+of equal dispersion for the judgments.
+\begin{equation}\phantomsection\label{eq-mat57}{
 \sum_{g=1}^{2} s_{ZJ}[g]/3 = 1
 }\end{equation}
 
-This constraint anchors the scale of the judges' latent trait and
-relaxes the assumption of equal dispersion for the judgments.
 Conversely, \(p_{JK}\) is defined as a proportion of \(1\) to establish
 the scale of the judgments' latent trait relative to the scale of the
 judges' trait.
