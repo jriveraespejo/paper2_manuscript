@@ -1090,7 +1090,7 @@ n_{I} & n_{A}-1 & n_{I} & n_{A} & n_{J} & n_{K}
 It is easier to visualize the structure of these vectors and matrices by
 considering an example. Assuming \(n_{I} = 5\), \(n_{A} = 2\),
 \(n_{J} = 3\), and \(n_{K} = 3\), the vectors and matrices described in
-equations (\ref{eq-mat11}) and (\ref{eq-mat12}) take the following form:
+Equations (\ref{eq-mat11}) and (\ref{eq-mat12}) take the following form:
 \begin{equation}\phantomsection\label{eq-mat13}{
 I = \begin{bmatrix}
 1 \\
@@ -1145,7 +1145,7 @@ R = \begin{bmatrix}
 \end{bmatrix}
 }\end{equation}
 
-Now, using equations (\ref{eq-mat11}) and (\ref{eq-mat12}), we can
+Now, using Equations (\ref{eq-mat11}) and (\ref{eq-mat12}), we can
 re-express SCM~\ref{fig-cj03_scm} and DAG~\ref{fig-cj03_dag} in an
 equivalent vectorized form, as shown in Figure~\ref{fig-cj04}. In this
 depiction, the outcome \(O^{cp}_{R}\), the texts' discriminal difference
@@ -1385,7 +1385,7 @@ jk_{(nJ,nK)}
 
 Where each element of \(S_{I}\) is a binary value indicating the
 presence or absence of corresponding elements in the vector \(I\), as in
-equation (\ref{eq-mat22}). We apply the same logic to \(S_{J}\) using
+Equation (\ref{eq-mat22}). We apply the same logic to \(S_{J}\) using
 vector \(J\) (not shown). Thus, the vectors \(S_{I}\) and \(S_{J}\)
 contains \(n_{I}\) and \(n_{J}\) elements, respectively.
 \begin{equation}\phantomsection\label{eq-mat22}{
@@ -1397,7 +1397,7 @@ i_{(i)} = \begin{cases}
 
 Similarly, each element of \(S_{IA}\) is a binary value indicating the
 presence or absence of data rows in the matrices \(IA\), as defined in
-equation (\ref{eq-mat23}). We apply the same logic to \(S_{JK}\) using
+Equation (\ref{eq-mat23}). We apply the same logic to \(S_{JK}\) using
 the matrix \(JK\) (not shown). Thus, the vectors \(S_{IA}\) and
 \(S_{JK}\) contains \(n_{I} \cdot n_{A}\) and \(n_{J} \cdot n_{K}\)
 elements, respectively. \begin{equation}\phantomsection\label{eq-mat23}{
@@ -1408,7 +1408,7 @@ ia_{(i,a)} = \begin{cases}
 }\end{equation}
 
 We can visualize these vectors more clearly using the example in
-equation (\ref{eq-mat13}). Suppose researchers exclude the second
+Equation (\ref{eq-mat13}). Suppose researchers exclude the second
 student and the third judge, and they also omit the second text from
 each individual and the third repeated judgment from each judge. Given
 \(n_{I} = 5\), \(n_{A} = 2\), \(n_{J} = 3\), and \(n_{K} = 3\), these
@@ -1468,11 +1468,11 @@ example, because the design systematically excludes every third repeated
 judgment, researchers can also express \(S_{JK}\) using
 \(n_{K} = n^{s}_{K} = 2\).
 
-Finally, we define the \emph{sample mechanism} \(S\) in equation
+Finally, we define the \emph{sample mechanism} \(S\) in Equation
 (\ref{eq-mat25}), which maps each element of \(S_{IA}\) to every element
 of \(S_{JK}\). Each element \(s_{(i,a,h,b,j,k)}\) is a binary value
 indicating the presence or absence of data rows in the matrix \(R\)
-resulting from the sample mechanism, as in equation (\ref{eq-mat26}).
+resulting from the sample mechanism, as in Equation (\ref{eq-mat26}).
 Thus, the vector contains \(n\) elements, matching the number of rows in
 \(R\), and the sum of its elements represents the total data sample:
 \(n^{s} = \binom{n^{s}_{I} \cdot n^{s}_{A}}{2} \cdot n^{s}_{J} \cdot n^{s}_{K}\).
@@ -1584,7 +1584,7 @@ interpretation of the sample-comparison model. Equation (\ref{eq-mat27})
 shows that \(C\) contains \(n\) elements corresponding to the number of
 rows in the \(R\) matrix, with each element \(c_{(i,a,h,b,j,k)}\) being
 a binary value indicating the presence or absence of data rows in \(R\),
-a definition similar to that of \(s_{(i,a,h,b,j,k)}\) in equation
+a definition similar to that of \(s_{(i,a,h,b,j,k)}\) in Equation
 (\ref{eq-mat26}). \begin{equation}\phantomsection\label{eq-mat27}{
 C = \begin{bmatrix}
 c_{(1,1,1,2,1,1)} \\
@@ -1704,9 +1704,9 @@ of simpler conditional probability distributions (CPDs)\footnote{This
   re-expression is possible because the \emph{chain rule} of probability
   and the \emph{Bayesian Network Factorization (BNF)} property. For
   further details, see \citet{Pearl_et_al_2016} and \citet{Neal_2020}.},
-as shown in equation (\ref{eq-mat51}). For clarity, we treat expressions
+as shown in Equation (\ref{eq-mat51}). For clarity, we treat expressions
 such as \(Y := f_{Y}(X)\), \(P(Y \mid X)\), and \(Y \sim f(Y \mid X)\)
-as equivalent. Here, \(P(Y \mid X)\) and \(f(Y \mid X)\) represent the
+as equivalent, where \(P(Y \mid X)\) and \(f(Y \mid X)\) represent the
 CPD of \(Y\) given \(X\).
 \begin{equation}\phantomsection\label{eq-mat51}{
 \begin{aligned}
@@ -1719,27 +1719,27 @@ CPD of \(Y\) given \(X\).
 \end{aligned}
 }\end{equation}
 
-Each CPD in equation (\ref{eq-mat51}) rests on specific assumptions,
-which we outline in the SCM~\ref{fig-cj16_scm}, the probabilistic model
-\ref{fig-cj16_prob}, and the statistical model \ref{fig-cj16_stat}.
-First, we assume that \(O_{R}\) follows a Bernoulli
+Each CPD in Equation (\ref{eq-mat51}) rests on specific assumptions,
+which we outline in SCM~\ref{fig-cj16_scm}, the probabilistic model
+\ref{fig-cj16_prob}, and the statistical model \ref{fig-cj16_stat}. We
+begin by assuming that \(O_{R}\) follows a Bernoulli
 distribution\footnote{The binomial distribution--including its special
   case, the Bernoulli distribution--represent a maximum entropy
   distribution for binary events \citep[pp.~34]{McElreath_2020}. This
-  means that when only two un-ordered outcomes are possible, and the
-  expected numbers of each type of event are assumed to be constant,
-  then the binomial distribution is the one that is most consistent with
-  these constraints \citep[pp.~310]{McElreath_2020}. For a detailed
-  discussion of the binomial as a maximum entropy distribution, see
+  means that the Bernoulli distribution is the most consistent
+  alternative when only two un-ordered outcomes are possible and their
+  expected frequencies are assumed to be constant
+  \citep[pp.~310]{McElreath_2020}. For a detailed discussion of the
+  binomial as a maximum entropy distribution, see
   \citet[sec.~10.1.2]{McElreath_2020}.}, reflecting the binary nature of
 CJ outcomes. Furthermore, following the conventions of Generalized
-Linear Latent and Mixed Models (GLLAMMs)
-\citep{Rabe_et_al_2004a, Skrondal_et_al_2004a, Rabe_et_al_2012b}, the
+Linear Models (GLMs)
+\citep{Nelder_et_al_1983, Nelder_et_al_1996, Agresti_2015}, the
 distribution links \(O_{R}\) to the latent discriminal difference vector
 \(D_{R}\) using an inverse-logit function:
 \(\text{inv\_logit}(x) = 1/(1 + \exp(-x))\).
 
-\begin{figure}[H]
+\begin{figure}
 
 \begin{minipage}{0.33\linewidth}
 
@@ -1752,10 +1752,10 @@ distribution links \(O_{R}\) to the latent discriminal difference vector
   T_{IA} & := f_{T}(T_{I}, X_{IA}, e_{IA}) \\
   T_{I} & := f_{T}(X_{I}, e_{I}) \\
   B_{JK} & := f_{B}(B_{J}, Z_{JK}, e_{JK}) \\
-  B_{J} & := f_{B}(Z_{J}, e_{J}) \\
+  B_{J} & := f_{B}(Z_{J}, e_{J}) \\ \\
   e_{I} & \:\bot\:\{ e_{J}, e_{IA}, e_{JK} \} \\
   e_{J} & \:\bot\:\{ e_{IA}, e_{JK} \} \\
-  e_{IA} & \:\bot\:e_{JK} \\ \\
+  e_{IA} & \:\bot\:e_{JK}
 \end{aligned}
 \]
 
@@ -1776,11 +1776,8 @@ distribution links \(O_{R}\) to the latent discriminal difference vector
   & P( T_{IA} \mid T_{I}, X_{IA}, e_{IA} ) \\
   & P( T_{I} \mid X_{I}, e_{I} ) \\
   & P( B_{JK} \mid B_{J}, Z_{JK}, e_{JK} ) \\
-  & P( B_{J} \mid Z_{J}, e_{J} ) \\
-  & P( e_{I} ) \\
-  & P( e_{J} ) \\
-  & P( e_{IA} ) \\  
-  & P( e_{JK} )
+  & P( B_{J} \mid Z_{J}, e_{J} ) \\ \\
+  & P( e_{I} ) P( e_{IA} ) P( e_{J} ) P( e_{JK} ) \\ \\ \\
 \end{aligned}
 \]
 
@@ -1801,11 +1798,10 @@ distribution links \(O_{R}\) to the latent discriminal difference vector
   T_{IA} & = T_{I} + \beta_{XA} X_{IA} + e_{IA} \\
   T_{I} & = \beta_{XI} X_{I} + e_{I} \\
   B_{JK} & = B_{J} + \beta_{ZK} Z_{JK} + e_{JK} \\
-  B_{J} & = \beta_{ZJ} Z_{J} + e_{J} \\
-  e_{I} & \overset{iid}{\sim} \text{Normal}(0,s_{XI}) \\
-  e_{J} & \overset{iid}{\sim} \text{Normal}(0,s_{ZJ}) \\
-  e_{IA} & \overset{iid}{\sim} \text{Normal}(0, p_{IA}) \\  
-  e_{JK} & \overset{iid}{\sim} \text{Normal}(0, p_{JK})
+  B_{J} & = \beta_{ZJ} Z_{J} + e_{J} \\ \\
+  \boldsymbol{e} & \sim \text{Multi-Normal}( \boldsymbol{\mu}, \boldsymbol{\Sigma} )
+  \\
+  \boldsymbol{\Sigma} &= \boldsymbol{D} \boldsymbol{R} \boldsymbol{D} \\ \\
 \end{aligned}
 \]
 
@@ -1831,9 +1827,9 @@ distributions contribute to the overall joint distribution of the data,
 they do not influence the relationship between \(O_{R}\) and \(D_{R}\).
 This independence stems from the random selection designs that govern
 \(S\), \(C\), \(X_{IA}\), \(X_{I}\), \(Z_{JK}\), and
-\(Z_{J}\)\footnote{Randomization ensures that data---and, by extension,
-  an estimator---satisfies several key identification properties, such
-  as common support, no interference, and consistency. The most critical
+\(Z_{J}\)\footnote{Randomization ensures that data--and, by extension,
+  an estimator--satisfies several key identification properties, such as
+  common support, no interference, and consistency. The most critical
   property, however, is the elimination of confounding.
   \emph{Confounding} occurs when an external variable, such as
   \(X_{I}\), simultaneously influences both the outcome (e.g.,
@@ -1846,76 +1842,125 @@ This independence stems from the random selection designs that govern
   randomization, see \citet{Pearl_2009}, \citet{Morgan_et_al_2014},
   \citet{Neal_2020}, and \citet{Hernan_et_al_2020}.}.
 
-Second, we define \(D_{R}\) as the difference between the discriminal
-processes of two texts, \(T_{IA}[i, a]\) and \(T_{IA}[h, b]\),
-representing the underlying written-quality trait of the texts, plus the
-corresponding repeated judge biases, \(B_{JK}[j, k]\). Note that if we
-assume that \(B_{JK}[j,k]\) reflects the difference in stimulus-specific
-biases, i.e., \(B_{JK}[j,k] = B_{JK}[i,a,j,k] - B_{JK}[h,b,j,k]\), we
-can re-write the discriminal difference as:
+Next we define \(D_{R}\) as the difference between the discriminal
+processes \(T_{IA}[i, a]\) and \(T_{IA}[h, b]\), representing the
+underlying written-quality trait of the texts, plus the corresponding
+repeated judge biases \(B_{JK}[j, k]\). Note that if we assume that
+\(B_{JK}[j,k]\) reflects the difference in stimulus-specific biases,
+i.e., \(B_{JK}[j,k] = B_{JK}[i,a,j,k] - B_{JK}[h,b,j,k]\), we can
+re-write the discriminal difference as:
 \begin{equation}\phantomsection\label{eq-mat52}{
 \begin{aligned}
 D_{R} &= \left( T_{IA}[i,a] - T_{IA}[h,b] \right) + B_{JK}[j,k] \\
 &= \left( T_{IA}[i, a] + B_{JK}[i, a, j, k] \right) - \left( T_{IA}[h, b] + B_{JK}[h, b, j, k] \right) \\
 & = T^{*}_{IA}[i,a] - T^{*}_{IA}[h,b]
 \end{aligned}
-}\end{equation} This formulation reveals that the discriminal difference
-captures a \emph{pure interaction effect}, in which neither the texts'
-discriminal processes nor the judges' biases alone determine the
-outcome, but their interaction does \citep{Attia_et_al_2022}. In simple
-terms, the discriminal processes of the stimuli become an observable
-outcome only through the judges' perceptions (biases). To clarify, the
-square brackets in \(D_{R}\) simply indicate the relevant indices for
-each trait vector and do not imply any subsetting of the data.
+}\end{equation}
 
-Third, we define \(T_{IA}\) as a linear combination of the students'
-underlying writing-quality traits \(T_{I}\), the effects of relevant
-text-related variables \(\beta_{XA}X_{IA}\) (e.g., text length on
-quality), and the texts' idiosyncratic errors \(e_{IA}\). We assume that
-each element of \(e_{IA}\) is independent and identically distributed
-\((iid)\) according to a Normal distribution, with a mean of zero and a
-standard deviation \(p_{IA}\). The parameter \(p_{IA}\) is defined as a
-proportion of 1 to establish the scale of the latent trait, which is
-required in any latent variable model \citep{Depaoli_2021}. Note that
-because \(e_{IA}\) follows a Normal distribution, \(T_{IA}\) is also
-normally distributed. This result implies that our model reverts to
-assuming Normal discriminal processes for the stimuli, as originally
-proposed by \citet{Thurstone_1927b} (see
-Table~\ref{tbl-thurstone_cases}).
+This formulation reveals that the discriminal difference captures a
+\emph{pure interaction effect}, in which neither the texts' discriminal
+processes nor the judges' biases alone determine the outcome, but their
+interaction does \citep{Attia_et_al_2022}. In simple terms, the
+discriminal processes of the stimuli become an observable outcome only
+through the judges' perceptions (biases). To clarify, the square
+brackets in \(D_{R}\) indicate the relevant indices for each trait
+vector; they do not imply any subsetting of the data.
 
-Fourth, we define \(T_{I}\) as a linear combination of the effects of
-relevant student-related variables, \(\beta_{XI} X_{I}\), and students'
-idiosyncratic errors, \(e_{I}\). As before, we assume that each element
-of \(e_{I}\) is \(iid\) Normal with a mean of zero. However, we consider
-the standard deviation, \(s_{XI}\), varies depending on the teaching
-method group to which each student belongs. Given the example in
-Section~\ref{sec-theoretical} where the teaching method
-\(X_{I} = \{1,2\}\), the model sets the following constraint to anchor
-the scale of the latent trait \citep{Depaoli_2021}:
-\(\sum_{g=1}^{2} s_{XI}[g]/2 = 1\). Note that this parametrization of
-\(e_{I}\) relaxes the equal dispersion assumption for the stimuli,
-effectively addressing the concerns raised in
+We now specify the functional forms for \(T_{IA}\), \(T_{I}\),
+\(B_{JK}\), and \(B_{J}\). We model \(T_{IA}\) as a linear combination
+of the students' underlying writing-quality traits \(T_{I}\), the
+effects of relevant text-related variables on quality assessment
+\(\beta_{XA}X_{IA}\) (such as the influence of text length), and the
+text-specific idiosyncratic errors \(e_{IA}\). Similarly, we express
+\(T_{I}\) as a linear combination of relevant student-related variables
+affecting the quality assessment \(\beta_{XI} X_{I}\), and
+student-specific idiosyncratic errors \(e_{I}\). For the judge-specific
+terms, we model \(B_{JK}\) as a linear combination of the judge's
+individual bias \(B_{J}\), the influence of relevant judgment-related
+variables on quality assessment \(\beta_{ZK}Z_{JK}\) (e.g., how the
+number of judgments affect the evaluation), and judgment-specific
+idiosyncratic errors \(e_{JK}\). Finally, we define \(B_{J}\) as a
+linear combination of relevant judge-level variables influencing the
+quality assessment \(\beta_{ZJ}Z_{J}\) (such as judgment expertise) and
+judge-specific idiosyncratic errors \(e_{J}\).
+
+Next, we specify the probabilistic assumptions for the idiosyncratic
+errors \(e_{I}\), \(e_{IA}\), \(e_{J}\), and \(e_{JK}\). These error
+terms exhibit indeterminacies in their \emph{location},
+\emph{orientation}, and \emph{scale} due to the lack of an inherent
+scale in the associated latent variables. We must resolve these
+indeterminacies to identify the model
+\citep{Depaoli_2021, deAyala_2009}. Drawing on principles from SEM
+\citep{Hoyle_et_al_2023}, we assume that the vector of idiosyncratic
+errors \(\boldsymbol{e} = [e_{I}, e_{IA}, e_{J}, e_{JK}]^{T}\), follows
+a Multivariate Normal distribution with mean vector \(\boldsymbol{\mu}\)
+and a covariance matrix
+\(\boldsymbol{\Sigma} = \boldsymbol{D} \boldsymbol{R} \boldsymbol{D}\),
+with \(\boldsymbol{D}\) denoting a diagonal matrix of standard
+deviations and \(\boldsymbol{R}\) a correlation matrix. To address the
+\emph{location} indeterminacy, we set the errors' mean vector to zero:
+\begin{equation}\phantomsection\label{eq-mat53}{
+\boldsymbol{\mu} = [0, 0, 0, 0]^{T}
+}\end{equation}
+
+Following SCM~\ref{fig-cj16_scm}, we assume uncorrelated errors to
+resolve the \emph{orientation} indeterminacy. Thus, we define the
+correlation matrix \(\boldsymbol{R}\) as:
+\begin{equation}\phantomsection\label{eq-mat54}{
+\boldsymbol{R} = \begin{bmatrix}
+    1 & 0 & 0 & 0 \\
+    0 & 1 & 0 & 0 \\
+    0 & 0 & 1 & 0 \\
+    0 & 0 & 0 & 1 
+  \end{bmatrix}
+}\end{equation}
+
+To resolve the \emph{scale} indeterminacy, we define the diagonal matrix
+\(\boldsymbol{D}\) as: \begin{equation}\phantomsection\label{eq-mat55}{
+\boldsymbol{D} = \begin{bmatrix}
+    s_{XI} & 0 & 0 & 0 \\
+    0 & p_{IA} & 0 & 0 \\
+    0 & 0 & s_{ZJ} & 0 \\
+    0 & 0 & 0 & p_{JK} 
+  \end{bmatrix}
+}\end{equation}
+
+Here, \(s_{XI}\) represents the standard deviation for the individuals,
+\(p_{IA}\) for the stimuli, \(s_{ZJ}\) for the judges, and \(p_{JK}\)
+for the judgments. We assume \(s_{XI}\) varies depending on the teaching
+method group to which each student belongs. In the example from
+Section~\ref{sec-theoretical}, where the teaching method
+\(X_{I} = \{1,2\}\), the model sets the constraint according to Equation
+\ref{eq-mat56}. This constraint anchors the scale of the individuals'
+latent trait while relaxing the assumption of equal dispersion for the
+stimuli, thereby addressing the concerns raised in
 Section~\ref{sec-theory-issue1a}.
+\begin{equation}\phantomsection\label{eq-mat56}{
+\sum_{g=1}^{2} s_{XI}[g]/2 = 1
+}\end{equation}
 
-Fifth, we define \(B_{JK}\) as a linear combination of the judges'
-individual bias \(B_{J}\), the effects of relevant judgment-related
-variables \(\beta_{ZK}Z_{JK}\) (e.g., how the number of judgments a
-judge makes affect the assessment of quality), and judgment-specific
-idiosyncratic errors \(e_{JK}\). We assume that each element of
-\(e_{JK}\) is \(iid\) Normal with a mean of zero and a standard
-deviation \(p_{JK}\), defined as a proportion of \(1\), to anchor the
-scale of the latent trait \citep{Depaoli_2021}.
+In contrast, we define \(p_{IA}\) as a proportion of \(1\) to establish
+the scale of the stimuli' latent trait relative to the scale of the
+individuals' trait. Note that, since the error vector \(\boldsymbol{e}\)
+follows an uncorrelated Multivariate Normal distribution, \(e_{IA}\)
+follows a univariate Normal distribution by the properties of the
+distribution. As a result, \(T_{IA}\) is also normally distributed,
+which effectively reverts to assuming Normal discriminal processes for
+the stimuli, an assumption originally proposed by
+\citet{Thurstone_1927b} (see Table~\ref{tbl-thurstone_cases})
 
-Sixth, we define \(B_{J}\) as a linear combination of the effects of
-relevant judge-level variables \(\beta_{ZJ}Z_{J}\) (e.g., the effects of
-judgment expertise on the quality assessment) and judge-specific
-idiosyncratic errors \(e_{J}\). Each element of \(e_{J}\) is likewise
-assumed to be \(iid\) Normal with mean zero and a standard deviation
-\(s_{ZJ}\) that depends on the groups to which each judge belongs. For
-instance, if \(Z_{J} = \{1,2,3\}\) representing three groups of judges
-with varying expertise, the model imposes the constraint
-\(\sum_{g=1}^{3} s_{ZJ}[g]/3 = 1\) to fix the scale of the latent trait
-\citep{Depaoli_2021}.
+Similarly, we assume \(s_{ZJ}\) varies depending on the groups to which
+each judge belongs. For instance, if \(Z_{J} = \{1,2,3\}\) represents
+three groups of judges with varying expertise, the model sets the
+constraint: \begin{equation}\phantomsection\label{eq-mat56}{
+\sum_{g=1}^{2} s_{ZJ}[g]/3 = 1
+}\end{equation}
+
+This constraint anchors the scale of the judges' latent trait and
+relaxes the assumption of equal dispersion for the judgments.
+Conversely, \(p_{JK}\) is defined as a proportion of \(1\) to establish
+the scale of the judgments' latent trait relative to the scale of the
+judges' trait.
 
 Finally, we use \emph{Bayesian inference methods} to convert
 model~\ref{fig-cj16_stat} into a practical statistical tool for
@@ -1976,10 +2021,11 @@ minimal impact on trait estimation or model interpretation
 acknowledged that the two remaining assumptions of Case V--and, by
 extension, of the BTL model--could pose significant problems when
 researchers assess complex traits or heterogeneous stimuli
-\citep{Thurstone_1927b}. In particular, he noted that although these
-assumptions simplify the trait measurement model, they could fail to
-capture the complexity of CJ data
-\citep{Kelly_et_al_2022, Andrich_1978}, potentially leading to
+\citep{Thurstone_1927b}. In particular, he noted that while assuming
+equal discriminal dispersions and zero correlation for the stimuli'
+discriminal processes simplifies the trait measurement model, these
+assumptions may fail to reflect the complexity of CJ data
+\citep{Kelly_et_al_2022, Andrich_1978}. As a result, they can lead to
 unreliable and inaccurate trait estimates
 \citep{Ackerman_1989, Zimmerman_1994, McElreath_2020, Hoyle_et_al_2023}.
 
