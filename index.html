@@ -10,7 +10,7 @@
 <meta name="author" content="Tine van van Daal">
 <meta name="author" content="Sven De De Maeyer">
 <meta name="author" content="Steven Gillis">
-<meta name="dcterms.date" content="2025-05-14">
+<meta name="dcterms.date" content="2025-05-15">
 <meta name="keywords" content="causal inference, directed acyclic graphs, structural causal models, bayesian statistical methods, thurstonian model, comparative judgement, probability, statistical modeling">
 
 <title>Let’s talk about Thurstone &amp; Co.: An information-theoretical model for comparative judgments, and its statistical translation</title>
@@ -59,7 +59,7 @@ div.csl-indent {
 <link href="site_libs/quarto-html/quarto-syntax-highlighting-19cd9126a9a9c64aacb03dc90954a64a.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-138756ba61c022fc8db24c60b2d59449.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-a0959b07bf4835616b4f3e6d3ce6f4ea.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script src="site_libs/quarto-contrib/glightbox/glightbox.min.js"></script>
 <link href="site_libs/quarto-contrib/glightbox/glightbox.min.css" rel="stylesheet">
 <link href="site_libs/quarto-contrib/glightbox/lightbox.css" rel="stylesheet">
@@ -112,10 +112,10 @@ Finally, the study emphasizes the relevance of this extension for contemporary e
 <meta name="citation_author" content="Tine van van Daal">
 <meta name="citation_author" content="Sven De De Maeyer">
 <meta name="citation_author" content="Steven Gillis">
-<meta name="citation_publication_date" content="2025-05-14">
-<meta name="citation_cover_date" content="2025-05-14">
+<meta name="citation_publication_date" content="2025-05-15">
+<meta name="citation_cover_date" content="2025-05-15">
 <meta name="citation_year" content="2025">
-<meta name="citation_online_date" content="2025-05-14">
+<meta name="citation_online_date" content="2025-05-15">
 <meta name="citation_language" content="en">
 <meta name="citation_reference" content="citation_title=Correlation and causation;,citation_author=S. Wright;,citation_publication_date=1927;,citation_cover_date=1927;,citation_year=1927;,citation_fulltext_html_url=https://books.google.co.ao/books/about/Journal_of_Agricultural_Research.html?hl=pt-PT&amp;amp;amp;id=lNNdIV_qpwIC;,citation_issue=7;,citation_volume=20;,citation_journal_title=Correlation and causation;">
 <meta name="citation_reference" content="citation_title=On the interpretation of χ2 from contingency tables, and the calculation of p;,citation_author=R. Fisher;,citation_publication_date=1922;,citation_cover_date=1922;,citation_year=1922;,citation_fulltext_html_url=http://www.jstor.org/stable/2340521;,citation_issue=1;,citation_doi=10.2307/2340521;,citation_volume=85;,citation_journal_title=Journal of the Royal Statistical Society;,citation_publisher=[Wiley, Royal Statistical Society];">
@@ -458,7 +458,7 @@ Finally, the study emphasizes the relevance of this extension for contemporary e
                 <div>
             <div class="quarto-title-meta-heading">Published</div>
             <div class="quarto-title-meta-contents">
-              <p class="date">May 14, 2025</p>
+              <p class="date">May 15, 2025</p>
             </div>
           </div>
           
@@ -1581,10 +1581,10 @@ D_{R} &amp;= \left( T_{IA}[i,a] - T_{IA}[h,b] \right) + B_{JK}[j,k] \\
     0 &amp; 0 &amp; 0 &amp; p_{JK}
   \end{bmatrix}
 \tag{15}\]</span></span></p>
-<p>Here, <span class="math inline">\(s_{XI}\)</span> represents the standard deviation for the individuals, <span class="math inline">\(p_{IA}\)</span> for the stimuli, <span class="math inline">\(s_{ZJ}\)</span> for the judges, and <span class="math inline">\(p_{JK}\)</span> for the judgments. We assume <span class="math inline">\(s_{XI}\)</span> varies depending on the teaching method group to which each student belongs. In the example from <a href="#sec-theoretical" class="quarto-xref">Section&nbsp;4</a>, where the teaching method <span class="math inline">\(X_{I} = \{1,2\}\)</span>, the model sets the constraint according to Equation (<a href="#eq-mat56" class="quarto-xref">16</a>). This constraint anchors the scale of the individuals’ latent trait while relaxing the assumption of equal dispersion for the stimuli, thereby addressing the concerns raised in <a href="#sec-theory-issue1a" class="quarto-xref">Section&nbsp;3.1.1</a>. <span id="eq-mat56"><span class="math display">\[
+<p>Here, <span class="math inline">\(s_{XI}\)</span> represents the standard deviation for the individuals, <span class="math inline">\(p_{IA}\)</span> for the stimuli, <span class="math inline">\(s_{ZJ}\)</span> for the judges, and <span class="math inline">\(p_{JK}\)</span> for the judgments. We assume <span class="math inline">\(s_{XI}\)</span> varies depending on the teaching method group to which each student belongs. Using the example from <a href="#sec-theoretical" class="quarto-xref">Section&nbsp;4</a>, where the teaching method <span class="math inline">\(X_{I} = \{1,2\}\)</span>, the model sets the constraint according to Equation (<a href="#eq-mat56" class="quarto-xref">16</a>). This constraint anchors the scale of the individuals’ latent trait while relaxing the assumption of equal dispersion for the stimuli, thereby addressing the concerns raised in <a href="#sec-theory-issue1a" class="quarto-xref">Section&nbsp;3.1.1</a>. <span id="eq-mat56"><span class="math display">\[
 \sum_{g=1}^{2} s_{XI}[g]/2 = 1
 \tag{16}\]</span></span></p>
-<p>In contrast, we define <span class="math inline">\(p_{IA}\)</span> as a proportion of <span class="math inline">\(1\)</span> to establish the scale of the stimuli’ latent trait relative to the scale of the individuals’ trait. Note that, since the error vector <span class="math inline">\(\boldsymbol{e}\)</span> follows an uncorrelated Multivariate Normal distribution, <span class="math inline">\(e_{IA}\)</span> follows a univariate Normal distribution by the properties of the distribution. As a result, <span class="math inline">\(T_{IA}\)</span> is also normally distributed, which effectively reverts to assuming Normal discriminal processes for the stimuli, an assumption originally proposed by <span class="citation" data-cites="Thurstone_1927b">Thurstone (<a href="#ref-Thurstone_1927b" role="doc-biblioref">1927a</a>)</span> (see <a href="#tbl-thurstone_cases" class="quarto-xref">Table&nbsp;1</a>)</p>
+<p>Because the error vector <span class="math inline">\(\boldsymbol{e}\)</span> follows an uncorrelated Multivariate Normal distribution, the marginal distribution of <span class="math inline">\(e_{IA}\)</span> is a univariate Normal distribution with mean zero and standard deviation <span class="math inline">\(p_{IA}\)</span>. We set <span class="math inline">\(P_{IA}\)</span> as a proportion of <span class="math inline">\(1\)</span> to establish the scale of the stimuli’ latent trait relative to the scale of the individuals’ trait. As a result, <span class="math inline">\(T_{IA}\)</span> is also normally distributed. This configuration effectively reinstates Thurstone’s original assumption of Normal discriminal processes for the stimuli (see <a href="#tbl-thurstone_cases" class="quarto-xref">Table&nbsp;1</a>).</p>
 <p>Similarly, we assume <span class="math inline">\(s_{ZJ}\)</span> varies depending on the groups to which each judge belongs. For instance, if <span class="math inline">\(Z_{J} = \{1,2,3\}\)</span> represents three groups of judges with varying expertise, the model sets the constraint according to Equation (<a href="#eq-mat57" class="quarto-xref">17</a>). This constraint anchors the scale of the judges’ latent trait and relaxes the assumption of equal dispersion for the judgments. <span id="eq-mat57"><span class="math display">\[
 \sum_{g=1}^{2} s_{ZJ}[g]/3 = 1
 \tag{17}\]</span></span></p>
@@ -1635,7 +1635,7 @@ Decision: interesting, but I think I like the model as it is, explicit! -->
 <!-- If Thurstone's Law is to be used in support of comparative judgment for assessment, his theory must be extended to cover the uses and applications that are required for assessment purposes. [@Kelly_et_al_2022, pp. 678] -->
 <!-- We recognise that there is unlikely to be a single answer to these questions for all the cases in which comparative judgment may be used. However, work to derive some general principles for good practice would be valuable. [@Kelly_et_al_2022, pp. 683] -->
 <!-- 6. Which are these new avenues for research? -->
-<p>Five research avenues deserve particular attention due to their direct impact on the reliability and validity of trait estimates and the accuracy of statistical inferences. First, researchers should investigate how sampling and comparison mechanisms influence CJ experimental outcomes and affect the robustness of statistical inferences. Second, further work is needed to understand how judges’ biases impact the number of comparisons required to achieve reliable trait estimates. Third, researchers should re-evaluate existing methods for identifying and excluding ‘misfitting’ judges and stimuli to ensure their effectiveness. Fourth, studies should explore how the hierarchical structure of stimuli influences both experimental design and hypothesis testing in CJ contexts. Finally, studies should explore principled approaches for selecting contextually relevant variables.</p>
+<p>Five research avenues merit particular attention for their direct impact on the reliability and validity of trait estimates and the accuracy of statistical inferences. First, researchers should investigate how sampling and comparison mechanisms influence CJ experimental outcomes and affect the robustness of statistical inferences. Second, further work is needed to understand how judges’ biases impact the number of comparisons required to achieve reliable trait estimates. Third, researchers should re-evaluate existing methods for identifying and excluding ‘misfitting’ judges and stimuli to ensure their effectiveness. Fourth, studies should explore how the hierarchical structure of stimuli influences both experimental design and hypothesis testing in CJ contexts. Finally, researchers should explore principled approaches for selecting contextually relevant variables.</p>
 <!-- 6.2 About the implications of the sampling and comparison mechanisms -->
 <p><span style="color:blue;">About the implications of the sampling and comparison mechanisms</span></p>
 <!-- Continuing with the first advantage, now we clarify two additional processes of CJ experiments that previous literature do not typically mention: that the sample and comparison mechanism are generators of missing data--that is, they determine which observations do we get to see in our data sample. This opens the path to use Rubin's missing data framework [@Rubin_1976] into CJ applications to investigate more complex CJ designs, particularly the ones that are not random samples as the ones outlined here, which could be characterized in Rubin's structure parlor as missing at random (MAR) and missing not at random (MNAR) [@Rubin_1976]. Among these cases are adaptive comparative algorithm designs, for which the causal structure is not clear, and thus, its impact on trait measurement and hypothesis testing is also not clear. Another  -->
@@ -1737,7 +1737,7 @@ However, this property of the model is true in empirical data only if the model 
 <!-- 7.3 Causal inference knowledge -->
 <p>Third, applying this approach requires a solid understanding of Causal inference. For instance, throughout the study, we assume that predictor variables must be “relevant” to the research context, interpreting relevance as the inclusion of the predictor variables in a “sufficient adjustment set.” However, we do not fully explore what this entails or its implications for model specification and validity. Nonetheless, we provide key references throughout the study to help motivated researchers explore these foundational concepts in greater depth.</p>
 <!-- 7.4 PPL and Bayesian Inference -->
-<p>Fourth and final, researchers must also be proficient in Probabilistic Programming Languages (PPLs) and Bayesian inference methods. This expertise is essential for translating context-specific conceptual models into bespoke statistical models that meaningfully address the research questions at hand. While such translation is not exclusive to Bayesian methods–frequentist approaches can also be used–we argue that Bayesian methods offer a more accessible pathway, as they reduce the need for additional expertise in optimization theory and techniques.</p>
+<p>Fourth and final, researchers must also be proficient in Probabilistic Programming Languages (PPLs) and Bayesian inference methods. This expertise is essential for translating context-specific conceptual models into bespoke statistical models that meaningfully address the research questions at hand. While such translations are not exclusive to Bayesian methods, we argue that Bayesian approaches offer a more accessible path. They reduce, for instance, the need for additional expertise in optimization techniques and theory often required by frequentist methods, thereby lowering the technical barrier for many applied researchers.</p>
 <!-- (do not do this yet!) Develop how you multiply the predictions by the inverse of the sample probability to get the estimates. Should I use the probability itself?: Remember that in a random sample the sample probability is n/N, so the the inverse of the sample probability is N/n. So, multiplying the estimate by the n * N/n gives you the prediction for the population?, yes. -->
 <!-- (See https://timss2023.org/methods/, and pdf in mail, and https://discourse.mc-stan.org/t/survey-weighted-regression/1654 ) -->
 <!-- (do not do this yet!) Then to get the differences between groups you need to aggregate the latent variable of interest using the variable of interest without considering any other variable (marginalization) (see https://www.r-bloggers.com/2017/06/sampling-weights-and-multilevel-modeling-in-r/ ) -->
@@ -2591,7 +2591,7 @@ Zimmerman, D. 1994. <span>“A Note on the Influence of Outliers on Parametric a
   title = {Let’s Talk about {Thurstone} \&amp; {Co.:} {An}
     Information-Theoretical Model for Comparative Judgments, and Its
     Statistical Translation},
-  date = {2025-05-14},
+  date = {2025-05-15},
   langid = {en},
   abstract = {This study revisits Thurstone’s law of comparative
     judgment (CJ), focusing on two prominent issues of traditional
@@ -2626,7 +2626,7 @@ Zimmerman, D. 1994. <span>“A Note on the Influence of Outliers on Parametric a
 Rivera Espejo, Jose Manuel, Tine van van Daal, Sven De De Maeyer, and
 Steven Gillis. 2025. <span>“Let’s Talk about Thurstone &amp; Co.: An
 Information-Theoretical Model for Comparative Judgments, and Its
-Statistical Translation.”</span> May 14, 2025.
+Statistical Translation.”</span> May 15, 2025.
 </div></div></section></div></main>
 <!-- /main column -->
 <script id="quarto-html-after-body" type="application/javascript">
