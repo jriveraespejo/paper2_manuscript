@@ -45,6 +45,7 @@ format:
     google-scholar: true
     licence: 'CC BY-SA'
     toc: true
+    toc-depth: 2
     toc-title: 'Table of Contents'
     toc-location: left
     fontsize: 12pt
