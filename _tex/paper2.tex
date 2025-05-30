@@ -291,12 +291,13 @@ model \citep{Bradley_et_al_1952, Luce_1959} when analyzing CJ data.
 Specifically, the study raises concerns about the assumptions of equal
 discriminal dispersions and zero correlation between the stimuli. While
 these assumptions simplify the trait measurement model, they may fail to
-capture the complexity of CJ data, potentially leading to unreliable and
-inaccurate trait estimates. Second, the study highlights the disconnect
-between CJ's trait measurement and hypothesis testing processes.
-Although separating these processes simplifies the analysis of CJ data,
-it may also undermine the reliability of various statistical inferences
-derived from these processes.
+capture the complexity of some traits or account for heterogeneous
+stimuli, potentially leading to unreliable and inaccurate trait
+estimates. Second, the study highlights the disconnect between CJ's
+trait measurement and hypothesis testing processes. Although separating
+these processes simplifies the analysis of CJ data, it may also
+undermine the reliability of various statistical inferences derived from
+these processes.
 
 To address these issues, this study extends Thurstone's general form
 through a systematic and integrated approach that combines Causal and
@@ -409,14 +410,14 @@ outcome of this comparison is more likely to favor Text B over A.
 \section{Two Prominent Issues in Traditional CJ
 Practice}\label{sec-theory-issues}
 
-Thurstone noted from the outset that his general form, described in
-Section~\ref{sec-thurstone_theory}, led to a \emph{trait scaling
+Thurstone noted from the outset that his general formulation, described
+in Section~\ref{sec-thurstone_theory}, led to a \emph{trait scaling
 problem}. Specifically, the model required estimating more ``unknown''
 parameters than the number of available pairwise comparisons
 \citep{Thurstone_1927b}. For instance, in a CJ experiment with five
 texts, the general form would require estimating \(20\) parameters: five
 modal discriminal processes, five discriminal dispersions, and \(10\)
-correlations --one per comparison (see Table~\ref{tbl-thurstone_cases}).
+correlations--one per comparison (see Table~\ref{tbl-thurstone_cases}).
 However, a single judge could only provide \({5 \choose 2} = 10\) unique
 comparisons, an insufficient data set to estimate the required
 parameters.
@@ -1998,39 +1999,35 @@ psychological traits of stimuli through pairwise comparisons
 theory models single-judge comparisons across multiple, potentially
 correlated stimuli. Each comparison produces a dichotomous outcome
 indicating which stimulus the judge perceives as having a higher trait
-level. However, Thurstone identified one key challenge with its
-measurement model: it required estimating more ``unknown'' parameters
-than the number of available pairwise comparisons
+level. However, Thurstone identified one key challenge in this general
+formulation: the measurement model required estimating more ``unknown''
+parameters than the number of available pairwise comparisons
 \citep{Thurstone_1927b}. To address this issue and facilitate the
 theory's practical applicability, he formulated five cases, each
 progressively incorporating several simplifying assumptions.
 
-Among these, Case V has become the most widely used model in empirical
-CJ research, primarily due to the widespread adoption of the BTL model.
-The BTL model mirrors the core assumptions of Case V--namely, equal
+Among these, Case V remains the most widely used model in empirical CJ
+research, mainly due to the widespread adoption of the BTL model. The
+BTL model mirrors the core assumptions of Case V--namely, equal
 discriminal dispersions and zero correlation among stimuli' discriminal
 processes--but replaces the processes' normal distribution with the more
 mathematically tractable logistic distribution
-\citep{Andrich_1978, Bramley_2008}. Although the substitution has a
-minimal impact on trait estimation or model interpretation
-\citep{vanderLinden_et_al_2017_I, McElreath_2021} and simplifies the
-measurement model, the other two core assumptions of the model can still
-lead to unreliable and inaccurate trait estimates
-\citep{Ackerman_1989, Zimmerman_1994, McElreath_2020, Hoyle_et_al_2023},
-especially when researchers assess complex traits or heterogeneous
-stimuli
-\citep{Thurstone_1927a, Andrich_1978, Bramley_2008, Kelly_et_al_2022}.
+\citep{Andrich_1978, Bramley_2008}. Notably, although these assumptions
+simplify the trait measurement model, they may fail to capture the
+complexity of some traits or account for heterogeneous stimuli
+\citep{Thurstone_1927a, Andrich_1978, Bramley_2008, Kelly_et_al_2022},
+potentially leading to unreliable and inaccurate trait estimates
+\citep{Ackerman_1989, Zimmerman_1994, McElreath_2020, Hoyle_et_al_2023}.
 
-Furthermore, because Thurstone primarily aimed to produce a trait's
-``coarse scaling'' and allocate the compared stimuli along this
-continuum \citep[pp.~269]{Thurstone_1927a}, his theory did not specify
-how to use the trait estimates for statistical inference. The CJ
-tradition has attempted to fill this gap by separating trait estimation
-from hypothesis testing. Specifically, researchers often rely on point
-estimates of the traits, such as the BTL scores or their
-transformations, for inference. Although this approach simplifies
-analysis, the statistical literature cautions that it can introduce bias
-and compromise the reliability of the resulting inferences
+Moreover, because Thurstone's original goal was to produce a ``coarse
+scaling'' of traits and allocate stimuli along this continuum
+\citep[pp.~269]{Thurstone_1927a}, his theory offered no guidance on how
+to use trait estimates for statistical inference. To address this gap,
+researchers in the CJ tradition have often separated trait estimation
+from hypothesis testing, relying on point estimates of the traits--such
+as BTL scores or their transformations--for inference. Notably, while
+this approach simplifies analysis, it can also introduce bias and
+compromise the reliability of the resulting inferences
 \citep{McElreath_2020, Kline_et_al_2023, Hoyle_et_al_2023}.
 
 Thus, to address these limitations of Thurstone's Case V and the BTL
@@ -2044,20 +2041,20 @@ features, including judges' bias, sampling procedures, and comparison
 mechanisms, thereby disentangling the causal processes in the CJ system.
 
 The study then translates the SCM into a bespoke statistical model that
-addresses key limitations of Case V. This model allows researchers to
-analyze CJ data when the assumptions of equal dispersion and zero
-correlation do not hold (see Section~\ref{sec-theory-issue1a} and
-Section~\ref{sec-theory-issue1b}), and when they need to perform
-statistical inference (refer to Section~\ref{sec-theory-issue2}). In
-particular, the model accounts for judge biases (see
-Section~\ref{sec-theory-theoretical_P1}), captures the hierarchical
-structure of stimuli and incorporates measurement error in the
-hypothesis testing process (refer to
+allows researchers to analyze CJ data when violations to the assumptions
+of equal dispersion and zero correlation occur (see
+Section~\ref{sec-theory-issue1a} and Section~\ref{sec-theory-issue1b})
+and when statistical inference is necessary (refer to
+Section~\ref{sec-theory-issue2}). In particular, this model accounts for
+judge biases (see Section~\ref{sec-theory-theoretical_P1}), captures the
+hierarchical structure of stimuli, incorporates measurement error into
+the hypothesis testing process (refer to
 Section~\ref{sec-theory-theoretical_P3}), and accommodates heterogeneity
-in discriminal dispersions (see Section~\ref{sec-statistical}). These
-methodological innovations can potentially enhance the reliability and
-validity of trait measurement \citep{Perron_et_al_2015} and improve the
-accuracy of statistical inferences.
+in discriminal dispersions (see Section~\ref{sec-statistical}). By
+addressing all these issues, these methodological innovations have the
+potential to enhance the reliability and validity of trait measurement
+\citep{Perron_et_al_2015} and improve the accuracy of statistical
+inferences.
 
 Beyond these potential benefits, the approach offers two additional
 advantages. First, it clarifies the roles and interactions of all actors
@@ -2070,36 +2067,36 @@ demands of contemporary CJ assessment contexts \citep{Kelly_et_al_2022},
 offering new insights into existing research and opening promising
 avenues for future inquiry.
 
-Five research avenues--current and new--deserve particular attention.
-The following sections outline these avenues and explain how our model
-provides a rigorous research framework to investigate them. Notably,
-while addressing these questions through formal derivations--following
-the tradition of classical statistical models like linear
-regression--may seem a natural step, we argue that the complexity of the
-CJ system makes this approach initially impractical. Instead,
-simulation-based methods, such as power analysis, offer a more feasible
-and flexible alternative, enabling researchers to investigate these
-questions without relying on cumbersome mathematical proofs.
-Nonetheless, developing formal mathematical proofs remains an essential
-goal for future work.
+Five research avenues, both current and new, deserve particular
+attention. The following sections outline these avenues and explain how
+our model provides a rigorous research framework to investigate them.
+Notably, although it may seem like a natural next step to address these
+questions through formal derivations, following the tradition of
+classical statistical models like linear regression, we contend that the
+complexity of the CJ system makes this approach impractical from the
+outset. Instead, simulation-based methods, such as power analysis, offer
+a more feasible and flexible alternative, enabling researchers to
+investigate these questions without depending on cumbersome mathematical
+proofs. Nonetheless, developing formal mathematical proofs remains an
+essential goal for future work.
 
 \subsection{The impact of sampling and comparison mechanisms on CJ
 outcomes and inference robustness}\label{sec-discussion_RA1}
 
-Sampling and comparison mechanisms play a central role in modern CJ
-experimental design. However, most of the CJ literature has examined
-these mechanisms within a limited scope. Researchers have primarily
+Although sampling and comparison mechanisms are central to modern CJ
+experimental design, it is striking that most of the CJ literature has
+examined them only within a limited scope. Researchers have primarily
 investigated the effects of adaptive comparative judgment (ACJ) designs
 on trait reliability
 \citep{Pollitt_2012a, Pollitt_2012b, Bramley_2015, Verhavert_et_al_2022, Mikhailiuk_et_al_2021, Gray_et_al_2024}
 or proposed practical guidelines for the number of comparisons judges
 should make \citep{Verhavert_et_al_2019, Crompvoets_et_al_2022}.
-Although these studies offer valuable insights, we argue that they may
-have overlooked the broader role these mechanisms play within the CJ
-system. Moreover, we suggest that this oversight largely stems from a
-lack of conceptual clarity about how the mechanisms function within the
-system. To address this gap, this study decided to integrate these
-mechanisms into CJ's conceptual model.
+Although these studies offer valuable insights, we argue that they have
+overlooked the broader role these mechanisms play within the CJ system.
+Moreover, we suggest that this oversight largely stems from a lack of
+conceptual clarity about how the mechanisms function within the system.
+To address this gap, this study decided to integrate these mechanisms
+into CJ's conceptual model.
 
 The explicit integration of the sampling and comparison mechanisms
 offers a new perspective on how these mechanisms shape the CJ process.
@@ -2134,14 +2131,14 @@ outcome-informed selection suggests that the comparison mechanism may be
 outcome-dependent, potentially classifying ACJ as a generator of MNAR
 data. This classification may, in turn, facilitate a more nuanced
 understanding of the mixed evidence surrounding ACJ's capabilities.
-While some studies report improvements in trait reliability
+While some studies report that the method improves trait reliability
 \citep{Pollitt_et_al_2003, Pollitt_2012a, Pollitt_2012b}, others argue
-that these gains are artificially inflated by the method
+that it artificially inflates these gains
 \citep{Bramley_2015, Bramley_et_al_2019, Crompvoets_et_al_2020, Crompvoets_et_al_2022}.
 
 Nevertheless, regardless of the underlying missingness mechanisms, any
 CJ experimental design would benefit from explicitly defining its
-assumptions--an approach supported by our framework. This clarity
+assumptions, an approach supported by our framework. This clarity
 enables researchers to evaluate, for instance, how sampling and
 comparison mechanisms affect trait estimation and statistical inference
 within each design. Such assessments are particularly relevant given the
@@ -2153,9 +2150,9 @@ reliability or validity of trait estimates \citep{Bramley_2008}.
 traits}\label{sec-discussion_RA2}
 
 Despite the growing notion that various stimulus-related factors can
-influence judges' perceptions during pairwise comparisons--and that
-these influences may not always cancel each other out--few studies in
-the CJ literature provide empirical evidence for judges' biases
+influence judges' perceptions \citep{Morin_et_al_2018} and that these
+influences may not always cancel each other out, few studies in the CJ
+literature provide empirical evidence for judges' biases
 \citep{Pollitt_et_al_2003, vanDaal_et_al_2016, Bartholomew_et_al_2020a}.
 We argue that this gap persists not due to a lack of interest or
 research but because researchers continue to rely on ad-hoc detection
@@ -2164,7 +2161,7 @@ task \citep{Kelly_et_al_2022}. To address this limitation, this study
 decided to treat judges' biases as an integral component of the CJ
 system from the outset. This approach offers one key advantage: it
 provides a more accurate representation of the data-generating process
-behind pairwise comparisons--one that acknowledges that the discriminal
+behind pairwise comparisons, one that acknowledges that the discriminal
 processes of stimuli become an observable outcome only through judges'
 perceptions, which may exhibit bias.
 
@@ -2186,26 +2183,26 @@ writing assessments? Addressing these questions may also shed light on
 what it truly means to be an ``expert'' in the CJ context
 \citep{Kelly_et_al_2022}.
 
-Moreover, if we accept that judges may value different aspects of a
-stimulus, it follows that their judgments might also vary with
+Moreover, if we accept that judges may prioritize different aspects of a
+stimulus, it follows that their assessments might also vary with
 individual characteristics such as gender, age, culture, income,
 education, training, or expertise
 \citep{Kelly_et_al_2022, Bartholomew_et_al_2020a}, and even from one
 individual to another
 \citep{Gill_et_al_2013, vanDaal_et_al_2016, vanDaal_et_al_2017, vanDaal_2020}.
-Building on this and the discussion in Section~\ref{sec-discussion_RA1},
+Thus, building on the discussion in Section~\ref{sec-discussion_RA1},
 researchers could investigate how the selection of judges influences the
 formation of a ``shared consensus'' and whether these individual
 characteristics introduce systematic biases or distortions in the
 observed trait distribution \citep{Deffner_et_al_2022}. Furthermore, if
-such characteristics indeed undermine the ``sample-freeness''
-assumption, then it becomes essential to explore strategies for
-controlling their influence. This includes investigating how many
-judges--and how many judgments per judge--are required to produce
-reliable trait estimates, as well as whether \emph{repeated measures
-designs}, in which judges evaluate the same stimulus pairs multiple
-times \citep{Lawson_2015}, can improve judgment consistency and
-accuracy.
+such characteristics indeed undermine the assumption of
+``sample-freeness,'' then it becomes essential to explore strategies to
+control their influence and to determine how many judges--and how many
+judgments per judge--are needed to produce reliable trait estimates in
+these contexts. Additionally, it is worth considering whether
+\emph{repeated measures designs}, in which judges evaluate the same
+stimulus pairs multiple times \citep{Lawson_2015}, can improve judgment
+consistency and accuracy.
 
 \subsection{The identification of `misfitting' judges and
 stimuli}\label{sec-discussion_RA3}
