@@ -300,7 +300,7 @@ undermine the reliability of various statistical inferences derived from
 these processes.
 
 To address these issues, this study extends Thurstone's general form
-through a systematic and integrated approach that combines Causal and
+through a systematic and integrated approach that combines causal and
 Bayesian inference methods. In addition to potentially enhancing
 measurement reliability and validity, and improving statistical accuracy
 in hypothesis testing, this approach offers two key advantages. First,
@@ -792,8 +792,8 @@ functions that transform data into an estimate, while \emph{estimates}
 are the numerical values approximating the estimand
 \citep{Neal_2020, Everitt_et_al_2010}.
 
-A motivating example that will appear in the rest of the document
-clarifies these concepts. In this example, researchers aim to determine:
+A motivating example that will appear throughout this document clarifies
+these concepts. In this example, researchers aim to answer the question:
 ``To what extent do different teaching methods influence students'
 ability to produce high-quality written texts?'' To investigate this, a
 researcher designs a CJ experiment by randomly assigning students
@@ -803,22 +803,15 @@ produce a dichotomous outcome reflecting the relative quality of each
 text (trait). Based on this setup, researchers can reformulate the
 research question as the estimand: ``\emph{On average}, is there a
 difference in the ability to produce high-quality written texts between
-the two groups of students?''. Following current CJ practices,
-researchers rely on estimates from the BTL model, or its
-transformations, to approximate this estimand.
+the two groups of students?''.
 
-However, Section~\ref{sec-theory-issues} presents compelling evidence
-that Thurstone's Case V, and by extension the BTL model, suffers from
-several statistical and measurement limitations. These limitations
-hinder the model's ability to identify various estimands relevant to CJ
-inquiries, including the one described in the example. Identification is
-crucial because it is a necessary condition for ensuring consistent
-estimators. \emph{Consistency} refers to the property of an estimator
-whose estimates converge to the ``true'' value of the estimand as the
-data size approaches infinity \citep{Everitt_et_al_2010}. Without
-identification, consistency cannot be achieved, even with ``infinite''
-and error-free data. Thus, deriving meaningful insights from finite data
-becomes impossible \citep{Schuessler_et_al_2023}.
+Following current CJ practices, researchers rely on estimates from the
+BTL model--or its transformations--to approximate this estimand.
+However, as discussed in Section~\ref{sec-theory-issues}, Thurstone's
+Case V and the BTL model exhibit several statistical and measurement
+limitations. These limitations hinder the model's ability to identify
+various estimands relevant to CJ inquiries, including the one described
+in the example.
 
 Fortunately, SCMs and DAGs support identification analysis through two
 key advantages\footnote{These topics are beyond the scope of this study,
@@ -842,7 +835,7 @@ parameters of those functional forms \citep{Pearl_et_al_2016}.
 
 Thus, this section addresses the issues identified in
 Section~\ref{sec-theory-issues} by extending Thurstone's general form
-using the structural approach to Causal inference. Specifically, it
+using the structural approach to causal inference. Specifically, it
 combines the core theoretical principles outlined in
 Section~\ref{sec-thurstone_theory} with key assessment design features
 relevant to CJ experiments, such as the selection of judges, stimuli,
@@ -920,25 +913,6 @@ comparison lacks practical relevance within the CJ framework. Here,
 \(n_{J}\) indicates the total number of judges, and \(n_{K}\) denotes
 the number of repeated judgments each judge performs.
 
-In line with Thurstone's theory, SCM~\ref{fig-cj03_scm} depicts the
-texts' discriminal processes \((T_{ia}, T_{hb})\) and their discriminal
-difference \((D_{iahbjk})\) (see Section~\ref{sec-thurstone_theory}).
-Additionally, the SCM incorporates a key design feature of CJ
-experiments: the judges' biases \((B_{kj})\). This extension builds on
-the arguments presented in Section~\ref{sec-theory-issue1b}, contending
-that the discriminal difference becomes an observable outcome only
-through judges' perceptions. Given that such perceptions may be
-imperfect--and that each judge may carry some degree of bias
-\citep[see][]{Pollitt_et_al_2003, vanDaal_et_al_2016}--it is reasonable
-that judges' perceptions (bias) should be treated as an integral
-component of the CJ system from the outset, as this leads to a more
-accurate representation of the data-generating process underlying the
-pairwise comparisons. This model defines the preliminary set of
-endogenous variables,
-\(V = \{ O_{iahbjk}, D_{iahbjk}, T_{ia}, T_{hb}, B_{kj} \}\), and the
-preliminary set of structural equations, \(F = { f_{O}, f_{D} }\), which
-capture the non-parametric dependencies among these variables.
-
 \begin{figure}[H]
 
 \begin{minipage}{\linewidth}
@@ -973,6 +947,25 @@ capture the non-parametric dependencies among these variables.
 \caption{\label{fig-cj03}Conceptual-population model, scalar form.}
 
 \end{figure}%
+
+In line with Thurstone's theory, SCM~\ref{fig-cj03_scm} depicts the
+texts' discriminal processes \((T_{ia}, T_{hb})\) and their discriminal
+difference \((D_{iahbjk})\) (see Section~\ref{sec-thurstone_theory}).
+Additionally, the SCM incorporates a key design feature of CJ
+experiments: the judges' biases \((B_{kj})\). This extension builds on
+the arguments presented in Section~\ref{sec-theory-issue1b}, contending
+that the discriminal difference becomes an observable outcome only
+through judges' perceptions. Given that such perceptions may be
+imperfect--and that each judge may carry some degree of bias
+\citep[see][]{Pollitt_et_al_2003, vanDaal_et_al_2016}--it is reasonable
+that judges' perceptions (bias) should be treated as an integral
+component of the CJ system from the outset, as this leads to a more
+accurate representation of the data-generating process underlying the
+pairwise comparisons. This model defines the preliminary set of
+endogenous variables,
+\(V = \{ O_{iahbjk}, D_{iahbjk}, T_{ia}, T_{hb}, B_{kj} \}\), and the
+preliminary set of structural equations, \(F = { f_{O}, f_{D} }\), which
+capture the non-parametric dependencies among these variables.
 
 Notably, every SCM has an associated DAG
 \citep{Pearl_et_al_2016, Cinelli_et_al_2020}. A DAG is a \emph{graph}
@@ -1009,7 +1002,18 @@ and DAGs, defining one in this case can improve clarity and facilitate
 the description of the system. Thus, to re-express the scalar form of
 the CJ system shown in Figure~\ref{fig-cj03} into an equivalent
 vectorized form, we first define the vectors \(I\) and \(J\), along with
-the matrices \(IA\) and \(JK\), as follows:
+the matrices \(IA\) and \(JK\), as in Equation (\ref{eq-mat11}). Here,
+each element of \(I\) represents a unique individual \(i\) or \(h\),
+where \(n_{I}\) denotes the total number of individuals. Similarly, each
+element of \(J\) corresponds to a unique judge \(j\), with \(n_{J}\)
+indicating the total number of judges. Moreover, each row of \(IA\)
+represents a unique pairing of individuals \(i, h\) with stimuli
+\(a, b\). As a result, the matrix \(IA\) contains \(n_{I} \cdot n_{A}\)
+rows and \(2\) columns, where \(n_{A}\) specifies the number of stimuli
+available per individual. Likewise, each row of \(JK\) associates a
+judge \(j\) with a (repeated) judgment index \(k\). Consequently, the
+matrix \(JK\) has \(n_{J} \cdot n_{K}\) rows and \(2\) columns, where
+\(n_{K}\) indicates the number of repeated judgments each judge makes.
 \begin{equation}\phantomsection\label{eq-mat11}{
 I = \begin{bmatrix}
 1 \\
@@ -1053,18 +1057,15 @@ n_{J} & n_{K}
 \end{bmatrix}
 }\end{equation}
 
-Here, each element of \(I\) represents a unique individual \(i\) or
-\(h\), where \(n_{I}\) denotes the total number of individuals.
-Similarly, each element of \(J\) corresponds to a unique judge \(j\),
-with \(n_{J}\) indicating the total number of judges. Moreover, each row
-of \(IA\) represents a unique pairing of individuals \(i, h\) with
-stimuli \(a, b\). As a result, the matrix \(IA\) contains
-\(n_{I} \cdot n_{A}\) rows and \(2\) columns, where \(n_{A}\) specifies
-the number of stimuli available per individual. Likewise, each row of
-\(JK\) associates a judge \(j\) with a (repeated) judgment index \(k\).
-Consequently, the matrix \(JK\) has \(n_{J} \cdot n_{K}\) rows and \(2\)
-columns, where \(n_{K}\) indicates the number of repeated judgments each
-judge makes. \begin{equation}\phantomsection\label{eq-mat12}{
+Additionally, we construct the matrix \(R\) to map each row of the
+\(IA\) matrix with a corresponding row from the \(JK\) matrix. This
+matrix has \(n\) rows and \(6\) columns, where
+\(n = {n_{I} \cdot n_{A} \choose 2} \cdot n_{J} \cdot n_{K}\). Here, the
+term \({n_{I} \cdot n_{A} \choose 2}\) represents the binomial
+coefficient, which quantifies the total number of unique comparisons
+possible between every pair of stimuli generated by each pair of
+individuals in the population. Thus, we define the matrix as in Equation
+(\ref{eq-mat12}). \begin{equation}\phantomsection\label{eq-mat12}{
 R = \begin{bmatrix}
 1 & 1 & 1 & 2 & 1 & 1 \\
 \vdots & \vdots & \vdots & \vdots & \vdots & \vdots\\
@@ -1078,21 +1079,12 @@ n_{I} & n_{A}-1 & n_{I} & n_{A} & n_{J} & n_{K}
 \end{bmatrix}
 }\end{equation}
 
-Additionally, we construct the matrix \(R\) to map each row of the
-\(IA\) matrix with a corresponding row from the \(JK\) matrix. This
-matrix has \(n\) rows and \(6\) columns, where
-\(n = {n_{I} \cdot n_{A} \choose 2} \cdot n_{J} \cdot n_{K}\). Here, the
-term \({n_{I} \cdot n_{A} \choose 2}\) represents the binomial
-coefficient, which quantifies the total number of unique comparisons
-possible between every pair of stimuli generated by each pair of
-individuals in the population. Thus, we define the matrix as in Equation
-(\ref{eq-mat12}).
-
 It is easier to visualize the structure of the previously defined
 vectors and matrices by considering an example. Assuming \(n_{I} = 5\),
 \(n_{A} = 2\), \(n_{J} = 3\), and \(n_{K} = 3\), the vectors and
 matrices described in Equations (\ref{eq-mat11}) and (\ref{eq-mat12})
 take the form as in Equation (\ref{eq-mat13}).
+
 \begin{equation}\phantomsection\label{eq-mat13}{
 I = \begin{bmatrix}
 1 \\
@@ -1147,18 +1139,6 @@ R = \begin{bmatrix}
 \end{bmatrix}
 }\end{equation}
 
-Now, using Equations (\ref{eq-mat11}) and (\ref{eq-mat12}), we can
-re-express SCM~\ref{fig-cj03_scm} and DAG~\ref{fig-cj03_dag} in an
-equivalent vectorized form, as shown in Figure~\ref{fig-cj04}. In this
-depiction, the outcome \(O^{cp}_{R}\), the texts' discriminal difference
-\(D_{R}\), their discriminal processes \(T_{IA}\), and the judges'
-biases \(B_{JK}\) are represented as vectors rather than scalar values.
-These vectors capture all the observations from the conceptual
-population. Specifically, \(O^{cp}_{R}\) and \(D_{R}\) are observed and
-latent vectors of length \(n\), respectively. Moreover, \(T_{IA}\) and
-\(B_{JK}\) are latent vectors of lengths \(n_{I} \cdot n_{A}\) and
-\(n_{J} \cdot n_{K}\), respectively.
-
 \begin{figure}[H]
 
 \begin{minipage}{\linewidth}
@@ -1194,6 +1174,18 @@ latent vectors of length \(n\), respectively. Moreover, \(T_{IA}\) and
 form.}
 
 \end{figure}%
+
+Now, using Equations (\ref{eq-mat11}) and (\ref{eq-mat12}), we can
+re-express SCM~\ref{fig-cj03_scm} and DAG~\ref{fig-cj03_dag} in an
+equivalent vectorized form, as shown in Figure~\ref{fig-cj04}. In this
+depiction, the outcome \(O^{cp}_{R}\), the texts' discriminal difference
+\(D_{R}\), their discriminal processes \(T_{IA}\), and the judges'
+biases \(B_{JK}\) are represented as vectors rather than scalar values.
+These vectors capture all the observations from the conceptual
+population. Specifically, \(O^{cp}_{R}\) and \(D_{R}\) are observed and
+latent vectors of length \(n\), respectively. Moreover, \(T_{IA}\) and
+\(B_{JK}\) are latent vectors of lengths \(n_{I} \cdot n_{A}\) and
+\(n_{J} \cdot n_{K}\), respectively.
 
 \subsubsection{Integrating hierarchical structural
 components}\label{sec-theory-theoretical_P3}
@@ -1238,45 +1230,6 @@ rows and \(q_{IA}\) independent columns (variables), while \(e_{IA}\)
 and \(T_{IA}\) are latent matrices with \(n_{I}\) rows and \(n_{A}\)
 columns.
 
-Similarly, the bottom branch of DAG~\ref{fig-cj09_dag} depicts the
-second component, where \emph{relevant} \footnote{refer to footnote 2.}
-judge-related variables \(Z_{J}\), such as judgment expertise, and
-judges' idiosyncratic errors \(e_{J}\) causally influence the latent
-variable representing judges' bias \(B_{J}\). The error \(e_{J}\)
-captures variations in judges' bias unexplained by \(Z_{J}\). Here,
-\(Z_{J}\) is an observed matrix with \(n_{J}\) rows and \(q_{J}\)
-independent columns (variables), and both \(e_{J}\) and \(B_{J}\) are
-latent vectors of length \(n_{J}\). Furthermore, the branch shows how
-\(B_{J}\), along with \emph{relevant} \footnote{refer to footnote 2.}
-judgment-related variables \(Z_{JK}\) (e.g., the number of judgments a
-judge makes), and judgments' idiosyncratic errors \(e_{JK}\) causally
-influence the judges' biases associated with each text \(B_{JK}\), the
-second primary latent variable of interest. The error \(e_{JK}\)
-captures variations in judgments unexplained by \(B_{J}\) or \(Z_{JK}\).
-Here, \(Z_{JK}\) is an observed matrix with dimension
-\(n_{J} \cdot n_{K}\) rows and \(q_{JK}\) independent columns
-(variables), while \(e_{JK}\) and \(B_{JK}\) are latent latent matrices
-with \(n_{J}\) rows and \(n_{K}\) columns
-
-Notably, all variables and functions shown in SCM~\ref{fig-cj09_scm} and
-DAG~\ref{fig-cj09_dag} are part of the set of endogenous variables
-\(V\), structural equations \(F\), and exogenous variables \(E\) for the
-conceptual-population model. Additionally, the figures demonstrate that
-all exogenous variables are independent of one another, as indicated by
-the relationships \(e_{IA} \:\bot\:\{ e_{I}, e_{JK}, e_{J} \}\),
-\(e_{I} \:\bot\:\{ e_{JK}, e_{J} \}\) and \(e_{JK} \:\bot\:e_{J}\) and
-the absence of connecting arrows.
-
-Overall, the conceptual-population model extends Thurstone's general
-form by introducing key innovations to address the limitations discussed
-in Section~\ref{sec-theory-issue1b} and Section~\ref{sec-theory-issue2}.
-These enhancements include accounting for judges' biases and integrating
-hierarchical structural components. Nevertheless, despite its promise of
-enhancing measurement accuracy and precision, the model still depends on
-the unrealistic assumption that researchers have access to data from the
-\emph{conceptual population}. Since researchers rarely meet this
-assumption in practice, they must consider a more realistic scenario.
-
 \begin{figure}[H]
 
 \begin{minipage}{\linewidth}
@@ -1319,6 +1272,45 @@ assumption in practice, they must consider a more realistic scenario.
 form.}
 
 \end{figure}%
+
+Similarly, the bottom branch of DAG~\ref{fig-cj09_dag} depicts the
+second component, where \emph{relevant} \footnote{refer to footnote 2.}
+judge-related variables \(Z_{J}\), such as judgment expertise, and
+judges' idiosyncratic errors \(e_{J}\) causally influence the latent
+variable representing judges' bias \(B_{J}\). The error \(e_{J}\)
+captures variations in judges' bias unexplained by \(Z_{J}\). Here,
+\(Z_{J}\) is an observed matrix with \(n_{J}\) rows and \(q_{J}\)
+independent columns (variables), and both \(e_{J}\) and \(B_{J}\) are
+latent vectors of length \(n_{J}\). Furthermore, the branch shows how
+\(B_{J}\), along with \emph{relevant} \footnote{refer to footnote 2.}
+judgment-related variables \(Z_{JK}\) (e.g., the number of judgments a
+judge makes), and judgments' idiosyncratic errors \(e_{JK}\) causally
+influence the judges' biases associated with each text \(B_{JK}\), the
+second primary latent variable of interest. The error \(e_{JK}\)
+captures variations in judgments unexplained by \(B_{J}\) or \(Z_{JK}\).
+Here, \(Z_{JK}\) is an observed matrix with dimension
+\(n_{J} \cdot n_{K}\) rows and \(q_{JK}\) independent columns
+(variables), while \(e_{JK}\) and \(B_{JK}\) are latent latent matrices
+with \(n_{J}\) rows and \(n_{K}\) columns
+
+Notably, all variables and functions shown in SCM~\ref{fig-cj09_scm} and
+DAG~\ref{fig-cj09_dag} are part of the set of endogenous variables
+\(V\), structural equations \(F\), and exogenous variables \(E\) for the
+conceptual-population model. Additionally, the figures demonstrate that
+all exogenous variables are independent of one another, as indicated by
+the relationships \(e_{IA} \:\bot\:\{ e_{I}, e_{JK}, e_{J} \}\),
+\(e_{I} \:\bot\:\{ e_{JK}, e_{J} \}\) and \(e_{JK} \:\bot\:e_{J}\) and
+the absence of connecting arrows.
+
+Overall, the conceptual-population model extends Thurstone's general
+form by introducing key innovations to address the limitations discussed
+in Section~\ref{sec-theory-issue1b} and Section~\ref{sec-theory-issue2}.
+These enhancements include accounting for judges' biases and integrating
+hierarchical structural components. Nevertheless, despite its promise of
+enhancing measurement accuracy and precision, the model still depends on
+the unrealistic assumption that researchers have access to data from the
+\emph{conceptual population}. Since researchers rarely meet this
+assumption in practice, they must consider a more realistic scenario.
 
 \subsection{The sample-comparison
 model}\label{sec-theory-theoretical_SC}
@@ -1414,6 +1406,7 @@ example. Suppose researchers exclude the second student, the second text
 from each student, and the third judge from the setup shown in Equation
 (\ref{eq-mat13}). Given \(n_{I} = 5\), \(n_{A} = 2\), \(n_{J} = 3\), and
 \(n_{K} = 3\), the resulting vectors would have the following structure:
+
 \begin{equation}\phantomsection\label{eq-mat24}{
 S_{I} = \begin{bmatrix}
 1 \\
@@ -1481,6 +1474,14 @@ Here, the term \({n^{s}_{I} \cdot n^{s}_{A} \choose 2}\) represents the
 binomial coefficient, which quantifies the total number of unique
 comparisons possible between every pair of sampled stimuli generated by
 each pair of sampled individuals.
+
+\begin{equation}\phantomsection\label{eq-mat26}{
+s_{(i,a,h,b,j,k)} = \begin{cases} 
+1 & \text{if data elements } i,a,h,b,j,k \text{ from } R \text{ are sampled} \\
+0 & \text{if data elements } h,i,a,b,j,k \text{ from } R \text{ are missing}
+\end{cases}
+}\end{equation}
+
 \begin{equation}\phantomsection\label{eq-mat25}{
 S = \begin{bmatrix}
 s_{(1,1,1,2,1,1)} \\
@@ -1493,13 +1494,6 @@ s_{(n_{I},n_{A}-1,n_{I},n_{A},n_{J},1)} \\
 \vdots \\
 s_{(n_{I},n_{A}-1,n_{I},n_{A},n_{J},1)}
 \end{bmatrix}
-}\end{equation}
-
-\begin{equation}\phantomsection\label{eq-mat26}{
-s_{(i,a,h,b,j,k)} = \begin{cases} 
-1 & \text{if data elements } i,a,h,b,j,k \text{ from } R \text{ are sampled} \\
-0 & \text{if data elements } h,i,a,b,j,k \text{ from } R \text{ are missing}
-\end{cases}
 }\end{equation}
 
 With the definition of \(S\), we incorporate the sample mechanism into
@@ -1523,6 +1517,13 @@ exclusively to Simple Random Sampling (SRSg) designs. In these designs,
 each repeated judgment, judge, stimulus, and individual has the same
 probability of being included in the sample as any other observation
 within their respective groups \citep{Lawson_2015}.
+
+However, due to concerns about the practical feasibility of the
+comparison task {[}\citet{Boonen_et_al_2020}; {]}, CJ experiments rarely
+implement an exhaustive pairings of sampled judges, stimuli, and
+individuals. Thus, a realistic scenario must account for the fact that
+judges typically compare only a subset of stimuli authored by a sample
+of individuals.
 
 \begin{figure}[H]
 
@@ -1567,13 +1568,6 @@ within their respective groups \citep{Lawson_2015}.
 \caption{\label{fig-cj14}Sample-comparison model, final vectorized form}
 
 \end{figure}%
-
-However, due to concerns about the practical feasibility of the
-comparison task {[}\citet{Boonen_et_al_2020}; {]}, CJ experiments rarely
-implement an exhaustive pairings of sampled judges, stimuli, and
-individuals. Thus, a realistic scenario must account for the fact that
-judges typically compare only a subset of stimuli authored by a sample
-of individuals.
 
 \subsubsection{The comparison
 mechanism}\label{sec-theory-theoretical_SC2}
@@ -1620,6 +1614,18 @@ Allocation Comparative Designs \citep{Bramley_2015}, or Incomplete Block
 Designs \citep{Lawson_2015}, where every repeated judgment has an equal
 probability of being included in the sample.
 
+Finally, since it is standard to assume that the distribution of the
+conceptual-population outcome \(O^{cp}_{R}\) also holds for
+\(O^{sc}_{R}\) and \(O_{R}\), we can reformulate the sample-comparison
+model in Figure~\ref{fig-cj14} into the equivalent form shown in
+Figure~\ref{fig-cj15}. This reformulation produces a model that applies
+directly to a sample of comparative data. In this version, the
+unobserved outcomes \(O^{cp}_{R}\) and \(O^{sc}_{R}\) are omitted, and
+\(O_{R}\) inherits the structural equation \(f_{O}\) that originally
+defined \(O^{cp}_{R}\). Moreover, the definition of \(O_{R}\) now
+reflects its direct dependence on the discriminal difference \(D_{R}\)
+and the sample and comparison mechanisms, \(S\) and \(C\).
+
 \begin{figure}[H]
 
 \begin{minipage}{\linewidth}
@@ -1661,18 +1667,6 @@ probability of being included in the sample.
 \caption{\label{fig-cj15}Comparative judgment model}
 
 \end{figure}%
-
-Finally, since it is standard to assume that the distribution of the
-conceptual-population outcome \(O^{cp}_{R}\) also holds for
-\(O^{sc}_{R}\) and \(O_{R}\), we can reformulate the sample-comparison
-model in Figure~\ref{fig-cj14} into the equivalent form shown in
-Figure~\ref{fig-cj15}. This reformulation produces a model that applies
-directly to a sample of comparative data. In this version, the
-unobserved outcomes \(O^{cp}_{R}\) and \(O^{sc}_{R}\) are omitted, and
-\(O_{R}\) inherits the structural equation \(f_{O}\) that originally
-defined \(O^{cp}_{R}\). Moreover, the definition of \(O_{R}\) now
-reflects its direct dependence on the discriminal difference \(D_{R}\)
-and the sample and comparison mechanisms, \(S\) and \(C\).
 
 In summary, the SCM~\ref{fig-cj15_scm} and DAG~\ref{fig-cj15_dag} extend
 Thurstone's general form to address several limitations of the BTL
@@ -2032,7 +2026,7 @@ compromise the reliability of the resulting inferences
 
 Thus, to address these limitations of Thurstone's Case V and the BTL
 model, this study extends Thurstone's general form using a systematic,
-integrated approach that combines Causal and Bayesian inference methods.
+integrated approach that combines causal and Bayesian inference methods.
 The approach begins by formulating a conceptual model represented by a
 Structural Causal Model (SCM) and a Directed Acyclic Graph (DAG). This
 model integrates Thurstone's core theoretical principles, such as the
@@ -2065,20 +2059,12 @@ advantages establish a principled framework for evaluating best
 practices in CJ experimental designs, one that better aligns with the
 demands of contemporary CJ assessment contexts \citep{Kelly_et_al_2022},
 offering new insights into existing research and opening promising
-avenues for future inquiry.
-
-Five research avenues, both current and new, deserve particular
-attention. The following sections outline these avenues and explain how
-our model provides a rigorous research framework to investigate them.
-Notably, although it may seem like a natural next step to address these
-questions through formal derivations, following the tradition of
-classical statistical models like linear regression, we contend that the
-complexity of the CJ system makes this approach impractical from the
-outset. Instead, simulation-based methods, such as power analysis, offer
-a more feasible and flexible alternative, enabling researchers to
-investigate these questions without depending on cumbersome mathematical
-proofs. Nonetheless, developing formal mathematical proofs remains an
-essential goal for future work.
+avenues for future inquiry. Five current and new research avenues
+deserve particular attention due to their direct impact on the
+reliability and validity of trait estimates and the accuracy of
+statistical inferences. The following sections outline these avenues and
+explain how our model provides a rigorous research framework to
+investigate them.
 
 \subsection{The impact of sampling and comparison mechanisms on CJ
 outcomes and inference robustness}\label{sec-discussion_RA1}
@@ -2222,43 +2208,103 @@ traits on CJ experiments}\label{sec-discussion_RA5}
 \subsection{Challenges}\label{sec-discussion_challenges}
 
 Despite its promise, this study presents several challenges that
-researchers must navigate --challenges common to many quantitative
-studies. These challenges fall into two main categories. The first
-concerns the background knowledge researchers need to apply the proposed
-framework effectively. The second involves the increased attention
-researchers must now devote to their specific CJ research context.
+researchers must navigate--challenges common to many quantitative
+studies. They fall into two main categories. The first concerns the
+foundational knowledge researchers need to apply the proposed framework
+effectively. The second involves the increased attention researchers
+must now devote to their specific research context.
 
-In terms of background knowledge, researchers face two challenges:
-mastering Causal inference and developing proficiency in Bayesian
-inference methods. One example illustrating the need to master Causal
-inference is our assumption that predictor variables are ``relevant'' to
-the research context--interpreting relevance as the inclusion of these
-variables in a ``sufficient adjustment set''
+\subsubsection{Foundational knowledge}\label{sec-discussion_challenges1}
+
+Researchers must develop foundational knowledge in two critical areas:
+causal and Bayesian inference methods. One example that illustrates the
+importance of mastering causal inference is our common assumption that
+predictor variables are ``relevant'' to the research
+context--interpreting this relevance as their inclusion in a
+\emph{sufficient adjustment set}
 \citep{Pearl_2009, Pearl_et_al_2016, Morgan_et_al_2014}. However, we do
-not fully explore what this entails or its implications for model
-specification, estimation, and inference. As a result, researchers must
-engage deeply with these complex ideas--and with others, such as how
-SCMs encode functional and probabilistic information--to apply the
-framework rigorously. To assist this effort, we provide key references
-throughout the study to guide motivated readers toward a deeper
-understanding of these foundational concepts\footnote{refer to footnote
-  1, 2, and the detailed online document referenced in the Declarations
-  section}.
+not fully explore what this assumption entails or its implications for
+model specification, estimation, and inference. As a result, to apply
+the framework rigorously, researchers must engage deeply with these and
+other complex ideas, such as how SCMs encode functional and
+probabilistic information. To assist this effort, we have provided key
+references throughout the study to guide motivated readers toward a
+deeper understanding of these foundational concepts\footnote{refer to
+  footnote 1, 2, and the detailed online document referenced in the
+  Declarations section}.
 
-Bayesian inference presents a second challenge. Researchers must acquire
-sufficient expertise to translate context-specific conceptual models
-into bespoke statistical models that meaningfully address their research
-questions. Although such translations are not unique to Bayesian
-approaches, we argue that Bayesian methods offer a more accessible
-route, as they reduce the need for specialized knowledge in optimization
-theory and techniques--often required by frequentist methods--thereby
-lowering the technical barriers for many applied researchers.
+Additionally, researchers must develop the expertise to translate
+context-specific conceptual models into bespoke statistical models using
+Bayesian inference methods. While Bayesian approaches introduce specific
+technical demands--such as familiarity with probabilistic programming
+languages (PPLs) and concepts like probability distributions and
+convergence--we argue they offer a more accessible path for many applied
+researchers. This is because Bayesian methods significantly reduce the
+need for specialized knowledge in areas like optimization theory and
+techniques, which are often necessary in frequentist approaches.
 
-In terms of the attention researchers must now devote to their specific
-CJ research context, researchers face two challenges: ensuring the
-conceptual model is a \emph{faithful} representation for the CJ system,
-and verifying whether this model can accurately estimate the intended
-estimand from real data.
+\subsubsection{Attention to the research
+context}\label{sec-discussion_challenges2}
+
+When applying our framework to a specific CJ research context,
+researchers face two additional challenges. First, they must verify that
+the conceptual model provides a \emph{faithful} \footnote{Avoid
+  confusing this term with the \emph{faithfulness assumption} described
+  in the causal inference literature. For further details, see footnote
+  1.} representation of the CJ system under study. Second, they must
+evaluate whether the model's statistical translation can accurately
+estimate the intended estimands (i.e., parameters) from empirical data.
+Notably, addressing these challenges requires careful attention because
+causal inference relies on expert knowledge and assumptions about the
+variables' causal structure that are often untestable at the outset
+\citep{Hernan_et_al_2025}. Consequently, the framework does not deliver
+automatic answers; instead, it encourages researchers to formulate
+precise questions and explicitly state their assumptions to build a
+generalizable understanding of the phenomenon under study, in this case,
+the CJ system \citep{Rohrer_et_al_2022, Deffner_et_al_2022}. This
+theory-driven foundation then supports the empirical testing of causal
+assumptions \citep{Deffner_et_al_2022}.
+
+Thus, regarding the \emph{faithful} representation of the CJ system, we
+advise researchers to treat our conceptual and statistical models as
+starting points rather than universal solutions for all CJ designs or
+datasets. This consideration means that researchers must face the
+challenge of adapting these models to their specific research contexts,
+paying close attention to causal assumptions, experimental design, and
+model specification. This careful adaptation is essential because a
+model's ability to produce accurate estimates and valid inferences
+depends heavily on how well the data and inferential goals align with
+its underlying assumptions \citep{Kohler_et_al_2019}. Nevertheless, as
+\citet{Kohler_et_al_2019} points out, drawing conclusions about the real
+world from observed data always requires assumptions, regardless of
+whether the data are observational or experimental. In this context, our
+approach provides a transparent framework for researchers to clearly
+articulate these assumptions and design CJ experiments that support
+reliable and valid trait measurement.
+
+Finally, regarding the estimation capabilities of the statistical model,
+researchers must tackle the challenge of performing identification
+analysis. As outlined in Section~\ref{sec-theoretical},
+\emph{identification analysis} determines whether a statistical model
+can accurately compute a given estimand (e.g., a parameter) based solely
+on its (causal) assumptions, independent of random variability
+\citep{Schuessler_et_al_2023}. Identification is crucial because it is a
+necessary condition for consistency. \emph{Consistency} is the property
+of an estimator (or model) whose estimates converge to the ``true''
+value of an estimand as data size approaches infinity
+\citep{Everitt_et_al_2010}. Logically, if researchers fail to identify a
+model, it cannot achieve consistency--even with infinite, error-free
+data. As a result, deriving meaningful insights from finite data becomes
+impossible \citep{Schuessler_et_al_2023}.
+
+Although performing identification analysis through formal derivations
+may appear to be a natural next step, we argue that the complexity of
+the CJ system renders such an approach impractical at the outset.
+Instead, simulation-based methods, such as power analysis, provide a
+more practical and flexible alternative, enabling researchers to examine
+the consistency of estimates without relying on cumbersome mathematical
+proofs. Nonetheless, the development of formal identification proofs
+remains a significant goal for future CJ research.
 
 \newpage{}
 
@@ -2878,34 +2924,21 @@ outlined in Section~\ref{sec-appendixB2}.}
 \paragraph{The probabilistic implications of these
 blocks}\label{sec-appendixB32}
 
-Beyond their graphical capabilities, SCMs and DAGs can encode the
-probabilistic information embedded within a causal structure. They
-achieve this encoding by relying on three fundamental assumptions: the
-local Markov, the minimality, the causal edges assumption. The
-\emph{local Markov assumption} encodes probabilistic independencies
-between variables by declaring that nodes in a graph are independent of
-all its non-descendants, given its parents \citep[pp.~20]{Neal_2020}.
-Meanwhile, the \emph{minimality assumption} encodes probabilistic
-dependencies among variables by stating that every pair of adjacent
-nodes exhibits a dependency \citep[pp.~21]{Neal_2020}. Finally, the
-\emph{causal edges assumption} encodes causal relationships between
-variables by declaring that each parent node acts as a direct cause of
-its children \citep[pp.~22]{Neal_2020}. Figure~\ref{fig-ACflow}
-illustrates how these assumptions influence the statistical and causal
-interpretations of graphs.
-
-\begin{figure}
-
-\centering{
-
-\includegraphics[width=0.8\linewidth,height=\textheight,keepaspectratio]{images/png/ACflow.png}
-
-}
-
-\caption{\label{fig-ACflow}The flow of association and causation in
-graphs. Extracted and slightly modified from \citet[pp.~31]{Neal_2020}}
-
-\end{figure}%
+Beyond their graphical capabilities, researchers can translate SCMs and
+DAGs into statistical models because these conceptual models encode
+functional and probabilistic information, which they can then replace
+with suitable functions and probabilistic assumptions
+\citep{Pearl_et_al_2016}. Notably, this encoding relies on two
+fundamental assumptions: the causal Markov and the faithfulness
+assumption. The \emph{causal Markov assumption} links the graph
+structure to the joint probability distribution of variables by
+asserting that any variable in a graph is independent of all its
+non-descendants conditional on its parents
+\citetext{\citealp[pp.~20]{Neal_2020}; \citealp[pp.~80]{Hernan_et_al_2025}}.
+The \emph{faithfulness assumption}, in turn, states that the observed
+statistical (in)dependencies in the data reflect the underlying causal
+structure among variables--except in rare degenerate cases
+\citetext{\citealp[pp.~100]{Neal_2020}; \citealp[pp.~81]{Hernan_et_al_2025}}.
 
 A notable implication of the assumptions underlying the probabilistic
 encoding is that any conceptual model described by an SCM and DAG can
