@@ -786,11 +786,11 @@ analysis rests. \emph{Identification analysis} determines whether an
 estimator can accurately compute an estimand based solely on its
 (causal) assumptions, regardless of random variability
 \citep{Schuessler_et_al_2023}. Here, \emph{estimands} represent the
-specific quantities researchers aim to determine
+specific quantities researchers aim to determine (i.e., a parameter)
 \citep{Everitt_et_al_2010}. \emph{Estimators} denote the methods or
-functions that transform data into an estimate, while \emph{estimates}
-are the numerical values approximating the estimand
-\citep{Neal_2020, Everitt_et_al_2010}.
+functions that transform data into an estimate (e.g., a statistical
+model), while \emph{estimates} are the numerical values approximating
+the estimand \citep{Neal_2020, Everitt_et_al_2010}.
 
 A motivating example that will appear throughout this document clarifies
 these concepts. In this example, researchers aim to answer the question:
@@ -805,13 +805,13 @@ research question as the estimand: ``\emph{On average}, is there a
 difference in the ability to produce high-quality written texts between
 the two groups of students?''.
 
-Following current CJ practices, researchers rely on estimates from the
-BTL model--or its transformations--to approximate this estimand.
-However, as discussed in Section~\ref{sec-theory-issues}, Thurstone's
-Case V and the BTL model exhibit several statistical and measurement
-limitations. These limitations hinder the model's ability to identify
-various estimands relevant to CJ inquiries, including the one described
-in the example.
+Following standard CJ practices, researchers typically use estimates
+from the BTL model--or its transformations--to approximate this
+estimand. However, as discussed in Section~\ref{sec-theory-issues},
+Thurstone's Case V and the BTL model exhibit several statistical and
+measurement limitations. These limitations hinder the model's ability to
+identify various estimands relevant to CJ inquiries, including the one
+described in the example.
 
 Fortunately, SCMs and DAGs support identification analysis through two
 key advantages\footnote{These topics are beyond the scope of this study,
@@ -1194,30 +1194,30 @@ Building on the principles of Structural Equation Modeling (SEM)
 \citep{Hoyle_et_al_2023} and Item Response Theory (IRT)
 \citep{Fox_2010, vanderLinden_et_al_2017_I}, the conceptual-population
 model integrates two \emph{hierarchical structural components} to
-examine how different teaching methods influence students' writing
-ability. Each structural component defines how observed or latent
-variables affect the primary latent variable of interest
-\citep{Everitt_et_al_2010}. The model's hierarchical design allows
-researchers to formulate and test hypotheses that account for both the
-nested structure of stimuli and the uncertainties inherent in trait
-estimation (see Section~\ref{sec-theory-issue1b} and
+examine how different \emph{relevant} \footnote{\emph{Relevant
+  variables} are those that satisfy the \emph{backdoor criterion}
+  \citep[pp 37]{Neal_2020}, that is, they belong to a \emph{sufficient
+  adjustment set}
+  \citep{Pearl_2009, Pearl_et_al_2016, Morgan_et_al_2014}. A
+  \emph{sufficient} set (potentially empty) blocks all non-causal paths
+  between a predictor and an outcome without opening new ones
+  \citep{Pearl_2009}. Refer also to footnote 1.} variables--whether
+observed or latent--affect the primary latent variable of interest
+\citep{Everitt_et_al_2010}. This hierarchical design enables researchers
+to formulate and test hypotheses that account for both the nested
+structure of stimuli and the uncertainties inherent in trait estimation
+(see Section~\ref{sec-theory-issue1b} and
 Section~\ref{sec-theory-issue2} for a discussion of these
 considerations).
 
 The top branch of DAG~\ref{fig-cj09_dag} illustrates the first
-component, where \emph{relevant} \footnote{\emph{Relevant variables} are
-  those that satisfy the \emph{backdoor criterion} \citep[pp
-  37]{Neal_2020}, that is, they belong to a \emph{sufficient adjustment
-  set} \citep{Pearl_2009, Pearl_et_al_2016, Morgan_et_al_2014}. A
-  \emph{sufficient} set (potentially empty) blocks all non-causal paths
-  between a predictor and an outcome without opening new ones
-  \citep{Pearl_2009}. Refer also to footnote 1.} student-related
-variables \(X_{I}\), such as teaching method, and students'
-idiosyncratic errors \(e_{I}\) causally influence the latent variable
-representing students' writing-quality trait \(T_{I}\). The error term
-\(e_{I}\) captures variations in students' traits unexplained by
-\(X_{I}\). Here, \(X_{I}\) is an observed matrix with \(n_{I}\) rows and
-\(q_{I}\) independent columns (variables), and both \(e_{I}\) and
+component, where \emph{relevant} \footnote{refer to footnote 2.}
+student-related variables \(X_{I}\), such as teaching method, and
+students' idiosyncratic errors \(e_{I}\) causally influence the latent
+variable representing students' writing-quality trait \(T_{I}\). The
+error term \(e_{I}\) captures variations in students' traits unexplained
+by \(X_{I}\). Here, \(X_{I}\) is an observed matrix with \(n_{I}\) rows
+and \(q_{I}\) independent columns (variables), and both \(e_{I}\) and
 \(T_{I}\) are latent vectors of length \(n_{I}\). Additionally, this
 branch shows how \(T_{I}\), along with \emph{relevant} \footnote{refer
   to footnote 2.} text-related variables \(X_{IA}\) (e.g., text length),
@@ -1964,17 +1964,17 @@ statistical model \ref{fig-cj16_stat} into a practical statistical tool
 for analyzing paired comparison data. Bayesian inference offers three
 main advantages in this context. First, it handles complex and
 overparameterized models, where the number of parameters exceeds the
-number of observations \citep{Baker_1998, Kim_et_al_1999}. This
-capability is essential for our implementation, as the model is indeed
+number of observations \citep{Baker_1998, Kim_et_al_1999}. This feature
+is essential for our implementation, as the proposed model is indeed
 overparameterized. Second, it incorporates prior information to
 constrain parameter estimates within plausible bounds, thereby
 mitigating estimation issues like non-convergence or improper solutions
 that often affect frequentist methods
-\citep{Martin_et_al_1975, Seaman_et_al_2011}. In our implementation, we
-use mainly use priors to define the error distribution, setting the
-scale of the latent variables \citep{Depaoli_2014}. Third, Bayesian
-inference supports robust inferences from small samples, where the
-asymptotic properties underlying frequentist methods are less reliable
+\citep{Martin_et_al_1975, Seaman_et_al_2011}. We primarily use this
+capability to define the error distribution and set the scale of latent
+variables \citep{Depaoli_2014}. Third, Bayesian inference supports
+robust inferences from small samples, where the asymptotic properties
+underlying frequentist methods are less reliable
 \citep{Baldwin_et_al_2013, Lambert_et_al_2006, Depaoli_2014}. This
 feature is particularly relevant in CJ experiments, as researchers often
 collect large volumes of paired comparisons but work with relatively
@@ -2061,9 +2061,9 @@ demands of contemporary CJ assessment contexts \citep{Kelly_et_al_2022},
 offering new insights into existing research and opening promising
 avenues for future inquiry.
 
-\subsection{Future research}\label{sec-discussion_RA}
+\subsection{Further research}\label{sec-discussion_RA}
 
-Five current and new research avenues deserve particular attention due
+Four current and new research avenues deserve particular attention due
 to their direct impact on the reliability and validity of trait
 estimates and the accuracy of statistical inferences. The following
 sections outline these avenues and explain how our model provides a
@@ -2198,107 +2198,113 @@ stimuli}\label{sec-discussion_RA3}
 
 {About the identification of `misfitting' judges and stimuli}
 
+\newpage{}
+
 \subsubsection{The effects of hierarchies on experimental design and
 inference}\label{sec-discussion_RA4}
 
 {About the hierarchical structure of stimuli}
 
-\subsubsection{The effects of non-dichotomous outcomes and
-multidimensional traits on CJ experiments}\label{sec-discussion_RA5}
+\newpage{}
 
-{About non-dichotomous outcomes and multidimensional traits}
+\subsection{Limitations and challenges}\label{sec-discussion_challenges}
 
-\subsection{Challenges}\label{sec-discussion_challenges}
+Drawing conclusions about the real world from observed data always
+requires assumptions, regardless of whether the data are observational
+or experimental \citep{Kohler_et_al_2019, Deffner_et_al_2022}. This
+study is no exception to this principle. By adopting causal inference as
+the theoretical backbone of our proposed framework, we necessarily rely
+on expert knowledge and assumptions about the variables' causal
+structure that are often untestable at the outset
+\citep{Hernan_et_al_2025}. As such, our framework does not yield
+automatic answers. Instead, it encourages researchers to formulate
+precise questions and to explicitly articulate their assumptions to
+develop a generalizable understanding of the CJ system
+\citep{Rohrer_et_al_2022, Deffner_et_al_2022, Sterner_et_al_2024}. This
+clarity is essential because a model's ability to produce accurate
+estimates and valid inferences depends heavily on how well the data and
+inferential goals align with its underlying assumptions
+\citep{Kohler_et_al_2019}--a property we cannot yet guarantee for our
+models. However, this theory-driven approach offers a key benefit: its
+lays the foundation for empirically testing the proposed causal
+assumptions \citep{Deffner_et_al_2022}.
 
-Despite its promise, this study presents several challenges that
-researchers must navigate--challenges common to many quantitative
-studies. They fall into two main categories. The first concerns the
-foundational knowledge researchers need to apply the proposed framework
-effectively. The second involves the increased attention researchers
-must now devote to their specific research context.
+In light of these limitation, this study presents several challenges
+that researchers must navigate--challenges common to many quantitative
+studies. These challenges fall into two main categories. The first
+concerns the foundational knowledge researchers need to apply our
+proposed framework effectively. The second involves the increased
+attention researchers must now devote to their specific research
+context.
 
 \subsubsection{Foundational knowledge}\label{sec-discussion_challenges1}
 
-Researchers must develop foundational knowledge in two critical areas:
-causal and Bayesian inference methods. One example that illustrates the
-importance of mastering causal inference is our common assumption that
-predictor variables are ``relevant'' to the research
-context--interpreting this relevance as their inclusion in a
+In terms of foundational knowledge, researchers must face two core
+challenges to use our framework effectively. First, they need a solid
+understanding of causal inference principles. Second, they must learn to
+translate the functional and probabilistic content of conceptual models
+into bespoke statistical models. One example that illustrates the
+importance of a sound knowledge of causal inference is the recurrent
+assumption that predictor variables are ``relevant'' to the research
+context---interpreting this relevance as their inclusion in a
 \emph{sufficient adjustment set}
 \citep{Pearl_2009, Pearl_et_al_2016, Morgan_et_al_2014}. However, we do
 not fully explore what this assumption entails or its implications for
-model specification, estimation, and inference. As a result, to apply
-the framework rigorously, researchers must engage deeply with these and
-other complex ideas, such as how SCMs encode functional and
-probabilistic information. To assist this effort, we have provided key
-references throughout the study to guide motivated readers toward a
-deeper understanding of these foundational concepts\footnote{refer to
-  footnote 1, 2, and the detailed online document referenced in the
-  Declarations section}.
+model specification, estimation, and inference. As a result, researchers
+must engage deeply with these and other complex ideas, such as how SCMs
+encode functional and probabilistic information. To assist this effort,
+we include key references throughout the study to guide motivated
+readers toward deeper understanding\footnote{refer to footnote 1, 2, and
+  the detailed online document referenced in the Declarations section}.
 
-Additionally, researchers must develop the expertise to translate
-context-specific conceptual models into bespoke statistical models using
-Bayesian inference methods. While Bayesian approaches introduce specific
-technical demands--such as familiarity with probabilistic programming
-languages (PPLs) and concepts like probability distributions and
-convergence--we argue they offer a more accessible path for many applied
-researchers. This is because Bayesian methods significantly reduce the
-need for specialized knowledge in areas like optimization theory and
-techniques, which are often necessary in frequentist approaches.
+Moreover, developing the skills to translate functional and
+probabilistic information into bespoke statistical models has its
+challenges. Although we argue that Bayesian inference methods offer a
+more accessible path for many applied researchers to develop these
+skills--since they reduce the need for specialized knowledge in areas
+like optimization theory, which frequentist methods often require--these
+methods still demand familiarity with technical concepts, such as
+probabilistic programming languages (PPLs), probability distributions,
+and convergence, that researchers must acquire. Nevertheless, to support
+researchers in building these skills, we include links to model code and
+alternative specifications in the \textbf{Declarations} section of this
+document.
 
 \subsubsection{Attention to the research
 context}\label{sec-discussion_challenges2}
 
-When applying our framework to a specific CJ research context,
-researchers face two additional challenges. First, they must verify that
-the conceptual model provides a \emph{faithful} \footnote{Avoid
-  confusing this term with the \emph{faithfulness assumption} described
-  in the causal inference literature. For further details, see footnote
-  1.} representation of the CJ system under study. Second, they must
-evaluate whether the model's statistical translation can accurately
-estimate the intended estimands (i.e., parameters) from empirical data.
-Notably, addressing these challenges requires careful attention because
-causal inference relies on expert knowledge and assumptions about the
-variables' causal structure that are often untestable at the outset
-\citep{Hernan_et_al_2025}. Consequently, the framework does not deliver
-automatic answers; instead, it encourages researchers to formulate
-precise questions and explicitly state their assumptions to build a
-generalizable understanding of the phenomenon under study, in this case,
-the CJ system \citep{Rohrer_et_al_2022, Deffner_et_al_2022}. This
-theory-driven foundation then supports the empirical testing of causal
-assumptions \citep{Deffner_et_al_2022}.
+Regarding attention to the research context, researchers face two
+additional challenges. First, they must verify that the conceptual model
+provides a \emph{faithful} \footnote{Avoid confusing this term with the
+  \emph{faithfulness assumption} described in the causal inference
+  literature. For further details, see footnote 1.} representation of
+the CJ system under study. Second, they must assess whether the
+statistical translation of the model can accurately estimate the
+intended estimands (i.e., parameters) from empirical data. To ensure a
+faithful representation of the CJ system, we encourage researchers to
+treat our conceptual and statistical models as starting points rather
+than universal solutions for all CJ designs or datasets. As such,
+researchers must tackle the challenge of adapting these models to their
+specific research contexts, paying close attention to causal
+assumptions, experimental design, and model specification. Nonetheless,
+our approach offers a transparent framework that enables researchers to
+explicitly articulate any new assumptions and design CJ experiments that
+support reliable and valid trait measurement.
 
-Thus, regarding the \emph{faithful} representation of the CJ system, we
-advise researchers to treat our conceptual and statistical models as
-starting points rather than universal solutions for all CJ designs or
-datasets. This consideration means that researchers must face the
-challenge of adapting these models to their specific research contexts,
-paying close attention to causal assumptions, experimental design, and
-model specification. This careful adaptation is essential because a
-model's ability to produce accurate estimates and valid inferences
-depends heavily on how well the data and inferential goals align with
-its underlying assumptions \citep{Kohler_et_al_2019}. Nevertheless, as
-\citet{Kohler_et_al_2019} points out, drawing conclusions about the real
-world from observed data always requires assumptions, regardless of
-whether the data are observational or experimental. In this context, our
-approach provides a transparent framework for researchers to clearly
-articulate these assumptions and design CJ experiments that support
-reliable and valid trait measurement.
-
-Finally, regarding the estimation capabilities of the statistical model,
-researchers must tackle the challenge of performing identification
-analysis. As outlined in Section~\ref{sec-theoretical},
+Conversely, to evaluate the estimation capabilities of the statistical
+model, researchers must tackle the challenge of performing
+identification analysis. As outlined in Section~\ref{sec-theoretical},
 \emph{identification analysis} determines whether a statistical model
 can accurately compute a given estimand (e.g., a parameter) based solely
 on its (causal) assumptions, independent of random variability
 \citep{Schuessler_et_al_2023}. Identification is crucial because it is a
 necessary condition for consistency. \emph{Consistency} is the property
-of an estimator (or model) whose estimates converge to the ``true''
-value of an estimand as data size approaches infinity
-\citep{Everitt_et_al_2010}. Logically, if researchers fail to identify a
-model, it cannot achieve consistency--even with infinite, error-free
-data. As a result, deriving meaningful insights from finite data becomes
-impossible \citep{Schuessler_et_al_2023}.
+of an estimator (e.g., a statistical model) whose estimates converge to
+the ``true'' value of an estimand as data size approaches infinity
+\citep{Everitt_et_al_2010}. Without identification, consistency is
+impossible--even with infinite, error-free data--and thus, meaningful
+inference from finite samples cannot be achieved
+\citep{Schuessler_et_al_2023}.
 
 Although performing identification analysis through formal derivations
 may appear to be a natural next step, we argue that the complexity of
@@ -2307,7 +2313,9 @@ Instead, simulation-based methods, such as power analysis, provide a
 more practical and flexible alternative, enabling researchers to examine
 the consistency of estimates without relying on cumbersome mathematical
 proofs. Nonetheless, the development of formal identification proofs
-remains a significant goal for future CJ research.
+remains a significant goal for future CJ research. Notably, our
+framework supports both approaches, providing a foundation for formal
+derivations as well as simulation-based methods.
 
 \newpage{}
 
