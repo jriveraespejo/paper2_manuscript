@@ -2224,14 +2224,15 @@ develop a generalizable understanding of the CJ system
 clarity is essential because a model's ability to produce accurate
 estimates and valid inferences depends heavily on how well the data and
 inferential goals align with its underlying assumptions
-\citep{Kohler_et_al_2019}--a property we cannot yet guarantee for our
-models. However, this theory-driven approach offers a key benefit: its
-lays the foundation for empirically testing the proposed causal
-assumptions \citep{Deffner_et_al_2022}.
+\citep{Kohler_et_al_2019}--a condition we cannot yet guarantee for our
+proposed models. Nevertheless, a key strength of this theory-driven
+approach is that it lays the foundation for empirically testing the
+proposed causal assumptions \citep{Deffner_et_al_2022}, as discussed in
+Section~\ref{sec-discussion_RA}.
 
-In light of these limitation, this study presents several challenges
-that researchers must navigate--challenges common to many quantitative
-studies. These challenges fall into two main categories. The first
+This theoretical commitment to causal inference also introduces several
+challenges that researchers must navigate--challenges common to many
+quantitative studies. These fall into two main categories. The first
 concerns the foundational knowledge researchers need to apply our
 proposed framework effectively. The second involves the increased
 attention researchers must now devote to their specific research
@@ -2239,57 +2240,59 @@ context.
 
 \subsubsection{Foundational knowledge}\label{sec-discussion_challenges1}
 
-In terms of foundational knowledge, researchers must face two core
-challenges to use our framework effectively. First, they need a solid
+To effectively apply our framework, researchers must tackle two main
+challenges related to foundational knowledge. First, they need a solid
 understanding of causal inference principles. Second, they must learn to
 translate the functional and probabilistic content of conceptual models
 into bespoke statistical models. One example that illustrates the
 importance of a sound knowledge of causal inference is the recurrent
 assumption that predictor variables are ``relevant'' to the research
-context---interpreting this relevance as their inclusion in a
+context--interpreting this relevance as their inclusion in a
 \emph{sufficient adjustment set}
 \citep{Pearl_2009, Pearl_et_al_2016, Morgan_et_al_2014}. However, we do
 not fully explore what this assumption entails or its implications for
-model specification, estimation, and inference. As a result, researchers
-must engage deeply with these and other complex ideas, such as how SCMs
-encode functional and probabilistic information. To assist this effort,
-we include key references throughout the study to guide motivated
-readers toward deeper understanding\footnote{refer to footnote 1, 2, and
-  the detailed online document referenced in the Declarations section}.
+model specification, estimation, and inference. Consequently,
+researchers must deeply engage with these and other complex ideas,
+including how SCMs encode functional and probabilistic information. To
+assist this effort, we include key references throughout the study to
+guide motivated readers toward a deeper understanding of these concepts
+\footnote{refer to footnote 1, 2, and the detailed online document
+  referenced in the Declarations section}.
 
-Moreover, developing the skills to translate functional and
-probabilistic information into bespoke statistical models has its
-challenges. Although we argue that Bayesian inference methods offer a
-more accessible path for many applied researchers to develop these
-skills--since they reduce the need for specialized knowledge in areas
-like optimization theory, which frequentist methods often require--these
-methods still demand familiarity with technical concepts, such as
-probabilistic programming languages (PPLs), probability distributions,
-and convergence, that researchers must acquire. Nevertheless, to support
-researchers in building these skills, we include links to model code and
-alternative specifications in the \textbf{Declarations} section of this
-document.
+Developing the skills to translate conceptual models into bespoke
+statistical models also presents challenges. Although Bayesian inference
+methods offer a more accessible path for many applied researchers to
+develop these skills--by reducing the need for specialized knowledge in
+areas like optimization theory, which frequentist methods often
+require--they still demand familiarity with other technical concepts
+such as probabilistic programming languages (PPLs), probability
+distributions, and convergence, which researchers may find hard to
+master. Thus, to support this skill development, we include links to the
+statistical model code and alternative specifications in the
+\textbf{Declarations} section of this document.
 
 \subsubsection{Attention to the research
 context}\label{sec-discussion_challenges2}
 
-Regarding attention to the research context, researchers face two
-additional challenges. First, they must verify that the conceptual model
-provides a \emph{faithful} \footnote{Avoid confusing this term with the
-  \emph{faithfulness assumption} described in the causal inference
+Researchers face two additional challenges when applying our framework
+to their specific research context. First, they must verify that the
+conceptual model provides a \emph{faithful} \footnote{Avoid confusing
+  this term with the \emph{faithfulness assumption}
+  \citep{Neal_2020, Hernan_et_al_2025} described in the causal inference
   literature. For further details, see footnote 1.} representation of
-the CJ system under study. Second, they must assess whether the
+the CJ system under study. Second, they need to assess whether the
 statistical translation of the model can accurately estimate the
 intended estimands (i.e., parameters) from empirical data. To ensure a
 faithful representation of the CJ system, we encourage researchers to
 treat our conceptual and statistical models as starting points rather
-than universal solutions for all CJ designs or datasets. As such,
-researchers must tackle the challenge of adapting these models to their
-specific research contexts, paying close attention to causal
-assumptions, experimental design, and model specification. Nonetheless,
-our approach offers a transparent framework that enables researchers to
-explicitly articulate any new assumptions and design CJ experiments that
-support reliable and valid trait measurement.
+than universal solutions for all CJ designs or datasets. This
+consideration means researchers must tackle the challenge of adapting
+these models to their specific research contexts, paying close attention
+to causal assumptions, experimental design, and model specification. Our
+approach supports this process by offering a transparent framework that
+helps researchers explicitly articulate these new assumptions and
+supports the design of CJ experiments that can yield reliable and valid
+inferences.
 
 Conversely, to evaluate the estimation capabilities of the statistical
 model, researchers must tackle the challenge of performing
@@ -2313,9 +2316,10 @@ Instead, simulation-based methods, such as power analysis, provide a
 more practical and flexible alternative, enabling researchers to examine
 the consistency of estimates without relying on cumbersome mathematical
 proofs. Nonetheless, the development of formal identification proofs
-remains a significant goal for future CJ research. Notably, our
-framework supports both approaches, providing a foundation for formal
-derivations as well as simulation-based methods.
+remains a significant goal for future CJ research. Importantly, our
+framework supports both approaches, as it provides the probabilistic
+foundation for formal derivations and the necessary statistical
+structure for simulation-based methods.
 
 \newpage{}
 
