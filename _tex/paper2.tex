@@ -305,8 +305,9 @@ measurement reliability and validity, and improving statistical accuracy
 in hypothesis testing, this approach offers two key advantages. First,
 it clarifies the interactions among all actors and processes involved in
 CJ assessments. Second, it shifts the current comparative data analysis
-paradigm from passively accepting the BTL model assumptions to actively
-testing whether those assumptions fit the data under analysis.
+paradigm from passively accepting Case V and the BTL model assumptions
+to actively testing whether those assumptions fit the data under
+analysis.
 
 As a result, the study divides its content into six main sections.
 Section~\ref{sec-thurstone_theory} provides an overview of Thurstone's
@@ -610,15 +611,13 @@ model's discriminal difference distribution aligns with the thick
 continuous line for \(\sigma_{B}-\sigma_{A}=0\), while the \emph{true}
 discriminal difference follows any discontinuous line where
 \(\sigma_{B}-\sigma_{A} \neq 0\). Furthermore, if researchers
-acknowledge that misfit statistics may represent texts with different
-dispersions or outlying observations, the common CJ practice of
-excluding stimuli based on these statistics, as seen in
-\citet{Pollitt_2012a}, \citet{Pollitt_2012b},
-\citet{vanDaal_et_al_2016}, and \citet{Goossens_et_al_2018}, may
-unintentionally discard valuable information, introducing bias into the
-trait estimates \citep{Zimmerman_1994, McElreath_2020}. The direction
-and magnitude of these biases remain unpredictable, as they depend on
-which stimuli researchers exclude from the analysis.
+acknowledge that \emph{misfit statistics} may represent texts with
+different dispersions or outlying observations, the common CJ practice
+of excluding stimuli based on these statistics may unintentionally
+discard valuable information \citep{Miller_2023}, introducing bias into
+the trait estimates \citep{Zimmerman_1994, McElreath_2020}. The
+direction and magnitude of these biases remain unpredictable, as they
+depend on which stimuli researchers exclude from the analysis.
 
 \subsubsection{The assumption of zero correlation between
 stimuli}\label{sec-theory-issue1b}
@@ -723,9 +722,9 @@ from the shared consensus
 \citep{Pollitt_2012a, Pollitt_2012b, vanDaal_et_al_2016, Goossens_et_al_2018, Wu_et_al_2022},
 and may appear as outliers under the BTL model
 \citep{Wu_et_al_2022}--risk discarding valuable information and
-introducing bias into trait estimates. The direction and magnitude of
-these biases remain unpredictable, as they depend on which judges
-researchers exclude from the analysis
+introducing bias into trait estimates \citep{Miller_2023}. The direction
+and magnitude of these biases remain unpredictable, as they depend on
+which judges researchers exclude from the analysis
 \citep{Zimmerman_1994, OHagan_2018, McElreath_2020}.
 
 \subsection{The disconnect between trait measurement and hypothesis
@@ -2028,12 +2027,15 @@ reliability of the resulting inferences
 Thus, to address the limitations of Thurstone's Case V and the BTL
 model, this study extends Thurstone's general form using a systematic,
 integrated approach that combines causal and Bayesian inference methods.
-The approach begins by formulating a conceptual model represented by a
-Structural Causal Model (SCM) and a Directed Acyclic Graph (DAG). This
+The approach begins with the development of a conceptual model,
+represented as a Structural Causal Model (SCM) and a Directed Acyclic
+Graph (DAG)
+\citep{Pearl_2009, Pearl_et_al_2016, Gross_et_al_2018, Neal_2020}. This
 model integrates Thurstone's core theoretical principles, such as the
 discriminal processes of stimuli, alongside key CJ assessment design
 features, including judges' bias, sampling procedures, and comparison
-mechanisms, thereby disentangling the causal processes in the CJ system.
+mechanisms, thereby disentangling the causal processes underlying the CJ
+system.
 
 The approach then translates the SCM into a bespoke statistical model
 that allows researchers to analyze CJ data when violations to the
@@ -2054,23 +2056,23 @@ statistical inferences.
 Beyond these potential benefits, the approach offers two additional
 advantages. First, it clarifies the roles and interactions of all actors
 and processes involved in CJ assessments. Second, it shifts the analytic
-paradigm from passively accepting the assumptions of the BTL model to
-actively testing their fit with observed data. Together, these
+paradigm from passively accepting the assumptions of Case V and the BTL
+model to actively testing their fit with observed data. Together, these
 advantages establish a principled framework for evaluating best
 practices in designing CJ assessments, one that better aligns with the
 demands of contemporary CJ contexts \citep{Kelly_et_al_2022}, offering
 new insights into existing research and opening promising avenues for
 future inquiry.
 
-\subsection{Future research directions based on this study's
+\subsection{Future research directions using our
 approach}\label{sec-discussion_RA}
 
 Among the many potential directions for future research--both current
 and new--three avenues deserve particular attention due to their direct
-impact on the reliability and validity of trait estimates, as well as on
-the accuracy of statistical inferences. The following sections outline
-these avenues and explain how our approach provides a rigorous research
-framework to investigate them.
+impact on the reliability and validity of CJ trait estimates, as well as
+on the accuracy of statistical inferences. The following sections
+outline these avenues and explain how our approach facilitates their
+investigation.
 
 \subsubsection{The impact of sampling and comparison
 mechanisms}\label{sec-discussion_RA1}
@@ -2084,10 +2086,10 @@ on trait reliability
 or proposed practical guidelines for the number of comparisons judges
 should make \citep{Verhavert_et_al_2019, Crompvoets_et_al_2022}. While
 these studies offer valuable insights, they often overlook the broader
-role these mechanisms play within the CJ system. Moreover, as this
-oversight likely stems from a broader lack of conceptual clarity about
-how these mechanisms function within the system, this study formally
-incorporates these mechanisms into CJ's conceptual model.
+role these mechanisms play within the CJ system. As this oversight
+likely stems from a broader lack of conceptual clarity about how these
+mechanisms function within the system, this study decided to formally
+incorporate these mechanisms into CJ's conceptual model.
 
 The explicit integration of the sampling and comparison mechanisms
 offers a new perspective on how these mechanisms shape the CJ process.
@@ -2113,28 +2115,27 @@ missing data during analysis without introducing bias
 \citep{Everitt_et_al_2010, Kohler_et_al_2019, Neal_2020}.
 
 However, many modern CJ applications rely on more complex assessment
-designs in which the sampling and comparison mechanisms introduce more
-intricate forms of missingness--such as \emph{missing at random} (MAR)
-or \emph{missing not at random} (MNAR) \citep{Little_et_al_2020}. A
-prominent example is the previously discussed ACJ designs, where prior
+designs, in which the sampling and comparison mechanisms introduce more
+intricate forms of missingness --- such as \emph{missing at random}
+(MAR) or \emph{missing not at random} (MNAR) \citep{Little_et_al_2020}.
+A prominent example is the previously discussed ACJ designs, where prior
 judgment outcomes inform the selection of stimulus pairs for subsequent
 comparisons \citep{Pollitt_2012a, Pollitt_2012b, Bramley_2015}. This
-outcome-informed pair selection suggests that the comparison mechanism
-is outcome-dependent, potentially classifying ACJ as a generator of MNAR
-data. This, in turn, facilitates a more nuanced understanding of the
-mixed evidence surrounding ACJ's capabilities. While some studies report
-that the method improves trait reliability
-\citep{Pollitt_et_al_2003, Pollitt_2012a, Pollitt_2012b}, others argue
-that it artificially inflates these gains
-\citep{Bramley_2015, Bramley_et_al_2019, Crompvoets_et_al_2020, Crompvoets_et_al_2022},
-potentially as a result of outcome-dependent missingness.
+pair selection process suggests that ACJ's comparison mechanism is
+outcome-dependent, potentially classifying the method as a generator of
+MNAR data. If this classification holds, the mixed findings on ACJ's
+capabilities become more comprehensible: some studies find that the
+method improves trait reliability
+\citep{Pollitt_et_al_2003, Pollitt_2012a, Pollitt_2012b}, while others
+contend that it artificially inflates these gains
+\citep{Bramley_2015, Bramley_et_al_2019, Crompvoets_et_al_2020, Crompvoets_et_al_2022}.
 
 Nevertheless, regardless of the underlying missingness mechanisms, any
 CJ assessment design would benefit from explicitly defining its
-assumptions--a practice supported by our proposed approach. This clarity
-enables researchers to evaluate how the sampling and comparison
-mechanisms affect trait estimation and statistical inference within each
-design. Such assessments are particularly relevant given the common
+assumptions--a practice supported by our approach. This clarity enables
+researchers to evaluate how the sampling and comparison mechanisms
+affect trait estimation and statistical inference within each design.
+Such assessments are particularly relevant given the common
 misconception in the CJ literature that Thurstone's model can naturally
 handle even non-random missing data without compromising the reliability
 or validity of trait estimates \citep{Bramley_2008}.
@@ -2182,26 +2183,94 @@ characteristics when evaluating complex, multidimensional traits
 and these characteristics account for variation in judgment accuracy
 \citep{Gill_et_al_2013, vanDaal_et_al_2017, vanDaal_2020, Gijsen_et_al_2021},
 it is reasonable to expect that judges' assessments also vary with
-individual attributes such as gender, age, culture, income, education,
-training, or expertise
-\citep{Kelly_et_al_2022, Bartholomew_et_al_2020a}. Thus, building on the
-discussion in Section~\ref{sec-discussion_RA1}, researchers could
-investigate how the selection of judges influences the formation of a
-``shared consensus'' and whether these individual attributes introduce
-systematic biases or distortions in the observed trait distribution
+attributes such as gender, age, culture, income, education, training, or
+expertise \citep{Kelly_et_al_2022}. Prior studies support this view
+\citep{Bartholomew_et_al_2020a, McMahon_et_al_2015}. Thus, building on
+the discussion in Section~\ref{sec-discussion_RA1}, researchers could
+further explore how judges' selection influences the formation of a
+``shared consensus'' and whether these attributes introduce systematic
+biases or distortions in the observed trait distribution
 \citep{Deffner_et_al_2022}. Furthermore, if such attributes indeed
-undermine the assumption of ``sample-freeness,'' then it becomes
-essential to explore strategies to control their influence and to
-determine how many judges--and how many judgments per judge--are needed
-to produce reliable trait estimates in these contexts. Additionally, it
-is worth considering whether \emph{repeated measures designs}, in which
-judges evaluate the same stimulus pairs multiple times
-\citep{Lawson_2015}, can improve judgment consistency and accuracy.
+undermine the assumption of ``sample-freeness,'' researchers should
+explore ways to control their influence and determine how many
+judges--and how many judgments per judge--are needed to produce reliable
+trait estimates in these contexts. Additionally, it is worth considering
+whether \emph{repeated measures designs}, in which judges evaluate the
+same stimulus pairs multiple times \citep{Lawson_2015}, can improve
+judgment consistency and accuracy. Our approach provides the necessary
+structure to rigorously investigate these questions.
 
 \subsubsection{The identification of `misfitting' stimuli and
 judges}\label{sec-discussion_RA3}
 
-{LAST THING TO DO}
+Although the CJ literature clearly defines \emph{misfit} judges and
+stimuli, researchers have rarely examined how these observations relate
+to Thurstonian theory. In particular, they have not identified which
+elements of Thurstone's theory might explain the occurrence of misfits.
+This disconnect likely stems from the fact that CJ researchers derive
+misfit statistics from methods such as residual analysis and outlier
+detection rather than from Thurstonian principles
+\citep{Pollitt_2012a, Pollitt_2012b, Wu_et_al_2022}. They typically
+define \emph{misfit judges} as those whose assessments diverge
+significantly from the ``shared consensus''
+\citep{Pollitt_2012a, Pollitt_2012b, vanDaal_et_al_2016, Goossens_et_al_2018, Wu_et_al_2022},
+and \emph{misfit stimuli} as those that elicit more judgment
+discrepancies than others
+\citep{Pollitt_2004, Pollitt_2012a, Pollitt_2012b, Goossens_et_al_2018}.
+Both definitions closely mirror the statistical concept of
+outliers--that is, observations that deviate markedly from the rest of
+the sample in which they occur \citep{Grubbs_1969}. However, this
+resemblance extends beyond these definitions. CJ researchers also
+identify misfits using standard outlier detection procedures, such as
+transforming BTL model residuals into statistics of interest and
+comparing them against a predefined threshold.
+
+{After identifying misfit observations, researchers often propose
+various hypotheses to explain their presence. Yet, without providing
+evidence for any of these explanations, they typically exclude these
+observations from analysis. This exclusion process raises three major
+concerns: one related to the reliability of the methods used to identify
+misfits, a second concerning the potential impact of their removal on
+trait estimates and inferences, and a third regarding the hypotheses
+used to explain the presence and exclusion of misfits.}
+
+{First, regarding the reliability of identification methods, it is
+relevant to note that outlying observations can only be defined relative
+to a specific model \citep{McElreath_2020}. Consequently, methods based
+on models such as the BTL--which rest on strong assumptions--should be
+treated with caution, as these assumptions may prevent the model from
+accurately capturing the underlying data-generating process of the CJ
+system, thereby potentially compromising the identification of misfits.}
+
+{Second, concerning the impact of removing misfits, the statistical
+literature warns that ad-hoc outlier exclusion procedures risk
+discarding valuable information \citep{Miller_2023} and introducing bias
+into trait estimates. The direction and magnitude of this bias are often
+unpredictable, as they depend on which observations researchers exclude
+from the analysis \citep{Zimmerman_1994, OHagan_2018, McElreath_2020}.}
+
+{Lastly, regarding the hypotheses explaining the presence and exclusion
+of misfits, it is important to note that a significant number of these
+hypotheses could not be tested within the BTL model due to its strong
+assumptions and limited flexibility. This is the reason why there is a
+lack of supporting evidence for misfit observations. In contrast, our
+approach enables researchers to test these hypotheses. For instance,
+researchers could examine whether misfit judges are simply those who
+exhibit (an outlying degree of) systematic bias or whether they display
+greater variability in their judgments compared to their peers.
+Similarly, in the case of misfit stimuli, researchers could investigate
+whether their status reflects an increased variability in their
+discriminal processes or stems from their classification as outlying
+stimuli.}
+
+{Moreover, since outliers are not necessarily ``bad data''
+\citep{McElreath_2020}, our approach offers a principled alternative
+that retains misfits in the analysis without compromising trait
+estimation. This alternative involves adapting our proposed models into
+more sophisticated, robust measurement models
+\citep{Wainer_et_al_1978}--a broad class of procedures designed to
+reduce the sensitivity of parameter estimates to mild or moderate
+departures from model assumptions \citep{Everitt_et_al_2010}.}
 
 \subsection{Study limitations and practical challenges for applied CJ
 researchers}\label{sec-discussion_challenges}
@@ -2228,7 +2297,7 @@ its causal assumptions \citep{Deffner_et_al_2022}, which are well
 supported by both theory and existing evidence (see
 Section~\ref{sec-theory-issues} and Section~\ref{sec-theoretical}).
 
-Conversely, this theoretical commitment to causal inference also
+Moreover, this theoretical commitment to causal inference also
 introduces several practical challenges that applied CJ researchers must
 navigate. These fall into two main categories: first, acquiring the
 foundational knowledge necessary to apply the approach effectively; and
