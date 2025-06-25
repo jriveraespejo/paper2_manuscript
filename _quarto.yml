@@ -61,6 +61,9 @@ format:
   #docx: default
   #jats: default
   elsevier-pdf:
+    header-includes:
+      - \usepackage{float}
+      - \floatplacement{table}{H}
     keep-tex: true
     journal:
       name: Psychometrika
