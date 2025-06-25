@@ -1439,6 +1439,11 @@ Conversely, to evaluate the estimation capabilities of the statistical model, re
 <!-- Develop how you get the vectors S and C and sampling weights when you know the extension of the population. (See https://mc-stan.org/docs/stan-users-guide/poststratification.html ) -->
 
 
+# Conclussion {#sec-conclussion}
+
+This paper underscores the need to extend Thurstone's theory to meet the demands of contemporary empirical CJ research. It specifically advocates for the development of bespoke CJ models aligned with the underlying data-generating processes of specific CJ assessment designs, as these models have the potential to strengthen the robustness of trait estimates and the clarity of inferences. The work also outlines a clear trajectory for advancing CJ research in both theoretical and applied domains. Finally, the study also lays the groundwork for broader applications, encouraging researchers across the social sciences to adopt more robust and interpretable methodologies.
+
+
 {{< pagebreak >}}
 
 # Declarations {.unnumbered .appendix appendix-style=plain}
@@ -1464,7 +1469,6 @@ Conversely, to evaluate the estimation capabilities of the statistical model, re
 **CRediT authorship contribution statement:** *Conceptualization:* J.M.R.E, T.vD., S.DM., and S.G.; *Methodology:* J.M.R.E, T.vD., and S.DM.; *Software:* J.M.R.E.; *Validation:* J.M.R.E.; *Formal Analysis:* J.M.R.E.; *Investigation:* J.M.R.E; *Resources:* T.vD. and S.DM.; *Data curation:* J.M.R.E.; *Writing - original draft:* J.M.R.E.; *Writing - review and editing:* T.vD., S.DM., and S.G.; *Visualization:* J.M.R.E.; *Supervision:* S.G. and S.DM.; *Project administration:* S.G. and S.DM.; *Funding acquisition:* S.G. and S.DM.
 
 <!-- **Acknowledgements:** -->
-
 
 {{< pagebreak >}}
 
@@ -1907,7 +1911,6 @@ Nevertheless, researchers can manage the complexity of the likelihood by assumin
 $$
 P(X_{1}, X_{2}, \dots, X_{P} \mid \theta) = P(X_{1} \mid \theta) \prod^{P}_{p=2} P(X_{i} \mid pa(X_{i}), \theta )
 $$ {#eq-like_BNF}
-
 
 {{< pagebreak >}}
 
