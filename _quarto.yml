@@ -9,8 +9,8 @@ manuscript:
       repo: https://github.com/jriveraespejo/paper2_manuscript
     - text: 'Slides, UK 2025'
       href: https://jriveraespejo.github.io/UK_presentation_2025/presentation.html
-    - text: Submission (2nd version)
-      href: submission/paper2_v4.0.pdf
+    - text: Submission (Final version)
+      href: submission/paper2_v5.0.pdf
     - text: 'Figures'
       icon: file-code-fill
       href: code/CJfig.R
