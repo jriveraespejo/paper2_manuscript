@@ -70,7 +70,7 @@
    \AtBeginDocument{\@twosidefalse\@mparswitchfalse}}
 \DeclareOption{nopreprintline}{\global\nopreprintlinetrue}
 \DeclareOption{final}{\gdef\@blstr{1}\global\preprintfalse}
-\DeclareOption{review}{\global\preprinttrue\gdef\@blstr{1.7}} % original: 1.5
+\DeclareOption{review}{\global\preprinttrue\gdef\@blstr{1.5}} % original=1.5, previous=1.7
 \DeclareOption{authoryear}{\xdef\@biboptions{round,authoryear}}
 \DeclareOption{number}{\xdef\@biboptions{numbers}}
 \DeclareOption{numbers}{\xdef\@biboptions{numbers}}
