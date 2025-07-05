@@ -6,7 +6,7 @@ manuscript:
   meca-bundle: "manuscript-meca.zip"
   code-links:
     - text: 'Github repository'
-      repo: https://github.com/jriveraespejo/paper2_manuscript.git
+      href: https://github.com/jriveraespejo/paper2_manuscript.git
     - text: 'Slides, UK 2025'
       href: https://jriveraespejo.github.io/UK_presentation_2025/presentation.html
     - text: Submission (pdf)
