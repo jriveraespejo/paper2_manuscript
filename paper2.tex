@@ -1,0 +1,3296 @@
+% Options for packages loaded elsewhere
+\PassOptionsToPackage{unicode}{hyperref}
+\PassOptionsToPackage{hyphens}{url}
+\PassOptionsToPackage{dvipsnames,svgnames,x11names}{xcolor}
+%
+\documentclass[
+  authoryear,
+  review,
+  1p]{elsarticle}
+
+\usepackage{amsmath,amssymb}
+\usepackage{iftex}
+\ifPDFTeX
+  \usepackage[T1]{fontenc}
+  \usepackage[utf8]{inputenc}
+  \usepackage{textcomp} % provide euro and other symbols
+\else % if luatex or xetex
+  \usepackage{unicode-math}
+  \defaultfontfeatures{Scale=MatchLowercase}
+  \defaultfontfeatures[\rmfamily]{Ligatures=TeX,Scale=1}
+\fi
+\usepackage{lmodern}
+\ifPDFTeX\else  
+    % xetex/luatex font selection
+\fi
+% Use upquote if available, for straight quotes in verbatim environments
+\IfFileExists{upquote.sty}{\usepackage{upquote}}{}
+\IfFileExists{microtype.sty}{% use microtype if available
+  \usepackage[]{microtype}
+  \UseMicrotypeSet[protrusion]{basicmath} % disable protrusion for tt fonts
+}{}
+\makeatletter
+\@ifundefined{KOMAClassName}{% if non-KOMA class
+  \IfFileExists{parskip.sty}{%
+    \usepackage{parskip}
+  }{% else
+    \setlength{\parindent}{0pt}
+    \setlength{\parskip}{6pt plus 2pt minus 1pt}}
+}{% if KOMA class
+  \KOMAoptions{parskip=half}}
+\makeatother
+\usepackage{xcolor}
+\setlength{\emergencystretch}{3em} % prevent overfull lines
+\setcounter{secnumdepth}{5}
+% Make \paragraph and \subparagraph free-standing
+\ifx\paragraph\undefined\else
+  \let\oldparagraph\paragraph
+  \renewcommand{\paragraph}[1]{\oldparagraph{#1}\mbox{}}
+\fi
+\ifx\subparagraph\undefined\else
+  \let\oldsubparagraph\subparagraph
+  \renewcommand{\subparagraph}[1]{\oldsubparagraph{#1}\mbox{}}
+\fi
+
+
+\providecommand{\tightlist}{%
+  \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}\usepackage{longtable,booktabs,array}
+\usepackage{calc} % for calculating minipage widths
+% Correct order of tables after \paragraph or \subparagraph
+\usepackage{etoolbox}
+\makeatletter
+\patchcmd\longtable{\par}{\if@noskipsec\mbox{}\fi\par}{}{}
+\makeatother
+% Allow footnotes in longtable head/foot
+\IfFileExists{footnotehyper.sty}{\usepackage{footnotehyper}}{\usepackage{footnote}}
+\makesavenoteenv{longtable}
+\usepackage{graphicx}
+\makeatletter
+\def\maxwidth{\ifdim\Gin@nat@width>\linewidth\linewidth\else\Gin@nat@width\fi}
+\def\maxheight{\ifdim\Gin@nat@height>\textheight\textheight\else\Gin@nat@height\fi}
+\makeatother
+% Scale images if necessary, so that they will not overflow the page
+% margins by default, and it is still possible to overwrite the defaults
+% using explicit options in \includegraphics[width, height, ...]{}
+\setkeys{Gin}{width=\maxwidth,height=\maxheight,keepaspectratio}
+% Set default figure placement to htbp
+\makeatletter
+\def\fps@figure{htbp}
+\makeatother
+
+\makeatletter
+\@ifpackageloaded{caption}{}{\usepackage{caption}}
+\AtBeginDocument{%
+\ifdefined\contentsname
+  \renewcommand*\contentsname{Table of contents}
+\else
+  \newcommand\contentsname{Table of contents}
+\fi
+\ifdefined\listfigurename
+  \renewcommand*\listfigurename{List of Figures}
+\else
+  \newcommand\listfigurename{List of Figures}
+\fi
+\ifdefined\listtablename
+  \renewcommand*\listtablename{List of Tables}
+\else
+  \newcommand\listtablename{List of Tables}
+\fi
+\ifdefined\figurename
+  \renewcommand*\figurename{Figure}
+\else
+  \newcommand\figurename{Figure}
+\fi
+\ifdefined\tablename
+  \renewcommand*\tablename{Table}
+\else
+  \newcommand\tablename{Table}
+\fi
+}
+\@ifpackageloaded{float}{}{\usepackage{float}}
+\floatstyle{ruled}
+\@ifundefined{c@chapter}{\newfloat{codelisting}{h}{lop}}{\newfloat{codelisting}{h}{lop}[chapter]}
+\floatname{codelisting}{Listing}
+\newcommand*\listoflistings{\listof{codelisting}{List of Listings}}
+\makeatother
+\makeatletter
+\makeatother
+\makeatletter
+\@ifpackageloaded{caption}{}{\usepackage{caption}}
+\@ifpackageloaded{subcaption}{}{\usepackage{subcaption}}
+\makeatother
+\journal{Psychometrika}
+\ifLuaTeX
+  \usepackage{selnolig}  % disable illegal ligatures
+\fi
+\usepackage[]{natbib}
+\bibliographystyle{elsarticle-harv}
+\usepackage{bookmark}
+
+\IfFileExists{xurl.sty}{\usepackage{xurl}}{} % add URL line breaks if available
+\urlstyle{same} % disable monospaced font for URLs
+\hypersetup{
+  pdftitle={Let's talk about Thurstone \& Co.: An information-theoretical model for comparative judgments, and its statistical translation},
+  pdfauthor={Jose Manuel Rivera Espejo; Tine van van Daal; Sven De De Maeyer; Steven Gillis},
+  pdfkeywords={causal inference, directed acyclic graphs, structural
+causal models, bayesian statistical methods, thurstonian
+model, comparative judgement, probability, statistical modeling},
+  colorlinks=true,
+  linkcolor={blue},
+  filecolor={Maroon},
+  citecolor={Blue},
+  urlcolor={Blue},
+  pdfcreator={LaTeX via pandoc}}
+
+\setlength{\parindent}{6pt}
+\begin{document}
+
+\begin{frontmatter}
+\title{Let's talk about Thurstone \& Co.: An information-theoretical
+model for comparative judgments, and its statistical translation}
+\author[1]{Jose Manuel Rivera Espejo%
+\corref{cor1}%
+}
+ \ead{JoseManuel.RiveraEspejo@uantwerpen.be} 
+\author[1]{Tine van Daal%
+%
+}
+ \ead{tine.vandaal@uantwerpen.be} 
+\author[1]{Sven De Maeyer%
+%
+}
+ \ead{sven.demaeyer@uantwerpen.be} 
+\author[2]{Steven Gillis%
+%
+}
+ \ead{steven.gillis@uantwerpen.be} 
+
+\affiliation[1]{organization={University of Antwerp, Training and
+education sciences},,postcodesep={}}
+\affiliation[2]{organization={University of
+Antwerp, Linguistics},,postcodesep={}}
+
+\cortext[cor1]{Corresponding author}
+
+
+
+
+        
+\begin{abstract}
+This study revisits Thurstone's law of comparative judgment (CJ) by
+addressing two key issues in the CJ literature. First, it critiques the
+reliance on Thurstone's Case V assumptions and the Bradley-Terry-Luce
+(BTL) model in the analysis of CJ data. Specifically, it argues that
+while the assumptions of equal discriminal dispersions and zero
+correlation simplify the trait measurement model, they may fail to
+capture the complexity of some traits or stimuli, potentially leading to
+unreliable and inaccurate trait estimates. Second, the study highlights
+the disconnect between trait measurement and statistical inference in CJ
+applications. It contends that while separating these processes
+simplifies the analysis, this practice can also undermine the resulting
+statistical inferences. To address these issues, this study extends
+Thurstone's general form using a systematic, integrated approach based
+on causal and Bayesian inference methods. This extension integrates CJ's
+core theoretical principles alongside key assessment design features. It
+then translates these elements into a statistical model for analyzing
+dichotomous CJ data. Finally, the study emphasizes the relevance of this
+extension for contemporary empirical CJ research, stressing the need for
+CJ models tailored to the experiments and data assumptions. It also
+encourages researchers across the social sciences to adopt more robust
+and interpretable methodologies.
+\end{abstract}
+
+
+
+
+
+\begin{keyword}
+    causal inference \sep directed acyclic graphs \sep structural causal
+models \sep bayesian statistical methods \sep thurstonian
+model \sep comparative judgement \sep probability \sep 
+    statistical modeling
+\end{keyword}
+\end{frontmatter}
+    
+\newcommand{\dsep}{\:\bot\:}
+\newcommand{\ndsep}{\:\not\bot\:}
+
+\section{Introduction}\label{sec-introduction}
+
+In \emph{comparative judgment} (CJ) studies, judges assess a specific
+trait or attribute across different stimuli by performing pairwise
+comparisons \citep{Thurstone_1927a, Thurstone_1927b}. Each comparison
+produces a dichotomous outcome, indicating which stimulus is perceived
+to have a higher trait level. For example, judges can compare pairs of
+written texts (the stimuli) to determine the relative writing quality
+each text exhibit (the trait)
+\citep{Pollitt_2012b, vanDaal_et_al_2016, Lesterhuis_2018_thesis, Coertjens_et_al_2017, Goossens_et_al_2018, Bouwer_et_al_2023}.
+
+Numerous studies have documented the effectiveness of CJ in assessing
+traits and competencies over the past decade. These studies have
+highlighted three key strengths of the method: its reliability, its
+validity, and practical applicability. Research on reliability suggests
+that CJ requires a relatively modest number of pairwise comparisons
+\citep{Verhavert_et_al_2019, Crompvoets_et_al_2022} to generate trait
+scores that are as precise and consistent as those generated by other
+assessment methods
+\citep{Coertjens_et_al_2017, Goossens_et_al_2018, Bouwer_et_al_2023}. In
+addition, the evidence suggests that the reliability and time efficiency
+of CJ are comparable, if not superior, to those of other assessment
+methods when employing adaptive comparison algorithms
+\citep{Pollitt_2012b, Verhavert_et_al_2022, Mikhailiuk_et_al_2021}.
+Meanwhile, research on validity indicates the capacity of CJ scores to
+represent accurately the traits under measurement
+\citep{Whitehouse_2012, vanDaal_et_al_2016, Lesterhuis_2018_thesis, Bartholomew_et_al_2018, Bouwer_et_al_2023}.
+Lastly, research on its practical applicability highlights CJ's
+versatility across educational and non-educational contexts
+\citep{Kimbell_2012, Jones_et_al_2015, Bartholomew_et_al_2018, Jones_et_al_2019, Marshall_et_al_2020, Bartholomew_et_al_2020b, Boonen_et_al_2020}.
+
+Nevertheless, despite the increasing number of CJ studies, research in
+this domain remains unsystematic and fragmented, leaving several
+critical issues unresolved. This study identifies and discusses two
+prominent issues in the CJ literature that can undermine the reliability
+and validity of CJ's trait estimates. First, it critiques the widespread
+reliance on Thurstone's Case V assumptions \citep{Thurstone_1927b} and,
+by extension, the Bradley-Terry-Luce (BTL) model
+\citep{Bradley_et_al_1952, Luce_1959} in the analysis of CJ data.
+Specifically, this study argues that while the assumptions of equal
+discriminal dispersions and zero correlation between stimuli simplify
+the trait measurement model, they may fail to capture the complexity of
+some traits or account for heterogeneous stimuli, potentially leading to
+unreliable and inaccurate trait estimates. Second, the study highlights
+the disconnect between trait measurement and hypothesis testing
+procedures in CJ applications. In particular, it contends that while
+separating these procedures simplifies the analysis of CJ data, this
+practice can also undermine the resulting statistical inferences
+\citep{McElreath_2020, Kline_et_al_2023, Hoyle_et_al_2023}.
+
+To address these issues, this study aims to extend Thurstone's general
+form through a systematic and integrated approach that combines causal
+and Bayesian inference methods. This extension integrates Thurstone's
+core theoretical principles alongside key CJ assessment design features,
+such as the selection of judges, stimuli, and comparisons. In addition
+to potentially enhancing measurement reliability and validity, and
+improving statistical accuracy in hypothesis testing, this approach
+offers two key advantages. First, it clarifies the interactions among
+all actors and processes involved in CJ assessments. Second, it shifts
+the current comparative data analysis paradigm from passively accepting
+Case V and the BTL model assumptions to actively testing whether those
+assumptions fit the data under analysis.
+
+The remainder of this study is organized into seven sections.
+Section~\ref{sec-thurstone_theory} provides an overview of Thurstone's
+theory. Section~\ref{sec-theory-issues} examines the central issues
+identified in the CJ literature. Section~\ref{sec-theoretical} extends
+Thurstone's general form to address these issues. The extension
+integrates core theoretical principles alongside key CJ assessment
+design features, such as the selection of judges, stimuli, and
+comparisons. Section~\ref{sec-statistical} translates these theoretical
+and design elements into a probabilistic statistical model to analyze
+dichotomous pairwise comparison data. Section~\ref{sec-discussion}
+reviews the findings, outline directions for future research, discusses
+the study's limitations and details the challenges that applied
+researchers may encounter. Finally, Section~\ref{sec-conclusion}
+provides the concluding remarks.
+
+\section{Thurstone's theory}\label{sec-thurstone_theory}
+
+In its \emph{general form}, Thurstone's theory addresses pairwise
+comparisons of a single judge who evaluates multiple stimuli
+\citep{Thurstone_1927a, Thurstone_1927b}. The theory posits that two key
+factors determine the dichotomous outcome of these comparisons: the
+discriminal process of each stimulus and their discriminal difference.
+The \emph{discriminal process} captures the psychological impact each
+stimulus exerts on the judge or, more simply, his perception of the
+stimulus trait. The theory assumes that the discriminal process for any
+given stimulus forms a Normal distribution along the trait continuum
+\citep{Thurstone_1927b}. The mode (mean) of this distribution, known as
+the \emph{modal discriminal process}, indicates the stimulus position on
+this continuum, while its dispersion, referred to as the
+\emph{discriminal dispersion}, reflects variability in the perceived
+trait of the stimulus.
+
+These ideas become clearer with an example.
+Figure~\ref{fig-discriminal_process} illustrates the hypothetical
+discriminal processes for two written texts along a \emph{quality} trait
+continuum. The figure shows that the modal discriminal process for Text
+B lies further along the continuum than that of Text A
+\((T_{B} > T_{A})\), suggesting that Text B exhibits higher quality. The
+figure also shows that Text B has a broader distribution than Text A,
+indicating a greater variability in perception due to its larger
+discriminal dispersion \((\sigma_{B} > \sigma_{A})\).
+
+\begin{figure}
+
+\begin{minipage}{0.50\linewidth}
+
+\centering{
+
+\includegraphics[width=1\textwidth,height=\textheight]{./images/png/discriminal_process.png}
+
+}
+
+\subcaption{\label{fig-discriminal_process}Discriminal processes}
+
+\end{minipage}%
+%
+\begin{minipage}{0.50\linewidth}
+
+\centering{
+
+\includegraphics[width=1\textwidth,height=\textheight]{./images/png/discriminal_difference.png}
+
+}
+
+\subcaption{\label{fig-discriminal_difference}Discriminal difference}
+
+\end{minipage}%
+
+\caption{\label{fig-thurstone_theory}Hypothetical discriminal processes
+and discriminant difference along a quality trait continuum for two
+written texts.}
+
+\end{figure}%
+
+However, since the individual discriminal processes of the stimuli are
+not directly observable \citep{Thurstone_1927a}, the theory introduces
+the \emph{law of comparative judgment}. This law posits that in pairwise
+comparisons, a judge perceives the stimulus with a discriminal process
+positioned further along the trait continuum as possessing more of the
+trait \citep{Bramley_2008}. This suggests that pairwise comparison
+outcomes depend on the relative distance between stimuli, not their
+absolute positions on the continuum. Indeed, the theory assumes that the
+difference between the underlying discriminal processes of the stimuli,
+referred to as the \emph{discriminal difference}, determines the
+observed dichotomous outcome. Furthermore, the theory assumes that
+because the individual discriminal processes form a Normal distribution
+on the continuum, the discriminal difference will also conform to a
+Normal distribution \citep{Andrich_1978}. In this distribution, the mode
+(mean) represents the average relative separation between the stimuli
+\((T_{B} - T_{A})\), and its dispersion \(\sigma_{BA}\) indicates the
+variability of that separation.
+
+Figure~\ref{fig-discriminal_difference} illustrates the distribution of
+the discriminal difference for the two hypothetical texts. The figure
+indicates that the judge perceives Text B as having significantly higher
+quality than Text A. Two key observations support this conclusion: the
+positive difference between their modal discriminal processes
+\((T_{B} - T_{A} > 0)\) and the probability area where the discriminal
+difference distinctly favors Text B over Text A, represented by the
+shaded gray area denoted as \(P(B > A)\). As a result, the dichotomous
+outcome of this comparison is more likely to favor Text B over A.
+
+\section{Two Prominent Issues in Traditional CJ
+Practice}\label{sec-theory-issues}
+
+Thurstone noted from the outset that his general formulation, described
+in Section~\ref{sec-thurstone_theory}, led to a \emph{trait scaling
+problem}. Specifically, the model required estimating more ``unknown''
+parameters than the number of available pairwise comparisons
+\citep{Thurstone_1927b}. For instance, in a CJ assessment with five
+texts, the general form would require estimating \(20\) parameters: five
+modal discriminal processes, five discriminal dispersions, and \(10\)
+correlations--one per comparison (see Table~\ref{tbl-thurstone_cases}).
+However, a single judge could only provide \({5 \choose 2} = 10\) unique
+comparisons, an ``insufficient'' data set to estimate the required
+parameters.
+
+To address this issue and facilitate the practical implementation of the
+theory, Thurstone developed five cases derived from this general form,
+each progressively incorporating additional simplifying assumptions
+\citep{Thurstone_1927b}. In Case I, Thurstone postulated that pairs of
+stimuli would maintain a constant correlation across all comparisons. In
+Case II, he allowed multiple judges to undertake comparisons instead of
+confining evaluations to a single judge. In Case III, he posited that
+there was no correlation between stimuli. In Case IV, he assumed that
+the stimuli exhibited similar dispersions. Finally, in Case V, he
+replaced this assumption with the condition that stimuli had equal
+discriminal dispersions. Table~\ref{tbl-thurstone_cases} summarizes the
+assumptions of the general form and the five cases. For a detailed
+discussion of these cases and their growing simplification, refer to
+\citet{Thurstone_1927b} and \citet{Bramley_2008}.
+
+\begin{table}
+
+\caption{\label{tbl-thurstone_cases}Thurstones cases and their
+asumptions}
+
+\centering{
+
+\includegraphics[width=1\textwidth,height=\textheight]{./images/png/thurstone_cases.png}
+
+}
+
+\end{table}%
+
+As the table suggests, Thurstone developed Case V with an emphasis on
+statistical simplicity, but this simplicity comes at the expense of
+accurate and precise trait measurement and practical guidance for
+inference. Specifically, Thurstone cautioned that Case V use ``should
+not be made without (an) experimental test''
+\citep[p.~270]{Thurstone_1927b}, as it imposes the most extensive set of
+simplifying assumptions \citep{Bramley_2008, Kelly_et_al_2022} (see
+Table~\ref{tbl-thurstone_cases}). Moreover, because Thurstone's primary
+goal was to produce a ``rather coarse scaling'' of traits and ``allocate
+the compared stimuli on this continuum''
+\citep[p.~269]{Thurstone_1927b}, his theory did not support formal
+statistical inference. Nevertheless, despite Case V's limitations, CJ
+research has predominantly relied on it to measure various traits,
+raising significant concerns about the reliability and validity of such
+measurements in contexts where its assumptions may not hold
+\citep{Kelly_et_al_2022, Andrich_1978}. Furthermore, although the CJ
+tradition has attempted to address the gap in statistical inference by
+relying on the point estimates of traits--or their transformations--the
+statistical literature cautions against using these estimates as the
+sole basis for inference, as such practices introduce bias and reduce
+the precision of hypothesis tests
+\citep{McElreath_2020, Kline_et_al_2023, Hoyle_et_al_2023}. The next
+sections discuss both issues in greater depth.
+
+\subsection{The Case V and the statistical analysis of CJ
+data}\label{sec-theory-issue1}
+
+Case V is the most widely used model in the CJ literature. This
+preference largely stems from the widespread adoption of the BTL model,
+which provides a simplified statistical representation of the case. The
+BTL model incorporates most of Case V's assumptions, with one notable
+exception. While Case V assumes a Normal distribution for the stimuli'
+discriminal processes, the BTL model uses the more mathematically
+tractable Logistic distribution \citep{Andrich_1978, Bramley_2008} (see
+Table~\ref{tbl-thurstone_cases}). However, this substitution has minimal
+impact on trait estimation or model interpretation because the scale of
+the discriminal process (i.e., the latent trait) is arbitrary up to a
+non-monotonic transformation
+\citep{vanderLinden_et_al_2017_I, McElreath_2021}. In other words, as
+long as the substitution (transformation) preserves the rank order of
+the data, the choice of distribution for the discriminal processes is
+inconsequential. The BTL model satisfies this condition because the
+Normal and Logistic distributions exhibit analogous statistical
+properties, differing only by a scaling factor of approximately \(1.7\)
+\citep{vanderLinden_et_al_2017_I}.
+
+However, Thurstone acknowledged that some assumptions of Case V are
+problematic when assessing complex traits or heterogeneous stimuli
+\citep{Thurstone_1927a}. Thus, given that contemporary CJ applications
+often involve such traits and stimuli, two key assumptions of Case V,
+and by extension, the BTL model, may not always hold in theory or
+practice. These assumptions are the equal dispersion and zero
+correlation between stimuli.
+
+\subsubsection{The assumption of equal dispersions between
+stimuli}\label{sec-theory-issue1a}
+
+According to the theory, discrepancies in the discriminal dispersions of
+stimuli shape the distribution of the discriminal difference, directly
+influencing the outcome of pairwise comparisons. A thought experiment
+can help illustrate this idea. Suppose researchers observe the
+discriminal processes for two texts, A and B, assuming that the
+dispersion for Text A remains constant and that the two texts are
+uncorrelated \((\rho=0)\). Figure~\ref{fig-dispersion} demonstrates that
+an increase in the uncertainty associated with the perception of Text B
+relative to Text A \((\sigma_{B} - \sigma_{A})\), broadens the
+distribution of their discriminal difference. This broadening affects
+the probability area where the discriminal difference distinctly favors
+Text B over Text A, expressed as \(P(B>A)\), ultimately influencing the
+comparison outcome. Additionally, the figure reveals that when the
+discriminal dispersions of the texts are equal, as in the BTL model
+\((\sigma_{B} - \sigma_{A}=0)\), the discriminal difference distribution
+is more narrow than when the dispersions differ. As a result, the
+discriminal difference is more likely to favor Text B over Text A, as it
+is represented by the shaded gray area.
+
+\begin{figure}
+
+\begin{minipage}{0.50\linewidth}
+
+\centering{
+
+\includegraphics[width=1\textwidth,height=\textheight]{./images/png/dispersion.png}
+
+}
+
+\subcaption{\label{fig-dispersion}Discriminal Difference distribution
+under varying discrepancies in stimuli dispersions}
+
+\end{minipage}%
+%
+\begin{minipage}{0.50\linewidth}
+
+\centering{
+
+\includegraphics[width=1\textwidth,height=\textheight]{./images/png/correlation.png}
+
+}
+
+\subcaption{\label{fig-correlation}Discriminal Difference distribution
+under varying levels of correlation between stimuli}
+
+\end{minipage}%
+
+\caption{\label{fig-casev_issues}The effect of dispersion discrepancies
+and stimuli correlation on the distribution of the discriminal
+difference.}
+
+\end{figure}%
+
+In experimental practice, however, the thought experiment occurs in
+reverse. Researchers first observe the comparison outcome and then use
+the BTL model to infer the discriminal difference between stimuli and
+their respective discriminal processes \citep{Thurstone_1927a}.
+Consequently, the effectiveness of the outcome to reflect \emph{true}
+differences between stimuli largely depends on the validity of the
+model's assumptions \citep{Kohler_et_al_2019}, in this case, the
+assumption of equal dispersions. When the assumption accurately captures
+the complexity of the data, the BTL model estimates a discriminal
+difference distribution that accurately represents the \emph{true}
+discriminal difference between the texts. This scenario is illustrated
+in Figure~\ref{fig-dispersion}, when the model's discriminal difference
+distribution aligns with the \emph{true} discriminal difference
+distribution, represented by the thick continuous line corresponding to
+\(\sigma_{B}-\sigma_{A}=0\). The accuracy of this discriminal difference
+then ensures reliable estimates for the texts' discriminal processes.
+
+Notably, while assuming equal dispersions simplifies the trait
+measurement model, evidence from the CJ literature suggests that this
+assumption may not hold for heterogeneous stimuli, such as handwritten
+texts or English compositions
+\citep{Thurstone_1927a, Andrich_1978, Bramley_2008, Kelly_et_al_2022}.
+The presence of the so-called misfit texts signals this limitation.
+\emph{Misfit texts} are those that elicit more judgment discrepancies
+than others
+\citep{Pollitt_2004, Pollitt_2012b, Pollitt_2012a, Goossens_et_al_2018},
+and these discrepancies may arise from larger discriminal dispersions
+caused by the stimulus' heterogeneity or because the texts are genuine
+outliers--i.e., texts with distinctive characteristics that deviate
+markedly from the rest of the sample in which they occur
+\citep{Grubbs_1969}. In either case, the BTL model's assumptions prevent
+it from adequately accounting for or addressing these anomalies, leaving
+exclusion of such ``problematic'' texts as the primary remedy
+\citep{Pollitt_2012a, Pollitt_2012b}.
+
+Significant statistical and measurement issues can arise when the
+assumption of equal dispersions between stimuli does not hold.
+Specifically, the BTL model may overestimate the trait's reliability,
+that is, the degree to which the outcome accurately reflects the
+\emph{true} discriminal differences between stimuli. This
+overestimation, in turn, results in spurious conclusions about these
+differences \citep{McElreath_2020, Wu_et_al_2022} and, by extension,
+about the underlying discriminal processes of stimuli.
+Figure~\ref{fig-dispersion} also illustrates this scenario when the
+model's discriminal difference distribution aligns with the thick
+continuous line for \(\sigma_{B}-\sigma_{A}=0\), while the \emph{true}
+discriminal difference follows any discontinuous line where
+\(\sigma_{B}-\sigma_{A} \neq 0\). Furthermore, if it is acknowledged
+that \emph{misfit statistics} may represent texts with different
+dispersions or outlying observations, the common CJ practice of
+excluding stimuli based on these statistics may unintentionally discard
+valuable information \citep{Miller_2023}, and introduce bias into the
+trait estimates \citep{Zimmerman_1994, McElreath_2020}. The direction
+and magnitude of these biases remain unpredictable, as they depend on
+which stimuli are excluded from the analysis.
+
+\subsubsection{The assumption of zero correlation between
+stimuli}\label{sec-theory-issue1b}
+
+The correlation between two stimuli \(\rho\) measures how much the
+judges' perception of a specific trait in one stimulus depends on their
+perception of the same trait in other stimulus. Similar to the
+discriminal dispersions, this correlation shapes the distribution of the
+discriminal difference, directly impacting the outcomes of pairwise
+comparisons. Assuming that the discriminal dispersions for a couple of
+texts remain constant, Figure~\ref{fig-correlation} shows that as the
+correlation between the two texts increases, the distribution of their
+discriminal difference becomes narrower. This narrowing, in turn,
+affects the probability that the discriminal difference distinctly
+favors Text B over Text A--denoted as \(P(B > A)\)--and thus directly
+influences the comparison outcome. Furthermore, the figure shows that
+when two texts are independent or uncorrelated, as assumed in the BTL
+model \((\rho=0)\), the distribution of their discriminal difference is
+less narrow than in scenarios where the texts are positively correlated.
+As a result, it becomes less likely for the comparison to favor Text B
+over Text A, as indicated by the larger shaded area.
+
+Despite these notable differences in the distribution of the discriminal
+difference under various correlational assumptions, in practice,
+assessment designs often adopt the assumption of no correlation between
+stimuli based on Thurstone's early theoretical justification
+\citep{Thurstone_1927b}. He argued that stimuli could be treated as
+uncorrelated because judges' biases--arising from two opposing and
+equally weighted effects occurring during the pairwise
+comparisons--would cancel each other out. This idea was later formalized
+by \citet{Andrich_1978}, who provided a mathematical demonstration of
+this cancellation using the BTL model under the assumption of
+discriminal processes with additive biases. However, evidence from the
+CJ literature indicates that the assumption of zero correlation does not
+hold in practice in at least two cases: (1) when intricate aspects of
+multidimensional, complex traits or heterogeneous stimuli influence
+judges' perceptions, (2) when additional hierarchical structures are
+relevant to the stimuli.
+
+Regarding the first case, research on text quality assessments suggests
+that when judges evaluate complex, multidimensional traits or
+heterogeneous stimuli, they often rely on a variety of intricate
+stimulus characteristics to inform their judgments
+\citep{vanDaal_et_al_2016, Lesterhuis_et_al_2018, Chambers_et_al_2022}.
+Regardless of their relevance, these characteristics may not be equally
+weighted or consistently opposed across comparisons. As a result, they
+may exert a disproportionate influence on judges' perceptions,
+generating biases that persist rather than cancel out. For example, this
+might occur when a judge assessing the argumentative quality of a text
+is disproportionately influenced by the clarity of the handwriting,
+thereby favoring neatly written texts even if their arguments are
+weaker. Moreover, because the discriminal process of stimuli becomes an
+observable outcome only through the judges' perceptions, these biases
+could introduce dependencies between the stimuli
+\citep{vanderLinden_et_al_2017_II}. While direct evidence for this exact
+scenario is limited, existing studies document the presence of judge's
+biases in CJ contexts
+\citep{Pollitt_et_al_2003, vanDaal_et_al_2016, Bartholomew_et_al_2020a},
+reinforcing the argument that the factors influencing pairwise
+comparisons do not always cancel each other out.
+
+In the second case, the shared context or inherent connections
+introduced by additional hierarchical structures may create dependencies
+between stimuli--a statistical phenomenon known as clustering
+\citep{Everitt_et_al_2010}. For instance, when the same individual
+produces multiple texts, those texts often share several features such
+as writing style or overall quality. Although some CJ studies
+acknowledge the presence of such hierarchical structures and account for
+them \citep[e.g.,][]{Boonen_et_al_2020}, the treatment of this
+additional source of dependence in other research has often been
+insufficient. For instance, when CJ data include multiple samples of
+stimuli from the same individuals, researchers frequently rely on
+(averaged) point estimates of the BTL scores to conduct subsequent
+analyses and tests at the individual level
+\citep{Bramley_et_al_2019, Bouwer_et_al_2023, vanDaal_et_al_2017, Jones_et_al_2019, Gijsen_et_al_2021}.
+
+Thus, erroneously assuming zero correlation between stimuli can also
+lead to significant statistical and measurement issues. In particular,
+neglecting judges' biases or relevant hierarchical structures can create
+dimensional mismatches in the model, leading to the over- or
+underestimation of trait reliability
+\citep{Ackerman_1989, Hoyle_et_al_2023} and even introduce statistical
+biases \citep{Wu_et_al_2022}. These inaccuracies can result in spurious
+conclusions about the discriminal differences \citep{McElreath_2020}
+and, by extension, the underlying discriminal processes of the stimuli.
+One such spurious conclusion could be the incorrect classification of
+stimuli (or judges) as \emph{misfits}. Figure~\ref{fig-correlation}
+illustrates how assuming zero correlation can undermine trait
+reliability: the discriminal difference distribution of the BTL scores
+follows the thick continuous line \((\rho = 0)\), while the \emph{true}
+discriminal difference may correspond to any discontinuous line where
+\(\rho \neq 0\).
+
+Finally, similar to misfit stimuli, removing \emph{misfit judges} risks
+discarding valuable information and introducing bias into trait
+estimates \citep{Miller_2023}. The direction and magnitude of these
+biases remain unpredictable, as they depend on which judges are excluded
+from the analysis \citep{Zimmerman_1994, OHagan_2018, McElreath_2020}.
+\emph{Misfit} judges are those whose assessments deviate markedly from
+the shared consensus
+\citep{Pollitt_2012a, Pollitt_2012b, vanDaal_et_al_2016, Goossens_et_al_2018, Wu_et_al_2022},
+often appearing as outliers under the BTL model \citep{Wu_et_al_2022}.
+
+\subsection{The disconnect between trait measurement and hypothesis
+testing}\label{sec-theory-issue2}
+
+In CJ studies, the BTL model is typically used to measure traits and
+position the compared stimuli along a latent continuum
+\citep{Thurstone_1927b}. The CJ literature shows that studies frequently
+relies on point estimates of these traits--typically the BTL scores or
+its transformations--to conduct statistical inference or hypothesis
+testing. For example, researchers have used these scores to identify
+`misfit' judges and stimuli
+\citep{Pollitt_2012b, vanDaal_et_al_2016, Goossens_et_al_2018}, detect
+biases in judges' ratings \citep{Pollitt_et_al_2003, Pollitt_2012b},
+calculate correlations with other assessment methods
+\citep{Goossens_et_al_2018, Bouwer_et_al_2023}, or test hypotheses
+related to the underlying trait of interest
+\citep{Casalicchio_et_al_2015, Bramley_et_al_2019, Boonen_et_al_2020, Bouwer_et_al_2023, vanDaal_et_al_2017, Jones_et_al_2019, Gijsen_et_al_2021}.
+
+Nevertheless, while separating the trait measurement and hypothesis
+testing procedures simplifies the analysis of CJ data, the statistical
+literature cautions against relying solely on the point estimates of BTL
+scores to conduct statistical inference or hypothesis tests, as this
+practice can undermine the resulting statistical inferences. A key
+consideration is that BTL scores are parameter estimates that inherently
+carry uncertainty (measurement error). Ignoring this uncertainty can
+bias the analysis and reduce the precision of hypothesis tests. The
+direction and magnitude of such biases are often unpredictable. Results
+may be attenuated, exaggerated, or remain unaffected depending on the
+degree of uncertainty in the scores and the actual effects being tested
+\citep{McElreath_2020, Kline_et_al_2023, Hoyle_et_al_2023}. Furthermore,
+the reduced precision in hypothesis tests diminishes their statistical
+power, increasing the likelihood of committing type-I or type-II errors
+\citep{McElreath_2020}.
+
+In aggregate, the heavy reliance on Thurstone's Case V assumptions in
+the statistical analysis of comparative data can compromise the
+reliability of trait estimates. This overreliance may also undermine
+their validity \citep{Perron_et_al_2015}, particularly when coupled with
+the disconnect between the trait measurement and hypothesis testing
+procedures. The structural approach to causal inference can address
+these issues by offering a systematic and integrated framework to extend
+Thurstone's general form. This approach can also strengthen measurement
+reliability and validity while enhancing the statistical accuracy of
+hypothesis tests.
+
+\section{Extending Thurstone's general form}\label{sec-theoretical}
+
+The \emph{structural approach} to causal inference
+\citep{Pearl_2009, Pearl_et_al_2016} offers a formal framework for
+identifying causes and estimating their effects using data. The approach
+relies on structural causal models (SCMs) and directed acyclic graphs
+(DAGs) to formally and graphically represent the assumed causal
+structure of a system
+\citep{Morgan_et_al_2014, Gross_et_al_2018, Neal_2020}, such as the one
+found in CJ assessments. In essence, SCMs and DAGs function as
+\emph{conceptual models} on which identification analysis rests
+\citep{Schuessler_et_al_2023}. \emph{Identification analysis} determines
+whether an estimator can accurately compute an estimand based solely on
+its (causal) assumptions, regardless of random variability. Here,
+\emph{estimands} represent the specific quantities researchers aim to
+determine (i.e., a parameter) \citep{Everitt_et_al_2010}.
+\emph{Estimators} denote the methods or functions that transform data
+into an estimate (e.g., a statistical model), while \emph{estimates} are
+the numerical values approximating the estimand
+\citep{Neal_2020, Everitt_et_al_2010}.
+
+As an illustration, consider a researcher seeking to answer the
+question: ``To what extent do different teaching methods influence
+students' ability to produce high-quality written texts?'' To
+investigate this, the researcher designs a CJ assessment by randomly
+assigning students (individuals) to two groups, each exposed to a
+different teaching method. Judges then compare pairs of students'
+written texts (stimuli) to produce a dichotomous outcome reflecting the
+relative quality of each text (trait). Based on this setup, researchers
+can reformulate the research question as the estimand: \emph{On average,
+is there a difference in the ability to produce high-quality written
+texts between the two groups of students?} Following standard CJ
+practices, the researcher would then use point estimates from the BTL
+model, or its transformations, to approximate this estimand. However, as
+discussed in Section~\ref{sec-theory-issue1}, Thurstone's Case V and the
+BTL model exhibit several statistical and measurement limitations. These
+limitations hinder the model's ability to identify and accurately
+estimate a range of estimands relevant to CJ inquiries, including the
+one described in this illustration.
+
+Fortunately, SCMs and DAGs support identification analysis through two
+key advantages\footnote{In depth explanation of these topics is beyond
+  the scope of this study, thus, readers seeking a more profound
+  understanding can refer to introductory papers such as
+  \citet{Pearl_2010}, \citet{Rohrer_2018}, \citet{Pearl_2019}, and
+  \citet{Cinelli_et_al_2020}, and introductory books like
+  \citet{Pearl_et_al_2018}, \citet{Neal_2020}, and
+  \citet{McElreath_2020} are useful. For more advanced study, seminal
+  papers such as \citet{Neyman_et_al_1923}, \citet{Rubin_1974},
+  \citet{Spirtes_et_al_1991}, and \citet{Sekhon_2009}, along with books
+  such as \citet{Pearl_2009}, \citet{Morgan_et_al_2014}, and
+  \citet{Hernan_et_al_2025}, are recommended.}. First, regardless of
+complexity, they can represent various causal structures using only five
+fundamental building blocks \citep{Neal_2020, McElreath_2024}. This
+feature allows the decomposition of complex structures into manageable
+components, facilitating their analysis. Second, they depict causal
+relationships in a non-parametric way. This flexibility enables feasible
+identification strategies without requiring specification of the types
+of variables, the functional forms relating them, or the parameters of
+those functional forms \citep{Pearl_et_al_2016}.
+
+Thus, using SCMs and DAGs, this study extends Thurstone's general form
+to address the issues identified in Section~\ref{sec-theory-issues}.
+This extension combines Thurstone's core theoretical principles (see
+Section~\ref{sec-thurstone_theory}) with key CJ assessment design
+features, such as the selection of judges, stimuli, and comparisons.
+Specifically, Section~\ref{sec-theory-theoretical_P} introduces the
+\emph{conceptual-population model} (henceforth CPM), which incorporates
+these theoretical principles and assumes an idealized setting where
+researchers observe a \emph{conceptual population} of comparative
+judgment data--that is, data representing all repeated judgments made by
+every available judge for each pair of stimuli produced by each pair of
+individuals in the population. Conversely,
+Section~\ref{sec-theory-theoretical_SC} presents the
+\emph{sample-comparison model} (hereafter CSM), which integrates the
+assessment design features and reflects a more realistic setting where
+researchers access only a sample of judges, individuals, stimuli, and
+comparisons from the conceptual population.
+
+\subsection{The conceptual-population model
+(CPM)}\label{sec-theory-theoretical_P}
+
+In the CPM, the idealized scenario of a \emph{conceptual population} of
+comparative data enables the integration of Thurstone's theoretical
+principles and provides a foundation for proposing innovations aimed at
+addressing some of the issues discussed in
+Section~\ref{sec-theory-issues}.
+
+\subsubsection{Integrating the first theoretical
+principles}\label{sec-theory-theoretical_P1}
+
+Before incorporating the first theoretical principles of Thurstone's
+theory, it is essential to further define SCMs. SCMs are formal
+mathematical models characterized by a set of \emph{endogenous}
+variables \(V\), a set of \emph{exogenous} variables \(E\), and a set of
+functions \(F\)
+\citep{Pearl_2009, Pearl_et_al_2016, Cinelli_et_al_2020}. Endogenous
+variables are those whose causal mechanisms a researcher chooses to
+model \citep{Neal_2020}. In contrast, exogenous variables represent
+\emph{errors} or \emph{disturbances} arising from omitted factors that
+the investigator chooses not to model explicitly \citep{Pearl_2009}.
+Lastly, the functions, referred to as \emph{structural equations},
+express the endogenous variables as non-parametric functions of other
+endogenous and exogenous variables. These functions use the symbol
+`\(:=\)' to denote the asymmetrical causal dependence between variables
+and the symbol `\(\:\bot\:\)' to represent \emph{d-separation}, a
+concept akin to statistical (conditional) independence.
+
+SCM~\ref{fig-cj03_scm} presents the first theoretical principles
+embedded in the CPM evaluating the impact of different teaching methods
+on students' writing ability. This SCM outlines the relationship between
+the conceptual-population outcome \((O^{cp}_{iahbjk})\) and several
+related variables. The subscripts \(i\) and \(h\) identify the students
+who authored the texts (i.e., the individuals). The indices \(a\) and
+\(b\) represent the texts under comparison (i.e., the stimuli). The
+index \(j\) indicates the judge conducting the comparison, while the
+index \(k\) accounts for assessment conditions where a judge compares
+the same pair of stimuli multiple times, i.e., a \emph{repeated measures
+designs} \citep{Lawson_2015}. Thus, the indexing system supports
+comparisons between different texts written by the same student
+\((i = h;\) \(a \neq b)\) and between texts written by distinct students
+\((i \neq h;\) where \(a = b\) is permitted\()\), each compared once or
+repeatedly by all judges \((j = 1,\dots,n_{J};\) \(k = 1,\dots,n_K;\)
+where \(n_{J}>1\) and \(n_{K}\geq1)\). However, it excludes cases where
+a judge compares a student's text to itself, whether once or multiple
+times \((i = h;\) \(a = b;\) \(j = 1,\dots,n_{J};\)
+\(k = 1,\dots,n_{K};\) where \(n_{J}>1\) and \(n_{K}\geq1)\), as such
+comparison lacks practical relevance within the CJ framework. Here,
+\(n_{J}\) indicates the total number of judges, and \(n_{K}\) denotes
+the number of repeated judgments each judge performs.
+
+\begin{figure}[H]
+
+\begin{minipage}{0.50\linewidth}
+
+\centering{
+
+\[
+\begin{aligned}
+  O^{cp}_{iahbjk} & := f_{O}(D_{iahbjk}) \\
+  D_{iahbjk} & := f_{D}(T_{ia}, T_{hb}, B_{jk})
+\end{aligned}
+\]
+
+}
+
+\subcaption{\label{fig-cj03_scm}SCM}
+
+\end{minipage}%
+%
+\begin{minipage}{0.50\linewidth}
+
+\centering{
+
+\includegraphics[width=0.77\textwidth,height=\textheight]{./images/png/CJ_TM_03.png}
+
+}
+
+\subcaption{\label{fig-cj03_dag}DAG}
+
+\end{minipage}%
+
+\caption{\label{fig-cj03}Conceptual-population model (CPM), scalar
+form.}
+
+\end{figure}%
+
+In line with Thurstone's theory, SCM~\ref{fig-cj03_scm} depicts the
+texts' discriminal processes \((T_{ia}, T_{hb})\) and their discriminal
+difference \((D_{iahbjk})\) (see Section~\ref{sec-thurstone_theory}).
+Additionally, the SCM incorporates a key CJ design feature: the judges'
+biases \((B_{kj})\). This extension builds on the arguments presented in
+Section~\ref{sec-theory-issue1b}, contending that the discriminal
+difference becomes an observable outcome only through judges'
+perceptions. Given that such perceptions may be imperfect--and that each
+judge may carry some degree of bias
+\citep[see][]{Pollitt_et_al_2003, vanDaal_et_al_2016}--it is reasonable
+that judges' perceptions (bias) should be treated as an integral
+component of the CJ system from the outset, as this leads to a more
+accurate representation of the data-generating process underlying the
+pairwise comparisons. This model defines the preliminary set of
+endogenous variables,
+\(V = \{ O_{iahbjk}, D_{iahbjk}, T_{ia}, T_{hb}, B_{kj} \}\), and the
+preliminary set of structural equations, \(F = { f_{O}, f_{D} }\), which
+capture the non-parametric dependencies among these variables.
+
+Notably, every SCM has an associated DAG
+\citep{Pearl_et_al_2016, Cinelli_et_al_2020}. A DAG is a \emph{graph}
+consisting of nodes connected by edges, where nodes represent random
+variables. The term \emph{directed} indicates that edges or arrows
+extend from one node to another, indicating the direction of causal
+influence. The absence of an edge implies no direct relationship between
+the nodes. The term \emph{acyclic} means that the causal influences do
+not form loops, ensuring the influences do not cycle back on themselves
+\citep{McElreath_2020}. DAGs conventionally depict observed variables as
+solid black circles and unobserved (latent) variables as open circles
+\citep{Morgan_et_al_2014}. Although DAGs conventionally omit exogenous
+variables for simplicity, the DAGs presented in this section includes
+exogenous variables to improve clarity and reveal potential issues
+related to conditioning and confounding \citep{Cinelli_et_al_2020}.
+
+Figure~\ref{fig-cj03_dag} displays the DAG corresponding to
+SCM~\ref{fig-cj03_scm}, illustrating the expected causal relationships
+outlined in Thurstone's theory. The graph shows that the discriminal
+processes of the texts \((T_{ia}, T_{hb})\) influence their discriminal
+difference \((D_{iahbjk})\), which in turn determines the outcome
+\((O^{cp}_{iahbjk})\). It also highlights the influence of judges'
+biases \((B_{kj})\) on the discriminal difference. Additionally, the DAG
+differentiates between observed endogenous variables, such as the
+outcome (solid black circle), and latent endogenous variables, including
+the texts' discriminal processes, their discriminal difference, and the
+judges' biases (open circles).
+
+\subsubsection{\texorpdfstring{The \emph{conceptual-population} data
+structure}{The conceptual-population data structure}}\label{sec-theory-theoretical_P2}
+
+Although specifying a data structure is not mandatory when using SCMs
+and DAGs, defining one improves clarity and facilitates the description
+of the system. Thus, to re-express the scalar form of the CJ system
+shown in Figure~\ref{fig-cj03} into an equivalent vectorized form, we
+first define the vectors \(I\) and \(J\), along with the matrices \(IA\)
+and \(JK\), as in Equation (\ref{eq-mat11}). Here, each element of \(I\)
+represents a unique individual \(i\) or \(h\), where \(n_{I}\) denotes
+the total number of individuals. Similarly, each element of \(J\)
+corresponds to a unique judge \(j\), with \(n_{J}\) indicating the total
+number of judges. Moreover, each row of \(IA\) represents a unique
+pairing of individuals \(i, h\) with stimuli \(a, b\). As a result, the
+matrix \(IA\) contains \(n_{I} \cdot n_{A}\) rows and \(2\) columns,
+where \(n_{A}\) specifies the number of stimuli available per
+individual. Likewise, each row of \(JK\) associates a judge \(j\) with a
+(repeated) judgment index \(k\). Consequently, the matrix \(JK\) has
+\(n_{J} \cdot n_{K}\) rows and \(2\) columns, where \(n_{K}\) indicates
+the number of repeated judgments each judge makes.
+
+Additionally, we construct the matrix \(R\) to map each row of the
+\(IA\) matrix with a corresponding row from the \(JK\) matrix. This
+matrix has \(n\) rows and \(6\) columns, where
+\(n = {n_{I} \cdot n_{A} \choose 2} \cdot n_{J} \cdot n_{K}\). Here, the
+term \({n_{I} \cdot n_{A} \choose 2}\) represents the binomial
+coefficient, which quantifies the total number of unique comparisons
+possible between every pair of stimuli generated by each pair of
+individuals in the population. Thus, we define the matrix as in Equation
+(\ref{eq-mat11}). \begin{equation}\phantomsection\label{eq-mat11}{
+I = \begin{bmatrix}
+1 \\
+\vdots \\
+i \\
+\vdots \\
+h \\
+\vdots \\
+n_{I}
+\end{bmatrix};
+J = \begin{bmatrix}
+1 \\
+\vdots \\
+j \\
+\vdots \\
+n_{J}
+\end{bmatrix};
+IA = \begin{bmatrix}
+1 & 1 \\
+\vdots & \vdots \\
+1 & n_{A} \\
+\vdots & \vdots \\
+i & a \\
+\vdots & \vdots \\
+h & b \\
+\vdots & \vdots \\
+n_{I} & 1 \\
+\vdots & \vdots \\
+n_{I} & n_{A}
+\end{bmatrix};
+JK = \begin{bmatrix}
+1 & 1 \\
+\vdots & \vdots \\
+1 & n_{K} \\
+\vdots & \vdots \\
+j & k \\
+\vdots & \vdots \\
+n_{J} & 1 \\
+\vdots & \vdots \\
+n_{J} & n_{K}
+\end{bmatrix};
+R = \begin{bmatrix}
+1 & 1 & 1 & 2 & 1 & 1 \\
+\vdots & \vdots & \vdots & \vdots & \vdots & \vdots\\
+1 & 1 & 1 & 2 & 1 & n_{K} \\
+\vdots & \vdots & \vdots & \vdots & \vdots & \vdots\\
+i & a & h & b & j & k \\
+\vdots & \vdots & \vdots & \vdots & \vdots & \vdots\\
+n_{I} & n_{A}-1 & n_{I} & n_{A} & n_{J} & 1 \\
+\vdots & \vdots & \vdots & \vdots & \vdots & \vdots\\
+n_{I} & n_{A}-1 & n_{I} & n_{A} & n_{J} & n_{K}
+\end{bmatrix}
+}\end{equation}
+
+It is easier to visualize the structure of the previously defined
+vectors and matrices by considering an example. Assuming \(n_{I} = 5\),
+\(n_{A} = 2\), \(n_{J} = 3\), and \(n_{K} = 3\), the vectors and
+matrices described in Equation (\ref{eq-mat11}) take the form as in
+Equation (\ref{eq-mat13}).
+\begin{equation}\phantomsection\label{eq-mat13}{
+I = \begin{bmatrix}
+1 \\
+2 \\
+3 \\
+4 \\
+5 
+\end{bmatrix} ; \;
+J = \begin{bmatrix}
+1 \\
+2 \\
+3 
+\end{bmatrix} ; \;
+IA = \begin{bmatrix}
+1 & 1 \\
+1 & 2 \\
+2 & 1 \\
+2 & 2 \\
+3 & 1 \\
+3 & 2 \\
+4 & 1 \\
+4 & 2 \\
+5 & 1 \\
+5 & 2 
+\end{bmatrix} ; \;
+JK = \begin{bmatrix}
+1 & 1 \\
+1 & 2 \\
+1 & 3 \\
+2 & 1 \\
+2 & 2 \\
+2 & 3 \\
+3 & 1 \\
+3 & 2 \\
+3 & 3 
+\end{bmatrix} ; \;
+R = \begin{bmatrix}
+1 & 1 & 1 & 2 & 1 & 1 \\
+1 & 1 & 1 & 2 & 1 & 2 \\
+1 & 1 & 1 & 2 & 1 & 3 \\
+\vdots & \vdots & \vdots & \vdots & \vdots & \vdots\\
+1 & 1 & 5 & 2 & 1 & 1 \\
+1 & 1 & 5 & 2 & 1 & 2 \\
+1 & 1 & 5 & 2 & 1 & 3 \\
+\vdots & \vdots & \vdots & \vdots & \vdots & \vdots\\
+4 & 2 & 5 & 2 & 3 & 1 \\
+4 & 2 & 5 & 2 & 3 & 2 \\
+4 & 2 & 5 & 2 & 3 & 3 \\
+5 & 1 & 5 & 2 & 3 & 1 \\
+5 & 1 & 5 & 2 & 3 & 2 \\
+5 & 1 & 5 & 2 & 3 & 3 
+\end{bmatrix}
+}\end{equation}
+
+Now, using Equation (\ref{eq-mat11}), we can re-express
+SCM~\ref{fig-cj03_scm} and DAG~\ref{fig-cj03_dag} in an equivalent
+vectorized form, as shown in Figure~\ref{fig-cj04}. In this depiction,
+the outcome \(O^{cp}_{R}\), the texts' discriminal difference \(D_{R}\),
+their discriminal processes \(T_{IA}\), and the judges' biases
+\(B_{JK}\) are represented as vectors rather than scalar values. These
+vectors capture all the observations from the conceptual population.
+Specifically, \(O^{cp}_{R}\) and \(D_{R}\) are observed and latent
+vectors of length \(n\), respectively. Moreover, \(T_{IA}\) and
+\(B_{JK}\) are latent vectors of lengths \(n_{I} \cdot n_{A}\) and
+\(n_{J} \cdot n_{K}\), respectively.
+
+\begin{figure}[H]
+
+\begin{minipage}{0.50\linewidth}
+
+\centering{
+
+\[
+\begin{aligned}
+  O^{cp}_{R} & := f_{O}(D_{R}) \\
+  D_{R} & := f_{D}(T_{IA}, B_{JK})
+\end{aligned}
+\]
+
+}
+
+\subcaption{\label{fig-cj04_scm}SCM}
+
+\end{minipage}%
+%
+\begin{minipage}{0.50\linewidth}
+
+\centering{
+
+\includegraphics[width=0.87\textwidth,height=\textheight]{./images/png/CJ_TM_04.png}
+
+}
+
+\subcaption{\label{fig-cj04_dag}DAG}
+
+\end{minipage}%
+
+\caption{\label{fig-cj04}Conceptual-population model (CPM), initial
+vectorized form.}
+
+\end{figure}%
+
+\subsubsection{Integrating hierarchical structural
+components}\label{sec-theory-theoretical_P3}
+
+Building on the principles of Structural Equation Modeling (SEM)
+\citep{Hoyle_et_al_2023} and Item Response Theory (IRT)
+\citep{Fox_2010, vanderLinden_et_al_2017_I}, the CPM integrates two
+\emph{hierarchical structural components} to examine how different
+\emph{relevant} \footnote{\emph{Relevant variables} are those that
+  satisfy the \emph{backdoor criterion} \citep[pp 37]{Neal_2020}, that
+  is, they belong to a \emph{sufficient adjustment set}
+  \citep{Pearl_2009, Pearl_et_al_2016, Morgan_et_al_2014}. A
+  \emph{sufficient} set (potentially empty) blocks all non-causal paths
+  between a predictor and an outcome without opening new ones
+  \citep{Pearl_2009}. Refer also to footnote 1.} variables--whether
+observed or latent--affect the primary latent variable of interest
+\citep{Everitt_et_al_2010}. This hierarchical design supports the
+formulation and testing of hypotheses that account for both the nested
+structure of stimuli and the uncertainties inherent in trait estimation
+(see Section~\ref{sec-theory-issue1b} and
+Section~\ref{sec-theory-issue2} for a discussion of these
+considerations).
+
+The top branch of DAG~\ref{fig-cj09_dag} illustrates the first
+component, where \emph{relevant} \footnote{refer to footnote 2.}
+student-related variables \(X_{I}\), such as teaching method, and
+students' idiosyncratic errors \(e_{I}\) causally influence the latent
+variable representing students' writing-quality trait \(T_{I}\). The
+error term \(e_{I}\) captures variations in students' traits unexplained
+by \(X_{I}\). Here, \(X_{I}\) is an observed matrix with \(n_{I}\) rows
+and \(q_{I}\) independent columns (variables), and both \(e_{I}\) and
+\(T_{I}\) are latent vectors of length \(n_{I}\). Additionally, this
+branch shows how \(T_{I}\), along with \emph{relevant} \footnote{refer
+  to footnote 2.} text-related variables \(X_{IA}\) (e.g., text length),
+and texts' idiosyncratic errors \(e_{IA}\) causally influence the texts'
+written-quality trait \(T_{IA}\), the first primary latent variable of
+interest. The error term \(e_{IA}\) captures variations in the texts'
+traits that remain unexplained by \(T_{I}\) or \(X_{IA}\). Here,
+\(X_{IA}\) is an observed matrix with dimensions \(n_{I} \cdot n_{A}\)
+rows and \(q_{IA}\) independent columns (variables), while \(e_{IA}\)
+and \(T_{IA}\) are latent matrices with \(n_{I}\) rows and \(n_{A}\)
+columns.
+
+Similarly, the bottom branch of DAG~\ref{fig-cj09_dag} depicts the
+second component, where \emph{relevant} \footnote{refer to footnote 2.}
+judge-related variables \(Z_{J}\), such as judgment expertise, and
+judges' idiosyncratic errors \(e_{J}\) causally influence the latent
+variable representing judges' bias \(B_{J}\). The error \(e_{J}\)
+captures variations in judges' bias unexplained by \(Z_{J}\). Here,
+\(Z_{J}\) is an observed matrix with \(n_{J}\) rows and \(q_{J}\)
+independent columns (variables), and both \(e_{J}\) and \(B_{J}\) are
+latent vectors of length \(n_{J}\). Furthermore, the branch shows how
+\(B_{J}\), along with \emph{relevant} \footnote{refer to footnote 2.}
+judgment-related variables \(Z_{JK}\) (e.g., the number of judgments a
+judge makes), and judgments' idiosyncratic errors \(e_{JK}\) causally
+influence the judges' biases associated with each text \(B_{JK}\), the
+second primary latent variable of interest. The error \(e_{JK}\)
+captures variations in judgments unexplained by \(B_{J}\) or \(Z_{JK}\).
+Here, \(Z_{JK}\) is an observed matrix with dimension
+\(n_{J} \cdot n_{K}\) rows and \(q_{JK}\) independent columns
+(variables), while \(e_{JK}\) and \(B_{JK}\) are latent latent matrices
+with \(n_{J}\) rows and \(n_{K}\) columns.
+
+Notably, all variables and functions shown in SCM~\ref{fig-cj09_scm} and
+DAG~\ref{fig-cj09_dag} are part of the set of endogenous variables
+\(V\), structural equations \(F\), and exogenous variables \(E\) for the
+CPM. Additionally, the figures demonstrate that all exogenous variables
+are independent of one another, as indicated by the relationships
+\(e_{IA} \:\bot\:\{ e_{I}, e_{JK}, e_{J} \}\),
+\(e_{I} \:\bot\:\{ e_{JK}, e_{J} \}\) and \(e_{JK} \:\bot\:e_{J}\) and
+the absence of connecting arrows.
+
+\begin{figure}[H]
+
+\begin{minipage}{\linewidth}
+
+\centering{
+
+\[
+\begin{aligned}
+  O^{cp}_{R} & := f_{O}(D_{R}) \\
+  D_{R} & := f_{D}(T_{IA}, B_{JK}) \\
+  T_{IA} & := f_{T}(T_{I}, X_{IA}, e_{IA}) \\
+  T_{I} & := f_{T}(X_{I}, e_{I}) \\
+  B_{JK} & := f_{B}(B_{J}, Z_{JK}, e_{JK}) \\
+  B_{J} & := f_{B}(Z_{J}, e_{J}) \\
+  e_{I} & \:\bot\:\{ e_{J}, e_{IA}, e_{JK} \} \\
+  e_{J} & \:\bot\:\{ e_{IA}, e_{JK} \} \\
+  e_{IA} & \:\bot\:e_{JK} 
+\end{aligned}
+\]
+
+}
+
+\subcaption{\label{fig-cj09_scm}SCM}
+
+\end{minipage}%
+\newline
+\begin{minipage}{\linewidth}
+
+\centering{
+
+\includegraphics[width=0.7\textwidth,height=\textheight]{./images/png/CJ_TM_09.png}
+
+}
+
+\subcaption{\label{fig-cj09_dag}DAG}
+
+\end{minipage}%
+
+\caption{\label{fig-cj09}Conceptual-population model (CPM), final
+vectorized form.}
+
+\end{figure}%
+
+Overall, the CPM extends Thurstone's general form by introducing key
+innovations to address the limitations discussed in
+Section~\ref{sec-theory-issue1b} and Section~\ref{sec-theory-issue2}.
+These enhancements include accounting for judges' biases and integrating
+hierarchical structural components. Nevertheless, despite its promise of
+enhancing measurement accuracy and precision, the model still depends on
+the unrealistic assumption that researchers have access to data from the
+\emph{conceptual population}. Since this assumption is rarely met in
+practice, the study must consider a more realistic scenario.
+
+\subsection{The sample-comparison model
+(CSM)}\label{sec-theory-theoretical_SC}
+
+The CSM presents a more realistic scenario than the CPM. First, it
+explicitly assumes a data sample consisting of a limited number of
+repeated judgments \((n^{s}_{K})\) from a sample of judges
+\((n^{s}_{J})\) and a specific number of texts \((n^{s}_{A})\) from a
+sample of students \((n^{s}_{I})\), all drawn from the conceptual
+population (Section~\ref{sec-theory-theoretical_SC1}). Second, the model
+assumes that judges do not perform \emph{all repeated judgments} within
+the data sample (Section~\ref{sec-theory-theoretical_SC2}). Instead,
+they conduct a sufficient number of stimuli comparisons, \(n_{C}\), to
+ensure an accurate estimation of the proportion \(P(B>A)\), as proposed
+by \citet{Thurstone_1927b}.
+
+\subsubsection{The sample mechanism}\label{sec-theory-theoretical_SC1}
+
+To incorporate the sampling mechanism and facilitate the interpretation
+of the CSM, we first define the \emph{data sampling process} using the
+binary vector variables \(S_{I}\), \(S_{J}\), \(S_{IA}\), and \(S_{JK}\)
+as follows: \begin{equation}\phantomsection\label{eq-mat21}{
+S_{I} = \begin{bmatrix}
+i_{(1)} \\
+\vdots \\
+i_{(i)} \\
+\vdots \\
+i_{(h)} \\
+\vdots \\
+i_{(nI)}
+\end{bmatrix} ; \;
+S_{J} = \begin{bmatrix}
+j_{(1)} \\
+\vdots \\
+j_{(j)} \\
+\vdots \\
+j_{(nJ)}
+\end{bmatrix} ; \;
+S_{IA} = \begin{bmatrix}
+ia_{(1,1)} \\
+\vdots \\
+ia_{(1,n_{A})} \\
+\vdots \\
+ia_{(i,a)} \\
+\vdots \\
+ia_{(h,b)} \\
+\vdots \\
+ia_{(nI,1)} \\
+\vdots \\
+ia_{(nI,nA)}
+\end{bmatrix} ; \;
+S_{JK} = \begin{bmatrix}
+jk_{(1,1)} \\
+\vdots \\
+jk_{(1,n_{K})} \\
+\vdots \\
+jk_{(j,k)} \\
+\vdots \\
+jk_{(nJ,1)} \\
+\vdots \\
+jk_{(nJ,nK)}
+\end{bmatrix}
+}\end{equation}
+
+Where each element of \(S_{I}\) is a binary value indicating the
+presence or absence of corresponding elements in the vector \(I\), as in
+Equation (\ref{eq-mat22}). We apply the same logic to \(S_{J}\) using
+vector \(J\) (not shown). Thus, the vectors \(S_{I}\) and \(S_{J}\)
+contains \(n_{I}\) and \(n_{J}\) elements, respectively.
+\begin{equation}\phantomsection\label{eq-mat22}{
+i_{(i)} = \begin{cases} 
+1 & \text{if data element } i \text{ from } I \text{ is sampled} \\
+0 & \text{if data element } i \text{ from } I \text{ is missing}
+\end{cases}
+}\end{equation}
+
+Similarly, each element of \(S_{IA}\) is a binary value indicating the
+presence or absence of data rows in the matrices \(IA\), as defined in
+Equation (\ref{eq-mat23}). We apply the same logic to \(S_{JK}\) using
+the matrix \(JK\) (not shown). Thus, the vectors \(S_{IA}\) and
+\(S_{JK}\) contains \(n_{I} \cdot n_{A}\) and \(n_{J} \cdot n_{K}\)
+elements, respectively. \begin{equation}\phantomsection\label{eq-mat23}{
+ia_{(i,a)} = \begin{cases} 
+1 & \text{if data elements } i,a \text{ from } IA \text{ are sampled} \\
+0 & \text{if data elements } i,a \text{ from } IA \text{ are missing}
+\end{cases}
+}\end{equation}
+
+We can illustrate the structure of these vectors more clearly with an
+example. Suppose researchers exclude the second student, the second text
+from each student, and the third judge from the setup shown in Equation
+(\ref{eq-mat13}). Given \(n_{I} = 5\), \(n_{A} = 2\), \(n_{J} = 3\), and
+\(n_{K} = 3\), the resulting vectors would have the following structure:
+\begin{equation}\phantomsection\label{eq-mat24}{
+S_{I} = \begin{bmatrix}
+1 \\
+0 \\
+1 \\
+1 \\
+1
+\end{bmatrix} ; \;
+S_{J} = \begin{bmatrix}
+1 \\
+1 \\
+0
+\end{bmatrix} ; \;
+S_{IA} = \begin{bmatrix}
+1 \\
+0 \\
+0 \\
+0 \\
+1 \\
+0 \\
+1 \\
+0 \\
+1 \\
+0 
+\end{bmatrix} ; \;
+S_{JK} = \begin{bmatrix}
+1 \\
+1 \\
+1 \\
+1 \\
+1 \\
+1 \\
+0 \\
+0 \\
+0 
+\end{bmatrix}
+}\end{equation}
+
+Notably, Equation (\ref{eq-mat24}) shows that missing observations in
+the vectors \(S_{I}\) and \(S_{J}\)--which represent unsampled students
+and judges--directly determine which observations are missing in
+\(S_{IA}\) and \(S_{JK}\). In other words, researchers can only observe
+texts and judgments from students and judges initially included in the
+sample. The equation also shows that the sum of observed elements in
+\(S_{I}\) equals the number of sampled students \((n^{s}_{I})\) and that
+a similar sum in vector \(S_{J}\) equals the sampled judges
+\((n^{s}_{J})\). Conversely, the sum of observed elements in \(S_{IA}\)
+represents the total sampled texts across all sampled students
+\((n^{s}_{I} \cdot n^{s}_{A})\), while a similar sum in vector
+\(S_{JK}\) represents the total sampled repeated judgments across all
+sampled judges \((n^{s}_{J} \cdot n^{s}_{K})\). Notice that in this
+example, because the design systematically excludes every third repeated
+judgment, \(S_{JK}\) can also be expressed using
+\(n_{K} = n^{s}_{K} = 2\).
+
+Finally, we define the \emph{sample mechanism} \(S\) in Equation
+(\ref{eq-mat25}), which maps each element of \(S_{IA}\) to every element
+of \(S_{JK}\). Each element \(s_{(i,a,h,b,j,k)}\) is a binary value
+indicating the presence or absence of data rows in the matrix \(R\)
+resulting from the sample mechanism, as in Equation (\ref{eq-mat26}).
+Thus, the vector contains \(n\) elements, matching the number of rows in
+\(R\), and the sum of its elements represents the total data sample:
+\(n^{s} = \binom{n^{s}_{I} \cdot n^{s}_{A}}{2} \cdot n^{s}_{J} \cdot n^{s}_{K}\).
+Here, the term \({n^{s}_{I} \cdot n^{s}_{A} \choose 2}\) represents the
+binomial coefficient, which quantifies the total number of unique
+comparisons possible between every pair of sampled stimuli generated by
+each pair of sampled individuals.
+
+\begin{equation}\phantomsection\label{eq-mat26}{
+s_{(i,a,h,b,j,k)} = \begin{cases} 
+1 & \text{if data elements } i,a,h,b,j,k \text{ from } R \text{ are sampled} \\
+0 & \text{if data elements } h,i,a,b,j,k \text{ from } R \text{ are missing}
+\end{cases}
+}\end{equation}
+
+\begin{equation}\phantomsection\label{eq-mat25}{
+S = \begin{bmatrix}
+s_{(1,1,1,2,1,1)} \\
+\vdots \\
+s_{(1,1,1,2,1,n_{K})} \\
+\vdots \\
+s_{(i,a,h,b,j,k)} \\
+\vdots \\
+s_{(n_{I},n_{A}-1,n_{I},n_{A},n_{J},1)} \\
+\vdots \\
+s_{(n_{I},n_{A}-1,n_{I},n_{A},n_{J},1)}
+\end{bmatrix}
+}\end{equation}
+
+With the definition of \(S\), we incorporate the sample mechanism into
+the CPM. Following the convention of \citet{McElreath_2020} and
+\citet{Deffner_et_al_2022}, DAG~\ref{fig-cj14_dag} represents the
+conceptual-population outcome \(O^{cp}_{R}\) as unobserved, emphasizing
+that this outcome cannot be directly accessed due to the sampling
+mechanism. The DAG also depicts the \emph{sample design} vector \(S\) as
+a causal factor influencing the sample-comparison outcome
+\(O^{sc}_{R}\). A square encloses \(S\), indicating that it is a
+conditioned variable. In this context, \emph{conditioning} means that
+the analysis is restricted to the elements of \(O^{cp}_{R}\) that
+satisfy \(s_{(i,a,h,b,j,k)}=1\) \citep{Neal_2020, McElreath_2020}. In
+essence, \(S\) is a vector that selects \emph{all repeated judgments
+made by a subset of judges for a subset of stimuli produced by the
+sampled individuals}.
+
+Notably, the DAG shows that \(S\) is independent of all other variables
+in the model. This implies that DAG~\ref{fig-cj14_dag} applies
+exclusively to Simple Random Sampling (SRSg) designs. In these designs,
+each repeated judgment, judge, stimulus, and individual has the same
+probability of being included in the sample as any other observation
+within their respective groups \citep{Lawson_2015}.
+
+However, due to concerns about the practical feasibility of the
+comparison task \citep{Boonen_et_al_2020}, CJ assessments rarely
+implement an exhaustive pairings of sampled judges, stimuli, and
+individuals. Thus, a realistic scenario must account for the fact that
+judges typically compare only a subset of stimuli authored by a sample
+of individuals.
+
+\begin{figure}[H]
+
+\begin{minipage}{\linewidth}
+
+\centering{
+
+\[
+\begin{aligned}
+  O_{R} & := f_{C}(O^{sc}_{R}, C) \\
+  O^{sc}_{R} & := f_{S}(O^{cp}_{R}, S) \\
+  O^{cp}_{R} & := f_{O}(D_{R}) \\
+  D_{R} & := f_{D}(T_{IA}, B_{JK}) \\
+  T_{IA} & := f_{T}(T_{I}, X_{IA}, e_{IA}) \\
+  T_{I} & := f_{T}(X_{I}, e_{I}) \\
+  B_{JK} & := f_{B}(B_{J}, Z_{JK}, e_{JK}) \\
+  B_{J} & := f_{B}(Z_{J}, e_{J}) \\
+  e_{I} & \:\bot\:\{ e_{J}, e_{IA}, e_{JK} \} \\
+  e_{J} & \:\bot\:\{ e_{IA}, e_{JK} \} \\
+  e_{IA} & \:\bot\:e_{JK} 
+\end{aligned}
+\]
+
+}
+
+\subcaption{\label{fig-cj14_scm}SCM}
+
+\end{minipage}%
+\newline
+\begin{minipage}{\linewidth}
+
+\centering{
+
+\includegraphics[width=1\textwidth,height=\textheight]{./images/png/CJ_TM_14.png}
+
+}
+
+\subcaption{\label{fig-cj14_dag}DAG}
+
+\end{minipage}%
+
+\caption{\label{fig-cj14}Sample-comparison model (CSM), final vectorized
+form.}
+
+\end{figure}%
+
+\subsubsection{The comparison
+mechanism}\label{sec-theory-theoretical_SC2}
+
+As in the previous section, we begin defining the \emph{comparison
+mechanism} using the binary vector variable \(C\) to facilitate the
+interpretation of the CSM. Equation (\ref{eq-mat27}) shows that \(C\)
+contains \(n\) elements corresponding to the number of rows in the \(R\)
+matrix, with each element \(c_{(i,a,h,b,j,k)}\) being a binary value
+indicating the presence or absence of data rows in \(R\), a definition
+similar to that of \(s_{(i,a,h,b,j,k)}\) in Equation (\ref{eq-mat26}).
+\begin{equation}\phantomsection\label{eq-mat27}{
+C = \begin{bmatrix}
+c_{(1,1,1,2,1,1)} \\
+\vdots \\
+c_{(1,1,1,2,1,n_{K})} \\
+\vdots \\
+c_{(i,a,h,b,j,k)} \\
+\vdots \\
+c_{(n_{I},n_{A}-1,n_{I},n_{A},n_{J},1)} \\
+\vdots \\
+c_{(n_{I},n_{A}-1,n_{I},n_{A},n_{J},1)}
+\end{bmatrix}
+}\end{equation}
+
+The DAG~\ref{fig-cj14_dag} also incorporates the \emph{comparison
+mechanism} \(C\) into the CPM. It shows the sample-comparison outcome
+\(O^{sc}_{R}\) as unobserved, emphasizing that this variable cannot be
+directly accessed because of the comparison mechanism. The DAG further
+shows \(C\) as a conditioned variable (enclosed in a square) that
+causally influences the observed outcome \(O_{R}\). This structure
+implies that \(C\) determines \emph{which repeated judgments judges make
+for the stimuli produced by the individuals}. In essence, \(C\) reflects
+the assumption that judges \emph{do not} perform all possible repeated
+judgments but instead complete a sufficient number, \(n_{C}\), to enable
+the accurate estimation of the proportion \(P(B>A)\) for each stimulus
+pair \citep[p.~267]{Thurstone_1927b}.
+
+Notably, DAG~\ref{fig-cj14_dag} also shows that \(C\) is independent of
+all other variables in the model. This independence implies that the
+conceptual model represented by the DAG applies exclusively to
+\emph{Random Allocation Comparative Designs} \citep{Bramley_2015}, or
+\emph{Incomplete Block Designs} \citep{Lawson_2015}, where every
+repeated judgment has an equal probability of being included in the
+sample.
+
+Finally, since it is standard to assume that the distribution of the
+conceptual-population outcome \(O^{cp}_{R}\) also holds for
+\(O^{sc}_{R}\) and \(O_{R}\), we can reformulate the SCM in
+Figure~\ref{fig-cj14} into the equivalent form shown in
+Figure~\ref{fig-cj15}. This reformulation produces a model that applies
+directly to a sample of comparative data. In this version, the
+unobserved outcomes \(O^{cp}_{R}\) and \(O^{sc}_{R}\) are omitted, and
+\(O_{R}\) inherits the structural equation \(f_{O}\) that originally
+defined \(O^{cp}_{R}\). Moreover, the definition of \(O_{R}\) now
+reflects its direct dependence on the discriminal difference \(D_{R}\)
+and the sample and comparison mechanisms, \(S\) and \(C\).
+
+In summary, the SCM~\ref{fig-cj15_scm} and DAG~\ref{fig-cj15_dag} extend
+Thurstone's general form to address several limitations of the BTL
+model. These extensions account for judges' biases (see
+Section~\ref{sec-theory-theoretical_P1}), reflect the hierarchical
+structure of stimuli and incorporate measurement error in trait
+estimation and hypothesis testing (see
+Section~\ref{sec-theory-theoretical_P3}), and even clarify the role of
+the sample and comparison mechanisms in CJ assessments (see
+Section~\ref{sec-theory-theoretical_SC}). However, they do not resolve
+concerns about the assumption of equal dispersions among stimuli
+discussed in Section~\ref{sec-theory-issue1a}. Since this concern
+relates to the statistical assumption underlying the distribution of the
+discriminal process, we develop a formal statistical model to address it
+in the next section.
+
+\begin{figure}[H]
+
+\begin{minipage}{\linewidth}
+
+\centering{
+
+\[
+\begin{aligned}
+  O_{R} & := f_{O}(D_{R}, S, C) \\
+  D_{R} & := f_{D}(T_{IA}, B_{JK}) \\
+  T_{IA} & := f_{T}(T_{I}, X_{IA}, e_{IA}) \\
+  T_{I} & := f_{T}(X_{I}, e_{I}) \\
+  B_{JK} & := f_{B}(B_{J}, Z_{JK}, e_{JK}) \\
+  B_{J} & := f_{B}(Z_{J}, e_{J}) \\
+  e_{I} & \:\bot\:\{ e_{J}, e_{IA}, e_{JK} \} \\
+  e_{J} & \:\bot\:\{ e_{IA}, e_{JK} \} \\
+  e_{IA} & \:\bot\:e_{JK} 
+\end{aligned}
+\]
+
+}
+
+\subcaption{\label{fig-cj15_scm}SCM}
+
+\end{minipage}%
+\newline
+\begin{minipage}{\linewidth}
+
+\centering{
+
+\includegraphics[width=0.72\textwidth,height=\textheight]{./images/png/CJ_TM_15.png}
+
+}
+
+\subcaption{\label{fig-cj15_dag}DAG}
+
+\end{minipage}%
+
+\caption{\label{fig-cj15}Comparative judgment model.}
+
+\end{figure}%
+
+\section{From SCM to statistical model}\label{sec-statistical}
+
+Using the SCM~\ref{fig-cj15_scm}, we can derive a statistical model that
+addresses violations of the equal dispersion assumption (see
+Section~\ref{sec-theory-issue1a}). This derivation is possible because a
+fully specified SCM encodes functional and probabilistic information,
+which we can replace with suitable functions and probabilistic
+assumptions \citep{Pearl_et_al_2016}. Specifically,
+SCM~\ref{fig-cj15_scm} allows us to express the joint distribution of
+our complex CJ system as a product of simpler conditional probability
+distributions (CPDs)\footnote{This re-expression is possible because the
+  \emph{chain rule} of probability and the \emph{Bayesian Network
+  Factorization (BNF)} property. For further details, see
+  \citet{Pearl_et_al_2016} and \citet{Neal_2020}.}, as shown in Equation
+(\ref{eq-mat51}). For clarity, we treat expressions such as
+\(Y := f_{Y}(X)\), \(P(Y \mid X)\), and \(Y \sim f(Y \mid X)\) as
+equivalent, where \(P(Y \mid X)\) and \(f(Y \mid X)\) represent the CPD
+of \(Y\) given \(X\). \begin{equation}\phantomsection\label{eq-mat51}{
+\begin{aligned}
+  P(O_{R}, & S, C, D_{R}, T_{IA}, X_{IA}, e_{IA}, T_{I}, X_{I}, e_{I}, B_{JK}, Z_{JK}, e_{JK}, B_{J}, Z_{J}, e_{J} ) & \\
+  &= P(O_{R} \mid D_{R}, S, C) \cdot P(S) \cdot P(C) \cdot P(D_{R} \mid T_{IA}, B_{JK}) \\
+  & \quad \cdot P(T_{IA} \mid T_{I}, X_{IA}, e_{IA}) \cdot P(T_{I} \mid X_{I}, e_{I}) \\
+  & \quad \cdot P(B_{JK} \mid B_{J}, Z_{JK}, e_{JK}) \cdot P(B_{J} \mid Z_{J}, e_{J}) \\
+  & \quad \cdot P(X_{IA}) \cdot P(X_{I}) \cdot P(Z_{JK}) \cdot P(Z_{J}) \\
+  & \quad \cdot P(e_{IA}) \cdot P(e_{I}) \cdot P(e_{JK}) \cdot P(e_{J})  
+\end{aligned}
+}\end{equation}
+
+Each CPD in Equation (\ref{eq-mat51}) rests on specific assumptions,
+which we outline in the statistical model presented in
+Figure~\ref{fig-cj16_stat}. The model starts by assuming that \(O_{R}\)
+follows a Bernoulli distribution\footnote{The binomial
+  distribution--including its special case, the Bernoulli
+  distribution--represent a maximum entropy distribution for binary
+  events \citep[p.~34]{McElreath_2020}. This means that the Bernoulli
+  distribution is the most consistent alternative when only two
+  un-ordered outcomes are possible and their expected frequencies are
+  assumed to be constant \citep[p.~310]{McElreath_2020}. For a detailed
+  discussion of the binomial as a maximum entropy distribution, see
+  \citet[sec.~10.1.2]{McElreath_2020}.}, reflecting the binary nature of
+CJ outcomes. Furthermore, following the conventions of Generalized
+Linear Models (GLMs)
+\citep{Nelder_et_al_1983, Nelder_et_al_1996, Agresti_2015}, the
+distribution links \(O_{R}\) to the latent discriminal difference vector
+\(D_{R}\) using an inverse-logit function:
+\(\text{inv\_logit}(x) = 1/(1 + \exp(-x))\).
+
+\begin{figure}
+
+\begin{minipage}{0.33\linewidth}
+
+\centering{
+
+\[
+\begin{aligned}
+  O_{R} & := f_{O}(D_{R}, S, C) \\ 
+  D_{R} & := f_{D}(T_{IA}, B_{JK}) \\
+  T_{IA} & := f_{T}(T_{I}, X_{IA}, e_{IA}) \\
+  T_{I} & := f_{T}(X_{I}, e_{I}) \\
+  B_{JK} & := f_{B}(B_{J}, Z_{JK}, e_{JK}) \\
+  B_{J} & := f_{B}(Z_{J}, e_{J}) \\ \\
+  e_{I} & \:\bot\:\{ e_{J}, e_{IA}, e_{JK} \} \\
+  e_{J} & \:\bot\:\{ e_{IA}, e_{JK} \} \\
+  e_{IA} & \:\bot\:e_{JK}
+\end{aligned}
+\]
+
+}
+
+\subcaption{\label{fig-cj16_scm}SCM}
+
+\end{minipage}%
+%
+\begin{minipage}{0.33\linewidth}
+
+\centering{
+
+\[
+\begin{aligned}
+  & P( O_{R} \mid D_{R}, S, C ) \\
+  & P( D_{R} \mid T_{IA}, B_{JK} ) \\
+  & P( T_{IA} \mid T_{I}, X_{IA}, e_{IA} ) \\
+  & P( T_{I} \mid X_{I}, e_{I} ) \\
+  & P( B_{JK} \mid B_{J}, Z_{JK}, e_{JK} ) \\
+  & P( B_{J} \mid Z_{J}, e_{J} ) \\ \\
+  & P( e_{I} ) P( e_{IA} ) P( e_{J} ) P( e_{JK} ) \\ \\ \\
+\end{aligned}
+\]
+
+}
+
+\subcaption{\label{fig-cj16_prob}Probabilistic model}
+
+\end{minipage}%
+%
+\begin{minipage}{0.33\linewidth}
+
+\centering{
+
+\[
+\begin{aligned}
+  O_{R} & \overset{iid}{\sim} \text{Bernoulli} \left[ \text{inv\_logit}( D_{R} ) \right] \\
+  D_{R} & = \left( T_{IA}[i,a] - T_{IA}[h,b] \right) + B_{JK}[j,k] \\
+  T_{IA} & = T_{I} + \beta_{XA} X_{IA} + e_{IA} \\
+  T_{I} & = \beta_{XI} X_{I} + e_{I} \\
+  B_{JK} & = B_{J} + \beta_{ZK} Z_{JK} + e_{JK} \\
+  B_{J} & = \beta_{ZJ} Z_{J} + e_{J} \\ \\
+  \boldsymbol{e} & \sim \text{Multi-Normal}( \boldsymbol{\mu}, \boldsymbol{\Sigma} )
+  \\
+  \boldsymbol{\Sigma} &= \boldsymbol{V} \boldsymbol{Q} \boldsymbol{V} \\ \\
+\end{aligned}
+\]
+
+}
+
+\subcaption{\label{fig-cj16_stat}Statistical model}
+
+\end{minipage}%
+
+\caption{\label{fig-cj16}Comparative judgment model. SCM, probabilistic
+and statistical model assuming different discriminal dispersions for the
+student's traits}
+
+\end{figure}%
+
+While the joint distribution in Equation (\ref{eq-mat51}) includes the
+probability distributions of the sampling and comparison mechanisms,
+\(P(S)\) and \(P(C)\), as well as those of the predictor
+variables--\(P(X_{IA})\), \(P(X_{I})\), \(P(Z_{JK})\), and
+\(P(Z_{J})\)--all of these probabilities are omitted from the
+statistical model \ref{fig-cj16_stat}. This omission is justified
+because, while these distributions contribute to the overall joint
+distribution of the data, the variables \(S\), \(C\), \(X_{IA}\),
+\(X_{I}\), \(Z_{JK}\), and \(Z_{J}\) are observed and independent of any
+other variable in the model. As observed variables, they do not require
+distributional assumptions in the same way the idiosyncratic errors do.
+Their independence follows from the underlying random selection
+procedures that govern the variables\footnote{Randomization ensures that
+  data--and, by extension, an estimator--satisfies several key
+  identification properties, such as common support, no interference,
+  and consistency. The most critical property, however, is the
+  elimination of confounding. \emph{Confounding} occurs when an external
+  variable, such as \(X_{I}\), simultaneously influences both the
+  outcome (e.g., \(O_{R}\)) and a variable of interest (e.g., \(S\)),
+  resulting in spurious associations between the latter two
+  \citep{Everitt_et_al_2010}. Randomization ensure the absence of
+  confounding by effectively decoupling the association between the
+  variable of interest and any other variable, except for the outcome
+  itself. For a more detailed discussion on the benefits of
+  randomization, see \citet{Pearl_2009}, \citet{Morgan_et_al_2014},
+  \citet{Neal_2020}, and \citet{Hernan_et_al_2025}.}.
+
+Next \(D_{R}\) is defined as the difference between the discriminal
+processes \(T_{IA}[i, a]\) and \(T_{IA}[h, b]\), representing the
+underlying written-quality trait of the compared texts, plus the
+corresponding repeated judge bias \(B_{JK}[j, k]\). Note that if it is
+assumed that \(B_{JK}[j,k]\) reflects the difference in
+stimulus-specific biases, i.e.,
+\(B_{JK}[j,k] = B_{JK}[i,a,j,k] - B_{JK}[h,b,j,k]\), the discriminal
+difference can be re-written as:
+\begin{equation}\phantomsection\label{eq-mat52}{
+\begin{aligned}
+D_{R} &= \left( T_{IA}[i,a] - T_{IA}[h,b] \right) + B_{JK}[j,k] \\
+&= \left( T_{IA}[i, a] + B_{JK}[i, a, j, k] \right) - \left( T_{IA}[h, b] + B_{JK}[h, b, j, k] \right) \\
+& = T^{*}_{IA}[i,a] - T^{*}_{IA}[h,b]
+\end{aligned}
+}\end{equation}
+
+This formulation reveals that the discriminal difference captures a
+\emph{pure interaction effect}, in which neither the texts' discriminal
+processes nor the judges' biases alone determine the outcome, but their
+interaction does \citep{Attia_et_al_2022}. Put simply, this mathematical
+description captures the idea that the stimuli' discriminal processes
+become an observable outcome only through the lens of judges'
+perceptions (i.e., their biases). For clarity, the square brackets in
+\(D_{R}\) indicate the relevant indices for each trait vector.
+
+Now the functional forms for \(T_{IA}\), \(T_{I}\), \(B_{JK}\), and
+\(B_{J}\) are specified. \(T_{IA}\) is modeled as a linear combination
+of the students' underlying writing-quality traits \(T_{I}\), the
+effects of relevant text-related variables on quality assessment
+\(\beta_{XA}X_{IA}\) (such as the influence of text length), and the
+text-specific idiosyncratic errors \(e_{IA}\). Similarly, \(T_{I}\) is
+expressed as a linear combination of relevant student-related variables
+affecting the quality assessment \(\beta_{XI} X_{I}\), and
+student-specific idiosyncratic errors \(e_{I}\). For the judge-specific
+terms, \(B_{JK}\) is modeled as a linear combination of the judge's
+individual bias \(B_{J}\), the influence of relevant judgment-related
+variables on quality assessment \(\beta_{ZK}Z_{JK}\) (e.g., how the
+number of judgments affect the evaluation), and judgment-specific
+idiosyncratic errors \(e_{JK}\). Finally, \(B_{J}\) is defined as a
+linear combination of relevant judge-level variables influencing the
+quality assessment \(\beta_{ZJ}Z_{J}\) (such as judgment expertise) and
+judge-specific idiosyncratic errors \(e_{J}\).
+
+Next, the probabilistic assumptions for the idiosyncratic errors
+\(e_{I}\), \(e_{IA}\), \(e_{J}\), and \(e_{JK}\) are specified. Unlike
+other variables in the model, these error terms exhibit indeterminacies
+in their \emph{location}, \emph{orientation}, and \emph{scale} due to
+the lack of an inherent scale in the associated latent variables
+\(T_{I}\), \(T_{IA}\), \(B_{J}\), and \(B_{JK}\). Thus, to identify the
+latent variable model these indeterminacies must be resolved
+\citep{Depaoli_2021, deAyala_2009}. Drawing on principles from SEM
+\citep{Hoyle_et_al_2023}, the vector of idiosyncratic errors
+\(\boldsymbol{e} = [e_{I}, e_{IA}, e_{J}, e_{JK}]^{T}\) are assumed to
+follow a Multivariate Normal distribution with mean vector
+\(\boldsymbol{\mu}\) and a covariance matrix
+\(\boldsymbol{\Sigma} = \boldsymbol{V} \boldsymbol{Q} \boldsymbol{V}\),
+with \(\boldsymbol{V}\) denoting a diagonal matrix of standard
+deviations and \(\boldsymbol{Q}\) a correlation matrix. To address the
+\emph{location} indeterminacy, the errors' mean vector is set to zero:
+\begin{equation}\phantomsection\label{eq-mat53}{
+\boldsymbol{\mu} = [0, 0, 0, 0]^{T}
+}\end{equation}
+
+Following SCM~\ref{fig-cj16_scm}, the \emph{orientation} indeterminacy
+is solved by assuming that the errors are uncorrelated. This assumption
+leads to the definition of the error's correlation matrix,
+\(\boldsymbol{Q}\), as the identity matrix:
+\begin{equation}\phantomsection\label{eq-mat54}{
+\boldsymbol{Q} = \begin{bmatrix}
+    1 & 0 & 0 & 0 \\
+    0 & 1 & 0 & 0 \\
+    0 & 0 & 1 & 0 \\
+    0 & 0 & 0 & 1 
+  \end{bmatrix}
+}\end{equation}
+
+To resolve the \emph{scale} indeterminacy, the diagonal matrix
+\(\boldsymbol{V}\) is defined as follows:
+\begin{equation}\phantomsection\label{eq-mat55}{
+\boldsymbol{V} = \begin{bmatrix}
+    s_{XI} & 0 & 0 & 0 \\
+    0 & p_{IA} & 0 & 0 \\
+    0 & 0 & s_{ZJ} & 0 \\
+    0 & 0 & 0 & p_{JK} 
+  \end{bmatrix}
+}\end{equation}
+
+Here, \(s_{XI}\) represents the standard deviation for the individuals,
+\(p_{IA}\) for the stimuli, \(s_{ZJ}\) for the judges, and \(p_{JK}\)
+for the judgments. It is assumed \(s_{XI}\) varies depending on the
+teaching method group to which each student belongs. Using the example
+from Section~\ref{sec-theoretical}, where the teaching method
+\(X_{I} = \{1,2\}\), the model sets the constraint according to Equation
+(\ref{eq-mat56}). This constraint anchors the scale of the individuals'
+latent trait while relaxing the assumption of equal dispersion for the
+stimuli, thereby addressing the concerns raised in
+Section~\ref{sec-theory-issue1a}.
+\begin{equation}\phantomsection\label{eq-mat56}{
+\sum_{g=1}^{2} s_{XI}[g]/2 = 1
+}\end{equation}
+
+Because the error vector \(\boldsymbol{e}\) follows an uncorrelated
+Multivariate Normal distribution, the marginal distribution of
+\(e_{IA}\) is a univariate Normal distribution with mean zero and
+standard deviation \(p_{IA}\). Thus, \(p_{IA}\) is set as a proportion
+of \(1\) to establish the scale of the stimuli' latent trait relative to
+the scale of the individuals' trait. Note that as a result, \(T_{IA}\)
+is also normally distributed. This configuration effectively reinstates
+Thurstone's original assumption of Normal discriminal processes for the
+stimuli (see Table~\ref{tbl-thurstone_cases}).
+
+Similarly, it is assumed that \(s_{ZJ}\) varies depending on the groups
+to which each judge belongs. For instance, if \(Z_{J} = \{1,2,3\}\)
+represents three groups of judges with varying expertise, the model sets
+the constraint according to Equation (\ref{eq-mat57}). This constraint
+anchors the scale of the judges' latent trait and relaxes the assumption
+of equal dispersion for the judgments.
+\begin{equation}\phantomsection\label{eq-mat57}{
+\sum_{g=1}^{2} s_{ZJ}[g]/3 = 1
+}\end{equation}
+
+Conversely, \(p_{JK}\) is defined as a proportion of \(1\) to establish
+the scale of the judgments' latent trait relative to the scale of the
+judges' trait.
+
+Finally, we use \emph{Bayesian inference methods} to convert the
+statistical model \ref{fig-cj16_stat} into a practical statistical tool
+for analyzing paired comparison data. Bayesian inference offers three
+main advantages in this context. First, it handles complex and
+overparameterized models, where the number of parameters exceeds the
+number of observations \citep{Baker_1998, Kim_et_al_1999}. This feature
+is essential for our implementation, as the proposed model is indeed
+overparameterized. Second, it incorporates prior information to
+constrain parameter estimates within plausible bounds, thereby
+mitigating estimation issues like non-convergence or improper solutions
+that often affect frequentist methods
+\citep{Martin_et_al_1975, Seaman_et_al_2011}. Prior distributions are
+used to define the error distribution and set the scale of latent
+variables \citep{Depaoli_2014}. Third, Bayesian inference supports
+robust inferences from small samples, where the asymptotic properties
+underlying frequentist methods are less reliable
+\citep{Baldwin_et_al_2013, Lambert_et_al_2006, Depaoli_2014}. This
+feature is particularly relevant in CJ assessments, as researchers often
+collect large volumes of paired comparisons but work with relatively
+small samples of judges, stimuli, and individuals to test hypotheses.
+
+The \textbf{Declarations} section of this document provides a link to
+the model code, along with an alternative specification that assumes
+equal discriminal dispersions. Both versions of the model have been
+tested with success using \texttt{Stan} \citep[version
+2.26.1]{Stan_2020}.
+
+\section{Discussion}\label{sec-discussion}
+
+Thurstone introduced the Law of Comparative Judgment to measure
+psychological traits of stimuli through pairwise comparisons
+\citep{Thurstone_1927a, Thurstone_1927b}. In its general form, the
+theory models single-judge comparisons across multiple, potentially
+correlated stimuli. Each comparison produces a dichotomous outcome
+indicating which stimulus the judge perceives as having a higher trait
+level. However, Thurstone identified one key challenge in this general
+formulation: the measurement model required estimating more ``unknown''
+parameters than the number of available pairwise comparisons
+\citep{Thurstone_1927b}. To address this issue and to facilitate the
+theory's practical applicability, he formulated five cases, each
+progressively incorporating several simplifying assumptions.
+
+Among these, Case V remains the most widely used model in empirical CJ
+research, mainly due to the widespread adoption of the BTL model. The
+BTL model incorporates the core assumptions of Case V--namely, equal
+discriminal dispersions and zero correlation among stimuli' discriminal
+processes--but replaces the processes' normal distribution with the more
+mathematically tractable logistic distribution
+\citep{Andrich_1978, Bramley_2008}. Although this substitution has
+minimal impact on trait estimation or model interpretation
+\citep{vanderLinden_et_al_2017_I, McElreath_2021}, the simplifying
+assumptions of the BTL model--and by extension, of Case V--may fail to
+capture the complexity of some traits or account for heterogeneous
+stimuli
+\citep{Thurstone_1927a, Andrich_1978, Bramley_2008, Kelly_et_al_2022},
+potentially leading to unreliable and inaccurate trait estimates
+\citep{Ackerman_1989, Zimmerman_1994, McElreath_2020, Hoyle_et_al_2023}.
+
+Moreover, because Thurstone's original goal was to produce a ``coarse
+scaling'' of traits and allocate stimuli along this continuum
+\citep[p.~269]{Thurstone_1927a}, his theory offered no guidance on how
+to use trait estimates for statistical inference. The CJ tradition has
+attempted to address this gap by separating trait estimation from
+hypothesis testing, relying on point estimates, such as BTL scores or
+their transformations, for inference. While this approach simplifies
+analysis, it can also introduce bias and compromise the reliability of
+the resulting inferences
+\citep{McElreath_2020, Kline_et_al_2023, Hoyle_et_al_2023}.
+
+To address the limitations of Thurstone's Case V and the BTL model, this
+study extended Thurstone's general form using a systematic, integrated
+approach that combined causal and Bayesian inference methods. The
+approach began with the development of a conceptual model, formalized as
+a Structural Causal Model (SCM) and represented graphically by a
+Directed Acyclic Graph (DAG)
+\citep{Pearl_2009, Pearl_et_al_2016, Gross_et_al_2018, Neal_2020}. This
+model integrated Thurstone's core theoretical principles, such as the
+discriminal processes of stimuli, alongside key CJ assessment design
+features, including judges' bias, sampling procedures, and comparison
+mechanisms. Together, these components allowed the causal processes
+underlying the CJ system to be disentangled.
+
+The approach then translated the SCM into a bespoke statistical model
+that enabled the analysis of CJ data in cases where the assumptions of
+equal dispersion and zero correlation were violated, and where
+statistical inference was required. In particular, the model accounted
+for judge biases, captured the hierarchical structure of stimuli,
+incorporated measurement error into the hypothesis testing process, and
+accommodated heterogeneity in discriminal dispersions. By addressing
+these issues, the methodological innovations aimed to enhance the
+reliability and validity of trait measurement in CJ, while also
+improving the accuracy of statistical inferences.
+
+Beyond these potential benefits, the approach offered two additional
+advantages. First, it clarified the roles and interactions of all actors
+and processes involved in CJ assessments. Second, it shifted the
+analytic paradigm from passively accepting the assumptions of Case V and
+the BTL model to actively testing their fit with observed data.
+Together, these advantages established a principled framework for
+evaluating best practices in designing CJ assessments--one that better
+aligns with the demands of contemporary CJ contexts
+\citep{Kelly_et_al_2022}--providing new insights into existing research
+and opening promising avenues for future inquiry.
+
+\subsection{Future research directions using our
+approach}\label{sec-discussion_RA}
+
+Among the many potential directions for future research, three avenues
+deserve particular attention due to their direct impact on the
+reliability and validity of CJ trait estimates, as well as on the
+accuracy of statistical inferences. The following sections outline these
+avenues and explain how our approach facilitates their investigation.
+
+\subsubsection{The impact of sampling and comparison
+mechanisms}\label{sec-discussion_RA1}
+
+Although sampling and comparison mechanisms are central to modern CJ
+assessments, it is striking that most CJ literature has examined them
+within a limited scope. Researchers have primarily investigated the
+effects of adaptive comparative judgment (ACJ) designs on trait
+reliability
+\citep{Pollitt_2012a, Pollitt_2012b, Bramley_2015, Verhavert_et_al_2022, Mikhailiuk_et_al_2021, Gray_et_al_2024}
+or proposed practical guidelines for the number of comparisons judges
+should make \citep{Verhavert_et_al_2019, Crompvoets_et_al_2022}. While
+these studies offer valuable insights, they also overlook the broader
+role that these mechanisms play within the CJ system. As this oversight
+likely stems from a more fundamental lack of conceptual clarity about
+how these mechanisms function within the system, the present study
+integrated these mechanisms into the conceptual model of CJ.
+
+The explicit integration of the sampling and comparison mechanisms
+offers a new perspective on how these mechanisms shape the CJ process.
+Specifically, it clarified their role as sources of missing data in CJ's
+data-generating process--that is, as mechanisms that determine which
+observations are missing from the final data sample. This new
+perspective invites the application of Little and Rubin's principled
+missing data framework \citep{Little_et_al_2020}, allowing a more
+rigorous evaluation of existing claims about these missing data
+mechanisms, their influence on CJ outcomes, and their implications for
+designing and evaluating more complex assessments setups.
+
+This study circumvented the need to apply the missing data framework by
+deliberately structuring the sampling and comparison mechanisms to be
+independent of any observed or unobserved variables, including the
+outcome. In other words, these mechanisms were intentionally designed to
+yield data that are \emph{missing completely at random} (MCAR)
+\citep{Little_et_al_2020}. This design choice offered one key advantage:
+it generated simple random samples that satisfied the condition of
+\emph{ignorability}, thereby allowing researchers to legitimately
+\emph{ignore} missing data during analysis without introducing bias
+\citep{Everitt_et_al_2010, Kohler_et_al_2019, Neal_2020}.
+
+However, many modern CJ applications rely on more complex assessment
+designs, in which the sampling and comparison mechanisms introduce more
+intricate forms of missingness such as \emph{missing at random} (MAR) or
+\emph{missing not at random} (MNAR) \citep{Little_et_al_2020}. One
+prominent example is ACJ designs, where prior judgment outcomes inform
+the selection of stimulus pairs for subsequent comparisons
+\citep{Pollitt_2012a, Pollitt_2012b, Bramley_2015}. This pair selection
+procedure suggests that ACJ's comparison mechanism is outcome-dependent,
+potentially classifying the method as a generator of MNAR data. If this
+classification holds, ACJ might violate the condition of ignorability,
+making it an unsuitable pair selection procedure for reliable and valid
+trait estimation and inference. Moreover, under this interpretation, the
+mixed findings on ACJ's effectiveness become more comprehensible: while
+some studies find that the method improves trait reliability
+\citep{Pollitt_et_al_2003, Pollitt_2012a, Pollitt_2012b}, others argue
+that that these gains may be artificially inflated
+\citep{Bramley_2015, Bramley_et_al_2019, Crompvoets_et_al_2020, Crompvoets_et_al_2022}.
+
+Regardless of the underlying missingness mechanisms, any CJ assessment
+design would benefit from explicitly defining its assumptions--a
+practice supported by this study's approach. This clarity enables a
+thorough evaluation of how the sampling and comparison mechanisms affect
+trait estimation and statistical inference in each design. Such
+assessments are particularly relevant given the common misconception in
+the CJ literature that Thurstone's model can naturally handle even
+non-random missing data without compromising the reliability or validity
+of trait estimates \citep{Bramley_2008}.
+
+\subsubsection{The effects of judges' bias on the reliability of trait
+estimates}\label{sec-discussion_RA2}
+
+Despite the growing notion that various stimulus-related factors
+influence judges' perceptions
+\citep{vanDaal_et_al_2016, Lesterhuis_et_al_2018, Chambers_et_al_2022}
+and that these influences may not always cancel each other out,
+empirical evidence of judges' biases remains scarce in the CJ literature
+\citep{Pollitt_et_al_2003, vanDaal_et_al_2016, Bartholomew_et_al_2020a}.
+This gap likely persists not from a lack of interest or research but
+because the identification of such biases often depends on ad-hoc
+detection methods, like `misfit' statistics, that may not be well-suited
+for the task \citep{Kelly_et_al_2022}. To overcome this limitation, the
+present study treated judges' biases as an integral component of the CJ
+system from the outset. This approach offers one key advantage: it
+provides a more accurate representation of the data-generating process
+behind pairwise comparisons, one that acknowledges that the discriminal
+processes of stimuli becomes an observable outcome only through judges'
+perceptions, which may exhibit bias.
+
+The explicit integration of judges' bias into CJ's conceptual model then
+paves the way for investigating several relevant research questions. One
+key question is whether CJ data can be validly analyzed under the
+assumption of ``sample-free'' trait calibration, specifically under the
+hypothesis that judges exhibit no systematic bias. This question is
+particularly relevant because ``sample-freeness'' is still regarded as
+an inherent property of the BTL model \citep{Bramley_2008, Andrich_1978}
+despite growing evidence of persistent biases. Another critical question
+is whether training or expertise can help judges avoid focusing on
+irrelevant stimulus features, such as handwriting, over more central
+criteria like argumentative quality in writing assessments
+\citep{Kelly_et_al_2022}. Exploring these questions may also provide
+insights into what it truly means to be an ``expert'' within the CJ
+context \citep{Kelly_et_al_2022}.
+
+Moreover, since judges rely on these stimulus-related factors when
+evaluating complex, multidimensional traits (e.g., structure, style)
+\citep{vanDaal_et_al_2016, Lesterhuis_et_al_2018, Chambers_et_al_2022},
+and these factors account for variation in judgment accuracy
+\citep{Gill_et_al_2013, vanDaal_et_al_2017, vanDaal_2020, Gijsen_et_al_2021},
+it is reasonable to expect that assessments also vary according to
+judge-specific attributes such as gender, age, culture, income,
+education, training, or expertise \citep{Kelly_et_al_2022}. Prior
+studies support this view
+\citep[e.g.,][]{Bartholomew_et_al_2020a, McMahon_et_al_2015}. Thus,
+building on the discussion in Section~\ref{sec-discussion_RA1}, further
+exploration is warranted into how judge selection influences the
+formation of a ``shared consensus'' and whether certain judge attributes
+introduce systematic biases or distortions in the stimuli trait
+distribution \citep{Deffner_et_al_2022}. Furthermore, if such attributes
+do in fact compromise the assumption of ``sample-freeness,'' it becomes
+essential to consider strategies for mitigating their effects and to
+determine how many judges (and how many judgments per judge) are
+required to produce reliable trait estimates under these conditions.
+Additionally, it is worth examining whether \emph{repeated measures
+designs}, in which judges evaluate the same stimulus pairs multiple
+times \citep{Lawson_2015}, can improve judgment consistency and
+accuracy. As anticipated, the approach presented in this study provides
+a structured foundation to rigorously investigate these questions.
+
+\subsubsection{The identification of `misfitting' judges and
+stimuli}\label{sec-discussion_RA3}
+
+Although the CJ literature clearly defines \emph{misfit} judges and
+stimuli, CJ researchers have rarely examined how these observations
+relate to Thurstonian theory. In particular, they have not identified
+which elements of Thurstone's theory account for the occurrence of
+misfits. This disconnect likely stems from the fact that misfit
+statistics are derived from residual analysis and outlier detection
+methods rather than from Thurstonian principles. Specifically,
+\emph{misfit judges} are typically defined as those whose assessments
+diverge significantly from the ``shared consensus''
+\citep{Pollitt_2012a, Pollitt_2012b, vanDaal_et_al_2016, Goossens_et_al_2018, Wu_et_al_2022},
+while \emph{misfit stimuli} are those that elicit more judgment
+discrepancies than others
+\citep{Pollitt_2004, Pollitt_2012a, Pollitt_2012b, Goossens_et_al_2018}.
+Both definitions closely mirror the statistical concept of outliers,
+that is, observations that deviate markedly from the rest of the sample
+in which they occur \citep{Grubbs_1969}. But this resemblance extends
+beyond the definitions themselves, as misfits are often identified using
+conventional outlier detection procedures, such as transforming BTL
+model residuals into diagnostic statistics and comparing them against
+predefined thresholds
+\citep{Pollitt_2012a, Pollitt_2012b, Wu_et_al_2022}.
+
+Nevertheless, is not the classification of misfits as outliers that
+raises concerns for trait measurement and inference. Rather, the concern
+lies in the prevailing CJ practice of identifying these observations
+through ad-hoc procedures and excluding them from analysis
+\citep{Pollitt_2012a, Pollitt_2012b}, often without empirical support
+for the various hypotheses suggested to explain their occurrence. It is
+essential to recognize that outliers are defined relative to a specific
+model \citep{McElreath_2020}. Thus, detection procedures based on models
+like the BTL--which rests on strong assumptions--should be approached
+with caution, as they may not be appropriate for this purpose
+\citep{Kelly_et_al_2022}. If the BTL model does not accurately represent
+the actual data-generating process of the CJ system, the method may miss
+classify valid observations as misfits. On top this, excluding these
+observations carries additional risks. The statistical literature
+cautions that removing outliers can discard valuable information
+\citep{Miller_2023} and introduce bias into trait estimates. The
+direction and magnitude of this bias are often unpredictable, as they
+depend on which observations are excluded from the analysis
+\citep{Zimmerman_1994, OHagan_2018, McElreath_2020}. Finally, even when
+the model aligns well with the data, its rigid assumptions limit the
+model's ability to adequately test many of the hypotheses proposed to
+explain misfit behavior.
+
+In contrast, the approach presented in this study provides a rigorous
+framework for testing several relevant hypotheses. For instance, it
+allows to investigate whether misfit judges are those who exhibit (an
+outlying degree of) systematic bias or greater variability in their
+judgments compared to their peers. Similarly, the approach makes
+possible to explore whether misfit stimuli exhibit more variable
+discriminal processes relative to other stimuli or if they are genuinely
+outlying cases. Moreover, since outliers are not inherently ``bad data''
+\citep{McElreath_2020}, the present approach offers a principled
+alternative to exclusion, one that retains misfits in the analysis
+without compromising trait estimation or inference. This is achieved by
+adapting the proposed model into robust measurement models
+\citep{McElreath_2020}, a broad class of procedures designed to reduce
+the sensitivity of parameter estimates to mild or moderate departures
+from model assumptions \citep{Everitt_et_al_2010}. This strategy also
+speaks to a broader concern in the social sciences: when predictive
+power is low, the solution may not lie solely in seeking new variables
+or procedures, but also in adopting more sophisticated measurement
+models \citep{Wainer_et_al_1978}.
+
+\subsection{Study limitations and practical challenges for applied CJ
+researchers}\label{sec-discussion_challenges}
+
+Drawing conclusions from observed data always requires assumptions,
+whether the data are observational or experimental
+\citep{Kohler_et_al_2019, Deffner_et_al_2022}. The proposed approach is
+not an exception to this fundamental principle. Like all approaches
+grounded on causal inference, it relies on expert knowledge and
+assumptions about the variables' causal structure that are often
+untestable at the outset \citep{Hernan_et_al_2025}. However, its purpose
+is not to deliver automatic answers when applied to a given CJ dataset.
+Instead, it encourages the formulation of precise questions and the
+explicit articulation of assumptions, fostering a generalizable
+understanding of the CJ system under study
+\citep{Rohrer_et_al_2022, Deffner_et_al_2022, Sterner_et_al_2024}. This
+clarity is crucial because the accuracy of estimates and validity of
+inferences depend on how well the data and inferential goals align with
+a model's assumptions \citep{Kohler_et_al_2019}. Although this alignment
+remains to be empirically tested for the proposed models, the
+theory-driven nature of this approach provides a solid foundation for
+future empirical evaluation of its causal assumptions
+\citep{Deffner_et_al_2022}, grounded in both established theory and
+existing evidence.
+
+The theoretical commitment to causal inference also introduces several
+practical challenges that applied CJ researchers must navigate. These
+fall into two main categories: first, acquiring the foundational
+knowledge necessary to apply the approach effectively; and second,
+dedicating greater attention to both conceptual and statistical
+modeling.
+
+\subsubsection{Required foundational
+knowledge}\label{sec-discussion_challenges1}
+
+Applying the approach effectively requires foundational knowledge in two
+areas. First, a solid understanding of causal inference principles.
+Second, the ability to translate the functional and probabilistic
+aspects of conceptual models into bespoke statistical models. A clear
+example illustrating the importance of causal inference is the recurrent
+assumption that predictor variables are ``relevant'' to the research
+context--interpreting this relevance as their inclusion in a
+\emph{sufficient adjustment set}
+\citep{Pearl_2009, Pearl_et_al_2016, Morgan_et_al_2014}. However, this
+study does not explore the full implications of that assumption for
+model specification, estimation, and inference. Nevertheless, to assist
+with the effort of engaging with this and other complex causal inference
+concepts, key references are provided throughout the study to guide
+applied CJ researchers toward a deeper understanding of these ideas
+\footnote{Also refer to the detailed online document referenced in the
+  \textbf{Declarations} section}.
+
+Developing the skills to translate conceptual models into bespoke
+statistical models also presents challenges. Although Bayesian inference
+methods offer a more accessible path for many applied CJ researchers to
+develop these skills--by reducing the need for specialized knowledge in
+areas like optimization theory, which frequentist methods often
+require--they still demand familiarity with technical concepts such as
+probabilistic programming languages (PPLs), probability distributions,
+and convergence diagnostics. Thus, to support this skill development,
+this study provides a link to the statistical model code and alternative
+model specifications in the \textbf{Declarations} section of this
+document \footnote{Seminal texts on Bayesian inference methods, such as
+  \citet{Gelman_et_al_2014} and \citet{McElreath_2020}, offer valuable
+  support for developing a deeper understanding of these models.}.
+
+\subsubsection{Attention to conceptual and statistical
+modeling}\label{sec-discussion_challenges2}
+
+Even after acquiring the necessary foundational knowledge, applying this
+approach to a specific CJ context involves two additional challenges.
+First, it is essential to verify whether the conceptual model achieves
+sufficient \emph{fidelity} in representing the CJ system under study.
+Second, the statistical translation of the model must be assessed to
+determine if it can accurately estimate the intended estimands (i.e.,
+parameters) from empirical data. To ensure fidelity, the conceptual and
+statistical models presented here should be treated as starting points,
+not universal solutions for all CJ designs or datasets. While these
+models may be adequate in some contexts, assuming so without evaluation
+is unwise. Instead, adaptation to the specific context is necessary,
+with careful attention to assessment design features and their implied
+causal assumptions. As discussed in
+Section~\ref{sec-discussion_challenges}, this approach supports such
+adaptation by providing a transparent framework for articulating new
+assumptions and guiding CJ assessment design.
+
+Conversely, evaluating the estimation capabilities of the statistical
+model requires addressing the challenge of identification analysis. As
+outlined in Section~\ref{sec-theoretical}, \emph{identification
+analysis} determines whether a statistical model can accurately compute
+a given estimand (e.g., a parameter) based solely on its (causal)
+assumptions, independent of random variability
+\citep{Schuessler_et_al_2023}. Identification is crucial because it is a
+necessary condition for consistency. \emph{Consistency} is the property
+of an estimator (e.g., a statistical model) whose estimates converge to
+the ``true'' value of an estimand as the data size approaches infinity
+\citep{Everitt_et_al_2010}. Without identification, consistency is
+impossible--even with infinite, error-free data--and meaningful
+inference from finite samples cannot be achieved
+\citep{Schuessler_et_al_2023}. While formal derivations of
+identification may seem a natural next step, the complexity of the CJ
+system makes this approach impractical at the outset. Instead,
+simulation-based methods like power analysis offer a more practical and
+flexible alternative, enabling examination of estimate consistency
+without relying on complex mathematical proofs. Notably, the approach
+presented here supports both strategies by providing the probabilistic
+foundation for formal derivations and the statistical structure needed
+for simulation-based methods.
+
+\section{Conclusion}\label{sec-conclusion}
+
+The present study highlights the need to extend Thurstone's theory to
+address the demands of contemporary empirical CJ research. It advocates
+for developing bespoke CJ models tailored to the specific
+data-generating processes of different CJ assessment designs. These
+models aim to enhance the robustness of trait estimates and clarity of
+inferences. Moreover, this work outlines a clear path for advancing both
+theoretical and applied CJ research and lays the foundation for broader
+adoption of more robust and interpretable methodologies across the
+social sciences.
+
+\newpage{}
+
+\section*{Declarations}\label{declarations}
+\addcontentsline{toc}{section}{Declarations}
+
+\textbf{Funding:} The Research Fund (BOF) of the University of Antwerp
+funded this project.
+
+\textbf{Financial interests:} The authors declare no relevant financial
+interests.
+
+\textbf{Non-financial interests:} The authors declare no relevant
+non-financial interests.
+
+\textbf{Ethics approval:} The University of Antwerp Research Ethics
+Committee confirmed that this study does not require ethical approval.
+
+\textbf{Consent to participate:} Not applicable
+
+\textbf{Consent for publication:} All authors have read and approved the
+final version of the manuscript for publication.
+
+\textbf{Data availability:} This study did not use any data.
+
+\textbf{Materials and code availability:} The \texttt{CODE\ LINK}
+section at the top of the digital document located at:
+\url{https://jriveraespejo.github.io/paper2_manuscript/} provides access
+to all materials and code.
+
+\textbf{AI-assisted technologies in the writing process:} The authors
+used various AI-based language tools to refine phrasing, optimize
+wording, and enhance clarity and coherence throughout the manuscript.
+They take full responsibility for the final content of the publication.
+
+\textbf{CRediT authorship contribution statement:}
+\emph{Conceptualization:} J.M.R.E, T.vD., S.DM., and S.G.;
+\emph{Methodology:} J.M.R.E, T.vD., and S.DM.; \emph{Software:}
+J.M.R.E.; \emph{Validation:} J.M.R.E.; \emph{Formal Analysis:} J.M.R.E.;
+\emph{Investigation:} J.M.R.E; \emph{Resources:} T.vD. and S.DM.;
+\emph{Data curation:} J.M.R.E.; \emph{Writing - original draft:}
+J.M.R.E.; \emph{Writing - review and editing:} T.vD., S.DM., and S.G.;
+\emph{Visualization:} J.M.R.E.; \emph{Supervision:} S.G. and S.DM.;
+\emph{Project administration:} S.G. and S.DM.; \emph{Funding
+acquisition:} S.G. and S.DM.
+
+\newpage{}
+
+\section{Appendix}\label{sec-appendix}
+
+\subsection{Statistical and Causal inference}\label{sec-appendixB}
+
+This section introduces fundamental statistical and causal inference
+concepts necessary for understanding the core theoretical principles
+described in this document. It does not, however, offer a comprehensive
+overview of causal inference methods. Readers seeking more in-depth
+understanding may wish to explore introductory papers such as
+\citet{Pearl_2010}, \citet{Rohrer_2018}, \citet{Pearl_2019}, and
+\citet{Cinelli_et_al_2020}. They may also find it helpful to consult
+introductory books like \citet{Pearl_et_al_2018}, \citet{Neal_2020}, and
+\citet{McElreath_2020}. For more advanced study, readers may refer to
+seminal intermediate papers such as \citet{Neyman_et_al_1923},
+\citet{Rubin_1974}, \citet{Spirtes_et_al_1991}, and \citet{Sekhon_2009},
+as well as books such as \citet{Pearl_2009}, \citet{Morgan_et_al_2014},
+and \citet{Hernan_et_al_2025}.
+
+\subsubsection{Empirical research and randomized
+experiments}\label{sec-appendixB1}
+
+Empirical research uses evidence from observation and experimentation to
+address real-world challenges. In this context, researchers typically
+formulate their research questions as \emph{estimands} or \emph{targets
+of inference}, i.e., the specific quantities they seek to determine
+\citep{Everitt_et_al_2010}. For instance, researchers might be
+interested in answering the following question: ``To what extent do
+different teaching methods \((T)\) influence students' ability to
+produce high-quality written texts \((Y)\)?'' To investigate this,
+researchers could randomly assign students to two groups, each exposed
+to a different teaching method \((T_{i} = \{1,2\})\). Then, they would
+perform pairwise comparisons, generating a dichotomous outcome
+\((Y_{i} = \{0,1\})\) showing which student exhibits more of the
+ability. In this scenario, the research question can be rephrased as the
+estimand, ``\emph{On average}, is there a difference in the ability to
+produce high-quality written texts between the two groups of students?''
+and this estimand can be mathematically represented by the random
+associational quantity in Equation~\ref{eq-group_diff}, where
+\(E[\cdot]\) denotes the expected value.
+
+\begin{equation}\phantomsection\label{eq-group_diff}{
+E[Y_{i} \mid T_{i}=1] - E[Y_{i} \mid T_{i}=2]
+}\end{equation}
+
+Researchers then proceed to identify the estimands.
+\emph{Identification} determines whether an estimator can accurately
+compute the estimand based solely on its assumptions, regardless of
+random variability \citep[p.~4]{Schuessler_et_al_2023}. An
+\emph{estimator} refers to a method or function that transforms data
+into an estimate \citep{Neal_2020}. \emph{Estimates} are numerical
+values that approximate the estimand derived through the process of
+\emph{estimation}, which integrates data with an estimator
+\citep{Everitt_et_al_2010}. The Identification-Estimation flowchart
+\citep{McElreath_2020, Neal_2020}, shown in Figure~\ref{fig-IEflow},
+visually represents the transition from estimands to estimates.
+
+\begin{figure}
+
+\centering{
+
+\includegraphics[width=0.35\textwidth,height=\textheight]{images/png/IEflow.png}
+
+}
+
+\caption{\label{fig-IEflow}Identification-Estimation flowchart.
+Extracted and slightly modified from \citet[p.~32]{Neal_2020}}
+
+\end{figure}%
+
+Identification is a necessary condition to ensure \emph{consistent}
+estimators. An estimator achieves \emph{consistency} when it converges
+to the ``true'' value of an estimand as the data size approaches
+infinity \citep{Everitt_et_al_2010}. Without identification, researchers
+cannot achieve consistency, even with ``infinite'' and error-free data.
+As a result, deriving meaningful insights about an estimand from finite
+data becomes impossible \citep[p.~5]{Schuessler_et_al_2023}. Therefore,
+to ensure accurate and reliable estimates, researchers prioritize
+estimators with desirable identification properties. For instance, the
+Z-test is a widely used estimator for comparing group proportions,
+yielding accurate estimates when its underlying assumptions are
+satisfied \citep{Kanji_2006}. Furthermore, researchers can interpret
+estimates from the Z-test as causal, provided the data is collected
+through a randomized experiment.
+
+Randomized experiments are widely recognized as the gold standard in
+evidence-based science \citep{Hariton_et_al_2018, Hansson_2014}. This
+recognition stems from their ability to enable researchers interpret
+associational estimates as causal. They achieve this by ensuring data,
+and by extension an estimator, satisfies several key identification
+properties, such as common support, no interference, and consistency
+\citep{Morgan_et_al_2014, Neal_2020}. The most critical property,
+however, is the elimination of confounding. \emph{Confounding} occurs
+when an external variable \(X\) simultaneously influences the outcome
+\(Y\) and the variable of interest \(T\), resulting in spurious
+associations \citep{Everitt_et_al_2010}. Randomization addresses this
+issue by decoupling the association between the intervention allocation
+\(T\) from any other variable \(X\)
+\citep{Morgan_et_al_2014, Neal_2020}.
+
+Nevertheless, researchers often face constraints that limit their
+ability to conduct randomized experiments. These constraints include
+ethical concerns, such as the assignment of individuals to potentially
+harmful interventions, and practical limitations, such as the
+infeasibility of, for example, assigning individuals to genetic
+modifications or physical impairments \citep{Neal_2020}. In these cases,
+causal inference offers a valuable alternative for generating causal
+estimates and understanding the mechanisms underlying specific data. In
+addition, the framework can provide significant theoretical insights
+that can enhance the design of experimental and observational studies
+\citep{McElreath_2020}.
+
+\subsubsection{Identification under causal
+inference}\label{sec-appendixB2}
+
+Unlike classical statistical modeling, which focuses primarily on
+summarizing data and inferring associations, the \emph{causal inference}
+framework is designed to identify causes and estimate their effects
+using data \citep{Shaughnessy_et_al_2010, Neal_2020}. The framework uses
+rigorous mathematical techniques to address the \emph{fundamental
+problem of causality}
+\citep{Pearl_2009, Pearl_et_al_2016, Morgan_et_al_2014}. This problem
+revolves around the question, ``What would have happened `in the world'
+under different circumstances?'' This question introduces the concept of
+counterfactuals, which are instrumental in defining and identifying
+causal effects.
+
+\emph{Counterfactuals} are hypothetical scenarios that are
+\emph{contrary to fact}, where alternative outcomes resulting from a
+given cause are neither observed nor observable
+\citep{Neal_2020, Counterfactual_2024}. The structural approach to
+causal inference \citep{Pearl_2009, Pearl_et_al_2016} provides a formal
+framework for defining counterfactuals. For instance, in the scenario
+described in Section~\ref{sec-appendixB1}, the approach begins by
+defining the \emph{individual causal effect} (ICE) as the difference
+between each student's potential outcomes, as in Equation~\ref{eq-ICE}.
+
+\begin{equation}\phantomsection\label{eq-ICE}{
+\tau_{i} = Y_{i} \mid do(T_{i}=1) - Y_{i} \mid do(T_{i}=2)
+}\end{equation}
+
+where \(do(T_{i}=t)\) represents the intervention operator,
+\(Y_{i} \mid do(T_{i}=1)\) represents the potential outcome under
+intervention \(T_{i}=1\), and \(Y_{i} \mid do(T_{i}=1)\) represents the
+potential outcome under intervention \(T_{i}=2\). Here, an
+\emph{intervention} involves assigning a constant value to the treatment
+variable for each student's potential outcomes. Note that if a student
+is assigned to intervention \(T_{i}=1\), the potential outcome under
+\(T_{i}=2\) becomes a counterfactual, as it is no longer observed nor
+observable. To address this challenge, the structural approach extends
+the ICE to the \emph{average causal effect} (ACE,
+Equation~\ref{eq-ACE}), representing the average difference between the
+students' observed potential outcomes and their counterfactual
+counterparts.
+
+\begin{equation}\phantomsection\label{eq-ACE}{
+\begin{aligned}
+\tau & = E[\tau_{i}] \\
+  & = E[Y_{i} \mid do(T_{i}=1)]- E[Y_{i} \mid do(T_{i}=2)]
+\end{aligned}
+}\end{equation}
+
+Even though counterfactuals are unobservable, researchers can still
+identify the ACE from associational estimates by leveraging the
+structural approach. The approach identifies the ACE by statistically
+conditioning data on a \emph{sufficient adjustment set} of variables
+\(X\) \citep{Pearl_2009, Pearl_et_al_2016, Morgan_et_al_2014}. This
+\emph{sufficient} set (potentially empty) must block all non-causal
+paths between \(T\) to \(Y\) without opening new ones. When such a set
+exists, then \(T\) and \(Y\) are \emph{d-separated} by \(X\)
+(\(T \:\bot\:Y \mid X\)) \citep{Pearl_2009}, and \(X\) satisfies the
+\emph{backdoor criterion} \citep[pp 37]{Neal_2020}. Here,
+\emph{conditioning} describes the process of restricting the focus to
+the subset of the population defined by the conditioning variable
+\citep[p.~32]{Neal_2020} (see Equation~\ref{eq-CACE}).
+
+Conditioning on a sufficient adjustment set enables researchers to
+estimate the ACE, even when the data comes from an observational study.
+This process is feasible because such conditioning ensures that the ACE
+estimator satisfies several critical properties, including confounding
+elimination \citep{Morgan_et_al_2014}. Naturally, the validity of claims
+about the causal effects of \(T\) on \(Y\) now hinges on the assumption
+that \(X\) serves as a sufficient adjustment set. However, as
+\citet[p.~150]{Kohler_et_al_2019} noted, drawing conclusions about the
+real world from observed data inevitably requires assumptions. This
+requirement holds true for both observational and experimental data.
+
+For instance, if researchers cannot conduct the randomized experiments
+described in Section~\ref{sec-appendixB1} and must instead rely on
+observational data, they can still identify the ACE as long as an
+observed variable \(X\), such as the socio-economic status of the
+school, satisfies the backdoor criterion. Under these circumstances,
+researchers first identify the \emph{conditional average causal effect}
+(CACE, Equation~\ref{eq-CACE})
+
+\begin{equation}\phantomsection\label{eq-CACE}{
+CACE_{t} = E[Y_{i} \mid T_{i}=t, X]
+}\end{equation}
+
+From the CACE, researchers can identify the ACE from associational
+quantities as in Equation~\ref{eq-mACE1}. This identification process is
+commonly known as the \emph{backdoor adjustment}. Here, \(E_{X}[\cdot]\)
+represents the marginal expected value over \(X\)
+\citep{Morgan_et_al_2014}.
+
+\begin{equation}\phantomsection\label{eq-mACE1}{
+\begin{aligned}
+  \tau & = E[Y_{i} \mid do(T_{i}=1)]- E[Y_{i} \mid do(T_{i}=2)] \\
+  & = E_{X}[CACE_{1} - CACE_{2}] \\
+  & = E_{X}\left[ E[Y_{i} \mid T_{i}=1, X] - E[Y_{i} \mid T_{i}=2, X] \right]
+\end{aligned}
+}\end{equation}
+
+Notably, the approach extends the ACE identification for a continuous
+variable \(T\) as in Equation~\ref{eq-mACE_cont}, ensuring broad
+applicability across different causal scenarios \citep[p.~45]{Neal_2020}
+
+\begin{equation}\phantomsection\label{eq-mACE_cont}{
+\begin{aligned}
+  \tau &= E[Y_{i} \mid do(T_{i}=t)] \\
+  & = d E_{X}\left[ E[Y_{i} \mid T_{i}=t, X]\right]/ dt
+  \end{aligned}
+}\end{equation}
+
+\subsubsection{Diving into the specifics}\label{sec-appendixB3}
+
+The structural approach to causal inference uses SCMs and DAGs to
+formally and graphically represent the presumed causal structure
+underlying the ACE
+\citep{Pearl_2009, Pearl_et_al_2016, Gross_et_al_2018, Neal_2020}.
+Essentially, these tools serve as \emph{conceptual (theoretical) models}
+on which identification analysis rests
+\citep[p.~4]{Schuessler_et_al_2023}. Thus, using these tools,
+researchers can determine which statistical models can identify (ACE,
+CACE, or other), assuming the depicted causal structure is correct
+\citep{McElreath_2020}, thus enabling valid causal inference.
+Figure~\ref{fig-IEflow} shows the role of theoretical models in the
+inference process.
+
+SCMs and DAGs support identification analysis through two key
+advantages. First, regardless of complexity, they can represent various
+causal structures using only five fundamental building blocks
+\citep{Neal_2020, McElreath_2020}. This feature allows researchers to
+decompose complex structures into manageable components, facilitating
+their analysis \citep{McElreath_2020}. Second, they depict causal
+relationships in a non-parametric and fully interactive way. This
+flexibility enables feasible ACE identification strategies without
+defining the variables' data types, the functional form between them, or
+their parameters \citep[p.~35]{Pearl_et_al_2016}.
+
+Thus, Section~\ref{sec-appendixB31} and Section~\ref{sec-appendixB32}
+elaborate on the first advantage, while Section~\ref{sec-appendixB32}
+and Section~\ref{sec-appendixB33} do so for the second. Finally,
+Section~\ref{sec-appendixB34} explains how researchers use SCMs and DAGs
+alongside Bayesian inference methods in the estimation process.
+
+\paragraph{The five fundamental block for SCMs and
+DAGs}\label{sec-appendixB31}
+
+Figures \ref{fig-dags_scms1}, \ref{fig-dags_scms2},
+\ref{fig-dags_scms3}, \ref{fig-dags_scms4}, and \ref{fig-dags_scms5}
+display the five fundamental building blocks for SCMs and DAGs. The left
+panels of the figures show the formal mathematical models, represented
+by the SCMs, defined in terms of a set of \emph{endogenous} variables
+\(V=\{X_{1},X_{2},X_{3}\}\), a set of \emph{exogenous} variables
+\(E=\{e_{X1},e_{X2},e_{X3}\}\), and a set of functions
+\(F=\{f_{X1},f_{X2},f_{X3}\}\) \citep{Pearl_2009, Cinelli_et_al_2020}.
+Endogenous variables are those whose causal mechanisms a researcher
+chooses to model \citep{Neal_2020}. In contrast, exogenous variables
+represent \emph{errors} or \emph{disturbances} arising from omitted
+factors that the investigator chooses not to model explicitly
+\citep[p.~27,68]{Pearl_2009}. Lastly, the functions, referred to as
+\emph{structural equations}, express the endogenous variables as
+non-parametric functions of other variables. These functions use the
+symbol `\(:=\)' to denote the asymmetrical causal dependence of the
+variables and the symbol `\(\:\bot\:\)' to represent
+\emph{d-separation}, a concept akin to (conditional) independence.
+
+Notably, every SCM has an associated DAG
+\citep{Pearl_et_al_2016, Cinelli_et_al_2020}. The right panels of the
+figures display these DAGs. A DAG is a graph consisting of nodes
+connected by edges, where the nodes represent random variables. The term
+\emph{directed} means that the edges extend from one node to another,
+with arrows indicating the direction of causal influence. The term
+\emph{acyclic} implies that the causal influences do not form loops,
+ensuring the influences do not cycle back on themselves
+\citep{McElreath_2020}. DAGs represent observed variables as solid black
+circles, while they use open circles for unobserved (latent) variables
+\citep{Morgan_et_al_2014}. Although the \emph{standard representation}
+of DAGs typically omits exogenous variables for simplicity, the
+\emph{magnified representation} depicted in the figures offers one key
+advantage: including exogenous variables can help researchers highlight
+potential issues related to conditioning and confounding
+\citep{Cinelli_et_al_2020}.
+
+\begin{figure}[H]
+
+\begin{minipage}{0.50\linewidth}
+
+\centering{
+
+\[
+\begin{aligned}
+  X_{1} & := f_{X1}(e_{X1}) \\
+  X_{3} & := f_{X3}(e_{X3}) \\
+  e_{X1} & \:\bot\:e_{X3}
+\end{aligned}
+\]
+
+}
+
+\subcaption{\label{fig-scm_bb1}SCM}
+
+\end{minipage}%
+%
+\begin{minipage}{0.50\linewidth}
+
+\centering{
+
+\includegraphics[width=0.54\textwidth,height=\textheight]{images/png/mdag_bb1.png}
+
+}
+
+\subcaption{\label{fig-mdag_bb1}DAG}
+
+\end{minipage}%
+
+\caption{\label{fig-dags_scms1}Two unconnected nodes}
+
+\end{figure}%
+
+\begin{figure}[H]
+
+\begin{minipage}{0.50\linewidth}
+
+\centering{
+
+\[
+\begin{aligned}
+  X_{1} & := f_{X1}(e_{X1}) \\
+  X_{3} & := f_{X3}(X_{1},e_{X3}) \\
+  e_{X1} & \:\bot\:e_{X3}
+\end{aligned}
+\]
+
+}
+
+\subcaption{\label{fig-scm_bb2}SCM}
+
+\end{minipage}%
+%
+\begin{minipage}{0.50\linewidth}
+
+\centering{
+
+\includegraphics[width=0.54\textwidth,height=\textheight]{images/png/mdag_bb2.png}
+
+}
+
+\subcaption{\label{fig-mdag_bb2}DAG}
+
+\end{minipage}%
+
+\caption{\label{fig-dags_scms2}Two connected nodes or descendant}
+
+\end{figure}%
+
+\begin{figure}[H]
+
+\begin{minipage}{0.50\linewidth}
+
+\centering{
+
+\[
+\begin{aligned}
+  X_{1} & := f_{X1}(e_{X1}) \\
+  X_{2} & := f_{X2}(X_{1},e_{X2}) \\
+  X_{3} & := f_{X3}(X_{2},e_{X3}) \\
+  e_{X1} & \:\bot\:e_{X2} \\
+  e_{X1} & \:\bot\:e_{X3} \\
+  e_{X2} & \:\bot\:e_{X3}
+\end{aligned}
+\]
+
+}
+
+\subcaption{\label{fig-scm_bb3}SCM}
+
+\end{minipage}%
+%
+\begin{minipage}{0.50\linewidth}
+
+\centering{
+
+\includegraphics[width=0.65\textwidth,height=\textheight]{images/png/mdag_bb3.png}
+
+}
+
+\subcaption{\label{fig-mdag_bb3}DAG}
+
+\end{minipage}%
+
+\caption{\label{fig-dags_scms3}Chain or mediator}
+
+\end{figure}%
+
+\begin{figure}[H]
+
+\begin{minipage}{0.50\linewidth}
+
+\centering{
+
+\[
+\begin{aligned}
+  X_{1} & := f_{X1}(X_{2},e_{X1}) \\
+  X_{2} & := f_{X2}(e_{X2}) \\
+  X_{3} & := f_{X3}(X_{2},e_{X3}) \\
+  e_{X1} & \:\bot\:e_{X2} \\
+  e_{X1} & \:\bot\:e_{X3} \\
+  e_{X2} & \:\bot\:e_{X3}
+\end{aligned}
+\]
+
+}
+
+\subcaption{\label{fig-scm_bb4}SCM}
+
+\end{minipage}%
+%
+\begin{minipage}{0.50\linewidth}
+
+\centering{
+
+\includegraphics[width=0.65\textwidth,height=\textheight]{images/png/mdag_bb4.png}
+
+}
+
+\subcaption{\label{fig-mdag_bb4}DAG}
+
+\end{minipage}%
+
+\caption{\label{fig-dags_scms4}Fork or confounder}
+
+\end{figure}%
+
+\begin{figure}[H]
+
+\begin{minipage}{0.50\linewidth}
+
+\centering{
+
+\[
+\begin{aligned}
+  X_{1} & := f_{X1}(e_{X1}) \\
+  X_{2} & := f_{X2}(X_{1},X_{3},e_{X2}) \\
+  X_{3} & := f_{X3}(e_{X3}) \\
+  e_{X1} & \:\bot\:e_{X2} \\
+  e_{X1} & \:\bot\:e_{X3} \\
+  e_{X2} & \:\bot\:e_{X3}
+\end{aligned}
+\]
+
+}
+
+\subcaption{\label{fig-scm_bb5}SCM}
+
+\end{minipage}%
+%
+\begin{minipage}{0.50\linewidth}
+
+\centering{
+
+\includegraphics[width=0.65\textwidth,height=\textheight]{images/png/mdag_bb5.png}
+
+}
+
+\subcaption{\label{fig-mdag_bb5}DAG}
+
+\end{minipage}%
+
+\caption{\label{fig-dags_scms5}Collider or inmorality}
+
+\end{figure}%
+
+A careful examination of these building blocks highlights the
+theoretical assumptions underlying their observed variables. SCM
+\ref{fig-scm_bb1} and DAG \ref{fig-mdag_bb1} depict two unconnected
+nodes, representing a scenario where variables \(X_{1}\) and \(X_{3}\)
+are independent or not causally related. SCM \ref{fig-scm_bb2} and DAG
+\ref{fig-mdag_bb2} illustrate two connected nodes, representing a
+scenario where a \emph{parent} node \(X_{1}\) exerts a causal influence
+on a \emph{child} node \(X_{3}\). In this setup, \(X_{3}\) is considered
+a \emph{descendant} of \(X_{1}\). Additionally, \(X_{1}\) and \(X_{3}\)
+are described as \emph{adjacent} because there is a \emph{direct path}
+connecting them. SCM \ref{fig-scm_bb3} and DAG \ref{fig-mdag_bb3} depict
+a \emph{chain}, where \(X_{1}\) influences \(X_{2}\), and \(X_{2}\)
+influences \(X_{3}\). In this configuration, \(X_{1}\) is a parent node
+of \(X_{2}\), which is a parent node of \(X_{3}\). This structure
+creates a \emph{directed path} between \(X_{1}\) and \(X_{3}\).
+Consequently, \(X_{1}\) is an \emph{ancestor} of \(X_{3}\), and
+\(X_{2}\) fully \emph{mediates} the relationship between the two. SCM
+\ref{fig-scm_bb4} and DAG \ref{fig-mdag_bb4} illustrate a \emph{fork},
+where variables \(X_{1}\) and \(X_{3}\) are both influenced by
+\(X_{2}\). Here, \(X_{2}\) is a parent node that \emph{confounds} the
+relationship between \(X_{1}\) and \(X_{3}\). Finally, SCM
+\ref{fig-scm_bb5} and DAG \ref{fig-mdag_bb5} show a \emph{collider},
+where variables \(X_{1}\) and \(X_{3}\) are concurrent causes of
+\(X_{2}\). In this configuration, \(X_{1}\) and \(X_{3}\) are not
+causally related to each other but both influence \(X_{2}\) (an
+\emph{inmorality}). Notably, all building blocks assume the errors are
+independent of each other and from all other variables in the graph, as
+evidenced by the pairwise relations \(e_{X1} \:\bot\:e_{X2}\),
+\(e_{X1} \:\bot\:e_{X3}\), and \(e_{X2} \:\bot\:e_{X3}\).
+
+Researchers can then use these building blocks to represent the scenario
+outlined in Section~\ref{sec-appendixB2}. SCM \ref{fig-scm_example1} and
+DAG \ref{fig-mdag_example1} depict the plausible causal structure for
+this example. In this context, the variable \(X\) (socio-economic status
+of the school) is thought to be a confounder in the relationship between
+the teaching method \(T\) and the outcome \(Y\). The figures display
+multiple descendant relationships such as \(X \rightarrow T\),
+\(X \rightarrow Y\), and \(T \rightarrow Y\). They also highlight
+unconnected node pairs, evident from the relationships
+\(e_{T} \:\bot\:e_{X}\), \(e_{T} \:\bot\:e_{Y}\), and
+\(e_{X} \:\bot\:e_{Y}\). Additional, the figures show one fork,
+\(X \rightarrow \{T, Y\}\), and two colliders:
+\(\{X, e_{T}\} \rightarrow T\) and \(\{X, T, e_{Y}\} \rightarrow Y\).
+
+\begin{figure}
+
+\begin{minipage}{0.50\linewidth}
+
+\centering{
+
+\[
+\begin{aligned}
+  X & := f_{X}(e_{X}) \\
+  T & := f_{T}(X,e_{T}) \\
+  Y & := f_{Y}(T,X,e_{Y}) \\
+  e_{T} & \:\bot\:e_{X} \\
+  e_{T} & \:\bot\:e_{Y} \\
+  e_{X} & \:\bot\:e_{Y}
+\end{aligned}
+\]
+
+}
+
+\subcaption{\label{fig-scm_example1}SCM}
+
+\end{minipage}%
+%
+\begin{minipage}{0.50\linewidth}
+
+\centering{
+
+\includegraphics[width=0.65\textwidth,height=\textheight]{images/png/mdag_example1.png}
+
+}
+
+\subcaption{\label{fig-mdag_example1}DAG}
+
+\end{minipage}%
+
+\caption{\label{fig-example1}Plausible causal structure the scenario
+outlined in Section~\ref{sec-appendixB2}.}
+
+\end{figure}%
+
+\paragraph{The probabilistic implications of these
+blocks}\label{sec-appendixB32}
+
+Beyond their graphical capabilities, researchers can translate SCMs and
+DAGs into statistical models because these conceptual models encode
+functional and probabilistic information, which they can then replace
+with suitable functions and probabilistic assumptions
+\citep{Pearl_et_al_2016}. Notably, this encoding relies on two
+fundamental assumptions: the causal Markov and the faithfulness
+assumption. The \emph{causal Markov assumption} links the graph
+structure to the joint probability distribution of variables by
+asserting that any variable in a graph is independent of all its
+non-descendants conditional on its parents
+\citetext{\citealp[p.~20]{Neal_2020}; \citealp[p.~80]{Hernan_et_al_2025}}.
+The \emph{faithfulness assumption}, in turn, states that the observed
+statistical (in)dependencies in the data reflect the underlying causal
+structure among variables--except in rare degenerate cases
+\citetext{\citealp[p.~100]{Neal_2020}; \citealp[p.~81]{Hernan_et_al_2025}}.
+
+A notable implication of the assumptions underlying the probabilistic
+encoding is that any conceptual model described by an SCM and DAG can
+represent the joint distribution of variables more efficiently
+\citep[p.~29]{Pearl_et_al_2016}. This expression takes the form of a
+product of conditional probability distributions (CPDs) of the type
+\(P(child \mid parents)\). This property is formally known as the
+\emph{Bayesian Network factorization} (BNF,
+Equation~\ref{eq-net_factor})
+\citetext{\citealp[p.~29]{Pearl_et_al_2016}; \citealp[p.~21]{Neal_2020}}.
+In this expression, \(pa(X_{i})\) denotes the set of variables that are
+the parents of \(X_{i}\).
+\begin{equation}\phantomsection\label{eq-net_factor}{
+\begin{aligned}
+P(X_{1}, X_{2}, \dots, X_{P}) & = X_{1} \cdot \prod^{P}_{p=2} P(X_{i} \mid X_{i-1}, \dots, X_{1}) & (\small{\text{by chain rule})}\\
+& = X_{1} \cdot \prod^{P}_{p=2} P(X_{i} \mid pa(X_{i}) ) & (\small{\text{by BNF}})
+\end{aligned}
+}\end{equation}
+
+This encoding enables researchers with conceptual (theoretical)
+knowledge in the form of an SCM and DAG to predict patterns of
+(in)dependencies in the data. As highlighted by
+\citet[p.~35]{Pearl_et_al_2016}, these predictions depend solely on the
+structure of these conceptual models without requiring the quantitative
+details of the equations or the distributions of the errors. Moreover,
+once researchers observe empirical data, the patterns of
+(in)dependencies in the data can provide significant insights into the
+validity of the proposed conceptual model.
+
+The five fundamental building blocks described in
+Section~\ref{sec-appendixB31} clearly illustrate which (in)dependencies
+can SMCs and DAGs predict. For instance, applying the BNF to the causal
+structure shown in the SCM \ref{fig-scm_bb1} and DAG \ref{fig-mdag_bb1}
+enables researchers to express the joint probability distribution of the
+observed variables as \(P(X_{1}, X_{3}) = P(X_{1}) P(X_{3})\),
+supporting the theoretical assumption that the observed variables
+\(X_{1}\) and \(X_{3}\) are unconditionally independent
+(\(X_{1} \:\bot\:X_{3}\)) \citep[p.~24]{Neal_2020}. Conversely, when
+\(X_{3}\) is unconditionally dependent on \(X_{1}\)
+(\(X_{1} \:\not\bot\:X_{3}\)), as depicted in the SCM \ref{fig-scm_bb2}
+and DAG \ref{fig-mdag_bb2}, the BNF express their joint probability
+distribution as \(P(X_{1}, X_{3}) = P(X_{3} \mid X_{1}) P(X_{1})\).
+Notably, these descriptions demonstrate the clear correspondence between
+the structural equations illustrated in Section~\ref{sec-appendixB31}
+and the CPDs.
+
+Beyond the insights gained from two-node structures, researchers can
+uncover more nuanced patterns of(in)dependencies from chains, forks, and
+colliders. These (in)dependencies apply to any data set generated by a
+causal model with those structures, regardless of the specific functions
+attached to the SCM \citep[p.~36]{Pearl_et_al_2016}. For instance,
+applying the BNF to the chain structure depicted in the SCM
+\ref{fig-scm_bb3} and DAG \ref{fig-mdag_bb3} allow researchers to
+represent the joint distribution for the observed variables as
+\(P(X_{1},X_{2},X_{3}) =\)
+\(P(X_{1}) P(X_{2} \mid X_{1}) P(X_{3} \mid X_{2})\). This expression
+implies that \(X_{1}\) and \(X_{3}\) are unconditionally dependent
+\((X_{1} \:\not\bot\:X_{3})\), but conditionally independent when
+controlling for \(X_{2}\) \((X_{1} \:\bot\:X_{3} \mid X_{2})\).
+Moreover, in the fork structure shown in the SCM \ref{fig-scm_bb4} and
+DAG \ref{fig-mdag_bb4}, researchers can express the joint distribution
+of the observed variables as \(P(X_{1},X_{2},X_{3}) =\)
+\(P(X_{1} \mid X_{2}) P(X_{2}) P(X_{3} \mid X_{2})\). Similar to the
+chain structure, this expression allows researchers to further infer
+that \(X_{1}\) and \(X_{3}\) are unconditionally dependent
+\((X_{1} \:\not\bot\:X_{3})\), but conditionally independent when
+controlling for \(X_{2}\) \((X_{1} \:\bot\:X_{3} \mid X_{2})\). Finally,
+researchers analyzing the collider structure illustrated in the SCM
+\ref{fig-scm_bb5} and DAG \ref{fig-mdag_bb5} can express the joint
+distribution of the observed variables as \(P(X_{1},X_{2},X_{3}) =\)
+\(P(X_{1}) P(X_{2} \mid X_{1}, X_{3}) P(X_{3})\). This representation
+allows researchers to infer that \(X_{1}\) and \(X_{3}\) are
+unconditionally independent \((X_{1} \:\bot\:X_{3})\), but conditionally
+dependent when controlling for \(X_{2}\)
+\((X_{1} \:\not\bot\:X_{3} \mid X_{2})\). The authors \citet[p.~37, 40,
+41]{Pearl_et_al_2016} and \citet[p.~25--26]{Neal_2020} provide the
+mathematical proofs for these conclusions.
+
+Using these additional probabilistic insights, researchers can revisit
+the scenario in Section~\ref{sec-appendixB2}. In this context, applying
+the BNF to the SCM \ref{fig-scm_example2} structure, enables the
+representation of the joint probability distribution of the observed
+variables as \(P(Y, T, X) =\) \(P(Y \mid T, X) P(T \mid X) P(X)\). From
+this expression, researchers can infer that the outcome \(Y\) is
+unconditionally dependent on the teaching method \(T\)
+\((Y \:\not\bot\:T)\). This dependency arises from two key structures: a
+direct causal path from the teaching method \(T\) to the outcome \(Y\),
+represented by the two-connected-nodes structure \(T \rightarrow Y\)
+(black path in DAG \ref{fig-mdag_example2}), and a confounding
+non-causal path from the teaching method \(T\) to the outcome \(Y\)
+through the socio-economic status of the school \(X\), represented by
+the fork structure \(T \leftarrow X \rightarrow Y\) (gray path in DAG
+\ref{fig-mdag_example2}).
+
+\begin{figure}
+
+\begin{minipage}{0.50\linewidth}
+
+\centering{
+
+\[
+\begin{aligned}
+  X & := x \\
+  T & := f_{T}(x,e_{T}) \\
+  Y & := f_{Y}(T,x,e_{Y}) \\
+  e_{T} & \:\bot\:e_{X} \\
+  e_{T} & \:\bot\:e_{Y} \\
+  e_{X} & \:\bot\:e_{Y}
+\end{aligned}
+\]
+
+}
+
+\subcaption{\label{fig-scm_example2}SCM}
+
+\end{minipage}%
+%
+\begin{minipage}{0.50\linewidth}
+
+\centering{
+
+\includegraphics[width=0.65\textwidth,height=\textheight]{images/png/mdag_example1a.png}
+
+}
+
+\subcaption{\label{fig-mdag_example2}Conditioned DAG}
+
+\end{minipage}%
+
+\caption{\label{fig-example2}Plausible causal structure the scenario
+outlined in Section~\ref{sec-appendixB2}.}
+
+\end{figure}%
+
+\paragraph{From probability to causality}\label{sec-appendixB33}
+
+The structural approach to causal inference translates probabilistic
+insights into actionable strategies seeking to identify the ACE from
+associational quantities. The approach achieves this by relying on the
+\emph{modularity assumption}, which posits that intervening on a node
+alters only the causal mechanism of that node, leaving others unchanged
+\citep[p.~34]{Neal_2020}.
+
+The modularity assumption underpins the concepts of manipulated graphs
+and Truncated Factorization, which are essential for representing
+interventions \(P(Y_{i} \mid do(T_{i}=t))\) within SCMs and DAGs.
+\emph{Manipulated graphs} simulate physical interventions by removing
+specific edges from a DAG, while preserving the remaining structure
+unchanged \citep[p.~34]{Neal_2020}. In parallel, \emph{Truncated
+Factorization} (TF) achieves a similar simulation by removing specific
+functions from the conceptual model and replacing them with constants,
+while keeping the rest of the structure unchanged \citep{Pearl_2010}.
+The probabilistic implications of this factorization are formalized in
+Equation~\ref{eq-trunc_factor}, where \(S\) represents the subset of
+variables \(X_{p}\) directly influenced by the intervention, while an
+example illustrating these concepts follows below.
+
+\begin{equation}\phantomsection\label{eq-trunc_factor}{
+P(X_{1}, X_{2}, \dots, X_{P} \mid do(S)) =
+\begin{cases}
+  \prod P(X_{p} \mid pa(X_{p}) ) & \text{if} \: p \not\in S \\
+  1 \quad & \text{otherwise}
+\end{cases}
+}\end{equation}
+
+Using the TF, researchers can define the \emph{backdoor adjustment} to
+identify the ACE. This adjustment states that if a variable
+\(X_{p} \in S\) serves as a \emph{sufficient adjustment set} for the
+effect of \(X_{a}\) on \(X_{b}\), then the ACE can be identified using
+Equation~\ref{eq-backdoor}. The sufficient adjustment set (potentially
+empty) must block all non-causal paths between \(X_{a}\) and \(X_{b}\)
+without introducing new paths. If such a set exists, then \(X_{a}\) and
+\(X_{b}\) are \emph{d-separated} by \(X_{p}\)
+(\(X_{a} \:\bot\:X_{b} \mid X_{p}\)) \citep{Pearl_2009}, and \(X_{p}\)
+satisfies the \emph{backdoor criterion} \citep[p.~37]{Neal_2020}.
+
+\begin{equation}\phantomsection\label{eq-backdoor}{
+P(X_{a} \mid do(X_{b}=x)) = \sum_{Xp} P(X_{a} \mid X_{b}=x, X_{p}) P(X_{p})
+}\end{equation}
+
+Ultimately, the backdoor adjustment enables researchers to express the
+ACE as:
+
+\begin{equation}\phantomsection\label{eq-backdoor_adjustment}{
+\begin{aligned}
+\tau & = E[X_{a} \mid do(X_{b}=1)]- E[X_{a} \mid do(X_{b}=2)] \\
+  & = E_{Xp}\left[ E[X_{a} \mid do(X_{b}=1), X_{p}]- E[X_{a} \mid do(X_{b}=2), X_{p}] \right] \\
+  & = \sum_{Xp} X_{a} \cdot P(X_{a} \mid X_{b}=1, X_{p}) \cdot P(X_{p}) - \sum_{Xp} X_{a} \cdot P(X_{a} \mid X_{b}=2, X_{p}) \cdot P(X_{p})
+\end{aligned}
+}\end{equation}
+
+With these new insights, researchers revisiting the scenario in
+Section~\ref{sec-appendixB32} can infer that the socio-economic status
+of the school, \(X\), satisfies the backdoor criterion, assuming the
+causal structure depicted by the SCM \ref{fig-scm_example2} and DAG
+\ref{fig-mdag_example2} is correct. This means that \(X\) serves as a
+sufficient adjustment set, as it effectively blocks all confounding
+non-causal paths introduced by the fork structure. Nevertheless, since
+\(Y\) remains dependent on \(T\) even after conditioning
+\((Y \:\not\bot\:T \mid X)\), this dependency can only be attributed to
+the direct causal effect \(T \rightarrow Y\). Notably, for the purpose
+of identification, the conditioned DAG \ref{fig-mdag_example2} is
+equivalent to the manipulated DAG \ref{fig-mdag_example3}, because \(X\)
+satisfies the backdoor criterion.
+
+\begin{figure}
+
+\begin{minipage}{0.50\linewidth}
+
+\centering{
+
+\[
+\begin{aligned}
+  X & := f_{X}(e_{X}) \\
+  T & := t \\
+  Y & := f_{Y}(t,X,e_{Y}) \\
+  e_{T} & \:\bot\:e_{X} \\
+  e_{T} & \:\bot\:e_{Y} \\
+  e_{X} & \:\bot\:e_{Y}
+\end{aligned}
+\]
+
+}
+
+\subcaption{\label{fig-scm_example3}SCM}
+
+\end{minipage}%
+%
+\begin{minipage}{0.50\linewidth}
+
+\centering{
+
+\includegraphics[width=0.65\textwidth,height=\textheight]{images/png/mdag_example1b.png}
+
+}
+
+\subcaption{\label{fig-mdag_example3}Manipulated DAG}
+
+\end{minipage}%
+
+\caption{\label{fig-example3}Plausible causal structure the scenario
+outlined in Section~\ref{sec-appendixB32}.}
+
+\end{figure}%
+
+Researchers can then apply the \emph{backdoor adjustment} to identify
+the ACE of \(T\) on \(Y\). They achieve this by first identifying the
+CACE of \(T\) on \(Y\) by conditioning on \(X\), and then marginalizing
+this effect over \(X\) to obtain the ACE. This process is expressed in
+Equation~\ref{eq-mACE2} (see Section~\ref{sec-appendixB2}).
+
+\begin{equation}\phantomsection\label{eq-mACE2}{
+\begin{aligned}
+  \tau & = E[Y_{i} \mid do(T_{i}=1)]- E[Y_{i} \mid do(T_{i}=2)] \\
+  & = E_{X}\left[ E[Y_{i} \mid T_{i}=1, X] - E[Y_{i} \mid T_{i}=2, X] \right] \\
+  & = \sum_{X} Y_{i} \cdot P( Y_{i} \mid T_{i}=1, X) \cdot P(X) - \sum_{X} Y_{i} \cdot P( Y_{i} \mid T_{i}=2, X) \cdot P(X)
+\end{aligned}
+}\end{equation}
+
+\paragraph{The estimation process}\label{sec-appendixB34}
+
+Ultimately, researchers can use Bayesian inference methods to estimate
+the ACE. The approach begins by defining two probability distributions:
+the likelihood of the data,
+\(P(X_{1}, X_{2}, \dots, X_{P} \mid \theta)\), and the prior
+distribution, \(P(\theta)\) \citep{Everitt_et_al_2010}, where \(X_{P}\)
+represents a random variable, and \(\theta\) represents a
+one-dimensional parameter space for simplicity. After observing
+empirical data, researchers can update the priors to posterior
+distributions using Bayes' rule in Equation~\ref{eq-bayes_rule}:
+
+\begin{equation}\phantomsection\label{eq-bayes_rule}{
+P(\theta \mid X_{1}, X_{2}, \dots, X_{P}) = \frac{P(X_{1}, X_{2}, \dots, X_{P} \mid \theta) \cdot P(\theta)}{P(X_{1}, X_{2}, \dots, X_{P})}
+}\end{equation}
+
+Given that the denominator on the right-hand side of
+Equation~\ref{eq-bayes_rule} serves as a normalizing constant
+independent of the parameter \(\theta\), researchers can simplify the
+posterior updating process into three steps. First, they integrate new
+empirical data through the likelihood. Second, they update the
+parameters' priors to a posterior distribution according to
+Equation~\ref{eq-prop_rule}. Ultimately, they normalize these results to
+obtain a valid probability distribution.
+
+\begin{equation}\phantomsection\label{eq-prop_rule}{
+P(\theta \mid X_{1}, X_{2}, \dots, X_{P}) \propto P(X_{1}, X_{2}, \dots, X_{P}\mid \theta) \cdot P(\theta)
+}\end{equation}
+
+Temporarily setting aside the definition of prior distributions
+\(P(\theta)\), note that the posterior updating process depends heavily
+on the assumptions underlying the likelihood of the data. However, as
+the number of random variables, \(P\), increases, this joint
+distribution quickly becomes intractable \citep{Neal_2020}. This
+intractability is evident from Equation~\ref{eq-like_chain}, where the
+likelihood distribution is expressed by multiple chained CPDs.
+
+\begin{equation}\phantomsection\label{eq-like_chain}{
+P(X_{1}, X_{2}, \dots, X_{P} \mid \theta) = P(X_{1} \mid \theta) \prod^{P}_{p=2} P(X_{i} \mid X_{i-1}, \dots, X_{1}, \theta )
+}\end{equation}
+
+Nevertheless, researchers can manage the complexity of the likelihood by
+assuming specific local (in)dependencies among variables. SCMs and DAGs
+provide a formal framework to represent these assumptions, as detailed
+in Section~\ref{sec-appendixB32}. These assumptions improve model
+tractability and simplify the estimation process by enabling the
+derivation of the BNF of the likelihood (Equation~\ref{eq-like_BNF}).
+With this simplified structure, any probabilistic programming language
+can model the system and compute the parameter's posterior distribution
+using Equation~\ref{eq-bayes_rule}.
+
+\begin{equation}\phantomsection\label{eq-like_BNF}{
+P(X_{1}, X_{2}, \dots, X_{P} \mid \theta) = P(X_{1} \mid \theta) \prod^{P}_{p=2} P(X_{i} \mid pa(X_{i}), \theta )
+}\end{equation}
+
+\newpage{}
+
+\section*{References}\label{references}
+\addcontentsline{toc}{section}{References}
+
+\renewcommand{\bibsection}{}
+\bibliography{references.bib}
+
+
+
+
+\end{document}

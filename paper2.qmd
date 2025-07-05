@@ -59,11 +59,9 @@ keywords:
   - probability
   - statistical modeling
 abstract: |
-  This study revisits Thurstone's law of comparative judgment (CJ) by addressing two central issues in the CJ literature. First, it critiques the widespread reliance on Thurstone's Case V assumptions and, by extension, the Bradley-Terry-Luce (BTL) model in the analysis of CJ data. Specifically, this study argues that while the assumptions of equal discriminal dispersions and zero correlation between stimuli simplify the trait measurement model, they may fail to capture the complexity of some traits or account for heterogeneous stimuli, potentially leading to unreliable and inaccurate trait estimates. Second, the study highlights the apparent disconnect between trait measurement and hypothesis testing procedures in CJ applications. It contends that while separating these procedures simplifies the analysis of CJ data, this practice can also undermine the resulting statistical inferences.
-  
-  To address these issues, this study aims to extend Thurstone's general form using a systematic and integrated approach based on causal and Bayesian inference methods. This extension integrates Thurstone's core theoretical principles alongside key CJ assessment design features. It then translates these elements into a probabilistic statistical model for analyzing dichotomous CJ data, overcoming the rigid assumptions of Case V and the BTL model.
-  
-  Finally, the study emphasizes the relevance of this extension for contemporary empirical CJ research, particularly stressing the need for bespoke CJ models tailored to the experiments and data assumptions. It also lays the foundation for broader applications, encouraging researchers across the social sciences to adopt more robust and interpretable methodologies.
+  This study revisits Thurstone's law of comparative judgment (CJ) by addressing two key issues in the CJ literature. First, it critiques the reliance on Thurstone's Case V assumptions and the Bradley-Terry-Luce (BTL) model in the analysis of CJ data. Specifically, it argues that while the assumptions of equal discriminal dispersions and zero correlation simplify the trait measurement model, they may fail to capture the complexity of some traits or stimuli, potentially leading to unreliable and inaccurate trait estimates. Second, the study highlights the disconnect between trait measurement and statistical inference in CJ applications. It contends that while separating these processes simplifies the analysis, this practice can also undermine the resulting statistical inferences.
+  To address these issues, this study extends Thurstone's general form using a systematic, integrated approach based on causal and Bayesian inference methods. This extension integrates CJ's core theoretical principles alongside key assessment design features. It then translates these elements into a statistical model for analyzing dichotomous CJ data.
+  Finally, the study emphasizes the relevance of this extension for contemporary empirical CJ research, stressing the need for CJ models tailored to the experiments and data assumptions. It also encourages researchers across the social sciences to adopt more robust and interpretable methodologies.
 date: last-modified
 bibliography: references.bib
 ---
@@ -140,9 +138,9 @@ These ideas become clearer with an example. @fig-discriminal_process illustrates
 
 ::: {#fig-thurstone_theory layout-ncol=2}
 
-![Hypothetical discriminal processes for two written texts](/images/png/discriminal_process.png){#fig-discriminal_process width=100%}
+![Discriminal processes](/images/png/discriminal_process.png){#fig-discriminal_process width=100%}
 
-![Hypothetical discriminal difference of two written texts](/images/png/discriminal_difference.png){#fig-discriminal_difference width=100%}
+![Discriminal difference](/images/png/discriminal_difference.png){#fig-discriminal_difference width=100%}
 
 Hypothetical discriminal processes and discriminant difference along a quality trait continuum for two written texts.
 :::
@@ -163,7 +161,7 @@ However, since the individual discriminal processes of the stimuli are not direc
 # Two Prominent Issues in Traditional CJ Practice {#sec-theory-issues}
 
 <!-- 1. What is the problem with the general form -->
-Thurstone noted from the outset that his general formulation, described in @sec-thurstone_theory, led to a *trait scaling problem*. Specifically, the model required estimating more "unknown" parameters than the number of available pairwise comparisons [@Thurstone_1927b]. For instance, in a CJ assessment with five texts, the general form would require estimating $20$ parameters: five modal discriminal processes, five discriminal dispersions, and $10$ correlations--one per comparison. However, a single judge could only provide ${5 \choose 2} = 10$ unique comparisons, an "insufficient" data set to estimate the required parameters.
+Thurstone noted from the outset that his general formulation, described in @sec-thurstone_theory, led to a *trait scaling problem*. Specifically, the model required estimating more "unknown" parameters than the number of available pairwise comparisons [@Thurstone_1927b]. For instance, in a CJ assessment with five texts, the general form would require estimating $20$ parameters: five modal discriminal processes, five discriminal dispersions, and $10$ correlations--one per comparison (see @tbl-thurstone_cases). However, a single judge could only provide ${5 \choose 2} = 10$ unique comparisons, an "insufficient" data set to estimate the required parameters.
 
 <!-- According to this equation every pair of stimuli presents the possibility of a different correlation between the discriminal deviations. If this degree of freedom is allowed, the problem of psychological scaling would be insoluble because every observation equation would introduce a new unknown and the number of unknowns would then always be greater that the number of observation equations. In order to make the problem soluble it is necessary to make at least one assumption, namely that the correlation between discriminal deviations is practically constant throughout the stimulus series and for the single observer. [@Thurstone_1927b, p. 267] -->
 
@@ -177,7 +175,7 @@ To address this issue and facilitate the practical implementation of the theory,
 <!-- In Case II, Thurstone assumes that "each judge compares each stimulus with every other stimulus only once" [@Thurstone_1927b, p. 268]. -->
 
 <!-- 3. But are our specific problems? -->
-As the table suggest, Thurstone developed Case V with an emphasis on statistical simplicity, but this simplicity comes at the expense of accurate and precise trait measurement and practical guidance for inference. Specifically, Thurstone cautioned that Case V use "should not be made without (an) experimental test" [@Thurstone_1927b, p. 270], as it imposes the most extensive set of simplifying assumptions [@Bramley_2008; @Kelly_et_al_2022] (see @tbl-thurstone_cases). Moreover, because Thurstone's primary goal was to produce a "rather coarse scaling" of traits and "allocate the compared stimuli on this continuum" [@Thurstone_1927b, p. 269], his theory did not support formal statistical inference. Nevertheless, despite Case V's limitations, CJ research has predominantly relied on it to measure various traits, raising significant concerns about the reliability and validity of such measurements in contexts where its assumptions may not hold [@Kelly_et_al_2022; @Andrich_1978]. Furthermore, although the CJ tradition has attempted to address the gap in statistical inference by relying on the point estimates of traits--or their transformations--the statistical literature cautions against using these estimates as the sole basis for inference, as such practices introduce bias and reduce the precision of hypothesis tests [@McElreath_2020; @Kline_et_al_2023; @Hoyle_et_al_2023]. The next sections discuss both issues in greater depth.
+As the table suggests, Thurstone developed Case V with an emphasis on statistical simplicity, but this simplicity comes at the expense of accurate and precise trait measurement and practical guidance for inference. Specifically, Thurstone cautioned that Case V use "should not be made without (an) experimental test" [@Thurstone_1927b, p. 270], as it imposes the most extensive set of simplifying assumptions [@Bramley_2008; @Kelly_et_al_2022] (see @tbl-thurstone_cases). Moreover, because Thurstone's primary goal was to produce a "rather coarse scaling" of traits and "allocate the compared stimuli on this continuum" [@Thurstone_1927b, p. 269], his theory did not support formal statistical inference. Nevertheless, despite Case V's limitations, CJ research has predominantly relied on it to measure various traits, raising significant concerns about the reliability and validity of such measurements in contexts where its assumptions may not hold [@Kelly_et_al_2022; @Andrich_1978]. Furthermore, although the CJ tradition has attempted to address the gap in statistical inference by relying on the point estimates of traits--or their transformations--the statistical literature cautions against using these estimates as the sole basis for inference, as such practices introduce bias and reduce the precision of hypothesis tests [@McElreath_2020; @Kline_et_al_2023; @Hoyle_et_al_2023]. The next sections discuss both issues in greater depth.
 
 <!-- Case V - This is the simplest formulation of the law and it involves, in addition to the previous assumptions, the assumption that all the discriminal dispersions are equal. This assumption should not be made without experimental test. [@Thurstone_1927b, p. 270] -->
 
@@ -444,7 +442,7 @@ Fortunately, SCMs and DAGs support identification analysis through two key advan
 [^1]: In depth explanation of these topics is beyond the scope of this study, thus, readers seeking a more profound understanding can refer to introductory papers such as @Pearl_2010, @Rohrer_2018, @Pearl_2019, and @Cinelli_et_al_2020, and introductory books like @Pearl_et_al_2018, @Neal_2020, and @McElreath_2020 are useful. For more advanced study, seminal papers such as @Neyman_et_al_1923, @Rubin_1974, @Spirtes_et_al_1991, and @Sekhon_2009, along with books such as @Pearl_2009, @Morgan_et_al_2014, and @Hernan_et_al_2025, are recommended.
 
 <!-- 6. What the section will do? -->
-Thus, using SCMs and DAGs, this study extends Thurstone's general form to address the issues identified in @sec-theory-issues. This extension combines Thurstone's core theoretical principles (see @sec-thurstone_theory) with key CJ assessment design features, such as the selection of judges, stimuli, and comparisons. Specifically, @sec-theory-theoretical_P introduces the *conceptual-population model* (henceforth CPM), which incorporates these theoretical principles and assumes an idealized setting where researchers observe a *conceptual population* of comparative judgment data--that is, data representing all repeated judgments made by every available judge for each pair of stimuli produced by each pair of individuals in the population. Conversely, @sec-theory-theoretical_SC presents the *sample-comparison model* (hereafter SCM), which integrates the assessment design features and reflects a more realistic setting where researchers access only a sample of judges, individuals, stimuli, and comparisons from the conceptual population.
+Thus, using SCMs and DAGs, this study extends Thurstone's general form to address the issues identified in @sec-theory-issues. This extension combines Thurstone's core theoretical principles (see @sec-thurstone_theory) with key CJ assessment design features, such as the selection of judges, stimuli, and comparisons. Specifically, @sec-theory-theoretical_P introduces the *conceptual-population model* (henceforth CPM), which incorporates these theoretical principles and assumes an idealized setting where researchers observe a *conceptual population* of comparative judgment data--that is, data representing all repeated judgments made by every available judge for each pair of stimuli produced by each pair of individuals in the population. Conversely, @sec-theory-theoretical_SC presents the *sample-comparison model* (hereafter CSM), which integrates the assessment design features and reflects a more realistic setting where researchers access only a sample of judges, individuals, stimuli, and comparisons from the conceptual population.
 
 <!-- Generalizability is the degree to which you can apply the results of your study to a broader context.  -->
 <!-- https://www.scribbr.com/research-bias/generalizability/ -->
@@ -540,7 +538,6 @@ Notably, every SCM has an associated DAG [@Pearl_et_al_2016; @Cinelli_et_al_2020
 Although specifying a data structure is not mandatory when using SCMs and DAGs, defining one improves clarity and facilitates the description of the system. Thus, to re-express the scalar form of the CJ system shown in @fig-cj03 into an equivalent vectorized form, we first define the vectors $I$ and $J$, along with the matrices $IA$ and $JK$, as in Equation ([-@eq-mat11]). Here, each element of $I$ represents a unique individual $i$ or $h$, where $n_{I}$ denotes the total number of individuals. Similarly, each element of $J$ corresponds to a unique judge $j$, with $n_{J}$ indicating the total number of judges. Moreover, each row of $IA$ represents a unique pairing of individuals $i, h$ with stimuli $a, b$. As a result, the matrix $IA$ contains $n_{I} \cdot n_{A}$ rows and $2$ columns, where $n_{A}$ specifies the number of stimuli available per individual. Likewise, each row of $JK$ associates a judge $j$ with a (repeated) judgment index $k$. Consequently, the matrix $JK$ has $n_{J} \cdot n_{K}$ rows and $2$ columns, where $n_{K}$ indicates the number of repeated judgments each judge makes.
 
 Additionally, we construct the matrix $R$ to map each row of the $IA$ matrix with a corresponding row from the $JK$ matrix. This matrix has $n$ rows and $6$ columns, where $n = {n_{I} \cdot n_{A} \choose 2} \cdot n_{J} \cdot n_{K}$. Here, the term ${n_{I} \cdot n_{A} \choose 2}$ represents the binomial coefficient, which quantifies the total number of unique comparisons possible between every pair of stimuli generated by each pair of individuals in the population. Thus, we define the matrix as in Equation ([-@eq-mat11]). 
-
 $$
 I = \begin{bmatrix}
 1 \\
@@ -696,15 +693,12 @@ The top branch of [DAG -@fig-cj09_dag] illustrates the first component, where *r
 [^3]: refer to footnote 2.
 [^4]: refer to footnote 2.
 
-Similarly, the bottom branch of [DAG -@fig-cj09_dag] depicts the second component, where *relevant* [^5] judge-related variables $Z_{J}$, such as judgment expertise, and judges' idiosyncratic errors $e_{J}$ causally influence the latent variable representing judges' bias $B_{J}$. The error $e_{J}$ captures variations in judges' bias unexplained by $Z_{J}$. Here, $Z_{J}$ is an observed matrix with $n_{J}$ rows and $q_{J}$ independent columns (variables), and both $e_{J}$ and $B_{J}$ are latent vectors of length $n_{J}$. Furthermore, the branch shows how $B_{J}$, along with *relevant* [^6] judgment-related variables $Z_{JK}$ (e.g., the number of judgments a judge makes), and judgments' idiosyncratic errors $e_{JK}$ causally influence the judges' biases associated with each text $B_{JK}$, the second primary latent variable of interest. The error $e_{JK}$ captures variations in judgments unexplained by $B_{J}$ or $Z_{JK}$. Here, $Z_{JK}$ is an observed matrix with dimension $n_{J} \cdot n_{K}$ rows and $q_{JK}$ independent columns (variables), while $e_{JK}$ and $B_{JK}$ are latent latent matrices with $n_{J}$ rows and $n_{K}$ columns
+Similarly, the bottom branch of [DAG -@fig-cj09_dag] depicts the second component, where *relevant* [^5] judge-related variables $Z_{J}$, such as judgment expertise, and judges' idiosyncratic errors $e_{J}$ causally influence the latent variable representing judges' bias $B_{J}$. The error $e_{J}$ captures variations in judges' bias unexplained by $Z_{J}$. Here, $Z_{J}$ is an observed matrix with $n_{J}$ rows and $q_{J}$ independent columns (variables), and both $e_{J}$ and $B_{J}$ are latent vectors of length $n_{J}$. Furthermore, the branch shows how $B_{J}$, along with *relevant* [^6] judgment-related variables $Z_{JK}$ (e.g., the number of judgments a judge makes), and judgments' idiosyncratic errors $e_{JK}$ causally influence the judges' biases associated with each text $B_{JK}$, the second primary latent variable of interest. The error $e_{JK}$ captures variations in judgments unexplained by $B_{J}$ or $Z_{JK}$. Here, $Z_{JK}$ is an observed matrix with dimension $n_{J} \cdot n_{K}$ rows and $q_{JK}$ independent columns (variables), while $e_{JK}$ and $B_{JK}$ are latent latent matrices with $n_{J}$ rows and $n_{K}$ columns.
 
 [^5]: refer to footnote 2.
 [^6]: refer to footnote 2.
 
 Notably, all variables and functions shown in [SCM -@fig-cj09_scm] and [DAG -@fig-cj09_dag] are part of the set of endogenous variables $V$, structural equations $F$, and exogenous variables $E$ for the CPM. Additionally, the figures demonstrate that all exogenous variables are independent of one another, as indicated by the relationships $e_{IA} \dsep \{ e_{I}, e_{JK}, e_{J} \}$, $e_{I} \dsep \{ e_{JK}, e_{J} \}$ and $e_{JK} \dsep e_{J}$ and the absence of connecting arrows.
-
-<!-- 3. segway for next section -->
-Overall, the CPM extends Thurstone's general form by introducing key innovations to address the limitations discussed in @sec-theory-issue1b and @sec-theory-issue2. These enhancements include accounting for judges' biases and integrating hierarchical structural components. Nevertheless, despite its promise of enhancing measurement accuracy and precision, the model still depends on the unrealistic assumption that researchers have access to data from the *conceptual population*. Since this assumption is rarely met in practice, the study must consider a more realistic scenario.
 
 ::: {#fig-cj09 layout-nrow=2}
 
@@ -732,14 +726,17 @@ SCM
 Conceptual-population model (CPM), final vectorized form.
 :::
 
-## The sample-comparison model (SCM) {#sec-theory-theoretical_SC}
+<!-- 3. segway for next section -->
+Overall, the CPM extends Thurstone's general form by introducing key innovations to address the limitations discussed in @sec-theory-issue1b and @sec-theory-issue2. These enhancements include accounting for judges' biases and integrating hierarchical structural components. Nevertheless, despite its promise of enhancing measurement accuracy and precision, the model still depends on the unrealistic assumption that researchers have access to data from the *conceptual population*. Since this assumption is rarely met in practice, the study must consider a more realistic scenario.
+
+## The sample-comparison model (CSM) {#sec-theory-theoretical_SC}
 
 <!-- recording: Sven 24.10.04; time: 00:09:10 - 00:14:30 -->
 <!-- recording: Sven 24.10.04; time: 00:34:10 - 00:41:00 -->
 <!-- recording: Sven 25.03.31; time: 00:34:00 - 00:38:50 -->
 
 <!-- 1. What is the more realistic scenario: the sample mechanism -->
-The SCM presents a more realistic scenario than the CPM. First, it explicitly assumes a data sample consisting of a limited number of repeated judgments $(n^{s}_{K})$ from a sample of judges $(n^{s}_{J})$ and a specific number of texts $(n^{s}_{A})$ from a sample of students $(n^{s}_{I})$, all drawn from the conceptual population (@sec-theory-theoretical_SC1). Second, the model assumes that judges do not perform *all repeated judgments* within the data sample (@sec-theory-theoretical_SC2). Instead, they conduct a sufficient number of stimuli comparisons, $n_{C}$, to ensure an accurate estimation of the proportion $P(B>A)$, as proposed by @Thurstone_1927b.
+The CSM presents a more realistic scenario than the CPM. First, it explicitly assumes a data sample consisting of a limited number of repeated judgments $(n^{s}_{K})$ from a sample of judges $(n^{s}_{J})$ and a specific number of texts $(n^{s}_{A})$ from a sample of students $(n^{s}_{I})$, all drawn from the conceptual population (@sec-theory-theoretical_SC1). Second, the model assumes that judges do not perform *all repeated judgments* within the data sample (@sec-theory-theoretical_SC2). Instead, they conduct a sufficient number of stimuli comparisons, $n_{C}$, to ensure an accurate estimation of the proportion $P(B>A)$, as proposed by @Thurstone_1927b.
 
 <!-- It is assumed that the single observer compares each pair of stimuli a "sufficient number of times" so that a proportion, P(A>B), may be determined for each pair of stimuli [@Thurstone_1927b, p. 267] -->
 
@@ -751,7 +748,7 @@ The SCM presents a more realistic scenario than the CPM. First, it explicitly as
 <!-- recording: Sven and Tine 25.03.28; time: 00:11:30 - 00:12:25 -->
 
 <!-- 1. start by defining the sampling vector and matrices  -->
-To incorporate the sampling mechanism and facilitate the interpretation of the sample-comparison model, we first define the *data sampling process* using the binary vector variables $S_{I}$, $S_{J}$, $S_{IA}$, and $S_{JK}$ as follows:
+To incorporate the sampling mechanism and facilitate the interpretation of the CSM, we first define the *data sampling process* using the binary vector variables $S_{I}$, $S_{J}$, $S_{IA}$, and $S_{JK}$ as follows:
 $$
 S_{I} = \begin{bmatrix}
 i_{(1)} \\
@@ -922,7 +919,7 @@ SCM
 
 ![DAG](/images/png/CJ_TM_14.png){#fig-cj14_dag fig-align="center" fig-pos="H" width=100%}
 
-Sample-comparison model, final vectorized form
+Sample-comparison model (CSM), final vectorized form.
 :::
 
 
@@ -932,7 +929,7 @@ Sample-comparison model, final vectorized form
 <!-- recording: Sven and Tine 25.04.10; time: 00:16:30 - 00:19:00 -->
 
 <!-- 1. start by defining the comparison vector  -->
-As in the previous section, we begin defining the *comparison mechanism* using the binary vector variable $C$ to facilitate the interpretation of the sample-comparison model. Equation ([-@eq-mat27]) shows that $C$ contains $n$ elements corresponding to the number of rows in the $R$ matrix, with each element $c_{(i,a,h,b,j,k)}$ being a binary value indicating the presence or absence of data rows in $R$, a definition similar to that of $s_{(i,a,h,b,j,k)}$ in Equation ([-@eq-mat26]).
+As in the previous section, we begin defining the *comparison mechanism* using the binary vector variable $C$ to facilitate the interpretation of the CSM. Equation ([-@eq-mat27]) shows that $C$ contains $n$ elements corresponding to the number of rows in the $R$ matrix, with each element $c_{(i,a,h,b,j,k)}$ being a binary value indicating the presence or absence of data rows in $R$, a definition similar to that of $s_{(i,a,h,b,j,k)}$ in Equation ([-@eq-mat26]).
 $$
 C = \begin{bmatrix}
 c_{(1,1,1,2,1,1)} \\
@@ -952,7 +949,7 @@ The [DAG -@fig-cj14_dag] also incorporates the *comparison mechanism* $C$ into t
 
 <!-- It is assumed that the single observer compares each pair of stimuli a "sufficient number of times" so that a proportion, P(A>B), may be determined for each pair of stimuli [@Thurstone_1927b, p. 267] -->
 
-Notably, [DAG -@fig-cj14_dag] also shows that $C$ is independent of all other variables in the model. This independence implies that the conceptual model represented by the DAG applies exclusively to Random Allocation Comparative Designs [@Bramley_2015], or Incomplete Block Designs [@Lawson_2015], where every repeated judgment has an equal probability of being included in the sample.
+Notably, [DAG -@fig-cj14_dag] also shows that $C$ is independent of all other variables in the model. This independence implies that the conceptual model represented by the DAG applies exclusively to *Random Allocation Comparative Designs* [@Bramley_2015], or *Incomplete Block Designs* [@Lawson_2015], where every repeated judgment has an equal probability of being included in the sample.
 
 <!-- The different analyses were based on the same two underlying datasets. First of all, observations from these datasets were sampled in order to mimic either random allocation of pairs of scripts to judges, or adaptive allocation (where the probability of being sampled depends on the outcome of earlier comparisons). In all cases the selection of observations was carefully planned to ensure that i) each script was compared the same number of times; and ii) the complete set of judgments formed a fully linked design whereby each script was compared directly or indirectly with every other script5. For the ‘random only’ analyses, this could be achieved by systematically sampling the required observations. [@Bramley_2015, p. 8] -->
 
@@ -961,9 +958,12 @@ Notably, [DAG -@fig-cj14_dag] also shows that $C$ is independent of all other va
 <!-- Actually algorithm can be thought as the observation mechanism that "transforms" the outcome in the population of comparisons to the outcome in the sample of comparisons, see fig. 2, [@Deffner_et_al_2022] -->
 
 <!-- 3. preparing to transform the conceptual model into an statistical one -->
-Finally, since it is standard to assume that the distribution of the conceptual-population outcome $O^{cp}_{R}$ also holds for $O^{sc}_{R}$ and $O_{R}$, we can reformulate the sample-comparison model in @fig-cj14 into the equivalent form shown in @fig-cj15. This reformulation produces a model that applies directly to a sample of comparative data. In this version, the unobserved outcomes $O^{cp}_{R}$ and $O^{sc}_{R}$ are omitted, and $O_{R}$ inherits the structural equation $f_{O}$ that originally defined $O^{cp}_{R}$. Moreover, the definition of $O_{R}$ now reflects its direct dependence on the discriminal difference $D_{R}$ and the sample and comparison mechanisms, $S$ and $C$.
+Finally, since it is standard to assume that the distribution of the conceptual-population outcome $O^{cp}_{R}$ also holds for $O^{sc}_{R}$ and $O_{R}$, we can reformulate the SCM in @fig-cj14 into the equivalent form shown in @fig-cj15. This reformulation produces a model that applies directly to a sample of comparative data. In this version, the unobserved outcomes $O^{cp}_{R}$ and $O^{sc}_{R}$ are omitted, and $O_{R}$ inherits the structural equation $f_{O}$ that originally defined $O^{cp}_{R}$. Moreover, the definition of $O_{R}$ now reflects its direct dependence on the discriminal difference $D_{R}$ and the sample and comparison mechanisms, $S$ and $C$.
 
 <!-- move the assumption for the conceptual population outcome to the data outcome based on the fact that it is logical to think that the data outcome would have the same distribution as the population outcome, if the data comes from that population. For example, if I have the distribution of the population outcome, and it is a Bernoulli, and even if I do not have it because of S and C, the distributional assumption still holds -->
+
+<!-- 4. segway for next section -->
+In summary, the [SCM -@fig-cj15_scm] and [DAG -@fig-cj15_dag] extend Thurstone's general form to address several limitations of the BTL model. These extensions account for judges' biases (see @sec-theory-theoretical_P1), reflect the hierarchical structure of stimuli and incorporate measurement error in trait estimation and hypothesis testing (see @sec-theory-theoretical_P3), and even clarify the role of the sample and comparison mechanisms in CJ assessments (see @sec-theory-theoretical_SC). However, they do not resolve concerns about the assumption of equal dispersions among stimuli discussed in @sec-theory-issue1a. Since this concern relates to the statistical assumption underlying the distribution of the discriminal process, we develop a formal statistical model to address it in the next section.
 
 ::: {#fig-cj15 layout-nrow=2}
 
@@ -987,11 +987,8 @@ SCM
 
 ![DAG](/images/png/CJ_TM_15.png){#fig-cj15_dag fig-align="center" fig-pos="H" width=72%}
 
-Comparative judgment model
+Comparative judgment model.
 :::
-
-<!-- 4. segway for next section -->
-In summary, the [SCM -@fig-cj15_scm] and [DAG -@fig-cj15_dag] extend Thurstone's general form to address several limitations of the BTL model. These extensions account for judges' biases (see @sec-theory-theoretical_P1), reflect the hierarchical structure of stimuli and incorporate measurement error in trait estimation and hypothesis testing (see @sec-theory-theoretical_P3), and even clarify the role of the sample and comparison mechanisms in CJ assessments (see @sec-theory-theoretical_SC). However, they do not resolve concerns about the assumption of equal dispersions among stimuli discussed in @sec-theory-issue1a. Since this concern relates to the statistical assumption underlying the distribution of the discriminal process, we develop a formal statistical model to address it in the next section.
 
 
 # From SCM to statistical model  {#sec-statistical}
@@ -1100,7 +1097,7 @@ $$
 Statistical model
 :::
 
-Comparative judgment model, SCM, probabilistic and statistical model assuming different discriminal dispersions for the student's traits
+Comparative judgment model. SCM, probabilistic and statistical model assuming different discriminal dispersions for the student's traits
 :::
 
 
@@ -1119,7 +1116,7 @@ D_{R} &= \left( T_{IA}[i,a] - T_{IA}[h,b] \right) + B_{JK}[j,k] \\
 \end{aligned}
 $$ {#eq-mat52}
 
-This formulation reveals that the discriminal difference captures a *pure interaction effect*, in which neither the texts' discriminal processes nor the judges' biases alone determine the outcome, but their interaction does [@Attia_et_al_2022]. Put simply, this mathematical description captures the idea that the stimuli' discriminal processes become an observable outcome only through the lens of judges' perceptions (i.e., their biases). For clarity, the square brackets in $D_{R}$ indicate the relevant indices for each trait vector; they do not imply any subsetting of the data.
+This formulation reveals that the discriminal difference captures a *pure interaction effect*, in which neither the texts' discriminal processes nor the judges' biases alone determine the outcome, but their interaction does [@Attia_et_al_2022]. Put simply, this mathematical description captures the idea that the stimuli' discriminal processes become an observable outcome only through the lens of judges' perceptions (i.e., their biases). For clarity, the square brackets in $D_{R}$ indicate the relevant indices for each trait vector.
 
 <!-- Weinberg[4] proposed a further diagram to capture ‘pure’ interaction in which neither G nor E has a direct effect on D and they only have an effect when present together (see Figure 4a). We suggest that this ‘pure’ interaction could be captured by the DAG shown in Figure 4b. An example of this is phenylketonuria in which phenylalanine in the diet (E) and the absence of the enzyme to break it down (phenylalanine hydroxylase, G) are both needed in order for a disease to manifest (intellectual disability, D). [@Attia_et_al_2022, p. 1052] -->
 
@@ -1183,7 +1180,7 @@ Conversely, $p_{JK}$ is defined as a proportion of $1$ to establish the scale of
 <!-- 9. Computational implementation -->
 Finally, we use *Bayesian inference methods* to convert the statistical model [-@fig-cj16_stat] into a practical statistical tool for analyzing paired comparison data. Bayesian inference offers three main advantages in this context. First, it handles complex and overparameterized models, where the number of parameters exceeds the number of observations [@Baker_1998; @Kim_et_al_1999]. This feature is essential for our implementation, as the proposed model is indeed overparameterized. Second, it incorporates prior information to constrain parameter estimates within plausible bounds, thereby mitigating estimation issues like non-convergence or improper solutions that often affect frequentist methods [@Martin_et_al_1975; @Seaman_et_al_2011]. Prior distributions are used to define the error distribution and set the scale of latent variables [@Depaoli_2014]. Third, Bayesian inference supports robust inferences from small samples, where the asymptotic properties underlying frequentist methods are less reliable [@Baldwin_et_al_2013; @Lambert_et_al_2006; @Depaoli_2014]. This feature is particularly relevant in CJ assessments, as researchers often collect large volumes of paired comparisons but work with relatively small samples of judges, stimuli, and individuals to test hypotheses.
 
-The **Declarations** section of this document provides a link to the model code, along with an alternative specification that assumes equal discriminal dispersions. We tested both versions of the model with success using `Stan` [@Stan_2020, version 2.26.1].
+The **Declarations** section of this document provides a link to the model code, along with an alternative specification that assumes equal discriminal dispersions. Both versions of the model have been tested with success using `Stan` [@Stan_2020, version 2.26.1].
 
 <!-- Proposal: Make the model to be bX %*% X 
 Decision: Although this makes it easier for the software, the way it is declared is more explicit. -->
@@ -1384,7 +1381,7 @@ The theoretical commitment to causal inference also introduces several practical
 
 Applying the approach effectively requires foundational knowledge in two areas. First, a solid understanding of causal inference principles. Second, the ability to translate the functional and probabilistic aspects of conceptual models into bespoke statistical models. A clear example illustrating the importance of causal inference is the recurrent assumption that predictor variables are "relevant" to the research context--interpreting this relevance as their inclusion in a *sufficient adjustment set* [@Pearl_2009; @Pearl_et_al_2016; @Morgan_et_al_2014]. However, this study does not explore the full implications of that assumption for model specification, estimation, and inference. Nevertheless, to assist with the effort of engaging with this and other complex causal inference concepts, key references are provided throughout the study to guide applied CJ researchers toward a deeper understanding of these ideas [^10].
 
-[^10]: Also refer to the detailed online document referenced in the Declarations section
+[^10]: Also refer to the detailed online document referenced in the **Declarations** section
 
 Developing the skills to translate conceptual models into bespoke statistical models also presents challenges. Although Bayesian inference methods offer a more accessible path for many applied CJ researchers to develop these skills--by reducing the need for specialized knowledge in areas like optimization theory, which frequentist methods often require--they still demand familiarity with technical concepts such as probabilistic programming languages (PPLs), probability distributions, and convergence diagnostics. Thus, to support this skill development, this study provides a link to the statistical model code and alternative model specifications in the **Declarations** section of this document [^11].
 
@@ -1393,9 +1390,7 @@ Developing the skills to translate conceptual models into bespoke statistical mo
 ### Attention to conceptual and statistical modeling {#sec-discussion_challenges2}
 <!-- recording: Sven and Tine 25.06.04; time: 00:26:30 - 00:33:55 -->
 
-Even after acquiring the necessary foundational knowledge, applying this approach to a specific CJ context involves two additional challenges. First, it is essential to verify whether the conceptual model offers a *faithful* [^12] representation of the CJ system under study. Second, the statistical translation of the model must be assessed to determine if it can accurately estimate the intended estimands (i.e., parameters) from empirical data. To ensure fidelity, the conceptual and statistical models presented here should be treated as starting points, not universal solutions for all CJ designs or datasets. While these models may be adequate in some contexts, assuming so without evaluation is unwise. Instead, adaptation to the specific context is necessary, with careful attention to assessment design features and causal assumptions. As discussed in @sec-discussion_challenges, this approach supports such adaptation by providing a transparent framework for articulating new assumptions and guiding CJ assessment design.
-
-[^12]: Avoid confusing this term with the *faithfulness assumption* [@Neal_2020; @Hernan_et_al_2025] described in the causal inference literature. For further details, see footnote 1.
+Even after acquiring the necessary foundational knowledge, applying this approach to a specific CJ context involves two additional challenges. First, it is essential to verify whether the conceptual model achieves sufficient *fidelity* in representing the CJ system under study. Second, the statistical translation of the model must be assessed to determine if it can accurately estimate the intended estimands (i.e., parameters) from empirical data. To ensure fidelity, the conceptual and statistical models presented here should be treated as starting points, not universal solutions for all CJ designs or datasets. While these models may be adequate in some contexts, assuming so without evaluation is unwise. Instead, adaptation to the specific context is necessary, with careful attention to assessment design features and their implied causal assumptions. As discussed in @sec-discussion_challenges, this approach supports such adaptation by providing a transparent framework for articulating new assumptions and guiding CJ assessment design.
 
 <!-- Our DAG is, of course, incomplete and possibly wrong, in particular when it comes to the nodes that have not been experimentally manipulated. But an incomplete model is still an improvement over no model at all. [@Deffner_et_al_2022, p. 5] -->
 
