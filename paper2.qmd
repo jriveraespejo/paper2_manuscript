@@ -14,8 +14,7 @@ author:
         group: Edubron
   - name: 
       given: Tine
-      family: Daal
-      non-dropping-particle: van
+      family: van Daal
     orcid: 0000-0001-9398-9775
     url: https://www.uantwerpen.be/en/staff/tine-vandaal/
     email: tine.vandaal@uantwerpen.be
@@ -26,8 +25,7 @@ author:
         group: Edubron
   - name: 
       given: Sven
-      family: Maeyer
-      non-dropping-particle: De
+      family: De Maeyer
     orcid: 0000-0003-2888-1631
     url: https://www.uantwerpen.be/en/staff/sven-demaeyer/
     email: sven.demaeyer@uantwerpen.be
