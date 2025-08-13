@@ -70,7 +70,7 @@
    \AtBeginDocument{\@twosidefalse\@mparswitchfalse}}
 \DeclareOption{nopreprintline}{\global\nopreprintlinetrue}
 \DeclareOption{final}{\gdef\@blstr{1}\global\preprintfalse}
-\DeclareOption{review}{\global\preprinttrue\gdef\@blstr{1.5}} % original=1.5, previous=1.7
+\DeclareOption{review}{\global\preprinttrue\gdef\@blstr{1.5}} % original=\@blstr{1.5}
 \DeclareOption{authoryear}{\xdef\@biboptions{round,authoryear}}
 \DeclareOption{number}{\xdef\@biboptions{numbers}}
 \DeclareOption{numbers}{\xdef\@biboptions{numbers}}
@@ -1222,16 +1222,16 @@
 \ifnum\jtype=1
  \RequirePackage{geometry}
  \geometry{twoside,
-  paperwidth=210mm,
-  paperheight=297mm,
+  paperwidth=210mm, % original=210mm
+  paperheight=297mm, % original=297mm
   % url1: https://github.com/quarto-journals/elsevier
   % url2: https://www.overleaf.com/learn/latex/Page_size_and_margins
-  textheight=670pt, % original: 562pt, maximum: 674pt
-  textwidth=430pt, % original: 384pt, maximum: 426pt
+  textheight=670pt, % original: 562pt, maximum: 674pt, new: 670pt
+  textwidth=430pt, % original: 384pt, maximum: 426pt, new: 430pt
   centering,
-  headheight=12pt, % original: 50pt, maximum: 12pt
-  headsep=12pt, % original: 12pt, maximum: 25pt
-  footskip=12pt, % original: 384pt, maximum: 30pt
+  headheight=12pt, % original: 50pt, maximum: 12pt, new: 12pt
+  headsep=12pt, % original: 12pt, maximum: 25pt, new: 12pt
+  footskip=12pt, % original: 384pt, maximum: 30pt, new: 12pt
   footnotesep=24pt plus 2pt minus 12pt,
  }
  \global\let\bibfont=\footnotesize

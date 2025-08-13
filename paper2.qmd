@@ -14,7 +14,7 @@ author:
         group: Edubron
   - name: 
       given: Tine
-      family: van Daal
+      family: Daal
       non-dropping-particle: van
     orcid: 0000-0001-9398-9775
     url: https://www.uantwerpen.be/en/staff/tine-vandaal/
@@ -26,7 +26,7 @@ author:
         group: Edubron
   - name: 
       given: Sven
-      family: De Maeyer
+      family: Maeyer
       non-dropping-particle: De
     orcid: 0000-0003-2888-1631
     url: https://www.uantwerpen.be/en/staff/sven-demaeyer/
@@ -1350,7 +1350,7 @@ In contrast, the approach presented in this study provides a rigorous framework 
 <!-- recording: Sven and Tine 25.05.21; time: 00:33:50 - 00:42:20 -->
 <!-- recording: Sven and Tine 25.06.04; time: 00:18:45 - 00:33:55 -->
 
-Drawing conclusions from observed data always requires assumptions, whether the data are observational or experimental [@Kohler_et_al_2019; @Deffner_et_al_2022]. The proposed approach is not an exception to this fundamental principle. Like all approaches grounded on causal inference, it relies on expert knowledge and assumptions about the variables' causal structure that are often untestable at the outset [@Hernan_et_al_2025]. However, its purpose is not to deliver automatic answers when applied to a given CJ dataset. Instead, it encourages the formulation of precise questions and the explicit articulation of assumptions, fostering a generalizable understanding of the CJ system under study [@Rohrer_et_al_2022; @Deffner_et_al_2022; @Sterner_et_al_2024]. This clarity is crucial because the accuracy of estimates and validity of inferences depend on how well the data and inferential goals align with a model's assumptions [@Kohler_et_al_2019]. Although this alignment remains to be empirically tested for the proposed models, the theory-driven nature of this approach provides a solid foundation for future empirical evaluation of its causal assumptions [@Deffner_et_al_2022], grounded in both established theory and existing evidence.
+Drawing conclusions from observed data always requires assumptions, whether the data are observational or experimental [@Kohler_et_al_2019; @Deffner_et_al_2022]. The proposed approach is not an exception to this fundamental principle. Like all approaches grounded on causal inference, it relies on expert knowledge and assumptions about the variables' causal structure that are often untestable at the outset [@Hernan_et_al_2025]. However, its purpose is not to deliver automatic answers when applied to a given CJ dataset. Instead, it encourages the formulation of precise questions and the explicit articulation of assumptions, fostering a generalizable understanding of the CJ system under study [@Rohrer_et_al_2022; @Deffner_et_al_2022; @Sterner_et_al_2024]. This clarity is crucial because the accuracy of estimates and validity of inferences depend on how well the data and inferential goals align with a model's assumptions [@Kohler_et_al_2019]. Although this alignment remains to be empirically tested for the proposed statistical model, the theory-driven nature of this approach provides a solid foundation for future empirical evaluation of its causal assumptions [@Deffner_et_al_2022], grounded in both established theory and existing evidence.
 
 <!-- Statements about the real world from observed data require assumptions. This is true no matter what kind of data we have, and it is explicitly also true for statements based on data stemming from SRSg. The validity of our statements therefore critically hinges on the validity of those assumptions. If our statistical assumptions are wrong for the analysis at hand, the inferential statements will be incorrect no matter how sophisticated the statistical methods are. [@Kohler_et_al_2019, p. 150] -->
 
@@ -1456,11 +1456,11 @@ The present study highlights the need to extend Thurstone's theory to address th
 
 **Data availability:** This study did not use any data.
 
-**Materials and code availability:** The `CODE LINK` section at the top of the digital document located at: [https://jriveraespejo.github.io/paper2_manuscript/](https://jriveraespejo.github.io/paper2_manuscript/) provides access to all materials and code.  
+**Materials and code availability:** A previous version of this manuscript, along with the associated materials and code (see the section titled `CODE LINK`), has been made publicly available at: [https://jriveraespejo.github.io/paper2_manuscript/](https://jriveraespejo.github.io/paper2_manuscript/).  
 
 **AI-assisted technologies in the writing process:** The authors used various AI-based language tools to refine phrasing, optimize wording, and enhance clarity and coherence throughout the manuscript. They take full responsibility for the final content of the publication.
 
-**CRediT authorship contribution statement:** *Conceptualization:* J.M.R.E, T.vD., S.DM., and S.G.; *Methodology:* J.M.R.E, T.vD., and S.DM.; *Software:* J.M.R.E.; *Validation:* J.M.R.E.; *Formal Analysis:* J.M.R.E.; *Investigation:* J.M.R.E; *Resources:* T.vD. and S.DM.; *Data curation:* J.M.R.E.; *Writing - original draft:* J.M.R.E.; *Writing - review and editing:* T.vD., S.DM., and S.G.; *Visualization:* J.M.R.E.; *Supervision:* S.G. and S.DM.; *Project administration:* S.G. and S.DM.; *Funding acquisition:* S.G. and S.DM.
+**CRediT authorship contribution statement:** *Conceptualization:* J.M.R.E, T.vD., S.DM., and S.G.; *Methodology:* J.M.R.E, T.vD., and S.DM.; *Software:* J.M.R.E.; *Validation:* J.M.R.E.; *Formal Analysis:* J.M.R.E.; *Investigation:* J.M.R.E; *Resources:* T.vD. and S.DM.; *Data curation:* J.M.R.E.; *Writing - original draft:* J.M.R.E.; *Writing - review and editing:* J.M.R.E., T.vD., S.DM., and S.G.; *Visualization:* J.M.R.E.; *Supervision:* S.G. and S.DM.; *Project administration:* S.G. and S.DM.; *Funding acquisition:* S.G. and S.DM.
 
 <!-- **Acknowledgements:** -->
 

@@ -61,12 +61,13 @@ format:
   #docx: default
   #jats: default
   elsevier-pdf:
-    #header-includes:
-    #  - \usepackage{float}
-    #  - \floatplacement{table}{H}
+  #  header-includes:
+  #    - \usepackage{float}
+  #    - \floatplacement{table}{H}
+  #  fontsize: 11pt
     keep-tex: true
     journal:
-      name: Psychometrika
+      name: Psychological Methods
       formatting: review
       model: 1p
       cite-style: authoryear
