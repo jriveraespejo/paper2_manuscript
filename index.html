@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.8.19">
+<meta name="generator" content="quarto-1.8.20">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -10,8 +10,8 @@
 <meta name="author" content="Tine van Daal">
 <meta name="author" content="Sven De Maeyer">
 <meta name="author" content="Steven Gillis">
-<meta name="dcterms.date" content="2025-08-13">
-<meta name="keywords" content="causal inference, directed acyclic graphs, structural causal models, bayesian statistical methods, thurstonian model, comparative judgement, probability, statistical modeling">
+<meta name="dcterms.date" content="2025-08-15">
+<meta name="keywords" content="causal inference, directed acyclic graphs, structural causal models, bayesian inference, thurstonian model, comparative judgement, probability, statistical modeling">
 
 <title>Let’s talk about Thurstone &amp; Co.: An information-theoretical model for comparative judgments, and its statistical translation</title>
 <style>
@@ -57,7 +57,7 @@ div.csl-indent {
 <script src="site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="site_libs/quarto-html/anchor.min.js"></script>
 <link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-46eeb4c476de49ef7df495821a6125d9.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-bd0f20613ab34a035844aaae9062fb4e.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
 <link href="site_libs/bootstrap/bootstrap-5afeb32227a1df9bcc8f6dc34a320636.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
@@ -103,18 +103,20 @@ window.Quarto = {
 
 <meta name="citation_title" content="Let&amp;amp;#039;s talk about Thurstone &amp; Co.: An information-theoretical model for comparative judgments, and its statistical translation">
 <meta name="citation_abstract" content="This study revisits Thurstone&amp;amp;#039;s law of comparative judgment (CJ) by addressing two key issues in the CJ literature. First, it critiques the reliance on Thurstone's Case V assumptions and the Bradley-Terry-Luce (BTL) model in the analysis of CJ data. Specifically, it argues that while the assumptions of equal discriminal dispersions and zero correlation simplify the trait measurement model, they may fail to capture the complexity of some traits or stimuli, potentially leading to unreliable and inaccurate trait estimates. Second, the study highlights the disconnect between trait measurement and statistical inference in CJ applications. It contends that while separating these processes simplifies the analysis, this practice can also undermine the resulting statistical inferences.
+
 To address these issues, this study extends Thurstone's general form using a systematic, integrated approach based on causal and Bayesian inference methods. This extension integrates CJ's core theoretical principles alongside key assessment design features. It then translates these elements into a statistical model for analyzing dichotomous CJ data.
+
 Finally, the study emphasizes the relevance of this extension for contemporary empirical CJ research, stressing the need for CJ models tailored to the experiments and data assumptions. It also encourages researchers across the social sciences to adopt more robust and interpretable methodologies.
 ">
-<meta name="citation_keywords" content="causal inference,directed acyclic graphs,structural causal models,bayesian statistical methods,thurstonian model,comparative judgement,probability,statistical modeling">
+<meta name="citation_keywords" content="causal inference,directed acyclic graphs,structural causal models,bayesian inference,thurstonian model,comparative judgement,probability,statistical modeling">
 <meta name="citation_author" content="Jose Manuel Rivera Espejo">
 <meta name="citation_author" content="Tine van Daal">
 <meta name="citation_author" content="Sven De Maeyer">
 <meta name="citation_author" content="Steven Gillis">
-<meta name="citation_publication_date" content="2025-08-13">
-<meta name="citation_cover_date" content="2025-08-13">
+<meta name="citation_publication_date" content="2025-08-15">
+<meta name="citation_cover_date" content="2025-08-15">
 <meta name="citation_year" content="2025">
-<meta name="citation_online_date" content="2025-08-13">
+<meta name="citation_online_date" content="2025-08-15">
 <meta name="citation_language" content="en">
 <meta name="citation_reference" content="citation_title=Correlation and causation;,citation_author=S. Wright;,citation_publication_date=1927;,citation_cover_date=1927;,citation_year=1927;,citation_fulltext_html_url=https://books.google.co.ao/books/about/Journal_of_Agricultural_Research.html?hl=pt-PT&amp;amp;amp;id=lNNdIV_qpwIC;,citation_issue=7;,citation_volume=20;,citation_journal_title=Correlation and causation;">
 <meta name="citation_reference" content="citation_title=On the interpretation of χ2 from contingency tables, and the calculation of p;,citation_author=R. Fisher;,citation_publication_date=1922;,citation_cover_date=1922;,citation_year=1922;,citation_fulltext_html_url=http://www.jstor.org/stable/2340521;,citation_issue=1;,citation_doi=10.2307/2340521;,citation_volume=85;,citation_journal_title=Journal of the Royal Statistical Society;,citation_publisher=[Wiley, Royal Statistical Society];">
@@ -467,7 +469,7 @@ Finally, the study emphasizes the relevance of this extension for contemporary e
                 <div>
             <div class="quarto-title-meta-heading">Published</div>
             <div class="quarto-title-meta-contents">
-              <p class="date">August 13, 2025</p>
+              <p class="date">August 15, 2025</p>
             </div>
           </div>
           
@@ -481,19 +483,21 @@ Finally, the study emphasizes the relevance of this extension for contemporary e
     <div>
       <div class="abstract">
         <div class="block-title">Abstract</div>
-        <p>This study revisits Thurstone’s law of comparative judgment (CJ) by addressing two key issues in the CJ literature. First, it critiques the reliance on Thurstone’s Case V assumptions and the Bradley-Terry-Luce (BTL) model in the analysis of CJ data. Specifically, it argues that while the assumptions of equal discriminal dispersions and zero correlation simplify the trait measurement model, they may fail to capture the complexity of some traits or stimuli, potentially leading to unreliable and inaccurate trait estimates. Second, the study highlights the disconnect between trait measurement and statistical inference in CJ applications. It contends that while separating these processes simplifies the analysis, this practice can also undermine the resulting statistical inferences. To address these issues, this study extends Thurstone’s general form using a systematic, integrated approach based on causal and Bayesian inference methods. This extension integrates CJ’s core theoretical principles alongside key assessment design features. It then translates these elements into a statistical model for analyzing dichotomous CJ data. Finally, the study emphasizes the relevance of this extension for contemporary empirical CJ research, stressing the need for CJ models tailored to the experiments and data assumptions. It also encourages researchers across the social sciences to adopt more robust and interpretable methodologies.</p>
+        <p>This study revisits Thurstone’s law of comparative judgment (CJ) by addressing two key issues in the CJ literature. First, it critiques the reliance on Thurstone’s Case V assumptions and the Bradley-Terry-Luce (BTL) model in the analysis of CJ data. Specifically, it argues that while the assumptions of equal discriminal dispersions and zero correlation simplify the trait measurement model, they may fail to capture the complexity of some traits or stimuli, potentially leading to unreliable and inaccurate trait estimates. Second, the study highlights the disconnect between trait measurement and statistical inference in CJ applications. It contends that while separating these processes simplifies the analysis, this practice can also undermine the resulting statistical inferences.</p>
+        <p>To address these issues, this study extends Thurstone’s general form using a systematic, integrated approach based on causal and Bayesian inference methods. This extension integrates CJ’s core theoretical principles alongside key assessment design features. It then translates these elements into a statistical model for analyzing dichotomous CJ data.</p>
+        <p>Finally, the study emphasizes the relevance of this extension for contemporary empirical CJ research, stressing the need for CJ models tailored to the experiments and data assumptions. It also encourages researchers across the social sciences to adopt more robust and interpretable methodologies.</p>
       </div>
     </div>
 
     <div>
       <div class="keywords">
         <div class="block-title">Keywords</div>
-        <p>causal inference, directed acyclic graphs, structural causal models, bayesian statistical methods, thurstonian model, comparative judgement, probability, statistical modeling</p>
+        <p>causal inference, directed acyclic graphs, structural causal models, bayesian inference, thurstonian model, comparative judgement, probability, statistical modeling</p>
       </div>
     </div>
 
     <div class="quarto-other-links-text-target">
-    <div class="quarto-code-links"><div class="quarto-title-meta-heading">Code Links</div><div class="quarto-title-meta-contents"><span style="padding-right: 0.5em;"><a href="https://github.com/jriveraespejo/paper2_manuscript.git"><i class="bi bi-link-45deg"></i>Github repository</a>,</span><span style="padding-right: 0.5em;"><a href="https://jriveraespejo.github.io/UK_presentation_2025/presentation.html"><i class="bi bi-link-45deg"></i>Slides, UK 2025</a>,</span><span style="padding-right: 0.5em;"><a href="submission/paper2_v6.0.pdf"><i class="bi bi-link-45deg"></i>Submission (pdf)</a>,</span><span style="padding-right: 0.5em;"><a href="code/CJfig.R"><i class="bi bi-file-code-fill"></i>Figures</a>,</span><span><a href="code/CJmod_add.R"><i class="bi bi-file-code-fill"></i>Stan</a></span></div></div></div>  </div>
+    <div class="quarto-code-links"><div class="quarto-title-meta-heading">Code Links</div><div class="quarto-title-meta-contents"><span style="padding-right: 0.5em;"><a href="https://github.com/jriveraespejo/paper2_manuscript.git"><i class="bi bi-link-45deg"></i>Github repository</a>,</span><span style="padding-right: 0.5em;"><a href="https://jriveraespejo.github.io/UK_presentation_2025/presentation.html"><i class="bi bi-link-45deg"></i>Slides, UK 2025</a>,</span><span style="padding-right: 0.5em;"><a href="submission/paper2_v7.0.pdf"><i class="bi bi-link-45deg"></i>Submission (pdf)</a>,</span><span style="padding-right: 0.5em;"><a href="code/CJfig.R"><i class="bi bi-file-code-fill"></i>Figures</a>,</span><span><a href="code/CJmod_add.R"><i class="bi bi-file-code-fill"></i>Stan</a></span></div></div></div>  </div>
 </header><div id="quarto-content" class="page-columns page-rows-contents page-layout-article toc-left">
 <div id="quarto-sidebar-toc-left" class="sidebar toc-left">
   <nav id="TOC" role="doc-toc" class="toc-active">
@@ -2650,7 +2654,7 @@ Zimmerman, D. 1994. <span>“A Note on the Influence of Outliers on Parametric a
   title = {Let’s Talk about {Thurstone} \&amp; {Co.:} {An}
     Information-Theoretical Model for Comparative Judgments, and Its
     Statistical Translation},
-  date = {2025-08-13},
+  date = {2025-08-15},
   langid = {en},
   abstract = {This study revisits Thurstone’s law of comparative
     judgment (CJ) by addressing two key issues in the CJ literature.
@@ -2679,7 +2683,7 @@ Zimmerman, D. 1994. <span>“A Note on the Influence of Outliers on Parametric a
 Rivera Espejo, Jose Manuel, Tine van Daal, Sven De Maeyer, and Steven
 Gillis. 2025. <span>“Let’s Talk about Thurstone &amp; Co.: An
 Information-Theoretical Model for Comparative Judgments, and Its
-Statistical Translation.”</span> August 13, 2025.
+Statistical Translation.”</span> August 15, 2025.
 </div></div></section></div></main>
 <!-- /main column -->
 <script id="quarto-html-after-body" type="application/javascript">
