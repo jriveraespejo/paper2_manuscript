@@ -24,16 +24,16 @@ data{
     array[ns] int<lower=0, upper=1> OR;     // outcome (dichotomous)
     
     // individual-stimuli data
-    array[nsI*nsA] int<lower=1, upper=nsI> IA1s;    // individuals
-    array[nsI*nsA] int<lower=1, upper=nsA> IA2s;    // stimuli
+    array[nsI*nsA] int<lower=1, upper=nsI> IA1;     // individuals
+    array[nsI*nsA] int<lower=1, upper=nsA> IA2;     // stimuli
     array[nsI*nsA] real XIc;                        // individual predictor (continuous)
     array[nsI*nsA] int<lower=1, upper=sup_XId> XId; // individual predictor (discrete)
     array[nsI*nsA] real XIAc;                       // stimuli predictor (continuous)
     array[nsI*nsA] int<lower=1, upper=sup_XAd> XIAd;// stimuli predictor (discrete)
     
     // juges-repeated comparisons data
-    array[nsJ*nsK] int<lower=1, upper=nsJ> JK1s;    // judges
-    array[nsJ*nsK] int<lower=1, upper=nsK> JK2s;    // judgments
+    array[nsJ*nsK] int<lower=1, upper=nsJ> JK1;     // judges
+    array[nsJ*nsK] int<lower=1, upper=nsK> JK2;     // judgments
     array[nsJ*nsK] real ZJc;                        // judges predictor (continuous)
     array[nsJ*nsK] int<lower=1, upper=sup_ZJd> ZJd; // judges predictor (discrete)
     array[nsJ*nsK] real ZJKc;                       // judgments predictor (continuous)
@@ -78,23 +78,23 @@ transformed parameters{
       for( ia in 1:(nsI*nsA) ){
     
         // error calculation
-        eI[ IA1s[ia] ] = ze[ IA1s[ia], 1 ]; // identification: sI=1
+        eI[ IA1[ia] ] = ze[ IA1[ia], 1 ]; // identification: sI=1
         
         // trait calculation
-        TI[ IA1s[ia] ] = bXIc*XIc[ ia ] + bXId[ XId[ia] ] + eI[ IA1s[ia] ];
-        TIA[ IA1s[ia], IA2s[ia] ] = TI[ IA1s[ia] ] + bXAc*XIAc[ ia ] + bXAd[ XIAd[ia] ];
+        TI[ IA1[ia] ] = bXIc*XIc[ ia ] + bXId[ XId[ia] ] + eI[ IA1[ia] ];
+        TIA[ IA1[ia], IA2[ia] ] = TI[ IA1[ia] ] + bXAc*XIAc[ ia ] + bXAd[ XIAd[ia] ];
       
       }
     } else {
       for( ia in 1:(nsI*nsA) ){
     
         // error calculation
-        eI[ IA1s[ia] ] = ze[ IA1s[ia], 1 ];             // identification: sI=1
-        eIA[ IA1s[ia], IA2s[ia] ] = pIA * ze[ ia, 2 ];  // identification: sIA=pIA
+        eI[ IA1[ia] ] = ze[ IA1[ia], 1 ];             // identification: sI=1
+        eIA[ IA1[ia], IA2[ia] ] = pIA * ze[ ia, 2 ];  // identification: sIA=pIA
       
         // trait calculation
-        TI[ IA1s[ia] ] = bXIc*XIc[ ia ] + bXId[ XId[ia] ] + eI[ IA1s[ia] ];
-        TIA[ IA1s[ia], IA2s[ia] ] = TI[ IA1s[ia] ] + bXAc*XIAc[ ia ] + bXAd[ XIAd[ia] ] + eIA[ IA1s[ia], IA2s[ia] ];
+        TI[ IA1[ia] ] = bXIc*XIc[ ia ] + bXId[ XId[ia] ] + eI[ IA1[ia] ];
+        TIA[ IA1[ia], IA2[ia] ] = TI[ IA1[ia] ] + bXAc*XIAc[ ia ] + bXAd[ XIAd[ia] ] + eIA[ IA1[ia], IA2[ia] ];
       
       }
     }
@@ -105,23 +105,23 @@ transformed parameters{
       for( jk in 1:(nsJ*nsK) ){
       
         // error calculation
-        eJ[ JK1s[jk] ] = ze[ JK1s[jk], 3 ]; // identification: sJ=1
+        eJ[ JK1[jk] ] = ze[ JK1[jk], 3 ]; // identification: sJ=1
         
         // trait calculation
-        BJ[ JK1s[jk] ] = bZJc*ZJc[ jk ] + bZJd[ ZJd[jk] ] + eJ[ JK1s[jk] ];
-        BJK[ JK1s[jk], JK2s[jk] ] = BJ[ JK1s[jk] ] + bZKc*ZJKc[ jk ] + bZKd[ ZJKd[jk] ];
+        BJ[ JK1[jk] ] = bZJc*ZJc[ jk ] + bZJd[ ZJd[jk] ] + eJ[ JK1[jk] ];
+        BJK[ JK1[jk], JK2[jk] ] = BJ[ JK1[jk] ] + bZKc*ZJKc[ jk ] + bZKd[ ZJKd[jk] ];
         
       }
     } else {
       for( jk in 1:(nsJ*nsK) ){
         
         // error calculation
-        eJ[ JK1s[jk] ] = ze[ JK1s[jk], 3 ];             // identification: sJ=1
-        eJK[ JK1s[jk], JK2s[jk] ] = pJK * ze[ jk, 4 ];  // identification: sJK=pJK
+        eJ[ JK1[jk] ] = ze[ JK1[jk], 3 ];             // identification: sJ=1
+        eJK[ JK1[jk], JK2[jk] ] = pJK * ze[ jk, 4 ];  // identification: sJK=pJK
         
         // trait calculation
-        BJ[ JK1s[jk] ] = bZJc*ZJc[ jk ] + bZJd[ ZJd[jk] ] + eJ[ JK1s[jk] ];
-        BJK[ JK1s[jk], JK2s[jk] ] = BJ[ JK1s[jk] ] + bZKc*ZJKc[ jk ] + bZKd[ ZJKd[jk] ] + eJK[ JK1s[jk], JK2s[jk] ];
+        BJ[ JK1[jk] ] = bZJc*ZJc[ jk ] + bZJd[ ZJd[jk] ] + eJ[ JK1[jk] ];
+        BJK[ JK1[jk], JK2[jk] ] = BJ[ JK1[jk] ] + bZKc*ZJKc[ jk ] + bZKd[ ZJKd[jk] ] + eJK[ JK1[jk], JK2[jk] ];
         
       }
     }
