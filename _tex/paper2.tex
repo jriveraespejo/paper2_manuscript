@@ -676,7 +676,7 @@ limited, existing studies document the presence of judge's biases in CJ
 contexts
 \citep{Pollitt_et_al_2003, vanDaal_et_al_2016, Bartholomew_et_al_2020a},
 reinforcing the argument that the factors influencing pairwise
-comparisons do not always cancel each other out.
+comparisons may not always cancel each other out.
 
 In the second case, the shared context or inherent connections
 introduced by additional hierarchical structures may create dependencies
@@ -719,43 +719,65 @@ previous section, removing misfit stimuli risks discarding valuable
 information and introducing bias into trait estimates
 \citep{Miller_2023}.
 
-In any case, the BTL model has limited capacity to accommodate
-differences in discriminal dispersions or to account for correlations
-among stimuli. As a result, researchers are forced to accept the
-potential consequences of overestimating trait reliability, excluding
-``problematic'' stimuli when they are identified as misfits, and drawing
-spurious conclusions about the trait of interest due to the model's
-insufficient flexibility.
+In any case, Case V and the BTL model have limited capacity to
+accommodate differences in discriminal dispersions or to account for
+correlations among stimuli. As a result, researchers may overestimate
+trait reliability, exclude ``problematic'' stimuli when they are
+identified as misfits, and draw spurious conclusions about the trait of
+interest due to the model's insufficient flexibility.
 
 \subsection{The lack of consideration of CJ assessment design
 features}\label{sec-theory-issue2}
 
-{TO DO}
+Setting aside their limited capacity to accommodate more realistic
+assumptions, Case V and the BTL model lack mechanisms to incorporate key
+design features commonly used in CJ assessments. Specifically, these
+models cannot directly assess the presence of judges' bias or
+characterize how sampling and comparison algorithms influence trait
+estimation and statistical inference due to their limited flexibility.
 
-The second concerns the limited consideration of relevant CJ assessment
-design features, including judge bias, sampling, and comparison
-algorithms. Regarding judge biases, Thurstone assumed that such effects
-cancel out because they arise from two opposing and equally weighted
-influences occurring during pairwise comparisons
-\citep[p.~268]{Thurstone_1927b}. However, CJ studies suggest that this
-assumption may not hold when judges evaluate complex, multidimensional
-traits or heterogeneous stimuli
+With respect to judges' bias, Section~\ref{sec-theory-issue1b} shows
+that the no-bias assumption becomes implausible when judges evaluate
+complex, multidimensional traits or heterogeneous stimuli, a common
+scenario in contemporary CJ applications
 \citep{vanDaal_et_al_2016, Lesterhuis_et_al_2018, Chambers_et_al_2022}.
-Moreover, did not address other design features such as sampling and
-comparison algorithms, later work extended this view. In particular,
-\citet{Andrich_1978} argued that different samples drawn from the same
-empirical population, whether random or not, should yield the same
-relative scale estimates. However, the author also indicated that this
-``sample-free'' property requires empirical validation because it holds
-only when model assumptions are satisfied \citep[p.~459]{Andrich_1978},
-a condition that has rarely been tested in contemporary CJ applications.
+Nevertheless, despite this implausibility, the CJ literature often
+relies on ad hoc procedures that use BTL-derived trait scores, their
+transformations, or residuals to evaluate such bias. For example,
+\citet{Wu_2025} fitted an analysis of variance (ANOVA) model to judges'
+infit statistics to examine whether judge expertise influences judgment
+behavior. These infit statistics--defined as weighted averages of
+squared Pearson residuals--indicate the extent to which judges'
+decisions deviate from model-based expectations relative to other judges
+\citep{Wright_et_al_1982}. Similar approaches appear in
+\citet{Pollitt_et_al_2003}, \citet{vanDaal_et_al_2016}, and
+\citet{Bartholomew_et_al_2020a}.
 
-Second, while limited attention to relevant CJ assessment design
-features can simplify trait estimation and inference, neglecting
-elements that define the CJ data-generating process can obscure their
-broader role within the assessment system. This omission may ultimately
-reduce the accuracy and precision of trait estimates and statistical
-inferences.
+However, these approaches are difficult to validate because they rely on
+circular reasoning: they attempt to assess judge bias--an additional
+latent dimension \citep{Hoyle_et_al_2023}--using outputs from a model
+that assumes no such bias exists. Consequently, the validity of these
+methods depends on the absence of the very phenomenon they seek to
+evaluate. Luckily, the psychometric literature already documents the
+consequences of this type of model misspecification.
+
+When a fitted model omits substantively important dimensions of the
+data-generating process, ad hoc diagnostics based on its outputs can
+become systematically misleading. This issue arises because misspecified
+models redistribute variation from omitted dimensions into the
+parameters they do estimate
+\citep{Reckase_et_al_1986, Ackerman_1989, Kahraman_2013, Hoyle_et_al_2023}.
+In CJ assessments, this issue arises when researchers use residuals from
+the BTL model to evaluate judge bias, even though the model provides no
+explicit mechanism to represent these biases. As a result, the model
+cannot separate bias from the latent trait structure and instead absorbs
+part of the bias into the estimated trait parameters. This absorption
+distorts the residual structure, so residual-based analyses may over- or
+under-estimate the magnitude of judge bias, misrepresent its direction,
+or fail to detect it altogether
+\citep{Reckase_et_al_1986, Ackerman_1989, Kahraman_2013, Hoyle_et_al_2023}.
+
+{TO DO}
 
 \subsection{The disconnect between trait measurement and statistical
 inference}\label{sec-theory-issue3}
