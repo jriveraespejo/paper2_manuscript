@@ -295,8 +295,10 @@ process, and (3) the separation of trait measurement from statistical
 inference, which prevents the propagation of uncertainty from estimation
 to analysis \citep{Pritikin_2020}. Collectively, these issues have the
 potential to compromise the reliability and validity of the resulting
-trait estimates, as well as the accuracy and precision of statistical
-inferences.
+trait estimates
+\citep{Zimmerman_1994, Perron_et_al_2015, McElreath_2020}, as well as
+the accuracy and precision of statistical inferences
+\citep{McElreath_2020, Kline_et_al_2023, Hoyle_et_al_2023}.
 
 Building on this examination, the second aim is to extend Thurstone's
 theory through a systematic and integrated approach that combines Causal
@@ -862,60 +864,64 @@ bias parameter estimates, reduce their precision, and ultimately
 undermine statistical inferences
 \citep{McElreath_2020, Kline_et_al_2023, Hoyle_et_al_2023}.
 
-In aggregate, the heavy reliance on strong simplifying assumptions in
-the modeling of CJ data can compromise the reliability and validity of
-trait estimates \citep{Perron_et_al_2015}. This overreliance, combined
-with limited attention to CJ assessment design features and the
-disconnect between trait measurement and statistical inference, can
-reduce the accuracy and precision of statistical inferences. The
-structural approach to causal inference offers a systematic and
-integrated framework for extending Thurstone's theory and addressing
-these limitations.
+In summary, the heavy reliance on strong simplifying assumptions in the
+modeling of CJ data, together with limited attention to CJ assessment
+design features and the disconnect between trait measurement and
+statistical inference, can compromise the reliability and validity of
+trait estimates
+\citep{Zimmerman_1994, Perron_et_al_2015, McElreath_2020} and reduce the
+accuracy and precision of statistical inferences
+\citep{McElreath_2020, Kline_et_al_2023, Hoyle_et_al_2023}. The
+structural approach to Causal inference provides a systematic and
+integrated framework for extending Thurstone's theory beyond the
+limitations of Case V and the BTL model.
 
 \section{Extending Thurstone's theory}\label{sec-theoretical}
 
 The \emph{structural approach} to Causal inference
 \citep{Pearl_2009, Pearl_et_al_2016} offers a formal framework for
-identifying causes and estimating their effects using data.
-Specifically, this approach represents the assumed causal structure of a
-system, such as the one found in CJ assessments, using \emph{directed
-acyclic graphs (DAGs)} and \emph{structural causal models (SCMs)}
+identifying causes and estimating their effects from data. Specifically,
+the approach represents the assumed causal structure of a system, such
+as that underlying CJ assessments, using \emph{directed acyclic graphs
+(DAGs)} and \emph{structural causal models (SCMs)}
 \citep{Morgan_et_al_2014, Gross_et_al_2018, Neal_2020}. DAGs and SCMs
-function as \emph{conceptual models} that support identification
-analysis \citep{Schuessler_et_al_2023}. \emph{Identification analysis}
-determines whether an estimator can accurately compute a target estimand
-based solely on its (causal) assumptions, independent of random
-variation. Here, \emph{estimands} represent the specific quantities
-researchers aim to determine (i.e., a parameter)
-\citep{Everitt_et_al_2010}. \emph{Estimators} denote the methods or
-functions that transform data into an estimate (e.g., a statistical
-model), while \emph{estimates} are the numerical values approximating
-the estimand \citep{Neal_2020, Everitt_et_al_2010}.
+function as conceptual models that support \emph{identification}
+\citep{Schuessler_et_al_2023}. Identification determines whether an
+estimator can accurately compute a target estimand based solely on
+causal assumptions, independent of random variation. Here,
+\emph{estimands} represent the specific quantities researchers aim to
+determine (i.e., a parameter) \citep{Everitt_et_al_2010}.
+\emph{Estimators} denote the methods or functions that transform data
+into an estimate (e.g., a statistical model), while \emph{estimates} are
+the numerical values approximating the estimand
+\citep{Neal_2020, Everitt_et_al_2010}.
 
 To illustrate these concepts, consider a researcher who seeks to answer
 the question: ``To what extent do different teaching methods influence
 students' ability to produce high-quality written texts?' To investigate
 this question, the researcher designs a CJ assessment and randomly
-assigns students (i.e., individuals) to two groups, each receiving a
+assigns students (the individuals) to two groups, each receiving a
 different teaching method. Judges then compare pairs of students'
 written texts (the stimuli) and produce a dichotomous outcome that
 reflects the relative quality of each text (the trait). Based on this
 design, researchers can reformulate the research question as the
 estimand: \emph{On average, is there a difference in the ability to
 produce high-quality written texts between the two groups of students?}
-Following standard CJ practices in education, linguistics, and
-psychology, researchers would then use averaged trait estimates from the
-BTL model, or its transformations, to approximate this estimand.
+Following common practice in education, linguistics, and psychology,
+researchers typically use averaged BTL trait estimates, or their
+transformations, to approximate this estimand \citep[see, for
+example,][]{Wu_2025, Thwaites_et_al_2024, Maydeu-Olivares_et_al_2005}.
 
-However, as discussed in Section~\ref{sec-theory-issue1}, Thurstone's
+However, as discussed in Section~\ref{sec-theory-issues}, Thurstone's
 Case V and the BTL model exhibit several statistical and measurement
-limitations. These limitations hinder the model's ability to identify
-and accurately estimate a range of estimands relevant to CJ inquiries,
-including the one described in the previous illustration.
+limitations when applied to contemporary CJ assessments. These
+limitations can hinder the model's ability to identify and accurately
+estimate a range of estimands relevant to CJ inquiries, including the
+one described in the previous illustration.
 
-Fortunately, DAGs and SCMs support identification analysis through two
-key advantages\footnote{In depth explanation of these topics is beyond
-  the scope of this study, thus, readers seeking a more profound
+Fortunately, DAGs and SCMs support identification through two key
+advantages\footnote{In depth explanation of these topics is beyond the
+  scope of this study, thus, readers seeking a more profound
   understanding can refer to introductory papers such as
   \citet{Pearl_2010}, \citet{Rohrer_2018}, \citet{Pearl_2019}, and
   \citet{Cinelli_et_al_2020}, and introductory books like
@@ -934,31 +940,32 @@ strategies without requiring specification of the types of variables,
 the functional forms relating them, or the parameters of those
 functional forms \citep{Pearl_et_al_2016}
 
-Thus, using DAGs and SCMs, this study extends Thurstone's theory to
-address the issues identified in Section~\ref{sec-theory-issues}. This
-extension integrates Thurstone's core theoretical principles (see
-Section~\ref{sec-thurstone_theory}) with key CJ assessment design
-features, such as the selection of stimuli, individuals, judges, and
-comparisons. Specifically, Section~\ref{sec-theory-theoretical_P}
+Because these advantages remain abstract at this level of discussion,
+the following sections illustrate how DAGs and SCMs extend Thurstone's
+theory beyond the limitations of Case V and the BTL model, and support
+identification. Specifically, Section~\ref{sec-theory-theoretical_P}
 introduces the \emph{conceptual-population model (CPM)}, which
-incorporates these theoretical principles, while assuming an idealized
-setting in which researchers observe a \emph{conceptual population} of
-comparative judgment data. In this setting, the data include all
-repeated judgments made by every available judge for each pair of
-stimuli produced by each pair of individuals in the population.
-Conversely, Section~\ref{sec-theory-theoretical_SC} presents the
-\emph{sample-comparison model (CSM)}, incorporates assessment design
-features and defines a more realistic setting in which researchers
-observe only a sample of judges, individuals, stimuli, and comparisons
-drawn from the conceptual population.
+integrates Thurstone's theoretical principles into the DAG and SCM of
+the CJ system. This model assumes an idealized setting in which
+researchers observe a \emph{conceptual population} of comparative
+judgment data. Moreover, Section~\ref{sec-theory-theoretical_SC}
+presents the \emph{sample-comparison model (CSM)}, which incorporates
+key design features commonly observed in contemporary CJ assessments
+into the same DAG and SCM. This second model assumes a more realistic
+setting in which researchers observe only a sample of judges,
+individuals, stimuli, and comparisons drawn from the conceptual
+population.
 
 \subsection{The conceptual-population model
 (CPM)}\label{sec-theory-theoretical_P}
 
-In the CPM, the idealized scenario of a \emph{conceptual population} of
-comparative data enables the integration of Thurstone's theoretical
-principles and provides a foundation for proposing innovations aimed at
-addressing some of the issues discussed in
+The CPM assumes an idealized scenario in which researchers observe a
+\emph{conceptual population} of comparative judgment data. This
+conceptual population includes all repeated judgments made by every
+available judge for each pair of stimuli produced by each pair of
+individuals in the population. This setting provides a natural framework
+for integrating Thurstone's theoretical principles and for proposing
+innovations that address some of the issues discussed in
 Section~\ref{sec-theory-issues}.
 
 \subsubsection{Integrating the first theoretical
