@@ -668,12 +668,15 @@ is disproportionately influenced by the clarity of the handwriting,
 thereby favoring neatly written texts even if their arguments are
 weaker.
 
-Moreover, because researchers can ``observe'' the discriminal process of
-stimuli only through judges' perceptions, judge biases can introduce
-dependencies between stimuli \citep{vanderLinden_et_al_2017_II}. These
-dependencies would directly violate the assumption of zero correlation.
-Although direct evidence for this specific mechanism is limited,
-existing studies document the presence of judge biases in CJ contexts
+Moreover, because researchers can only infer the discriminal process of
+stimuli through judges' perceptions--and these perceptions may carry
+some degree of bias or systematic deviation from consensus
+\citep[see][]{Pollitt_et_al_2003, vanDaal_et_al_2016}--such biases can
+introduce dependencies between stimuli
+\citep{vanderLinden_et_al_2017_II}, thereby directly violating the
+assumption of zero correlation. Although direct evidence for this
+specific mechanism remains limited, existing studies document the
+presence of judge biases in CJ contexts
 \citep{Pollitt_et_al_2003, vanDaal_et_al_2016, Bartholomew_et_al_2020a},
 reinforcing the argument that the factors influencing pairwise
 comparisons do not always cancel out.
@@ -771,12 +774,12 @@ dimensions into the parameters they do estimate
 \citep{Reckase_et_al_1986, Ackerman_1989, Kahraman_2013, Hoyle_et_al_2023}.
 In CJ assessments, this issue may arise, for example, when researchers
 use BTL residuals to evaluate judge bias, even though the model
-explicitly assumes that such bias does not exist. As a result, the model
-may not separate bias from the latent trait structure and may instead
-absorb part of the bias into the trait estimates. This absorption
-distorts the trait and residual structure, causing residual-based
-analyses to overestimate or underestimate judge bias, misrepresent its
-direction, or fail to detect it altogether \citep{Kelly_et_al_2022}.
+explicitly assumes that no such bias exist. As a result, the model may
+not separate bias from the latent trait structure and may instead absorb
+part of the bias into the trait estimates. This absorption distorts the
+trait and residual structure, causing residual-based analyses to
+overestimate or underestimate judge bias, misrepresent its direction, or
+fail to detect it altogether \citep{Kelly_et_al_2022}.
 
 Similarly, regarding the role of sampling and comparison algorithms in
 trait estimation and statistical inference, the CJ literature often
@@ -901,8 +904,8 @@ design, researchers can reformulate the research question as the
 estimand: \emph{On average, is there a difference in the ability to
 produce high-quality written texts between the two groups of students?}
 Following common practice in education, linguistics, and psychology,
-researchers typically use averaged BTL trait estimates, or their
-transformations, to approximate this estimand \citep[see, for
+researchers typically use BTL trait estimates or their transformations,
+to approximate this estimand \citep[see, for
 example,][]{Wu_2025, Thwaites_et_al_2024, Maydeu-Olivares_et_al_2005}.
 
 However, as discussed in Section~\ref{sec-theory-issues}, Thurstone's
@@ -933,24 +936,23 @@ strategies without requiring specification of the types of variables,
 the functional forms relating them, or the parameters of those
 functional forms \citep{Pearl_et_al_2016}
 
-Because these advantages remain abstract at this level of discussion,
-the following sections illustrate how DAGs and SCMs extend Thurstone's
-theory beyond the limitations of Case V and the BTL model, and support
-identification. Specifically, Section~\ref{sec-theory-theoretical_P}
-introduces the \emph{conceptual-population model (CPM)}, which
-integrates Thurstone's theoretical principles into the DAG and SCM of
-the CJ system. This model assumes an idealized setting in which
-researchers observe a \emph{conceptual population} of comparative
-judgment data. Moreover, Section~\ref{sec-theory-theoretical_SC}
-presents the \emph{sample-comparison model (CSM)}, which incorporates
-key design features commonly observed in contemporary CJ assessments
-into the same DAG and SCM. This second model assumes a more realistic
-setting in which researchers observe only a sample of judges,
-individuals, stimuli, and comparisons drawn from the conceptual
-population.
+Because these advantages remain abstract at this stage, the following
+sections illustrate how DAGs and SCMs extend Thurstone's theory beyond
+the limitations of Case V and the BTL model, and support identification.
+Specifically, Section~\ref{sec-theory-theoretical_P} introduces the
+\emph{conceptual-population model (CPM)}, which integrates Thurstone's
+theoretical principles into the DAG and SCM representation of the CJ
+system. The CPM assumes an idealized setting in which researchers
+observe the \emph{conceptual population} of comparative judgment data.
+Moreover, Section~\ref{sec-theory-theoretical_SC} presents the
+\emph{sample-comparison model (CSM)}, which incorporates key design
+features commonly observed in contemporary CJ assessments into the same
+DAG and SCM representations. The CSM assumes a more realistic setting in
+which researchers observe only a sample of judges, individuals, stimuli,
+and comparisons drawn from the conceptual population.
 
-\subsection{The conceptual-population model
-(CPM)}\label{sec-theory-theoretical_P}
+\subsection{The conceptual-population
+model}\label{sec-theory-theoretical_P}
 
 The CPM assumes an idealized scenario in which researchers observe a
 \emph{conceptual population} of comparative judgment data. This
@@ -964,45 +966,25 @@ Section~\ref{sec-theory-issues}.
 \subsubsection{Integrating the first theoretical
 principles}\label{sec-theory-theoretical_P1}
 
-Before incorporating the first theoretical principles of Thurstone's
-theory, it is essential to further define SCMs. SCMs are formal
-mathematical models characterized by a set of \emph{endogenous}
-variables \(V\), a set of \emph{exogenous} variables \(E\), and a set of
-functions \(F\)
+Building on the teaching-method example introduced in
+Section~\ref{sec-theoretical}, this section incorporates the theoretical
+principles of Thurstone's theory into the CPM, while also clarifying
+SCMs and DAGs in greater detail.
+
+SCMs are formal mathematical models defined by a set of
+\emph{endogenous} variables \(V\), a set of \emph{exogenous} variables
+\(E\), and a set of functions \(F\)
 \citep{Pearl_2009, Pearl_et_al_2016, Cinelli_et_al_2020}. Endogenous
 variables are those whose causal mechanisms a researcher chooses to
-model \citep{Neal_2020}. In contrast, exogenous variables represent
+model \citep{Neal_2020}. In contrast, exogenous variables capture
 \emph{errors} or \emph{disturbances} arising from omitted factors that
-the investigator chooses not to model explicitly \citep{Pearl_2009}.
-Lastly, the functions, referred to as \emph{structural equations},
-express the endogenous variables as non-parametric functions of other
-endogenous and exogenous variables. These functions use the symbol
-`\(:=\)' to denote the asymmetrical causal dependence between variables
-and the symbol `\(\:\bot\:\)' to represent \emph{d-separation}, a
-concept akin to statistical (conditional) independence.
-
-SCM~\ref{fig-cj03_scm} presents the first theoretical principles
-embedded in the CPM evaluating the impact of different teaching methods
-on students' writing ability. This SCM outlines the relationship between
-the conceptual-population outcome \((O^{cp}_{iahbjk})\) and several
-related variables. The subscripts \(i\) and \(h\) identify the students
-who authored the texts (i.e., the individuals). The indices \(a\) and
-\(b\) represent the texts under comparison (i.e., the stimuli). The
-index \(j\) indicates the judge conducting the comparison, while the
-index \(k\) accounts for assessment conditions where a judge compares
-the same pair of stimuli multiple times, i.e., a \emph{repeated measures
-designs} \citep{Lawson_2015}. Thus, the indexing system supports
-comparisons between different texts written by the same student
-\((i = h;\) \(a \neq b)\) and between texts written by distinct students
-\((i \neq h;\) where \(a = b\) is permitted\()\), each compared once or
-repeatedly by all judges \((j = 1,\dots,n_{J};\) \(k = 1,\dots,n_K;\)
-where \(n_{J}>1\) and \(n_{K}\geq1)\). However, it excludes cases where
-a judge compares a student's text to itself, whether once or multiple
-times \((i = h;\) \(a = b;\) \(j = 1,\dots,n_{J};\)
-\(k = 1,\dots,n_{K};\) where \(n_{J}>1\) and \(n_{K}\geq1)\), as such
-comparison lacks practical relevance within the CJ framework. Here,
-\(n_{J}\) indicates the total number of judges, and \(n_{K}\) denotes
-the number of repeated judgments each judge performs.
+researchers choose not to explicitly model \citep{Pearl_2009}. The
+functions, referred to as \emph{structural equations}, express each
+endogenous variables as non-parametric function of other endogenous and
+exogenous variables. These equations use the symbol `\(:=\)' to denote
+the asymmetrical causal relationship between variables, whereas the
+symbol `\(\:\bot\:\)' to denote \emph{d-separation}, a concept akin to
+(conditional) independence see~\ref{sec-appendixB31}.
 
 \begin{figure}[H]
 
@@ -1040,25 +1022,48 @@ form.}
 
 \end{figure}%
 
-In line with Thurstone's theory, SCM~\ref{fig-cj03_scm} depicts the
-texts' discriminal processes \((T_{ia}, T_{hb})\) and their discriminal
-difference \((D_{iahbjk})\) (see Section~\ref{sec-thurstone_theory}).
-Additionally, the SCM incorporates a key CJ design feature: the judges'
-biases \((B_{kj})\), that is, the systematic deviation from consensus of
-a judges' perception of a stimulus. This extension builds on the
-arguments presented in Section~\ref{sec-theory-issue1b}, contending that
-the discriminal process of stimuli become an observable outcome only
-through judges' perceptions. Given that such perceptions may be
-imperfect--and that each judge may carry some degree of bias or
-systematic deviation from consensus
-\citep[see][]{Pollitt_et_al_2003, vanDaal_et_al_2016}--it is reasonable
-that judges' bias should be treated as an integral component of the CJ
-system from the outset, as this leads to a more accurate representation
-of the data-generating process underlying the pairwise comparisons. This
-model defines the preliminary set of endogenous variables,
-\(V = \{ O_{iahbjk}, D_{iahbjk}, T_{ia}, T_{hb}, B_{kj} \}\), and the
-preliminary set of structural equations, \(F = { f_{O}, f_{D} }\), which
-capture the non-parametric dependencies among these variables.
+Considering the teaching-method example, the SCM shown in
+Figure~\ref{fig-cj03_scm} illustrates how Thurstone's theoretical
+principles are integrated into the CPM. The SCM describes the
+relationship between the conceptual-population outcome
+\(O^{cp}_{iahbjk}\), the discriminal difference between the compared
+texts \(D_{iahbjk}\), the texts' discriminal processes \(T_{ia}\) and
+\(T_{hb}\), and the judgment-level biases \(B_{kj}\), which represent
+systematic deviations of an individual judgment from the judge-specific
+expectations. Specifically, the comparison outcome is assumed to be
+causally influenced only by the discriminal difference, which itself is
+causally determined by the discriminal processes and judgment-level
+biases. Notably, the SCM expresses these relationships in non-parametric
+form through the structural equations \(f_{O}\) and \(f_{D}\), meaning
+that it does not emphasize the types of variables, the functional forms
+relating them, or the parameters of those functional forms
+\citep{Pearl_et_al_2016}. As previously stated, the endogenous variables
+are collected in the set
+\(V = \{ O_{iahbjk}, D_{iahbjk}, T_{ia}, T_{hb}, B_{kj} \}\), while the
+the structural equations are collected in the set
+\(F = \{ f_{O}, f_{D} \}.\)
+
+Moreover, the subscripts \(i\) and \(h\) identify the students who
+authored the texts (i.e., the individuals), where
+\(i=1, \dots, h, \dots, n_{I}\) and \(n_{I}\) denotes the total number
+of individuals. The indices \(a\) and \(b\) identify the texts under
+comparison (i.e., the stimuli), where \(a=1, \dots, b, \dots, n_{IA}\)
+and \(n_{IA}\) denotes the number of stimuli produces by an individual.
+The index \(j\) the judge conducting the comparison, whereas \(k\)
+indexes repeated judgments of the same stimulus pair by the same judge,
+as may occur in \emph{repeated-measures designs} \citep{Lawson_2015}.
+Accordingly, \(j = 1, \dots, n_J\), where \(n_J\) denotes the total
+number of judges, and \(k = 1, \dots, n_{JK}\), where \(n_{JK}\) denotes
+the number of repeated judgments per judge. Thus, the indexing system
+supports comparisons between different texts written by the same student
+\((i = h;\) \(a \neq b)\) and between texts written by different
+students \((i \neq h;\) where \(a = b\) is permitted\()\), each compared
+once or repeatedly by all judges
+\(( 1 < j \leq n_{J}; \; 1 \leq k \leq n_K)\). However, it excludes
+cases where a judge compares a student's text to itself, whether once or
+multiple times
+\((i = h; \; a = b; \; 1 < j \leq n_{J}; \; 1 \leq k \leq n_K)\), as
+such comparison lacks practical relevance within CJ assessments.
 
 Notably, every SCM has an associated DAG
 \citep{Pearl_et_al_2016, Cinelli_et_al_2020}. A DAG is a \emph{graph}
@@ -1069,23 +1074,23 @@ influence. The absence of an edge implies no direct relationship between
 the nodes. The term \emph{acyclic} means that the causal influences do
 not form loops, ensuring the influences do not cycle back on themselves
 \citep{McElreath_2020}. DAGs conventionally depict observed variables as
-solid black circles and unobserved (latent) variables as open circles
+solid black circles and latent variables as open circles
 \citep{Morgan_et_al_2014}. Although DAGs conventionally omit exogenous
-variables for simplicity, the DAGs presented in this section includes
-exogenous variables to improve clarity and reveal potential issues
-related to conditioning and confounding \citep{Cinelli_et_al_2020}.
+variables for simplicity, including exogenous variables can improve
+clarity and reveal potential issues related to conditioning and
+confounding \citep{Cinelli_et_al_2020}.
 
-Figure~\ref{fig-cj03_dag} displays the DAG corresponding to
-SCM~\ref{fig-cj03_scm}, illustrating the expected causal relationships
-outlined in Thurstone's theory. The graph shows that the discriminal
-processes of the texts \((T_{ia}, T_{hb})\) influence their discriminal
-difference \((D_{iahbjk})\), which in turn determines the outcome
-\((O^{cp}_{iahbjk})\). It also highlights the influence of judges'
-biases \((B_{kj})\) on the discriminal difference. Additionally, the DAG
-differentiates between observed endogenous variables, such as the
-outcome (solid black circle), and latent endogenous variables, including
-the texts' discriminal processes, their discriminal difference, and the
-judges' biases (open circles).
+Figure~\ref{fig-cj03_dag} displays the DAG corresponding to the SCM in
+Figure~\ref{fig-cj03_scm}, illustrating the expected causal
+relationships outlined in Thurstone's theory. The graph shows that the
+discriminal processes of the texts \((T_{ia}, T_{hb})\) influence their
+discriminal difference \((D_{iahbjk})\), which in turn determines the
+outcome \((O^{cp}_{iahbjk})\). It also highlights the influence of
+judges' biases \((B_{kj})\) on the discriminal difference. Additionally,
+the DAG differentiates between observed endogenous variables, such as
+the outcome (solid black circle), and latent endogenous variables,
+including the texts' discriminal processes, their discriminal
+difference, and the judges' biases (open circles).
 
 \subsubsection{\texorpdfstring{The \emph{conceptual-population} data
 structure}{The conceptual-population data structure}}\label{sec-theory-theoretical_P2}
