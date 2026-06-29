@@ -494,7 +494,7 @@ Fortunately, DAGs and SCMs support identification through two key advantages[^1]
 [^1]: In depth explanation of these topics is beyond the scope of this study, thus, readers seeking a more profound understanding can refer to introductory papers such as @Pearl_2010, @Rohrer_2018, @Pearl_2019, and @Cinelli_et_al_2020, and introductory books like @Pearl_et_al_2018, @Neal_2020, and @McElreath_2020 are useful. For more advanced study, seminal papers such as @Neyman_et_al_1923, @Rubin_1974, @Spirtes_et_al_1991, and @Sekhon_2009, along with books such as @Pearl_2009, @Morgan_et_al_2014, and @Hernan_et_al_2025, are recommended.
 
 <!-- 6. What the section will do? -->
-Because these advantages remain abstract at this stage, the following sections illustrate how DAGs and SCMs extend Thurstone's theory beyond the limitations of Case V and the BTL model, and support identification. Specifically, @sec-theory-theoretical_P introduces the *conceptual-population model (CPM)*, which integrates Thurstone's theoretical principles into the DAG and SCM representation of the CJ system. The CPM assumes an idealized setting in which researchers observe the *conceptual population* of comparative judgment data. Moreover, @sec-theory-theoretical_SC presents the *sample-comparison model (CSM)*, which incorporates key design features commonly observed in contemporary CJ assessments into the same DAG and SCM representations. The CSM assumes a more realistic setting in which researchers observe only a sample drawn from the conceptual population.
+Because these advantages remain abstract at this stage, the following sections illustrate how DAGs and SCMs extend Thurstone's theory beyond the limitations of Case V and the BTL model, while supporting identification. Specifically, @sec-theory-theoretical_P introduces the *conceptual-population model (CPM)*, which integrates Thurstone's theoretical principles into the DAG and SCM representation of the CJ system. The CPM assumes an idealized setting in which researchers observe the *conceptual population* of comparative judgment data. Moreover, @sec-theory-theoretical_SC presents the *sample-comparison model (CSM)*, which incorporates key design features commonly observed in contemporary CJ assessments into the same DAG and SCM representations. The CSM assumes a more realistic setting in which researchers observe only a sample drawn from the conceptual population.
 
 
 <!-- Generalizability is the degree to which you can apply the results of your study to a broader context.  -->
@@ -521,9 +521,9 @@ The CPM assumes an idealized scenario in which researchers observe a *conceptual
 ### Integrating the first theoretical principles {#sec-theory-theoretical_P1}
 
 <!-- 1. The SCMs -->
-Building on the teaching-method example introduced at the beginning of @sec-theoretical, this section incorporates the theoretical principles of Thurstone's theory into the CPM, while also clarifying SCMs and DAGs in greater detail. 
+Building on the teaching-method example introduced at the beginning of @sec-theoretical, this section uses SCMs and DAGs to incorporate Thurstone's first theoretical principles into the CPM. 
 
-SCMs are formal mathematical models defined by a set of *endogenous* variables $V$, a set of *exogenous* variables $E$, and a set of functions $F$ [@Pearl_2009; @Pearl_et_al_2016; @Cinelli_et_al_2020]. Endogenous variables are those whose causal mechanisms a researcher chooses to model [@Neal_2020]. In contrast, exogenous variables capture *errors* or *disturbances* arising from omitted factors that researchers choose not to explicitly model [@Pearl_2009]. The functions, referred to as *structural equations*, express each endogenous variables as non-parametric function of other endogenous and exogenous variables. These equations use the symbol '$:=$' to denote the asymmetrical causal relationship between variables, whereas the symbol '$\dsep$' to denote *d-separation*, a concept akin to (conditional) independence (see @sec-appendixB31).
+SCMs are formal mathematical models defined by a set of *endogenous* variables $V$, a set of *exogenous* variables $E$, and a set of functions $F$ [@Pearl_2009; @Pearl_et_al_2016; @Cinelli_et_al_2020]. Endogenous variables are those whose causal mechanisms a researcher chooses to model [@Neal_2020], while exogenous variables capture *errors* or *disturbances* arising from omitted factors that researchers choose not to explicitly model [@Pearl_2009; @Pearl_et_al_2016]. The functions, referred to as *structural equations*, express each endogenous variables as non-parametric function of other endogenous and exogenous variables. These equations use the symbol '$:=$' to denote the asymmetrical causal relationship between variables, whereas the symbol '$\dsep$' to denote *d-separation*, a concept akin to (conditional) independence (see @sec-appendixB31).
 
 <!-- Consider the SCM M shown in Figure 13(a). The variables V = {Z, X, Y } are called the endogenous variables, and stand for those variables that the investigator chose to model their cause-effect relationships; the variables U = {Uz , Ux , Uy } are called the exogenous variables and represent everything else that the investigator chose not to explicitly model (these are also usually called disturbances). The functions F = {fz , fx , fy } are called structural equations, and each function represents a causal process that assigns to its respective endogenous variable a value based on the values of the other variables. [@Cinelli_et_al_2020, p. 15] -->
 
@@ -554,13 +554,13 @@ Conceptual-population model (CPM), scalar form.
 :::
 
 <!-- 2. the preliminary SCM for CJ -->
-Considering the teaching-method example, the SCM shown in @fig-cj03_scm illustrates how Thurstone's theoretical principles are integrated into the CPM. The SCM describes the relationship between the conceptual-population outcome $O^{cp}_{iahbjk}$, the discriminal difference between the compared texts $D_{iahbjk}$, the texts' discriminal processes $T_{ia}$ and $T_{hb}$, and the judgment-level biases $B_{kj}$, which represent systematic deviations of an individual judgment from the judge-specific expectations. Specifically, the comparison outcome is assumed to be causally influenced only by the discriminal difference, which itself is causally determined by the discriminal processes and judgment-level biases. Notably, the SCM expresses these relationships in non-parametric form through the structural equations $f_{O}$ and $f_{D}$, meaning that it does not emphasize the types of variables, the functional forms relating them, or the parameters of those functional forms [@Pearl_et_al_2016]. As previously stated, the endogenous variables are collected in the set $V = \{ O_{iahbjk}, D_{iahbjk}, T_{ia}, T_{hb}, B_{kj} \}$, while the the structural equations are collected in the set $F = \{ f_{O}, f_{D} \}.$
+Considering the teaching-method example, the SCM shown in @fig-cj03_scm describes the relationship between the conceptual-population outcome $O^{cp}_{iahbjk}$, the discriminal difference between the compared texts $D_{iahbjk}$, the texts' discriminal processes $T_{ia}$ and $T_{hb}$, and the judgment-level biases $B_{kj}$, which represent systematic deviations of an individual judgment from the judge-specific expectations. Specifically, the comparison outcome is assumed to be causally influenced only by the discriminal difference, which itself is causally determined by the discriminal processes and judgment-level biases. Notably, the SCM expresses these relationships in non-parametric form through the structural equations $f_{O}$ and $f_{D}$, meaning that it does not emphasize the types of variables, the functional forms relating them, or the parameters of those functional forms [@Pearl_et_al_2016]. In this context, the endogenous variables set $V = \{ O_{iahbjk}, D_{iahbjk}, T_{ia}, T_{hb}, B_{kj} \}$, while the structural equations set $F = \{ f_{O}, f_{D} \}.$
 
 <!-- Moreover, the literature advocates for the incorporation of relevant hierarchical structures into the statistical model to account for these dependencies. Together, these additions can result in a model resembling a Multilevel Structural Equation Model (MSEM) [@Hoyle_et_al_2023, chap. 26] combined with a multidimensional or two-parameter logistic Item Response Theory (IRT) model [@Hoyle_et_al_2023, chap. 15], depending on the theoretical and statistical treatment of judges' biases.  -->
 
 <!-- Brennen generalizability theory, generalize conclusions over groups. To generalize over judges, you need to estimate them. Akin to Frisch-Wough-Lovel theorem for latent variables?. -->
 
-Moreover, the subscripts $i$ and $h$ identify the students who authored the texts (i.e., the individuals). The indices $a$ and $b$ identify the texts under comparison (i.e., the stimuli). The index $j$ represents the judge conducting the comparison, whereas $k$ indexes repeated judgments of the same stimulus pair by the same judge, as may occur in *repeated-measures designs* [@Lawson_2015]. Thus, the indexing system supports comparisons between different texts written by the same student $(i = h;$ $a \neq b)$ and between texts written by different students $(i \neq h;$ where $a = b$ is permitted$)$, each compared once or repeatedly by more than one judge $(j >1; \; k > 1)$. However, it excludes cases where a judge compares a student's text to itself, whether once or multiple times $(i = h; \; a = b; \; k > 1)$, as such comparison lacks practical relevance within CJ assessments. 
+Moreover, the subscripts $i$ and $h$ identify the students who authored the texts (i.e., the individuals). The indices $a$ and $b$ identify the texts under comparison (i.e., the stimuli). The index $j$ represents the judge conducting the comparison, whereas $k$ indexes repeated judgments of the same stimulus pair by the same judge, as may occur in *repeated-measures designs* [@Lawson_2015]. Thus, the indexing system supports comparisons between different texts written by the same student $(i = h;$ $a \neq b)$ and between texts written by different students $(i \neq h;$ where $a = b$ is permitted$)$, each compared once or repeatedly by more than one judge $(j >1; \; k \geq 1)$. However, it excludes cases where a judge compares a student's text to itself, whether once or multiple times $(i = h; \; a = b; \; j >1; \; k \geq 1)$, as such comparison lacks practical relevance within CJ assessments. 
 
 <!-- repeated measures designs [@Lawson_2015, p. 366-376] -->
 
@@ -591,8 +591,7 @@ Notably, every SCM has an associated DAG [@Pearl_et_al_2016; @Cinelli_et_al_2020
 <!-- recording: Sven and Tine 25.03.28; time: 00:10:00 - 00:11:00 -->
 
 <!-- 1. Why is useful to declare the data structure? -->
-Although specifying a data structure is not mandatory when using SCMs and DAGs, here we introduce one to improve clarity and facilitate the description of the system.
-
+Although specifying a data structure is not mandatory when using SCMs and DAGs, we introduce one here to re-express the scalar form of the CJ system shown in @fig-cj03 as an equivalent vectorized representation, which improves clarity and facilitates the description of the system.
 $$
 I = \begin{bmatrix}
 1 \\
@@ -647,7 +646,7 @@ n_{I} & n_{A}-1 & n_{I} & n_{A} & n_{J} & n_{K}
 \end{bmatrix}
 $$ {#eq-mat11}
 
-To re-express the scalar form of the CJ system shown in @fig-cj03 in an equivalent vectorized form, we first define the vectors $I$ and $J$, along with the matrices $IA$ and $JK$, as in @eq-mat11. Here, each element of $I$ represents a unique individual $i=1, \dots, h, \dots, n_{I}$, where $n_{I}$ denotes the total number of individuals. Similarly, each element of $J$ corresponds to a unique judge $j = 1, \dots, n_J$, where $n_J$ denotes the total number of judges. Moreover, matrix $IA$ contains $n_{I} \cdot n_{A}$ rows and $2$ columns, where $n_{A}$ denotes the number of stimuli produced by an individual, and each row represents a unique individual-stimuli pairing $(i, a)$ or $(h, b)$. Likewise, matrix $JK$ has $n_{J} \cdot n_{K}$ rows and $2$ columns, where $n_{K}$ denotes the number of repeated judgments per judge, and each row of the matrix represents judge-judgments pairings $(j,k)$. Finally, we construct the matrix $R$ to map each row of the $IA$ matrix with a corresponding row from the $JK$ matrix. This matrix has $n$ rows and $6$ columns, with $n = {n_{I} \cdot n_{A} \choose 2} \cdot n_{J} \cdot n_{K}$. Here, the binomial coefficient ${n_{I} \cdot n_{A} \choose 2}$ represents the total number of unique comparisons between all pairs of stimuli generated by all pairs of individuals in the population.
+For this purpose, we define the vectors $I$ and $J$, along with the matrices $IA$ and $JK$, as in @eq-mat11. Each element of $I$ represents a unique individual $i=1, \dots, h, \dots, n_{I}$, where $n_{I}$ denotes the total number of individuals. Similarly, each element of $J$ corresponds to a unique judge $j = 1, \dots, n_J$, where $n_J$ denotes the total number of judges. Moreover, matrix $IA$ contains $n_{I} \cdot n_{A}$ rows and $2$ columns, where $n_{A}$ denotes the number of stimuli produced by an individual, and each row represents a unique individual-stimuli pairing $(i, a)$ or $(h, b)$. Likewise, matrix $JK$ has $n_{J} \cdot n_{K}$ rows and $2$ columns, where $n_{K}$ denotes the number of repeated judgments per judge, and each row of the matrix represents judge-judgments pairings $(j,k)$. Finally, we construct the matrix $R$ to map each row of the $IA$ matrix with a corresponding row from the $JK$ matrix. This matrix has $n$ rows and $6$ columns, with $n = {n_{I} \cdot n_{A} \choose 2} \cdot n_{J} \cdot n_{K}$. Here, the binomial coefficient ${n_{I} \cdot n_{A} \choose 2}$ represents the total number of unique comparisons between all pairs of stimuli generated by all pairs of individuals in the population.
 
 ::: {#fig-cj04 layout-ncol=2}
 
@@ -666,7 +665,6 @@ SCM
 
 Conceptual-population model (CPM), initial vectorized form.
 :::
-
 
 $$
 I = \begin{bmatrix}
@@ -723,7 +721,7 @@ R = \begin{bmatrix}
 $$ {#eq-mat13}
 
 <!-- 3. how de we use that data structure? -->
-With this data structure, the CJ system corresponding to the teaching-method example becomes easier to visualize. @fig-cj04 shows the equivalent vectorized form of the DAG depicted in @fig-cj03. In this representation, the outcome $O^{cp}_{R}$, the texts' discriminal difference $D_{R}$, their discriminal processes $T_{IA}$, and the judgment-level biases $B_{JK}$ are represented as vectors rather than scalar values, capturing all observations from the conceptual population. Specifically, $O^{cp}_{R}$ and $D_{R}$ are observed and latent vectors of length $n$, respectively, while $T_{IA}$ and $B_{JK}$ are latent vectors of lengths $n_{I} \cdot n_{A}$ and $n_{J} \cdot n_{K}$, respectively. For illustration purposes, we assume $n_{I} = 5$, $n_{A} = 2$, $n_{J} = 3$, and $n_{K} = 3$, which reduces @eq-mat11 to the special case shown in @eq-mat13.
+With this data structure, the CJ system corresponding to the teaching-method example becomes easier to visualize. @fig-cj04 shows the equivalent vectorized form of the SCM and DAG depicted in @fig-cj03. In this representation, the outcome $O^{cp}_{R}$, the texts' discriminal difference $D_{R}$, their discriminal processes $T_{IA}$, and the judgment-level biases $B_{JK}$ are represented as vectors rather than scalar values, capturing all observations from the conceptual population. Specifically, $O^{cp}_{R}$ and $D_{R}$ are observed and latent vectors of length $n$, respectively, while $T_{IA}$ and $B_{JK}$ are latent vectors of lengths $n_{I} \cdot n_{A}$ and $n_{J} \cdot n_{K}$, respectively. For illustration, @eq-mat13 shows how the matrices in @eq-mat11 look under the assumption $n_{I} = 5$, $n_{J} = 3$, $n_{A} = 2$, and $n_{K} = 3$.
 
 
 ### Integrating hierarchical structural components {#sec-theory-theoretical_P3}
@@ -774,14 +772,15 @@ The top branch of @fig-cj09_dag illustrates the first component. Here, *relevant
 
 To clarify the structure of this branch, it is important to mention that $X_{I}$ is an observed matrix with $n_{I}$ rows and $q_{I}$ independent columns, while both $e_{I}$ and $T_{I}$ are latent vectors of length $n_{I}$. Likewise, $X_{IA}$ is an observed matrix with $n_{I} \cdot n_{A}$ rows and $q_{IA}$ independent columns, while $e_{IA}$ and $T_{IA}$ are latent matrices with $n_{I}$ rows and $n_{A}$ columns.
 
-Similarly, the bottom branch of @fig-cj09_dag depicts the second DAG component. Here, *relevant* judge-level variables $Z_{J}$ (e.g., judgment expertise) and judges' idiosyncratic errors $e_{J}$ are assumed to causally influence the latent variable representing judges' bias $B_{J}$, while the error term $e_{J}$ captures variation in judges' bias that remains unexplained by $Z_{J}$. Furthermore, this branch shows how $B_{J}$, together with *relevant* judgment-level variables $Z_{JK}$ (e.g., the number of judgments a judge makes) and judgments' idiosyncratic errors $e_{JK}$, causally influence the judges' biases associated with each text comparison $B_{JK}$, which represents the second primary latent variable of interest. As before, the error term $e_{JK}$ captures variation in judgments that remains unexplained by $B_{J}$ or $Z_{JK}$.
+Similarly, the bottom branch of @fig-cj09_dag depicts the second component. Here, *relevant* judge-level variables $Z_{J}$ (e.g., judgment expertise) and judges' idiosyncratic errors $e_{J}$ are assumed to causally influence the latent variable representing judges' bias $B_{J}$, while the error term $e_{J}$ captures variation in judges' bias that remains unexplained by $Z_{J}$. Furthermore, this branch shows how $B_{J}$, together with *relevant* judgment-level variables $Z_{JK}$ (e.g., the number of judgments a judge makes) and judgments' idiosyncratic errors $e_{JK}$, causally influence the judgment-level biases $B_{JK}$, which represents the second primary latent variable of interest. As before, the error term $e_{JK}$ captures variation in judgments that remains unexplained by $B_{J}$ or $Z_{JK}$.
 
-It is important to mention that $Z_{J}$ is an observed matrix with $n_{J}$ rows and $q_{J}$ independent columns, while $e_{J}$ and $B_{J}$ are latent vectors of length $n_{J}$. Moreover, $Z_{JK}$ is an observed matrix with $n_{J} \cdot n_{K}$ rows and $q_{JK}$ independent columns, while $e_{JK}$ and $B_{JK}$ are latent matrices with $n_{J}$ rows and $n_{K}$ columns.
+here, $Z_{J}$ is an observed matrix with $n_{J}$ rows and $q_{J}$ independent columns, while $e_{J}$ and $B_{J}$ are latent vectors of length $n_{J}$. Moreover, $Z_{JK}$ is an observed matrix with $n_{J} \cdot n_{K}$ rows and $q_{JK}$ independent columns, while $e_{JK}$ and $B_{JK}$ are latent matrices with $n_{J}$ rows and $n_{K}$ columns.
 
-Finally, the SCM in @fig-cj09_scm shows that all exogenous variables are assumed to be mutually independent, as indicated by the relationships $e_{IA} \dsep { e_{I}, e_{JK}, e_{J} }$, $e_{I} \dsep { e_{JK}, e_{J} }$, and $e_{JK} \dsep e_{J}$, as well as by the absence of connecting arrows in @fig-cj09_dag. Moreover, as previously stated, all variables and functions shown in @fig-cj09 are collected into the endogenous variables set $V$, the structural equations set $F$, and the exogenous variables set $E.$
+Finally, the SCM in @fig-cj09_scm shows that all exogenous variables are assumed to be mutually independent, as indicated by the relationships $e_{IA} \dsep \{ e_{I}, e_{JK}, e_{J} \}$, $e_{I} \dsep \{ e_{JK}, e_{J} \}$, and $e_{JK} \dsep e_{J}$, as well as by the absence of connecting arrows in @fig-cj09_dag. In this context, the structural equations set $F = \{ f_{O}, f_{D}, f_{T}, f_{B} \}$, the endogenous variables set $V = \{ O_{R}^{cp}, D_{R}, T_{IA}, B_{JK}, T_{I}, B_{J}, X_{I}, X_{IA}, Z_{J}, Z_{JK} \}$, while the exogenous variables set $E = \{ e_{I}, e_{J}, e_{IA}, e_{JK} \}$. 
+
 
 <!-- 3. segway for next section -->
-Overall, the CPM extends Thurstone's theory by introducing key innovations to address the limitations discussed in @sec-theory-issue1b and @sec-theory-issue3. These innovations include the explicit modelling of judge bias and the integration of hierarchical structural components. Nevertheless, despite its potential to improve measurement accuracy and precision, the CPM still assumes that researchers have access to data from the *conceptual population*. Since this assumption rarely holds in practice, we must consider a more realistic sampling scenario.
+Overall, the CPM extends Thurstone's theory by introducing two key innovations to address the limitations discussed in @sec-theory-issue1b and @sec-theory-issue3. These innovations include the explicit modeling of judge bias and the integration of hierarchical structural components. Nevertheless, despite its potential to improve measurement accuracy and precision, the CPM still assumes that researchers have access to data from the *conceptual population*. Since this assumption rarely holds in practice, we must consider a more realistic sampling scenario.
 
 
 ## The sample-comparison model (CSM) {#sec-theory-theoretical_SC}
@@ -791,7 +790,7 @@ Overall, the CPM extends Thurstone's theory by introducing key innovations to ad
 <!-- recording: Sven 25.03.31; time: 00:34:00 - 00:38:50 -->
 
 <!-- 1. What is the more realistic scenario: the sample mechanism -->
-The CSM presents a more realistic scenario than the CPM. First, it explicitly assumes a data sample consisting of a limited number of repeated judgments $(n^{s}_{K})$ from a sample of judges $(n^{s}_{J})$ and a specific number of texts $(n^{s}_{A})$ from a sample of students $(n^{s}_{I})$, all drawn from the conceptual population (@sec-theory-theoretical_SC1). Second, the model assumes that judges do not perform *all repeated judgments* within the data sample (@sec-theory-theoretical_SC2). Instead, they conduct a sufficient number of stimuli comparisons, $n_{C}$, to ensure an accurate estimation of the proportion $P(B>A)$, as proposed by @Thurstone_1927b.
+The CSM represents a more realistic scenario than the CPM. Specifically, @sec-theory-theoretical_SC1 assumes a data sample consisting of a limited number of repeated judgments $(n^{s}*{K})$, drawn from a sample of judges $(n^{s}*{J})$, and a subset of stimuli $(n^{s}*{A})$ drawn from a sample of individuals $(n^{s}*{I})$, all taken from the conceptual population. Moreover, @sec-theory-theoretical_SC2 assumes that judges do not perform all possible repeated judgments within the sample. Instead, they carry out a sufficient number of pairwise comparisons, $n_{C}$, to allow accurate estimation of the proportion $P(B > A)$, as originally proposed by @Thurstone_1927b.
 
 <!-- It is assumed that the single observer compares each pair of stimuli a "sufficient number of times" so that a proportion, P(A>B), may be determined for each pair of stimuli [@Thurstone_1927b, p. 267] -->
 
@@ -804,7 +803,7 @@ The CSM presents a more realistic scenario than the CPM. First, it explicitly as
 <!-- recording: Sven and Tine 25.03.28; time: 00:11:30 - 00:12:25 -->
 
 <!-- 1. start by defining the sampling vector and matrices  -->
-To incorporate the sampling mechanism and facilitate the interpretation of the CSM, we first define the *data sampling process* using the binary vector variables $S_{I}$, $S_{J}$, $S_{IA}$, and $S_{JK}$ as follows:
+To incorporate the *sampling mechanism* and facilitate the interpretation of the CSM, we first define the *data sampling process* using the binary vector variables $S_{I}$, $S_{J}$, $S_{IA}$, and $S_{JK}$ as follows:
 $$
 S_{I} = \begin{bmatrix}
 i_{(1)} \\
@@ -848,7 +847,7 @@ jk_{(nJ,nK)}
 \end{bmatrix}
 $$ {#eq-mat21}
 
-Where each element of $S_{I}$ is a binary value indicating the presence or absence of corresponding elements in the vector $I$, as in @eq-mat22. We apply the same logic to $S_{J}$ using vector $J$ (not shown). Thus, the vectors $S_{I}$ and $S_{J}$ contains $n_{I}$ and $n_{J}$ elements, respectively.
+Where each element of $S_{I}$ is a binary value indicating the presence or absence of corresponding elements in vector $I$, as defined in @eq-mat22. We apply the same logic to the vector $J$ to construct $S_{J}$ (not shown). Accordingly, $S_{I}$ and $S_{J}$ contains $n_{I}$ and $n_{J}$ elements, respectively.
 $$
 i_{(i)} = \begin{cases} 
 1 & \text{if data element } i \text{ from } I \text{ is sampled} \\
@@ -856,7 +855,7 @@ i_{(i)} = \begin{cases}
 \end{cases}
 $$ {#eq-mat22}
 
-Similarly, each element of $S_{IA}$ is a binary value indicating the presence or absence of data rows in the matrices $IA$, as defined in @eq-mat23. We apply the same logic to $S_{JK}$ using the matrix $JK$ (not shown). Thus, the vectors $S_{IA}$ and $S_{JK}$ contains $n_{I} \cdot n_{A}$ and $n_{J} \cdot n_{K}$ elements, respectively. 
+Similarly, each element of $S_{IA}$ is a binary value indicating the presence or absence of data rows in the matrices $IA$, as defined in @eq-mat23. We apply the same logic to the matrix $JK$ to construct $S_{JK}$ (not shown). Thus, $S_{IA}$ and $S_{JK}$ contains $n_{I} \cdot n_{A}$ and $n_{J} \cdot n_{K}$ elements, respectively. 
 $$
 ia_{(i,a)} = \begin{cases} 
 1 & \text{if data elements } i,a \text{ from } IA \text{ are sampled} \\
@@ -864,7 +863,7 @@ ia_{(i,a)} = \begin{cases}
 \end{cases}
 $$ {#eq-mat23}
 
-We can illustrate the structure of these vectors more clearly with an example. Suppose researchers exclude the second student, the second text from each student, and the third judge from the setup shown in @eq-mat13. Given $n_{I} = 5$, $n_{A} = 2$, $n_{J} = 3$, and $n_{K} = 3$, the resulting vectors would have the following structure:
+We illustrate the structure of these vectors with an example. Suppose researchers exclude the second student, the second text from each student, and the third judge from the conceptual population depicted in @eq-mat13. Given $n_{I} = 5$, $n_{J} = 3$, $n_{A} = 2$, and $n_{K} = 3$, the resulting vectors take the following form:
 $$
 S_{I} = \begin{bmatrix}
 1 \\
@@ -903,17 +902,9 @@ S_{JK} = \begin{bmatrix}
 \end{bmatrix}
 $$ {#eq-mat24}
 
-Notably, @eq-mat24 shows that missing observations in the vectors $S_{I}$ and $S_{J}$--which represent unsampled students and judges--directly determine which observations are missing in $S_{IA}$ and $S_{JK}$. In other words, researchers can only observe texts and judgments from students and judges initially included in the sample. The equation also shows that the sum of observed elements in $S_{I}$ equals the number of sampled students $(n^{s}_{I})$ and that a similar sum in vector $S_{J}$ equals the sampled judges $(n^{s}_{J})$. Conversely, the sum of observed elements in $S_{IA}$ represents the total sampled texts across all sampled students $(n^{s}_{I} \cdot n^{s}_{A})$, while a similar sum in vector $S_{JK}$ represents the total sampled repeated judgments across all sampled judges $(n^{s}_{J} \cdot n^{s}_{K})$. Notice that in this example, because the design systematically excludes every third repeated judgment, $S_{JK}$ can also be expressed using $n_{K} = n^{s}_{K} = 2$. 
+Notably, @eq-mat24 shows that missing observations in vectors $S_{I}$ and $S_{J}$--which represent unsampled students and judges--directly determine which observations are missing in $S_{IA}$ and $S_{JK}$. In other words, researchers can only observe texts and judgments from students and judges initially included in the sample. The equation also shows that the sum of element in $S_{I}$ equals the number of sampled students $(n^{s}_{I})$ and that a similar sum in $S_{J}$ equals the sampled judges $(n^{s}_{J})$. Conversely, the sum of elements in $S_{IA}$ represents the total sampled texts across all sampled students $(n^{s}_{I} \cdot n^{s}_{A})$, while a similar sum in $S_{JK}$ represents the total sampled repeated judgments across all sampled judges $(n^{s}_{J} \cdot n^{s}_{K})$. Notice that in this example, because the design systematically excludes every third repeated judgment, $S_{JK}$ can also be expressed using $n_{K} = n^{s}_{K} = 2$.
 
-Finally, we define the *sample mechanism* $S$ in @eq-mat25, which maps each element of $S_{IA}$ to every element of $S_{JK}$. Each element $s_{(i,a,h,b,j,k)}$ is a binary value indicating the presence or absence of data rows in the matrix $R$ resulting from the sample mechanism, as in @eq-mat26. Thus, the vector contains $n$ elements, matching the number of rows in $R$, and the sum of its elements represents the total data sample: $n^{s} = \binom{n^{s}_{I} \cdot n^{s}_{A}}{2} \cdot n^{s}_{J} \cdot n^{s}_{K}$. Here, the term ${n^{s}_{I} \cdot n^{s}_{A} \choose 2}$ represents the binomial coefficient, which quantifies the total number of unique comparisons possible between every pair of sampled stimuli generated by each pair of sampled individuals.
-
-$$
-s_{(i,a,h,b,j,k)} = \begin{cases} 
-1 & \text{if data elements } i,a,h,b,j,k \text{ from } R \text{ are sampled} \\
-0 & \text{if data elements } h,i,a,b,j,k \text{ from } R \text{ are missing}
-\end{cases}
-$$ {#eq-mat26}
-
+Next, with the binary vector variables defined in @eq-mat21, we define the *sample mechanism* $S$ as in @eq-mat25. This vector maps each element of $S_{IA}$ to every element of $S_{JK}$, where each $s_{(i,a,h,b,j,k)}$ in $S$ is a binary value indicating the presence or absence of data rows in the matrix $R$ resulting from the sample mechanism depicted in @eq-mat26. Accordingly, the vector contains $n$ elements, matching the number of rows in $R$, and its element sum represents the total data sample: $n^{s} = \binom{n^{s}_{I} \cdot n^{s}_{A}}{2} \cdot n^{s}_{J} \cdot n^{s}_{K}$. Here, ${n^{s}_{I} \cdot n^{s}_{A} \choose 2}$ represents the binomial coefficient, which quantifies the total number of unique comparisons possible between every pair of sampled stimuli generated by each pair of sampled individuals.
 $$
 S = \begin{bmatrix}
 s_{(1,1,1,2,1,1)} \\
@@ -928,8 +919,17 @@ s_{(n_{I},n_{A}-1,n_{I},n_{A},n_{J},1)}
 \end{bmatrix}
 $$ {#eq-mat25}
 
+$$
+s_{(i,a,h,b,j,k)} = \begin{cases} 
+1 & \text{if data elements } i,a,h,b,j,k \text{ from } R \text{ are sampled} \\
+0 & \text{if data elements } h,i,a,b,j,k \text{ from } R \text{ are missing}
+\end{cases}
+$$ {#eq-mat26}
+
 <!-- 2. Integrate the sample mechanism -->
-With the definition of $S$, we incorporate the sample mechanism into the CPM. Following the convention of @McElreath_2020 and @Deffner_et_al_2022, [DAG -@fig-cj14_dag] represents the conceptual-population outcome $O^{cp}_{R}$ as unobserved, emphasizing that this outcome cannot be directly accessed due to the sampling mechanism. The DAG also depicts the *sample design* vector $S$ as a causal factor influencing the sample-comparison outcome $O^{sc}_{R}$. A square encloses $S$, indicating that it is a conditioned variable. In this context, *conditioning* means that the analysis is restricted to the elements of $O^{cp}_{R}$ that satisfy $s_{(i,a,h,b,j,k)}=1$ [@Neal_2020; @McElreath_2020]. In essence, $S$ is a vector that selects *all repeated judgments made by a subset of judges for a subset of stimuli produced by the sampled individuals*.
+Following @Bareinboim_et_al_2014 and @Schuessler_et_al_2023, @fig-cj14_dag incorporates the sampling mechanism into the CPM. The DAG depicts the conceptual-population outcome $O^{cp}_{R}$ as an unobserved variable, highlighting its inaccessibility under the sampling mechanism. Moreover, it shows the *sample design* vector $S$ as independent of all other variables--indicated by the absence of connecting arrows. This independence implies that @fig-cj14_dag applies exclusively to *Simple Random Sampling (SRSg)* designs, in which each judgment, judge, stimulus, and individual has an equal probability of inclusion within their respective group [@Lawson_2015]. Finally, the square surrounding $S$ denotes *conditioning*, that is, restricting the analysis to elements of the endogenous variable set $V$ satisfying $s_{(i,a,h,b,j,k)} = 1$ [@Neal_2020; @McElreath_2020]. In other words, $S$ selects *all judgments made by a subset of judges for a subset of stimuli produced by the sampled individuals, all sampled under SRSg designs*.
+
+<!-- I REALIZED ON THE 29/06/2026 THAT @Bareinboim_et_al_2014 and @Schuessler_et_al_2023 PROVIDES A BETTER MATHEMATICAL DESCRIPTION OF S -->
 
 <!-- Follow conventions of @McElreath_2020 NOT @Schuessler_et_al_2023 regarding selection variables and missing data. -->
 
@@ -941,12 +941,10 @@ With the definition of $S$, we incorporate the sample mechanism into the CPM. Fo
 
 <!-- In the regular notation for probability, we have conditioning, but that isn't the same as intervening. Conditioning on T=t just means that we are restricting our focus to the subset of the population to those who received treatment t. In contrast, an intervention would be to take the whole population and give everyone treatment t. [@Neal_2020, p. 32] -->
 
-Notably, the DAG shows that $S$ is independent of all other variables in the model. This implies that [DAG -@fig-cj14_dag] applies exclusively to Simple Random Sampling (SRSg) designs. In these designs, each repeated judgment, judge, stimulus, and individual has the same probability of being included in the sample as any other observation within their respective groups [@Lawson_2015].
-
 <!-- This is a whole section [@Lawson_2015, p. 16-112] -->
 
 <!-- 3. segway for next section -->
-However, due to concerns about the practical feasibility of the comparison task [@Boonen_et_al_2020], CJ assessments rarely implement an exhaustive pairings of sampled judges, stimuli, and individuals. Thus, a realistic scenario must account for the fact that judges typically compare only a subset of stimuli authored by a sample of individuals.
+Nevertheless, due to concerns about the practical feasibility of the comparison task [@Boonen_et_al_2020], CJ assessments rarely implement an exhaustive pairings of sampled judges, stimuli, and individuals, as indicated above. Thus, a realistic scenario must account for the fact that judges typically compare only a subset of stimuli authored by a sample of individuals.
 
 <!-- An exhaustive pairing of all stimuli would lead to a total of 7875 possible pairs for each listener group. Obviously, such a large number of pairs would undermine the practical feasibility of the experiment. However, in order to arrive at a reliable ranking, not all possible combinations of stimuli had to be assessed. More specifically, each stimulus had to be judged by the listeners of each particular listener group – together, not individually – at least 20 times. [@Boonen_et_al_2020, p. 5] -->
 
@@ -985,7 +983,7 @@ Sample-comparison model (CSM), final vectorized form.
 <!-- recording: Sven and Tine 25.04.10; time: 00:16:30 - 00:19:00 -->
 
 <!-- 1. start by defining the comparison vector  -->
-As in the previous section, we begin defining the *comparison mechanism* using the binary vector variable $C$ to facilitate the interpretation of the CSM. @eq-mat27 shows that $C$ contains $n$ elements corresponding to the number of rows in the $R$ matrix, with each element $c_{(i,a,h,b,j,k)}$ being a binary value indicating the presence or absence of data rows in $R$, a definition similar to that of $s_{(i,a,h,b,j,k)}$ in @eq-mat26.
+As in the previous section, to incorporate the *comparison mechanism* and facilitate the interpretation of the CSM, we first define the *comparison process* using the binary vector variable $C$. @eq-mat27 shows that $C$ contains $n$ elements corresponding to the number of rows in the $R$ matrix, with each element $c_{(i,a,h,b,j,k)}$ being a binary value indicating the presence or absence of data rows in $R$, a definition similar to that of $s_{(i,a,h,b,j,k)}$ in @eq-mat26.
 $$
 C = \begin{bmatrix}
 c_{(1,1,1,2,1,1)} \\
@@ -1001,11 +999,9 @@ c_{(n_{I},n_{A}-1,n_{I},n_{A},n_{J},1)}
 $$ {#eq-mat27}
 
 <!-- 2. What is the effect of the comparison mechanism -->
-The [DAG -@fig-cj14_dag] also incorporates the *comparison mechanism* $C$ into the CPM. It shows the sample-comparison outcome $O^{sc}_{R}$ as unobserved, emphasizing that this variable cannot be directly accessed because of the comparison mechanism. The DAG further shows $C$ as a conditioned variable (enclosed in a square) that causally influences the observed outcome $O_{R}$. This structure implies that $C$ determines *which repeated judgments judges make for the stimuli produced by the individuals*. In essence, $C$ reflects the assumption that judges *do not* perform all possible repeated judgments but instead complete a sufficient number, $n_{C}$, to enable the accurate estimation of the proportion $P(B>A)$ for each stimulus pair [@Thurstone_1927b, p. 267].
+Again, following @Bareinboim_et_al_2014 and @Schuessler_et_al_2023, @fig-cj14_dag incorporates the comparison mechanism into the CPM. The DAG represents the sample-comparison outcome $O^{sc}*{R}$ as an unobserved variable, highlighting its inaccessibility under the comparison mechanism. Moreover, it includes the *comparison design* vector $C$, which is shown as independent of all other variables, as indicated by the absence of connecting arrows. This independence implies that @fig-cj14_dag applies exclusively to *random allocation comparative design* [@Bramley_2015] or  *incomplete block design* [@Lawson_2015], in which each pairwise comparison has an equal probability of being assigned to any judge. Finally, the square surrounding $C$ denotes *conditioning*, that is, restricting the analysis to elements of the endogenous variable set $V$ that also satisfy $c_{(i,a,h,b,j,k)} = 1$ [@Neal_2020; @McElreath_2020]. In other words, $C$ encodes the assumption that judges do not perform all possible judgments but instead complete a sufficient number, $n_{C}$, to enable accurate estimation of the proportion $P(B > A)$ for each stimulus pair [@Thurstone_1927b, p. 267].
 
 <!-- It is assumed that the single observer compares each pair of stimuli a "sufficient number of times" so that a proportion, P(A>B), may be determined for each pair of stimuli [@Thurstone_1927b, p. 267] -->
-
-Notably, [DAG -@fig-cj14_dag] also shows that $C$ is independent of all other variables in the model. This independence implies that the conceptual model represented by the DAG applies exclusively to *Random Allocation Comparative Designs* [@Bramley_2015], or *Incomplete Block Designs* [@Lawson_2015], where every repeated judgment has an equal probability of being included in the sample.
 
 <!-- The different analyses were based on the same two underlying datasets. First of all, observations from these datasets were sampled in order to mimic either random allocation of pairs of scripts to judges, or adaptive allocation (where the probability of being sampled depends on the outcome of earlier comparisons). In all cases the selection of observations was carefully planned to ensure that i) each script was compared the same number of times; and ii) the complete set of judgments formed a fully linked design whereby each script was compared directly or indirectly with every other script5. For the 'random only' analyses, this could be achieved by systematically sampling the required observations. [@Bramley_2015, p. 8] -->
 
@@ -1014,7 +1010,7 @@ Notably, [DAG -@fig-cj14_dag] also shows that $C$ is independent of all other va
 <!-- Actually algorithm can be thought as the observation mechanism that "transforms" the outcome in the population of comparisons to the outcome in the sample of comparisons, see fig. 2, [@Deffner_et_al_2022] -->
 
 <!-- 3. preparing to transform the conceptual model into an statistical one -->
-Finally, since it is standard to assume that the distribution of the conceptual-population outcome $O^{cp}_{R}$ also holds for $O^{sc}_{R}$ and $O_{R}$, we can reformulate the SCM in @fig-cj14 into the equivalent form shown in @fig-cj15. This reformulation produces a model that applies directly to a sample of comparative data. In this version, the unobserved outcomes $O^{cp}_{R}$ and $O^{sc}_{R}$ are omitted, and $O_{R}$ inherits the structural equation $f_{O}$ that originally defined $O^{cp}_{R}$. Moreover, the definition of $O_{R}$ now reflects its direct dependence on the discriminal difference $D_{R}$ and the sample and comparison mechanisms, $S$ and $C$.
+Finally, since it is standard to assume that the distribution of the conceptual-population outcome $O^{cp}_{R}$ also holds for $O^{sc}_{R}$ and $O_{R}$, we can reformulate the SCM and DAG in @fig-cj14 into their equivalent forms shown in @fig-cj15. This reformulation produces a model that applies directly to a sample of CJ data. In this version, the unobserved outcomes $O^{cp}_{R}$ and $O^{sc}_{R}$ are omitted, and $O_{R}$ inherits the structural equation $f_{O}$ that originally defined $O^{cp}_{R}$. Moreover, $O_{R}$ now reflects its direct dependence on the discriminal difference $D_{R}$ and the sample and comparison mechanisms, $S$ and $C$.
 
 <!-- move the assumption for the conceptual population outcome to the data outcome based on the fact that it is logical to think that the data outcome would have the same distribution as the population outcome, if the data comes from that population. For example, if I have the distribution of the population outcome, and it is a Bernoulli, and even if I do not have it because of S and C, the distributional assumption still holds -->
 
@@ -1066,7 +1062,8 @@ Using the [SCM -@fig-cj15_scm], we can derive a statistical model that addresses
 $$
 \begin{aligned}
   P(O_{R}, & S, C, D_{R}, T_{IA}, X_{IA}, e_{IA}, T_{I}, X_{I}, e_{I}, B_{JK}, Z_{JK}, e_{JK}, B_{J}, Z_{J}, e_{J} ) & \\
-  &= P(O_{R} \mid D_{R}, S, C) \cdot P(S) \cdot P(C) \cdot P(D_{R} \mid T_{IA}, B_{JK}) \\
+  &= P(O_{R} \mid D_{R}, S, C) \cdot P(S) \cdot P(C) \\
+  & \quad \cdot P(D_{R} \mid T_{IA}, B_{JK}) \\
   & \quad \cdot P(T_{IA} \mid T_{I}, X_{IA}, e_{IA}) \cdot P(T_{I} \mid X_{I}, e_{I}) \\
   & \quad \cdot P(B_{JK} \mid B_{J}, Z_{JK}, e_{JK}) \cdot P(B_{J} \mid Z_{J}, e_{J}) \\
   & \quad \cdot P(X_{IA}) \cdot P(X_{I}) \cdot P(Z_{JK}) \cdot P(Z_{J}) \\
