@@ -1061,8 +1061,7 @@ Comparative judgment model, vectorized form.
 <!-- recording: Sven and Tine 25.05.21; time: 00:42:20 - 00:46:10 -->
 
 <!-- 1. How to derive an stat model from an SCM? -->
-In this section we derive a statistical model that addresses violations of the equal dispersion assumption. To do so, we leverage the properties of SCMs to first factorize the joint distribution of our complex CJ system into a product of simpler *conditional probability distributions (CPDs)*[^3]. @eq-mat50 shows the line-by-line equivalence between the SCM assumptions from @fig-cj15_scm and the resulting CPD factorization of the joint distribution. For clarity, we denote the joint distribution of variables $L$ and $M$ as $P(L, M)$, while we represent their conditional relationships using $P(L \mid M)$; $L \sim f(L \mid M)$; or $L := f_{L}(M)$.
-
+To derive a statistical model that addresses violations of the equal dispersion assumption, we leverage the properties of SCMs to first factorize the joint distribution of our complex CJ system into a product of simpler *conditional probability distributions (CPDs)*[^3]. @eq-mat50 shows the line-by-line equivalence between the SCM assumptions from @fig-cj15_scm and the resulting CPD factorization of the joint distribution. For clarity, we denote the joint distribution of variables $L$ and $M$ as $P(L, M)$, while we represent their conditional relationships using $P(L \mid M)$; $L \sim f(L \mid M)$; or $L := f_{L}(M)$.
 $$
 \begin{aligned}
   P(O_{R}, & S, C, D_{R}, T_{IA}, X_{IA}, e_{IA}, T_{I}, X_{I}, e_{I}, B_{JK}, Z_{JK}, e_{JK}, B_{J}, Z_{J}, e_{J} ) & \\
@@ -1088,7 +1087,7 @@ $$ {#eq-mat50}
 
 
 <!-- 3. Note about the sample and comparison mechanism, as well as the predictor's distribution -->
-Notably, we can further simplify the factorization in @eq-mat50 into @eq-mat51 by making two observations. First, the mutually independent variables $S$, $C$, $X_{IA}$, $X_{I}$, $Z_{JK}$, and $Z_{J}$ are observed data, implying that their probability distributions $P(S)$, $P(C)$, $P(X_{IA})$, $P(X_{I})$, $P(Z_{JK})$, and $P(Z_{J})$ require no further distributional modeling--in the same way as the idiosyncratic error terms do--since they contribute only constant factors to the overall joint distribution. Second, owing to the underlying random selection procedures[^5]--namely, simple random sampling (SRSg) and random allocation comparative designs--the CPD of the outcome can be re-expressed as $P(O_{R} \mid D_{R}, S, C) = P(O_{R} \mid D_{R})$.
+We can further simplify this factorization into @eq-mat51 by making two observations. First, because the mutually independent variables $S$, $C$, $X_{IA}$, $X_{I}$, $Z_{JK}$, and $Z_{J}$ are observed, their probability distributions--$P(S)$, $P(C)$, $P(X_{IA})$, $P(X_{I})$, $P(Z_{JK})$, and $P(Z_{J})$--require no further modeling, as they contribute only constant factors to the joint distribution. Thus, we can omit them from the probabilistic representation. Second, because the sampling and comparison procedures follow random mechanisms[^5]--namely, simple random sampling (SRSg) and random-allocation comparative designs, as described in @sec-theory-theoretical_SC--we can rewrite the CPD of the outcome as $P(O_{R} \mid D_{R}, S, C) = P(O_{R} \mid D_{R})$, indicating the outcome's independence from the sampling and comparison mechanisms.
 
 [^5]: Randomization ensures that data--and, by extension, an estimator--satisfies several key identification properties, such as common support, no interference, and consistency. The most critical property, however, is the elimination of confounding. *Confounding* occurs when an external variable, such as $X_{I}$, simultaneously influences both the outcome (e.g., $O_{R}$) and a variable of interest (e.g., $S$), resulting in spurious associations between the latter two [@Everitt_et_al_2010]. Randomization ensure the absence of confounding by effectively decoupling the association between the variable of interest and any other variable, except for the outcome itself. For a more detailed discussion on the benefits of randomization, see @Pearl_2009, @Morgan_et_al_2014, @Neal_2020, and @Hernan_et_al_2025.
 
@@ -1105,8 +1104,9 @@ $$
 \end{aligned}
 $$ {#eq-mat51}
 
+
 <!-- 2. assumptions about the outcome -->
-Next, we derive the statistical model from the system’s CPDs. This derivation is possible because a fully specified SCM encodes both functional and probabilistic information, which we can replace with suitable functions and distributional assumptions based on the available data [@Pearl_et_al_2016]. @fig-cj16 illustrates the progression from the SCM to the probabilistic model and, ultimately, to the statistical model. The model starts by assuming that $O_{R}$ follows a Bernoulli distribution[^4], reflecting the binary nature of CJ outcomes. Furthermore, following the conventions of Generalized Linear Models (GLMs) [@Nelder_et_al_1983; @Nelder_et_al_1996; @Agresti_2015], the distribution links $O_{R}$ to the latent discriminal difference vector $D_{R}$ using an inverse-logit function: $\text{inv\_logit}(x) = 1/(1 + \exp(-x))$.
+Next, we derive the statistical model by fully specifying the SCM, that is, by incorporating the functional and probabilistic information supported by the available data into the SCM [@Pearl_et_al_2016]. @fig-cj16 illustrates this progression from the SCM to the probabilistic model and, ultimately, to the statistical model. First, the statistical model assumes that $O_{R}$ follows a Bernoulli distribution[^4], reflecting the binary nature of CJ outcomes. Furthermore, following the conventions of Generalized Linear Models (GLMs) [@Nelder_et_al_1983; @Nelder_et_al_1996; @Agresti_2015], the distribution links $O_{R}$ to the latent discriminal difference vector $D_{R}$ using an inverse-logit function: $\text{inv\_logit}(x) = 1/(1 + \exp(-x))$.
 
 [^4]: The binomial distribution--including its special case, the Bernoulli distribution--represent a maximum entropy distribution for binary events [@McElreath_2020, p. 34]. This means that the Bernoulli distribution is the most consistent alternative when only two un-ordered outcomes are possible and their expected frequencies are assumed to be constant [@McElreath_2020, p. 310]. For a detailed discussion of the binomial as a maximum entropy distribution, see @McElreath_2020 [sec. 10.1.2].
 
@@ -1178,9 +1178,8 @@ Comparative judgment model. SCM, probabilistic and statistical model assuming di
 :::
 
 
-
 <!-- 4. functional form for D_{R} -->
-Next, $D_{R}$ is defined as the difference between the discriminal processes $T_{IA}[i, a]$ and $T_{IA}[h, b]$, representing the underlying written-quality trait of the compared texts, plus the corresponding judgment-level bias $B_{JK}[j, k]$. Note that if it is assumed that $B_{JK}[j,k]$ reflects the difference in stimulus-specific biases, i.e., $B_{JK}[j,k] = B_{JK}[i,a,j,k] - B_{JK}[h,b,j,k]$, the discriminal difference can be re-written as: 
+Next, the statistical model defines $D_{R}$ as the difference between the discriminal processes $T_{IA}[i, a]$ and $T_{IA}[h, b]$, which represents the underlying written-quality trait of the compared texts, plus the corresponding judgment-level bias $B_{JK}[j, k]$. If we further assume that $B_{JK}[j,k]$ reflects the difference in stimulus-specific biases, i.e., $B_{JK}[j,k] = B_{JK}[i,a,j,k] - B_{JK}[h,b,j,k]$, the discriminal difference can be re-written as: 
 $$
 \begin{aligned}
 D_{R} &= \left( T_{IA}[i,a] - T_{IA}[h,b] \right) + B_{JK}[j,k] \\
@@ -1190,7 +1189,7 @@ D_{R} &= \left( T_{IA}[i,a] - T_{IA}[h,b] \right) + B_{JK}[j,k] \\
 \end{aligned}
 $$ {#eq-mat52}
 
-This formulation reveals that the discriminal difference captures a *pure interaction effect*, in which neither the texts' discriminal processes nor the judges' biases alone determine the outcome, but their interaction does [@Attia_et_al_2022]. Put simply, this mathematical description captures the idea that the stimuli' discriminal processes become an observable outcome only through the lens of judges' perceptions (i.e., their biases). For clarity, the square brackets in $D_{R}$ indicate the relevant indices for each trait vector.
+This formulation reveals that the discriminal difference considering judgment-level biases captures a *pure interaction effect*, in which neither the texts' discriminal processes nor the judges' biases alone determine the outcome, but their interaction does [@Attia_et_al_2022]. Put simply, this mathematical description captures the idea that the stimuli' discriminal processes become an observable outcome only through the lens of judges' perceptions (i.e., their biases). For clarity, the square brackets in $D_{R}$ indicate the relevant indices for each trait vector.
 
 <!-- Weinberg[4] proposed a further diagram to capture 'pure' interaction in which neither G nor E has a direct effect on D and they only have an effect when present together (see Figure 4a). We suggest that this 'pure' interaction could be captured by the DAG shown in Figure 4b. An example of this is phenylketonuria in which phenylalanine in the diet (E) and the absence of the enzyme to break it down (phenylalanine hydroxylase, G) are both needed in order for a disease to manifest (intellectual disability, D). [@Attia_et_al_2022, p. 1052] -->
 
@@ -1199,15 +1198,17 @@ This formulation reveals that the discriminal difference captures a *pure intera
 <!-- Judges discrimination ability can be integrated in the models if we assume that the bias is not additive (as in Bramley explanation) but multiplicative. In the latter case the bias is not eliminated by taking just the difference. True, but it is false to think that because the biases are additive they get just eliminated. For instance, if we assume that the bias is additive but different for each stimuli, this means that the DAG should be: {T_{IA}, B_{JK}} -> O_{R}, but mathematically you can write it as it is above  -->
 
 <!-- 5. Functional form and assumptions -->
-Now the functional forms for $T_{IA}$, $T_{I}$, $B_{JK}$, and $B_{J}$ are specified. $T_{IA}$ is modeled as a linear combination of the students' underlying writing-quality traits $T_{I}$, the effects of relevant text-related variables on quality assessment $\beta_{XA}X_{IA}$ (such as the influence of text length), and the text-specific idiosyncratic errors $e_{IA}$. Similarly, $T_{I}$ is expressed as a linear combination of relevant student-related variables affecting the quality assessment $\beta_{XI} X_{I}$, and student-specific idiosyncratic errors $e_{I}$. For the judge-specific terms, $B_{JK}$ is modeled as a linear combination of the judge's individual bias $B_{J}$, the influence of relevant judgment-related variables on quality assessment $\beta_{ZK}Z_{JK}$ (e.g., how the number of judgments affect the evaluation), and judgment-specific idiosyncratic errors $e_{JK}$. Finally, $B_{J}$ is defined as a linear combination of relevant judge-level variables influencing the quality assessment $\beta_{ZJ}Z_{J}$ (such as judgment expertise) and judge-specific idiosyncratic errors $e_{J}$. 
+Next, the statistical model specifies the functional forms for $T_{IA}$, $T_{I}$, $B_{JK}$, and $B_{J}$. We model $T_{IA}$ as a linear combination of the students' underlying writing-quality traits $T_{I}$, the effects of relevant text-level variables $\beta_{XA} X_{IA}$, and text-specific idiosyncratic errors $e_{IA}$. Similarly, we express $T_{I}$ as a linear function of the effects of relevant student-level variables $\beta_{XI} X_{I}$ and student-specific idiosyncratic errors $e_{I}$. Similarly, for the judge-related components, we model $B_{JK}$ as a linear combination of the judge-level bias $B_{J}$, the effects of relevant judgment-level variables $\beta_{ZK} Z_{JK}$, and judgment-specific idiosyncratic errors $e_{JK}$. Finally, we define $B_{J}$ as a linear function of the effects of relevant judge-level variables $\beta_{ZJ} Z_{J}$ and judge-specific idiosyncratic errors $e_{J}$.
 
 <!-- 6. error assumptions -->
-Next, the probabilistic assumptions for the idiosyncratic errors $e_{I}$, $e_{IA}$, $e_{J}$, and $e_{JK}$ are specified. Unlike other variables in the model, these error terms exhibit indeterminacies in their *location*, *orientation*, and *scale* due to the lack of an inherent scale in the associated latent variables $T_{I}$, $T_{IA}$, $B_{J}$, and $B_{JK}$. Thus, to identify the latent variable model these indeterminacies must be resolved [@Depaoli_2021; @deAyala_2009]. Drawing on principles from SEM [@Hoyle_et_al_2023], the vector of idiosyncratic errors $\boldsymbol{e} = [e_{I}, e_{IA}, e_{J}, e_{JK}]^{T}$ are assumed to follow a Multivariate Normal distribution with mean vector $\boldsymbol{\mu}$ and a covariance matrix $\boldsymbol{\Sigma} = \boldsymbol{V} \boldsymbol{Q} \boldsymbol{V}$, with $\boldsymbol{V}$ denoting a diagonal matrix of standard deviations and $\boldsymbol{Q}$ a correlation matrix. To address the *location* indeterminacy, the errors' mean vector is set to zero:
+Next, we specify the probabilistic assumptions for the idiosyncratic errors $e_{I}$, $e_{IA}$, $e_{J}$, and $e_{JK}$. Unlike the other variables in the model, these error terms exhibit indeterminacies in *location*, *orientation*, and *scale* because the associated latent variables $T_{I}$, $T_{IA}$, $B_{J}$, and $B_{JK}$ lack an inherent metric. Thus, we must resolve these indeterminacies to identify the latent variable model [@Depaoli_2021; @deAyala_2009]. 
+
+Drawing on principles from SEM [@Hoyle_et_al_2023], we assume the stacked error vector $\boldsymbol{e} = [e_{I}, e_{IA}, e_{J}, e_{JK}]^{T}$ follows a multivariate normal distribution with mean vector $\boldsymbol{\mu}$ and covariance matrix $\boldsymbol{\Sigma} = \boldsymbol{V}\boldsymbol{Q}\boldsymbol{V}$, where $\boldsymbol{V}$ is a diagonal matrix of standard deviations and $\boldsymbol{Q}$ is a correlation matrix. More specifically, we address *location indeterminacy* by setting the stacked error mean vector to zero:
 $$
 \boldsymbol{\mu} = [0, 0, 0, 0]^{T}
 $$ {#eq-mat53}
 
-Following [SCM -@fig-cj16_scm], the *orientation* indeterminacy is solved by assuming that the errors are uncorrelated. This assumption leads to the definition of the error's correlation matrix, $\boldsymbol{Q}$, as the identity matrix:
+Moreover, following @fig-cj16_scm, we resolve the *orientation indeterminacy* by assuming that the error terms are uncorrelated. This assumption defines the stacked error correlation matrix $\boldsymbol{Q}$ as the identity matrix:
 $$
 \boldsymbol{Q} = \begin{bmatrix}
     1 & 0 & 0 & 0 \\
@@ -1217,7 +1218,7 @@ $$
   \end{bmatrix}
 $$ {#eq-mat54}
 
-To resolve the *scale* indeterminacy, the diagonal matrix $\boldsymbol{V}$ is defined as follows:
+Furthermore, we resolve the *scale indeterminacy* by defining the diagonal matrix $\boldsymbol{V}$ as follows:
 $$
 \boldsymbol{V} = \begin{bmatrix}
     s_{XI} & 0 & 0 & 0 \\
@@ -1227,19 +1228,21 @@ $$
   \end{bmatrix}
 $$ {#eq-mat55}
 
-Here, $s_{XI}$ represents the standard deviation for the individuals, $p_{IA}$ for the stimuli, $s_{ZJ}$ for the judges, and $p_{JK}$ for the judgments. It is assumed $s_{XI}$ varies depending on the teaching method group to which each student belongs. Using the example from @sec-theoretical, where the teaching method $X_{I} = \{1,2\}$, the model sets the constraint according to @eq-mat56. This constraint anchors the scale of the individuals' latent trait while relaxing the assumption of equal dispersion for the stimuli, thereby addressing the concerns raised in @sec-theory-issue1a. 
+Here, $s_{XI}$ denotes the standard deviation for individuals, $p_{IA}$ for stimuli, $s_{ZJ}$ for judges, and $p_{JK}$ for judgments. Building on the teaching-method example introduced at the beginning of @sec-theoretical, we assume that $s_{XI}$ varies across teaching-method groups. Thus, when the teaching-method variable is coded as $X_{I} = \{1,2\}$, representing two teaching methods, we impose the constraint specified in @eq-mat56. This constraint anchors the scale of the individuals' latent trait while relaxing the assumption of equal dispersion for stimuli, thereby addressing the concerns raised in @sec-theory-issue1a.
 $$
 \sum_{g=1}^{2} s_{XI}[g]/2 = 1
 $$ {#eq-mat56}
 
-Because the error vector $\boldsymbol{e}$ follows an uncorrelated Multivariate Normal distribution, the marginal distribution of $e_{IA}$ is a univariate Normal distribution with mean zero and standard deviation $p_{IA}$. Thus, $p_{IA}$ is set as a proportion of $1$ to establish the scale of the stimuli' latent trait relative to the scale of the individuals' trait. Note that as a result, $T_{IA}$ is also normally distributed. This configuration effectively reinstates Thurstone's original assumption of Normal discriminal processes for the stimuli (see @tbl-thurstone_cases).
+Notably, because the stacked error vector $\boldsymbol{e}$ follows an uncorrelated multivariate normal distribution, the marginal distribution of $e_{IA}$ is univariate normal with mean zero and standard deviation $p_{IA}$. We therefore define $p_{IA}$ as a proportion that sets the scale of the stimuli' latent traits relative to the individuals' trait, i.e., $p_{IA} \in (0,1)$. 
 
-Similarly, it is assumed that $s_{ZJ}$ varies depending on the groups to which each judge belongs. For instance, if $Z_{J} = \{1,2,3\}$ represents three groups of judges with varying expertise, the model sets the constraint according to @eq-mat57. This constraint anchors the scale of the judges' latent trait and relaxes the assumption of equal dispersion for the judgments. 
+<!-- As a consequence, $T_{IA}$ is also normally distributed, thereby reinstating Thurstone’s original assumption of normally distributed discriminal processes (see @tbl-thurstone_cases). -->
+
+Similarly, building on the same teaching-method example, we assume that $s_{ZJ}$ varies across judge-expertise groups. Thus, when the judge-expertise variable is coded as $Z_{J} = {1,2,3}$, representing three groups of judges with varying expertise, we impose the constraint specified in @eq-mat57. This constraint anchors the scale of the judges' bias while relaxing the assumption of equal dispersion for judgment-level biases.
 $$
 \sum_{g=1}^{3} s_{ZJ}[g]/3 = 1
 $$ {#eq-mat57}
 
-Conversely, $p_{JK}$ is defined as a proportion of $1$ to establish the scale of the judgments' latent trait relative to the scale of the judges' trait.
+Conversely, we define $p_{JK}$ as a proportion that sets the scale of the judgment-level biases relative to the scale of the judges' bias, i.e., $p_{JK} \in (0,1)$.
 
 <!-- Using assumptions from IRT [@deAyala_2009, p. 20-21], we are assuming a multidimensional model, that violates the local independence assumption -->
 
@@ -1252,7 +1255,7 @@ Conversely, $p_{JK}$ is defined as a proportion of $1$ to establish the scale of
 <!-- The difficulty and discrimination parameters for the questions should then be given a diffuse, or ideally a hierarchical prior, which will identify these parameters by scaling and locating relative to the student ability parameters. (https://mc-stan.org/docs/stan-users-guide/regression.html#priors-for-identification.section) -->
 
 <!-- 9. Computational implementation -->
-Finally, we use *Bayesian inference methods* to convert the statistical model [-@fig-cj16_stat] into a practical statistical tool for analyzing paired comparison data. Bayesian inference offers three main advantages in this context. First, it handles complex and overparameterized models, where the number of parameters exceeds the number of observations [@Baker_1998; @Kim_et_al_1999]. This feature is essential for our implementation, as the proposed model is indeed overparameterized. Second, it incorporates prior information to constrain parameter estimates within plausible bounds, thereby mitigating estimation issues like non-convergence or improper solutions that often affect frequentist methods [@Martin_et_al_1975; @Seaman_et_al_2011]. Prior distributions are used to define the error distribution and set the scale of latent variables [@Depaoli_2014]. Third, Bayesian inference supports robust inferences from small samples, where the asymptotic properties underlying frequentist methods are less reliable [@Baldwin_et_al_2013; @Lambert_et_al_2006; @Depaoli_2014]. This feature is particularly relevant in CJ assessments, as researchers often collect large volumes of paired comparisons but work with relatively small samples of judges, stimuli, and individuals to test hypotheses.
+Finally, we use *Bayesian inference methods* to turn the statistical model in @fig-cj16_stat into a practical tool for analyzing paired comparison data. Bayesian inference offers three main advantages in this context. First, it accommodates complex and overparameterized models in which the number of parameters exceeds the number of observations [@Baker_1998; @Kim_et_al_1999]. This feature is essential here because the proposed model is indeed overparameterized. Second, it incorporates prior information to constrain parameter estimates within plausible ranges, which helps prevent estimation problems such as non-convergence or improper solutions that often arise in frequentist estimation [@Martin_et_al_1975; @Seaman_et_al_2011]. Here, we use prior distributions to define the error structure and to set the scale of the latent variables [@Depaoli_2014]. Third, Bayesian inference supports robust inferences in small-sample settings, where the asymptotic guarantees of frequentist methods become less reliable [@Baldwin_et_al_2013; @Lambert_et_al_2006; @Depaoli_2014]. This property is particularly relevant for all CJ assessments, where researchers often collect large numbers of paired comparisons but relatively small numbers of judges, stimuli, or individuals.
 
 The **Declarations** section of this document provides a link to the model code, along with an alternative specification that assumes equal discriminal dispersions. Both versions of the model have been tested with success using `Stan` [version 2.26.1, @Stan_2026a; @Stan_2026a].
 
@@ -1423,7 +1426,9 @@ In contrast, the approach presented in this study provides a rigorous framework 
 
 
 ### The outcome of analysis
-<!-- TO DO -->
+
+[TO DO]{style="color:red;"}
+
 <!-- Several attempts to extend the BTL model have been proposed, however, we argue that our approach contemplates all of these extensions as special cases. For example. Gray on rankings (2024), Seymour extending the model to consider spatial parameter correlation (2021) and outcomes with ties (2025), etc. -->
 
 
