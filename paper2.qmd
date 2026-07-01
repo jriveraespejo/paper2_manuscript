@@ -1,5 +1,5 @@
 ---
-title: "Let's talk about Thurstone & Co.: An information-theoretical analysis workflow for comparative judgments"
+title: "Let's talk about Thurstone & Co.: An Information-Theoretical Comparative Judgment analysis workflow"
 author:
   - name: 
       given: Jose Manuel
