@@ -1033,7 +1033,7 @@ biases. Here, we treat judgment-level biases as an integral component of
 the CJ system from the outset because discriminal processes are only
 indirectly accessible through judges' perceptions, and these perceptions
 may systematically deviate from judge-specific expectations or consensus
-\citep[see][]{Pollitt_et_al_2003, vanDaal_et_al_2016}. Notably, the SCM
+\citep[see,][]{Pollitt_et_al_2003, vanDaal_et_al_2016}. Notably, the SCM
 expresses these relationships in non-parametric form through the
 structural equations \(f_{O}\) and \(f_{D}\), meaning that it does not
 emphasize the types of variables, the functional forms relating them, or
@@ -1581,20 +1581,22 @@ s_{(i,a,h,b,j,k)} = \begin{cases}
 Following \citet{Bareinboim_et_al_2014} and
 \citet{Schuessler_et_al_2023}, Figure~\ref{fig-cj14_dag} incorporates
 the sampling mechanism into the CPM. The DAG depicts the
-conceptual-population outcome \(O^{cp}_{R}\) as an unobserved variable,
-highlighting its inaccessibility under the sampling mechanism. Moreover,
-it shows the \emph{sample design} vector \(S\) as independent of all
-other variables--indicated by the absence of connecting arrows. This
-independence implies that Figure~\ref{fig-cj14_dag} applies exclusively
-to \emph{Simple Random Sampling (SRSg)} designs, in which each judgment,
-judge, stimulus, and individual has an equal probability of inclusion
-within their respective group \citep{Lawson_2015}. Finally, the square
-surrounding \(S\) denotes \emph{conditioning}, that is, restricting the
-analysis to elements of the endogenous variable set \(V\) satisfying
-\(s_{(i,a,h,b,j,k)} = 1\) \citep{Neal_2020, McElreath_2020}. In other
-words, \(S\) selects \emph{all judgments made by a subset of judges for
-a subset of stimuli produced by the sampled individuals, all sampled
-under SRSg designs}.
+conceptual-population outcome \(O^{cp}_{R}\) as an unobserved variable.
+This representation highlights its inaccessibility under the sampling
+mechanism. Moreover, the graph shows the \emph{sample design} vector
+\(S\) as independent of all other variables--indicated by the absence of
+connecting arrows. This independence implies that
+Figure~\ref{fig-cj14_dag} applies exclusively to \emph{Simple Random
+Sampling (SRSg)} designs. In these designs, each judgment, judge,
+stimulus, and individual has an equal probability of inclusion within
+their respective group \citep{Lawson_2015}. Finally, the square
+surrounding \(S\) denotes \emph{conditioning}. Informally, conditioning
+means that the CJ structure restricts its attention to elements of the
+endogenous variable set \(V\) satisfying \(s_{(i,a,h,b,j,k)} = 1\)
+\citep{Neal_2020, McElreath_2020}. In other words, \(S\) selects
+\emph{all judgments made by a subset of judges for a subset of stimuli
+produced by the sampled individuals, together with their associated
+variables, under SRSg designs}.
 
 Nevertheless, due to concerns about the practical feasibility of the
 comparison task \citep{Boonen_et_al_2020}, CJ assessments rarely
@@ -1676,22 +1678,23 @@ c_{(n_{I},n_{A}-1,n_{I},n_{A},n_{J},1)}
 Again, following \citet{Bareinboim_et_al_2014} and
 \citet{Schuessler_et_al_2023}, Figure~\ref{fig-cj14_dag} incorporates
 the comparison mechanism into the CPM. The DAG represents the
-sample-comparison outcome \(O^{sc}_{R}\) as an unobserved variable,
-highlighting its inaccessibility under the comparison mechanism.
-Moreover, the \emph{comparison design} vector \(C\) is shown as
-independent of all other variables, as indicated by the absence of
+sample-comparison outcome \(O^{sc}_{R}\) as an unobserved variable. This
+representation highlights its inaccessibility under the comparison
+mechanism. Moreover, the \emph{comparison design} vector \(C\) is shown
+as independent of all other variables--indicated by the absence of
 connecting arrows. This independence implies that
 Figure~\ref{fig-cj14_dag} applies exclusively to \emph{random allocation
 comparative design} \citep{Bramley_2015} or \emph{incomplete block
-design} \citep{Lawson_2015}, in which each pairwise comparison has an
-equal probability of being assigned to any judge. Finally, the square
-surrounding \(C\) denotes \emph{conditioning}, that is, restricting the
-analysis to elements of the endogenous variable set \(V\) that also
-satisfy \(c_{(i,a,h,b,j,k)} = 1\) \citep{Neal_2020, McElreath_2020}. In
-other words, \(C\) encodes the assumption that judges do not perform all
-possible judgments but instead complete a sufficient number, \(n_{C}\),
-to enable accurate estimation of the proportion \(P(B > A)\) for each
-stimulus pair \citep[p.~267]{Thurstone_1927b}.
+design} \citep{Lawson_2015}. In these designs, each pairwise comparison
+has an equal probability of being assigned to any judge. Finally, the
+square surrounding \(C\) denotes \emph{conditioning}. Here, conditioning
+means that the CJ structure restricts its attention to elements of the
+endogenous variable set \(V\) also satisfying \(c_{(i,a,h,b,j,k)} = 1\)
+\citep{Neal_2020, McElreath_2020}. In other words, \(C\) encodes the
+assumption that judges do not perform all possible judgments but instead
+complete a sufficient number, \(n_{C}\), to enable accurate estimation
+of the proportion \(P(B > A)\) for each stimulus pair
+\citep[p.~267]{Thurstone_1927b}.
 
 Finally, since it is standard to assume that the distribution of the
 conceptual-population outcome \(O^{cp}_{R}\) also holds for
@@ -2619,19 +2622,21 @@ estimates from the Z-test as causal, provided the data is collected
 through a randomized experiment.
 
 Randomized experiments are widely recognized as the gold standard in
-evidence-based science \citep{Hariton_et_al_2018, Hansson_2014}. This
-recognition stems from their ability to enable researchers interpret
-associational estimates as causal. They achieve this by ensuring data,
-and by extension an estimator, satisfies several key identification
-properties, such as common support, no interference, and consistency
-\citep{Morgan_et_al_2014, Neal_2020}. The most critical property,
-however, is the elimination of confounding. \emph{Confounding} occurs
-when an external variable \(X\) simultaneously influences the outcome
-\(Y\) and the variable of interest \(T\), resulting in spurious
-associations \citep{Everitt_et_al_2010}. Randomization addresses this
-issue by decoupling the association between the intervention allocation
-\(T\) from any other variable \(X\)
-\citep{Morgan_et_al_2014, Neal_2020}.
+evidence-based science \citep{Hariton_et_al_2018, Hansson_2014}, owing
+to their ability to enable researchers to interpret associational
+estimates as causal. They achieve this by ensuring data--and by
+extension an estimator--satisfies several key identification properties,
+such as common support, no interference, and consistency
+\citep{Morgan_et_al_2014, Neal_2020}. The most critical of these,
+however, is the elimination of confounding, known in the selection
+literature as ignorability \citep{Schuessler_et_al_2023}.
+\emph{Confounding} occurs when an external variable \(X\) simultaneously
+influences the outcome \(Y\) and the variable of interest \(T\),
+resulting in spurious associations \citep{Everitt_et_al_2010}.
+Randomization addresses this issue by decoupling the intervention
+allocation \(T\) from any other variable \(X\)
+\citep{Morgan_et_al_2014, Neal_2020}, rendering the intervention
+``ignorable'' \citep{Schuessler_et_al_2023}.
 
 Nevertheless, researchers often face constraints that limit their
 ability to conduct randomized experiments. These constraints include
